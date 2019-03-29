@@ -137,7 +137,7 @@ class Img
 		$db = @mysqli_connect(
 			$GLOBALS['__OpenPNE']['DSN']['hostspec'],
 			$GLOBALS['__OpenPNE']['DSN']['username'],
-			$GLOBALS['__OpenPNE']['DSN']['password']
+			$GLOBALS['__OpenPNE']['DSN']['password'],
 			$GLOBALS['__OpenPNE']['DSN']['database']
 		) or die('データベースサーバに接続できませんでした');
 
