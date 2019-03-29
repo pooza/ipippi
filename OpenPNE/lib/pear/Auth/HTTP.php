@@ -18,7 +18,7 @@
 // |          David Costa  <gurugeek@php.net>                             |
 // +----------------------------------------------------------------------+
 //
-//  $Id$ 
+//  $Id$
 //
 
 require_once "Auth/Auth.php";
@@ -53,7 +53,7 @@ define('AUTH_HTTP_NONCE_HASH_LEN', 32);
  */
 class Auth_HTTP extends Auth
 {
-   
+
     // {{{ properties
 
     /**
@@ -63,7 +63,7 @@ class Auth_HTTP extends Auth
      * @var    string
      */
     var $authType = 'basic';
- 
+
     /**
      * Name of the realm for Basic Authentication
      *
@@ -91,7 +91,7 @@ class Auth_HTTP extends Auth
     var $options = array();
 
     /**
-     * flag to indicate the nonce was stale. 
+     * flag to indicate the nonce was stale.
      *
      * @access public
      * @var    bool
@@ -170,7 +170,7 @@ class Auth_HTTP extends Auth
      *
      * @return void
      */
-    function Auth_HTTP($storageDriver, $options = '') 
+    function Auth_HTTP($storageDriver, $options = '')
     {
         /* set default values for options */
         $this->options = array('cryptType' => 'md5',
@@ -183,26 +183,26 @@ class Auth_HTTP extends Auth
                                'nonceLife' => 300,
                                'sessionSharing' => true,
                                );
-		
+
         if (!empty($options['authType'])) {
             $this->authType = strtolower($options['authType']);
         }
-		
+
         if (is_array($options)) {
             foreach($options as $key => $value) {
                 if (array_key_exists( $key, $this->options)) {
                     $this->options[$key] = $value;
                 }
             }
-		
+
             if (!empty($this->options['opaquekey'])) {
                 $this->opaque = md5($this->options['opaquekey']);
             }
         }
-		
+
 		$this->Auth($storageDriver, $options);
 	}
-	
+
 	// }}}
     // {{{ assignData()
 
@@ -219,23 +219,23 @@ class Auth_HTTP extends Auth
         if (method_exists($this, '_importGlobalVariable')) {
             $this->server = &$this->_importGlobalVariable('server');
         }
-        
-        
+
+
         if ($this->authType == 'basic') {
             if (!empty($this->server['PHP_AUTH_USER'])) {
                 $this->username = $this->server['PHP_AUTH_USER'];
             }
-            
+
             if (!empty($this->server['PHP_AUTH_PW'])) {
                 $this->password = $this->server['PHP_AUTH_PW'];
             }
-            
+
             /**
              * Try to get authentication information from IIS
              */
             if  (empty($this->username) && empty($this->password)) {
                 if (!empty($this->server['HTTP_AUTHORIZATION'])) {
-                    list($this->username, $this->password) = 
+                    list($this->username, $this->password) =
                         explode(':', base64_decode(substr($this->server['HTTP_AUTHORIZATION'], 6)));
                 }
             }
@@ -273,15 +273,15 @@ class Auth_HTTP extends Auth
             if (!isset($auth['uri']) || !isset($auth['realm'])) {
                 return;
             }
-            
+
             if ($this->selfURI() == $auth['uri']) {
                 $this->uri = $auth['uri'];
                 if (substr($headers['Authorization'],0,7) == 'Digest ') {
-                    
+
                     $this->authType = 'digest';
 
-                    if (!isset($auth['nonce']) || !isset($auth['username']) || 
-                  !isset($auth['response']) || !isset($auth['qop']) || 
+                    if (!isset($auth['nonce']) || !isset($auth['username']) ||
+                  !isset($auth['response']) || !isset($auth['qop']) ||
                   !isset($auth['nc']) || !isset($auth['cnonce'])){
                         return;
                     }
@@ -289,7 +289,7 @@ class Auth_HTTP extends Auth
                if ($auth['qop'] != 'auth' && $auth['qop'] != 'auth-int') {
                         return;
                }
-                    
+
                     $this->stale = $this->_judgeStale($auth['nonce']);
 
                if ($this->nextNonce == false) {
@@ -299,7 +299,7 @@ class Auth_HTTP extends Auth
                     $this->username = $auth['username'];
                     $this->password = $auth['response'];
                     $this->auth['nonce'] = $auth['nonce'];
-                    
+
                $this->auth['qop'] = $auth['qop'];
                $this->auth['nc'] = $auth['nc'];
                $this->auth['cnonce'] = $auth['cnonce'];
@@ -307,14 +307,14 @@ class Auth_HTTP extends Auth
                     if (isset($auth['opaque'])) {
                         $this->auth['opaque'] = $auth['opaque'];
                     }
-                    
+
                 } elseif (substr($headers['Authorization'],0,6) == 'Basic ') {
                     if ($this->options['forceDigestOnly']) {
                         return; // Basic authentication is not allowed.
                     }
-                    
+
                     $this->authType = 'basic';
-                    list($username, $password) = 
+                    list($username, $password) =
                         explode(':',base64_decode(substr($headers['Authorization'],6)));
                     $this->username = $username;
                     $this->password = $password;
@@ -324,14 +324,14 @@ class Auth_HTTP extends Auth
             return PEAR::raiseError('authType is invalid.');
         }
 
-        if ($this->options['sessionSharing'] && 
+        if ($this->options['sessionSharing'] &&
             isset($this->username) && isset($this->password)) {
             session_id(md5('Auth_HTTP' . $this->username . $this->password));
         }
-        
+
         /**
-         * set sessionName for AUTH, so that the sessionName is different 
-         * for distinct realms 
+         * set sessionName for AUTH, so that the sessionName is different
+         * for distinct realms
          */
          $this->_sessionName = "_authhttp".md5($this->realm);
     }
@@ -345,13 +345,13 @@ class Auth_HTTP extends Auth
      * @access private
      * @return void
      */
-    function login() 
+    function login()
     {
         $login_ok = false;
         if (method_exists($this, '_loadStorage')) {
             $this->_loadStorage();
         }
-        $this->storage->_auth_obj->_sessionName =& $this->_sessionName;
+        $this->storage->_auth_obj->_sessionName = $this->_sessionName;
 
         /**
          * When the user has already entered a username,
@@ -365,58 +365,58 @@ class Auth_HTTP extends Auth
             } else { /* digest authentication */
 
                 if (!$this->getAuth() || $this->getAuthData('a1') == null) {
-                    /* 
+                    /*
                      * note:
                      *  - only PEAR::DB is supported as container.
-                     *  - password should be stored in container as plain-text 
-                     *    (if $options['cryptType'] == 'none') or 
-                     *     A1 hashed form (md5('username:realm:password')) 
+                     *  - password should be stored in container as plain-text
+                     *    (if $options['cryptType'] == 'none') or
+                     *     A1 hashed form (md5('username:realm:password'))
                      *    (if $options['cryptType'] == 'md5')
                      */
                     $dbs = $this->storage;
                     if (!DB::isConnection($dbs->db)) {
                         $dbs->_connect($dbs->options['dsn']);
                     }
-                    
+
                     $query = 'SELECT '.$dbs->options['passwordcol']." FROM ".$dbs->options['table'].
                         ' WHERE '.$dbs->options['usernamecol']." = '".
                         $dbs->db->quoteString($this->username)."' ";
-                    
+
                     $pwd = $dbs->db->getOne($query); // password stored in container.
-                    
+
                     if (DB::isError($pwd)) {
                         return PEAR::raiseError($pwd->getMessage(), $pwd->getCode());
                     }
-                    
+
                     if ($this->options['cryptType'] == 'none') {
                         $a1 = md5($this->username.':'.$this->options['digestRealm'].':'.$pwd);
                     } else {
                         $a1 = $pwd;
                     }
-                    
+
                     $this->setAuthData('a1', $a1, true);
                 } else {
                     $a1 = $this->getAuthData('a1');
                 }
-                
+
                 $login_ok = $this->validateDigest($this->password, $a1);
                 if ($this->nextNonce == false) {
                     $login_ok = false;
                 }
             }
-            
+
             if (!$login_ok && is_callable($this->loginFailedCallback)) {
                 call_user_func($this->loginFailedCallback,$this->username, $this);
             }
         }
-        
+
         if (!empty($this->username) && $login_ok) {
             $this->setAuth($this->username);
             if (is_callable($this->loginCallback)) {
                 call_user_func($this->loginCallback,$this->username, $this);
             }
         }
-        
+
         /**
          * If the login failed or the user entered no username,
          * output the login screen again.
@@ -424,18 +424,18 @@ class Auth_HTTP extends Auth
         if (!empty($this->username) && !$login_ok) {
             $this->status = AUTH_WRONG_LOGIN;
         }
-        
+
         if ((empty($this->username) || !$login_ok) && $this->showLogin) {
             $this->drawLogin($this->storage->activeUser);
             return;
         }
 
       if (!empty($this->username) && $login_ok && $this->authType == 'digest'
-         && $this->auth['qop'] == 'auth') { 
+         && $this->auth['qop'] == 'auth') {
          $this->authenticationInfo();
       }
     }
-    
+
     // }}}
     // {{{ drawLogin()
 
@@ -453,7 +453,7 @@ class Auth_HTTP extends Auth
          */
         if ($this->authType == 'basic') {
             header("WWW-Authenticate: Basic realm=\"".$this->realm."\"");
-            header('HTTP/1.0 401 Unauthorized');            
+            header('HTTP/1.0 401 Unauthorized');
         } else if ($this->authType == 'digest') {
             $this->nonce = $this->_getNonce();
 
@@ -473,7 +473,7 @@ class Auth_HTTP extends Auth
                 $wwwauth .= 'WWW-Authenticate: Basic realm="'.$this->realm.'"';
             }
             header($wwwauth);
-            header('HTTP/1.0 401 Unauthorized');            
+            header('HTTP/1.0 401 Unauthorized');
         }
 
         /**
@@ -524,7 +524,7 @@ class Auth_HTTP extends Auth
 
     // }}}
     // {{{ validateDigest()
-    
+
     /**
      * judge if the client response is valid.
      *
@@ -533,7 +533,7 @@ class Auth_HTTP extends Auth
      * @param  string $a1 password or hashed password stored in container
      * @return bool true if success, false otherwise
      */
-    function validateDigest($response, $a1)    
+    function validateDigest($response, $a1)
     {
         if (method_exists($this, '_importGlobalVariable')) {
             $this->server = &$this->_importGlobalVariable('server');
@@ -560,7 +560,7 @@ class Auth_HTTP extends Auth
 
             $a2unhashed .= ':'.md5($body);
         }
-        
+
         $a2 = md5($a2unhashed);
         $combined = $a1.':'.
             $this->auth['nonce'].':'.
@@ -569,7 +569,7 @@ class Auth_HTTP extends Auth
             $this->auth['qop'].':'.
             $a2;
         $expectedResponse = md5($combined);
-        
+
         if(!isset($this->auth['opaque']) || $this->auth['opaque'] == $this->opaque) {
             if($response == $expectedResponse) { // password is valid
                 if(!$this->stale) {
@@ -579,13 +579,13 @@ class Auth_HTTP extends Auth
                 }
             }
         }
-        
+
         return false;
     }
-    
+
     // }}}
     // {{{ _judgeStale()
-    
+
     /**
      * judge if nonce from client is stale.
      *
@@ -593,10 +593,10 @@ class Auth_HTTP extends Auth
      * @param  string $nonce  nonce value from client
      * @return bool stale
      */
-    function _judgeStale($nonce) 
+    function _judgeStale($nonce)
     {
         $stale = false;
-        
+
         if(!$this->_decodeNonce($nonce, $time, $hash_cli)) {
          $this->nextNonce = false;
          $stale = true;
@@ -612,10 +612,10 @@ class Auth_HTTP extends Auth
 
         return $stale;
     }
-    
+
     // }}}
     // {{{ _nonceDecode()
-    
+
     /**
      * decode nonce string
      *
@@ -625,7 +625,7 @@ class Auth_HTTP extends Auth
      * @param  string $hash decoded hash
      * @return bool false if nonce is invalid
      */
-    function _decodeNonce($nonce, &$time, &$hash) 
+    function _decodeNonce($nonce, &$time, &$hash)
     {
         if (method_exists($this, '_importGlobalVariable')) {
             $this->server = &$this->_importGlobalVariable('server');
@@ -643,20 +643,20 @@ class Auth_HTTP extends Auth
         if ($hash_cli != $hash) {
             return false;
         }
-        
+
         return true;
     }
 
     // }}}
     // {{{ _getNonce()
-    
+
     /**
      * return nonce to detect timeout
      *
      * @access private
      * @return string nonce value
      */
-    function _getNonce() 
+    function _getNonce()
     {
         if (method_exists($this, '_importGlobalVariable')) {
             $this->server = &$this->_importGlobalVariable('server');
@@ -665,12 +665,12 @@ class Auth_HTTP extends Auth
         $time = time();
         $hash = md5($time . $this->server['HTTP_USER_AGENT'] . $this->options['noncekey']);
 
-        return base64_encode($time) . $hash;  
+        return base64_encode($time) . $hash;
     }
 
     // }}}
     // {{{ authenticationInfo()
-    
+
     /**
      * output HTTP Authentication-Info header
      *
@@ -680,7 +680,7 @@ class Auth_HTTP extends Auth
      * @param string MD5 hash of content
      */
     function authenticationInfo($contentMD5 = '') {
-        
+
         if($this->getAuth() && ($this->getAuthData('a1') != null)) {
             $a1 = $this->getAuthData('a1');
 
@@ -696,7 +696,7 @@ class Auth_HTTP extends Auth
                         $this->auth['cnonce'].':'.
                         $this->auth['qop'].':'.
                         $a2;
-            
+
             // Send authentication info
             $wwwauth = 'Authentication-Info: ';
             if($this->nonce != $this->nextNonce) {
@@ -719,7 +719,7 @@ class Auth_HTTP extends Auth
      * @param mixed $value value of option
      * @return void
      */
-    function setOption($name, $value = null) 
+    function setOption($name, $value = null)
     {
         if (is_array($name)) {
             foreach($name as $key => $value) {
@@ -743,7 +743,7 @@ class Auth_HTTP extends Auth
      * @param string $name key of option
      * @return mixed option value
      */
-    function getOption($name) 
+    function getOption($name)
     {
         if (array_key_exists( $name, $this->options)) {
             return $this->options[$name];
@@ -765,7 +765,7 @@ class Auth_HTTP extends Auth
      * @access public
      * @return string self URI
      */
-    function selfURI() 
+    function selfURI()
     {
         if (method_exists($this, '_importGlobalVariable')) {
             $this->server = &$this->_importGlobalVariable('server');

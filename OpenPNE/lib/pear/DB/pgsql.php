@@ -187,13 +187,13 @@ class DB_pgsql extends DB_common
      * Example of connecting to a new link via a socket:
      * <code>
      * require_once 'DB.php';
-     * 
+     *
      * $dsn = 'pgsql://user:pass@unix(/tmp)/dbname?new_link=true';
      * $options = array(
      *     'portability' => DB_PORTABILITY_ALL,
      * );
-     * 
-     * $db =& DB::connect($dsn, $options);
+     *
+     * $db = DB::connect($dsn, $options);
      * if (PEAR::isError($db)) {
      *     die($db->getMessage());
      * }
@@ -675,7 +675,7 @@ class DB_pgsql extends DB_common
         $repeat = false;
         do {
             $this->pushErrorHandling(PEAR_ERROR_RETURN);
-            $result =& $this->query("SELECT NEXTVAL('${seqname}')");
+            $result = $this->query("SELECT NEXTVAL('${seqname}')");
             $this->popErrorHandling();
             if ($ondemand && DB::isError($result) &&
                 $result->getCode() == DB_ERROR_NOSUCHTABLE) {
@@ -791,7 +791,7 @@ class DB_pgsql extends DB_common
     /**
      * Gets the DBMS' native error message produced by the last query
      *
-     * {@internal Error messages are used instead of error codes 
+     * {@internal Error messages are used instead of error codes
      * in order to support older versions of PostgreSQL.}}
      *
      * @return string  the DBMS' error message

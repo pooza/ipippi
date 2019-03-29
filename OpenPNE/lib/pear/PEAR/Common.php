@@ -205,7 +205,7 @@ class PEAR_Common extends PEAR
     {
         // doesn't work due to bug #14744
         //$tempfiles = $this->_tempfiles;
-        $tempfiles =& $GLOBALS['_PEAR_Common_tempfiles'];
+        $tempfiles = $GLOBALS['_PEAR_Common_tempfiles'];
         while ($file = array_shift($tempfiles)) {
             if (@is_dir($file)) {
                 if (!class_exists('System')) {
@@ -763,9 +763,9 @@ class PEAR_Common extends PEAR
                     if (version_compare(zend_version(), '2.0', '<')) {
                         if (in_array(strtolower($data),
                             array('public', 'private', 'protected', 'abstract',
-                                  'interface', 'implements', 'throw') 
+                                  'interface', 'implements', 'throw')
                                  )) {
-                            PEAR::raiseError('Error: PHP5 token encountered in ' . $file . 
+                            PEAR::raiseError('Error: PHP5 token encountered in ' . $file .
                             'packaging should be done in PHP 5');
                             return false;
                         }

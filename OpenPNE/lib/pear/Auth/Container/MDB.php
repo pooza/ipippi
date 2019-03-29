@@ -91,7 +91,7 @@ class Auth_Container_MDB extends Auth_Container
     function _connect($dsn)
     {
         if (is_string($dsn) || is_array($dsn)) {
-            $this->db =& MDB::Connect($dsn);
+            $this->db = MDB::Connect($dsn);
         } elseif (get_parent_class($dsn) == "mdb_common") {
             $this->db = $dsn;
         } elseif (is_object($dsn) && MDB::isError($dsn)) {

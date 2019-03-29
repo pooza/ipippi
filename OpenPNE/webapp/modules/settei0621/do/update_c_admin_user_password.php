@@ -33,7 +33,7 @@ function doAction_update_c_admin_user_password($requests)
 
 	$GLOBALS['AUTH']->t_logout();
 
-	$hash_tbl =& AdminHashTable::singleton();
+	$hash_tbl = AdminHashTable::singleton();
 	$p = $hash_tbl->hash('login', 'normal');
 	$m = $GLOBALS['__Framework']['current_module'];
 	$msg = "パスワードを変更しました。新しいパスワードでログインしなおしてください。";

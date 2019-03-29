@@ -11,7 +11,7 @@ $GLOBALS['AUTH']->setSessionname('OpenPNE_admin');
 $GLOBALS['AUTH']->start();
 
 // ログインページのURL
-$hash_tbl =& AdminHashTable::singleton();
+$hash_tbl = AdminHashTable::singleton();
 $p = $hash_tbl->hash('login', 'normal');
 $m = $GLOBALS['__Framework']['current_module'];
 

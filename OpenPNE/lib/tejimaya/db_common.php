@@ -535,7 +535,7 @@ function rss_get_new($rss_url, $limit_item = 10)
 {
 	if (!$rss_url) return array();
 
-	if (!$rss =& rss_extends_fetch_rss($rss_url)) {
+	if (!$rss = rss_extends_fetch_rss($rss_url)) {
 		return array();
 	}
 
@@ -652,7 +652,7 @@ function rss_auto_discovery($html, $url)
 				require_once PEAR_DIR . 'Net/URL.php';
 
 				$base_url = preg_replace('|/[^/]*$|', '/', $url);
-				$obj_url =& new Net_URL($base_url);
+				$obj_url = new Net_URL($base_url);
 
 				if ($href{0} === '/') $obj_url->path = '';
 				$obj_url->path = $obj_url->resolvePath($obj_url->path . $href);

@@ -467,7 +467,7 @@ class DB
             return $tmp;
         }
 
-        @$obj =& new $classname;
+        @$obj = new $classname;
 
         foreach ($options as $option => $value) {
             $test = $obj->setOption($option, $value);
@@ -495,7 +495,7 @@ class DB
      *     'portability' => DB_PORTABILITY_ALL,
      * );
      *
-     * $db =& DB::connect($dsn, $options);
+     * $db = DB::connect($dsn, $options);
      * if (PEAR::isError($db)) {
      *     die($db->getMessage());
      * }
@@ -544,7 +544,7 @@ class DB
             return $tmp;
         }
 
-        @$obj =& new $classname;
+        @$obj = new $classname;
 
         foreach ($options as $option => $value) {
             $test = $obj->setOption($option, $value);

@@ -188,7 +188,7 @@ class DB_dbase extends DB_common
      *     'portability' => DB_PORTABILITY_ALL,
      * );
      *
-     * $db =& DB::connect($dsn, $options);
+     * $db = DB::connect($dsn, $options);
      * if (PEAR::isError($db)) {
      *     die($db->getMessage());
      * }
@@ -273,7 +273,7 @@ class DB_dbase extends DB_common
     {
         // emulate result resources
         $this->res_row[(int)$this->result] = 0;
-        $tmp =& new DB_result($this, $this->result++);
+        $tmp = new DB_result($this, $this->result++);
         return $tmp;
     }
 

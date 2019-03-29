@@ -11,7 +11,7 @@ require_once($module_lib_dir . "/hash_admin.php");
 $GLOBALS['__Framework']['default_page'] = 'top';
 
 // ハッシュから action名を取得
-$hash_tbl =& AdminHashTable::singleton();
+$hash_tbl = AdminHashTable::singleton();
 $action = $hash_tbl->action($action, $type);
 
 function man_init_admin_page(&$smarty)

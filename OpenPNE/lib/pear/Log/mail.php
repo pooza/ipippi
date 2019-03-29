@@ -12,8 +12,8 @@
  * The mail is actually sent when you close() the logger, or when the destructor
  * is called (when the script is terminated).
  *
- * PLEASE NOTE that you must create a Log_mail object using =&, like this :
- *  $logger =& Log::factory("mail", "recipient@example.com", ...)
+ * PLEASE NOTE that you must create a Log_mail object using =, like this :
+ *  $logger = Log::factory("mail", "recipient@example.com", ...)
  *
  * This is a PEAR requirement for destructors to work properly.
  * See http://pear.php.net/manual/en/class.pear.php

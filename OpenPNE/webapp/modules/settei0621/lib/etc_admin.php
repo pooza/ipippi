@@ -81,7 +81,7 @@ function admin_insert_c_image($upfile_obj, $filename)
 
 function admin_client_redirect($p, $msg = '', $tail = '')
 {
-	$hash_tbl =& AdminHashTable::singleton();
+	$hash_tbl = AdminHashTable::singleton();
 
 	$m = $GLOBALS['__Framework']['current_module'];
 	$p = $hash_tbl->hash($p);

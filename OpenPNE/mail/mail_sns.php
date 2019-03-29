@@ -10,7 +10,7 @@ class MailSNS
 
 	function MailSNS(&$mail, $from, $to)
 	{
-		$this->mail =& $mail;
+		$this->mail = $mail;
 		$this->from = $from;
 		$this->to = $to;
 

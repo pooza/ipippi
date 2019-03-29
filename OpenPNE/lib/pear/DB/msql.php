@@ -146,14 +146,14 @@ class DB_msql extends DB_common
      * Example of how to connect:
      * <code>
      * require_once 'DB.php';
-     * 
+     *
      * // $dsn = 'msql://hostname/dbname';  // use a TCP connection
      * $dsn = 'msql:///dbname';             // use a socket
      * $options = array(
      *     'portability' => DB_PORTABILITY_ALL,
      * );
-     * 
-     * $db =& DB::connect($dsn, $options);
+     *
+     * $db = DB::connect($dsn, $options);
      * if (PEAR::isError($db)) {
      *     die($db->getMessage());
      * }
@@ -443,7 +443,7 @@ class DB_msql extends DB_common
         $repeat = false;
         do {
             $this->pushErrorHandling(PEAR_ERROR_RETURN);
-            $result =& $this->query("SELECT _seq FROM ${seqname}");
+            $result = $this->query("SELECT _seq FROM ${seqname}");
             $this->popErrorHandling();
             if ($ondemand && DB::isError($result) &&
                 $result->getCode() == DB_ERROR_NOSUCHTABLE) {

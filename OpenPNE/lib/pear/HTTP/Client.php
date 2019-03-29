@@ -23,10 +23,10 @@ require_once 'HTTP/Client/CookieManager.php';
 
 /**
  * A simple HTTP client class.
- * 
+ *
  * The class wraps around HTTP_Request providing a higher-level
  * API for performing multiple HTTP requests
- * 
+ *
  * @package HTTP_Client
  * @author Alexey Borzov <avb@php.net>
  * @version $Revision: 1.3 $
@@ -70,7 +70,7 @@ class HTTP_Client
     var $_maxRedirects = 5;
 
    /**
-    * Listeners attached to the client  
+    * Listeners attached to the client
     * @var array
     */
     var $_listeners = array();
@@ -89,14 +89,14 @@ class HTTP_Client
 
    /**
     * Constructor
-    * 
+    *
     * @access   public
     * @param    array   Parameters to pass to HTTP_Request's constructor
     * @param    array   Default headers to send on every request
     */
     function HTTP_Client($defaultRequestParams = null, $defaultHeaders = null)
     {
-        $this->_cookieManager =& new HTTP_Client_CookieManager();
+        $this->_cookieManager = new HTTP_Client_CookieManager();
         if (isset($defaultHeaders)) {
             $this->setDefaultHeader($defaultHeaders);
         }
@@ -108,11 +108,11 @@ class HTTP_Client
 
    /**
     * Sets the maximum redirects that will be processed.
-    * 
-    * Setting this to 0 disables redirect processing. If not 0 and the 
+    *
+    * Setting this to 0 disables redirect processing. If not 0 and the
     * number of redirects in a request is bigger than this number, then an
     * error will be raised.
-    * 
+    *
     * @access   public
     * @param    int     Max number of redirects to process
     */
@@ -143,7 +143,7 @@ class HTTP_Client
     */
     function &_createRequest($url, $method = HTTP_REQUEST_METHOD_GET)
     {
-        $req =& new HTTP_Request($url, $this->_defaultRequestParams);
+        $req = new HTTP_Request($url, $this->_defaultRequestParams);
         $req->setMethod($method);
         foreach ($this->_defaultHeaders as $name => $value) {
             $req->addHeader($name, $value);
@@ -156,7 +156,7 @@ class HTTP_Client
         }
         return $req;
     }
-    
+
 
    /**
     * Sends a 'HEAD' HTTP request
@@ -168,14 +168,14 @@ class HTTP_Client
     */
     function head($url)
     {
-        $request =& $this->_createRequest($url, HTTP_REQUEST_METHOD_HEAD);
+        $request = $this->_createRequest($url, HTTP_REQUEST_METHOD_HEAD);
         return $this->_performRequest($request);
     }
-   
+
 
    /**
     * Sends a 'GET' HTTP request
-    * 
+    *
     * @param    string  URL
     * @param    mixed   additional data to send
     * @param    boolean Whether the data is already urlencoded
@@ -185,7 +185,7 @@ class HTTP_Client
     */
     function get($url, $data = null, $preEncoded = false)
     {
-        $request =& $this->_createRequest($url);
+        $request = $this->_createRequest($url);
         if (is_array($data)) {
             foreach ($data as $name => $value) {
                 $request->addQueryString($name, $value, $preEncoded);
@@ -211,7 +211,7 @@ class HTTP_Client
     */
     function post($url, $data, $preEncoded = false, $files = array())
     {
-        $request =& $this->_createRequest($url, HTTP_REQUEST_METHOD_POST);
+        $request = $this->_createRequest($url, HTTP_REQUEST_METHOD_POST);
         if (is_array($data)) {
             foreach ($data as $name => $value) {
                 $request->addPostData($name, $value, $preEncoded);
@@ -261,7 +261,7 @@ class HTTP_Client
             $this->_defaultRequestParams[$name] = $value;
         }
     }
-      
+
 
    /**
     * Performs a request, processes redirects
@@ -296,7 +296,7 @@ class HTTP_Client
             $this->_notify('httpRedirect', $url);
             // we access the private properties directly, as there are no accessors for them
             switch ($request->_method) {
-                case HTTP_REQUEST_METHOD_POST: 
+                case HTTP_REQUEST_METHOD_POST:
                     if (302 == $code || 303 == $code) {
                         return $this->get($url);
                     } else {
@@ -308,7 +308,7 @@ class HTTP_Client
                     }
                 case HTTP_REQUEST_METHOD_HEAD:
                     return (303 == $code? $this->get($url): $this->head($url));
-                case HTTP_REQUEST_METHOD_GET: 
+                case HTTP_REQUEST_METHOD_GET:
                 default:
                     return $this->get($url);
             } // switch
@@ -329,7 +329,7 @@ class HTTP_Client
 
    /**
     * Returns the most recent HTTP response
-    * 
+    *
     * @access public
     * @return array
     */
@@ -374,9 +374,9 @@ class HTTP_Client
    /**
     * Adds a Listener to the list of listeners that are notified of
     * the object's events
-    * 
+    *
     * @param    object   HTTP_Request_Listener instance to attach
-    * @param    boolean  Whether the listener should be attached to the 
+    * @param    boolean  Whether the listener should be attached to the
     *                    created HTTP_Request objects
     * @return   boolean  whether the listener was successfully attached
     * @access   public
@@ -386,22 +386,22 @@ class HTTP_Client
         if (!is_a($listener, 'HTTP_Request_Listener')) {
             return false;
         }
-        $this->_listeners[$listener->getId()] =& $listener;
+        $this->_listeners[$listener->getId()] = $listener;
         $this->_propagate[$listener->getId()] =  $propagate;
         return true;
     }
 
 
    /**
-    * Removes a Listener from the list of listeners 
-    * 
+    * Removes a Listener from the list of listeners
+    *
     * @param    object   HTTP_Request_Listener instance to detach
     * @return   boolean  whether the listener was successfully detached
     * @access   public
     */
     function detach(&$listener)
     {
-        if (!is_a($listener, 'HTTP_Request_Listener') || 
+        if (!is_a($listener, 'HTTP_Request_Listener') ||
             !isset($this->_listeners[$listener->getId()])) {
             return false;
         }
@@ -412,13 +412,13 @@ class HTTP_Client
 
    /**
     * Notifies all registered listeners of an event.
-    * 
+    *
     * Currently available events are:
     * 'request': sent on HTTP request that is not a redirect
     * 'httpSuccess': sent when we receive a successfull 2xx response
     * 'httpRedirect': sent when we receive a redirection response
     * 'httpError': sent on 4xx, 5xx response
-    * 
+    *
     * @param    string  Event name
     * @param    mixed   Additional data
     * @access   private
@@ -433,7 +433,7 @@ class HTTP_Client
 
    /**
     * Calculates the absolute URL of a redirect
-    *  
+    *
     * @param    object  Net_Url object containing the request URL
     * @param    string  Value of the 'Location' response header
     * @return   string  Absolute URL we are being redirected to

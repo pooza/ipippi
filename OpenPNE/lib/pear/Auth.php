@@ -149,7 +149,7 @@ class Auth {
      * @var string
      */
     var $_sessionName = '_authsession';
-    
+
     /**
      * Package Version
      *
@@ -189,13 +189,13 @@ class Auth {
         }
 
         if (is_object($storageDriver)) {
-            $this->storage =& $storageDriver;
+            $this->storage = $storageDriver;
         } else {
             $this->storage = $this->_factory($storageDriver, $options);
         }
         // Pass a reference to auth to the container, ugly but works
         // this is used by the DB container to use method setAuthData not staticaly.
-        $this->storage->_auth_obj =& $this;
+        $this->storage->_auth_obj = $this;
     }
 
     // }}}

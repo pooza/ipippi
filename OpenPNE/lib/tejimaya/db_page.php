@@ -3321,7 +3321,7 @@ function p_h_review_add_search_result($keyword, $category_id, $page)
 	}
 
 	require_once(DOCUMENT_ROOT . '/lib/pear/Services/Amazon.php');
-	$amazon =& new Services_Amazon(AMAZON_TOKEN, AMAZON_ACCESS_KEY, AMAZON_AFFID);
+	$amazon = new Services_Amazon(AMAZON_TOKEN, AMAZON_ACCESS_KEY, AMAZON_AFFID);
 	$amazon->setLocale(AMAZON_LOCALE);
 
 	$options = array(
@@ -3341,7 +3341,7 @@ function p_h_review_add_search_result($keyword, $category_id, $page)
 
 function p_h_review_write_product4asin($asin){
 	require_once(DOCUMENT_ROOT . '/lib/pear/Services/Amazon.php');
-	$amazon =& new Services_Amazon(AMAZON_TOKEN, AMAZON_ACCESS_KEY, AMAZON_AFFID);
+	$amazon = new Services_Amazon(AMAZON_TOKEN, AMAZON_ACCESS_KEY, AMAZON_AFFID);
 	$amazon->setLocale(AMAZON_LOCALE);
 	$options = array(
 		'ResponseGroup' => 'Images,ItemAttributes',

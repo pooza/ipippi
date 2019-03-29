@@ -278,7 +278,7 @@ class PHPUnit_Skeleton {
 
         $this->testClass .=
           "        require_once '" . $this->classPath . "';\n" .
-          "        \$this->" . $this->className . " =& new " . $this->className . "(PARAM);\n" .
+          "        \$this->" . $this->className . " = new " . $this->className . "(PARAM);\n" .
           "    }\n\n";
 
         // Create the tearDown method.

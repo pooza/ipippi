@@ -65,7 +65,7 @@ class Calendar_Decorator_Wrapper extends Calendar_Decorator
     {
         $Calendar = parent::fetch();
         if ($Calendar) {
-            $ret =& new $decorator($Calendar);
+            $ret = new $decorator($Calendar);
         } else {
             $ret = false;
         }

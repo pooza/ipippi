@@ -68,7 +68,7 @@
 * $params['encoding']     = 'base64';
 * $params['disposition']  = 'attachment';
 * $params['dfilename']    = 'example.zip';
-* $attach =& $email->addSubPart($body, $params);
+* $attach = $email->addSubPart($body, $params);
 *
 * // Now build the email. Note that the encode
 * // function returns an associative array containing two
@@ -215,7 +215,7 @@ class Mail_mimePart {
      */
     function encode()
     {
-        $encoded =& $this->_encoded;
+        $encoded = $this->_encoded;
 
         if (!empty($this->_subparts)) {
             srand((double)microtime()*1000000);
@@ -241,7 +241,7 @@ class Mail_mimePart {
         }
 
         // Add headers to $encoded
-        $encoded['headers'] =& $this->_headers;
+        $encoded['headers'] = $this->_headers;
 
         return $encoded;
     }
@@ -257,7 +257,7 @@ class Mail_mimePart {
      *                as the $params argument for constructor.
      * @return A reference to the part you just added. It is
      *         crucial if using multipart/* in your subparts that
-     *         you use =& in your script when calling this function,
+     *         you use = in your script when calling this function,
      *         otherwise you will not be able to add further subparts.
      * @access public
      */

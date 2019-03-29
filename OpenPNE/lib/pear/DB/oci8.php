@@ -480,7 +480,7 @@ class DB_oci8 extends DB_common
                 $smt = $this->prepare('SELECT COUNT(*) FROM ('.$this->last_query.')');
                 $count = $this->execute($smt, $this->_data);
             } else {
-                $count =& $this->query($countquery);
+                $count = $this->query($countquery);
             }
 
             if (DB::isError($count) ||
@@ -622,9 +622,9 @@ class DB_oci8 extends DB_common
         $this->last_parameters = $data;
         $this->_data = $data;
 
-        $types =& $this->prepare_types[(int)$stmt];
+        $types = $this->prepare_types[(int)$stmt];
         if (count($types) != count($data)) {
-            $tmp =& $this->raiseError(DB_ERROR_MISMATCH);
+            $tmp = $this->raiseError(DB_ERROR_MISMATCH);
             return $tmp;
         }
 
@@ -643,7 +643,7 @@ class DB_oci8 extends DB_common
             } elseif ($types[$i] == DB_PARAM_OPAQUE) {
                 $fp = @fopen($data[$key], 'rb');
                 if (!$fp) {
-                    $tmp =& $this->raiseError(DB_ERROR_ACCESS_VIOLATION);
+                    $tmp = $this->raiseError(DB_ERROR_ACCESS_VIOLATION);
                     return $tmp;
                 }
                 $data[$key] = fread($fp, filesize($data[$key]));
@@ -669,7 +669,7 @@ class DB_oci8 extends DB_common
             $tmp = DB_OK;
         } else {
             @ocisetprefetch($stmt, $this->options['result_buffering']);
-            $tmp =& new DB_result($this, $stmt);
+            $tmp = new DB_result($this, $stmt);
         }
         return $tmp;
     }
@@ -797,7 +797,7 @@ class DB_oci8 extends DB_common
         if (count($params)) {
             $result = $this->prepare("SELECT * FROM ($query) "
                                      . 'WHERE NULL = NULL');
-            $tmp =& $this->execute($result, $params);
+            $tmp = $this->execute($result, $params);
         } else {
             $q_fields = "SELECT * FROM ($query) WHERE NULL = NULL";
 
@@ -857,7 +857,7 @@ class DB_oci8 extends DB_common
         $repeat = 0;
         do {
             $this->expectError(DB_ERROR_NOSUCHTABLE);
-            $result =& $this->query("SELECT ${seqname}.nextval FROM dual");
+            $result = $this->query("SELECT ${seqname}.nextval FROM dual");
             $this->popExpect();
             if ($ondemand && DB::isError($result) &&
                 $result->getCode() == DB_ERROR_NOSUCHTABLE) {

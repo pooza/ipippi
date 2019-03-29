@@ -12,9 +12,9 @@ require_once $img_dir . 'img.class.php';
 
 if (defined('USE_IMAGEMAGICK') && USE_IMAGEMAGICK) {
 	require_once $img_dir . 'img_imgmagick.class.php';
-	$img =& new Img_ImgMagick();
+	$img = new Img_ImgMagick();
 } else {
-	$img =& new Img();
+	$img = new Img();
 }
 
 $img->set_safe_vars($_GET);

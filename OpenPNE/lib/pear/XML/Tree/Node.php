@@ -139,7 +139,7 @@ class XML_Tree_Node {
         if (is_object($child)) { // child offered is not instanziated
             // insert a single node
             if (strtolower(get_class($child)) == 'xml_tree_node') {
-                $this->children[$pos]=&$child;
+                $this->children[$pos]=$child;
             }
             // insert a tree i.e insert root-element
             if (strtolower(get_class($child)) == 'xml_tree' && isset($child->root)) {

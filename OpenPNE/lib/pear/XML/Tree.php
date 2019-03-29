@@ -36,8 +36,8 @@ require_once 'XML/Tree/Node.php';
 * Example
 *
 *    $tree  = new XML_Tree;
-*    $root =& $tree->addRoot('root');
-*    $foo  =& $root->addChild('foo');
+*    $root = $tree->addRoot('root');
+*    $foo  = $root->addChild('foo');
 *
 *    header('Content-Type: text/xml');
 *    $tree->dump();
@@ -135,7 +135,7 @@ class XML_Tree extends XML_Parser
                 $this->namespace[$key][$count]++;
         }
 
-        $parent=&$this->get_node_by_path($path);
+        $parent=$this->get_node_by_path($path);
         return($parent->insert_child($pos,$child,$content,$attributes));
     }
 
@@ -167,7 +167,7 @@ class XML_Tree extends XML_Parser
             }
         }
 
-        $parent=&$this->get_node_by_path($path);
+        $parent=$this->get_node_by_path($path);
         return($parent->remove_child($pos));
     }
 
@@ -225,13 +225,13 @@ class XML_Tree extends XML_Parser
     {
         // root elem
         if (!isset($this->i)) {
-            $this->obj1 =& $this->add_root($elem, null, $attribs);
+            $this->obj1 = $this->add_root($elem, null, $attribs);
             $this->i = 2;
         } else {
             // mixed contents
             if (!empty($this->cdata)) {
                 $parent_id = 'obj' . ($this->i - 1);
-                $parent    =& $this->$parent_id;
+                $parent    = $this->$parent_id;
                 $parent->children[] = &new XML_Tree_Node(null, $this->cdata);
             }
             $obj_id = 'obj' . $this->i++;
@@ -255,7 +255,7 @@ class XML_Tree extends XML_Parser
         if ($this->i > 1) {
             $obj_id = 'obj' . $this->i;
             // recover the node created in StartHandler
-            $node   =& $this->$obj_id;
+            $node   = $this->$obj_id;
             // mixed contents
             if (count($node->children) > 0) {
                 if (trim($this->cdata)) {
@@ -265,7 +265,7 @@ class XML_Tree extends XML_Parser
                 $node->set_content($this->cdata);
             }
             $parent_id = 'obj' . ($this->i - 1);
-            $parent    =& $this->$parent_id;
+            $parent    = $this->$parent_id;
             // attach the node to its parent node children array
             $parent->children[] = $node;
         }

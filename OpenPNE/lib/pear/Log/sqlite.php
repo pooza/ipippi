@@ -96,7 +96,7 @@ class Log_sqlite extends Log
             }
         } else {
             // If an existing database connection was provided, use it.
-            $this->_db =& $conf;
+            $this->_db = $conf;
             $this->_existingConnection = true;
         }
     }

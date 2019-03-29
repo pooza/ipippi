@@ -56,7 +56,7 @@ function m_process_mail($raw_mail)
 	list($to_user, $to_host) = explode("@", $to, 2);
 
 	if ($to_host == MAIL_SERVER_DOMAIN) {
-		$mailsns =& new MailSNS($mail, $from, $to);
+		$mailsns = new MailSNS($mail, $from, $to);
 		if (!$mailsns->main()) {
 			m_debug_log('mail.php::process_mail() ERROR code 1');
 			return false;
@@ -218,7 +218,7 @@ function m_debug_log($msg, $priority =  PEAR_LOG_WARNING)
 	if (!MAIL_DEBUG_LOG) return;
 
 	$log_path = DOCUMENT_ROOT . '/var/log/mail.log';
-	$file =& Log::singleton('file', $log_path, 'MAIL');
+	$file = Log::singleton('file', $log_path, 'MAIL');
 
 	mb_convert_encoding($msg, 'JIS', 'auto');
 	$file->log($msg, $priority);

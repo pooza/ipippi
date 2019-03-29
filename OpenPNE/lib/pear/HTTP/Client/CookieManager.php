@@ -20,7 +20,7 @@
 
 /**
  * This class is used to store cookies and pass them between HTTP requests.
- * 
+ *
  * @package HTTP_Client
  * @author  Alexey Borzov <avb@php.net>
  * @version $Revision: 1.3 $
@@ -36,7 +36,7 @@ class HTTP_Client_CookieManager
 
    /**
     * Constructor
-    * 
+    *
     * @access public
     */
     function HTTP_Client_CookieManager()
@@ -47,14 +47,14 @@ class HTTP_Client_CookieManager
 
    /**
     * Adds cookies to the request
-    * 
+    *
     * @access public
     * @param object An HTTP_Request object
     */
     function passCookies(&$request)
     {
         if (!empty($this->_cookies)) {
-            $url =& $request->_url;
+            $url = $request->_url;
             // We do not check cookie's "expires" field, as we do not store deleted
             // cookies in the array and our client does not work long enough for other
             // cookies to expire. If some kind of persistence is added to this object,
@@ -81,8 +81,8 @@ class HTTP_Client_CookieManager
 
    /**
     * Explicitly adds cookie to the list
-    * 
-    * @param array An array representing cookie, this function expects all of the array's 
+    *
+    * @param array An array representing cookie, this function expects all of the array's
     *              fields to be set
     * @access public
     */
@@ -102,7 +102,7 @@ class HTTP_Client_CookieManager
     function updateCookies(&$request)
     {
         if (false !== ($cookies = $request->getResponseCookies())) {
-            $url =& $request->_url;
+            $url = $request->_url;
             foreach ($cookies as $cookie) {
                 // use the current domain by default
                 if (!isset($cookie['domain'])) {
@@ -130,16 +130,16 @@ class HTTP_Client_CookieManager
 
    /**
     * Generates a key for the $_cookies array.
-    * 
+    *
     * The cookies is uniquely identified by its name, domain and path.
     * Thus we cannot make f.e. an associative array with name as a key, we should
     * generate a key from these 3 values.
-    * 
+    *
     * @access private
     * @param string    Cookie name
     * @param string    Cookie domain
     * @param string    Cookie path
-    * @return string   a key 
+    * @return string   a key
     */
     function _makeHash($name, $domain, $path)
     {
@@ -149,10 +149,10 @@ class HTTP_Client_CookieManager
 
    /**
     * Checks whether a cookie domain matches a request host.
-    * 
+    *
     * Cookie domain can begin with a dot, it also must contain at least
     * two dots.
-    * 
+    *
     * @access private
     * @param string     request host
     * @param string     cookie domain

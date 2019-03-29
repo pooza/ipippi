@@ -442,11 +442,11 @@ class Mail_mime
 
         switch (TRUE) {
             case $text AND !$attachments:
-                $message =& $this->_addTextPart($null, $this->_txtbody);
+                $message = $this->_addTextPart($null, $this->_txtbody);
                 break;
 
             case !$text AND !$html AND $attachments:
-                $message =& $this->_addMixedPart();
+                $message = $this->_addMixedPart();
 
                 for ($i = 0; $i < count($this->_parts); $i++) {
                     $this->_addAttachmentPart($message, $this->_parts[$i]);
@@ -454,7 +454,7 @@ class Mail_mime
                 break;
 
             case $text AND $attachments:
-                $message =& $this->_addMixedPart();
+                $message = $this->_addMixedPart();
                 $this->_addTextPart($message, $this->_txtbody);
 
                 for ($i = 0; $i < count($this->_parts); $i++) {
@@ -464,23 +464,23 @@ class Mail_mime
 
             case $html AND !$attachments AND !$html_images:
                 if (isset($this->_txtbody)) {
-                    $message =& $this->_addAlternativePart($null);
+                    $message = $this->_addAlternativePart($null);
                        $this->_addTextPart($message, $this->_txtbody);
                     $this->_addHtmlPart($message);
 
                 } else {
-                    $message =& $this->_addHtmlPart($null);
+                    $message = $this->_addHtmlPart($null);
                 }
                 break;
 
             case $html AND !$attachments AND $html_images:
                 if (isset($this->_txtbody)) {
-                    $message =& $this->_addAlternativePart($null);
+                    $message = $this->_addAlternativePart($null);
                     $this->_addTextPart($message, $this->_txtbody);
-                    $related =& $this->_addRelatedPart($message);
+                    $related = $this->_addRelatedPart($message);
                 } else {
-                    $message =& $this->_addRelatedPart($null);
-                    $related =& $message;
+                    $message = $this->_addRelatedPart($null);
+                    $related = $message;
                 }
                 $this->_addHtmlPart($related);
                 for ($i = 0; $i < count($this->_html_images); $i++) {
@@ -489,9 +489,9 @@ class Mail_mime
                 break;
 
             case $html AND $attachments AND !$html_images:
-                $message =& $this->_addMixedPart();
+                $message = $this->_addMixedPart();
                 if (isset($this->_txtbody)) {
-                    $alt =& $this->_addAlternativePart($message);
+                    $alt = $this->_addAlternativePart($message);
                     $this->_addTextPart($alt, $this->_txtbody);
                     $this->_addHtmlPart($alt);
                 } else {
@@ -503,13 +503,13 @@ class Mail_mime
                 break;
 
             case $html AND $attachments AND $html_images:
-                $message =& $this->_addMixedPart();
+                $message = $this->_addMixedPart();
                 if (isset($this->_txtbody)) {
-                    $alt =& $this->_addAlternativePart($message);
+                    $alt = $this->_addAlternativePart($message);
                     $this->_addTextPart($alt, $this->_txtbody);
-                    $rel =& $this->_addRelatedPart($alt);
+                    $rel = $this->_addRelatedPart($alt);
                 } else {
-                    $rel =& $this->_addRelatedPart($message);
+                    $rel = $this->_addRelatedPart($message);
                 }
                 $this->_addHtmlPart($rel);
                 for ($i = 0; $i < count($this->_html_images); $i++) {
@@ -575,7 +575,7 @@ class Mail_mime
 
     /**
     * Sets the Subject header
-    * 
+    *
     * @param  string $subject String to set the subject to
     * access  public
     */
@@ -626,7 +626,7 @@ class Mail_mime
             $this->_headers['Bcc'] = $email;
         }
     }
-    
+
     /**
     * Encodes a header as per RFC2047
     *
@@ -644,7 +644,7 @@ class Mail_mime
             }
             $input[$hdr_name] = $hdr_value;
         }
-        
+
         return $input;
     }
 
