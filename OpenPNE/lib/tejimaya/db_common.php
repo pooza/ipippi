@@ -68,7 +68,7 @@ function get_login_url()
  * @return result
  */
 function _mysql_query4db($sql) {
-	if (!($result = mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql)))) {
+	if (!($result = mysqli_query($GLOBALS['db'], $sql))) {
 		return false;
 	}
 	return $result;
