@@ -143,7 +143,7 @@ class Img
 
 		$sql = "SELECT filename,bin,type FROM c_image" .
 			" WHERE filename = '".mysqli_real_escape_string($this->dbsrc)."'";
-		$result = mysqli_stmt_execute($db, $sql);
+		$result = mysqli_stmt_execute(mysqli_prepare($db, $sql));
 		$row = mysqli_fetch_array($result);
 
 		if ($row) {
