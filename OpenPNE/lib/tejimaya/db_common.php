@@ -492,8 +492,8 @@ function no_quote4db($str)
 	if (defined('DB_ESCAPE_TYPE') && DB_ESCAPE_TYPE == 0) {
 		return mysql_real_escape_string($str);
 	} else {
-		$str = mb_ereg_replace('\\\\',"\\\\",$str);
-		$str = mb_ereg_replace('\'',"\\'",$str);
+		$str = mb_mb_ereg_replace('\\\\',"\\\\",$str);
+		$str = mb_mb_ereg_replace('\'',"\\'",$str);
 		return $str;
 	}
 }

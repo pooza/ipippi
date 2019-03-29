@@ -100,7 +100,7 @@ class PEAR_RunTest
             $line = fgets($fp);
 
             // Match the beginning of a section.
-            if (ereg('^--([A-Z]+)--',$line,$r)) {
+            if (mb_ereg('^--([A-Z]+)--',$line,$r)) {
                 $section = $r[1];
                 $section_text[$section] = '';
                 continue;
@@ -123,7 +123,7 @@ class PEAR_RunTest
 
         $tmp = realpath(dirname($file));
         $tmp_skipif = $tmp . uniqid('/phpt.');
-        $tmp_file   = ereg_replace('\.phpt$','.php',$file);
+        $tmp_file   = mb_ereg_replace('\.phpt$','.php',$file);
         $tmp_post   = $tmp . uniqid('/phpt.');
 
         @unlink($tmp_skipif);
@@ -131,10 +131,10 @@ class PEAR_RunTest
         @unlink($tmp_post);
 
         // unlink old test results
-        @unlink(ereg_replace('\.phpt$','.diff',$file));
-        @unlink(ereg_replace('\.phpt$','.log',$file));
-        @unlink(ereg_replace('\.phpt$','.exp',$file));
-        @unlink(ereg_replace('\.phpt$','.out',$file));
+        @unlink(mb_ereg_replace('\.phpt$','.diff',$file));
+        @unlink(mb_ereg_replace('\.phpt$','.log',$file));
+        @unlink(mb_ereg_replace('\.phpt$','.exp',$file));
+        @unlink(mb_ereg_replace('\.phpt$','.out',$file));
 
         // Check if test should be skipped.
         $info = '';
@@ -163,13 +163,13 @@ class PEAR_RunTest
                     return 'SKIPPED';
                 }
                 if (eregi("^info", trim($output))) {
-                    $reason = (ereg("^info[[:space:]]*(.+)\$", trim($output))) ? ereg_replace("^info[[:space:]]*(.+)\$", "\\1", trim($output)) : FALSE;
+                    $reason = (mb_ereg("^info[[:space:]]*(.+)\$", trim($output))) ? mb_ereg_replace("^info[[:space:]]*(.+)\$", "\\1", trim($output)) : FALSE;
                     if ($reason) {
                         $info = " (info: $reason)";
                     }
                 }
                 if (eregi("^warn", trim($output))) {
-                    $reason = (ereg("^warn[[:space:]]*(.+)\$", trim($output))) ? ereg_replace("^warn[[:space:]]*(.+)\$", "\\1", trim($output)) : FALSE;
+                    $reason = (mb_ereg("^warn[[:space:]]*(.+)\$", trim($output))) ? mb_ereg_replace("^warn[[:space:]]*(.+)\$", "\\1", trim($output)) : FALSE;
                     if ($reason) {
                         $warn = true; /* only if there is a reason */
                         $info = " (warn: $reason)";
@@ -268,8 +268,8 @@ class PEAR_RunTest
             $GLOBALS['__PHP_FAILED_TESTS__'][] = array(
                             'name' => $file,
                             'test_name' => $tested,
-                            'output' => ereg_replace('\.phpt$','.log', $file),
-                            'diff'   => ereg_replace('\.phpt$','.diff', $file),
+                            'output' => mb_ereg_replace('\.phpt$','.log', $file),
+                            'diff'   => mb_ereg_replace('\.phpt$','.diff', $file),
                             'info'   => $info,
                             'return' => $return_value
                             );
@@ -277,15 +277,15 @@ class PEAR_RunTest
             $GLOBALS['__PHP_FAILED_TESTS__'][] = array(
                             'name' => $file,
                             'test_name' => $tested,
-                            'output' => ereg_replace('\.phpt$','.log', $file),
-                            'diff'   => ereg_replace('\.phpt$','.diff', $file),
+                            'output' => mb_ereg_replace('\.phpt$','.log', $file),
+                            'diff'   => mb_ereg_replace('\.phpt$','.diff', $file),
                             'info'   => $info,
                             );
         }
 
         // write .exp
         if (strpos($log_format,'E') !== FALSE) {
-            $logname = ereg_replace('\.phpt$','.exp',$file);
+            $logname = mb_ereg_replace('\.phpt$','.exp',$file);
             if (!$log = fopen($logname,'w')) {
                 return PEAR::raiseError("Cannot create test log - $logname");
             }
@@ -295,7 +295,7 @@ class PEAR_RunTest
 
         // write .out
         if (strpos($log_format,'O') !== FALSE) {
-            $logname = ereg_replace('\.phpt$','.out',$file);
+            $logname = mb_ereg_replace('\.phpt$','.out',$file);
             if (!$log = fopen($logname,'w')) {
                 return PEAR::raiseError("Cannot create test log - $logname");
             }
@@ -305,7 +305,7 @@ class PEAR_RunTest
 
         // write .diff
         if (strpos($log_format,'D') !== FALSE) {
-            $logname = ereg_replace('\.phpt$','.diff',$file);
+            $logname = mb_ereg_replace('\.phpt$','.diff',$file);
             if (!$log = fopen($logname,'w')) {
                 return PEAR::raiseError("Cannot create test log - $logname");
             }
@@ -317,7 +317,7 @@ class PEAR_RunTest
 
         // write .log
         if (strpos($log_format,'L') !== FALSE) {
-            $logname = ereg_replace('\.phpt$','.log',$file);
+            $logname = mb_ereg_replace('\.phpt$','.log',$file);
             if (!$log = fopen($logname,'w')) {
                 return PEAR::raiseError("Cannot create test log - $logname");
             }

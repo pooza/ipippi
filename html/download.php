@@ -25,7 +25,7 @@ if (mb_detect_encoding($_GET['filename']) == 'ASCII') {
 } else if (preg_match('/Opera/', $_SERVER['HTTP_USER_AGENT'])) {
 	$name = mb_convert_encoding($_GET['filename'], 'utf-8');
 } else if (preg_match('/WebKit/', $_SERVER['HTTP_USER_AGENT'])) {
-	$name = ereg_replace('[^[:alnum:]_.]', '_', $_GET['filename']);
+	$name = mb_ereg_replace('[^[:alnum:]_.]', '_', $_GET['filename']);
 } else {
 	$name = mb_convert_encoding($_GET['filename'], 'JIS');
 	$name = base64_encode($name);
