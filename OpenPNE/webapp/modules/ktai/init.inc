@@ -65,4 +65,4 @@ function init_ktai_normal(&$smarty)
 	header('Content-Type: text/html; charset=Shift_JIS');
 }
 
-?>
+

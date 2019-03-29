@@ -37,4 +37,4 @@ function man_init_admin_do()
 	}
 }
 
-?>
+

@@ -14,4 +14,3 @@ function init_setup_page()
 	exit;
 }
 
-?>

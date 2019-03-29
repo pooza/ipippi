@@ -47,4 +47,3 @@ function __logout($msg = 0, $c_member_id = 0)
 	exit;
 }
 
-?>

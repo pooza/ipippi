@@ -38,4 +38,4 @@ function _auth_logout()
 	exit;
 }
 
-?>
+

@@ -37,4 +37,3 @@ if ($GLOBALS['AUTH']->getAuth()){
 	exit;
 }
 
-?>

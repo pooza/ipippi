@@ -126,4 +126,4 @@ ini_set('mbstring.substitute_character', "none");
 //管理画面の初期設定項目を表示するかどうか
 define('ADMIN_INIT_CONFIG', true);
 
-?>
+

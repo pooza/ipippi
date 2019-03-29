@@ -130,4 +130,4 @@ $GLOBALS['__Framework']['current_page'] = '';
 //$GLOBALS['__Framework']['default_module'] = '';
 $GLOBALS['__Framework']['default_page'] = '';
 
-?>
+

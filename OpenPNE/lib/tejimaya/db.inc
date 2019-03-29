@@ -10,4 +10,3 @@ require_once(DOCUMENT_ROOT . "/lib/tejimaya/db_ktai_page.php");
 
 require_once(DOCUMENT_ROOT . "/lib/tejimaya/db_mail_send.php");
 
-?>
