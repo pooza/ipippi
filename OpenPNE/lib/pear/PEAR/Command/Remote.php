@@ -184,7 +184,7 @@ parameter.
         if (PEAR::isError($parsed)) {
             return $this->raiseError('Invalid package name "' . $package . '"');
         }
-        
+
         $channel = $parsed['channel'];
         $this->config->set('default_channel', $channel);
         $chan = $reg->getChannel($channel);
@@ -422,7 +422,7 @@ parameter.
             $available = $rest->listAll($base, false, false, $package, $summary);
         } else {
             $r = &$this->config->getRemote();
-            $available = $r->call('package.search', $package, $summary, true, 
+            $available = $r->call('package.search', $package, $summary, true,
                 $this->config->get('preferred_state') == 'stable', true);
         }
         if (PEAR::isError($available)) {
@@ -471,7 +471,7 @@ parameter.
         if (!class_exists('PEAR_Downloader')) {
             require_once 'PEAR/Downloader.php';
         }
-        $a = &new PEAR_Downloader($this->ui, $options, $this->config);
+        $a = new PEAR_Downloader($this->ui, $options, $this->config);
         return $a;
     }
     // {{{ doDownload()

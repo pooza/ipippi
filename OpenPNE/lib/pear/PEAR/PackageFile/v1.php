@@ -342,7 +342,7 @@ class PEAR_PackageFile_v1
      *
      * - package name
      * - channel name
-     * - dependencies 
+     * - dependencies
      * @var boolean
      * @access private
      */
@@ -1287,7 +1287,7 @@ class PEAR_PackageFile_v1
         if (!class_exists('PEAR_PackageFile_Generator_v1')) {
             require_once 'PEAR/PackageFile/Generator/v1.php';
         }
-        $a = &new PEAR_PackageFile_Generator_v1($this);
+        $a = new PEAR_PackageFile_Generator_v1($this);
         return $a;
     }
 
@@ -1453,7 +1453,7 @@ class PEAR_PackageFile_v1
                     if (version_compare(zend_version(), '2.0', '<')) {
                         if (in_array(strtolower($data),
                             array('public', 'private', 'protected', 'abstract',
-                                  'interface', 'implements', 'throw') 
+                                  'interface', 'implements', 'throw')
                                  )) {
                             $this->_validateWarning(PEAR_PACKAGEFILE_ERROR_PHP5,
                                 array($file));

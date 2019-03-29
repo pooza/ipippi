@@ -121,7 +121,7 @@ class PEAR_PackageFile_v2
      *
      * - package name
      * - channel name
-     * - dependencies 
+     * - dependencies
      * @var boolean
      * @access private
      */
@@ -1529,7 +1529,7 @@ class PEAR_PackageFile_v2
                         if (strtolower($dep['name']) == strtolower($package) &&
                               $depchannel == $channel) {
                             return true;
-                        }  
+                        }
                     }
                 }
             }
@@ -1547,7 +1547,7 @@ class PEAR_PackageFile_v2
                             if (strtolower($dep['name']) == strtolower($package) &&
                                   $depchannel == $channel) {
                                 return true;
-                            }  
+                            }
                         }
                     }
                 }
@@ -1825,7 +1825,7 @@ class PEAR_PackageFile_v2
         if (!class_exists('PEAR_PackageFile_Generator_v2')) {
             require_once 'PEAR/PackageFile/Generator/v2.php';
         }
-        $a = &new PEAR_PackageFile_Generator_v2($this);
+        $a = new PEAR_PackageFile_Generator_v2($this);
         return $a;
     }
 

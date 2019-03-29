@@ -287,7 +287,7 @@ used for automated conversion or learning the format.
         if (!class_exists('PEAR_Packager')) {
             require_once 'PEAR/Packager.php';
         }
-        $a = &new PEAR_Packager;
+        $a = new PEAR_Packager;
         return $a;
     }
 
@@ -299,7 +299,7 @@ used for automated conversion or learning the format.
         if (!class_exists('PEAR/PackageFile.php')) {
             require_once 'PEAR/PackageFile.php';
         }
-        $a = &new PEAR_PackageFile($config, $debug, $tmpdir);
+        $a = new PEAR_PackageFile($config, $debug, $tmpdir);
         $common = new PEAR_Common;
         $common->ui = $this->ui;
         $a->setLogger($common);
@@ -727,7 +727,7 @@ used for automated conversion or learning the format.
         if (!class_exists('PEAR_Installer')) {
             require_once 'PEAR/Installer.php';
         }
-        $a = &new PEAR_Installer($ui);
+        $a = new PEAR_Installer($ui);
         return $a;
     }
 
@@ -1007,7 +1007,7 @@ used for automated conversion or learning the format.
                                 } else {
                                     $conflicts[] = $package .
                                         " {$deprange[0][1]} {$deprange[0][0]}" .
-                                        (isset($deprange[1]) ? 
+                                        (isset($deprange[1]) ?
                                         " and $package {$deprange[1][1]} {$deprange[1][0]}"
                                         : '');
                                 }
