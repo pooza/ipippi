@@ -42,7 +42,7 @@ require_once CALENDAR_ROOT.'Calendar.php';
  * Represents a Week and builds Days in tabular format<br>
  * <code>
  * require_once 'Calendar'.DIRECTORY_SEPARATOR.'Week.php';
- * $Week = & new Calendar_Week(2003, 10, 1); Oct 2003, 1st tabular week
+ * $Week = new Calendar_Week(2003, 10, 1); Oct 2003, 1st tabular week
  * echo '<tr>';
  * while ($Day = & $Week->fetch()) {
  *     if ($Day->isEmpty()) {
@@ -120,7 +120,7 @@ class Calendar_Week extends Calendar
         require_once CALENDAR_ROOT.'Table/Helper.php';
         Calendar::Calendar($y, $m, $d);
         $this->firstDay = $this->defineFirstDayOfWeek($firstDay);
-        $this->tableHelper = & new Calendar_Table_Helper($this, $this->firstDay);
+        $this->tableHelper = new Calendar_Table_Helper($this, $this->firstDay);
         $this->thisWeek = $this->tableHelper->getWeekStart($y, $m, $d, $this->firstDay);
         $this->prevWeek = $this->tableHelper->getWeekStart($y, $m, $d - $this->cE->getDaysInWeek(
             $this->thisYear(),

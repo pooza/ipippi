@@ -82,7 +82,7 @@ class Calendar_Decorator_Wrapper extends Calendar_Decorator
     {
         $children = parent::fetchAll();
         foreach ($children as $key => $Calendar) {
-            $children[$key] = & new $decorator($Calendar);
+            $children[$key] = new $decorator($Calendar);
         }
         return $children;
     }

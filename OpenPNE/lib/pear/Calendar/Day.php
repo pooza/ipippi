@@ -41,7 +41,7 @@ require_once CALENDAR_ROOT.'Calendar.php';
  * Represents a Day and builds Hours.
  * <code>
  * require_once 'Calendar'.DIRECTORY_SEPARATOR.'Day.php';
- * $Day = & new Calendar_Day(2003, 10, 21); // Oct 21st 2003
+ * $Day = new Calendar_Day(2003, 10, 21); // Oct 21st 2003
  * while ($Hour = & $Day->fetch()) {
  *    echo $Hour->thisHour().'<br />';
  * }

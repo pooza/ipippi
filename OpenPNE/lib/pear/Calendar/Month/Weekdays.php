@@ -46,7 +46,7 @@ require_once CALENDAR_ROOT.'Month.php';
  * Represents a Month and builds Days in tabular form<br>
  * <code>
  * require_once 'Calendar/Month/Weekdays.php';
- * $Month = & new Calendar_Month_Weekdays(2003, 10); // Oct 2003
+ * $Month = new Calendar_Month_Weekdays(2003, 10); // Oct 2003
  * $Month->build(); // Build Calendar_Day objects
  * while ($Day = & $Month->fetch()) {
  *     if ($Day->isFirst()) {
@@ -107,7 +107,7 @@ class Calendar_Month_Weekdays extends Calendar_Month
     function build($sDates=array())
     {
         require_once CALENDAR_ROOT.'Table/Helper.php';
-        $this->tableHelper = & new Calendar_Table_Helper($this, $this->firstDay);
+        $this->tableHelper = new Calendar_Table_Helper($this, $this->firstDay);
         Calendar_Month::build($sDates);
         $this->buildEmptyDaysBefore();
         $this->shiftDays();

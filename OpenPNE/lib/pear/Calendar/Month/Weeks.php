@@ -47,7 +47,7 @@ require_once CALENDAR_ROOT.'Month.php';
  * Represents a Month and builds Weeks
  * <code>
  * require_once 'Calendar'.DIRECTORY_SEPARATOR.'Month'.DIRECTORY_SEPARATOR.'Weeks.php';
- * $Month = & new Calendar_Month_Weeks(2003, 10); // Oct 2003
+ * $Month = new Calendar_Month_Weeks(2003, 10); // Oct 2003
  * $Month->build(); // Build Calendar_Day objects
  * while ($Week = & $Month->fetch()) {
  *     echo $Week->thisWeek().'<br />';
@@ -94,7 +94,7 @@ class Calendar_Month_Weeks extends Calendar_Month
     function build($sDates=array())
     {
         require_once CALENDAR_ROOT.'Table/Helper.php';
-        $this->tableHelper = & new Calendar_Table_Helper($this, $this->firstDay);
+        $this->tableHelper = new Calendar_Table_Helper($this, $this->firstDay);
         require_once CALENDAR_ROOT.'Week.php';
         $numWeeks = $this->tableHelper->getNumWeeks();
         for ($i=1, $d=1; $i<=$numWeeks; $i++,
