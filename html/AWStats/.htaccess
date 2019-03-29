@@ -1,8 +1,0 @@
-Options +ExecCGI
-AddHandler cgi-script .pl
-
-AuthType Basic
-AuthName "awstats"
-AuthUserFile /home/ipippi/etc/ipippi.passwd
-Require valid-user
-
