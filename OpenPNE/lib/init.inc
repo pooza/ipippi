@@ -110,8 +110,8 @@ defined('WORD_MY_FRIEND') or define('WORD_MY_FRIEND', '知り合い');
 defined('WORD_MY_FRIEND_HALF') or define('WORD_MY_FRIEND_HALF', '知り合い');
 
 // amazon
-defined('AMAZON_TOKEN') or define('AMAZON_TOKEN', 'AKIAIPIHNNAVA2I2V4EQ');
-defined('AMAZON_ACCESS_KEY') or define('AMAZON_ACCESS_KEY', 'Lppa7eNQfsrfPkc7+VIrKDzxM76zFmaT0j7kyHzZ');
+defined('AMAZON_TOKEN') or define('AMAZON_TOKEN', '');
+defined('AMAZON_ACCESS_KEY') or define('AMAZON_ACCESS_KEY', '');
 defined('AMAZON_AFFID') or define('AMAZON_AFFID', 'snsoftjp-22');
 defined('AMAZON_LOCALE') or define('AMAZON_LOCALE', 'jp');
 //defined('AMAZON_BASEURL') or define('AMAZON_BASEURL', 'http://xml-jp.amznxslt.com/onca/xml3');
