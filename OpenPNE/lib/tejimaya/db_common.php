@@ -68,7 +68,7 @@ function get_login_url()
  * @return result
  */
 function _mysql_query4db($query) {
-	if (!($result = mysqli_stmt_execute($_GLOBAL['db'], $query))) {
+	if (!($result = mysqli_stmt_execute($query))) {
 		return false;
 	}
 	return $result;
@@ -478,7 +478,7 @@ function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
 	$sql .= " WHERE c_commu_id=". quote4db($c_commu_id) .
 			" AND c_member_id_to=". quote4db($c_member_id_to) .
 			" LIMIT 1";
-	return mysqli_stmt_execute($_GLOBAL['db'], $sql);
+	return mysqli_stmt_execute($sql);
 }
 
 // SQLインジェクション対策用関数
@@ -866,7 +866,7 @@ function p_access_log($c_member_id, $page_name, $ktai_flag="0"){
 
 	$sql = "insert c_access_log($insert_column, r_datetime) values($insert_value, now())";
 
-	mysqli_stmt_execute($_GLOBAL['db'], $sql);
+	mysqli_stmt_execute($sql);
 
 }
 
