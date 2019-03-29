@@ -1,0 +1,9 @@
+<Files ~ "^\.">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files ~ "config\.inc">
+Order allow,deny
+Deny from all
+</Files>

@@ -1,0 +1,39 @@
+@charset "EUC-JP";
+
+td.inc_info {
+	width: 720px ;
+	height: auto ;
+}
+
+td.inc_info table.info_body td.bg_a {
+}
+
+td.inc_info table.info_body ul {
+	margin: 0px ;
+	padding: 0px ;
+	list-style-image: none ;
+}
+
+td.inc_info table.info_body ul li {
+	margin: 0px ;
+	padding: 0px ;
+	padding-left: 14px ;
+	list-style-type: none ;
+	background: url(../../skin/icon_info.gif) 2px 0.2em no-repeat ;
+}
+
+/*カレンダー関連のスタイル*/
+
+
+td.inc_info.border_info_a {
+}
+
+td.inc_info .bg_info_a {
+}
+
+td.inc_info .bg_info_b {
+}
+
+td.inc_info table.calender td.bg_b {
+	background: url(../../skin/cl01.gif) ;
+}

@@ -1,0 +1,195 @@
+@charset "EUC-JP";
+
+div#container_login {
+	display: block ;
+	margin: 0px auto 0px 0px ;
+	width: 720px ;
+	height: 563px ;
+	padding: 0px ;
+}
+
+/*パテントサロンロゴの位置情報（before login）*/
+
+div#container_login a.patentsalon {
+	display: block ;
+	position: absolute ;
+	top: 55px;
+	left: 560px;
+	width: 158px;
+	height:18px;
+	background-color: transparent ;
+}
+
+/******* メインボタン共通の位置情報 *******/
+
+div#container_login img.bg {
+	display: block ;
+	position: absolute ;
+	left: 0px ;
+	top: 0px ;
+	width: 720px ;
+	height: 563px ;
+	z-index: 0 ;
+}
+
+/*********************/
+
+div#container_login a img {
+	width: 100% ;
+	height: 100% ;
+}
+
+div#container_login a * {
+}
+
+/**/
+
+div#container_login div.header {
+}
+
+/******* バナーの位置情報 *******/
+
+div#container_login div.banner ,
+div#container_login a.banner {
+	display: block ;
+	position: absolute ;
+	left: 247px ;
+	top: 5px ;
+	width: 468px ;
+	height: 60px ;
+	z-index: 200 ;
+}
+
+/******* メインボタン共通の位置情報 *******/
+
+div#container_login div.header a.main_menu {
+	display: block ;
+	display: none ;
+	position: absolute ;
+	height: 22px ;
+	top: 0px ;
+}
+
+/*ログインボタンの位置情報（before login）*/
+
+div#container_login div.header a.login {
+	left: 253px ;
+	width: 164px ;
+	z-index: 10 ;
+}
+
+/*新規登録ボタンの位置情報（before login）*/
+
+div#container_login div.header a.new_regist {
+	left: 417px ;
+	width: 151px ;
+	z-index: 20 ;
+}
+
+/*ヘルプボタンの位置情報（before login）*/
+
+div#container_login div.header a.help {
+	left: 512px ;
+	width: 152px ;
+	z-index: 30 ;
+}
+
+div#container_login input ,
+div#container_login a {
+}
+
+/******* ログインパネル位置情報ズ *******/
+
+/*ログインIDフォームの位置情報*/
+
+div#container_login input#username {
+	display: block ;
+	position: absolute ;
+	left: 504px ;
+	top: 246px ;
+	width: 185px ;
+	height: 23px ;
+	font-size: 10pt ;
+}
+
+/*パスワードフォームの位置情報*/
+
+div#container_login input#password {
+	display: block ;
+	position: absolute ;
+	left: 504px ;
+	top: 299px ;
+	width: 185px ;
+	height: 23px ;
+	font-size: 10pt ;
+}
+
+/*ログインボタンの位置情報*/
+
+div#container_login input#button_login {
+	display: block ;
+	position: absolute ;
+	left: 536px ;
+	top: 384px ;
+	width: 120px ;
+	height: 24px ;
+	border: none 0px ;
+	background-color: transparent ;
+}
+
+/*新規登録ボタンの位置情報*/
+
+div#container_login a#button_new_regist {
+	display: block ;
+	position: absolute ;
+	left: 536px ;
+	top: 414px ;
+	width: 120px ;
+	height: 24px ;
+	border: none 0px ;
+}
+
+/*エラーメッセージの位置情報*/
+/*パスワード忘れた人リンクの位置情報*/
+
+div#container_login div.msg {
+	display: block ;
+	position: absolute ;
+	border: none 0px ;
+	background-color: #FFFFFF ;
+	padding: 3px 0px ;
+	left: 504px ;
+	top: 327px ;
+	width: 185px ;
+	height: 42px ;
+	font-size: 9pt ;
+	text-align: center ;
+}
+
+div#container_login div.msg * {
+	font-size: 8pt ;
+}
+
+div#container_login div.msg a.password_query {
+	font-size: 5pt ;
+}
+
+/******* フッターの位置情報 *******/
+
+div#container_login .footer {
+	display: block ;
+	position: absolute ;
+	left: 0px ;
+	top: 542px ;
+	width: 720px ;
+	height: 21px ;
+	font-size: 8pt ;
+	text-align: right ;
+	padding: 5px 0px ;
+	padding-right: 12px ;
+}
+
+div#container_login .footer a {
+	font-size: 8pt ;
+}
+

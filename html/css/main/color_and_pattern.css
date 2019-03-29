@@ -1,0 +1,112 @@
+@charset "EUC-JP";
+
+/*サンプルを確認する＞:url(../sample_styles.html#c_and_p)*/
+
+/*※borderとbgの番号はそれぞれ対応している。同番号なら色が同じ。*/
+
+/**********/
+/*枠線要素*/
+
+.border_00 {
+	border: #E2E2E2 1px solid ;
+}
+
+.border_01 {
+	border: #E1E1E1 1px solid ;
+}
+
+.border_02 {
+	border: #ffffff 1px solid ;
+}
+
+.border_03 {
+	border: #F0F0F0 1px solid ;
+}
+
+.border_04 {
+	border: #E1E1E1 1px solid ;
+}
+
+.border_05 {
+	border: #F9F9F9 1px solid ;
+}
+
+.border_06 {
+	border: #EDEDED 1px solid ;
+}
+
+.border_07 {
+	border: #CDCDCD 1px solid ;
+}
+
+.border_08 {
+	border: #FFFFFF 1px solid ;
+}
+
+.border_09 {
+	border: #F9F9F9 1px solid ;
+}
+
+.border_10 {
+	border: #BABABA 1px solid ;
+}
+
+/**********/
+/*背景要素*/
+
+.bg_00 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #E2E2E2 ;
+}
+
+.bg_01 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #E1E1E1 ;
+}
+
+.bg_02 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #FFFFFF ;
+}
+
+.bg_03 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #F0F0F0 ;
+}
+
+.bg_04 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #E1E1E1 ;
+}
+
+.bg_05 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #F9F9F9 ;
+}
+
+.bg_06 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #EDEDED ;
+}
+
+.bg_07 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #CDCDCD ;
+}
+
+.bg_08 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #FFFFFF ;
+}
+
+.bg_09 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #F9F9F9 ;
+}
+
+.bg_10 {
+	background: url(../../skin/) 50% 50% repeat ;
+	background-color: #BABABA ;
+}
+
+

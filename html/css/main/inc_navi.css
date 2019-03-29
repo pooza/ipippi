@@ -1,0 +1,246 @@
+@charset "Shift_JIS";
+
+/*inc_navi矩形エリア位置情報*/
+
+td.inc_navi ,
+div.inc_navi {
+	width: 720px ;
+	height: 29px ;
+}
+
+td.inc_navi img.bg {
+	display: block ;
+	position: absolute ;
+	left: 0px ;
+	top: 0px ;
+	width: 720px ;
+	height: 29px ;
+	z-index: 0 ;
+}
+
+/***共通設定***/
+
+td.inc_navi a {
+	display: block ;
+	position: absolute ;
+	top: 0px ;
+	height: 29px ;
+}
+
+/**/
+
+td.inc_navi a img {
+	display: block ;
+	width: 100% ;
+	height: 100% ;
+}
+
+/** Home系ボタン共通設定 ----------- ＜青＞　自分のページのメニュー **/
+
+td.inc_navi div.h a {
+}
+
+/*「ホーム」位置情報*/
+
+td.inc_navi div.h a.h_home {
+	left: 27px ;
+	width: 51px ;
+	z-index: 10 ;
+}
+
+/*「知り合いリスト」位置情報*/
+
+td.inc_navi div.h a.fh_friend_list {
+	left: 78px ;
+	width: 95px ;
+	z-index: 20 ;
+}
+
+/*「日記」位置情報*/
+
+td.inc_navi div.h a.fh_diary_list {
+	left: 173px ;
+	width: 45px ;
+	z-index: 30 ;
+}
+
+/*「メッセージ」位置情報*/
+
+td.inc_navi div.h a.h_message_box {
+	left: 218px ;
+	width: 73px ;
+	z-index: 40 ;
+}
+
+/*「あしあと」位置情報*/
+
+td.inc_navi div.h a.h_ashiato {
+	left: 291px ;
+	width: 65px ;
+	z-index: 70 ;
+}
+
+/*「お気に入り」位置情報*/
+
+td.inc_navi div.h a.h_favorite {
+	left: 356px ;
+	width: 73px ;
+	z-index: 60 ;
+}
+
+/*「マイレビュー」位置情報*/
+
+td.inc_navi div.h a.h_review {
+	left: 429px ;
+	width: 83px ;
+	z-index: 50 ;
+}
+
+
+/*「プロフィール確認」位置情報*/
+
+td.inc_navi div.h a.h_prof {
+	left: 512px ;
+	width: 100px ;
+	z-index: 80 ;
+}
+
+/*「プロフィール確認」位置情報*/
+
+td.inc_navi div.h a.h_config_prof {
+	left: 612px ;
+	width: 100px ;
+	z-index: 90 ;
+}
+
+	
+/** F系ボタン共通設定 ----------- ＜紫＞　自分以外の人の画面のメニュー**/
+
+td.inc_navi div.f a {
+}
+
+/*「ホーム」位置情報*/
+
+td.inc_navi div.f a.f_home {
+	left: 24px ;
+	width: 45px ;
+	z-index: 10 ;
+}
+
+/*「知り合いリスト」位置情報*/
+
+td.inc_navi div.f a.fh_friend_list {
+	left: 69px ;
+	width: 80px ;
+	z-index: 20 ;
+}
+
+/*「日記を読む」位置情報*/
+
+td.inc_navi div.f a.fh_diary_list {
+	left: 149px ;
+	width: 63px ;
+	z-index: 30 ;
+}
+
+/*「メッセージを送る」位置情報*/
+
+td.inc_navi div.f a.f_message_send {
+	left: 212px ;
+	width: 90px ;
+	z-index: 40 ;
+}
+
+/*「お気に入りに追加」位置情報*/
+
+td.inc_navi div.f a.f_bookmark_add {
+	left: 302px ;
+	width: 90px ;
+	z-index: 90 ;
+}
+
+/*「おすすめレビュー」位置情報*/
+
+td.inc_navi div.f a.fh_review_list_member {
+	left: 392px ;
+	width: 89px ;
+	z-index: 80 ;
+}
+
+/*「知り合いに紹介」位置情報*/
+
+td.inc_navi div.f a.f_invite {
+	left: 481px ;
+	width: 80px ;
+	z-index: 60 ;
+}
+
+/*「知り合いに追加」位置情報*/
+
+td.inc_navi div.f a.fh_link_request {
+	left: 563px ;
+	width: 80px ;
+	z-index: 50 ;
+}
+
+/*「紹介文を編集」位置情報*/
+
+td.inc_navi div.f a.f_intro_edit {
+	left: 644px ;
+	width: 75px ;
+	z-index: 70 ;
+}
+
+/** C系ボタン共通設定 ----------- ＜赤＞　コミュニティ画面のメニュー **/
+
+td.inc_navi div.c a {
+}
+
+/*「コミュニティトップ」位置情報 */
+
+td.inc_navi div.c a.c_home {
+	left: 29px ;
+	width: 125px ;
+	z-index: 10 ;
+}
+
+/*「掲示板」位置情報*/
+
+td.inc_navi div.c a.c_bbs {
+	left: 154px ;
+	width: 75px ;
+	z-index: 20 ;
+}
+
+/*「メンバーレビュー」位置情報*/
+
+td.inc_navi div.c a.c_member_review {
+	left: 229px ;
+	width: 113px ;
+	z-index: 60 ;
+}
+
+/*「コミュニティーに参加」位置情報*/
+
+td.inc_navi div.c a.c_join {
+	left: 342px ;
+	width: 133px ;
+	z-index: 30 ;
+}
+
+/*「知り合いに教える」位置情報*/
+
+td.inc_navi div.c a.c_invite {
+	left: 475px ;
+	width: 115px ;
+	z-index: 40 ;
+}
+
+/*「コミュニティーを退会」位置情報*/
+
+td.inc_navi div.c a.c_leave {
+	left: 590px ;
+	width: 125px ;
+	z-index: 50 ;
+}
+
