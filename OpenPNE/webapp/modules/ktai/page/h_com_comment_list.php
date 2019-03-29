@@ -4,7 +4,7 @@
 function pageAction_h_com_comment_list($smarty,$requests) {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$direc = $requests['direc'];
 	$page = $requests['page'];
 	// ----------
@@ -23,4 +23,4 @@ function pageAction_h_com_comment_list($smarty,$requests) {
 
 	$smarty->ext_display("h_com_comment_list.tpl");
 }
-?>
+

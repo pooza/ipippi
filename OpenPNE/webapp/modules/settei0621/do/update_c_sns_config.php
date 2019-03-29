@@ -1,5 +1,5 @@
 <?php
-// c_sns_config ¹¹¿·
+// c_sns_config æ›´æ–°
 
 
 function doAction_update_c_sns_config($requests)
@@ -26,7 +26,7 @@ function doAction_update_c_sns_config($requests)
 	
 	db_admin_update_c_sns_config($sets);
 	
-	admin_client_redirect('edit_c_sns_config', "¿§¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_sns_config', "è‰²ã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
-?>
+

@@ -1,29 +1,29 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¤Îºï½ü
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 
 */
 function doAction_c_edit_delete_c_commu($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $request['target_c_commu_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
     
     $status = db_common_commu_status($u, $target_c_commu_id);
     if (!$status['is_commu_admin']) {
@@ -36,4 +36,4 @@ function doAction_c_edit_delete_c_commu($request) {
 
 	client_redirect("page.php?p=h_com_find_all");
 }
-?>
+

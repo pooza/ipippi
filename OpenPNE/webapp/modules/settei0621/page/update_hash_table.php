@@ -1,5 +1,5 @@
 <?php
-// ´ÉÍý¥Ú¡¼¥¸Ì¾¤Î¥é¥ó¥À¥Þ¥¤¥º
+// ç®¡ç†ãƒšãƒ¼ã‚¸åã®ãƒ©ãƒ³ãƒ€ãƒžã‚¤ã‚º
 
 
 function pageAction_update_hash_table(&$smarty,$requests)
@@ -11,4 +11,4 @@ function pageAction_update_hash_table(&$smarty,$requests)
 	$smarty->ext_display("update_hash_table.tpl");
 }
 
-?>
+

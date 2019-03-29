@@ -5,7 +5,7 @@ function smarty_modifier_bs_date_format ($value, $format = 'Y/m/d H:i:s') {
 	} else if ($value) {
 		$timestamp = strtotime($value);
 		if (preg_match('/ww/', $format)) {
-			$weekdays = array('Æü', '·î', '²Ð', '¿å', 'ÌÚ', '¶â', 'ÅÚ');
+			$weekdays = array('æ—¥', 'æœˆ', 'ç«', 'æ°´', 'æœ¨', 'é‡‘', 'åœŸ');
 			$format = str_replace('ww', $weekdays[date('w', $timestamp)], $format);
 		}
 		return date($format, $timestamp);
@@ -13,4 +13,3 @@ function smarty_modifier_bs_date_format ($value, $format = 'Y/m/d H:i:s') {
 }
 
 /* vim:set tabstop=4 ai: */
-?>

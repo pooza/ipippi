@@ -1,10 +1,10 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>PC������</center>
+<center>PCに送信</center>
 <hr>
-���Ϥ��줿���ɥ쥹���˥᡼����������ޤ�����<br>
-PC�ǤΥ���������̤ǥѥ���ɤ����Ϥ��ƥ������󤷤Ƥ���������<br>
+入力されたアドレス宛にメールを送信しました。<br>
+PC版のログイン画面でパスワードを入力してログインしてください。<br>
 <hr>
-<a href="ktai_page.php?p=h_home&({$tail})">�Ύ���</a>
+<a href="ktai_page.php?p=h_home&({$tail})">ﾎｰﾑ</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

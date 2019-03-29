@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******¤³¤³¤«¤é¡§¥×¥í¥Õ¥£¡¼¥ëÊÑ¹¹****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å¤‰æ›´****** -->
 <form action="do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="cmd" value="h_config_prof">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 
@@ -42,21 +42,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥×¥í¥Õ¥£¡¼¥ëÊÑ¹¹¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å¤‰æ›´ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
 <td style="width:598px;padding:2px 0px;" class="bg_06">
-<span class="b_b c_00">¥×¥í¥Õ¥£¡¼¥ëÊÑ¹¹</span>&nbsp;&nbsp;(<span class="caution">¢¨</span>¤Î¹àÌÜ¤ÏÉ¬¿Ü¤Ç¤¹)
+<span class="b_b c_00">ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å¤‰æ›´</span>&nbsp;&nbsp;(<span class="caution">â€»</span>ã®é …ç›®ã¯å¿…é ˆã§ã™)
 </td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -70,7 +70,7 @@
 
 <div class="padding_s">
 
-¥Ë¥Ã¥¯¥Í¡¼¥à <span class="caution">¢¨</span>
+ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ  <span class="caution">â€»</span>
 
 </div>
 
@@ -113,7 +113,7 @@
 
 <div class="padding_s">
 
-({$profile.caption}) ({if $profile.is_required})<span class="caution">¢¨</span>({/if})
+({$profile.caption}) ({if $profile.is_required})<span class="caution">â€»</span>({/if})
 
 </div>
 
@@ -134,7 +134,7 @@
 	<textarea name="profile[({$profile.name})]" rows="6" cols="50">({$c_member.profile[$profile.name].value})</textarea>
 ({elseif $profile.form_type == 'select'})
 	<select name="profile[({$profile.name})]">
-	<option value="">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤</option>
+	<option value="">é¸æŠã—ã¦ãã ã•ã„</option>
 	({foreach item=item from=$profile.options})
 	<option value="({$item.c_profile_option_id})"({if $c_member.profile[$profile.name].value == $item.value}) selected="selected"({/if})>({$item.value|default:"--"})</option>
 	({/foreach})
@@ -207,7 +207,7 @@
 
 <div style="text-align:center;">
 
-<input type="submit" value="¡¡ÊÑ¡¡¹¹¡¡">
+<input type="submit" value="ã€€å¤‰ã€€æ›´ã€€">
 
 </div>
 
@@ -222,12 +222,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥×¥í¥Õ¥£¡¼¥ëÊÑ¹¹¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å¤‰æ›´ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -238,13 +238,13 @@
 </tr>
 </table>
 </form>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥×¥í¥Õ¥£¡¼¥ëÊÑ¹¹****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å¤‰æ›´****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

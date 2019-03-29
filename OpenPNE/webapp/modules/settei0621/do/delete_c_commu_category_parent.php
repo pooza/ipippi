@@ -1,5 +1,5 @@
 <?php
-// Ãæ¥«¥Æ¥´¥êºï½ü
+// ä¸­ã‚«ãƒ†ã‚´ãƒªå‰Šé™¤
 
 
 function doAction_delete_c_commu_category_parent($requests)
@@ -8,7 +8,7 @@ function doAction_delete_c_commu_category_parent($requests)
 	
 	db_admin_delete_c_commu_category_parent($requests['c_commu_category_parent_id']);
 
-	admin_client_redirect('edit_category', "Ãæ¥«¥Æ¥´¥ê¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_category', "ä¸­ã‚«ãƒ†ã‚´ãƒªã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>
+

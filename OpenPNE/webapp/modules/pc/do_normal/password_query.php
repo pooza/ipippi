@@ -1,30 +1,29 @@
 <?php
 function doNormalAction_password_query($requests)
 {
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$pc_address = $requests['pc_address'];
 	$c_password_query_id = $requests['c_password_query_id'];
 	$c_password_query_answer = $requests['c_password_query_answer'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥Ñ¥¹¥ï¡¼¥É³ÎÇ§¤Î¼ÁÌä¤ÈÅú¤¨¤¬¤¢¤Ã¤Æ¤¤¤ë
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ç¢ºèªã®è³ªå•ã¨ç­”ãˆãŒã‚ã£ã¦ã„ã‚‹
 	
 	if (!$c_member_id = do_password_query_is_password_query_complete($pc_address,
 		            $c_password_query_id,$c_password_query_answer)) {
-		$msg = urlencode("¥Ñ¥¹¥ï¡¼¥ÉºÆ¼èÆÀ¼ºÇÔ");
+		$msg = urlencode("ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†å–å¾—å¤±æ•—");
 		client_redirect("normal.php?p=password_query&msg=$msg");
 		exit;
 	}
 	//---
 
-	// ¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô
+	// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ
 	$new_password = do_common_create_password();
 	do_common_update_password($c_member_id, $new_password);
 
 	do_password_query_mail_send($c_member_id, $pc_address, $new_password);
 
-	$msg = "¥Ñ¥¹¥ï¡¼¥É¤ò¥á¡¼¥ë¤ÇÁ÷¿®¤·¤Þ¤·¤¿¡£";
+	$msg = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’ãƒ¡ãƒ¼ãƒ«ã§é€ä¿¡ã—ã¾ã—ãŸã€‚";
 	client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
 }
-?>

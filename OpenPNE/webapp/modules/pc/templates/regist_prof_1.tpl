@@ -10,19 +10,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******¤³¤³¤«¤é¡§¸Ä¿Í¾ðÊóÆþÎÏ****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šå€‹äººæƒ…å ±å…¥åŠ›****** -->
 <form action="do_normal.php" method="post">
 <input name="sid" type="hidden" value="({$sid})">
 <input name="cmd" type="hidden" value="regist_prof_1">
@@ -36,21 +36,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¸Ä¿Í¾ðÊóÆþÎÏ¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šå€‹äººæƒ…å ±å…¥åŠ›ï¼žå†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥×¥í¥Õ¥£¡¼¥ëÆþÎÏ&nbsp;&nbsp;(&nbsp;<span class="caution">¢¨</span>¤Î¹àÌÜ¤ÏÉ¬¿Ü¤Ç¤¹)</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å…¥åŠ›&nbsp;&nbsp;(&nbsp;<span class="caution">â€»</span>ã®é …ç›®ã¯å¿…é ˆã§ã™)</span></td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Þ¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Þ¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -64,7 +64,7 @@
 
 <div class="padding_s">
 
-¥Ë¥Ã¥¯¥Í¡¼¥à <span class="caution">¢¨</span>
+ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ  <span class="caution">â€»</span>
 
 </div>
 
@@ -108,7 +108,7 @@
 
 <div class="padding_s">
 
-({$profile.caption}) ({if $profile.is_required})<span class="caution">¢¨</span>({/if})
+({$profile.caption}) ({if $profile.is_required})<span class="caution">â€»</span>({/if})
 
 </div>
 
@@ -129,7 +129,7 @@
 	<textarea name="profile[({$profile.name})]" rows="6" cols="50">({$profs.profile[$profile.name].value})</textarea>
 ({elseif $profile.form_type == 'select'})
 	<select name="profile[({$profile.name})]">
-	<option value="">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤</option>
+	<option value="">é¸æŠžã—ã¦ãã ã•ã„</option>
 	({foreach item=item from=$profile.options})
 	<option value="({$item.c_profile_option_id})"({if $profs.profile[$profile.name].value == $item.value}) selected="selected"({/if})>({$item.value|default:"--"})</option>
 	({/foreach})
@@ -200,7 +200,7 @@
 
 <div class="padding_s">
 
-PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
+PCã‚¢ãƒ‰ãƒ¬ã‚¹ <span class="caution">â€»</span>
 
 </div>
 
@@ -210,7 +210,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_s">
 
-({$pc_address})<br>¢¨Â¾¤Î¥á¥ó¥Ð¡¼¤Ë¤Ï¸ø³«¤µ¤ì¤Þ¤»¤ó
+({$pc_address})<br>â€»ä»–ã®ãƒ¡ãƒ³ãƒãƒ¼ã«ã¯å…¬é–‹ã•ã‚Œã¾ã›ã‚“
 
 </div>
 
@@ -228,7 +228,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_s">
 
-¥Ñ¥¹¥ï¡¼¥É <span class="caution">¢¨</span>
+ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ <span class="caution">â€»</span>
 
 </div>
 
@@ -238,7 +238,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_s">
 
-<input name="password" type="password"><br><span class="caution">¢¨6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£</span>
+<input name="password" type="password"><br><span class="caution">â€»6ï½ž12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚</span>
 
 </div>
 
@@ -256,7 +256,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_s">
 
-¥Ñ¥¹¥ï¡¼¥É³ÎÇ§ÍÑ <span class="caution">¢¨</span>
+ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ç¢ºèªç”¨ <span class="caution">â€»</span>
 
 </div>
 
@@ -284,7 +284,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_s">
 
-ÈëÌ©¤Î¼ÁÌä <span class="caution">¢¨</span>
+ç§˜å¯†ã®è³ªå• <span class="caution">â€»</span>
 
 </div>
 
@@ -295,7 +295,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 <div class="padding_s">
 
 <select name="c_password_query_id">
-<option value="">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤</option>
+<option value="">é¸æŠžã—ã¦ãã ã•ã„</option>
 ({foreach from=$query_list key=key item=item})
 <option value="({$key})"({if $profs.c_password_query_id == $key}) selected="selected"({/if})>({$item})</option>
 ({/foreach})
@@ -317,7 +317,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_s">
 
-¼ÁÌä¤ÎÅú¤¨ <span class="caution">¢¨</span>
+è³ªå•ã®ç­”ãˆ <span class="caution">â€»</span>
 
 </div>
 
@@ -345,7 +345,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 
 <div class="padding_w_m">
 
-<input type="submit" value="³ÎÇ§²èÌÌ">
+<input type="submit" value="ç¢ºèªç”»é¢">
 
 </div>
 
@@ -358,12 +358,12 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Þ¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Þ¤Ç¡§footer*})
-<!-- *¤³¤³¤Þ¤Ç¡§¸Ä¿Í¾ðÊóÆþÎÏ¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šå€‹äººæƒ…å ±å…¥åŠ›ï¼žï¼žå†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -374,7 +374,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 </tr>
 </table>
 </form>
-<!-- ******¤³¤³¤Þ¤Ç¡§¸Ä¿Í¾ðÊóÆþÎÏ****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šå€‹äººæƒ…å ±å…¥åŠ›****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -384,7 +384,7 @@ PC¥¢¥É¥ì¥¹ <span class="caution">¢¨</span>
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Þ¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

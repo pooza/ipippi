@@ -6,7 +6,7 @@
 function pageAction_fh_intro($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
@@ -19,7 +19,7 @@ function pageAction_fh_intro($smarty,$requests) {
 		exit;
 	}
 
-	// navi ¿¶¤êÊ¬¤±ÍÑ	
+	// navi æŒ¯ã‚Šåˆ†ã‘ç”¨	
 	if($target_c_member_id == $u) {
 		$type = "h";
 	} else {
@@ -27,10 +27,10 @@ function pageAction_fh_intro($smarty,$requests) {
 	}
 	$smarty->assign('inc_navi',fetch_inc_navi($type, $target_c_member_id));
 
-	//¼«Ê¬¾ðÊó
+	//è‡ªåˆ†æƒ…å ±
 	$smarty->assign("member", db_common_c_member4c_member_id($u));
 
-	//¥¿¡¼¥²¥Ã¥È¾ðÊó
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
 	if ($target_c_member_id == $u) {
@@ -40,10 +40,10 @@ function pageAction_fh_intro($smarty,$requests) {
 	}
 	$c_friend_comment_list = $raw_c_friend_comment_list;
 
-	//¾Ò²ðÊ¸Ã£
+	//ç´¹ä»‹æ–‡é”
 	$smarty->assign("intro_list", $c_friend_comment_list);
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("fh_intro.tpl");
 }
-?>
+

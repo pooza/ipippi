@@ -1,5 +1,5 @@
 <?php
-// ¥æ¡¼¥¶¡¼¾ðÊó¤Î¥ê¥¹¥ÈÉ½¼¨¡¦¶¯À©Âà²ñ
+// ãƒ¦ãƒ¼ã‚¶ãƒ¼æƒ…å ±ã®ãƒªã‚¹ãƒˆè¡¨ç¤ºãƒ»å¼·åˆ¶é€€ä¼š
 
 
 function pageAction_list_c_member(&$smarty,$requests)
@@ -26,4 +26,3 @@ function pageAction_list_c_member(&$smarty,$requests)
 	$smarty->ext_display("list_c_member.tpl");
 }
 
-?>

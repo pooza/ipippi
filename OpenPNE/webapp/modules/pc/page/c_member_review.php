@@ -3,7 +3,7 @@
 function pageAction_c_member_review($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $requests['target_c_commu_id'];
 	$page = $requests['page'];
 	$direc = $requests['direc'];
@@ -28,4 +28,4 @@ function pageAction_c_member_review($smarty,$requests) {
 
 	$smarty->ext_display('c_member_review.tpl');
 }
-?>
+

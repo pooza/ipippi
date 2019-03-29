@@ -2,17 +2,17 @@
 
 function normalAction_tologin($smarty,$requests)
 {
-	// ¥ê¥À¥¤¥ì¥¯¥È
+	// ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
 	header("Refresh: 3; URL=" . get_login_url());
 	
 	
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("public") );
 	
 	$msg = "";
 	switch ($requests['error_code']) {
 	case "login_failed":
-		$msg = "¥í¥°¥¤¥ó¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£ºÆÅÙ¡¢¥í¥°¥¤¥óÁàºî¤ò¹Ô¤Ã¤Æ¤¯¤À¤µ¤¤¡£";
+		$msg = "ãƒ­ã‚°ã‚¤ãƒ³ã«å¤±æ•—ã—ã¾ã—ãŸã€‚å†åº¦ã€ãƒ­ã‚°ã‚¤ãƒ³æ“ä½œã‚’è¡Œã£ã¦ãã ã•ã„ã€‚";
 		break;
 	}
 	if ($msg) $smarty->assign('msg', $msg);
@@ -21,4 +21,4 @@ function normalAction_tologin($smarty,$requests)
 	$smarty->ext_display('tologin.tpl');
 }
 
-?>
+

@@ -1,20 +1,20 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¤òÍ§¿Í¤Ë¶µ¤¨¤ë
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‚’å‹äººã«æ•™ãˆã‚‹
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 body
 c_member_id_list
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 
@@ -23,26 +23,26 @@ function doAction_c_invite_insert_c_message_commu_invite($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$body = $requests['body'];
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
 	if(null == $target_c_member_id){
-		//msg=7 "¶µ¤¨¤ëÍ§¿Í¤òÁªÂò¤·¤Æ¤À¤µ¤¤¡£"
+		//msg=7 "æ•™ãˆã‚‹å‹äººã‚’é¸æŠžã—ã¦ã ã•ã„ã€‚"
 		client_redirect("ktai_page.php?p=c_invite&target_c_commu_id=$target_c_commu_id&msg=7&$tail");
 		exit();
 	}
 
 	if(null == $body){
-		//msg=8 "¥á¥Ã¥»¡¼¥¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
+		//msg=8 "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚"
 		client_redirect("ktai_page.php?p=c_invite&target_c_commu_id=$target_c_commu_id&msg=8&$tail");
 		exit();
 	}
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥Õ¥ì¥ó¥É
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ãƒ•ãƒ¬ãƒ³ãƒ‰
 
     $status = db_common_friend_status($u, $target_c_member_id);
     if (!$status['is_friend']) {
@@ -53,17 +53,17 @@ function doAction_c_invite_insert_c_message_commu_invite($requests)
 
 	$c_member_from = db_common_c_member4c_member_id($u);
 
-    $subject ="¥³¥ß¥å¥Ë¥Æ¥£¤ª¤¹¤¹¤á¥á¥Ã¥»¡¼¥¸";
+    $subject ="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãŠã™ã™ã‚ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸";
 
-	//PCÈÇ¤ÎURL¤òÁÞÆþ¤¹¤ë    
+	//PCç‰ˆã®URLã‚’æŒ¿å…¥ã™ã‚‹    
     $url = ABSOLUTE_PATH."page.php?p=c_home&target_c_commu_id=$target_c_commu_id";
     $body_disp =
-        $c_member_from['nickname']." ¤µ¤ó¤«¤é¤ª¤¹¤¹¤á¥³¥ß¥å¥Ë¥Æ¥£¤Î¥á¥Ã¥»¡¼¥¸¤¬ÆÏ¤¤¤Æ¤¤¤Þ¤¹¡£\n".
+        $c_member_from['nickname']." ã•ã‚“ã‹ã‚‰ãŠã™ã™ã‚ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒå±Šã„ã¦ã„ã¾ã™ã€‚\n".
         "\n".
-        "¥á¥Ã¥»¡¼¥¸¡§\n".
+        "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š\n".
         $body."\n".
         "\n".
-        "¤³¤Î¥³¥ß¥å¥Ë¥Æ¥£¤ÎURL\n".
+        "ã“ã®ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®URL\n".
         "$url";
 
     do_common_send_message($u, $target_c_member_id, $subject, $body_disp);
@@ -71,4 +71,3 @@ function doAction_c_invite_insert_c_message_commu_invite($requests)
 	client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
 }
 
-?>

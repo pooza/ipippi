@@ -2,7 +2,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************* -->
-<!-- ******¤³¤³¤«¤é¡§·Ù¹ğ****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šè­¦å‘Š****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:({if $width})({$width})({else})580({/if})px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -12,12 +12,12 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§·Ù¹ğ¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šè­¦å‘Šï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:({if $width})({$width-16})({else})564({/if})px;">
 <tr>
 <td style="width:({if $width})({$width-16})({else})564({/if})px;height:1px;" class="bg_01" colspan="5"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -25,16 +25,16 @@
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:150px;" class="bg_03" align="center" valign="middle">
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä·Ù¹ğ¥¢¥¤¥³¥ó -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼è­¦å‘Šã‚¢ã‚¤ã‚³ãƒ³ -->
 <img src="./skin/dummy.gif" class="v_spacer_l">
 <img src="./skin/icon_alert_l.gif" class="icon">
 <img src="./skin/dummy.gif" class="v_spacer_l">
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä·Ù¹ğ¥¢¥¤¥³¥ó -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼è­¦å‘Šã‚¢ã‚¤ã‚³ãƒ³ -->
 </td>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:({if $width})({$width-153})({else})427({/if})px;height:50px;" class="bg_02" align="left" valign="middle">
 <div style="padding:8px 6px;" class="caution">
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä·Ù¹ğÊ¸ËÜÂÎ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼è­¦å‘Šæ–‡æœ¬ä½“ -->
 ({if $msg})({$msg})<br>({/if})
 ({if $msg1})({$msg1})<br>({/if})
 ({if $msg2})({$msg2})<br>({/if})
@@ -42,7 +42,7 @@
 ({foreach from=$err_msg item=item})
 ({$item})</br>
 ({/foreach})
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä·Ù¹ğÊ¸ËÜÂÎ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼è­¦å‘Šæ–‡æœ¬ä½“ -->
 </div>
 </td>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -51,12 +51,12 @@
 <td style="height:1px;" class="bg_01" colspan="5"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§·Ù¹ğ¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šè­¦å‘Šï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -66,7 +66,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§·Ù¹ğ****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šè­¦å‘Š****** -->
 <!-- ************************* -->
 
 ({/if})

@@ -1,18 +1,18 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥Õ¥ì¥ó¥É¥ê¥¯¥¨¥¹¥È¤òÁ÷¤ë
+ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªã‚¯ã‚¨ã‚¹ãƒˆã‚’é€ã‚‹
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_member_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
-f_link_request¤Î¤É¤ì¤«
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
+f_link_requestã®ã©ã‚Œã‹
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥Õ¥ì¥ó¥É´Ø·¸¤ËÌµ¤¤¥æ¡¼¥¶¡¼
+[æ¨©é™]
+ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢ä¿‚ã«ç„¡ã„ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_f_link_request($requests)
@@ -20,7 +20,7 @@ function doAction_f_link_request($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
@@ -30,21 +30,20 @@ function doAction_f_link_request($requests)
 	$status = do_common_get_f_link_status($c_member_id_from,$c_member_id_to);
 
 	switch($status){
-		//¥ê¥¯¥¨¥¹¥È(¾µÇ§Á÷¿®²èÌÌ)
+		//ãƒªã‚¯ã‚¨ã‚¹ãƒˆ(æ‰¿èªé€ä¿¡ç”»é¢)
 		case STATUS_F_LINK_FLAT;
 			client_redirect("ktai_page.php?p=f_link_request&target_c_member_id=$target_c_member_id&$tail");
 		break;
-		//¥ê¥¯¥¨¥¹¥È(¥ê¥ó¥¯¾µÇ§ÂÔ¤Á)
+		//ãƒªã‚¯ã‚¨ã‚¹ãƒˆ(ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡)
 		case STATUS_F_LINK_WAIT;
-		//msg=5 "¤³¤Î¥Õ¥ì¥ó¥É¤Ï¡¢¸½ºß¥ê¥ó¥¯¾µÇ§ÂÔ¤Á¤Ç¤¹¡£"
+		//msg=5 "ã“ã®ãƒ•ãƒ¬ãƒ³ãƒ‰ã¯ã€ç¾åœ¨ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡ã§ã™ã€‚"
 			client_redirect("ktai_page.php?p=f_link_request&target_c_member_id=$target_c_member_id&msg=5&$tail");
 		break;
-		//¥ê¥¯¥¨¥¹¥È(¥Õ¥ì¥ó¥É¥ê¥ó¥¯ºÑ)
+		//ãƒªã‚¯ã‚¨ã‚¹ãƒˆ(ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ³ã‚¯æ¸ˆ)
 		case STATUS_F_LINK_ALREADY;
-		//msg=6 "¤³¤Î¥Õ¥ì¥ó¥É¤Ï¡¢¤¹¤Ç¤Ë¥ê¥ó¥¯ºÑ¤ß¤Ç¤¹¡£"
+		//msg=6 "ã“ã®ãƒ•ãƒ¬ãƒ³ãƒ‰ã¯ã€ã™ã§ã«ãƒªãƒ³ã‚¯æ¸ˆã¿ã§ã™ã€‚"
 			client_redirect("ktai_page.php?p=f_link_request&target_c_member_id=$target_c_member_id&msg=6&$tail");
  		break;
 	}
 }
 
-?>

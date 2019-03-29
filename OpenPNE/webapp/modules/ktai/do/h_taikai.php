@@ -1,7 +1,7 @@
 <?php
 //---------------------------------------------------------------------------
 /**
- * Âà²ñ¤¹¤ë
+ * é€€ä¼šã™ã‚‹
  */
 function doAction_h_taikai($request) {
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
@@ -13,13 +13,13 @@ function doAction_h_taikai($request) {
 		exit;
 	}
 	
-	//Âà²ñ´°Î»¥á¡¼¥ëÁ÷¿®
+	//é€€ä¼šå®Œäº†ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 	do_common_send_mail_taikai_end_ktai($u);
 
-	//Âà²ñ½èÍý
+	//é€€ä¼šå‡¦ç†
 	db_common_delete_c_member($u);
 	
 	@session_destroy();
 	client_redirect("ktai_normal.php?p=taikai_end");
 }
-?>
+

@@ -5,65 +5,65 @@ function pageAction_h_home($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
 
-	// ±¿±Ä¼Ô¤«¤é¤Î¤ª¤·¤é¤»
+	// é‹å–¶è€…ã‹ã‚‰ã®ãŠã—ã‚‰ã›
 	$smarty->assign("site_info", p_common_c_siteadmin4target_pagename('h_home'));
 
 	$c_member=db_common_c_member4c_member_id($u);
-	//¥á¥ó¥Ð¾ðÊó
+	//ãƒ¡ãƒ³ãƒæƒ…å ±
 	$smarty->assign("c_member", $c_member);
 
-	//¥Õ¥ì¥ó¥É¤ÎºÇ¿·Æüµ­
+	//ãƒ•ãƒ¬ãƒ³ãƒ‰ã®æœ€æ–°æ—¥è¨˜
 	$smarty->assign("c_diary_friend_list", p_h_home_c_diary_friend_list4c_member_id($u, 5));
 
 
-	//¥Õ¥ì¥ó¥É¥ê¥¹¥È
+	//ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªã‚¹ãƒˆ
 	$smarty->assign("c_friend_list", p_f_home_c_friend_list4c_member_id($u, 9));
 	$smarty->assign("c_friend_count", p_common_count_friends4c_member_id($u));
 
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î¿·Ãå½ñ¤­¹þ¤ß
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ–°ç€æ›¸ãè¾¼ã¿
 	$smarty->assign("c_commu_topic_comment_list", p_h_home_c_commu_topic_comment_list4c_member_id($u, 5));
 
-	//¼«¼ç¥³¥ß¥å¥Ë¥Æ¥£
+	//è‡ªä¸»ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£
 	$smarty->assign("c_commu_user_list", p_h_home_c_commu_list4c_member_id($u, 9));
 
-	//»²²Ã¼«¼ç¥³¥ß¥å¥Ë¥Æ¥£¤Î¿ô
+	//å‚åŠ è‡ªä¸»ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ•°
 	$smarty->assign("fh_com_count_user",p_common_count_c_commu4c_member_id($u));
 
-	//²ñ°÷¿ô
+	//ä¼šå“¡æ•°
 	$smarty->assign("count_all_members",count_all_members());
 
 	//shou050603
-	//Ì¤ÆÉ¥á¥Ã¥»¡¼¥¸¤Î¿ô¤ò¤ªÃÎ¤é¤»
+	//æœªèª­ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®æ•°ã‚’ãŠçŸ¥ã‚‰ã›
 	$smarty->assign("num_message_not_is_read",p_h_message_count_c_message_not_is_read4c_member_to_id($u));
-	//Æüµ­¥³¥á¥ó¥È¤ÎÌ¤ÆÉ¤Î¿ô¤ò¤ªÃÎ¤é¤»
+	//æ—¥è¨˜ã‚³ãƒ¡ãƒ³ãƒˆã®æœªèª­ã®æ•°ã‚’ãŠçŸ¥ã‚‰ã›
 	$smarty->assign("num_diary_not_is_read",p_h_diary_count_c_diary_not_is_read4c_member_id($u));
-	//Æüµ­¥³¥á¥ó¥È¤ÎÌ¤ÆÉ¤ÎÃæ¤Ç¡¢ÆÉ¤Þ¤»¤ë¤â¤Î¤òÁ÷¤ë
+	//æ—¥è¨˜ã‚³ãƒ¡ãƒ³ãƒˆã®æœªèª­ã®ä¸­ã§ã€èª­ã¾ã›ã‚‹ã‚‚ã®ã‚’é€ã‚‹
 	$smarty->assign("first_diary_read",p_h_diary_c_diary_first_diary_read4c_member_id($u) );
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¾µÇ§¤òµá¤á¤Æ¤¤¤ë¥á¥ó¥Ð¡¼¥ê¥¹¥È
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ‰¿èªã‚’æ±‚ã‚ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼ãƒªã‚¹ãƒˆ
 	$h_confirm_list = p_h_confirm_list_anatani_c_commu_member_confirm_list4c_member_id($u);
 	$smarty->assign("h_confirm_list", $h_confirm_list);
-	//¤½¤Î¥á¥ó¥Ð¡¼¤Î¿Í¿ô
+	//ãã®ãƒ¡ãƒ³ãƒãƒ¼ã®äººæ•°
 	$smarty->assign("num_h_confirm_list", count($h_confirm_list) );
 
 	//shou050604
-	//¤¢¤Ê¤¿¤Ë¥Õ¥ì¥ó¥ÉÇ§¾Ú¤òµá¤á¤Æ¤¤¤ë¥á¥ó¥Ð¡¼¥ê¥¹¥È
+	//ã‚ãªãŸã«ãƒ•ãƒ¬ãƒ³ãƒ‰èªè¨¼ã‚’æ±‚ã‚ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼ãƒªã‚¹ãƒˆ
 	$f_confirm_list = p_h_confirm_list_anatani_c_friend_confirm_list4c_member_id($u);
 	$smarty->assign("f_confirm_list", $f_confirm_list);
-	//¤½¤Î¥á¥ó¥Ð¡¼¤Î¿Í¿ô
+	//ãã®ãƒ¡ãƒ³ãƒãƒ¼ã®äººæ•°
 	$smarty->assign("num_f_confirm_list", count($f_confirm_list) );
 
 	//shou050630
-	// ¤¢¤Ê¤¿¤Ë¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå¤ò´õË¾¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+	// ã‚ãªãŸã«ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ã‚’å¸Œæœ›ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 	$anatani_c_commu_admin_confirm_list = p_h_confirm_list_anatani_c_commu_admin_confirm_list4c_member_id($u);
 	$smarty->assign("anatani_c_commu_admin_confirm_list",$anatani_c_commu_admin_confirm_list);
-	//¤½¤Î¥á¥ó¥Ð¡¼¤Î¿Í¿ô
+	//ãã®ãƒ¡ãƒ³ãƒãƒ¼ã®äººæ•°
 	$smarty->assign("num_anatani_c_commu_admin_confirm_list", count($anatani_c_commu_admin_confirm_list) );
 
 	$smarty->assign("c_diary_list", p_common_c_diary_list4c_member_id($u,5) );
 	$smarty->assign("c_blog_list", p_h_home_h_blog_list_friend4c_member_id($u, 5, 1) );
 
-	//Æüµ­¥³¥á¥ó¥Èµ­ÆþÍúÎò
+	//æ—¥è¨˜ã‚³ãƒ¡ãƒ³ãƒˆè¨˜å…¥å±¥æ­´
 	$smarty->assign("c_diary_my_comment_list", p_h_home_c_diary_my_comment_list4c_member_id($u, 5));
 
 	$limit = 5;
@@ -77,11 +77,11 @@ function pageAction_h_home($smarty,$requests) {
 
 
 	$smarty->assign("r_datetime",mktime());
-	$date = array("Æü","·î","²Ð","¿å","ÌÚ","¶â","ÅÚ");
+	$date = array("æ—¥","æœˆ","ç«","æ°´","æœ¨","é‡‘","åœŸ");
 	$smarty->assign("r_datetime_date",$date[date("w")]);
 
 
-	//¥«¥ì¥ó¥À¡¼É½¼¨ÍÑ
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼è¡¨ç¤ºç”¨
 	if (defined("DISPLAY_SCHEDULE_HOME") && DISPLAY_SCHEDULE_HOME) {
 		require_once(DOCUMENT_ROOT . '/lib/pear/Calendar/Week.php');
 		$w = intval($requests['w']);
@@ -93,7 +93,7 @@ function pageAction_h_home($smarty,$requests) {
 		$Week = new Calendar_Week(date('Y', $time), date('m', $time), date('d', $time), 0);
 		$Week->build();
 		$calendar = array();
-		$dayofweek = array('Æü','·î','²Ð','¿å','ÌÚ','¶â','ÅÚ');
+		$dayofweek = array('æ—¥','æœˆ','ç«','æ°´','æœ¨','é‡‘','åœŸ');
 		$i = 0;
 		while ($Day = $Week->fetch()) {
 		      $y = $Day->thisYear();
@@ -120,10 +120,10 @@ function pageAction_h_home($smarty,$requests) {
 	// inc_entry_point
 	$smarty->assign('inc_entry_point', fetch_inc_entry_point_h_home());
 
-	//¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë
+	//ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹
 	p_common_do_access($u);
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("h_home.tpl");
 }
-?>
+

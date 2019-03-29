@@ -16,4 +16,3 @@ function pageAction_h_config_image($smarty, $requests)
 	$smarty->ext_display("h_config_image.tpl");
 }
 
-?>

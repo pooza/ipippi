@@ -1,5 +1,5 @@
 <?php
-// ¥Ð¥Ê¡¼ÄÉ²Ã
+// ãƒãƒŠãƒ¼è¿½åŠ 
 
 function doAction_insert_c_banner($requests)
 {
@@ -24,7 +24,7 @@ function doAction_insert_c_banner($requests)
 	db_admin_update_c_banner($c_banner_id,$c_banner);
 	//c_banner update
 		
-	admin_client_redirect('edit_c_banner', "¥Ð¥Ê¡¼¤òÄÉ²Ã¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_banner', "ãƒãƒŠãƒ¼ã‚’è¿½åŠ ã—ã¾ã—ãŸ");
 }
 
-?>
+

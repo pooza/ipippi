@@ -1,5 +1,5 @@
 <?php
-// ¥¹¥­¥ó²èÁü¹¹¿·
+// ã‚¹ã‚­ãƒ³ç”»åƒæ›´æ–°
 
 
 function doAction_insert_c_image($requests)
@@ -10,11 +10,11 @@ function doAction_insert_c_image($requests)
 		image_data_delete($requests['filename']);
 		admin_insert_c_image($_FILES['upfile'], $requests['filename']);
 	
-		admin_client_redirect('edit_c_image', "²èÁü¤òÅÐÏ¿¤·¤Þ¤·¤¿", "filename=".$requests['filename']);
+		admin_client_redirect('edit_c_image', "ç”»åƒã‚’ç™»éŒ²ã—ã¾ã—ãŸ", "filename=".$requests['filename']);
 		exit;
 	}
 	
 	admin_client_redirect('edit_c_image');
 }
 
-?>
+

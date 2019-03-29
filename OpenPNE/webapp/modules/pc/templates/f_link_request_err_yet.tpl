@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧my_friend���ɲ�****** -->
+<!-- ******ここから：my_friendに追加****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,19 +37,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧my_friend���ɲá�����* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：my_friendに追加＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�Ҳ�ʸ���Խ�</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">紹介文を編集</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -63,7 +63,7 @@
 <div class="padding_s">
 
 <span class="c_01">
-({$WORD_MY_FRIEND})��Ͽ����Ƥ��ʤ����С��ξҲ�ʸ��񤯤��ȤϤǤ��ޤ���
+({$WORD_MY_FRIEND})登録されていないメンバーの紹介文を書くことはできません。
 </span>
 
 </div>
@@ -82,7 +82,7 @@
 
 <div class="padding_s">
 
-�̿�
+写真
 
 </div>
 
@@ -92,7 +92,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=f_home&target_c_member_id=({$target_c_member.c_member_id})">({if $target_c_member.image_filename})<img src="./img.php?filename=({$target_c_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=�̿� border=0>({/if})</a>
+<a href="page.php?p=f_home&target_c_member_id=({$target_c_member.c_member_id})">({if $target_c_member.image_filename})<img src="./img.php?filename=({$target_c_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=写真 border=0>({/if})</a>
 
 </div>
 
@@ -110,7 +110,7 @@
 
 <div class="padding_s">
 
-������
+送信先
 
 </div>
 
@@ -133,12 +133,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ�my_friend���ɲá������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：my_friendに追加＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -148,13 +148,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ�my_friend���ɲ�****** -->
+<!-- ******ここまで：my_friendに追加****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

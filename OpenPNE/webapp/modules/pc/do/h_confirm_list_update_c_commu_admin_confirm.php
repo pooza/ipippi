@@ -1,30 +1,30 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å´ÉÍý¼Ô¸òÂå¾µÇ§
+ã‚³ãƒŸãƒ¥ç®¡ç†è€…äº¤ä»£æ‰¿èª
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_admin_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_message_send
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å´ÉÍý¼Ô¸òÂå¤ò¼õ¤±¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ç®¡ç†è€…äº¤ä»£ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_h_confirm_list_update_c_commu_admin_confirm($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_admin_confirm_id = $request['target_c_commu_admin_confirm_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå¤ò¼õ¤±¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
     
     $cac = _db_c_commu_admin_confirm4c_commu_admin_confirm_id($target_c_commu_admin_confirm_id);
     
@@ -36,7 +36,7 @@ function doAction_h_confirm_list_update_c_commu_admin_confirm($request) {
 
 	do_h_confirm_list_update_c_commu_admin($target_c_commu_admin_confirm_id, $u);
 
-    $msg = urlencode('¾µÇ§¤¬´°Î»¤·¤Þ¤·¤¿');
+    $msg = urlencode('æ‰¿èªãŒå®Œäº†ã—ã¾ã—ãŸ');
     client_redirect("page.php?p=h_confirm_list&msg=$msg");
 }
-?>
+

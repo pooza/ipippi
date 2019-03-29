@@ -4,7 +4,7 @@
 function pageAction_f_link_request_err_yet($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
@@ -19,4 +19,4 @@ function pageAction_f_link_request_err_yet($smarty,$requests) {
 
 	$smarty->ext_display("f_link_request_err_yet.tpl");
 }
-?>
+

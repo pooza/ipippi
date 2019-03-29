@@ -1,5 +1,5 @@
 <?php
-// ¥¹¥­¥ó²èÁü¹¹¿·
+// ã‚¹ã‚­ãƒ³ç”»åƒæ›´æ–°
 
 
 function doAction_delete_c_image($requests)
@@ -9,7 +9,7 @@ function doAction_delete_c_image($requests)
 	image_data_delete($requests['filename']);
 	db_admin_delete_c_image_link4image_filename($requests['filename']);
 	
-	admin_client_redirect('edit_c_image', "²èÁü¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_image', "ç”»åƒã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>
+

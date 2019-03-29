@@ -1,22 +1,22 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥á¥Ã¥»¡¼¥¸¤òÁ÷¤ë(ÊÖ¿®ÍÑ)
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹(è¿”ä¿¡ç”¨)
 
-[°ú¿ô]
+[å¼•æ•°]
 subject
 body
 target_c_member_id
 c_message_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 h_message
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_message_id
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_message_insert_message($requests)
@@ -24,7 +24,7 @@ function doAction_h_message_insert_message($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$subject = $requests['subject'];
 	$body = $requests['body'];
 	$target_c_member_id = $requests['target_c_member_id'];
@@ -41,26 +41,26 @@ function doAction_h_message_insert_message($requests)
 		exit;
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¼«Ê¬°Ê³°
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//è‡ªåˆ†ä»¥å¤–
 	if ($target_c_member_id == $u) {
 		handle_kengen_error();
 	}
 	
-	//target_c_message¤¬¼«Ê¬°¸
+	//target_c_messageãŒè‡ªåˆ†å®›
 	$target_c_message = _db_c_message4c_message_id($target_c_message_id);
 	if ($target_c_message['c_member_id_to'] != $u) {
 		handle_kengen_error();
 	}
 	
-	// ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+	// ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 	if(p_common_is_access_block($u, $target_c_member_id)){
 		client_redirect("ktai_page.php?p=h_access_block&$tail");
 		exit;
 	}
 	//---
 
-	//ÊÖ¿®ºÑ¤ß¤Ë¤¹¤ë
+	//è¿”ä¿¡æ¸ˆã¿ã«ã™ã‚‹
 	do_update_is_hensin($target_c_message_id);
 
 	do_common_send_message($u, $target_c_member_id, $subject, $body);
@@ -68,4 +68,3 @@ function doAction_h_message_insert_message($requests)
 	client_redirect("ktai_page.php?p=h_message_box&$tail");
 }
 
-?>

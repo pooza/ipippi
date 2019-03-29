@@ -1,5 +1,5 @@
 <?php
-// °ì³ç¥á¥Ã¥»¡¼¥¸Á÷¿®
+// ä¸€æ‹¬ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 
 
 function pageAction_send_messages(&$smarty,$requests)
@@ -21,4 +21,4 @@ function pageAction_send_messages(&$smarty,$requests)
 	$smarty->ext_display("send_messages.tpl");
 }
 
-?>
+

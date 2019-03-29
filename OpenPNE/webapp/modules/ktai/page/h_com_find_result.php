@@ -3,7 +3,7 @@ function pageAction_h_com_find_result($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$search_word = $requests['search_word'];
 	$target_c_commu_category_id = $requests['target_c_commu_category_id'];
 	$direc = $requests['direc'];
@@ -16,20 +16,20 @@ function pageAction_h_com_find_result($smarty, $requests)
 	$page_size = 10;
 	$page += $direc;
 	
-	//¥Ú¡¼¥¸
+	//ãƒšãƒ¼ã‚¸
 	$smarty->assign("page", $page);
 	
 	//search_word
 	$smarty->assign("search_word", $search_word);
 	$smarty->assign("search_word_encode", urlencode($search_word));
 	
-	//¸¡º÷¤ËÍÑ¤¤¤¿¥«¥Æ¥´¥ê
+	//æ¤œç´¢ã«ç”¨ã„ãŸã‚«ãƒ†ã‚´ãƒª
 	$smarty->assign("target_c_commu_category_id" , $target_c_commu_category_id);
 
-    //¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È
+    //ã‚«ãƒ†ã‚´ãƒªã®ãƒªã‚¹ãƒˆ
     $smarty->assign("c_commu_category_list", _db_c_commu_category4null());    
 	
-	//¸¡º÷·ë²Ì
+	//æ¤œç´¢çµæžœ
 	$list = k_p_h_com_category_c_commu_list4c_commu_category_id_search($target_c_commu_category_id, $page_size, $page, $search_word);
 	
 	$smarty->assign("c_commu_search_result", $list[0]);
@@ -41,4 +41,3 @@ function pageAction_h_com_find_result($smarty, $requests)
 	
 }
 
-?>

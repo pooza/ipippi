@@ -1,5 +1,5 @@
 <?php
-// ´ÉÍý²èÌÌ¥È¥Ã¥×¥Ú¡¼¥¸ Ç§¾ÚºÑ¤ß
+// ç®¡ç†ç”»é¢ãƒˆãƒƒãƒ—ãƒšãƒ¼ã‚¸ èªè¨¼æ¸ˆã¿
 
 
 function pageAction_top(&$smarty,$requests)
@@ -13,4 +13,3 @@ function pageAction_top(&$smarty,$requests)
 	$smarty->ext_display("top.tpl");
 }
 
-?>

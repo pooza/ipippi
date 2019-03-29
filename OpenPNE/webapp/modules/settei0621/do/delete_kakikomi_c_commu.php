@@ -1,5 +1,5 @@
 <?php
-// ½ñ¤­¹þ¤ß´ÉÍý(¥³¥ß¥å¥Ë¥Æ¥£ºï½ü)
+// æ›¸ãè¾¼ã¿ç®¡ç†(ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‰Šé™¤)
 
 
 function doAction_delete_kakikomi_c_commu($requests)
@@ -8,7 +8,6 @@ function doAction_delete_kakikomi_c_commu($requests)
 	
 	db_common_delete_c_commu($requests['target_c_commu_id']);
 
-	admin_client_redirect('delete_kakikomi', "¥³¥ß¥å¥Ë¥Æ¥£¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('delete_kakikomi', "ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>

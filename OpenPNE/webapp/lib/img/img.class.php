@@ -1,32 +1,32 @@
 <?php
 class Img
 {
-	//GET¤ÇÅÏ¤µ¤ì¤ë¥Ñ¥é¥á¡¼¥¿
+	//GETã§æ¸¡ã•ã‚Œã‚‹ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
 	var $src;
 	var $dbsrc;
 	var $w;
 	var $h;
 	var $f;
 
-	//ÆâÉô¤Ç»È¤¦¥Ñ¥é¥á¡¼¥¿
+	//å†…éƒ¨ã§ä½¿ã†ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
 	var $thumbnailQuality = 75;
 
-	var $sourceFilename; //¥µ¡¼¥Ð¤«¤é¼è¤ê½Ð¤¹¤Ù¤­¥Õ¥¡¥¤¥ë¤ÎÌ¾Á°
+	var $sourceFilename; //ã‚µãƒ¼ãƒã‹ã‚‰å–ã‚Šå‡ºã™ã¹ããƒ•ã‚¡ã‚¤ãƒ«ã®åå‰
 
-	var $rawImageData; //¤½¤Î²èÁü¤Î¥Ð¥¤¥Ê¥ê
+	var $rawImageData; //ãã®ç”»åƒã®ãƒã‚¤ãƒŠãƒª
 
-	var $sourceFormat; //¥µ¡¼¥Ð¤«¤é¼è¤ê½Ð¤·¤¿²èÁü¥¿¥¤¥×
-	var $outputFormat; //½ÐÎÏ¤¹¤ë²èÁü¥¿¥¤¥×
+	var $sourceFormat; //ã‚µãƒ¼ãƒã‹ã‚‰å–ã‚Šå‡ºã—ãŸç”»åƒã‚¿ã‚¤ãƒ—
+	var $outputFormat; //å‡ºåŠ›ã™ã‚‹ç”»åƒã‚¿ã‚¤ãƒ—
 
-	var $gdimg_source; //¼è¤ê½Ð¤·¤¿²èÁü¤ÎGD¥¤¥á¡¼¥¸
-	var $gdimg_output; //½ÐÎÏÍÑ¤Î²èÁü¤ÎGD¥¤¥á¡¼¥¸
+	var $gdimg_source; //å–ã‚Šå‡ºã—ãŸç”»åƒã®GDã‚¤ãƒ¡ãƒ¼ã‚¸
+	var $gdimg_output; //å‡ºåŠ›ç”¨ã®ç”»åƒã®GDã‚¤ãƒ¡ãƒ¼ã‚¸
 
-	var $source_width; //¸µ¤Î²èÁü¤Î¥µ¥¤¥º
+	var $source_width; //å…ƒã®ç”»åƒã®ã‚µã‚¤ã‚º
 	var $source_height;
 
-	var $cache_filename; //¥ê¥¯¥¨¥¹¥È¤ËÂÐ±þ¤¹¤ë¥­¥ã¥Ã¥·¥å¥Õ¥¡¥¤¥ëÌ¾
+	var $cache_filename; //ãƒªã‚¯ã‚¨ã‚¹ãƒˆã«å¯¾å¿œã™ã‚‹ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ•ã‚¡ã‚¤ãƒ«å
 	var $cache_fullpath;
-	var $cache_exists = false; //¥­¥ã¥Ã¥·¥å¤¬Â¸ºß¤·¤Æ¤ë¤«¤É¤¦¤«
+	var $cache_exists = false; //ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒå­˜åœ¨ã—ã¦ã‚‹ã‹ã©ã†ã‹
 
 	
 
@@ -38,12 +38,12 @@ class Img
 	
 	var $config_thumbnail_format = null;
 
-	//¥³¥ó¥¹¥È¥é¥¯¥¿
+	//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	function Img()
 	{
 	}
 
-	//$vars¡ÊÏ¢ÁÛÇÛÎó¡Ë¤ÎÆâÍÆ¤ò¥ª¥Ö¥¸¥§¥¯¥È¤ËÂåÆþ
+	//$varsï¼ˆé€£æƒ³é…åˆ—ï¼‰ã®å†…å®¹ã‚’ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ä»£å…¥
 	function set_vars($vars)
 	{
 		foreach ($vars as $keyname => $value) {
@@ -77,7 +77,7 @@ class Img
 		}
 	}
 
-	//²èÁü¤òÀ¸À®
+	//ç”»åƒã‚’ç”Ÿæˆ
 	function generate_img()
 	{
 		$this->set_sourceFilename();
@@ -85,22 +85,22 @@ class Img
 		$this->set_cacheFilename();
 		
 		/*
-			¤³¤³¤Ç¥­¥ã¥Ã¥·¥å¤Î¥Á¥§¥Ã¥¯
-			¥­¥ã¥Ã¥·¥å¥Õ¥¡¥¤¥ëÌ¾¡Ê¥Õ¥ë¥Ñ¥¹¤â¡Ë¤â¥»¥Ã¥È¤µ¤ì¤ë
+			ã“ã“ã§ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã®ãƒã‚§ãƒƒã‚¯
+			ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ•ã‚¡ã‚¤ãƒ«åï¼ˆãƒ•ãƒ«ãƒ‘ã‚¹ã‚‚ï¼‰ã‚‚ã‚»ãƒƒãƒˆã•ã‚Œã‚‹
 		*/
 		if ($this->config_cache_source_enabled && ($this->cache_exists = $this->check_cache())) {
 			return true;
 		}
 
 		if ($this->src) {
-			//TODO ¥Õ¥©¥ë¥À¤«¤é¼èÆÀ¤¹¤ë¾ì¹ç¤Î½èÍý
+			//TODO ãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰å–å¾—ã™ã‚‹å ´åˆã®å‡¦ç†
 
 		}
 		elseif ($this->dbsrc) {
-			//DB¤«¤é¼èÆÀ
+			//DBã‹ã‚‰å–å¾—
 			$this->setRawImageData4db();
 			
-			//¥ê¥µ¥¤¥º¤»¤º¡¢¤«¤Ä¡¢·Á¼°ÊÑ´¹¤·¤Ê¤¤¾ì¹ç¡¢¤³¤³¤Ç½ªÎ»¡Ê£Ç£Ä¤ËÊÑ´¹¤¹¤ëÉ¬Í×¤Ê¤·¡Ë
+			//ãƒªã‚µã‚¤ã‚ºã›ãšã€ã‹ã¤ã€å½¢å¼å¤‰æ›ã—ãªã„å ´åˆã€ã“ã“ã§çµ‚äº†ï¼ˆï¼§ï¼¤ã«å¤‰æ›ã™ã‚‹å¿…è¦ãªã—ï¼‰
 			if ($this->rawImageData && !isset($this->w) && !isset($this->h) && ($this->sourceFormat == $this->outputFormat)) {
 				$this->config_cache_source_enabled and $this->create_rawcache();
 				return true;
@@ -109,18 +109,18 @@ class Img
 			$this->gdimg_source = imagecreatefromstring($this->rawImageData);
 			imageinterlace($this->gdimg_source, 0);
 
-			//¸µ¤Î¥µ¥¤¥º¼èÆÀ
+			//å…ƒã®ã‚µã‚¤ã‚ºå–å¾—
 			$this->source_height = imagesy($this->gdimg_source);
 			$this->source_width = imagesx($this->gdimg_source);
-			//¥ê¥µ¥¤¥º
+			//ãƒªã‚µã‚¤ã‚º
 			$this->gdimg_output = $this->resize_img($this->h, $this->w);
 			
-			//¥ê¥µ¥¤¥º¤·¤Ê¤¯¤Æ¤â·Á¼°ÊÑ´¹¤¹¤ë¾ì¹ç¤ÏGD¤òÄÌ¤¹
+			//ãƒªã‚µã‚¤ã‚ºã—ãªãã¦ã‚‚å½¢å¼å¤‰æ›ã™ã‚‹å ´åˆã¯GDã‚’é€šã™
 			if ($this->gdimg_output === false && $this->sourceFormat != $this->outputFormat) {
 				$this->gdimg_output = $this->gdimg_source;
 			}
 			
-			//¥­¥ã¥Ã¥·¥å¤òÀ¸À®
+			//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã‚’ç”Ÿæˆ
 			if ($this->config_cache_source_enabled) {
 				if ($this->gdimg_output === false) {
 					$this->create_rawcache();
@@ -133,16 +133,16 @@ class Img
 		}
 	}
 
-	//DB¤«¤é²èÁü¥Ð¥¤¥Ê¥ê¤ò¼èÆÀ
+	//DBã‹ã‚‰ç”»åƒãƒã‚¤ãƒŠãƒªã‚’å–å¾—
 	function setRawImageData4db()
 	{
 		@mysql_connect(
 				$GLOBALS['__OpenPNE']['DSN']['hostspec'],
 				$GLOBALS['__OpenPNE']['DSN']['username'],
 				$GLOBALS['__OpenPNE']['DSN']['password'])
-			or die('¥Ç¡¼¥¿¥Ù¡¼¥¹¥µ¡¼¥Ð¤ËÀÜÂ³¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿');
+			or die('ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚µãƒ¼ãƒã«æŽ¥ç¶šã§ãã¾ã›ã‚“ã§ã—ãŸ');
 		@mysql_select_db($GLOBALS['__OpenPNE']['DSN']['database'])
-			or die('¥Ç¡¼¥¿¥Ù¡¼¥¹¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó¤Ç¤·¤¿');
+			or die('ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸ');
 		
 		$sql = "SELECT filename,bin,type FROM c_image" .
 			" WHERE filename = '".mysql_real_escape_string($this->dbsrc)."'";
@@ -167,10 +167,10 @@ class Img
 		}
 	}
 
-	//²èÁü¤ò½ÐÎÏ
+	//ç”»åƒã‚’å‡ºåŠ›
 	function output_img()
 	{
-		//¥­¥ã¥Ã¥·¥å¤¬¤¢¤ë¾ì¹ç
+		//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚‹å ´åˆ
 		if ($this->config_cache_source_enabled && $this->cache_exists) {
 
 			$this->send_content_type();
@@ -188,20 +188,20 @@ class Img
 			return true;
 		}
 
-		//¥­¥ã¥Ã¥·¥å¤¬¤Ê¤¤¾ì¹ç
+		//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒãªã„å ´åˆ
 		if ($this->src) {
-			//TODO ¥Ç¥£¥ì¥¯¥È¥ê¤«¤é¼è¤Ã¤Æ¤¯¤ë¾ì¹ç
+			//TODO ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰å–ã£ã¦ãã‚‹å ´åˆ
 
 		}
-		elseif ($this->dbsrc) { //DB¤«¤é¤È¤Ã¤Æ¤¯¤ë¾ì¹ç
-			//¥ê¥µ¥¤¥º¤»¤º¤Ë¡¢¤«¤Ä¡¢·Á¼°ÊÑ´¹¤·¤Ê¤¤¾ì¹ç¡¢½ÐÎÏ¤ËGD·Ï¤Î´Ø¿ô¤ò»ÈÍÑ¤·¤Ê¤¤(²è¼Á¤¬Îô²½¤¹¤ë¤Î¤Ç)
+		elseif ($this->dbsrc) { //DBã‹ã‚‰ã¨ã£ã¦ãã‚‹å ´åˆ
+			//ãƒªã‚µã‚¤ã‚ºã›ãšã«ã€ã‹ã¤ã€å½¢å¼å¤‰æ›ã—ãªã„å ´åˆã€å‡ºåŠ›ã«GDç³»ã®é–¢æ•°ã‚’ä½¿ç”¨ã—ãªã„(ç”»è³ªãŒåŠ£åŒ–ã™ã‚‹ã®ã§)
 			if ($this->rawImageData && !$this->gdimg_output) {
 				$this->send_content_type();
 				echo $this->rawImageData;
 				return true;
 			}
 			elseif ($this->gdimg_output) {
-				//¥ê¥µ¥¤¥º¡¡or ·Á¼°ÊÑ´¹¤¹¤ë¾ì¹ç¤Ï¡¢GD·Ï¤Î´Ø¿ô¤Ç½ÐÎÏ
+				//ãƒªã‚µã‚¤ã‚ºã€€or å½¢å¼å¤‰æ›ã™ã‚‹å ´åˆã¯ã€GDç³»ã®é–¢æ•°ã§å‡ºåŠ›
 				$this->send_content_type();
 				switch ($this->outputFormat) {
 				case "jpeg":
@@ -222,32 +222,32 @@ class Img
 		return true;
 	}
 
-	//GD¥¤¥á¡¼¥¸¤Î¥ê¥µ¥¤¥º
+	//GDã‚¤ãƒ¡ãƒ¼ã‚¸ã®ãƒªã‚µã‚¤ã‚º
 	/**
-	 * @param $h ½Ä¤Î¥µ¥¤¥º
-	 *        $w ²£¤Î¥µ¥¤¥º
+	 * @param $h ç¸¦ã®ã‚µã‚¤ã‚º
+	 *        $w æ¨ªã®ã‚µã‚¤ã‚º
 	 * 
 	 * @return resource gdimg
 	 */
 	function resize_img($h, $w)
 	{
-		//¸µ²èÁü¤¬¾®¤µ¤¯¤Æ¥ê¥µ¥¤¥º¤ÎÉ¬Í×¤¬¤Ê¤¤¾ì¹ç
+		//å…ƒç”»åƒãŒå°ã•ãã¦ãƒªã‚µã‚¤ã‚ºã®å¿…è¦ãŒãªã„å ´åˆ
 		if ((!$h || $this->source_height <= $h) &&
 			(!$w || $this->source_width <= $w)) {
 			
 			return false;
 		}
 
-		//¥ê¥µ¥¤¥º¤ÎÉ¬Í×¤¢¤ê
+		//ãƒªã‚µã‚¤ã‚ºã®å¿…è¦ã‚ã‚Š
 		if ($this->source_height >= $this->source_width) {
-			//½Ä¤òÍÞ¤¨¤ë
+			//ç¸¦ã‚’æŠ‘ãˆã‚‹
 			$oy = $h;
-			$ox = ($oy * $this->source_width) / $this->source_height; // ¥µ¥¤¥ºÊÑ¹¹¸å¤Î²£¥µ¥¤¥º
+			$ox = ($oy * $this->source_width) / $this->source_height; // ã‚µã‚¤ã‚ºå¤‰æ›´å¾Œã®æ¨ªã‚µã‚¤ã‚º
 		}
 		elseif ($this->source_height < $this->source_width) {
-			//²£¤òÍÞ¤¨¤ë
+			//æ¨ªã‚’æŠ‘ãˆã‚‹
 			$ox = $w;
-			$oy = ($ox * $this->source_height) / $this->source_width; // ¥µ¥¤¥ºÊÑ¹¹¸å¤Î½Ä¥µ¥¤¥º
+			$oy = ($ox * $this->source_height) / $this->source_width; // ã‚µã‚¤ã‚ºå¤‰æ›´å¾Œã®ç¸¦ã‚µã‚¤ã‚º
 		}
 
 		$img = imagecreatetruecolor($ox, $oy);
@@ -255,22 +255,22 @@ class Img
 		return $img;
 	}
 
-	//¥­¥ã¥Ã¥·¥å¤¬»Ä¤Ã¤Æ¤¤¤ë¤«¥Á¥§¥Ã¥¯¤¹¤ë
+	//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒæ®‹ã£ã¦ã„ã‚‹ã‹ãƒã‚§ãƒƒã‚¯ã™ã‚‹
 	/**
 	 * @return boolean
 	 */
 	function check_cache()
 	{
 		if (file_exists($this->cache_fullpath)) {
-			//¥­¥ã¥Ã¥·¥å¤¬»Ä¤Ã¤Æ¤¤¤ì¤Ð
+			//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒæ®‹ã£ã¦ã„ã‚Œã°
 			return true;
 		} else {
-			//»Ä¤Ã¤Æ¤Ê¤±¤ì¤Ð
+			//æ®‹ã£ã¦ãªã‘ã‚Œã°
 			return false;
 		}
 	}
 
-	//¥­¥ã¥Ã¥·¥å¤òºîÀ®¤¹¤ë
+	//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã‚’ä½œæˆã™ã‚‹
 	function create_cache()
 	{
 		$this->create_cache_subdir();
@@ -334,11 +334,11 @@ class Img
 	 */
 	function set_sourceFilename(){
 		if ($this->src) {
-			//¥Ç¥£¥ì¥¯¥È¥ê¤«¤é¼èÆÀ¤¹¤ë¾ì¹ç
+			//ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰å–å¾—ã™ã‚‹å ´åˆ
 			$this->sourceFilename = $this->src;
 		}
 		elseif ($this->dbsrc) {
-			//DB¤«¤é¼èÆÀ¤¹¤ë¾ì¹ç
+			//DBã‹ã‚‰å–å¾—ã™ã‚‹å ´åˆ
 			$this->sourceFilename = $this->dbsrc;
 		}
 		
@@ -351,15 +351,15 @@ class Img
 	 */
 	 function set_outputFormat(){
 		 if($this->f){
-			 //Á÷¤é¤ì¤¿f¤Ë¤Æ½ÐÎÏ
+			 //é€ã‚‰ã‚ŒãŸfã«ã¦å‡ºåŠ›
 			 $this->outputFormat = $this->checkFormatString($this->f);
 		 }
 		 elseif ($this->config_thumbnail_format){
-			 //¥³¥ó¥Õ¥£¥°¤Ë½¾¤¦
+			 //ã‚³ãƒ³ãƒ•ã‚£ã‚°ã«å¾“ã†
 			 $this->outputFormat = $this->checkFormatString($this->config_thumbnail_format);
 		 }
 		 else {
-			 //¥ê¥¯¥¨¥¹¥È(dbsrc)¤Ë½¾¤¦
+			 //ãƒªã‚¯ã‚¨ã‚¹ãƒˆ(dbsrc)ã«å¾“ã†
 			 $this->outputFormat = $this->checkFormatString($this->sourceFormat);
 		 }
 	 }
@@ -404,4 +404,3 @@ class Img
 		return $format;
 	 }
 }
-?>

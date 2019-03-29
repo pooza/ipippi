@@ -6,7 +6,7 @@
 function pageAction_h_schedule_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$target_c_schedule_id = $requests['target_c_schedule_id'];
 		$input = $requests;
 		// ----------
@@ -14,7 +14,7 @@ function pageAction_h_schedule_edit($smarty,$requests) {
 
 	$c_schedule = p_common_c_schedule4c_schedule_id($target_c_schedule_id);
 	if ($c_schedule['c_member_id'] != $u) {
-		exit("¥Ç¡¼¥¿¤Ï¤¢¤ê¤Þ¤»¤ó¡£");
+		exit("ãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
 	}
 	$smarty->assign('target_c_schedule_id', $target_c_schedule_id);
 
@@ -83,4 +83,4 @@ function pageAction_h_schedule_edit($smarty,$requests) {
 	  
 	$smarty->ext_display("h_schedule_edit.tpl");
 }
-?>
+

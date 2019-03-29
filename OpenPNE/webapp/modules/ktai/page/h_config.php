@@ -6,4 +6,3 @@ function pageAction_h_config($smarty, $requests)
 	$smarty->ext_display("h_config.tpl");
 }
 
-?>

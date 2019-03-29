@@ -4,12 +4,12 @@
 function pageAction_c_home($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
     $c_commu = p_common_c_commu4c_commu_id($target_c_commu_id);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¤ÎÂ¸ºß¤ÎÍ­Ìµ
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å­˜åœ¨ã®æœ‰ç„¡
     if (!$c_commu) {
         client_redirect("page.php?p=h_err_c_home");
         exit;
@@ -23,18 +23,18 @@ function pageAction_c_home($smarty,$requests) {
 	$smarty->assign("is_receive_mail", p_c_home_is_receive_mail4c_commu_id4c_member_id($target_c_commu_id, $u));
 	$smarty->assign("is_receive_mail_pc", p_c_home_is_receive_mail_pc4c_commu_id4c_member_id($target_c_commu_id, $u));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ã¥×
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒƒãƒ—
 	$c_commu = p_c_home_c_commu4c_commu_id( $target_c_commu_id );
 	$smarty->assign("c_commu", $c_commu);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 	$smarty->assign( "c_commu_member_list", p_c_home_c_commu_member_list4c_commu_id($target_c_commu_id, 9));
 
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î¿·Ãå¥È¥Ô¥Ã¥¯½ñ¤­¹þ¤ß
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ–°ç€ãƒˆãƒ”ãƒƒã‚¯æ›¸ãè¾¼ã¿
 	$smarty->assign("new_topic_comment", p_c_home_new_topic_comment4c_commu_id($target_c_commu_id, 7));
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î¿·Ãå¥¤¥Ù¥ó¥È½ñ¤­¹þ¤ß
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ–°ç€ã‚¤ãƒ™ãƒ³ãƒˆæ›¸ãè¾¼ã¿
 	$smarty->assign("new_topic_comment_event", p_c_home_new_topic_comment4c_commu_id($target_c_commu_id, 7, 1));
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î¿·Ãå¤ª¤¹¤¹¤á¥ì¥Ó¥å¡¼
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ–°ç€ãŠã™ã™ã‚ãƒ¬ãƒ“ãƒ¥ãƒ¼
 	$smarty->assign("new_commu_review", p_c_home_new_commu_review4c_commu_id($target_c_commu_id, 7));
 
 	// inc_entry_point
@@ -43,4 +43,4 @@ function pageAction_c_home($smarty,$requests) {
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("c_home.tpl");
 }
-?>
+

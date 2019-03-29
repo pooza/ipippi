@@ -3,7 +3,7 @@
 function pageAction_h_diary_edit_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	$subject = $requests['subject'];
 	$body = $requests['body'];
@@ -29,12 +29,12 @@ function pageAction_h_diary_edit_confirm($smarty,$requests) {
 	foreach ($upfiles as $key => $upfile) {
 		if (file_exists($upfile["tmp_name"])) {
 			if (t_get_image_size($upfile) > $limit_size) {
-				$_REQUEST['msg'] = '¢¨300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤¡£';
+				$_REQUEST['msg'] = 'â€»300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„ã€‚';
 				module_execute('pc', 'page', "h_diary_edit");
 				exit;
 			}
 			if (!$format = t_check_image_format($upfile)) {
-				$_REQUEST['msg'] = '¢¨300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤¡£';
+				$_REQUEST['msg'] = 'â€»300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„ã€‚';
 				module_execute('pc', 'page', "h_diary_edit");
 				exit;
 			}
@@ -44,7 +44,7 @@ function pageAction_h_diary_edit_confirm($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));	
 
-	//¥×¥í¥Õ¥£¡¼¥ë
+	//ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«
 	$smarty->assign("member", db_common_c_member4c_member_id($u));
 
 	$form_val = array(
@@ -64,4 +64,4 @@ function pageAction_h_diary_edit_confirm($smarty,$requests) {
 
 	$smarty->ext_display("h_diary_edit_confirm.tpl");
 }
-?>
+

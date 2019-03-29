@@ -7,13 +7,13 @@ function pageAction_f_invite($smarty,$requests) {
 		  
 	$smarty->assign('inc_navi',fetch_inc_navi("f", $target_c_member_id));
 
-	//¥á¥ó¥Ð¡¼¾ðÊó
+	//ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 	
-	//¾·ÂÔ¤¹¤ëÍ§Ã£¥ê¥¹¥È
+	//æ‹›å¾…ã™ã‚‹å‹é”ãƒªã‚¹ãƒˆ
 	$smarty->assign("f_invite_list",
 		p_f_invite_invite_list4c_member_ids($target_c_member_id, $u));
 
 	$smarty->ext_display("f_invite.tpl");
 }
-?>
+

@@ -3,7 +3,7 @@
 function pageAction_c_event_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 		$err_msg = $requests['err_msg'];
 		// ----------
@@ -11,7 +11,7 @@ function pageAction_c_event_edit($smarty,$requests) {
 		$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 		$c_commu_id = $c_topic['c_commu_id'];
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
@@ -33,8 +33,8 @@ function pageAction_c_event_edit($smarty,$requests) {
 		$smarty->assign('pref', p_regist_prof_c_profile_pref_list4null());
 		$smarty->assign('err_msg', $err_msg);
 
-		//ÊÔ½¸³ÎÇ§²èÌÌ¤Ç¥¨¥é¡¼¤¬¤Ç¤¿¤È¤­¤³¤³¤ËÌá¤Ã¤Æ¤¯¤ë¡£¤½¤Î¤È¤­¤Î¤¿¤á¤Ërequest¤«¤é¼èÆÀ
-		//ÊÝÎ±
+		//ç·¨é›†ç¢ºèªç”»é¢ã§ã‚¨ãƒ©ãƒ¼ãŒã§ãŸã¨ãã“ã“ã«æˆ»ã£ã¦ãã‚‹ã€‚ãã®ã¨ãã®ãŸã‚ã«requestã‹ã‚‰å–å¾—
+		//ä¿ç•™
 		if($err_msg){
 			$c_topic_temp = p_c_event_add_confirm_event4request();
 			$c_topic['name'] = $c_topic_temp['title'];
@@ -63,4 +63,4 @@ function pageAction_c_event_edit($smarty,$requests) {
 		$smarty->assign('event',$c_topic);	
 		$smarty->ext_display('c_event_edit.tpl');	
 }
-?>
+

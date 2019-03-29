@@ -1,17 +1,17 @@
-<!--¡¡¥¤¥ó¥Õ¥©¥á¡¼¥·¥ç¥ó¡¡¡õ¡¡¥«¥ì¥ó¥À¡¼¡¡-->
+<!--ã€€ã‚¤ãƒ³ãƒ•ã‚©ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã€€ï¼†ã€€ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ã€€-->
 <table border="0" cellspacing="0" cellpadding="0" style="width:720px;" class="info">
 <tr>
 <td style="width:20px;"><img src="./skin/dummy.gif" style="width:20px;height:1px;" class="dummy"></td>
 <td style="width:700px;" align="center" valign="middle">
 
-<!--¤³¤³¤«¤é¡§±¿±Ä¼Ô¤«¤é¤Î¤ªÃÎ¤é¤»-->
+<!--ã“ã“ã‹ã‚‰ï¼šé‹å–¶è€…ã‹ã‚‰ã®ãŠçŸ¥ã‚‰ã›-->
 <div class="border_07 bg_07">
 <table border="0" cellspacing="1" cellpadding="0" style="width:700px;" class="info_body">
 <tr>
-<td align="center" style="width:105px;" class="bg_07"><img src="./skin/inc_info/icon_information.gif" alt="¤ªÃÎ¤é¤»" style="width:91px;height:14px;"></td>
+<td align="center" style="width:105px;" class="bg_07"><img src="./skin/inc_info/icon_information.gif" alt="ãŠçŸ¥ã‚‰ã›" style="width:91px;height:14px;"></td>
 <td class="bg_02" style="width:595px;">
 <table border="0" cellspacing="0" cellpadding="0">
-<!--¤³¤³¤«¤é¡§¥ê¥¹¥È-->
+<!--ã“ã“ã‹ã‚‰ï¼šãƒªã‚¹ãƒˆ-->
 <tr>
 <td>
 
@@ -23,14 +23,14 @@
 
 </td>
 </tr>
-<!--¤³¤³¤Ş¤Ç¡§¥ê¥¹¥È-->
+<!--ã“ã“ã¾ã§ï¼šãƒªã‚¹ãƒˆ-->
 ({if $num_f_confirm_list })
 <tr>
 <td>
 
 <div class="padding_s">
 
-¡ú<span class="caution">¾µÇ§ÂÔ¤Á¤Î¥á¥ó¥Ğ¡¼¤¬({$num_f_confirm_list})Ì¾¤¤¤Ş¤¹¡ª</span>&nbsp;<a href="page.php?p=h_confirm_list"><span class="b_b">¾µÇ§¡¦µñÈİ</span></a>
+â˜…<span class="caution">æ‰¿èªå¾…ã¡ã®ãƒ¡ãƒ³ãƒãƒ¼ãŒ({$num_f_confirm_list})åã„ã¾ã™ï¼</span>&nbsp;<a href="page.php?p=h_confirm_list"><span class="b_b">æ‰¿èªãƒ»æ‹’å¦</span></a>
 
 </div>
 
@@ -39,55 +39,55 @@
 ({/if})
 
 
-<!--¥ê¥¹¥È£µ-->
+<!--ãƒªã‚¹ãƒˆï¼•-->
 ({if $num_message_not_is_read })
 <tr>
 <td>
 
 <div class="padding_s">
 
-¡ú<span class="caution">¿·Ãå¥á¥Ã¥»¡¼¥¸¤¬({$num_message_not_is_read})·ï¤¢¤ê¤Ş¤¹¡ª</span>&nbsp;<a href="page.php?p=h_message_box"><span class="b_b">¥á¥Ã¥»¡¼¥¸¤òÆÉ¤à</span></a></td>
+â˜…<span class="caution">æ–°ç€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒ({$num_message_not_is_read})ä»¶ã‚ã‚Šã¾ã™ï¼</span>&nbsp;<a href="page.php?p=h_message_box"><span class="b_b">ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’èª­ã‚€</span></a></td>
 
 </div>
 
 </tr>
 ({/if})
-<!--¥ê¥¹¥È£¶-->
+<!--ãƒªã‚¹ãƒˆï¼–-->
 ({if $num_diary_not_is_read })
 <tr>
 <td>
 
 <div class="padding_s">
 
-¡ú<span class="caution">({$num_diary_not_is_read})·ï¤ÎÆüµ­¤ËÂĞ¤·¤Æ¿·Ãå¥³¥á¥ó¥È¤¬¤¢¤ê¤Ş¤¹¡ª</span>&nbsp;<a href="page.php?p=fh_diary&target_c_diary_id=({$first_diary_read})"><span class="caution">Æüµ­¤ò¸«¤ë</span></a></td>
+â˜…<span class="caution">({$num_diary_not_is_read})ä»¶ã®æ—¥è¨˜ã«å¯¾ã—ã¦æ–°ç€ã‚³ãƒ¡ãƒ³ãƒˆãŒã‚ã‚Šã¾ã™ï¼</span>&nbsp;<a href="page.php?p=fh_diary&target_c_diary_id=({$first_diary_read})"><span class="caution">æ—¥è¨˜ã‚’è¦‹ã‚‹</span></a></td>
 
 </div>
 
 </tr>
 ({/if})
 
-<!--¥ê¥¹¥È£·-->
+<!--ãƒªã‚¹ãƒˆï¼—-->
 ({if $num_h_confirm_list })
 <tr>
 <td>
 
 <div class="padding_s">
 
-¡ú<span class="caution">¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¾µÇ§ÂÔ¤Á¤Î¥á¥ó¥Ğ¡¼¤¬({$num_h_confirm_list})Ì¾¤¤¤Ş¤¹¡ª</span>&nbsp;<a href="page.php?p=h_confirm_list"><span class="b_b">¾µÇ§¡¦µñÈİ</span></a></td>
+â˜…<span class="caution">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ æ‰¿èªå¾…ã¡ã®ãƒ¡ãƒ³ãƒãƒ¼ãŒ({$num_h_confirm_list})åã„ã¾ã™ï¼</span>&nbsp;<a href="page.php?p=h_confirm_list"><span class="b_b">æ‰¿èªãƒ»æ‹’å¦</span></a></td>
 
 </div>
 
 </tr>
 ({/if})
 
-<!--¥ê¥¹¥È£¸-->
+<!--ãƒªã‚¹ãƒˆï¼˜-->
 ({if $anatani_c_commu_admin_confirm_list})
 <tr>
 <td>
 
 <div class="padding_s">
 
-¡ú<span class="caution">¥³¥ß¥å¥Ë¥Æ¥£´ÉÍı¿Í¸òÂå°ÍÍê¤¬({$num_anatani_c_commu_admin_confirm_list})·ï¤­¤Æ¤¤¤Ş¤¹¡£</span>&nbsp;<a href="page.php?p=h_confirm_list"><span class="b_b">¾µÇ§¡¦µñÈİ</span></a></td>
+â˜…<span class="caution">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†äººäº¤ä»£ä¾é ¼ãŒ({$num_anatani_c_commu_admin_confirm_list})ä»¶ãã¦ã„ã¾ã™ã€‚</span>&nbsp;<a href="page.php?p=h_confirm_list"><span class="b_b">æ‰¿èªãƒ»æ‹’å¦</span></a></td>
 
 </div>
 
@@ -96,32 +96,32 @@
 </table>
 </td>
 </tr>
-<!--¤³¤³¤Ş¤Ç¡§±¿±Ä¼Ô¤«¤é¤Î¤ªÃÎ¤é¤»-->
+<!--ã“ã“ã¾ã§ï¼šé‹å–¶è€…ã‹ã‚‰ã®ãŠçŸ¥ã‚‰ã›-->
 
 
 ({*
-<!--¤³¤³¤«¤é¡§¿·ÃåÆüµ­-->
+<!--ã“ã“ã‹ã‚‰ï¼šæ–°ç€æ—¥è¨˜-->
 <tr>
-<td align="center" style="width:105px;" class="bg_07"><img src="./skin/inc_info/icon_diary.gif" alt="¿·ÃåÆüµ­" style="width:91px;height:14px;"></td>
+<td align="center" style="width:105px;" class="bg_07"><img src="./skin/inc_info/icon_diary.gif" alt="æ–°ç€æ—¥è¨˜" style="width:91px;height:14px;"></td>
 <td class="bg_02" style="width:595px;">
 <table border="0" cellspacing="0" cellpadding="0">
-<!--¤³¤³¤«¤é¡§¥ê¥¹¥È-->
+<!--ã“ã“ã‹ã‚‰ï¼šãƒªã‚¹ãƒˆ-->
 <tr>
 <td>
 <div class="padding_s">
 
 ({foreach from=$diaries item='diary'})
-({$diary.r_datetime|date_format:"%m·î%dÆü %R"})
+({$diary.r_datetime|date_format:"%mæœˆ%dæ—¥ %R"})
 <a href="/page.php?p=fh_diary&amp;target_c_diary_id=({$diary.c_diary_id})">({$diary.subject})</a>
 ({if $diary.image_filename_1 || $diary.image_filename_2 || $diary.image_filename_3})<img src="./skin/icon_camera.gif" class="icon">({/if})
-¡Ê({$diary.c_member.nickname})¡Ë
+ï¼ˆ({$diary.c_member.nickname})ï¼‰
 <br>
 ({/foreach})
 
 </div>
 </td>
 </tr>
-<!--¤³¤³¤Ş¤Ç¡§¥ê¥¹¥È-->
+<!--ã“ã“ã¾ã§ï¼šãƒªã‚¹ãƒˆ-->
 
 </table>
 </td>
@@ -129,7 +129,7 @@
 *})
 </table>
 </div>
-<!--¤³¤³¤Ş¤Ç¡§¿·ÃåÆüµ­-->
+<!--ã“ã“ã¾ã§ï¼šæ–°ç€æ—¥è¨˜-->
 
 </td>
 </tr>

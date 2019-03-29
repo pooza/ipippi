@@ -1,20 +1,20 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-Æüµ­¥³¥á¥ó¥Èºï½ü
+æ—¥è¨˜ã‚³ãƒ¡ãƒ³ãƒˆå‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_diary_comment_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 fh_diary_list
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_member_id
 
-[¸¢¸Â]
-Æüµ­¤ò½ñ¤¤¤¿¥á¥ó¥Ð¡¼
-¥³¥á¥ó¥È¤ò½ñ¤¤¤¿¥á¥ó¥Ð¡¼
+[æ¨©é™]
+æ—¥è¨˜ã‚’æ›¸ã„ãŸãƒ¡ãƒ³ãƒãƒ¼
+ã‚³ãƒ¡ãƒ³ãƒˆã‚’æ›¸ã„ãŸãƒ¡ãƒ³ãƒãƒ¼
 
 */
 //shou050621
@@ -26,8 +26,8 @@ function doAction_fh_diary_delete_c_diary_comment($request) {
 
 	foreach( $target_c_diary_comment_id as $val ) {
 		
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-		//Æüµ­ºîÀ®¼Ô or ¥³¥á¥ó¥ÈºîÀ®¼Ô
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+		//æ—¥è¨˜ä½œæˆè€… or ã‚³ãƒ¡ãƒ³ãƒˆä½œæˆè€…
 		
 		$target_c_diary_comment = do_fh_diary_c_diary_comment4c_diary_comment_id($val);
 	    $target_c_diary_id = $target_c_diary_comment['c_diary_id'];
@@ -40,10 +40,10 @@ function doAction_fh_diary_delete_c_diary_comment($request) {
 	    }    	
 		//---
 
-		//¥³¥á¥ó¥Èºï½ü¼Â¹Ô
+		//ã‚³ãƒ¡ãƒ³ãƒˆå‰Šé™¤å®Ÿè¡Œ
 		do_fh_diary_delete_c_diary_comment($val,$u);
 	}
 
 	client_redirect("page.php?p=fh_diary&target_c_diary_id={$target_c_diary_id}");
 }
-?>
+

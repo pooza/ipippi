@@ -6,13 +6,13 @@
 function pageAction_f_home($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
-	// - ID¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Ê¤¤¾ì¹ç
-	// - ID¤¬¼«Ê¬¤Î¾ì¹ç
-	// ¤Ï h_home ¤Ø¥ê¥À¥¤¥ì¥¯¥È
+	// - IDãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„å ´åˆ
+	// - IDãŒè‡ªåˆ†ã®å ´åˆ
+	// ã¯ h_home ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
 	if (!$target_c_member_id || $target_c_member_id == $u) {
 		client_redirect("page.php?p=h_home");
 		exit;
@@ -29,7 +29,7 @@ function pageAction_f_home($smarty,$requests) {
 
 	}
 
-	//¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë
+	//ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹
 	p_etc_do_ashiato($target_c_member_id, $u);
 
 	$smarty->assign('is_h_prof', 0);
@@ -38,11 +38,11 @@ function pageAction_f_home($smarty,$requests) {
 	$is_friend = _db_is_friend($u, $target_c_member_id);
 	if ($is_friend) {
 		$target_c_member = db_common_c_member_with_profile($target_c_member_id, 'friend');
-		// ¼«Ê¬¤¬½ñ¤¤¤¿¾Ò²ðÊ¸
+		// è‡ªåˆ†ãŒæ›¸ã„ãŸç´¹ä»‹æ–‡
 		$smarty->assign("my_friend_intro", p_f_home_c_friend_intro($u, $target_c_member_id));
 	} else {
 		$target_c_member = db_common_c_member_with_profile($target_c_member_id, 'public');
-		// Í§Ã£¤ÎÍ§Ã£
+		// å‹é”ã®å‹é”
 		$smarty->assign("friend_path", p_f_home_friend_path4c_member_ids($u, $target_c_member_id));
 	}
 
@@ -50,7 +50,7 @@ function pageAction_f_home($smarty,$requests) {
 	$smarty->assign("c_member", db_common_c_member4c_member_id($u));
 
 
-	// --- f_home, h_prof ¶¦ÄÌ½èÍý
+	// --- f_home, h_prof å…±é€šå‡¦ç†
 
 	$smarty->assign("target_c_member_id",$target_c_member_id);
 	$target_c_member['last_login'] = p_f_home_last_login4access_date($target_c_member['access_date']);
@@ -69,7 +69,7 @@ function pageAction_f_home($smarty,$requests) {
 	$smarty->assign("c_commu_list", p_f_home_c_commu_list4c_member_id($target_c_member_id, 9));
 	$smarty->assign('c_review_list', p_h_home_c_review_list4c_member_id($target_c_member_id));
 
-	// ÃÂÀ¸Æü¤Þ¤Ç¤¢¤È²¿Æü¡©
+	// èª•ç”Ÿæ—¥ã¾ã§ã‚ã¨ä½•æ—¥ï¼Ÿ
 	$smarty->assign("days_birthday", db_common_count_days_birthday4c_member_id($target_c_member_id));
 
 	// inc_entry_point
@@ -82,4 +82,4 @@ function pageAction_f_home($smarty,$requests) {
 
 	$smarty->ext_display("f_home.tpl");
 }
-?>
+

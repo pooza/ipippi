@@ -3,7 +3,7 @@
 function pageAction_h_review_list_product($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_id = $requests['c_review_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -25,4 +25,4 @@ function pageAction_h_review_list_product($smarty,$requests) {
 
 	$smarty->ext_display('h_review_list_product.tpl');
 }
-?>
+

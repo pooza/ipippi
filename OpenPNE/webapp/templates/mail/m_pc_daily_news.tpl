@@ -1,74 +1,74 @@
-¡Ú({$SNS_NAME})¡Û¥Ç¥¤¥ê¡¼¡¦¥Ë¥å¡¼¥¹ [({$smarty.now|date_format:"%Y. %m. %d"})]
-¨¬¨¬ ({$HOME_PATH}) ¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬
+ã€({$SNS_NAME})ã€‘ãƒ‡ã‚¤ãƒªãƒ¼ãƒ»ãƒ‹ãƒ¥ãƒ¼ã‚¹ [({$smarty.now|date_format:"%Y. %m. %d"})]
+â”â” ({$HOME_PATH}) â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
 ({$CATCH_COPY})({$SNS_NAME})
 
-ËÜÆü¤ÎºÇ¿·¾ðÊó¡¦¿·Ãå¥é¥ó¥­¥ó¥°¡¡[({$smarty.now|date_format:"%Y. %m. %d/%a"})]
+æœ¬æ—¥ã®æœ€æ–°æƒ…å ±ãƒ»æ–°ç€ãƒ©ãƒ³ã‚­ãƒ³ã‚°ã€€[({$smarty.now|date_format:"%Y. %m. %d/%a"})]
 
-¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬¨¬
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 
-({$c_member.nickname})¤µ¤ó
+({$c_member.nickname})ã•ã‚“
 
-({$CATCH_COPY})({$SNS_NAME}) ¤«¤é¤Î
-ËÜÆü¤ÎºÇ¿·¾ðÊó¤Î¤ªÃÎ¤é¤»¤Ç¤¹¡£
+({$CATCH_COPY})({$SNS_NAME}) ã‹ã‚‰ã®
+æœ¬æ—¥ã®æœ€æ–°æƒ…å ±ã®ãŠçŸ¥ã‚‰ã›ã§ã™ã€‚
 
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
-¢£INDEX¢£
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
+â– INDEXâ– 
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
 
-¢¡({$WORD_MY_FRIEND})¤ÎºÇ¿·Æüµ­
-¢¡»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤ÎºÇ¿·½ñ¤­¹þ¤ß
-¢¡({$c_member.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸¤Ø¤Î¥¢¥¯¥»¥¹¿ô
+â—†({$WORD_MY_FRIEND})ã®æœ€æ–°æ—¥è¨˜
+â—†å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æœ€æ–°æ›¸ãè¾¼ã¿
+â—†({$c_member.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹æ•°
 
 
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
-¢¡({$WORD_MY_FRIEND})¤ÎºÇ¿·Æüµ­¢¡
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
+â—†({$WORD_MY_FRIEND})ã®æœ€æ–°æ—¥è¨˜â—†
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
 
 ({foreach from=$diary_friend_list item=item})
-¡þ¥Ë¥Ã¥¯¥Í¡¼¥à¡§({$item.nickname})¤µ¤ó
-¡¡¥¿¥¤¥È¥ë¡¡¡¡¡§({$item.subject})
-¡¡URL ¡¡¡¡¡¡¡¡¡§({$ABSOLUTE_PATH})page.php?p=fh_diary&target_c_diary_id=({$item.c_diary_id})
+â—‡ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ï¼š({$item.nickname})ã•ã‚“
+ã€€ã‚¿ã‚¤ãƒˆãƒ«ã€€ã€€ï¼š({$item.subject})
+ã€€URL ã€€ã€€ã€€ã€€ï¼š({$ABSOLUTE_PATH})page.php?p=fh_diary&target_c_diary_id=({$item.c_diary_id})
 
 ({/foreach})
 
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
-¢¡»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤ÎºÇ¿·½ñ¤­¹þ¤ß¢¡
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
+â—†å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æœ€æ–°æ›¸ãè¾¼ã¿â—†
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
 
-({$c_member.nickname})¤µ¤ó¤¬»²²Ã¤·¤Æ¤¤¤ë¥³¥ß¥å¥Ë¥Æ¥£·Ç¼¨ÈÄ¤Î¹¹¿·¥È¥Ô¥Ã¥¯¤Ç¤¹¡£
+({$c_member.nickname})ã•ã‚“ãŒå‚åŠ ã—ã¦ã„ã‚‹ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æŽ²ç¤ºæ¿ã®æ›´æ–°ãƒˆãƒ”ãƒƒã‚¯ã§ã™ã€‚
 
 ({foreach from=$c_commu_topic_comment_list item=item})
-¡þÌ¾¡¡Á°¡¡¡§({$item.c_commu_name})
-¡¡¥È¥Ô¥Ã¥¯¡§({$item.c_commu_topic_name})
-¡¡URL¡¡   ¡§({$ABSOLUTE_PATH})page.php?p=c_topic_detail&target_c_commu_topic_id=({$item.c_commu_topic_id})
+â—‡åã€€å‰ã€€ï¼š({$item.c_commu_name})
+ã€€ãƒˆãƒ”ãƒƒã‚¯ï¼š({$item.c_commu_topic_name})
+ã€€URLã€€   ï¼š({$ABSOLUTE_PATH})page.php?p=c_topic_detail&target_c_commu_topic_id=({$item.c_commu_topic_id})
 
 ({/foreach})
 
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
-¢¡({$c_member.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸¤Ø¤Î¥¢¥¯¥»¥¹¿ô¢¡
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
+â—†({$c_member.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹æ•°â—†
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
 
-¡þºÇ¶á¡¢({$c_member.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸¤ËË¬¤ì¤¿¿Í¿ô¤ò³Î¤«¤á¤ë
-¡Ê¤¢¤·¤¢¤È¤ò³ÎÇ§¡Ë
+â—‡æœ€è¿‘ã€({$c_member.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸ã«è¨ªã‚ŒãŸäººæ•°ã‚’ç¢ºã‹ã‚ã‚‹
+ï¼ˆã‚ã—ã‚ã¨ã‚’ç¢ºèªï¼‰
 
-¡¡¢ª¡¡URL:({$ABSOLUTE_PATH})page.php?p=h_ashiato
+ã€€â†’ã€€URL:({$ABSOLUTE_PATH})page.php?p=h_ashiato
 
-¡þ({$c_member.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸¤ËË¬¤ì¤¿¿Í¿ô¡§({$ashiato_num})¥¢¥¯¥»¥¹
+â—‡({$c_member.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸ã«è¨ªã‚ŒãŸäººæ•°ï¼š({$ashiato_num})ã‚¢ã‚¯ã‚»ã‚¹
 
 
-¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½¡½
+â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•
 
-¥á¡¼¥ë¼õ¿®¤ÎÀßÄêÊÑ¹¹¤Ï¥í¥°¥¤¥ó¸å¤Î¡ÖÀßÄêÊÑ¹¹¡×¤è¤ê
-¤ª¤³¤Ê¤Ã¤Æ¤¯¤À¤µ¤¤¡£
+ãƒ¡ãƒ¼ãƒ«å—ä¿¡ã®è¨­å®šå¤‰æ›´ã¯ãƒ­ã‚°ã‚¤ãƒ³å¾Œã®ã€Œè¨­å®šå¤‰æ›´ã€ã‚ˆã‚Š
+ãŠã“ãªã£ã¦ãã ã•ã„ã€‚
 
-¢§({$SNS_NAME})¤Î¥Ç¥¤¥ê¡¼¡¦¥Ë¥å¡¼¥¹¤È¤Ï¡©
+â–¼({$SNS_NAME})ã®ãƒ‡ã‚¤ãƒªãƒ¼ãƒ»ãƒ‹ãƒ¥ãƒ¼ã‚¹ã¨ã¯ï¼Ÿ
 
-¡¡¤¢¤Ê¤¿¤Î({$WORD_MY_FRIEND})¤«¤é¤ÎºÇ¿·¾ðÊó¤ä¡¢»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î½ñ¤­¹þ¤ß
-¡¡¾ðÊó¤Ê¤É¡¢ËèÆü¤Î¹¹¿·¾ðÊó¤ò¥á¡¼¥ë¤Ç¤ªÃÎ¤é¤»¤·¤Þ¤¹¡£ 
+ã€€ã‚ãªãŸã®({$WORD_MY_FRIEND})ã‹ã‚‰ã®æœ€æ–°æƒ…å ±ã‚„ã€å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ›¸ãè¾¼ã¿
+ã€€æƒ…å ±ãªã©ã€æ¯Žæ—¥ã®æ›´æ–°æƒ…å ±ã‚’ãƒ¡ãƒ¼ãƒ«ã§ãŠçŸ¥ã‚‰ã›ã—ã¾ã™ã€‚ 
 
-¢§({$SNS_NAME})¤Î¥Ç¥¤¥ê¡¼¡¦¥Ë¥å¡¼¥¹¡¡ÇÛ¿®Ää»ß¤Ï¤³¤Á¤é¤«¤é
-¡¡¢ª¡¡({$ABSOLUTE_PATH})page.php?p=h_config
+â–¼({$SNS_NAME})ã®ãƒ‡ã‚¤ãƒªãƒ¼ãƒ»ãƒ‹ãƒ¥ãƒ¼ã‚¹ã€€é…ä¿¡åœæ­¢ã¯ã“ã¡ã‚‰ã‹ã‚‰
+ã€€â†’ã€€({$ABSOLUTE_PATH})page.php?p=h_config
 
 
 ({$inc_signature})

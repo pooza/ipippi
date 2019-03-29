@@ -2,13 +2,13 @@
 function doAction_c_member_review_insert_c_commu_review($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $request['target_c_commu_id'];
 	$c_review_id = $request['c_review_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥ì¥Ó¥å¡¼¥³¥á¥ó¥Èºî¼Ô ¤«¤Ä ¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚³ãƒ¡ãƒ³ãƒˆä½œè€… ã‹ã¤ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 
     $status = db_common_commu_status($u, $c_commu_id);
     if (!$status['is_commu_member']) {
@@ -29,4 +29,4 @@ function doAction_c_member_review_insert_c_commu_review($request) {
 
 	client_redirect("page.php?p=c_member_review&target_c_commu_id=". $c_commu_id);		
 }
-?>
+

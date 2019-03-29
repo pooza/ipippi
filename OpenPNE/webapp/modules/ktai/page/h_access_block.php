@@ -6,4 +6,3 @@ function pageAction_h_access_block($smarty, $requests)
 	$smarty->ext_display('h_access_block.tpl');
 }
 
-?>

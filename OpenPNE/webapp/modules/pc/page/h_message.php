@@ -4,7 +4,7 @@
 function pageAction_h_message($smarty, $requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_message_id = $requests['target_c_message_id'];
 	$from_h_home = $requests['from_h_home'];
 	$form_val['subject'] = $requests['subject'];
@@ -17,41 +17,41 @@ function pageAction_h_message($smarty, $requests) {
 
 	$smarty->assign('inc_navi', fetch_inc_navi("h"));
 
-	// ´ûÆÉ¤Ë¤¹¤ë
+	// æ—¢èª­ã«ã™ã‚‹
 	p_h_message_update_c_message_is_read4c_message_id($target_c_message_id, $u);
 
-	//---- ¼õ¿®¡¦Á÷¿®¡¢±ÜÍ÷¸¢¸Â¤Î¥Á¥§¥Ã¥¯ ----//
-	// ¥á¥Ã¥»¡¼¥¸¥Ç¡¼¥¿¼èÆÀ
+	//---- å—ä¿¡ãƒ»é€ä¿¡ã€é–²è¦§æ¨©é™ã®ãƒã‚§ãƒƒã‚¯ ----//
+	// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿å–å¾—
 	$c_message = p_h_message_c_message4c_message_id($target_c_message_id, $u);
 
 	if (!$form_val['subject'])
 		$form_val['subject'] = "Re:".$c_message['subject'];
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥á¥Ã¥»¡¼¥¸Á÷¿®¼Ô or ¥á¥Ã¥»¡¼¥¸¼õ¿®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡è€… or ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å—ä¿¡è€…
 	if ($c_message['c_member_id_to'] != $u && $c_message['c_member_id_from'] != $u) {
 		client_redirect("page.php?p=h_home");
 		exit;
 	}
 	//---
 
-	// is_syoudaku¤¬¤¢¤ì¤Ð¾µÇ§ÂÔ¤Á¥ê¥¹¥È¤Ø¥ê¥À¥¤¥ì¥¯¥È
+	// is_syoudakuãŒã‚ã‚Œã°æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
 	if ($c_message['is_syoudaku'] && $from_h_home == 1) {
 		client_redirect('page.php?p=h_confirm_list');
 		exit;
 	}
 
-	//---- ¥Ú¡¼¥¸ËÜÂÎÉ½¼¨ÍÑ ÊÑ¿ô ----//
+	//---- ãƒšãƒ¼ã‚¸æœ¬ä½“è¡¨ç¤ºç”¨ å¤‰æ•° ----//
 
-	// ¥á¥Ã¥»¡¼¥¸¥Ç¡¼¥¿
+	// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿
 	$smarty->assign("c_message", $c_message);
 	$smarty->assign("form_val", $form_val);
 	$smarty->assign("jyusin_c_message_id", $jyusin_c_message_id);
 
-	//¥Ü¥Ã¥¯¥¹È½Äê
+	//ãƒœãƒƒã‚¯ã‚¹åˆ¤å®š
 	$smarty->assign("box", $box);
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("h_message.tpl");
 }
-?>
+

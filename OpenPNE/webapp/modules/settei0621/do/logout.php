@@ -1,5 +1,5 @@
 <?php
-// ¥í¥°¥¢¥¦¥È
+// ãƒ­ã‚°ã‚¢ã‚¦ãƒˆ
 
 
 function doAction_logout($requests)
@@ -14,4 +14,4 @@ function doAction_logout($requests)
 	client_redirect("module_normal.php?m=$m&p=$p");
 }
 
-?>
+

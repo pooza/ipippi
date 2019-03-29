@@ -1,41 +1,41 @@
 ({$inc_ktai_header|smarty:nodefaults})({strip})
 
-<center>({$SNS_NAME})ÅĞÏ¿</center>
+<center>({$SNS_NAME})ç™»éŒ²</center>
 <hr>
-°Ê²¼¤Î¹àÌÜ¤òÆşÎÏ¤·¤Æ¡¢ÅĞÏ¿¤ò´°Î»¤·¤Æ¤¯¤À¤µ¤¤¡£<br>
+ä»¥ä¸‹ã®é …ç›®ã‚’å…¥åŠ›ã—ã¦ã€ç™»éŒ²ã‚’å®Œäº†ã—ã¦ãã ã•ã„ã€‚<br>
 <br>
 
 <form action="do_ktai_normal.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="ses" value="({$ses})">
 <input type="hidden" name="cmd" value="insert_c_member">
 
 ({capture name="nick"})
-<font color="red">*</font>¥Ë¥Ã¥¯¥Í¡¼¥à<br>
+<font color="red">*</font>ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ <br>
 <input type="text" name="nickname"><br>
 ({/capture})
 ({capture name="birth"})
-<font color="red">*</font>À¸¤Ş¤ì¤¿Ç¯<br>
-<input type="text" name="birth_year" size="4" maxlength="4" istyle="4" mode="numeric">Ç¯<br>
+<font color="red">*</font>ç”Ÿã¾ã‚ŒãŸå¹´<br>
+<input type="text" name="birth_year" size="4" maxlength="4" istyle="4" mode="numeric">å¹´<br>
 <select name="public_flag_birth_year">
 	({foreach from=$public_flags key=key item=item})
 	<option value="({$key})"({if $c_member.public_flag_birth_year == $key}) selected="selected"({/if})>({$item})
 	({/foreach})
 </select><br>
 
-<font color="red">*</font>ÃÂÀ¸Æü<br>
+<font color="red">*</font>èª•ç”Ÿæ—¥<br>
 <select name="birth_month">
 	<option value="" selected="selected">--
 	({foreach from=$month_list item=item})
 	<option value="({$item})">({$item})
 	({/foreach})
-</select>·î<br>
+</select>æœˆ<br>
 <select name="birth_day">
 	<option value="" selected="selected">--
 	({foreach from=$day_list item=item})
 	<option value="({$item})">({$item})
 	({/foreach})
-</select>Æü<br>
+</select>æ—¥<br>
 ({/capture})
 
 ({foreach from=$profile_list item=profile})
@@ -61,7 +61,7 @@
 		<textarea name="profile[({$profile.name})]">({$c_member.profile[$profile.name].value})</textarea>
 	({elseif $profile.form_type == 'select' || $profile.form_type == 'radio'})
 		<select name="profile[({$profile.name})]">
-			<option value="">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤
+			<option value="">é¸æŠã—ã¦ãã ã•ã„
 			({foreach item=item from=$profile.options})
 			<option value="({$item.c_profile_option_id})"({if $c_member.profile[$profile.name].value == $item.value}) selected="selected"({/if})>({$item.value|default:"--"})
 			({/foreach})
@@ -90,25 +90,25 @@
 ({if !$_cnt_birth})({$smarty.capture.birth|smarty:nodefaults})({/if})
 
 <br>
-<font color="red">*</font>¥Ñ¥¹¥ï¡¼¥É<br>
+<font color="red">*</font>ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰<br>
 <input type="text" name="password" maxlength="12" istyle="3" mode="alphabet"><br>
-<font color="red">¢¨¥Ñ¥¹¥ï¡¼¥É¤Ï6-12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤</font><br>
+<font color="red">â€»ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6-12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„</font><br>
 
 <br>
-<font color="red">*</font>ÈëÌ©¤Î¼ÁÌä<br>
+<font color="red">*</font>ç§˜å¯†ã®è³ªå•<br>
 <select name="c_password_query_id">
-	<option value="0">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤
+	<option value="0">é¸æŠã—ã¦ãã ã•ã„
 	({foreach from=$password_query_list key=key item=item})
 	<option value="({$key})">({$item})
 	({/foreach})
 </select><br>
 
-<font color="red">*</font>ÈëÌ©¤Î¼ÁÌä¤ÎÅú¤¨<br>
+<font color="red">*</font>ç§˜å¯†ã®è³ªå•ã®ç­”ãˆ<br>
 <input type="text" name="password_query_answer" value=""><br>
-¢¨¥Ñ¥¹¥ï¡¼¥É¤òËº¤ì¤¿¾ì¹ç¤Î³ÎÇ§¤Ë»ÈÍÑ¤·¤Ş¤¹¡£<br>
+â€»ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¿˜ã‚ŒãŸå ´åˆã®ç¢ºèªã«ä½¿ç”¨ã—ã¾ã™ã€‚<br>
 
 <br>
-<input type="submit" value=" ÅĞÏ¿ ">
+<input type="submit" value=" ç™»éŒ² ">
 </form>
 
 ({/strip})({$inc_ktai_footer|smarty:nodefaults})

@@ -1,6 +1,6 @@
 @charset "Shift_JIS";
 
-/*page_header‹éŒ`ƒGƒŠƒA‚ÌˆÊ’uî•ñ*/
+/*page_headerçŸ©å½¢ã‚¨ãƒªã‚¢ã®ä½ç½®æƒ…å ±*/
 
 td.inc_page_header ,
 div.inc_page_header {
@@ -17,7 +17,7 @@ td.inc_page_header div.after_login {
 }
 
 /*********************/
-/*page_header“à‚Ìaƒ^ƒO‚ğƒŒƒCƒ„[ó‚Éˆµ‚¤ˆ×‚Ì‹¤’Êİ’è*/
+/*page_headerå†…ã®aã‚¿ã‚°ã‚’ãƒ¬ã‚¤ãƒ¤ãƒ¼çŠ¶ã«æ‰±ã†ç‚ºã®å…±é€šè¨­å®š*/
 
 div.inc_page_header a {
 	display: block ;
@@ -31,7 +31,7 @@ div.inc_page_header a img {
 	height: 100% ;
 }
 
-/*”wŒi‰æ‘œ‚ÌˆÊ’uî•ñ*/
+/*èƒŒæ™¯ç”»åƒã®ä½ç½®æƒ…å ±*/
 
 div.inc_page_header img.bg {
 	display: block ;
@@ -53,7 +53,7 @@ div.inc_page_header img.bg_before {
 	z-index: 0 ;
 }
 
-/*ƒoƒi[‰æ‘œ‚ÌˆÊ’uî•ñ*/
+/*ãƒãƒŠãƒ¼ç”»åƒã®ä½ç½®æƒ…å ±*/
 
 div.inc_page_header div.banner ,
 div.inc_page_header a.banner {
@@ -76,7 +76,7 @@ div.inc_page_header a.banner img {
 	height: 60px ;
 }
 
-/*ipippiƒƒS‚É“\‚éƒz[ƒ€‚É–ß‚é‚½‚ß‚Ìƒ}ƒbƒv‚ÌˆÊ’uî•ñ*/
+/*ipippiãƒ­ã‚´ã«è²¼ã‚‹ãƒ›ãƒ¼ãƒ ã«æˆ»ã‚‹ãŸã‚ã®ãƒãƒƒãƒ—ã®ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.logo_home {
 	left: 21px ;
@@ -86,14 +86,14 @@ div.inc_page_header a.logo_home {
 	z-index: 500 ;
 }
 
-/*** ƒƒCƒ“ƒ{ƒ^ƒ“‹¤’Ê‚ÌˆÊ’uî•ñ ***/
+/*** ãƒ¡ã‚¤ãƒ³ãƒœã‚¿ãƒ³å…±é€šã®ä½ç½®æƒ…å ± ***/
 
 div.inc_page_header a.main_menu {
 	height: 23px ;
 	top: 73px ;
 }
 
-/*ƒƒOƒCƒ“ƒ{ƒ^ƒ“‚ÌˆÊ’uî•ñibefore loginj*/
+/*ãƒ­ã‚°ã‚¤ãƒ³ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div.inc_page_header a.login {
 	/*left: 253px ;
@@ -102,7 +102,7 @@ div.inc_page_header a.login {
 	display: none ;
 }
 
-/*V‹K“o˜^ƒ{ƒ^ƒ“‚ÌˆÊ’uî•ñibefore loginj*/
+/*æ–°è¦ç™»éŒ²ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div.inc_page_header a.new_regist {
 	left: 417px ;
@@ -111,7 +111,7 @@ div.inc_page_header a.new_regist {
 	display: none ;
 }
 
-/*ƒwƒ‹ƒvƒ{ƒ^ƒ“‚ÌˆÊ’uî•ñibefore loginj*/
+/*ãƒ˜ãƒ«ãƒ—ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div.inc_page_header a.help {
 	left: 512px ;
@@ -120,9 +120,9 @@ div.inc_page_header a.help {
 	display: none ;
 }
 
-/*********ƒgƒbƒvƒCƒ[ƒW‚Ì‰E‘¤‚Ìƒƒjƒ…[ *********/
+/*********ãƒˆãƒƒãƒ—ã‚¤ãƒ¡ãƒ¼ã‚¸ã®å³å´ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ *********/
 
-/*uƒ}ƒCƒz[ƒ€vˆÊ’uî•ñ*/
+/*ã€Œãƒã‚¤ãƒ›ãƒ¼ãƒ ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_home {
 	left: 290px ;
@@ -130,7 +130,7 @@ div.inc_page_header a.h_home {
 	z-index: 20 ;
 }
 
-/*u’m‚è‡‚¢‚ğµ‘Ò‚·‚évˆÊ’uî•ñ*/
+/*ã€ŒçŸ¥ã‚Šåˆã„ã‚’æ‹›å¾…ã™ã‚‹ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_invite {
 	left: 365px ;
@@ -138,7 +138,7 @@ div.inc_page_header a.h_invite {
 	z-index: 10 ;
 }
 
-/*uƒ‰ƒ“ƒLƒ“ƒOvˆÊ’uî•ñ*/
+/*ã€Œãƒ©ãƒ³ã‚­ãƒ³ã‚°ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_ranking {
 	left: 480px ;
@@ -146,7 +146,7 @@ div.inc_page_header a.h_ranking {
 	z-index: 30 ;
 }
 
-/*uİ’è•ÏXvˆÊ’uî•ñ*/
+/*ã€Œè¨­å®šå¤‰æ›´ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_config {
 	left: 565px ;
@@ -154,7 +154,7 @@ div.inc_page_header a.h_config {
 	z-index: 50 ;
 }
 
-/*uƒƒOƒAƒEƒgvˆÊ’uî•ñ*/
+/*ã€Œãƒ­ã‚°ã‚¢ã‚¦ãƒˆã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.logout {
 	left: 630px ;
@@ -162,7 +162,7 @@ div.inc_page_header a.logout {
 	z-index: 60 ;
 }
 
-/*ƒpƒeƒ“ƒgƒTƒƒ“ƒƒS‚ÌˆÊ’uî•ñ*/
+/*ãƒ‘ãƒ†ãƒ³ãƒˆã‚µãƒ­ãƒ³ãƒ­ã‚´ã®ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.patentsalon {
 	top: 55px;
@@ -172,16 +172,16 @@ div.inc_page_header a.patentsalon {
 	z-index: 550;
 }
 
-/********* ƒT[ƒ`ƒ{ƒ^ƒ“‹¤’Ê‚ÌˆÊ’uî•ñ *********/
+/********* ã‚µãƒ¼ãƒãƒœã‚¿ãƒ³å…±é€šã®ä½ç½®æƒ…å ± *********/
 
 div.inc_page_header a.search_menu {
 	height: 17px ;
 	top: 73px ;
 }
 
-/*********ƒgƒbƒvƒCƒ[ƒW‚ÌipippiƒƒS‚Ì‰º‚Ìƒƒjƒ…[ *********/
+/*********ãƒˆãƒƒãƒ—ã‚¤ãƒ¡ãƒ¼ã‚¸ã®ipippiãƒ­ã‚´ã®ä¸‹ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ *********/
 
-/*uƒƒ“ƒo[ŒŸõvˆÊ’uî•ñ*/
+/*ã€Œãƒ¡ãƒ³ãƒãƒ¼æ¤œç´¢ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_search {
 	left: 21px ;
@@ -189,7 +189,7 @@ div.inc_page_header a.h_search {
 	z-index: 70 ;
 }
 
-/*uƒRƒ~ƒ…ƒjƒeƒBvˆÊ’uî•ñ*/
+/*ã€Œã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_com_find_all {
 	left: 102px ;
@@ -197,7 +197,7 @@ div.inc_page_header a.h_com_find_all {
 	z-index: 80 ;
 }
 
-/*uƒŒƒrƒ…[vˆÊ’uî•ñ*/
+/*ã€Œãƒ¬ãƒ“ãƒ¥ãƒ¼ã€ä½ç½®æƒ…å ±*/
 
 div.inc_page_header a.h_review_search {
 	left: 190px ;

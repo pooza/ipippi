@@ -3,8 +3,7 @@ function pageAction_f_link_request_err($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	//¤³¤³¤Ï¡©
+	//ã“ã“ã¯ï¼Ÿ
 	$smarty->ext_display("f_link_request_err.tpl");
 }
 
-?>

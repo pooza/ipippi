@@ -4,7 +4,7 @@
 function pageAction_fh_diary_comment_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	$body = $requests['body'];
 	// ----------
@@ -23,14 +23,14 @@ function pageAction_fh_diary_comment_confirm($smarty,$requests) {
 		$type = 'f';
 		$target_c_member = db_common_c_member4c_member_id($target_c_member_id);
 
-		//Æüµ­¤Î¸ø³«ÈÏ°ÏÀßÄê
+		//æ—¥è¨˜ã®å…¬é–‹ç¯„å›²è¨­å®š
 		if (($target_c_member['public_flag_diary'] == "friend" &&
 			 !_db_is_friend($u, $target_c_member_id))) {
 		    client_redirect("page.php?p=h_err_diary_access");
 		    exit;
 		}
 		
-		// ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+		// ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 		if(p_common_is_access_block($u, $target_c_member_id)){
 			client_redirect("page.php?p=h_access_block");
 			exit;
@@ -46,4 +46,4 @@ function pageAction_fh_diary_comment_confirm($smarty,$requests) {
 	$smarty->assign("form_val", $form_val);
 	$smarty->ext_display("fh_diary_comment_confirm.tpl");
 }
-?>
+

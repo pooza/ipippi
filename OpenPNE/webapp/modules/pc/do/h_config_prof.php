@@ -15,7 +15,7 @@ function doAction_h_config_prof($request) {
 	$prof = $validator->getParams();
 
 
-	//--- c_profile ¤Î¹àÌÜ¤ò¥Á¥§¥Ã¥¯
+	//--- c_profile ã®é …ç›®ã‚’ãƒã‚§ãƒƒã‚¯
 	$validator = new Validator();
 	$validator->addRequests($_REQUEST['profile']);
 	$validator->addRules(_getValidateRulesProfile());
@@ -23,17 +23,17 @@ function doAction_h_config_prof($request) {
 		$errors = array_merge($errors, $validator->getErrors());
 	}
 	
-	// ÃÍ¤ÎÀ°¹çÀ­¤ò¥Á¥§¥Ã¥¯(DB)
+	// å€¤ã®æ•´åˆæ€§ã‚’ãƒã‚§ãƒƒã‚¯(DB)
 	$c_member_profile_list = do_config_prof_check_profile($validator->getParams(), $_REQUEST['public_flag']);
 
-	// É¬¿Ü¹àÌÜ¥Á¥§¥Ã¥¯
+	// å¿…é ˆé …ç›®ãƒã‚§ãƒƒã‚¯
 	$profile_list = db_common_c_profile_list4null();
 	foreach ($profile_list as $profile) {
 		if ($profile['disp_config'] &&
 			$profile['is_required'] &&
 			!$c_member_profile_list[$profile['name']]['value'])
 		{
-			$errors[$profile['name']] = "{$profile['caption']}¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+			$errors[$profile['name']] = "{$profile['caption']}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 			break;
 		}
 	}
@@ -56,7 +56,7 @@ function doAction_h_config_prof($request) {
     case "confirm":
 	    $prof['profile'] = $c_member_profile_list;
     
-	    $_REQUEST['prof'] = $prof; // page:h_config_prof_confirm ¤Ø¤ÎÃÍ¤Î°úÅÏ¤·
+	    $_REQUEST['prof'] = $prof; // page:h_config_prof_confirm ã¸ã®å€¤ã®å¼•æ¸¡ã—
     	module_execute('pc', 'page', "h_config_prof_confirm");
     	exit;
     	break;
@@ -75,7 +75,7 @@ function _getValidateRules()
 		'nickname' => array(
 			'type' => 'string',
 			'required' => '1',
-			'caption' => '¥Ë¥Ã¥¯¥Í¡¼¥à',
+			'caption' => 'ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ',
 			'max' => '40',
 		),
 		'public_flag_birth_year' => array(
@@ -116,4 +116,4 @@ function _getValidateRulesProfile()
 	
 	return $rules;	
 }
-?>
+

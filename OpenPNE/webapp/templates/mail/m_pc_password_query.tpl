@@ -1,19 +1,19 @@
-��({$SNS_NAME})�ۥѥ���ɺ�ȯ�ԤΤ��Τ餻
+【({$SNS_NAME})】パスワード再発行のお知らせ
 
-({$c_member.nickname})���󡢤���ˤ��ϡ�
-({$CATCH_COPY})({$SNS_NAME}) ����Τ��Τ餻�Ǥ���
+({$c_member.nickname})さん、こんにちは。
+({$CATCH_COPY})({$SNS_NAME}) からのお知らせです。
 
-�ѥ���ɤ��ȯ�Ԥ������ޤ�����
+パスワードを再発行いたしました。
 
-�᡼�륢�ɥ쥹��({$pc_address})
-�ѥ���ɡ�({$password})
+メールアドレス：({$pc_address})
+パスワード：({$password})
 
-�ʤ����ѥ���ɤ��ѹ��ϡ��������ѹ��ײ��̤���ԤäƤ���������
+なお、パスワードの変更は、「設定変更」画面から行ってください。
 
-({$SNS_NAME})�Υ�������ڡ���
-URL��({$HOME_PATH})
+({$SNS_NAME})のログインページ
+URL：({$HOME_PATH})
 
-����Ȥ⡢���ҡ�({$SNS_NAME})�򤴳��Ѥ���������
+今後とも、ぜひ、({$SNS_NAME})をご活用ください。
 
 
 ({$inc_signature})

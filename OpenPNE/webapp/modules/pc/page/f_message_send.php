@@ -6,7 +6,7 @@
 function pageAction_f_message_send($smarty, $requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$form_val['subject'] = $requests['subject'];
 	$form_val['body'] = $requests['body'];
@@ -24,7 +24,7 @@ function pageAction_f_message_send($smarty, $requests) {
 		exit;
 	}
 
-	//¥á¥Ã¥»¡¼¥¸ID¤«¤é¾ðÊó¤ò¼è¤ê½Ð¤¹
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸IDã‹ã‚‰æƒ…å ±ã‚’å–ã‚Šå‡ºã™
 	if($box == "savebox" && $form_val['target_c_message_id']){
 		$tmplist = _db_c_message4c_message_id($form_val['target_c_message_id']);
 		$form_val['body'] = $tmplist['body'];
@@ -46,12 +46,12 @@ function pageAction_f_message_send($smarty, $requests) {
 
 	$smarty->assign('inc_navi', fetch_inc_navi("f", $target_c_member_id));
 
-	//¥¿¡¼¥²¥Ã¥È¾ðÊó
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
-	//¥¿¡¼¥²¥Ã¥È¤Îid
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®id
 	$smarty->assign("target_c_member_id", $target_c_member_id);
-	//¥¿¡¼¥²¥Ã¥È¤Îid
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®id
 	$smarty->assign("target_c_message_id", $form_val['target_c_message_id']);
 
 	$smarty->assign("form_val", $form_val);
@@ -61,4 +61,4 @@ function pageAction_f_message_send($smarty, $requests) {
 	$smarty->ext_display("f_message_send.tpl");
 
 }
-?>
+

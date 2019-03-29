@@ -15,7 +15,7 @@ function doAction_h_config_prof_update_c_member($requests)
 	}
 	$prof = $validator->getParams();
 
-	//--- c_profile ¤Î¹àÌÜ¤ò¥Á¥§¥Ã¥¯
+	//--- c_profile ã®é …ç›®ã‚’ãƒã‚§ãƒƒã‚¯
 	$validator = new Validator();
 	$validator->addRequests($_REQUEST['profile']);
 	$validator->addRules(_getValidateRulesProfile());
@@ -23,17 +23,17 @@ function doAction_h_config_prof_update_c_member($requests)
 		$errors = array_merge($errors, $validator->getErrors());
 	}
 	
-	// ÃÍ¤ÎÀ°¹çÀ­¤ò¥Á¥§¥Ã¥¯(DB)
+	// å€¤ã®æ•´åˆæ€§ã‚’ãƒã‚§ãƒƒã‚¯(DB)
 	$c_member_profile_list = do_config_prof_check_profile($validator->getParams(), $_REQUEST['public_flag']);
 
-	// É¬¿Ü¹àÌÜ¥Á¥§¥Ã¥¯
+	// å¿…é ˆé …ç›®ãƒã‚§ãƒƒã‚¯
 	$profile_list = db_common_c_profile_list4null();
 	foreach ($profile_list as $profile) {
 		if ($profile['disp_config'] &&
 			$profile['is_required'] &&
 			!$c_member_profile_list[$profile['name']]['value'])
 		{
-			$errors[$profile['name']] = "{$profile['caption']}¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+			$errors[$profile['name']] = "{$profile['caption']}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 			break;
 		}
 	}
@@ -41,7 +41,7 @@ function doAction_h_config_prof_update_c_member($requests)
 	
     if ($errors) {
         $smarty = new TejimayaSmarty($GLOBALS['__SMARTY']);
-		$smarty->ext_set_call_type('ktai'); // ktai ¤È¤·¤Æ¤Î¸Æ¤Ó½Ð¤·
+		$smarty->ext_set_call_type('ktai'); // ktai ã¨ã—ã¦ã®å‘¼ã³å‡ºã—
         $smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
         $smarty->assign('errors', $errors);
         $smarty->ext_display('error_input.tpl');
@@ -60,7 +60,7 @@ function _getValidateRules()
 		'nickname' => array(
 			'type' => 'string',
 			'required' => '1',
-			'caption' => '¥Ë¥Ã¥¯¥Í¡¼¥à',
+			'caption' => 'ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ',
 			'max' => '40',
 		),
 	);
@@ -99,4 +99,3 @@ function _getValidateRulesProfile()
 	return $rules;	
 }
 
-?>

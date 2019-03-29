@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******¤³¤³¤«¤é¡§¥¤¥Ù¥ó¥ÈºîÀ®³ÎÇ§****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šã‚¤ãƒ™ãƒ³ãƒˆä½œæˆç¢ºèª****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,22 +34,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥¤¥Ù¥ó¥ÈºîÀ®³ÎÇ§¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šã‚¤ãƒ™ãƒ³ãƒˆä½œæˆç¢ºèªï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:368px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">°Ê²¼¤ÎÆâÍÆ¤ÇºîÀ®¤·¤Ş¤¹¡£¤è¤í¤·¤¤¤Ç¤¹¤«¡©</span></td>
+<td style="width:368px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ä»¥ä¸‹ã®å†…å®¹ã§ä½œæˆã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ</span></td>
 <td style="width:240px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 ({*********})
 <tr>
@@ -62,7 +62,7 @@
 
 <div class="padding_s">
 
-¥¿¥¤¥È¥ë
+ã‚¿ã‚¤ãƒˆãƒ«
 
 </div>
 
@@ -90,7 +90,7 @@
 
 <div class="padding_s">
 
-³«ºÅÆü»ş
+é–‹å‚¬æ—¥æ™‚
 
 </div>
 
@@ -100,7 +100,7 @@
 
 <div class="padding_s">
 
-({$event.open_date_year})Ç¯({$event.open_date_month})·î({$event.open_date_day})Æü
+({$event.open_date_year})å¹´({$event.open_date_month})æœˆ({$event.open_date_day})æ—¥
 
 ({$event.open_date_comment})
 
@@ -120,7 +120,7 @@
 
 <div class="padding_s">
 
-³«ºÅ¾ì½ê
+é–‹å‚¬å ´æ‰€
 
 </div>
 
@@ -148,7 +148,7 @@
 
 <div class="padding_s">
 
-¾Ü¡¡¡¡ºÙ
+è©³ã€€ã€€ç´°
 
 </div>
 
@@ -176,7 +176,7 @@
 
 <div class="padding_s">
 
-Êç½¸´ü¸Â
+å‹Ÿé›†æœŸé™
 
 </div>
 
@@ -187,7 +187,7 @@
 <div class="padding_s">
 
 ({if $event.invite_period_year&&$event.invite_period_month&&$event.invite_period_day})
-({$event.invite_period_year})Ç¯({$event.invite_period_month})·î({$event.invite_period_day})Æü
+({$event.invite_period_year})å¹´({$event.invite_period_month})æœˆ({$event.invite_period_day})æ—¥
 ({/if})
 
 </div>
@@ -206,7 +206,7 @@
 
 <div class="padding_s">
 
-¼Ì¿¿1
+å†™çœŸ1
 
 </div>
 
@@ -234,7 +234,7 @@
 
 <div class="padding_s">
 
-¼Ì¿¿2
+å†™çœŸ2
 
 </div>
 
@@ -262,7 +262,7 @@
 
 <div class="padding_s">
 
-ÅºÉÕ¥Õ¥¡¥¤¥ë1
+æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«1
 
 </div>
 
@@ -290,7 +290,7 @@
 
 <div class="padding_s">
 
-ÅºÉÕ¥Õ¥¡¥¤¥ë2
+æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«2
 
 </div>
 
@@ -323,26 +323,26 @@
 <td style="width:50%;text-align:right;">
 
 <form action="do.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_add_insert_c_commu_topic">
 <input type="hidden" name="target_c_commu_id" value="({$event.c_commu_id})">
 ({foreach from=$event key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})
-<input type="submit" value="¡¡ºî¡¡À®¡¡">&nbsp;
+<input type="submit" value="ã€€ä½œã€€æˆã€€">&nbsp;
 </form>
 
 </td>
 <td style="width:50%;text-align:left;">
 
 <form action="page.php?p=c_event_add" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="target_c_commu_id" value="({$event.c_commu_id})">
 ({foreach from=$event key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})
-&nbsp;<input type="submit" value="¡¡½¤¡¡Àµ¡¡" value="({$item})">
+&nbsp;<input type="submit" value="ã€€ä¿®ã€€æ­£ã€€" value="({$item})">
 </form>
 
 </td>
@@ -360,12 +360,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥¤¥Ù¥ó¥ÈºîÀ®³ÎÇ§¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šã‚¤ãƒ™ãƒ³ãƒˆä½œæˆç¢ºèªï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -375,13 +375,13 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥¤¥Ù¥ó¥ÈºîÀ®³ÎÇ§****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šã‚¤ãƒ™ãƒ³ãƒˆä½œæˆç¢ºèª****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

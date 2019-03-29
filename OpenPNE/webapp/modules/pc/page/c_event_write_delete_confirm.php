@@ -3,7 +3,7 @@
 function pageAction_c_event_write_delete_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_topic_comment_id = $requests['target_c_commu_topic_comment_id'];
 		// ----------
 
@@ -13,7 +13,7 @@ function pageAction_c_event_write_delete_confirm($smarty,$requests) {
 		$c_commu = _db_c_commu4c_commu_id($c_commu_id);
 
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
@@ -31,4 +31,4 @@ function pageAction_c_event_write_delete_confirm($smarty,$requests) {
 
 
 }
-?>
+

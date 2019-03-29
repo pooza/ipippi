@@ -2,31 +2,31 @@
 require_once "../../OpenPNE/lib/init.inc";
 
 //-------------config-------------//
-// °ìÅÙ¤Ë¼èÆÀ¤¹¤ëRSS¤Î·ï¿ô
+// ä¸€åº¦ã«å–å¾—ã™ã‚‹RSSã®ä»¶æ•°
 $rss_num = 100;
 if (defined('RSS_CACHE_LIMIT') && intval(RSS_CACHE_LIMIT) > 0)
 	$rss_num = intval(RSS_CACHE_LIMIT);
 
-// ºÇ¸å¤Ë¼èÆÀ¤·¤¿¥á¥ó¥Ð¡¼¤ÎID¤ò³ÊÇ¼¤¹¤ë¥Õ¥¡¥¤¥ë
+// æœ€å¾Œã«å–å¾—ã—ãŸãƒ¡ãƒ³ãƒãƒ¼ã®IDã‚’æ ¼ç´ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«
 $log = DOCUMENT_ROOT . "/var/log/rss_cache.log";
 
-//RSSÀßÄê¤¬¶õ¤Î¥á¥ó¥Ð¡¼¤ËÂÐ¤·¤ÆDELETEÊ¸¤òÈ¯¹Ô¤¹¤ë¤«
+//RSSè¨­å®šãŒç©ºã®ãƒ¡ãƒ³ãƒãƒ¼ã«å¯¾ã—ã¦DELETEæ–‡ã‚’ç™ºè¡Œã™ã‚‹ã‹
 $is_delete = false;
-//¥í¥°½ÐÎÏ¤ò¤¹¤ë¤«
+//ãƒ­ã‚°å‡ºåŠ›ã‚’ã™ã‚‹ã‹
 define('RSS_CACHE_DISPLAY_LOG', true);
 //-------------config-------------//
 
 
 $start_id = $end_id = 0;
 
-// Á°²óºÇ¸å¤ËRSS¼èÆÀ¤·¤¿¥á¥ó¥Ð¤ÎID¼èÆÀ
+// å‰å›žæœ€å¾Œã«RSSå–å¾—ã—ãŸãƒ¡ãƒ³ãƒã®IDå–å¾—
 if ($f = fopen($log, "r+")) {
 	if (flock($f, LOCK_EX)){
 		$start_id = intval(fread($f, 11));
 	}
 }
 
-// rss ¤ÎURL¤¬Æþ¤Ã¤Æ¤¤¤ë¿Í¤òÃê½Ð
+// rss ã®URLãŒå…¥ã£ã¦ã„ã‚‹äººã‚’æŠ½å‡º
 $c_member_list = db_c_member_list4exists_rssAc_member_id($start_id, $rss_num);
 if ($c_member_list) {
 	$lastone = end($c_member_list);
@@ -37,7 +37,7 @@ if ($c_member_list) {
 	}
 }
 
-// º£²ó¼èÆÀ¤¹¤ëºÇ¸å¤Î¥á¥ó¥ÐID¤òµ­Ï¿
+// ä»Šå›žå–å¾—ã™ã‚‹æœ€å¾Œã®ãƒ¡ãƒ³ãƒIDã‚’è¨˜éŒ²
 if ($f) {
 	rewind($f);
 	ftruncate($f, fwrite($f, $end_id));
@@ -52,7 +52,7 @@ foreach ($c_member_list as $c_member) {
 	
 	$insert_rss_list = array();
 	foreach ($rss_item_list as $item) {
-		// DB¤ËÂ¸ºß¤¹¤ë¥Ç¡¼¥¿¤¬¸«¤Ä¤«¤Ã¤¿¤é°Ê¹ß¤ÏÈæ³Ó¡¢¼èÆÀ¤Ï¹Ô¤ï¤Ê¤¤
+		// DBã«å­˜åœ¨ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ãŒè¦‹ã¤ã‹ã£ãŸã‚‰ä»¥é™ã¯æ¯”è¼ƒã€å–å¾—ã¯è¡Œã‚ãªã„
 		if (db_is_duplicated_rss_cache($c_member['c_member_id'], $item)) break;
 		
         if (!db_is_future_rss_item($item)) {
@@ -70,16 +70,16 @@ foreach ($c_member_list as $c_member) {
 	db_insert_c_rss_cache_list($c_member['c_member_id'], $insert_rss_list);
 }
 
-// RSSÀßÄê¤¬¶õ¤Î¥á¥ó¥Ð¡¼¤ËÂÐ¤·¤ÆDELETE
+// RSSè¨­å®šãŒç©ºã®ãƒ¡ãƒ³ãƒãƒ¼ã«å¯¾ã—ã¦DELETE
 if ($is_delete) {
 	$c_member_list = db_c_member_list4no_exists_rssAc_member_id($start_id, $end_id);
 	db_delete_rss_cache4c_member_list($c_member_list);
 }
 
 
-//-------------------------------°Ê²¼´Ø¿ôÄêµÁ---------------------------//
+//-------------------------------ä»¥ä¸‹é–¢æ•°å®šç¾©---------------------------//
 /*
- * °ì²ó¤ÎSQL¤Ç¥á¥ó¥Ð¡¼°ì¿ÍÊ¬¤ÎRSS¥­¥ã¥Ã¥·¥å¤òINSERT
+ * ä¸€å›žã®SQLã§ãƒ¡ãƒ³ãƒãƒ¼ä¸€äººåˆ†ã®RSSã‚­ãƒ£ãƒƒã‚·ãƒ¥ã‚’INSERT
  */
 function db_insert_c_rss_cache_list($c_member_id, $insert_rss_list)
 {
@@ -149,4 +149,4 @@ function _log($action, $message)
 	}
 }
 
-?>
+

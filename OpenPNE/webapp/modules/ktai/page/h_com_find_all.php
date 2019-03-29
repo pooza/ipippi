@@ -3,16 +3,15 @@ function pageAction_h_com_find_all($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	//ºÇ¿·½ñ¤­¹þ¤ß¥³¥ß¥å¥Ë¥Æ¥££µ·ï
+	//æœ€æ–°æ›¸ãè¾¼ã¿ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ï¼•ä»¶
 	$smarty->assign("c_commu_list_lastupdated", k_p_h_com_find_all_c_commu_list_lastupdated(5));
 	
-	//»Ò¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È
+	//å­ã‚«ãƒ†ã‚´ãƒªã®ãƒªã‚¹ãƒˆ
 	$smarty->assign("c_commu_category_list", _db_c_commu_category4null());
-	//¿Æ¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È
+	//è¦ªã‚«ãƒ†ã‚´ãƒªã®ãƒªã‚¹ãƒˆ
 	$smarty->assign('c_commu_category_parent_list',_db_c_commu_category_parent_list4null());
 	
 	$smarty->ext_display("h_com_find_all.tpl");
 	
 }
 
-?>

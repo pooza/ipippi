@@ -4,7 +4,7 @@
 function pageAction_h_diary_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	$subject = $requests['subject'];
 	$body = $requests['body'];
@@ -16,29 +16,29 @@ function pageAction_h_diary_edit($smarty,$requests) {
 		$c_diary['body'] = $body;
 	}
 
-    // target ¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Ê¤¤
-    // ¿·µ¬ºîÀ®
+    // target ãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„
+    // æ–°è¦ä½œæˆ
     if (!$target_c_diary_id) {
     	client_redirect("page.php?p=h_diary_add");
     	exit;
     }
 	    
-	// target ¤ÎÆüµ­¤¬Â¸ºß¤·¤Ê¤¤
+	// target ã®æ—¥è¨˜ãŒå­˜åœ¨ã—ãªã„
 	if (!p_common_is_active_c_diary_id($target_c_diary_id) && $target_c_diary_id != null) {
 		client_redirect("page.php?p=h_err_fh_diary");
 		exit;
 	}
 	
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//Æüµ­¤ÎºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//æ—¥è¨˜ã®ä½œæˆè€…
 	if ($u != $c_diary['c_member_id']) {
 		handle_kengen_error();
 	}
 
-	// ¼Ì¿¿¤Î°ÌÃÖ
+	// å†™çœŸã®ä½ç½®
 	$smarty->assign('image_position', $c_diary['image_position']);
 
-	//ÅÐÏ¿¤µ¤ì¤Æ¤¤¤ë¼Ì¿¿¤òºï½ü¡¡0¤Ïºï½ü¤·¤Ê¤¤ 1¤Ïºï½ü¤¹¤ë
+	//ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹å†™çœŸã‚’å‰Šé™¤ã€€0ã¯å‰Šé™¤ã—ãªã„ 1ã¯å‰Šé™¤ã™ã‚‹
 	if( $_REQUEST['del_img'] & 0x01 == 1 )	$c_diary['image_filename_1'] = "";
 	if( $_REQUEST['del_img'] & 0x02 == 1 )	$c_diary['image_filename_2'] = "";
 	if( $_REQUEST['del_img'] & 0x04 == 1 )	$c_diary['image_filename_3'] = "";
@@ -46,15 +46,15 @@ function pageAction_h_diary_edit($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
-	//¥×¥í¥Õ¥£¡¼¥ë
+	//ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«
 	$smarty->assign("target_member", db_common_c_member4c_member_id($u));
 	$smarty->assign("diary", $c_diary);
 
-	//¥«¥ì¥ó¥À¡¼´Ø·¸
-	//¥«¥ì¥ó¥À¡¼³«»ÏÍÑÊÑ¿ô
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼é–¢ä¿‚
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼é–‹å§‹ç”¨å¤‰æ•°
 	$year = date("Y");
 	$month= date("n");
-	//Æüµ­°ìÍ÷¡¢¥«¥ì¥ó¥À¡¼ÍÑÊÑ¿ô
+	//æ—¥è¨˜ä¸€è¦§ã€ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ç”¨å¤‰æ•°
 	$date_val=	array(
         'year' => $year,
         'month' => $month,
@@ -62,16 +62,16 @@ function pageAction_h_diary_edit($smarty,$requests) {
     );
 	$smarty->assign("date_val", $date_val);
 
-	//Æüµ­¤Î¥«¥ì¥ó¥À¡¼
+	//æ—¥è¨˜ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼
 	$calendar = db_common_diary_monthly_calendar($year, $month, $u);
 
 	$smarty->assign("calendar", $calendar['days']);
 	$smarty->assign("ym", $calendar['ym']);
 
-	//³Æ·î¤ÎÆüµ­
+	//å„æœˆã®æ—¥è¨˜
 	$smarty->assign("date_list",p_fh_diary_list_date_list4c_member_id($u));
 	
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_diary_edit.tpl");
 }
-?>
+

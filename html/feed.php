@@ -4,7 +4,7 @@ require_once DOCUMENT_ROOT . '/lib/init.inc';
 require_once DOCUMENT_ROOT . '/lib/tejimaya/TejimayaAuth.php';
 require_once DOCUMENT_ROOT . '/lib/feedcreator/feedcreator.class.php';
 
-// Ç§¾Ú
+// èªè¨¼
 define('AUTH_TABLE',"c_member_secure");
 define('AUTH_USERNAMECOL',"pc_address");
 define('AUTH_PASSWORDCOL',"hashed_password");
@@ -23,13 +23,13 @@ if(!$user->getAuth()){
 }
 $user->uid($id);
 
-// ¥¨¥ó¥È¥ê¡¼ÇÛÎó
+// ã‚¨ãƒ³ãƒˆãƒªãƒ¼é…åˆ—
 $entries = array();
 
-// ÃÎ¤ê¹ç¤¤¤ÎÆüµ­
+// çŸ¥ã‚Šåˆã„ã®æ—¥è¨˜
 foreach (p_h_home_c_diary_friend_list4c_member_id($user->uid(), 10) as $row) {
 	$entries[$row["r_datetime"]] = array(
-		"title" => sprintf("[Æüµ­]%s '%s'", $row["nickname"], $row["subject"]),
+		"title" => sprintf("[æ—¥è¨˜]%s '%s'", $row["nickname"], $row["subject"]),
 		"date" => date("r", strtotime($row["r_datetime"])),
 		"link" => ABSOLUTE_PATH
 			. "page.php?p=fh_diary&target_c_diary_id="
@@ -37,10 +37,10 @@ foreach (p_h_home_c_diary_friend_list4c_member_id($user->uid(), 10) as $row) {
 	);
 }
 
-// ¥È¥Ô¥Ã¥¯
+// ãƒˆãƒ”ãƒƒã‚¯
 foreach (p_h_home_c_commu_topic_comment_list4c_member_id($user->uid(), 10) as $row) {
 	$entries[$row["r_datetime"]] = array(
-		"title" => sprintf("[¥È¥Ô¥Ã¥¯]%s '%s'",
+		"title" => sprintf("[ãƒˆãƒ”ãƒƒã‚¯]%s '%s'",
 			$row["c_commu_name"],
 			$row["c_commu_topic_name"]
 		),
@@ -60,10 +60,10 @@ foreach (p_h_diary_list_friend_c_rss_cache_list($user->uid(), 10) as $row) {
 	);
 }
 
-// ¥ì¥Ó¥å¡¼
+// ãƒ¬ãƒ“ãƒ¥ãƒ¼
 foreach (p_h_home_c_friend_review_list4c_member_id($user->uid(), 10) as $row) {
 	$entries[$row["r_datetime"]] = array(
-		"title" => sprintf("[¥ì¥Ó¥å¡¼]%s '%s'", $row["nickname"], $row["title"]),
+		"title" => sprintf("[ãƒ¬ãƒ“ãƒ¥ãƒ¼]%s '%s'", $row["nickname"], $row["title"]),
 		"date" => date("r", strtotime($row["r_datetime"])),
 		"link" => ABSOLUTE_PATH
 			. "page.php?p=h_review_list_product&c_review_id="
@@ -71,11 +71,11 @@ foreach (p_h_home_c_friend_review_list4c_member_id($user->uid(), 10) as $row) {
 	);
 }
 
-// ¥á¥Ã¥»¡¼¥¸
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 $msg = p_h_message_box_c_message_received_user_list4c_member_id4range($user->uid(), 1, 20);
 foreach ($msg[0] as $row) {
 	$entries[$row["r_datetime"]] = array(
-		"title" => sprintf("[¥á¥Ã¥»¡¼¥¸]%s '%s'", $row["nickname"], $row["subject"]),
+		"title" => sprintf("[ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸]%s '%s'", $row["nickname"], $row["subject"]),
 		"date" => date("r", strtotime($row["r_datetime"])),
 		"link" => ABSOLUTE_PATH . "page.php"
 			. "?p=h_message"
@@ -84,14 +84,14 @@ foreach ($msg[0] as $row) {
 	);
 }
 
-// ¥¨¥ó¥È¥ê¡¼ÇÛÎó¥½¡¼¥È
+// ã‚¨ãƒ³ãƒˆãƒªãƒ¼é…åˆ—ã‚½ãƒ¼ãƒˆ
 ksort($entries);
 
-// ¥Õ¥£¡¼¥ÉÀ¸À®
+// ãƒ•ã‚£ãƒ¼ãƒ‰ç”Ÿæˆ
 define("TIME_ZONE", "+09:00");
 $rss = new RSSCreator10();
 $rss->title = mb_convert_encoding("ipippi", "utf-8", "euc-jp");
-$rss->description = mb_convert_encoding("ÃÎºâ·ÏSNS ipippi ºÇ¶á¤Î¹¹¿·", "utf-8", "euc-jp");
+$rss->description = mb_convert_encoding("çŸ¥è²¡ç³»SNS ipippi æœ€è¿‘ã®æ›´æ–°", "utf-8", "euc-jp");
 $rss->link = ABSOLUTE_PATH;
 $rss->encoding = "UTF-8";
 foreach ($entries as $entry) {
@@ -103,8 +103,8 @@ foreach ($entries as $entry) {
 	$rss->addItem($item);
 }
 
-// É½¼¨
+// è¡¨ç¤º
 header("Content-Type: " . $rss->contentType . "; charset=" . $rss->encoding);
 print $rss->createFeed();
 //$user->logout();
-?>
+

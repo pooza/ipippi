@@ -13,7 +13,7 @@ INSERT INTO c_admin_config VALUES (6,'OPENPNE_REGIST_FROM','3');
 INSERT INTO c_admin_config VALUES (7,'AMAZON_AFFID','snsoftjp-22');
 INSERT INTO c_admin_config VALUES (8,'LOGIN_URL_PC','');
 INSERT INTO c_admin_config VALUES (9,'DISPLAY_SCHEDULE_HOME','1');
-INSERT INTO c_admin_config VALUES (10,'DAILY_NEWS_DAY','��,��');
+INSERT INTO c_admin_config VALUES (10,'DAILY_NEWS_DAY','月,木');
 INSERT INTO c_admin_config VALUES (11,'CATCH_COPY','');
 INSERT INTO c_admin_config VALUES (12,'OPERATION_COMPANY','');
 INSERT INTO c_admin_config VALUES (13,'COPYRIGHT','');
@@ -22,15 +22,15 @@ INSERT INTO c_admin_config VALUES (13,'COPYRIGHT','');
 -- Dumping data for table `c_commu_category`
 --
 
-INSERT INTO c_commu_category VALUES (1,'�ϰ�',100,1);
-INSERT INTO c_commu_category VALUES (2,'�����',200,1);
-INSERT INTO c_commu_category VALUES (3,'���ݡ���',300,1);
+INSERT INTO c_commu_category VALUES (1,'地域',100,1);
+INSERT INTO c_commu_category VALUES (2,'グルメ',200,1);
+INSERT INTO c_commu_category VALUES (3,'スポーツ',300,1);
 
 --
 -- Dumping data for table `c_commu_category_parent`
 --
 
-INSERT INTO c_commu_category_parent VALUES (1,'���ߥ�˥ƥ����ƥ���',0,0);
+INSERT INTO c_commu_category_parent VALUES (1,'コミュニティカテゴリ',0,0);
 
 --
 -- Dumping data for table `c_image`
@@ -51,208 +51,208 @@ INSERT INTO c_image VALUES (10, 'skin_navi_h', '/9j/4AAQSkZJRgABAgAAZABkAAD/7AAR
 -- Dumping data for table `c_member`
 --
 
-INSERT INTO c_member VALUES (1,'OpenPNE��',0,1,1,'private','','','','',NOW(),NOW(),'','',0,0,0,0,0,1,'public');
+INSERT INTO c_member VALUES (1,'OpenPNE君',0,1,1,'private','','','','',NOW(),NOW(),'','',0,0,0,0,0,1,'public');
 
 --
 -- Dumping data for table `c_password_query`
 --
 
-INSERT INTO c_password_query VALUES (1,'��ޤ�����ε�����?');
-INSERT INTO c_password_query VALUES (2,'��ž�ȵ����ֹ�β� 5 ���?');
-INSERT INTO c_password_query VALUES (3,'�����οͤ�̾����?');
-INSERT INTO c_password_query VALUES (4,'´�Ȥ������ع���̾���ϡ�');
-INSERT INTO c_password_query VALUES (5,'�����Ϥθ�̾�ϡ�');
+INSERT INTO c_password_query VALUES (1,'母または父の旧姓は?');
+INSERT INTO c_password_query VALUES (2,'運転免許証番号の下 5 桁は?');
+INSERT INTO c_password_query VALUES (3,'初恋の人の名前は?');
+INSERT INTO c_password_query VALUES (4,'卒業した小学校の名前は？');
+INSERT INTO c_password_query VALUES (5,'本籍地の県名は？');
 
 --
 -- Dumping data for table `c_profile`
 --
 
-INSERT INTO c_profile VALUES (1,'sex','����',0,0,'public','select',200,0,1,1,'string','',0,0);
-INSERT INTO c_profile VALUES (2,'blood_type','��շ�',0,1,'public','select',300,0,1,1,'string','',0,0);
-INSERT INTO c_profile VALUES (3,'pre_addr_pref','������',0,1,'public','select',400,0,1,1,'string','',0,0);
-INSERT INTO c_profile VALUES (4,'old_addr_pref','�п���',0,1,'public','select',500,0,1,1,'string','',0,0);
-INSERT INTO c_profile VALUES (5,'self_intro','���ʾҲ�',0,0,'public','textarea',600,0,1,1,'string','',0,0);
+INSERT INTO c_profile VALUES (1,'sex','性別',0,0,'public','select',200,0,1,1,'string','',0,0);
+INSERT INTO c_profile VALUES (2,'blood_type','血液型',0,1,'public','select',300,0,1,1,'string','',0,0);
+INSERT INTO c_profile VALUES (3,'pre_addr_pref','現住所',0,1,'public','select',400,0,1,1,'string','',0,0);
+INSERT INTO c_profile VALUES (4,'old_addr_pref','出身地',0,1,'public','select',500,0,1,1,'string','',0,0);
+INSERT INTO c_profile VALUES (5,'self_intro','自己紹介',0,0,'public','textarea',600,0,1,1,'string','',0,0);
 
 --
 -- Dumping data for table `c_profile_option`
 --
 
-INSERT INTO c_profile_option VALUES (1,1,'����',1);
-INSERT INTO c_profile_option VALUES (2,1,'����',2);
+INSERT INTO c_profile_option VALUES (1,1,'男性',1);
+INSERT INTO c_profile_option VALUES (2,1,'女性',2);
 INSERT INTO c_profile_option VALUES (3,2,'A',1);
 INSERT INTO c_profile_option VALUES (4,2,'B',2);
 INSERT INTO c_profile_option VALUES (5,2,'O',3);
 INSERT INTO c_profile_option VALUES (6,2,'AB',4);
-INSERT INTO c_profile_option VALUES (7,3,'�̳�ƻ',1);
-INSERT INTO c_profile_option VALUES (8,3,'�Ŀ���',2);
-INSERT INTO c_profile_option VALUES (9,3,'��긩',3);
-INSERT INTO c_profile_option VALUES (10,3,'�ܾ븩',4);
-INSERT INTO c_profile_option VALUES (11,3,'���ĸ�',5);
-INSERT INTO c_profile_option VALUES (12,3,'������',6);
-INSERT INTO c_profile_option VALUES (13,3,'ʡ�縩',7);
-INSERT INTO c_profile_option VALUES (14,3,'��븩',8);
-INSERT INTO c_profile_option VALUES (15,3,'���ڸ�',9);
-INSERT INTO c_profile_option VALUES (16,3,'���ϸ�',10);
-INSERT INTO c_profile_option VALUES (17,3,'��̸�',11);
-INSERT INTO c_profile_option VALUES (18,3,'���ո�',12);
-INSERT INTO c_profile_option VALUES (19,3,'�����',13);
-INSERT INTO c_profile_option VALUES (20,3,'�����',14);
-INSERT INTO c_profile_option VALUES (21,3,'���㸩',15);
-INSERT INTO c_profile_option VALUES (22,3,'�ٻ���',16);
-INSERT INTO c_profile_option VALUES (23,3,'���',17);
-INSERT INTO c_profile_option VALUES (24,3,'ʡ�温',18);
-INSERT INTO c_profile_option VALUES (25,3,'������',19);
-INSERT INTO c_profile_option VALUES (26,3,'Ĺ�',20);
-INSERT INTO c_profile_option VALUES (27,3,'���츩',21);
-INSERT INTO c_profile_option VALUES (28,3,'�Ų���',22);
-INSERT INTO c_profile_option VALUES (29,3,'���θ�',23);
-INSERT INTO c_profile_option VALUES (30,3,'���Ÿ�',24);
-INSERT INTO c_profile_option VALUES (31,3,'���츩',25);
-INSERT INTO c_profile_option VALUES (32,3,'������',26);
-INSERT INTO c_profile_option VALUES (33,3,'�����',27);
-INSERT INTO c_profile_option VALUES (34,3,'ʼ�˸�',28);
-INSERT INTO c_profile_option VALUES (35,3,'���ɸ�',29);
-INSERT INTO c_profile_option VALUES (36,3,'�²λ���',30);
-INSERT INTO c_profile_option VALUES (37,3,'Ļ�踩',31);
-INSERT INTO c_profile_option VALUES (38,3,'�纬��',32);
-INSERT INTO c_profile_option VALUES (39,3,'������',33);
-INSERT INTO c_profile_option VALUES (40,3,'���縩',34);
-INSERT INTO c_profile_option VALUES (41,3,'������',35);
-INSERT INTO c_profile_option VALUES (42,3,'���縩',36);
-INSERT INTO c_profile_option VALUES (43,3,'���',37);
-INSERT INTO c_profile_option VALUES (44,3,'��ɲ��',38);
-INSERT INTO c_profile_option VALUES (45,3,'���θ�',39);
-INSERT INTO c_profile_option VALUES (46,3,'ʡ����',40);
-INSERT INTO c_profile_option VALUES (47,3,'���츩',41);
-INSERT INTO c_profile_option VALUES (48,3,'Ĺ�긩',42);
-INSERT INTO c_profile_option VALUES (49,3,'���ܸ�',43);
-INSERT INTO c_profile_option VALUES (50,3,'��ʬ��',44);
-INSERT INTO c_profile_option VALUES (51,3,'�ܺ긩',45);
-INSERT INTO c_profile_option VALUES (52,3,'�����縩',46);
-INSERT INTO c_profile_option VALUES (53,3,'���츩',47);
-INSERT INTO c_profile_option VALUES (54,3,'����¾',48);
-INSERT INTO c_profile_option VALUES (55,4,'�̳�ƻ',1);
-INSERT INTO c_profile_option VALUES (56,4,'�Ŀ���',2);
-INSERT INTO c_profile_option VALUES (57,4,'��긩',3);
-INSERT INTO c_profile_option VALUES (58,4,'�ܾ븩',4);
-INSERT INTO c_profile_option VALUES (59,4,'���ĸ�',5);
-INSERT INTO c_profile_option VALUES (60,4,'������',6);
-INSERT INTO c_profile_option VALUES (61,4,'ʡ�縩',7);
-INSERT INTO c_profile_option VALUES (62,4,'��븩',8);
-INSERT INTO c_profile_option VALUES (63,4,'���ڸ�',9);
-INSERT INTO c_profile_option VALUES (64,4,'���ϸ�',10);
-INSERT INTO c_profile_option VALUES (65,4,'��̸�',11);
-INSERT INTO c_profile_option VALUES (66,4,'���ո�',12);
-INSERT INTO c_profile_option VALUES (67,4,'�����',13);
-INSERT INTO c_profile_option VALUES (68,4,'�����',14);
-INSERT INTO c_profile_option VALUES (69,4,'���㸩',15);
-INSERT INTO c_profile_option VALUES (70,4,'�ٻ���',16);
-INSERT INTO c_profile_option VALUES (71,4,'���',17);
-INSERT INTO c_profile_option VALUES (72,4,'ʡ�温',18);
-INSERT INTO c_profile_option VALUES (73,4,'������',19);
-INSERT INTO c_profile_option VALUES (74,4,'Ĺ�',20);
-INSERT INTO c_profile_option VALUES (75,4,'���츩',21);
-INSERT INTO c_profile_option VALUES (76,4,'�Ų���',22);
-INSERT INTO c_profile_option VALUES (77,4,'���θ�',23);
-INSERT INTO c_profile_option VALUES (78,4,'���Ÿ�',24);
-INSERT INTO c_profile_option VALUES (79,4,'���츩',25);
-INSERT INTO c_profile_option VALUES (80,4,'������',26);
-INSERT INTO c_profile_option VALUES (81,4,'�����',27);
-INSERT INTO c_profile_option VALUES (82,4,'ʼ�˸�',28);
-INSERT INTO c_profile_option VALUES (83,4,'���ɸ�',29);
-INSERT INTO c_profile_option VALUES (84,4,'�²λ���',30);
-INSERT INTO c_profile_option VALUES (85,4,'Ļ�踩',31);
-INSERT INTO c_profile_option VALUES (86,4,'�纬��',32);
-INSERT INTO c_profile_option VALUES (87,4,'������',33);
-INSERT INTO c_profile_option VALUES (88,4,'���縩',34);
-INSERT INTO c_profile_option VALUES (89,4,'������',35);
-INSERT INTO c_profile_option VALUES (90,4,'���縩',36);
-INSERT INTO c_profile_option VALUES (91,4,'���',37);
-INSERT INTO c_profile_option VALUES (92,4,'��ɲ��',38);
-INSERT INTO c_profile_option VALUES (93,4,'���θ�',39);
-INSERT INTO c_profile_option VALUES (94,4,'ʡ����',40);
-INSERT INTO c_profile_option VALUES (95,4,'���츩',41);
-INSERT INTO c_profile_option VALUES (96,4,'Ĺ�긩',42);
-INSERT INTO c_profile_option VALUES (97,4,'���ܸ�',43);
-INSERT INTO c_profile_option VALUES (98,4,'��ʬ��',44);
-INSERT INTO c_profile_option VALUES (99,4,'�ܺ긩',45);
-INSERT INTO c_profile_option VALUES (100,4,'�����縩',46);
-INSERT INTO c_profile_option VALUES (101,4,'���츩',47);
-INSERT INTO c_profile_option VALUES (102,4,'����¾',48);
+INSERT INTO c_profile_option VALUES (7,3,'北海道',1);
+INSERT INTO c_profile_option VALUES (8,3,'青森県',2);
+INSERT INTO c_profile_option VALUES (9,3,'岩手県',3);
+INSERT INTO c_profile_option VALUES (10,3,'宮城県',4);
+INSERT INTO c_profile_option VALUES (11,3,'秋田県',5);
+INSERT INTO c_profile_option VALUES (12,3,'山形県',6);
+INSERT INTO c_profile_option VALUES (13,3,'福島県',7);
+INSERT INTO c_profile_option VALUES (14,3,'茨城県',8);
+INSERT INTO c_profile_option VALUES (15,3,'栃木県',9);
+INSERT INTO c_profile_option VALUES (16,3,'群馬県',10);
+INSERT INTO c_profile_option VALUES (17,3,'埼玉県',11);
+INSERT INTO c_profile_option VALUES (18,3,'千葉県',12);
+INSERT INTO c_profile_option VALUES (19,3,'東京都',13);
+INSERT INTO c_profile_option VALUES (20,3,'神奈川県',14);
+INSERT INTO c_profile_option VALUES (21,3,'新潟県',15);
+INSERT INTO c_profile_option VALUES (22,3,'富山県',16);
+INSERT INTO c_profile_option VALUES (23,3,'石川県',17);
+INSERT INTO c_profile_option VALUES (24,3,'福井県',18);
+INSERT INTO c_profile_option VALUES (25,3,'山梨県',19);
+INSERT INTO c_profile_option VALUES (26,3,'長野県',20);
+INSERT INTO c_profile_option VALUES (27,3,'岐阜県',21);
+INSERT INTO c_profile_option VALUES (28,3,'静岡県',22);
+INSERT INTO c_profile_option VALUES (29,3,'愛知県',23);
+INSERT INTO c_profile_option VALUES (30,3,'三重県',24);
+INSERT INTO c_profile_option VALUES (31,3,'滋賀県',25);
+INSERT INTO c_profile_option VALUES (32,3,'京都府',26);
+INSERT INTO c_profile_option VALUES (33,3,'大阪府',27);
+INSERT INTO c_profile_option VALUES (34,3,'兵庫県',28);
+INSERT INTO c_profile_option VALUES (35,3,'奈良県',29);
+INSERT INTO c_profile_option VALUES (36,3,'和歌山県',30);
+INSERT INTO c_profile_option VALUES (37,3,'鳥取県',31);
+INSERT INTO c_profile_option VALUES (38,3,'島根県',32);
+INSERT INTO c_profile_option VALUES (39,3,'岡山県',33);
+INSERT INTO c_profile_option VALUES (40,3,'広島県',34);
+INSERT INTO c_profile_option VALUES (41,3,'山口県',35);
+INSERT INTO c_profile_option VALUES (42,3,'徳島県',36);
+INSERT INTO c_profile_option VALUES (43,3,'香川県',37);
+INSERT INTO c_profile_option VALUES (44,3,'愛媛県',38);
+INSERT INTO c_profile_option VALUES (45,3,'高知県',39);
+INSERT INTO c_profile_option VALUES (46,3,'福岡県',40);
+INSERT INTO c_profile_option VALUES (47,3,'佐賀県',41);
+INSERT INTO c_profile_option VALUES (48,3,'長崎県',42);
+INSERT INTO c_profile_option VALUES (49,3,'熊本県',43);
+INSERT INTO c_profile_option VALUES (50,3,'大分県',44);
+INSERT INTO c_profile_option VALUES (51,3,'宮崎県',45);
+INSERT INTO c_profile_option VALUES (52,3,'鹿児島県',46);
+INSERT INTO c_profile_option VALUES (53,3,'沖縄県',47);
+INSERT INTO c_profile_option VALUES (54,3,'その他',48);
+INSERT INTO c_profile_option VALUES (55,4,'北海道',1);
+INSERT INTO c_profile_option VALUES (56,4,'青森県',2);
+INSERT INTO c_profile_option VALUES (57,4,'岩手県',3);
+INSERT INTO c_profile_option VALUES (58,4,'宮城県',4);
+INSERT INTO c_profile_option VALUES (59,4,'秋田県',5);
+INSERT INTO c_profile_option VALUES (60,4,'山形県',6);
+INSERT INTO c_profile_option VALUES (61,4,'福島県',7);
+INSERT INTO c_profile_option VALUES (62,4,'茨城県',8);
+INSERT INTO c_profile_option VALUES (63,4,'栃木県',9);
+INSERT INTO c_profile_option VALUES (64,4,'群馬県',10);
+INSERT INTO c_profile_option VALUES (65,4,'埼玉県',11);
+INSERT INTO c_profile_option VALUES (66,4,'千葉県',12);
+INSERT INTO c_profile_option VALUES (67,4,'東京都',13);
+INSERT INTO c_profile_option VALUES (68,4,'神奈川県',14);
+INSERT INTO c_profile_option VALUES (69,4,'新潟県',15);
+INSERT INTO c_profile_option VALUES (70,4,'富山県',16);
+INSERT INTO c_profile_option VALUES (71,4,'石川県',17);
+INSERT INTO c_profile_option VALUES (72,4,'福井県',18);
+INSERT INTO c_profile_option VALUES (73,4,'山梨県',19);
+INSERT INTO c_profile_option VALUES (74,4,'長野県',20);
+INSERT INTO c_profile_option VALUES (75,4,'岐阜県',21);
+INSERT INTO c_profile_option VALUES (76,4,'静岡県',22);
+INSERT INTO c_profile_option VALUES (77,4,'愛知県',23);
+INSERT INTO c_profile_option VALUES (78,4,'三重県',24);
+INSERT INTO c_profile_option VALUES (79,4,'滋賀県',25);
+INSERT INTO c_profile_option VALUES (80,4,'京都府',26);
+INSERT INTO c_profile_option VALUES (81,4,'大阪府',27);
+INSERT INTO c_profile_option VALUES (82,4,'兵庫県',28);
+INSERT INTO c_profile_option VALUES (83,4,'奈良県',29);
+INSERT INTO c_profile_option VALUES (84,4,'和歌山県',30);
+INSERT INTO c_profile_option VALUES (85,4,'鳥取県',31);
+INSERT INTO c_profile_option VALUES (86,4,'島根県',32);
+INSERT INTO c_profile_option VALUES (87,4,'岡山県',33);
+INSERT INTO c_profile_option VALUES (88,4,'広島県',34);
+INSERT INTO c_profile_option VALUES (89,4,'山口県',35);
+INSERT INTO c_profile_option VALUES (90,4,'徳島県',36);
+INSERT INTO c_profile_option VALUES (91,4,'香川県',37);
+INSERT INTO c_profile_option VALUES (92,4,'愛媛県',38);
+INSERT INTO c_profile_option VALUES (93,4,'高知県',39);
+INSERT INTO c_profile_option VALUES (94,4,'福岡県',40);
+INSERT INTO c_profile_option VALUES (95,4,'佐賀県',41);
+INSERT INTO c_profile_option VALUES (96,4,'長崎県',42);
+INSERT INTO c_profile_option VALUES (97,4,'熊本県',43);
+INSERT INTO c_profile_option VALUES (98,4,'大分県',44);
+INSERT INTO c_profile_option VALUES (99,4,'宮崎県',45);
+INSERT INTO c_profile_option VALUES (100,4,'鹿児島県',46);
+INSERT INTO c_profile_option VALUES (101,4,'沖縄県',47);
+INSERT INTO c_profile_option VALUES (102,4,'その他',48);
 
 --
 -- Dumping data for table `c_profile_pref`
 --
 
-INSERT INTO c_profile_pref VALUES (1,'�̳�ƻ',1);
-INSERT INTO c_profile_pref VALUES (2,'�Ŀ���',2);
-INSERT INTO c_profile_pref VALUES (3,'��긩',3);
-INSERT INTO c_profile_pref VALUES (4,'�ܾ븩',4);
-INSERT INTO c_profile_pref VALUES (5,'���ĸ�',5);
-INSERT INTO c_profile_pref VALUES (6,'������',6);
-INSERT INTO c_profile_pref VALUES (7,'ʡ�縩',7);
-INSERT INTO c_profile_pref VALUES (8,'��븩',8);
-INSERT INTO c_profile_pref VALUES (9,'���ڸ�',9);
-INSERT INTO c_profile_pref VALUES (10,'���ϸ�',10);
-INSERT INTO c_profile_pref VALUES (11,'��̸�',11);
-INSERT INTO c_profile_pref VALUES (12,'���ո�',12);
-INSERT INTO c_profile_pref VALUES (13,'�����',13);
-INSERT INTO c_profile_pref VALUES (14,'�����',14);
-INSERT INTO c_profile_pref VALUES (15,'���㸩',15);
-INSERT INTO c_profile_pref VALUES (16,'�ٻ���',16);
-INSERT INTO c_profile_pref VALUES (17,'���',17);
-INSERT INTO c_profile_pref VALUES (18,'ʡ�温',18);
-INSERT INTO c_profile_pref VALUES (19,'������',19);
-INSERT INTO c_profile_pref VALUES (20,'Ĺ�',20);
-INSERT INTO c_profile_pref VALUES (21,'���츩',21);
-INSERT INTO c_profile_pref VALUES (22,'�Ų���',22);
-INSERT INTO c_profile_pref VALUES (23,'���θ�',23);
-INSERT INTO c_profile_pref VALUES (24,'���Ÿ�',24);
-INSERT INTO c_profile_pref VALUES (25,'���츩',25);
-INSERT INTO c_profile_pref VALUES (26,'������',26);
-INSERT INTO c_profile_pref VALUES (27,'�����',27);
-INSERT INTO c_profile_pref VALUES (28,'ʼ�˸�',28);
-INSERT INTO c_profile_pref VALUES (29,'���ɸ�',29);
-INSERT INTO c_profile_pref VALUES (30,'�²λ���',30);
-INSERT INTO c_profile_pref VALUES (31,'Ļ�踩',31);
-INSERT INTO c_profile_pref VALUES (32,'�纬��',32);
-INSERT INTO c_profile_pref VALUES (33,'������',33);
-INSERT INTO c_profile_pref VALUES (34,'���縩',34);
-INSERT INTO c_profile_pref VALUES (35,'������',35);
-INSERT INTO c_profile_pref VALUES (36,'���縩',36);
-INSERT INTO c_profile_pref VALUES (37,'���',37);
-INSERT INTO c_profile_pref VALUES (38,'��ɲ��',38);
-INSERT INTO c_profile_pref VALUES (39,'���θ�',39);
-INSERT INTO c_profile_pref VALUES (40,'ʡ����',40);
-INSERT INTO c_profile_pref VALUES (41,'���츩',41);
-INSERT INTO c_profile_pref VALUES (42,'Ĺ�긩',42);
-INSERT INTO c_profile_pref VALUES (43,'���ܸ�',43);
-INSERT INTO c_profile_pref VALUES (44,'��ʬ��',44);
-INSERT INTO c_profile_pref VALUES (45,'�ܺ긩',45);
-INSERT INTO c_profile_pref VALUES (46,'�����縩',46);
-INSERT INTO c_profile_pref VALUES (47,'���츩',47);
-INSERT INTO c_profile_pref VALUES (50,'����¾',50);
+INSERT INTO c_profile_pref VALUES (1,'北海道',1);
+INSERT INTO c_profile_pref VALUES (2,'青森県',2);
+INSERT INTO c_profile_pref VALUES (3,'岩手県',3);
+INSERT INTO c_profile_pref VALUES (4,'宮城県',4);
+INSERT INTO c_profile_pref VALUES (5,'秋田県',5);
+INSERT INTO c_profile_pref VALUES (6,'山形県',6);
+INSERT INTO c_profile_pref VALUES (7,'福島県',7);
+INSERT INTO c_profile_pref VALUES (8,'茨城県',8);
+INSERT INTO c_profile_pref VALUES (9,'栃木県',9);
+INSERT INTO c_profile_pref VALUES (10,'群馬県',10);
+INSERT INTO c_profile_pref VALUES (11,'埼玉県',11);
+INSERT INTO c_profile_pref VALUES (12,'千葉県',12);
+INSERT INTO c_profile_pref VALUES (13,'東京都',13);
+INSERT INTO c_profile_pref VALUES (14,'神奈川県',14);
+INSERT INTO c_profile_pref VALUES (15,'新潟県',15);
+INSERT INTO c_profile_pref VALUES (16,'富山県',16);
+INSERT INTO c_profile_pref VALUES (17,'石川県',17);
+INSERT INTO c_profile_pref VALUES (18,'福井県',18);
+INSERT INTO c_profile_pref VALUES (19,'山梨県',19);
+INSERT INTO c_profile_pref VALUES (20,'長野県',20);
+INSERT INTO c_profile_pref VALUES (21,'岐阜県',21);
+INSERT INTO c_profile_pref VALUES (22,'静岡県',22);
+INSERT INTO c_profile_pref VALUES (23,'愛知県',23);
+INSERT INTO c_profile_pref VALUES (24,'三重県',24);
+INSERT INTO c_profile_pref VALUES (25,'滋賀県',25);
+INSERT INTO c_profile_pref VALUES (26,'京都府',26);
+INSERT INTO c_profile_pref VALUES (27,'大阪府',27);
+INSERT INTO c_profile_pref VALUES (28,'兵庫県',28);
+INSERT INTO c_profile_pref VALUES (29,'奈良県',29);
+INSERT INTO c_profile_pref VALUES (30,'和歌山県',30);
+INSERT INTO c_profile_pref VALUES (31,'鳥取県',31);
+INSERT INTO c_profile_pref VALUES (32,'島根県',32);
+INSERT INTO c_profile_pref VALUES (33,'岡山県',33);
+INSERT INTO c_profile_pref VALUES (34,'広島県',34);
+INSERT INTO c_profile_pref VALUES (35,'山口県',35);
+INSERT INTO c_profile_pref VALUES (36,'徳島県',36);
+INSERT INTO c_profile_pref VALUES (37,'香川県',37);
+INSERT INTO c_profile_pref VALUES (38,'愛媛県',38);
+INSERT INTO c_profile_pref VALUES (39,'高知県',39);
+INSERT INTO c_profile_pref VALUES (40,'福岡県',40);
+INSERT INTO c_profile_pref VALUES (41,'佐賀県',41);
+INSERT INTO c_profile_pref VALUES (42,'長崎県',42);
+INSERT INTO c_profile_pref VALUES (43,'熊本県',43);
+INSERT INTO c_profile_pref VALUES (44,'大分県',44);
+INSERT INTO c_profile_pref VALUES (45,'宮崎県',45);
+INSERT INTO c_profile_pref VALUES (46,'鹿児島県',46);
+INSERT INTO c_profile_pref VALUES (47,'沖縄県',47);
+INSERT INTO c_profile_pref VALUES (50,'その他',50);
 
 --
 -- Dumping data for table `c_review_category`
 --
 
-INSERT INTO c_review_category VALUES (1,'books-jp','�½�',0);
-INSERT INTO c_review_category VALUES (2,'books-us','�ν�',0);
-INSERT INTO c_review_category VALUES (3,'music-jp','CD�ݥԥ�顼',0);
-INSERT INTO c_review_category VALUES (4,'classical-jp','CD���饷�å�',0);
+INSERT INTO c_review_category VALUES (1,'books-jp','和書',0);
+INSERT INTO c_review_category VALUES (2,'books-us','洋書',0);
+INSERT INTO c_review_category VALUES (3,'music-jp','CDポピュラー',0);
+INSERT INTO c_review_category VALUES (4,'classical-jp','CDクラシック',0);
 INSERT INTO c_review_category VALUES (5,'dvd-jp','DVD',0);
-INSERT INTO c_review_category VALUES (6,'videogames-jp','������',0);
-INSERT INTO c_review_category VALUES (7,'software-jp','���եȥ�����',0);
-INSERT INTO c_review_category VALUES (8,'electronics-jp','���쥯�ȥ��˥���',0);
-INSERT INTO c_review_category VALUES (9,'kitchen-jp','���å���',0);
+INSERT INTO c_review_category VALUES (6,'videogames-jp','ゲーム',0);
+INSERT INTO c_review_category VALUES (7,'software-jp','ソフトウェア',0);
+INSERT INTO c_review_category VALUES (8,'electronics-jp','エレクトロニクス',0);
+INSERT INTO c_review_category VALUES (9,'kitchen-jp','キッチン',0);
 
 --
 -- Dumping data for table `c_siteadmin`
 --
 
-INSERT INTO c_siteadmin VALUES (1,'inc_page_footer_before','<a href=\"normal.php?p=sns_kiyaku\" target=\"_blank\">���ѵ���</a> <a href=\"normal.php?p=sns_privacy\" target=\"_blank\">�ץ饤�Х����ݥꥷ��</a> <a href=\"http://blog.livedoor.jp/tejimaya_news/archives/2004-01.html\" target=\"_blank\">OpenPNE�Ȥ�</a>',NOW());
-INSERT INTO c_siteadmin VALUES (2,'inc_page_footer_after','<a href=\"normal.php?p=sns_kiyaku\" target=\"_blank\">���ѵ���</a> <a href=\"normal.php?p=sns_privacy\" target=\"_blank\">�ץ饤�Х����ݥꥷ��</a>',NOW());
+INSERT INTO c_siteadmin VALUES (1,'inc_page_footer_before','<a href=\"normal.php?p=sns_kiyaku\" target=\"_blank\">利用規約</a> <a href=\"normal.php?p=sns_privacy\" target=\"_blank\">プライバシーポリシー</a> <a href=\"http://blog.livedoor.jp/tejimaya_news/archives/2004-01.html\" target=\"_blank\">OpenPNEとは</a>',NOW());
+INSERT INTO c_siteadmin VALUES (2,'inc_page_footer_after','<a href=\"normal.php?p=sns_kiyaku\" target=\"_blank\">利用規約</a> <a href=\"normal.php?p=sns_privacy\" target=\"_blank\">プライバシーポリシー</a>',NOW());
 
 --
 -- Dumping data for table `c_sns_config`

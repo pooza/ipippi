@@ -1,8 +1,8 @@
 ({$inc_html_header|smarty:nodefaults})
 
-<center>Âà²ñ¼êÂ³¤­´°Î»</center>
+<center>é€€ä¼šæ‰‹ç¶šãå®Œäº†</center>
 <hr>
-Âà²ñ¼êÂ³¤­¤¬´°Î»¤·¤Þ¤·¤¿¡£<br>
-¤´ÍøÍÑ¤¢¤ê¤¬¤È¤¦¤´¤¶¤¤¤Þ¤·¤¿¡£
+é€€ä¼šæ‰‹ç¶šããŒå®Œäº†ã—ã¾ã—ãŸã€‚<br>
+ã”åˆ©ç”¨ã‚ã‚ŠãŒã¨ã†ã”ã–ã„ã¾ã—ãŸã€‚
 
 ({$inc_ktai_footer|smarty:nodefaults})

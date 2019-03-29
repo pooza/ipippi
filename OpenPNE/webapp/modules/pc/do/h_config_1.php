@@ -1,33 +1,33 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-ÀßÄêÊÑ¹¹
+è¨­å®šå¤‰æ›´
 
-[°ú¿ô]
+[å¼•æ•°]
 mail_address
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 h_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¼«Ê¬
+[æ¨©é™]
+è‡ªåˆ†
 
 */
 function doAction_h_config_1($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$pc_address = $request['pc_address'];
 	$pc_address2 = $request['pc_address2'];
 	// ----------
 
 	$msg_list = array();
-	if (!$pc_address)  $msg_list[] = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-	if (!$pc_address2)  $msg_list[] = "¥á¡¼¥ë¥¢¥É¥ì¥¹(³ÎÇ§)¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-    if ($pc_address != $pc_address2) $msg_list[] = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤¬°ìÃ×¤·¤Þ¤»¤ó";
-	if (!db_common_is_mailaddress($pc_address)) $msg_list[] = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÀµ¤·¤¯ÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+	if (!$pc_address)  $msg_list[] = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+	if (!$pc_address2)  $msg_list[] = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹(ç¢ºèª)ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+    if ($pc_address != $pc_address2) $msg_list[] = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ãŒä¸€è‡´ã—ã¾ã›ã‚“";
+	if (!db_common_is_mailaddress($pc_address)) $msg_list[] = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„";
 	
 	if ($msg_list) {
 		$msg = array_shift($msg_list);
@@ -37,19 +37,19 @@ function doAction_h_config_1($request) {
 
 	$c_member_id = _db_c_member_id4pc_address($pc_address);
 	if( $c_member_id == $u ){
-		//¼«Ê¬¤Î¥á¡¼¥ë¥¢¥É¥ì¥¹
-		$msg = urlencode("ÆþÎÏ¤µ¤ì¤¿¥á¡¼¥ë¥¢¥É¥ì¥¹¤Ï´û¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹¡£");
+		//è‡ªåˆ†ã®ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹
+		$msg = urlencode("å…¥åŠ›ã•ã‚ŒãŸãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™ã€‚");
 		client_redirect("page.php?p=h_config&msg=$msg");
 		exit;
 	}else if( $c_member_id ){
-		//´û¤Ë»È¤ï¤ì¤Æ¤¤¤ë
-		$msg = urlencode("ÆþÎÏ¤µ¤ì¤¿¥á¡¼¥ë¥¢¥É¥ì¥¹¤Ï´û¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹¡£");
+		//æ—¢ã«ä½¿ã‚ã‚Œã¦ã„ã‚‹
+		$msg = urlencode("å…¥åŠ›ã•ã‚ŒãŸãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™ã€‚");
 		client_redirect("page.php?p=h_config&msg=$msg");
 		exit;
 	}
 
     if (is_ktai_mail_address($pc_address)) {
-        $msg = urlencode("·ÈÂÓÅÅÏÃ¥¢¥É¥ì¥¹¤Ïµ­Æþ¤Ç¤­¤Þ¤»¤ó");
+        $msg = urlencode("æºå¸¯é›»è©±ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯è¨˜å…¥ã§ãã¾ã›ã‚“");
         client_redirect("page.php?p=h_config&msg=$msg");
         exit;
     }
@@ -62,4 +62,4 @@ function doAction_h_config_1($request) {
 	$GLOBALS['AUTH']->t_logout();
 	client_redirect("normal.php?p=h_config_mail");
 }
-?>
+

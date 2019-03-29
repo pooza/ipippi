@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ****************************** -->
-<!-- ******�������顧��ĥ�ڡ���****** -->
+<!-- ******ここから：拡張ページ****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,9 +34,9 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧��ĥ�ڡ���������* -->
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- *ここから：拡張ページ＞内容* -->
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;margin:0px auto;">
 <tr>
 <td style="width:636px;height:1px;" class="bg_01" colspan="5"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -49,7 +49,7 @@
 ({if $c_siteadmin != ""})
 ({$c_siteadmin|t_url2a|nl2br})
 ({else})
-���ѵ���ϡ��������޽�����Ǥ���
+利用規約は、ただいま準備中です。
 ({/if})
 </div>
 
@@ -60,9 +60,9 @@
 <td style="width:636px;height:1px;" class="bg_01" colspan="5"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-<!-- *�����ޤǡ���ĥ�ڡ����������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+<!-- *ここまで：拡張ページ＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -72,14 +72,14 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ���ĥ�ڡ���****** -->
+<!-- ******ここまで：拡張ページ****** -->
 <!-- ****************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

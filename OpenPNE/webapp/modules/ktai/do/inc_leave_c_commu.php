@@ -1,18 +1,18 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¤«¤éÂà²ñ
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‹ã‚‰é€€ä¼š
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_id
 
-[¸¢¸Â]
+[æ¨©é™]
 
 */
 function doAction_inc_leave_c_commu($requests)
@@ -20,24 +20,24 @@ function doAction_inc_leave_c_commu($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 	$c_member_id = $u;
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼ and ´ÉÍý¼Ô¤Ç¤Ê¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼ and ç®¡ç†è€…ã§ãªã„
 
 	$is_admin	= do_common_is_commu_admin($target_c_commu_id, $c_member_id);
 	$is_member	= do_common_is_c_commu_member($target_c_commu_id, $c_member_id);
 
 	if($is_admin){
-		//msg=10 "´ÉÍý¼Ô¤Ê¤Î¤ÇÂà²ñ¤Ç¤­¤Þ¤»¤ó¡£"
+		//msg=10 "ç®¡ç†è€…ãªã®ã§é€€ä¼šã§ãã¾ã›ã‚“ã€‚"
 		client_redirect("ktai_page.php?p=c_taikai_err_admin&target_c_commu_id=$target_c_commu_id&msg=10&$tail");
 		return;
 	}
 	if(!$is_member){
-		//msg=11 "¤³¤Î¥³¥ß¥å¥Ë¥Æ¥£¤Î¥á¥ó¥Ð¤Ç¤Ï¤¢¤ê¤Þ¤»¤ó¡£"
+		//msg=11 "ã“ã®ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒ¡ãƒ³ãƒã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚"
 		client_redirect("ktai_page.php?p=c_taikai_err_no_member&target_c_commu_id=$target_c_commu_id&msg=11&$tail");
 		break;
 	}
@@ -51,4 +51,4 @@ function doAction_inc_leave_c_commu($requests)
 
 	client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
 }
-?>
+

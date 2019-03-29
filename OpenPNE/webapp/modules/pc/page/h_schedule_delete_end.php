@@ -8,4 +8,4 @@ function pageAction_h_schedule_delete_end($smarty,$requests) {
 
 	$smarty->ext_display("h_schedule_delete_end.tpl");
 }
-?>
+

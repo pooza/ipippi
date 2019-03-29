@@ -6,7 +6,7 @@
 function pageAction_h_invite($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$form_val = $requests;
 	// ----------
 
@@ -22,4 +22,4 @@ function pageAction_h_invite($smarty,$requests) {
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_invite.tpl");
 }
-?>
+

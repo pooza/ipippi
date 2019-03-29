@@ -6,15 +6,15 @@
 function pageAction_f_intro_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$target_c_member_id = $requests['target_c_member_id'];
 		// ----------
 
 		//is_friend
 		$is_friend = p_common_is_friend($u, $target_c_member_id);
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-		//¥Õ¥ì¥ó¥É
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+		//ãƒ•ãƒ¬ãƒ³ãƒ‰
 		if ($target_c_member_id == $u) {
 	        handle_kengen_error();
 		}
@@ -38,4 +38,4 @@ function pageAction_f_intro_edit($smarty,$requests) {
 		$smarty->assign("target_c_member_id" ,$target_c_member_id);
 		$smarty->ext_display("f_intro_edit.tpl");
 }
-?>
+

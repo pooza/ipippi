@@ -1,34 +1,34 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">ºĞ­ÆÃ¨¡§({$c_commu_category_name})</font></center>
+<center><font color="orange">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¼š({$c_commu_category_name})</font></center>
 <hr>
 ({if $search_word})
-¡Ö({$search_word})¡×¤Î¸¡º÷·ë²Ì<br>
+ã€Œ({$search_word})ã€ã®æ¤œç´¢çµæœ<br>
 ({/if})
-(({$count_total})·ï)<br>
+(({$count_total})ä»¶)<br>
 
 ({foreach from=$c_commu_list item=c_commu})
 <a href="ktai_page.php?p=c_home&target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">({$c_commu.name})</a>(({$c_commu.count_commu_member}))<br>
 ({/foreach})
 <br>
-({if $is_prev})<a href="ktai_page.php?p=h_com_category&amp;target_c_commu_category_id=({$c_commu_category_id})&amp;page=({$page-1})&amp;({$tail})&amp;search_word=({$search_word_encode})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=h_com_category&amp;target_c_commu_category_id=({$c_commu_category_id})&amp;page=({$page+1})&amp;({$tail})&amp;search_word=({$search_word_encode})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=h_com_category&amp;target_c_commu_category_id=({$c_commu_category_id})&amp;page=({$page-1})&amp;({$tail})&amp;search_word=({$search_word_encode})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=h_com_category&amp;target_c_commu_category_id=({$c_commu_category_id})&amp;page=({$page+1})&amp;({$tail})&amp;search_word=({$search_word_encode})">æ¬¡ã¸</a>({/if})
 
 <br>
 
 <form action="ktai_page.php" method="GET">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="p" value="h_com_category">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_commu_category_id" value="({$c_commu_category_id})">
-¶ÃºŞØÆâ¤«¤é¸¡º÷<br>
+ï½¶ï¾ƒï½ºï¾ï¾˜å†…ã‹ã‚‰æ¤œç´¢<br>
 <input type="text" name="search_word" maxlength="64" value="({$search_word})"><br>
-<input type="submit" value="¸¡º÷">
+<input type="submit" value="æ¤œç´¢">
 </form>
 
 <hr>
 
-<a href="ktai_page.php?p=h_com_find_all&amp;({$tail})">ºĞ­ÆÃ¨¸¡º÷¤ËÌá¤ë</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_com_find_all&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨æ¤œç´¢ã«æˆ»ã‚‹</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

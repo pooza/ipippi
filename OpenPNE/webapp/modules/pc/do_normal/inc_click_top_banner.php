@@ -1,28 +1,28 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥È¥Ã¥×¤Î¥Ð¥Ê¡¼¤ò¥¯¥ê¥Ã¥¯
+ãƒˆãƒƒãƒ—ã®ãƒãƒŠãƒ¼ã‚’ã‚¯ãƒªãƒƒã‚¯
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_banner_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
-Ìµ¤·
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
+ç„¡ã—
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
-Ìµ¤·
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
+ç„¡ã—
 
-[¸¢¸Â]
+[æ¨©é™]
 
 */
 function doNormalAction_inc_click_top_banner($request) {
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_banner_id = $request['target_c_banner_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 	$p = $_SERVER['HTTP_REFERER'];
@@ -33,4 +33,4 @@ function doNormalAction_inc_click_top_banner($request) {
 	$c_banner = do_inc_click_top_banner_c_banner4c_banner_id($target_c_banner_id);
 	client_redirect_absolute($c_banner['a_href']);
 }
-?>
+

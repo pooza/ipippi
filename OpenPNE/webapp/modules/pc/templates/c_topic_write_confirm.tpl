@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧�񤭹��߳�ǧ****** -->
+<!-- ******ここから：書き込み確認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,19 +37,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�񤭹��߳�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：書き込み確認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�ʲ������ƤǤ�������Ǥ�����</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">以下の内容でよろしいですか？</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -62,7 +62,7 @@
 
 <div class="padding_s">
 
-�ܡ���ʸ
+本　　文
 
 </div>
 
@@ -90,7 +90,7 @@
 
 <div class="padding_s">
 
-�̡��� 1
+写　真 1
 
 </div>
 
@@ -118,7 +118,7 @@
 
 <div class="padding_s">
 
-�̡��� 2
+写　真 2
 
 </div>
 
@@ -147,7 +147,7 @@
 
 <div class="padding_s">
 
-�̿��ΰ���
+写真の位置
 
 </div>
 
@@ -158,9 +158,9 @@
 <div class="padding_s">
 
 ({if $topic_write.image_position=="BOTTOM"})
-��ʸ�β�
+本文の下
 ({else})
-��ʸ�ξ�
+本文の上
 ({/if})
 
 </div>
@@ -180,7 +180,7 @@
 
 <div class="padding_s">
 
-ź�եե����� 1
+添付ファイル 1
 
 </div>
 
@@ -208,7 +208,7 @@
 
 <div class="padding_s">
 
-ź�եե����� 2
+添付ファイル 2
 
 </div>
 
@@ -236,7 +236,7 @@
 
 <div style="text-align:left;" class="padding_w_s">
 
-������¯��ȿ����ɽ�����̿������饹�ȤηǺܤ϶ػߤ��Ƥ��ޤ���<br>
+公序良俗に反する表現・写真・イラストの掲載は禁止しています。<br>
 
 </div>
 
@@ -245,13 +245,13 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;">
 <tr>
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_write_insert_c_commu_topic_comment">
 
 <td>
 <div align="center" style="text-align:center;">
-<input type="submit" value="���񤭹��ߡ�">
+<input type="submit" value="　書き込み　">
 </div>
 </td>
 ({foreach from=$topic_write key=key item=item})
@@ -260,12 +260,12 @@
 </form>
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="p" value="c_topic_detail">
 <td>
 <div align="center" style="text-align:center;">
-<input type="submit" value="������ ����">
+<input type="submit" value="　修　 正　">
 </div>
 </td>
 ({foreach from=$topic_write key=key item=item})
@@ -286,12 +286,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��񤭹��߳�ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：書き込み確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -301,13 +301,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ��񤭹��߳�ǧ****** -->
+<!-- ******ここまで：書き込み確認****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

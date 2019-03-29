@@ -5,7 +5,7 @@
 function pageAction_h_com_find_all($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_category_parent_id = $requests['target_c_commu_category_parent_id'];
 	$keyword = $requests['keyword'];
 	$direc = $requests['direc'];
@@ -15,8 +15,8 @@ function pageAction_h_com_find_all($smarty,$requests) {
 	// ----------
 
 	$keyword = mb_convert_encoding($keyword, "EUC-JP", "EUC-JP,SJIS,UTF-8,JIS");
-	//¥Ð¥°²óÈò¤Î¤¿¤áÈ¾³Ñ¶õÇò¤òÁ´³Ñ¤ËÅý°ì
-	$keyword = str_replace(" ", "¡¡", $keyword);
+	//ãƒã‚°å›žé¿ã®ãŸã‚åŠè§’ç©ºç™½ã‚’å…¨è§’ã«çµ±ä¸€
+	$keyword = str_replace(" ", "ã€€", $keyword);
 
 	do_common_insert_search_log($u, $keyword);
 
@@ -26,7 +26,7 @@ function pageAction_h_com_find_all($smarty,$requests) {
 	$page = $page + $direc;
 	$smarty->assign('page', $page);
 
-	//¸¡º÷·ë²Ì
+	//æ¤œç´¢çµæžœ
 	list($result, $is_prev, $is_next, $total_num, $start_num, $end_num)
 		= p_h_com_find_all_search_c_commu4c_commu_category(
 			$keyword,
@@ -56,4 +56,4 @@ function pageAction_h_com_find_all($smarty,$requests) {
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_com_find_all.tpl");
 }
-?>
+

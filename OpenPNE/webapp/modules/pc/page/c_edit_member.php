@@ -4,14 +4,14 @@
 function pageAction_c_edit_member($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 	if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
 	    handle_kengen_error();
 	}
@@ -19,19 +19,19 @@ function pageAction_c_edit_member($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 
-	//¥á¥ó¥Ð¡¼¾ðÊó
+	//ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("member", db_common_c_member4c_member_id($u));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£ID
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ID
 	$smarty->assign("c_commu_id", $target_c_commu_id);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¾ðÊó
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æƒ…å ±
 	$smarty->assign("c_commu", p_c_edit_member_c_commu4c_commu_id($target_c_commu_id));
 	$page_size = 20;
 
 	$page += $direc;
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¥ê¥¹¥È
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒªã‚¹ãƒˆ
 	$list = p_c_edit_member_c_member_list4c_commu_id($target_c_commu_id, $page_size, $page);
 	$smarty->assign("c_member_list", $list[0]);
 	$smarty->assign("is_prev", $list[1]);
@@ -40,4 +40,4 @@ function pageAction_c_edit_member($smarty,$requests) {
 
 	$smarty->ext_display("c_edit_member.tpl");
 }
-?>
+

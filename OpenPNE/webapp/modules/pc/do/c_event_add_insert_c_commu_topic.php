@@ -2,7 +2,7 @@
 function doAction_c_event_add_insert_c_commu_topic($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$tmpfile1 = $request['image_filename1_tmpfile'];
 	$tmpfile2 = $request['image_filename2_tmpfile'];
 	$tmpfile3 = $request['image_filename3_tmpfile'];
@@ -11,8 +11,8 @@ function doAction_c_event_add_insert_c_commu_topic($request) {
 	$tmpfile13 = $request['file_filename3_tmpfile'];
 	// ----------
 					
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 
 	$event = p_c_event_add_confirm_event4request();
 
@@ -83,13 +83,13 @@ function doAction_c_event_add_insert_c_commu_topic($request) {
 	}
 	t_image_clear_tmp(session_id());
 
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(·ÈÂÓ¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(æºå¸¯ã¸)
 	send_bbs_info_mail($insert_id, $u);  
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(PC¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(PCã¸)
 	send_bbs_info_mail_pc($insert_id, $u); 
 
 	do_c_event_add_insert_c_event_member_as_admin($c_commu_topic_id, $u);
 
 	client_redirect("page.php?p=c_topic_list&target_c_commu_id=".$event['c_commu_id']);
 }
-?>
+

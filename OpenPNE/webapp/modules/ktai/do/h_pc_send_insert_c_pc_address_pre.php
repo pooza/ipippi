@@ -12,26 +12,26 @@ function doAction_h_pc_send_insert_c_pc_address_pre($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$pc_address = $requests['pc_address'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //É¬Í×¤Ê¤·
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //å¿…è¦ãªã—
 
     //---
 
 	$errors = array();
 	if (!db_common_is_mailaddress($pc_address)) {
-		$errors[] = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÀµ¤·¤¯ÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+		$errors[] = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 	}
     elseif(do_common_c_member4pc_address($pc_address)) {
-        $errors[] = "ÆþÎÏ¤·¤¿¥á¡¼¥ë¥¢¥É¥ì¥¹¤Ï´û¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹¡£";
+        $errors[] = "å…¥åŠ›ã—ãŸãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™ã€‚";
     }
     
     if ($errors) {
         $smarty = new TejimayaSmarty($GLOBALS['__SMARTY']);
-        $smarty->ext_set_call_type('ktai'); // ktai ¤È¤·¤Æ¤Î¸Æ¤Ó½Ð¤·
+        $smarty->ext_set_call_type('ktai'); // ktai ã¨ã—ã¦ã®å‘¼ã³å‡ºã—
         $smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
         $smarty->assign('errors', $errors);
         $smarty->ext_display('error_input.tpl');
@@ -43,4 +43,3 @@ function doAction_h_pc_send_insert_c_pc_address_pre($requests)
     client_redirect("ktai_page.php?p=h_pc_send_confirm&$tail");    
 }
 
-?>

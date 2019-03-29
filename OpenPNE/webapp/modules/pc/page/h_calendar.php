@@ -5,7 +5,7 @@
 function pageAction_h_calendar($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$year = $requests['year'];
 		$month = $requests['month'];
 		$pref_id = $requests['pref_id'];
@@ -21,7 +21,7 @@ function pageAction_h_calendar($smarty,$requests) {
 	}
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
-	// ¥¤¥Ù¥ó¥È
+	// ã‚¤ãƒ™ãƒ³ãƒˆ
 	$event_list = p_h_calendar_event4c_member_id($year, $month, $u);
 
 	require_once(DOCUMENT_ROOT . '/lib/pear/Calendar/Month/Weekdays.php');
@@ -74,4 +74,4 @@ function pageAction_h_calendar($smarty,$requests) {
 
 	$smarty->ext_display("h_calendar.tpl");
 }
-?>
+

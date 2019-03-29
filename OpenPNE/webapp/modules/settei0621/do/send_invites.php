@@ -1,5 +1,5 @@
 <?php
-// ¾·ÂÔ¥á¡¼¥ë°ì³çÁ÷¿®
+// æ‹›å¾…ãƒ¡ãƒ¼ãƒ«ä¸€æ‹¬é€ä¿¡
 
 
 function doAction_send_invites($requests)
@@ -23,16 +23,16 @@ function doAction_send_invites($requests)
 	$ktais = array();
 	
 	foreach ($mail_list as $mail) {
-		// ¥á¡¼¥ë¥¢¥É¥ì¥¹¤È¤·¤ÆÀµ¤·¤¯¤Ê¤¤
+		// ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¨ã—ã¦æ­£ã—ããªã„
 		if (!db_common_is_mailaddress($mail)) {
 			continue;
 		}
 
-		// ÅÐÏ¿ºÑ¤ß
+		// ç™»éŒ²æ¸ˆã¿
 		if (p_is_sns_join4mail_address($mail)){
 			$errors[] = $mail;
 		}
-		// ·ÈÂÓ
+		// æºå¸¯
 		elseif (is_ktai_mail_address($mail)) {
 			$ktais[] = $mail;
 		}
@@ -43,7 +43,7 @@ function doAction_send_invites($requests)
 	}
 
 	if (empty($requests['complete'])) {
-		// ³ÎÇ§²èÌÌ¤Ø
+		// ç¢ºèªç”»é¢ã¸
 		$_REQUEST['error_mails'] = $errors;
 		$_REQUEST['pc_mails'] = $pcs;
 		$_REQUEST['ktai_mails'] = $ktais;
@@ -52,17 +52,17 @@ function doAction_send_invites($requests)
 		exit;
 		
 	} else {
-		// Á÷¿®¼Ô¤Ï¤È¤ê¤¢¤¨¤º1ÈÖ¤Ç¸ÇÄê
+		// é€ä¿¡è€…ã¯ã¨ã‚Šã‚ãˆãš1ç•ªã§å›ºå®š
 		$c_member_id_invite = 1;	
 
 		//<PCKTAI
 		if (!defined('OPENPNE_REGIST_FROM') ||
 				(OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_KTAI) >> 1) {		
 			foreach ($ktais as $mail) {
-				// ·ÈÂÓ¤Ø¾·ÂÔ¥á¡¼¥ë
+				// æºå¸¯ã¸æ‹›å¾…ãƒ¡ãƒ¼ãƒ«
 				$session = md5(uniqid(rand(), 1));
 	
-			    // c_member_ktai_pre ¤ËÄÉ²Ã
+			    // c_member_ktai_pre ã«è¿½åŠ 
 				if (do_common_c_member_ktai_pre4ktai_address($mail)) {
 		        	do_update_c_member_ktai_pre($session, $mail, $c_member_id_invite);
 				} else {
@@ -78,11 +78,11 @@ function doAction_send_invites($requests)
 		if (!defined('OPENPNE_REGIST_FROM') ||
 				(OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_PC)) {
 			
-			// PC¤Ø¾·ÂÔ¥á¡¼¥ë
+			// PCã¸æ‹›å¾…ãƒ¡ãƒ¼ãƒ«
 			foreach ($pcs as $mail) {
 				$session = md5(uniqid(rand(), 1));
 				
-				// c_member_pre ¤ËÄÉ²Ã
+				// c_member_pre ã«è¿½åŠ 
 				if (do_common_c_member_pre4pc_address($mail)) {
 					do_h_invite_update_c_inivte($c_member_id_invite,$mail,$requests['message'],$session);
 				} else {
@@ -94,8 +94,7 @@ function doAction_send_invites($requests)
 		}
 		//>
 		
-		admin_client_redirect('top', "¾·ÂÔ¥á¡¼¥ë¤òÁ÷¿®¤·¤Þ¤·¤¿¡£");
+		admin_client_redirect('top', "æ‹›å¾…ãƒ¡ãƒ¼ãƒ«ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚");
 	}
 }
 
-?>

@@ -1,18 +1,18 @@
 ({$inc_header|smarty:nodefaults})
 
-<p>ËÜÅö¤Ë¤³¤Î¥æ¡¼¥¶¡¼¤ò¶¯À©Âà²ñ¤µ¤»¤Æ¤â¤è¤í¤·¤¤¤Ç¤¹¤«¡©</p>
-<p class="caution">¢¨¶¯À©Âà²ñ¤µ¤»¤ë¤È¡¢¤³¤Î¥æ¡¼¥¶¡¼¤Ë´Ø¤¹¤ë¾ğÊó¤Ïºï½ü¤µ¤ì¸µ¤ËÌá¤¹¤³¤È¤Ï¤Ç¤­¤Ş¤»¤ó¡£</p>
+<p>æœ¬å½“ã«ã“ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚’å¼·åˆ¶é€€ä¼šã•ã›ã¦ã‚‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ</p>
+<p class="caution">â€»å¼·åˆ¶é€€ä¼šã•ã›ã‚‹ã¨ã€ã“ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼ã«é–¢ã™ã‚‹æƒ…å ±ã¯å‰Šé™¤ã•ã‚Œå…ƒã«æˆ»ã™ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚</p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_member','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_member_id" value="({$c_member.c_member_id})">
-<input type="submit" class="submit" value="¶¯À©Âà²ñ¤µ¤»¤ë">
+<input type="submit" class="submit" value="å¼·åˆ¶é€€ä¼šã•ã›ã‚‹">
 </form>
 
-<p><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})" onClick="history.back(); return false;" onKeyPress="history.back(); return false;">¥æ¡¼¥¶¡¼¥ê¥¹¥È¤Ë¤â¤É¤ë</a></p>
+<p><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})" onClick="history.back(); return false;" onKeyPress="history.back(); return false;">ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒªã‚¹ãƒˆã«ã‚‚ã©ã‚‹</a></p>
 
 ({if $c_member.image_filename_1})<a href="img.php?filename=({$c_member.image_filename_1})" target="_blank"><img src="img.php?filename=({$c_member.image_filename_1})&amp;w=120&amp;h=120"></a>({/if})
 ({if $c_member.image_filename_2})<a href="img.php?filename=({$c_member.image_filename_2})" target="_blank"><img src="img.php?filename=({$c_member.image_filename_2})&amp;w=120&amp;h=120"></a>({/if})
@@ -24,22 +24,22 @@
 <td>({$c_member.c_member_id})</td>
 </tr>
 <tr>
-<th>¥Ë¥Ã¥¯¥Í¡¼¥à</th>
+<th>ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ </th>
 <td><a href="page.php?p=f_home&amp;target_c_member_id=({$c_member.c_member_id})" target="_blank">({$c_member.nickname})</a></td>
 </tr>
 <tr>
-<th>ºÇ½ª¥í¥°¥¤¥ó</th>
+<th>æœ€çµ‚ãƒ­ã‚°ã‚¤ãƒ³</th>
 <td>({$c_member.access_date|date_format:"%y-%m-%d %H:%M"})</td>
 </tr>
 <tr>
-<th>ÅĞÏ¿Æü</th>
+<th>ç™»éŒ²æ—¥</th>
 <td>({$c_member.r_date|date_format:"%y-%m-%d"})</td>
 </tr>
 <tr>
-<th>À¸Ç¯·îÆü</th>
-<td>({if $c_member.birth_year})({$c_member.birth_year})Ç¯({else})&nbsp;({/if})
-({if $c_member.birth_month})({$c_member.birth_month})·î({else})&nbsp;({/if})
-({if $c_member.birth_day})({$c_member.birth_day})Æü({else})&nbsp;({/if})</td>
+<th>ç”Ÿå¹´æœˆæ—¥</th>
+<td>({if $c_member.birth_year})({$c_member.birth_year})å¹´({else})&nbsp;({/if})
+({if $c_member.birth_month})({$c_member.birth_month})æœˆ({else})&nbsp;({/if})
+({if $c_member.birth_day})({$c_member.birth_day})æ—¥({else})&nbsp;({/if})</td>
 </tr>
 ({foreach from=$c_profile_list item=prof})
 <tr>
@@ -48,15 +48,15 @@
 </tr>
 ({/foreach})
 <tr>
-<th>PC¥¢¥É¥ì¥¹</th>
+<th>PCã‚¢ãƒ‰ãƒ¬ã‚¹</th>
 <td>({if $c_member.secure.pc_address})<a href="mailto:({$c_member.secure.pc_address|escape:"hexentity"})">({$c_member.secure.pc_address|t_truncate:"30"|escape:"hexentity"})</a>({else})&nbsp;({/if})</td>
 </tr>
 <tr>
-<th>·ÈÂÓ¥¢¥É¥ì¥¹</th>
+<th>æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹</th>
 <td>({if $c_member.secure.ktai_address})<a href="mailto:({$c_member.secure.ktai_address})">({$c_member.secure.ktai_address|t_truncate:"30"})</a>({else})&nbsp;({/if})</td>
 </tr>
 <tr>
-<th>ÅĞÏ¿¥¢¥É¥ì¥¹</th>
+<th>ç™»éŒ²ã‚¢ãƒ‰ãƒ¬ã‚¹</th>
 <td>({if $c_member.secure.regist_address})({$c_member.secure.regist_address})({else})&nbsp;({/if})</td>
 </tr>
 </table>

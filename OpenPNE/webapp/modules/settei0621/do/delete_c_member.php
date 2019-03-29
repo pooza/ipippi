@@ -1,5 +1,5 @@
 <?php
-// ¥æ¡¼¥¶¡¼¶¯À©Âà²ñ
+// ãƒ¦ãƒ¼ã‚¶ãƒ¼å¼·åˆ¶é€€ä¼š
 
 
 function doAction_delete_c_member($requests)
@@ -8,7 +8,7 @@ function doAction_delete_c_member($requests)
 	
 	db_common_delete_c_member($requests['target_c_member_id']);
 
-	admin_client_redirect('top', "¥æ¡¼¥¶¡¼¤Î¶¯À©Âà²ñ¤ò´°Î»¤·¤Þ¤·¤¿");
+	admin_client_redirect('top', "ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®å¼·åˆ¶é€€ä¼šã‚’å®Œäº†ã—ã¾ã—ãŸ");
 }
 
-?>
+

@@ -18,16 +18,16 @@
 <tr>
 <td class="full_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******�������顧�����Խ���ǧ****** -->
+<!-- ******ここから：日記編集確認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,18 +37,18 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�����Խ���ǧ������* -->
-({*�������顧header*})
+<!-- *ここから：日記編集確認＞内容* -->
+({*ここから：header*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���Ƥ��ǧ�����褱��Сֺ����פ򥯥�å����Ƥ���������</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">内容を確認し、よければ「作成」をクリックしてください。</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 ({*********})
 <tr>
@@ -60,7 +60,7 @@
 <td style="width:150px;" class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�����ȥ�
+タイトル
 </div>
 
 </td>
@@ -86,7 +86,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�ܡ���ʸ
+本　　文
 </div>
 
 </td>
@@ -110,7 +110,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�̡��� 1
+写　真 1
 </div>
 
 </td>
@@ -134,7 +134,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�̡��� 2
+写　真 2
 </div>
 
 </td>
@@ -158,7 +158,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�̡��� 3
+写　真 3
 </div>
 
 </td>
@@ -183,7 +183,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�̿��ΰ���
+写真の位置
 </div>
 
 </td>
@@ -192,9 +192,9 @@
 <div class="padding_s">
 
 ({if $form_val.image_position=='BOTTOM'})
-��ʸ�β�
+本文の下
 ({else})
-��ʸ�ξ�
+本文の上
 ({/if})
 
 </div>
@@ -215,7 +215,7 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;">
 <tr>
 <form action="do.php" method="post" enctype="multipart/form-data" style="display:inline">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_diary_edit_insert_c_diary">
 <input type="hidden" name="target_c_diary_id" value="({$form_val.target_c_diary_id})">
@@ -225,18 +225,18 @@
 <input type="hidden" name="tmpfile_2" value="({$form_val.tmpfile_2})">
 <input type="hidden" name="tmpfile_3" value="({$form_val.tmpfile_3})">
 <input type="hidden" name="image_position" value="({$form_val.image_position})">
-<td><input type="submit" value="���� ���ꡡ"></td>
+<td><input type="submit" value="　決 　定　"></td>
 </form>
 
 <form action="page.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_diary_edit">
 <input type="hidden" name="target_c_diary_id" value="({$form_val.target_c_diary_id})">
 <input type="hidden" name="del_img" value="({$form_val.del_img})">
 <input type="hidden" name="subject" value="({$form_val.subject})">
 <input type="hidden" name="body" value="({$form_val.body})">
 <input type="hidden" name="orig_size" value="1">
-<td><input type="submit" value="���� ������"></td>
+<td><input type="submit" value="　修 　正　"></td>
 </form>
 </tr>
 </table>
@@ -250,12 +250,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ������Խ���ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：日記編集確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -265,14 +265,14 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ������Խ���ǧ****** -->
+<!-- ******ここまで：日記編集確認****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

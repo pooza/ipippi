@@ -1,5 +1,5 @@
 <?php
-// ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜÄÉ²Ã
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®è¿½åŠ 
 
 
 function pageAction_insert_c_profile(&$smarty,$requests)
@@ -11,4 +11,3 @@ function pageAction_insert_c_profile(&$smarty,$requests)
 	$smarty->ext_display("insert_c_profile.tpl");
 }
 
-?>

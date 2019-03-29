@@ -9,13 +9,13 @@ function normalAction_regist_input($smarty,$requests)
 	}
     //>
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ses = $requests['ses'];
 	// ----------
     
-    // ¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú¤«¤É¤¦¤«
+    // ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹ã‹ã©ã†ã‹
     if (!$pre = c_member_ktai_pre4session($ses)) {
-        // Ìµ¸ú¤Î¾ì¹ç¡¢login ¤Ø¥ê¥À¥¤¥ì¥¯¥È
+        // ç„¡åŠ¹ã®å ´åˆã€login ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
         client_redirect("ktai_normal.php?p=login");
         exit;
     }
@@ -30,9 +30,9 @@ function normalAction_regist_input($smarty,$requests)
 	    21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
 	    31);
 	$public_flags = array(
-	'public' => 'Á´°÷¤Ë¸ø³«',
-	'friend' => WORD_MY_FRIEND_HALF.'¤Þ¤Ç¸ø³«',
-	'private'=> '¸ø³«¤·¤Ê¤¤',
+	'public' => 'å…¨å“¡ã«å…¬é–‹',
+	'friend' => WORD_MY_FRIEND_HALF.'ã¾ã§å…¬é–‹',
+	'private'=> 'å…¬é–‹ã—ãªã„',
 	);
 	$smarty->assign('public_flags', $public_flags);
 	
@@ -42,4 +42,4 @@ function normalAction_regist_input($smarty,$requests)
     $smarty->assign($v);
     $smarty->ext_display('regist_input.tpl');
 }
-?>
+

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ¥á¡¼¥ë¤«¤éÆüµ­¤òÄÉ²Ã
+ * ãƒ¡ãƒ¼ãƒ«ã‹ã‚‰æ—¥è¨˜ã‚’è¿½åŠ 
  */
 function mail_insert_c_diary($c_member_id, $subject, $body)
 {
@@ -10,7 +10,7 @@ function mail_insert_c_diary($c_member_id, $subject, $body)
     return _insert4db($sql);
 }
 /**
- * Æüµ­¤Ë²èÁü¤òÄÉ²Ã¤¹¤ë
+ * æ—¥è¨˜ã«ç”»åƒã‚’è¿½åŠ ã™ã‚‹
  */
 function mail_update_c_diary_image($c_diary_id, $image_filename_1)
 {
@@ -24,7 +24,7 @@ function mail_update_c_diary_image($c_diary_id, $image_filename_1)
     return _mysql_query4db($sql);
 }
 /**
- * ·Ç¼¨ÈÄ½ñ¤­¹þ¤ß¤Ë²èÁü¤òÄÉ²Ã¤¹¤ë
+ * æŽ²ç¤ºæ¿æ›¸ãè¾¼ã¿ã«ç”»åƒã‚’è¿½åŠ ã™ã‚‹
  */
 function mail_update_c_commu_topic_comment_image($c_commu_topic_comment_id, $image_filename)
 {
@@ -38,7 +38,7 @@ function mail_update_c_commu_topic_comment_image($c_commu_topic_comment_id, $ima
     return _mysql_query4db($sql);
 }
 /**
- * ¥È¥Ô¥Ã¥¯ID¤«¤é¥È¥Ô¥Ã¥¯¾ðÊó¤ò¼èÆÀ
+ * ãƒˆãƒ”ãƒƒã‚¯IDã‹ã‚‰ãƒˆãƒ”ãƒƒã‚¯æƒ…å ±ã‚’å–å¾—
  * 
  * @param int c_commu_topic_id
  * @return array_of_array c_commu_topic.*, commu_name
@@ -53,7 +53,7 @@ function mail_c_commu_topic4c_commu_topic_id($c_commu_topic_id)
 }
 
 /**
- * ¥È¥Ô¥Ã¥¯¥³¥á¥ó¥È½ñ¤­¹þ¤ß
+ * ãƒˆãƒ”ãƒƒã‚¯ã‚³ãƒ¡ãƒ³ãƒˆæ›¸ãè¾¼ã¿
  * 
  * @param   int    $c_commu_id
  * @param   int    $c_commu_topic_id
@@ -76,7 +76,7 @@ function mail_insert_c_member_ktai_pre($session, $ktai_address, $c_member_id_inv
 }
 
 /**
- * ²èÁü¤òc_image¤ËÅÐÏ¿¤¹¤ë
+ * ç”»åƒã‚’c_imageã«ç™»éŒ²ã™ã‚‹
  */
 function mail_insert_c_image($image_data, $filename)
 {
@@ -95,7 +95,7 @@ function mail_c_member_ktai_pre4ktai_address($ktai_address)
 }
 
 /**
- * ¥á¥¤¥ó²èÁü¤òÅÐÏ¿¤¹¤ë
+ * ãƒ¡ã‚¤ãƒ³ç”»åƒã‚’ç™»éŒ²ã™ã‚‹
  */
 function mail_update_c_member_image($c_memer_id, $image_filename, $img_num)
 {
@@ -108,4 +108,4 @@ function mail_update_c_member_image($c_memer_id, $image_filename, $img_num)
     return _mysql_query4db($sql);
 }
 
-?>
+

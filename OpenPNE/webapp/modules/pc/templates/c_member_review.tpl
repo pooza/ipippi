@@ -18,14 +18,14 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({if $is_c_commu_member})
 <!-- ********************************************* -->
-<!-- ******�������顧���������ӥ塼��Ǻܤ���****** -->
+<!-- ******ここから：おすすめレビューを掲載する****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -35,22 +35,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���������ӥ塼��Ǻܤ��������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：おすすめレビューを掲載する＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b">[({$c_commu.name})] ���������ӥ塼��Ǻܤ���</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b">[({$c_commu.name})] おすすめレビューを掲載する</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ�����Ƴ��� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞内容外枠 -->
 <div class="bg_05 border_01" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -73,7 +73,7 @@
 <td style="width:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:6px;" class="bg_09"><img src="./skin/dummy.gif" style="width:6px;height:1px;" class="dummy"></td>
 <td style="width:550px;" align="center">
-<!-- �������顧�����ơ�����Ƴ��ȡ�����Ƥ��Τ�� -->
+<!-- ここから：主内容＞＞内容外枠＞＞内容そのもの -->
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:550px;">
 ({*********})
@@ -88,14 +88,14 @@
 <div style="padding:10px 40px;text-align:center;">
 
 <form action="page.php?p=c_member_review_add&target_c_commu_id=({$c_commu.c_commu_id})" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
-<input type="submit" value="����ӥ塼��Ǻܤ��롡">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
+<input type="submit" value="　レビューを掲載する　">
 </form>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-���ߥ�˥ƥ���ˤ��ʤ��������������������ӥ塼��Ǻܤ��뤳�Ȥ��Ǥ��ޤ���
-���������ӥ塼�κ�����<a href="page.php?p=h_review_add">������</a>
+コミュニティ上にあなたが作成したおすすめレビューを掲載することができます。
+おすすめレビューの作成は<a href="page.php?p=h_review_add">こちら</a>
 
 </div>
 
@@ -109,7 +109,7 @@
 ({*********})
 </table>
 
-<!-- �����ޤǡ������ơ�����Ƴ��ȡ�����Ƥ��Τ�� -->
+<!-- ここまで：主内容＞＞内容外枠＞＞内容そのもの -->
 </td>
 <td style="width:6px;" class="bg_09"><img src="./skin/dummy.gif" style="width:6px;height:1px;" class="dummy"></td>
 <td style="width:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -132,13 +132,13 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- �����ޤǡ������ơ�����Ƴ��� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����������ӥ塼��Ǻܤ���������* -->
+<!-- ここまで：主内容＞＞内容外枠 -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：おすすめレビューを掲載する＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -148,7 +148,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����������ӥ塼��Ǻܤ���****** -->
+<!-- ******ここまで：おすすめレビューを掲載する****** -->
 <!-- ********************************************* -->
 ({/if})
 
@@ -157,9 +157,9 @@
 ({if $c_member_review})
 
 <!-- ********************************************* -->
-<!-- ******�������顧���С��Τ��������ӥ塼****** -->
+<!-- ******ここから：メンバーのおすすめレビュー****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_member_review_add_confirm">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 
@@ -172,22 +172,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���С��Τ��������ӥ塼������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：メンバーのおすすめレビュー＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b">���С��Τ��������ӥ塼</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b">メンバーのおすすめレビュー</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���ӥ塼�ꥹ�ȷ��ɽ������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞レビューリスト件数表示タブ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -199,9 +199,9 @@
 <td style="width:634px;" class="bg_02" align="right" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $is_prev})<a href=page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=-1&page=({$page})>����</a> ({/if})
-({$start_num})���({$end_num})���ɽ��<br>
-({if $is_next})<a href=page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=1&page=({$page})>����</a>({/if})
+({if $is_prev})<a href=page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=-1&page=({$page})>＜前</a> ({/if})
+({$start_num})件～({$end_num})件を表示<br>
+({if $is_next})<a href=page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=1&page=({$page})>次＞</a>({/if})
 
 </div>
 </td>
@@ -213,8 +213,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ӥ塼�ꥹ�ȷ��ɽ������ -->
-<!-- �������顧�����ơ���ӥ塼���Ƴ��� -->
+<!-- ここまで：主内容＞＞レビューリスト件数表示タブ -->
+<!-- ここから：主内容＞＞レビュー内容外枠 -->
 <div class="bg_05 border_01" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -237,7 +237,7 @@
 <td style="width:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:6px;" class="bg_09"><img src="./skin/dummy.gif" style="width:6px;height:1px;" class="dummy"></td>
 <td style="width:550px;" align="center">
-<!-- �������顧�����ơ���ӥ塼���Ƴ��ȡ���ӥ塼���� -->
+<!-- ここから：主内容＞＞レビュー内容外枠＞＞レビュー内容 -->
 
 ({foreach from=$c_member_review item=review})
 <table border="0" cellspacing="0" cellpadding="0" style="width:550px;padding:0px auto;">
@@ -258,7 +258,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
 <a href="({$review.url})" target="_blank">
-�ܺ٤򸫤�
+詳細を見る
 </a>
 
 </div>
@@ -269,7 +269,7 @@
 
 <div class="padding_s">
 
-�����ȥ�
+タイトル
 
 </div>
 
@@ -297,7 +297,7 @@
 
 <div class="padding_s">
 
-�⡡����
+説　　明
 
 </div>
 
@@ -327,7 +327,7 @@
 
 <div class="padding_s">
 
-�Ǻ�����
+掲載日時
 
 </div>
 
@@ -336,7 +336,7 @@
 <td style="width:286px;" class="bg_02" align="left" valign="middle">
 <div class="padding_s">
 
-({$review.r_datetime|date_format:"%m��%d�� %H:%M"})
+({$review.r_datetime|date_format:"%m月%d日 %H:%M"})
 
 </div>
 </td>
@@ -355,7 +355,7 @@
 
 <div class="padding_s">
 
-���ƥ���
+カテゴリ
 
 </div>
 
@@ -383,7 +383,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=h_review_list_product&c_review_id=({$review.c_review_id})">¾���С��Υ�ӥ塼�򸫤�</a>&nbsp;
+<a href="page.php?p=h_review_list_product&c_review_id=({$review.c_review_id})">他メンバーのレビューを見る</a>&nbsp;
 
 </div>
 
@@ -398,7 +398,7 @@
 </table>
 ({/foreach})
 
-<!-- �����ޤǡ������ơ���ӥ塼���Ƴ��ȡ���ӥ塼���� -->
+<!-- ここまで：主内容＞＞レビュー内容外枠＞＞レビュー内容 -->
 </td>
 <td style="width:6px;" class="bg_09"><img src="./skin/dummy.gif" style="width:6px;height:1px;" class="dummy"></td>
 <td style="width:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -421,8 +421,8 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- �����ޤǡ������ơ���ӥ塼���Ƴ��� -->
-<!-- �������顧�����ơ���ӥ塼�ꥹ�ȷ��ɽ������ -->
+<!-- ここまで：主内容＞＞レビュー内容外枠 -->
+<!-- ここから：主内容＞＞レビューリスト件数表示タブ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -434,9 +434,9 @@
 <td style="width:632px;" class="bg_02" align="right" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $is_prev})<a href="page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=-1&page=({$page})">����</a> ({/if})
-({$start_num})���({$end_num})���ɽ��<br>
-({if $is_next})<a href="page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=1&page=({$page})">����</a>({/if})
+({if $is_prev})<a href="page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=-1&page=({$page})">＜前</a> ({/if})
+({$start_num})件～({$end_num})件を表示<br>
+({if $is_next})<a href="page.php?p=c_member_review&target_c_commu_id=({$c_commu.c_commu_id})&direc=1&page=({$page})">次＞</a>({/if})
 
 </div>
 </td>
@@ -448,13 +448,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ӥ塼�ꥹ�ȷ��ɽ������ -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����С��Τ��������ӥ塼�������* -->
+<!-- ここまで：主内容＞＞レビューリスト件数表示タブ -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：メンバーのおすすめレビュー＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -464,27 +464,27 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����С��Τ��������ӥ塼****** -->
+<!-- ******ここまで：メンバーのおすすめレビュー****** -->
 <!-- ********************************************* -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 ({/if})
 
 <!-- **************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ��ȥåפ�****** -->
+<!-- ******ここから：コミュニティトップへ****** -->
 <div id="link_community_top" align="center">
 
 <img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;
-<a href="page.php?p=c_home&target_c_commu_id=({$c_commu.c_commu_id})">[({$c_commu.name})]���ߥ�˥ƥ��ȥåפ�</a>
+<a href="page.php?p=c_home&target_c_commu_id=({$c_commu.c_commu_id})">[({$c_commu.name})]コミュニティトップへ</a>
 
 </div>
-<!-- ******�����ޤǡ����ߥ�˥ƥ��ȥåפ�****** -->
+<!-- ******ここまで：コミュニティトップへ****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

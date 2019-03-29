@@ -1,9 +1,9 @@
 <?php
 /* 
- *  init.inc - Á´¥Ú¡¼¥¸¶¦ÄÌ½é´ü²½
+ *  init.inc - å…¨ãƒšãƒ¼ã‚¸å…±é€šåˆæœŸåŒ–
  */
 
-// magic_quotes_gpc = On ¤Î¾ì¹ç¤ÎÂĞºö
+// magic_quotes_gpc = On ã®å ´åˆã®å¯¾ç­–
 if (get_magic_quotes_gpc()) {
 	function strip_magic_slashes($arr)	{
 		return is_array($arr) ?
@@ -17,23 +17,23 @@ if (get_magic_quotes_gpc()) {
 
 //-----
 
-// ¥Õ¥¡¥¤¥ë¥·¥¹¥Æ¥à¾å¤Î¥Ñ¥¹
+// ãƒ•ã‚¡ã‚¤ãƒ«ã‚·ã‚¹ãƒ†ãƒ ä¸Šã®ãƒ‘ã‚¹
 defined('DOCUMENT_ROOT') or define('DOCUMENT_ROOT', dirname(dirname(__FILE__)));
 
 /**
- * ¿·µ¬ÅĞÏ¿
+ * æ–°è¦ç™»éŒ²
  * 
- * OPENPNE_REGIST_FROM_NONE  : ¿·µ¬ÅĞÏ¿ÉÔ²Ä
- * OPENPNE_REGIST_FROM_PC    : PC¤«¤é¤Î¤ßÅĞÏ¿²Ä
- * OPENPNE_REGIST_FROM_KTAI  : ·ÈÂÓ¤«¤é¤Î¤ßÅĞÏ¿²Ä
- * OPENPNE_REGIST_FROM_PCKTAI: PC¡¦·ÈÂÓ¤«¤éÅĞÏ¿²Ä
+ * OPENPNE_REGIST_FROM_NONE  : æ–°è¦ç™»éŒ²ä¸å¯
+ * OPENPNE_REGIST_FROM_PC    : PCã‹ã‚‰ã®ã¿ç™»éŒ²å¯
+ * OPENPNE_REGIST_FROM_KTAI  : æºå¸¯ã‹ã‚‰ã®ã¿ç™»éŒ²å¯
+ * OPENPNE_REGIST_FROM_PCKTAI: PCãƒ»æºå¸¯ã‹ã‚‰ç™»éŒ²å¯
  */
 define('OPENPNE_REGIST_FROM_NONE'  , 0);
 define('OPENPNE_REGIST_FROM_PC'    , 1);
 define('OPENPNE_REGIST_FROM_KTAI'  , 2);
 define('OPENPNE_REGIST_FROM_PCKTAI', 3);
 
-/* ·ÈÂÓ¥á¡¼¥ë¤Î¥É¥á¥¤¥óÌ¾ */
+/* æºå¸¯ãƒ¡ãƒ¼ãƒ«ã®ãƒ‰ãƒ¡ã‚¤ãƒ³å */
 $GLOBALS['__OpenPNE']['KTAI_DOMAINS'] = array(
     'docomo.ne.jp',
     'ezweb.ne.jp',
@@ -56,7 +56,7 @@ $GLOBALS['__OpenPNE']['KTAI_DOMAINS'] = array(
     'me.com',
 );
 
-// Smarty ¤ÎÀßÄê
+// Smarty ã®è¨­å®š
 $GLOBALS['__SMARTY'] = array(
 	'template_dir' => DOCUMENT_ROOT . '/webapp/templates/',
 	'compile_dir' => DOCUMENT_ROOT . '/var/templates_c/',
@@ -71,11 +71,11 @@ $GLOBALS['__SMARTY']['plugins_dir'][] = DOCUMENT_ROOT . '/lib/smarty/plugins';
 $GLOBALS['__SMARTY']['plugins_dir'][] = DOCUMENT_ROOT . '/lib/tejimaya/smarty_plugins';
 
 
-/* ÀßÄê¥Õ¥¡¥¤¥ë¤ÎÆÉ¤ß¹ş¤ß */
+/* è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ */
 require_once DOCUMENT_ROOT . "/lib/utility.inc.php";
 require_once getConfigFileName();
 
-// cookie ÀßÄê
+// cookie è¨­å®š
 $url = parse_url(ABSOLUTE_PATH);
 session_set_cookie_params(2592000, $url['path']); // 30 days
 unset($url);
@@ -87,28 +87,28 @@ ini_set("session.use_only_cookies", "1");
 define('MAGPIE_CACHE_DIR', DOCUMENT_ROOT . '/var/magpie_cache/');
 define('MAGPIE_OUTPUT_ENCODING', 'UTF-8');
 
-/* PEAR¥é¥¤¥Ö¥é¥ê¤Î¥Ñ¥¹ */
+/* PEARãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒ‘ã‚¹ */
 if (!defined('PEAR_DIR')) {
 	define('PEAR_DIR', DOCUMENT_ROOT . "/lib/pear/");
 	ini_set("include_path" , PEAR_DIR . PATH_SEPARATOR . ini_get("include_path"));
 }
 
-// ¥é¥¤¥Ö¥é¥ê¥Õ¥¡¥¤¥ë¤ÎÆÉ¤ß¹ş¤ß
+// ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
 require_once(DOCUMENT_ROOT . '/lib/tejimaya/TejimayaSmarty.inc');
 require_once(DOCUMENT_ROOT . '/lib/tejimaya/Validator.class.php');
 require_once(DOCUMENT_ROOT . '/lib/tejimaya/db.inc');
 db_connect();
 
-// DB¤«¤éÀßÄêÆÉ¤ß¹ş¤ß
+// DBã‹ã‚‰è¨­å®šèª­ã¿è¾¼ã¿
 db_common_load_config();
 
 defined('ADMIN_EMAIL') or define('ADMIN_EMAIL', 'sns@'.MAIL_SERVER_DOMAIN);
 
-// ¥Õ¥ì¥ó¥ÉÊ¸¸À
-defined('WORD_FRIEND') or define('WORD_FRIEND', 'ÃÎ¤ê¹ç¤¤');
-defined('WORD_FRIEND_HALF') or define('WORD_FRIEND_HALF', 'ÃÎ¤ê¹ç¤¤');
-defined('WORD_MY_FRIEND') or define('WORD_MY_FRIEND', 'ÃÎ¤ê¹ç¤¤');
-defined('WORD_MY_FRIEND_HALF') or define('WORD_MY_FRIEND_HALF', 'ÃÎ¤ê¹ç¤¤');
+// ãƒ•ãƒ¬ãƒ³ãƒ‰æ–‡è¨€
+defined('WORD_FRIEND') or define('WORD_FRIEND', 'çŸ¥ã‚Šåˆã„');
+defined('WORD_FRIEND_HALF') or define('WORD_FRIEND_HALF', 'çŸ¥ã‚Šåˆã„');
+defined('WORD_MY_FRIEND') or define('WORD_MY_FRIEND', 'çŸ¥ã‚Šåˆã„');
+defined('WORD_MY_FRIEND_HALF') or define('WORD_MY_FRIEND_HALF', 'çŸ¥ã‚Šåˆã„');
 
 // amazon
 defined('AMAZON_TOKEN') or define('AMAZON_TOKEN', 'AKIAIPIHNNAVA2I2V4EQ');
@@ -117,11 +117,11 @@ defined('AMAZON_AFFID') or define('AMAZON_AFFID', 'snsoftjp-22');
 defined('AMAZON_LOCALE') or define('AMAZON_LOCALE', 'jp');
 //defined('AMAZON_BASEURL') or define('AMAZON_BASEURL', 'http://xml-jp.amznxslt.com/onca/xml3');
 
-// ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ sort_order
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›® sort_order
 defined('SORT_ORDER_NICK') or define('SORT_ORDER_NICK', 0);
 defined('SORT_ORDER_BIRTH') or define('SORT_ORDER_BIRTH', 0);
 
-/* frameworkÍÑ¥é¥¤¥Ö¥é¥êÆÉ¤ß¹ş¤ß */
+/* frameworkç”¨ãƒ©ã‚¤ãƒ–ãƒ©ãƒªèª­ã¿è¾¼ã¿ */
 require_once(DOCUMENT_ROOT . '/webapp/lib/t_framework.php');
 
 $GLOBALS['__Framework']['call_type'] = ''; // 'pc' or 'ktai' or other...

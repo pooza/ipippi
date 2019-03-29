@@ -1,9 +1,9 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">¤¢¤·¤¢¤È</font></center>
+<center><font color="orange">ã‚ã—ã‚ã¨</font></center>
 <hr>
 
-¤¢¤Ê¤¿¤Î¥Ú¡¼¥¸¤òË¬¤ì¤¿¿Í¤¿¤Á¤Ç¤¹¡£<br>
+ã‚ãªãŸã®ãƒšãƒ¼ã‚¸ã‚’è¨ªã‚ŒãŸäººãŸã¡ã§ã™ã€‚<br>
 
 ({foreach from=$c_ashiato_list item=c_ashiato})
 
@@ -12,6 +12,6 @@
 ({/foreach})
 <br>
 <hr>
-<a href="ktai_page.php?p=h_home&({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

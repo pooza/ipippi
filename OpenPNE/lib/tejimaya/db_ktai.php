@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ¿·Ãå¥á¥Ã¥»¡¼¥¸¿ô¼èÆÀ
+ * æ–°ç€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ•°å–å¾—
  */
 function count_c_message_unread4c_member_id($c_member_id)
 {
@@ -12,8 +12,8 @@ function count_c_message_unread4c_member_id($c_member_id)
 }
 
 /**
- * »²²Ã¥³¥ß¥å¥Ë¥Æ¥£
- * ºÇ¿·½ñ¤­¹þ¤ß½ç
+ * å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£
+ * æœ€æ–°æ›¸ãè¾¼ã¿é †
  */
 function c_commu_list_lastupdate4c_member_id($c_member_id, $limit)
 {
@@ -34,8 +34,8 @@ function c_commu_list_lastupdate4c_member_id($c_member_id, $limit)
 
 
 /**
- * ·ÈÂÓÇ§¾ÚÍÑ
- * @todo Å¬ÀÚ¤Ê¾ì½ê¤Ø°Ü¤¹
+ * æºå¸¯èªè¨¼ç”¨
+ * @todo é©åˆ‡ãªå ´æ‰€ã¸ç§»ã™
  */
 function k_auth($c_member_id)
 {
@@ -83,7 +83,7 @@ function k_do_update_ktai_address($c_member_id, $ktai_address)
 }
 
 /**
- * ·ÈÂÓ¥¢¥É¥ì¥¹ÊÑ¹¹
+ * æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹å¤‰æ›´
  */
 function k_do_insert_c_ktai_address_pre($c_member_id, $session, $ktai_address)
 {
@@ -182,8 +182,8 @@ function k_do_update_c_member($c_member_id, $props)
 }
 
 /**
- * ¥á¥ó¥Ð¡¼ID¤«¤é¥Ï¥Ã¥·¥å²½¤µ¤ì¤¿¥Ñ¥¹¥ï¡¼¥É¤ò¼èÆÀ
- * (·ÈÂÓ¤ÎÇ§¾Ú¤Ë»ÃÄêÅª¤ËÍÑ¤¤¤ë)
+ * ãƒ¡ãƒ³ãƒãƒ¼IDã‹ã‚‰ãƒãƒƒã‚·ãƒ¥åŒ–ã•ã‚ŒãŸãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å–å¾—
+ * (æºå¸¯ã®èªè¨¼ã«æš«å®šçš„ã«ç”¨ã„ã‚‹)
  * 
  * @param int $c_member_id
  * @return string hashed password
@@ -242,9 +242,9 @@ function k_common_get_easy_access_id()
 	
 	// DoCoMo
 	if (!strncmp($ua, 'DoCoMo', 6)) {
-		// ·ÈÂÓ¡¦¼«Æ°¼ÖÅÅÏÃ
+		// æºå¸¯ãƒ»è‡ªå‹•è»Šé›»è©±
 		if (substr($ua, 7, 3) === '1.0') {
-			// ¡Ø/¡Ù¶èÀÚ¤ê¤ÇºÇ¸å¤Î¤â¤Î¤ò¼è¤ë
+			// ã€Ž/ã€åŒºåˆ‡ã‚Šã§æœ€å¾Œã®ã‚‚ã®ã‚’å–ã‚‹
 			$pieces = explode('/', $ua);
 			$ser = array_pop($pieces);
 			
@@ -272,8 +272,8 @@ function k_common_get_easy_access_id()
 		}
 	}
 	// Vodafone(3G)
-	//* Up.Browser ¤òÅëºÜ¤·¤Æ¤¤¤ë¤â¤Î¤¬¤¢¤ë
-	//* MOT¤ÏÀ½Â¤ÈÖ¹æ¤ò¼èÆÀ¤Ç¤­¤Ê¤¤
+	//* Up.Browser ã‚’æ­è¼‰ã—ã¦ã„ã‚‹ã‚‚ã®ãŒã‚ã‚‹
+	//* MOTã¯è£½é€ ç•ªå·ã‚’å–å¾—ã§ããªã„
 	elseif (!strncmp($ua, 'Vodafone', 8)) {
 		$pieces = explode('/', $ua);
 		$sn = array_shift(explode(' ', $pieces[4]));
@@ -287,7 +287,7 @@ function k_common_get_easy_access_id()
 	elseif (!strncmp($ua, 'KDDI', 4)
 		  || !strncasecmp($ua, 'up.browser', 10)
 		) {
-		//¥µ¥Ö¥¹¥¯¥é¥ÐID(au)
+		//ã‚µãƒ–ã‚¹ã‚¯ãƒ©ãƒID(au)
 		if ($_SERVER['HTTP_X_UP_SUBNO']) {
 			$easy_access_id = $_SERVER['HTTP_X_UP_SUBNO'];
 		}
@@ -313,4 +313,4 @@ function db_ktai_c_member_id4easy_access_id($easy_access_id)
 	return get_one4db($sql);
 }
 
-?>
+

@@ -3,7 +3,7 @@
 ({ext_include file="inc_extension_pagelayout_top.tpl"})
 <div id="container_login"><div class="w_screen">
 <img src="img.php?filename=skin_login" class="bg">
-<a class="patentsalon" href="http://www.patentsalon.com/" target="_blank"><img src="./skin/dummy.gif" alt="¥Ñ¥Æ¥ó¥È¥µ¥í¥ó"></a>
+<a class="patentsalon" href="http://www.patentsalon.com/" target="_blank"><img src="./skin/dummy.gif" alt="ãƒ‘ãƒ†ãƒ³ãƒˆã‚µãƒ­ãƒ³"></a>
 ({if $top_banner_html})
 <div class="banner">
 ({$top_banner_html|smarty:nodefaults})
@@ -26,15 +26,15 @@
 <input name="cmd" type="hidden" value="login">
 <input class="text" tabindex="1" name="username" id="username" type="text">
 <input class="text" tabindex="2" name="password" id="password" type="password">
-<input type="image" tabindex="3" name="submit" src="./skin/dummy.gif" border="0" id="button_login" alt="¥í¥°¥¤¥ó">
+<input type="image" tabindex="3" name="submit" src="./skin/dummy.gif" border="0" id="button_login" alt="ãƒ­ã‚°ã‚¤ãƒ³">
 </form>
 
 ({if !$IS_CLOSED_SNS && (($smarty.const.OPENPNE_REGIST_FROM) & ($smarty.const.OPENPNE_REGIST_FROM_PC))})
-<a href="./normal.php?p=public_invite" id="button_new_regist"><img src="./skin/dummy.gif" alt="¿·µ¬ÅĞÏ¿"></a>
+<a href="./normal.php?p=public_invite" id="button_new_regist"><img src="./skin/dummy.gif" alt="æ–°è¦ç™»éŒ²"></a>
 ({/if})
 
 <div class="msg lh_130">
-<span class="password_query"><a href="./normal.php?p=password_query">&gt;¥Ñ¥¹¥ï¡¼¥É¤òËº¤ì¤¿Êı¤Ï¤³¤Á¤é¤Ø</a></span>
+<span class="password_query"><a href="./normal.php?p=password_query">&gt;ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¿˜ã‚ŒãŸæ–¹ã¯ã“ã¡ã‚‰ã¸</a></span>
 </div>
 
 <div class="footer">

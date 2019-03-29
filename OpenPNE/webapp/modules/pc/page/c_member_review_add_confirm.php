@@ -3,18 +3,18 @@
 function pageAction_c_member_review_add_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		// ----------
 
 
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_id = $requests['target_c_commu_id'];
 		$c_review_id = $requests['c_review_id'];
 		// ----------
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-		//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+		//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒ
 		if(!_db_is_c_commu_member($c_commu_id, $u)){
 			handle_kengen_error();
 		}
@@ -36,4 +36,4 @@ function pageAction_c_member_review_add_confirm($smarty,$requests) {
 		$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 		$smarty->ext_display('c_member_review_add_confirm.tpl');
 }
-?>
+

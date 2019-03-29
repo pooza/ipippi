@@ -13,4 +13,4 @@ function pageAction_h_search($smarty,$requests) {
 
 	$smarty->ext_display("h_search.tpl");
 }
-?>
+

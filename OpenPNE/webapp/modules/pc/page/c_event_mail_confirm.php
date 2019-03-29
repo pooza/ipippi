@@ -3,7 +3,7 @@
 function pageAction_c_event_mail_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 		$c_member_ids = $requests['c_member_id'];
 		$body = $requests['body'];
@@ -17,7 +17,7 @@ function pageAction_c_event_mail_confirm($smarty,$requests) {
 		$c_commu_id = $c_topic['c_commu_id'];
 
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
@@ -38,4 +38,4 @@ function pageAction_c_event_mail_confirm($smarty,$requests) {
 		$smarty->assign("c_commu_topic_id", $c_commu_topic_id);
 		$smarty->ext_display('c_event_mail_confirm.tpl');	
 }
-?>
+

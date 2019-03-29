@@ -1,36 +1,36 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>½ñ¤­¹ş¤ß´ÉÍı</h2>
+<h2>æ›¸ãè¾¼ã¿ç®¡ç†</h2>
 ({if $msg})
 <p class="caution">({$msg})</p>
 ({/if})
 
-<p>ID¤ÏÈ¾³Ñ¿ô»ú¤ÇÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£</p>
+<p>IDã¯åŠè§’æ•°å­—ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚</p>
 
-({* Æüµ­ *})
-<h3>Æüµ­</h3>
+({* æ—¥è¨˜ *})
+<h3>æ—¥è¨˜</h3>
 <div class="caution">
-URLÎã¡§(£Ø£Ø£Ø¤¬ID)<br>
-({$smarty.const.ABSOLUTE_PATH})page.php?p=fh_diary&amp;target_c_diary_id=£Ø£Ø£Ø<br>
+URLä¾‹ï¼š(ï¼¸ï¼¸ï¼¸ãŒID)<br>
+({$smarty.const.ABSOLUTE_PATH})page.php?p=fh_diary&amp;target_c_diary_id=ï¼¸ï¼¸ï¼¸<br>
 </div>
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <p>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('delete_kakikomi')})">
-ID¡§<input type="text" name="target_c_diary_id" value="({$requests.target_c_diary_id})" size="6">
-<input type="submit" class="submit" value="³ÎÇ§">
+IDï¼š<input type="text" name="target_c_diary_id" value="({$requests.target_c_diary_id})" size="6">
+<input type="submit" class="submit" value="ç¢ºèª">
 </p>
 </form>
 
 ({if $c_diary})
 <table>
 <tr>
-<th>¥¿¥¤¥È¥ë</th>
+<th>ã‚¿ã‚¤ãƒˆãƒ«</th>
 <td>({$c_diary.subject})</td>
 </tr>
 <tr>
-<th>ËÜÊ¸</th>
+<th>æœ¬æ–‡</th>
 <td style="width:360px">({$c_diary.body|t_truncate:200})</td>
 </tr>
 <tr>
@@ -38,14 +38,14 @@ ID¡§<input type="text" name="target_c_diary_id" value="({$requests.target_c_diar
 <td><a href="page.php?p=fh_diary&amp;target_c_diary_id=({$c_diary.c_diary_id})" target="_blank">URL</a></td>
 </tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <tr>
 <th><input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_kakikomi_c_diary','do')})">
 <input type="hidden" name="target_c_diary_id" value="({$c_diary.c_diary_id})">
 &nbsp;</th>
-<td><input type="submit" class="submit" value="ºï½ü¤¹¤ë"></td>
+<td><input type="submit" class="submit" value="å‰Šé™¤ã™ã‚‹"></td>
 </tr>
 </form>
 </table>
@@ -53,30 +53,30 @@ ID¡§<input type="text" name="target_c_diary_id" value="({$requests.target_c_diar
 
 <hr>
 
-({* ¥³¥ß¥å¥Ë¥Æ¥£ *})
-<h3>¥³¥ß¥å¥Ë¥Æ¥£</h3>
+({* ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ *})
+<h3>ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£</h3>
 <div class="caution">
-URLÎã¡§(£Ø£Ø£Ø¤¬ID)<br>
-({$smarty.const.ABSOLUTE_PATH})page.php?p=c_home&amp;target_c_commu_id=£Ø£Ø£Ø<br>
+URLä¾‹ï¼š(ï¼¸ï¼¸ï¼¸ãŒID)<br>
+({$smarty.const.ABSOLUTE_PATH})page.php?p=c_home&amp;target_c_commu_id=ï¼¸ï¼¸ï¼¸<br>
 </div>
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <p>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('delete_kakikomi')})">
-ID¡§<input type="text" name="target_c_commu_id" value="({$requests.target_c_commu_id})" size="6">
-<input type="submit" class="submit" value="³ÎÇ§">
+IDï¼š<input type="text" name="target_c_commu_id" value="({$requests.target_c_commu_id})" size="6">
+<input type="submit" class="submit" value="ç¢ºèª">
 </p>
 </form>
 
 ({if $c_commu})
 <table>
 <tr>
-<th>¥³¥ß¥å¥Ë¥Æ¥£Ì¾</th>
+<th>ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å</th>
 <td style="width:360px">({$c_commu.name})</td>
 </tr>
 <tr>
-<th>ÀâÌÀ</th>
+<th>èª¬æ˜</th>
 <td>({$c_commu.info|t_truncate:200})</td>
 </tr>
 <tr>
@@ -84,14 +84,14 @@ ID¡§<input type="text" name="target_c_commu_id" value="({$requests.target_c_comm
 <td><a href="page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})" target="_blank">URL</a></td>
 </tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <tr>
 <th><input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_kakikomi_c_commu','do')})">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 &nbsp;</th>
-<td><input type="submit" class="submit" value="ºï½ü¤¹¤ë"></td>
+<td><input type="submit" class="submit" value="å‰Šé™¤ã™ã‚‹"></td>
 </tr>
 </form>
 </table>
@@ -99,27 +99,27 @@ ID¡§<input type="text" name="target_c_commu_id" value="({$requests.target_c_comm
 
 <hr>
 
-({* ¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ô¥Ã¥¯ *})
-<h3>¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ô¥Ã¥¯¡¦¥¤¥Ù¥ó¥È</h3>
+({* ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒ”ãƒƒã‚¯ *})
+<h3>ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒ”ãƒƒã‚¯ãƒ»ã‚¤ãƒ™ãƒ³ãƒˆ</h3>
 <div class="caution">
-URLÎã¡§(£Ø£Ø£Ø¤¬ID)<br>
-({$smarty.const.ABSOLUTE_PATH})page.php?p=c_topic_detail&amp;target_c_commu_topic_id=£Ø£Ø£Ø<br>
-({$smarty.const.ABSOLUTE_PATH})page.php?p=c_event_detail&amp;target_c_commu_topic_id=£Ø£Ø£Ø
+URLä¾‹ï¼š(ï¼¸ï¼¸ï¼¸ãŒID)<br>
+({$smarty.const.ABSOLUTE_PATH})page.php?p=c_topic_detail&amp;target_c_commu_topic_id=ï¼¸ï¼¸ï¼¸<br>
+({$smarty.const.ABSOLUTE_PATH})page.php?p=c_event_detail&amp;target_c_commu_topic_id=ï¼¸ï¼¸ï¼¸
 </div>
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <p>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('delete_kakikomi')})">
-ID¡§<input type="text" name="target_c_commu_topic_id" value="({$requests.target_c_commu_topic_id})" size="6">
-<input type="submit" class="submit" value="³ÎÇ§">
+IDï¼š<input type="text" name="target_c_commu_topic_id" value="({$requests.target_c_commu_topic_id})" size="6">
+<input type="submit" class="submit" value="ç¢ºèª">
 </p>
 </form>
 
 ({if $c_commu_topic})
 <table>
 <tr>
-<th>¥È¥Ô¥Ã¥¯(¥¤¥Ù¥ó¥È)Ì¾</th>
+<th>ãƒˆãƒ”ãƒƒã‚¯(ã‚¤ãƒ™ãƒ³ãƒˆ)å</th>
 <td style="width:360px">({$c_commu_topic.name})</td>
 </tr>
 <tr>
@@ -127,14 +127,14 @@ ID¡§<input type="text" name="target_c_commu_topic_id" value="({$requests.target_
 <td><a href="page.php?p=c_topic_detail&amp;target_c_commu_topic_id=({$c_commu_topic.c_commu_topic_id})" target="_blank">URL</a></td>
 </tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <tr>
 <th><input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_kakikomi_c_commu_topic','do')})">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic.c_commu_topic_id})">
 &nbsp;</th>
-<td><input type="submit" class="submit" value="ºï½ü¤¹¤ë"></td>
+<td><input type="submit" class="submit" value="å‰Šé™¤ã™ã‚‹"></td>
 </tr>
 </form>
 </table>

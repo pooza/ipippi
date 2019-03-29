@@ -2,14 +2,14 @@
 
 function normalAction_login2($smarty,$requests)
 {
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ses = $requests['ses'];
 	$c_member_id = intval($requests['id']);	
 	// ----------
     
-    // ¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú¤«¤É¤¦¤«
+    // ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹ã‹ã©ã†ã‹
     if (!$pre = c_ktai_address_pre4session($ses)) {
-        // Ìµ¸ú¤Î¾ì¹ç¡¢login ¤Ø¥ê¥À¥¤¥ì¥¯¥È
+        // ç„¡åŠ¹ã®å ´åˆã€login ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
         $c_member_secure = db_common_c_member_secure4c_member_id($c_member_id);
         client_redirect("ktai_normal.php?p=login&kad=".urlencode(t_encrypt($c_member_secure['ktai_address'])));
         exit;
@@ -20,4 +20,3 @@ function normalAction_login2($smarty,$requests)
     $smarty->ext_display('login2.tpl');
 }
 
-?>

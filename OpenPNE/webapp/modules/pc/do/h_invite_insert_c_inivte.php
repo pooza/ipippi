@@ -1,42 +1,42 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¾·ÂÔ¥á¡¼¥ëÁ÷¿®
+æ‹›å¾…ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 
-[°ú¿ô]
+[å¼•æ•°]
 mail_address
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 h_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-Á´¥á¥ó¥Ğ¡¼
+[æ¨©é™]
+å…¨ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_h_invite_insert_c_inivte($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$mail = $request['mail'];
 	$message = $request['message'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
 	if (!db_common_is_mailaddress($mail)) {
-		$msg = urlencode("¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤");
+		$msg = urlencode("ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 		client_redirect("page.php?p=h_invite&msg=$msg");
 		exit;
 	}
 
 	if( p_is_sns_join4mail_address($mail) ){
-		$msg = urlencode("¤½¤Î¥¢¥É¥ì¥¹¤Ï´û¤ËÅĞÏ¿ºÑ¤ß¤Ç¤¹");
+		$msg = urlencode("ãã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²æ¸ˆã¿ã§ã™");
 		client_redirect("page.php?p=h_invite&msg=$msg");
 		exit;
 	}
@@ -50,13 +50,13 @@ function doAction_h_invite_insert_c_inivte($request) {
 		//<PCKTAI
 		if (defined('OPENPNE_REGIST_FROM') &&
 				!((OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_KTAI) >> 1)) {
-			$msg = "·ÈÂÓ¥¢¥É¥ì¥¹¤Ë¤Ï¾·ÂÔ¤Ç¤­¤Ş¤»¤ó";
+			$msg = "æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯æ‹›å¾…ã§ãã¾ã›ã‚“";
 			client_redirect("page.php?p=h_invite&msg=". urlencode($msg));
 			exit;
 		}
 		//>
 	
-	    // c_member_ktai_pre ¤ËÄÉ²Ã
+	    // c_member_ktai_pre ã«è¿½åŠ 
 		if( do_common_c_member_ktai_pre4ktai_address($mail) ){
 	        	do_update_c_member_ktai_pre($session, $mail, $c_member_id_invite);
 		}else{
@@ -69,13 +69,13 @@ function doAction_h_invite_insert_c_inivte($request) {
 		//<PCKTAI
 		if (defined('OPENPNE_REGIST_FROM') &&
 				!(OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_PC)) {
-			$msg = "PC¥¢¥É¥ì¥¹¤Ë¤Ï¾·ÂÔ¤Ç¤­¤Ş¤»¤ó";
+			$msg = "PCã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯æ‹›å¾…ã§ãã¾ã›ã‚“";
 			client_redirect("page.php?p=h_invite&msg=". urlencode($msg));
 			exit;
 		}
 		//>	
 		
-	    // c_member_pre ¤ËÄÉ²Ã
+	    // c_member_pre ã«è¿½åŠ 
 		if( do_common_c_member_pre4pc_address($mail) ){
 			do_h_invite_update_c_inivte($c_member_id_invite,$mail,$message,$session);
 		}else{
@@ -89,4 +89,4 @@ function doAction_h_invite_insert_c_inivte($request) {
 	
 	client_redirect("page.php?p=h_invite_end");
 }
-?>
+

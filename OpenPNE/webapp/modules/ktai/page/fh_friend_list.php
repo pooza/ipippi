@@ -3,7 +3,7 @@ function pageAction_fh_friend_list($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -16,13 +16,13 @@ function pageAction_fh_friend_list($smarty, $requests)
 		exit;
 	}
 
-	//¥¿¡¼¥²¥Ã¥È¾ðÊó
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 	$smarty->assign("target_c_member", k_p_fh_friend_list_c_member4c_member_id($target_c_member_id));
 
-	// 1¥Ú¡¼¥¸Åö¤¿¤ê¤ËÉ½¼¨¤¹¤ë¥Õ¥ì¥ó¥É¤Î¿ô
+	// 1ãƒšãƒ¼ã‚¸å½“ãŸã‚Šã«è¡¨ç¤ºã™ã‚‹ãƒ•ãƒ¬ãƒ³ãƒ‰ã®æ•°
 	$page_size = 20;
 	$page += $direc;
-	//¥¿¡¼¥²¥Ã¥È¤Î¾ÜºÙ¤ÊÍ§Ã£¥ê¥¹¥È
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®è©³ç´°ãªå‹é”ãƒªã‚¹ãƒˆ
 	$list = k_p_fh_friend_list_friend_list4c_member_id($target_c_member_id,$page_size,$page);
 
 	$smarty->assign("target_friend_list", $list[0]);
@@ -35,4 +35,3 @@ function pageAction_fh_friend_list($smarty, $requests)
 	$smarty->ext_display("fh_friend_list.tpl");
 }
 
-?>

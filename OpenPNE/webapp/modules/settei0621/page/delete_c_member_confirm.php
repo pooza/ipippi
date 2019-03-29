@@ -1,5 +1,5 @@
 <?php
-// ¥æ¡¼¥¶¡¼¶¯À©Âà²ñ ³ÎÇ§²èÌÌ
+// ãƒ¦ãƒ¼ã‚¶ãƒ¼å¼·åˆ¶é€€ä¼š ç¢ºèªç”»é¢
 
 
 function pageAction_delete_c_member_confirm(&$smarty,$requests)
@@ -14,4 +14,3 @@ function pageAction_delete_c_member_confirm(&$smarty,$requests)
 	$smarty->ext_display("delete_c_member_confirm.tpl");
 }
 
-?>

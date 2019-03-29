@@ -1,10 +1,10 @@
 <?php
-// setup ¥â¥¸¥å¡¼¥ë initialize ½èÍý
+// setup ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ« initialize å‡¦ç†
 
-//¥é¥¤¥Ö¥é¥êÆÉ¤ß¹þ¤ß
+//ãƒ©ã‚¤ãƒ–ãƒ©ãƒªèª­ã¿è¾¼ã¿
 $module_lib_dir = dirname(__FILE__) . "/lib";
 
-//¥Ç¥Õ¥©¥ë¥È¥Ú¡¼¥¸
+//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒšãƒ¼ã‚¸
 $GLOBALS['__Framework']['default_page'] = 'dummy';
 $GLOBALS['__Framework']['default_normal'] = 'setup';
 

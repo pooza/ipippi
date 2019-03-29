@@ -1,5 +1,5 @@
 <?php
-// SNSÀßÄêÊÑ¹¹
+// SNSè¨­å®šå¤‰æ›´
 
 
 function doAction_update_c_admin_config($requests)
@@ -19,7 +19,7 @@ function doAction_update_c_admin_config($requests)
 	foreach ($requests as $name => $value) {
 		if (!in_array($name, $allowed_names)) continue;
 		
-		// ÇÛÎó¤Î¾ì¹ç¤Ï¥«¥ó¥Þ¶èÀÚ¤ê¤Ë
+		// é…åˆ—ã®å ´åˆã¯ã‚«ãƒ³ãƒžåŒºåˆ‡ã‚Šã«
 		if (is_array($value)) {
 			$value = implode(',', $value);
 		}
@@ -31,7 +31,7 @@ function doAction_update_c_admin_config($requests)
 		}
 	}
 	
-	admin_client_redirect('edit_c_admin_config', "ÀßÄê¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_admin_config', "è¨­å®šã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
-?>
+

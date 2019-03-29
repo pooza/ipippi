@@ -8,7 +8,7 @@
  *
  * Type:     block function<br>
  * Name:     t_loop<br>
- * Purpose:  foreach¤ÎÂåÂØÉÊ<br>
+ * Purpose:  foreachã®ä»£æ›¿å“<br>
  * @param array
  * <pre>
  * Params:   from: array
@@ -40,10 +40,10 @@ function smarty_block_t_loop($params, $content, &$smarty, &$repeat) {
 	}	
 
 	// main
-	if (is_null($content)) { // ½é´ü²½
+	if (is_null($content)) { // åˆæœŸåŒ–
 		$i = $start;
 		
-		if (!isset($params['from'][$i])) { // Í×ÁÇ¤¬1¸Ä¤â¤Ê¤¤
+		if (!isset($params['from'][$i])) { // è¦ç´ ãŒ1å€‹ã‚‚ãªã„
 			$repeat = false;
 		} else {
 			$smarty->assign($item, $params['from'][$i++]);
@@ -65,4 +65,3 @@ function smarty_block_t_loop($params, $content, &$smarty, &$repeat) {
 
 /* vim: set expandtab: */
 
-?>

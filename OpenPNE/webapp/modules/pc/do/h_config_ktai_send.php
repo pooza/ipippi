@@ -11,26 +11,26 @@ function doAction_h_config_ktai_send($request) {
 	
 	$u = $GLOBALS['AUTH']->uid();
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ktai_address = $request['ktai_address'];
 	// ----------
     
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
     
     
     if (!is_ktai_mail_address($ktai_address)) {
-        $msg = urlencode("·ÈÂÓÅÅÏÃ¥¢¥É¥ì¥¹¤òµ­Æþ¤·¤Æ¤¯¤À¤µ¤¤");
+        $msg = urlencode("æºå¸¯é›»è©±ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’è¨˜å…¥ã—ã¦ãã ã•ã„");
         client_redirect("page.php?p=h_config_ktai&msg=$msg");
         exit;
     }
     
-    // ÅÐÏ¿ºÑ¤ß¥¢¥É¥ì¥¹¤«¤É¤¦¤«¥Á¥§¥Ã¥¯¤¹¤ë
+    // ç™»éŒ²æ¸ˆã¿ã‚¢ãƒ‰ãƒ¬ã‚¹ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯ã™ã‚‹
     if (($c_member_id = do_common_c_member_id4ktai_address($ktai_address)) &&
     	$c_member_id != $u) {
-        $msg = urlencode("ÆþÎÏ¤µ¤ì¤¿¥¢¥É¥ì¥¹¤Ï´û¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹");
+        $msg = urlencode("å…¥åŠ›ã•ã‚ŒãŸã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™");
         client_redirect("page.php?p=h_config_ktai&msg=$msg");
         exit;
     }
@@ -45,4 +45,4 @@ function doAction_h_config_ktai_send($request) {
 
     client_redirect("page.php?p=h_config_ktai_end");
 }
-?>
+

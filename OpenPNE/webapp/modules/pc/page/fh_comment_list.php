@@ -3,7 +3,7 @@
 function pageAction_fh_comment_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 	if (empty($target_c_member_id)) {
@@ -18,14 +18,14 @@ function pageAction_fh_comment_list($smarty,$requests) {
 	} else {
 		$type = "f";
 		
-		//Æüµ­¤Î¸ø³«ÈÏ°ÏÀßÄê
+		//æ—¥è¨˜ã®å…¬é–‹ç¯„å›²è¨­å®š
 		if (($target_c_member['public_flag_diary'] == "friend" &&
 			 !_db_is_friend($u, $target_c_member_id))) {
 		    client_redirect("page.php?p=h_err_diary_access");
 		    exit;
 		}
 	
-		// ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+		// ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 		if(p_common_is_access_block($u, $target_c_member_id)){
 			client_redirect("page.php?p=h_access_block");
 			exit;
@@ -33,12 +33,12 @@ function pageAction_fh_comment_list($smarty,$requests) {
 	}
 	$smarty->assign('inc_navi',fetch_inc_navi($type, $target_c_member_id));
 	
-	//c_member_id ¤«¤é¼«Ê¬¤ÎÆüµ­¤Ë¤Ä¤¤¤Æ¤ë¥³¥á¥ó¥ÈID¥ê¥¹¥È¤ò¼èÆÀ
+	//c_member_id ã‹ã‚‰è‡ªåˆ†ã®æ—¥è¨˜ã«ã¤ã„ã¦ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆIDãƒªã‚¹ãƒˆã‚’å–å¾—
 	$target_c_diary_comment_id = p_fh_diary_c_diary_comment_id_list4c_member_id($target_c_member_id);
 
-	//ºÇ¶á¤Î¥³¥á¥ó¥È°ìÍ÷ÍÑÇÛÎó(50¸Ä¤Þ¤Ç)
+	//æœ€è¿‘ã®ã‚³ãƒ¡ãƒ³ãƒˆä¸€è¦§ç”¨é…åˆ—(50å€‹ã¾ã§)
 	$smarty->assign("new_comment_list", p_fh_diary_c_diary_comment_list4c_diary_comment_id($target_c_diary_comment_id,50));
 
 	$smarty->ext_display('fh_comment_list.tpl');
 }
-?>
+

@@ -3,7 +3,7 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
 	 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $request['target_c_commu_topic_id'];
 	// ----------
 	$upfile_obj1 = $_FILES['image_filename1'];
@@ -20,8 +20,8 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 		$invite_period = "";
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥¤¥Ù¥ó¥È´ÉÍı¼Ô or ¥³¥ß¥å¥Ë¥Æ¥£´ÉÍı¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚¤ãƒ™ãƒ³ãƒˆç®¡ç†è€… or ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 
 	if(!_db_is_c_event_admin($c_commu_topic_id,$u) &&
 		!_db_is_c_commu_admin($event['c_commu_id'], $u)){
@@ -30,29 +30,29 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	}
 	//---
 
-	//¥¨¥é¡¼¥Á¥§¥Ã¥¯
-    if (!trim($event['title']))  $err_msg[] = "¥¿¥¤¥È¥ë¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-    if(!trim($event['detail']))  $err_msg[] = "¾ÜºÙ¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+	//ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯
+    if (!trim($event['title']))  $err_msg[] = "ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+    if(!trim($event['detail']))  $err_msg[] = "è©³ç´°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 
-    if(!$event['open_date_month'] || !$event['open_date_day'] || !$event['open_date_year'])  $err_msg[] = "³«ºÅÆü»ş¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-    elseif(!checkdate($event['open_date_month'],$event['open_date_day'],$event['open_date_year'])) $err_msg[] = "³«ºÅÆü»ş¤ÏÂ¸ºß¤·¤Ş¤»¤ó";
-    elseif(mktime(0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "³«ºÅÆü»ş¤Ï²áµî¤Ë»ØÄê¤Ç¤­¤Ş¤»¤ó";
+    if(!$event['open_date_month'] || !$event['open_date_day'] || !$event['open_date_year'])  $err_msg[] = "é–‹å‚¬æ—¥æ™‚ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+    elseif(!checkdate($event['open_date_month'],$event['open_date_day'],$event['open_date_year'])) $err_msg[] = "é–‹å‚¬æ—¥æ™‚ã¯å­˜åœ¨ã—ã¾ã›ã‚“";
+    elseif(mktime(0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "é–‹å‚¬æ—¥æ™‚ã¯éå»ã«æŒ‡å®šã§ãã¾ã›ã‚“";
 
 	if($event['invite_period_month'].$event['invite_period_day'].$event['invite_period_year'] != ""){
-	    if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "Êç½¸´ü¸Â¤ÏÂ¸ºß¤·¤Ş¤»¤ó¡£";
-    	elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "Êç½¸´ü¸Â¤ÏÂ¸ºß¤·¤Ş¤»¤ó";
-	    elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "Êç½¸´ü¸Â¤Ï²áµî¤Ë»ØÄê¤Ç¤­¤Ş¤»¤ó";	
+	    if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "å‹Ÿé›†æœŸé™ã¯å­˜åœ¨ã—ã¾ã›ã‚“ã€‚";
+    	elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "å‹Ÿé›†æœŸé™ã¯å­˜åœ¨ã—ã¾ã›ã‚“";
+	    elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "å‹Ÿé›†æœŸé™ã¯éå»ã«æŒ‡å®šã§ãã¾ã›ã‚“";	
 	    elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year'])
 	    		<mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) 
-	    		$err_msg[] = "Êç½¸´ü¸Â¤Ï³«ºÅÆü»ş¤è¤êÌ¤Íè¤Ë»ØÄê¤Ç¤­¤Ş¤»¤ó";
+	    		$err_msg[] = "å‹Ÿé›†æœŸé™ã¯é–‹å‚¬æ—¥æ™‚ã‚ˆã‚Šæœªæ¥ã«æŒ‡å®šã§ãã¾ã›ã‚“";
 	}
 
     if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-    	$err_msg[] = "²èÁü1¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "ç”»åƒ1ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
     if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-    	$err_msg[] = "²èÁü2¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "ç”»åƒ2ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
     if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-    	$err_msg[] = "²èÁü3¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "ç”»åƒ3ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 
 	$names = array();
 	for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -60,7 +60,7 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 		$name = $$varname;
 		if ($name = $name['name']) {
 			if (in_array($name, $names)) {
-				$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë¤Î¥Õ¥¡¥¤¥ëÌ¾¤¬½ÅÊ£¤·¤Ş¤¹";
+				$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚¡ã‚¤ãƒ«åãŒé‡è¤‡ã—ã¾ã™";
 				break;
 			}
 			$names[] = $name;
@@ -68,18 +68,18 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	}
 
     if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë1¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«1ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
     if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë2¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«2ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
     if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë3¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«3ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
 
     if(is_dirty_file($upfile_obj11))
-    	$err_msg[] = get_extension($upfile_obj11['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+    	$err_msg[] = get_extension($upfile_obj11['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
     if(is_dirty_file($upfile_obj12))
-    	$err_msg[] = get_extension($upfile_obj12['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+    	$err_msg[] = get_extension($upfile_obj12['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
     if(is_dirty_file($upfile_obj13))
-    	$err_msg[] = get_extension($upfile_obj13['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+    	$err_msg[] = get_extension($upfile_obj13['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
 
     if ($err_msg) {
 		$_REQUEST = $event;
@@ -90,7 +90,7 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
     }
 
 
-	//²èÁü¥³¥Ô¡¼	
+	//ç”»åƒã‚³ãƒ”ãƒ¼	
 	if( file_exists($upfile_obj1["tmp_name"]) ) $tmpfile1 = t_image_save2tmp($upfile_obj1, $sessid, "e1");
 	if( file_exists($upfile_obj2["tmp_name"]) ) $tmpfile2 = t_image_save2tmp($upfile_obj2, $sessid, "e2");
 	if( file_exists($upfile_obj3["tmp_name"]) ) $tmpfile3 = t_image_save2tmp($upfile_obj3, $sessid, "e3");
@@ -111,7 +111,7 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	t_image_clear_tmp(session_id());
 
 
-	//DB¤òupdate
+	//DBã‚’update
 	$update_c_commu_topic = array(
 		"name" 			=> $event['title'],
 		"c_commu_id"		=> $event['c_commu_id'],
@@ -153,15 +153,15 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	if($filename1){
 		$update_c_commu_topic_comment["image_filename1"] = $filename1;
-		image_data_delete($c_topic['image_filename1']);//²èÁüºï½ü
+		image_data_delete($c_topic['image_filename1']);//ç”»åƒå‰Šé™¤
 	}
 	if($filename2){
 		$update_c_commu_topic_comment["image_filename2"] = $filename2;
-		image_data_delete($c_topic['image_filename2']);//²èÁüºï½ü
+		image_data_delete($c_topic['image_filename2']);//ç”»åƒå‰Šé™¤
 	}
 	if($filename3){
 		$update_c_commu_topic_comment["image_filename3"] = $filename3;
-		image_data_delete($c_topic['image_filename3']);//²èÁüºï½ü
+		image_data_delete($c_topic['image_filename3']);//ç”»åƒå‰Šé™¤
 	}
 
 
@@ -170,4 +170,4 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	client_redirect("page.php?p=c_event_detail&target_c_commu_topic_id=".$c_commu_topic_id);
 
 }
-?>
+

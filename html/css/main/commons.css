@@ -1,6 +1,6 @@
 @charset "EUC-JP";
 
-/*´ğËÜÀßÄê*/
+/*åŸºæœ¬è¨­å®š*/
 body {
 	margin: 0px ;
 	padding: 0px ;
@@ -33,7 +33,7 @@ hr {
  	background: transparent ;
 }
 
-/*Icon(¢¨ÊÌ¥Õ¥¡¥¤¥ë¤ËÆÈÎ©Í½Äê)*/
+/*Icon(â€»åˆ¥ãƒ•ã‚¡ã‚¤ãƒ«ã«ç‹¬ç«‹äºˆå®š)*/
 
 .icon {
 	vertical-align: middle ;
@@ -63,7 +63,7 @@ hr {
 	background: url(../../skin/icon_3.gif) 50% 50%  no-repeat ;
 }
 
-/*¹Ô´ÖÀßÄê*/
+/*è¡Œé–“è¨­å®š*/
 
 .lh_120 { line-height: 120% }
 
@@ -75,7 +75,7 @@ hr {
 
 .lh_200 { line-height: 200% }
 
-/*¼çÍ×¤Ê¥Ñ¥Ç¥£¥ó¥°¤Î°ì³ç»ØÄê*/
+/*ä¸»è¦ãªãƒ‘ãƒ‡ã‚£ãƒ³ã‚°ã®ä¸€æ‹¬æŒ‡å®š*/
 
 .padding_s {
 	padding: 5px ;
@@ -101,13 +101,13 @@ hr {
 	padding: 20px 90px ;
 }
 
-/*¥µ¥¤¥É¥Ğ¥Ê¡¼ÍÑ¥Ñ¥Ç¥£¥ó¥°*/
+/*ã‚µã‚¤ãƒ‰ãƒãƒŠãƒ¼ç”¨ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°*/
 .padding_side_banner {
 	padding-left: 5px ;
 }
 
 
-/*¥ê¥ó¥¯´ØÏ¢*/
+/*ãƒªãƒ³ã‚¯é–¢é€£*/
 
 a:link {
 	color: #4B9EF7 ;
@@ -122,7 +122,7 @@ a:active {
 	color: #88BEF8 ;
 }
 
-/*¥Õ¥©¡¼¥à´ØÏ¢*/
+/*ãƒ•ã‚©ãƒ¼ãƒ é–¢é€£*/
 
 form {
 	margin:0px;
@@ -144,7 +144,7 @@ input.no_bg {
 	border: 0px none ;
 }
 
-/* ¥Ñ¡¼¥Ä¤È¥Ñ¡¼¥Ä¤Î´Ö¤Ë¶õ¤­¤òºî¤ë */
+/* ãƒ‘ãƒ¼ãƒ„ã¨ãƒ‘ãƒ¼ãƒ„ã®é–“ã«ç©ºãã‚’ä½œã‚‹ */
 
 img.v_spacer_s {
 	display: block ;
@@ -164,13 +164,13 @@ img.v_spacer_l {
 	height: 8px ;
 }
 
-/* ¶õ¤Î¥»¥ë¤ËÁŞÆş¤¹¤ë¥À¥ß¡¼²èÁü */
+/* ç©ºã®ã‚»ãƒ«ã«æŒ¿å…¥ã™ã‚‹ãƒ€ãƒŸãƒ¼ç”»åƒ */
 
 img.dummy {
 	display: block ;
 }
 
-/*¤½¤ÎÂ¾*/
+/*ãã®ä»–*/
 
 .w_screen {
 	display: block ;

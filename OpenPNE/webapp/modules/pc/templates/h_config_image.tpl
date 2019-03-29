@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************* -->
-<!-- ******�������顧�̿����Խ�****** -->
+<!-- ******ここから：写真を編集****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,22 +37,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�̿����Խ�������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：写真を編集＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�̿����Խ�����</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">写真を編集する</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ�䣱 -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞１ -->
 <div class="border_01 bg_02">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -63,11 +63,11 @@
 
 ({if $c_member.image_filename_1})
 <img src="img.php?filename=({$c_member.image_filename_1})&w=180&h=180"><br>
-[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=1&amp;sessid=({$PHPSESSID})">���</a> | 
+[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=1&amp;sessid=({$PHPSESSID})">削除</a> | 
 ({if $c_member.image_filename_1==$c_member.image_filename})
-�ᥤ��̿�
+メイン写真
 ({else})
-<a href="do.php?cmd=h_config_image_change_main_c_member_image&img_num=1&amp;sessid=({$PHPSESSID})">�ᥤ��̿�</a>
+<a href="do.php?cmd=h_config_image_change_main_c_member_image&img_num=1&amp;sessid=({$PHPSESSID})">メイン写真</a>
 ({/if})
  ]
 ({else})
@@ -80,11 +80,11 @@
 
 ({if $c_member.image_filename_2})
 <img src="img.php?filename=({$c_member.image_filename_2})&w=180&h=180"><br>
-[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=2&amp;sessid=({$PHPSESSID})">���</a> | 
+[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=2&amp;sessid=({$PHPSESSID})">削除</a> | 
 ({if $c_member.image_filename_2==$c_member.image_filename})
-�ᥤ��̿�
+メイン写真
 ({else})
-<a href="do.php?cmd=h_config_image_change_main_c_member_image&img_num=2&amp;sessid=({$PHPSESSID})">�ᥤ��̿�</a>
+<a href="do.php?cmd=h_config_image_change_main_c_member_image&img_num=2&amp;sessid=({$PHPSESSID})">メイン写真</a>
 ({/if})
  ]
 ({else})
@@ -97,11 +97,11 @@
 
 ({if $c_member.image_filename_3})
 <img src="img.php?filename=({$c_member.image_filename_3})&w=180&h=180"><br>
-[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=3&amp;sessid=({$PHPSESSID})">���</a> | 
+[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=3&amp;sessid=({$PHPSESSID})">削除</a> | 
 ({if $c_member.image_filename_3==$c_member.image_filename})
-�ᥤ��̿�
+メイン写真
 ({else})
-<a href="do.php?cmd=h_config_image_change_main_c_member_image&img_num=3&amp;sessid=({$PHPSESSID})">�ᥤ��̿�</a>
+<a href="do.php?cmd=h_config_image_change_main_c_member_image&img_num=3&amp;sessid=({$PHPSESSID})">メイン写真</a>
 ({/if})
  ]
 ({else})
@@ -116,8 +116,8 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- �����ޤǡ������ơ�䣲 -->
-<!-- �������顧�����ơ�䣲 -->
+<!-- ここまで：主内容＞＞２ -->
+<!-- ここから：主内容＞＞２ -->
 <div class="border_01 bg_02">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -127,37 +127,37 @@
 <td style="width:230px;" align="center" valign="middle" rowspan="3">
 
 <form  action="do.php" method="post" name="secondForm" id="secondForm" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_image">
 
-<input name="upfile" type="file" value=" �� �� ">
+<input name="upfile" type="file" value=" 参 照 ">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<input type="submit" name="submit" value="�̿��򥢥åץ����ɤ���">
+<input type="submit" name="submit" value="写真をアップロードする">
 
 </td>
-<td style="width:1em;" align="right" valign="top">��</td>
+<td style="width:1em;" align="right" valign="top">・</td>
 <td style="width:auto;" align="left" valign="top">
 
-�̿��Ϻ���3��ޤǷǺܤǤ��ޤ���
-
-</td>
-</tr>
-<tr>
-<td style="width:1em;" align="right" valign="top">��</td>
-<td style="width:auto;" align="left" valign="top">
-
-300KB�����GIF��JPEG��PNG�ˤ��Ƥ���������
+写真は最大3枚まで掲載できます。
 
 </td>
 </tr>
 <tr>
-<td style="width:1em;" align="right" valign="top">��</td>
+<td style="width:1em;" align="right" valign="top">・</td>
 <td style="width:auto;" align="left" valign="top">
 
-������������ο�����������̿���˽��Ū�����Фʼ̿�������¾���̤������Բ��˴�����̿��ηǺܤ϶ػߤ��Ƥ��ޤ����ǺܤϤ����Ȥ���Ǥ�Ǥ��ꤤ�פ��ޤ���
+300KB以内のGIF・JPEG・PNGにしてください。
+
+</td>
+</tr>
+<tr>
+<td style="width:1em;" align="right" valign="top">・</td>
+<td style="width:auto;" align="left" valign="top">
+
+著作権・肖像権の侵害に当たる写真、暴力的、卑猥な写真、その他一般の方が不快に感じる写真の掲載は禁止しています。掲載はご自身の責任でお願い致します。
 
 </td>
 </tr>
@@ -166,13 +166,13 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- �����ޤǡ������ơ�䣲 -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��̿����Խ��������* -->
+<!-- ここまで：主内容＞＞２ -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：写真を編集＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -182,7 +182,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ��̿����Խ�****** -->
+<!-- ******ここまで：写真を編集****** -->
 <!-- ******************************* -->
 
 
@@ -191,9 +191,9 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************** -->
-<!-- ******�������顧�ȥåץڡ��������****** -->
-<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=h_home">�ۡ�������</a>
-<!-- ******�����ޤǡ��ȥåץڡ��������****** -->
+<!-- ******ここから：トップページに戻る****** -->
+<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=h_home">ホームに戻る</a>
+<!-- ******ここまで：トップページに戻る****** -->
 <!-- ************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -202,7 +202,7 @@
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

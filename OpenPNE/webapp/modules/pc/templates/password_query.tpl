@@ -10,19 +10,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ********************************** -->
-<!-- ******�������顧�ѥ���ɳ�ǧ****** -->
+<!-- ******ここから：パスワード確認****** -->
 <form action="do_normal.php" method="post">
 <input type="hidden" name="cmd" value="password_query">
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
@@ -34,21 +34,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ѥ���ɳ�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：パスワード確認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�ѥ���ɳ�ǧ</span></td>
+<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">パスワード確認</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å������� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -61,8 +61,8 @@
 
 <div style="padding:10px 30px;">
 
-��Ͽ�����᡼�륢�ɥ쥹�ȡ���̩�μ��䡦���������Ϥ��Ƥ���������<br>
-��Ͽ������ΤȰ��פ���ȡ��ѥ���ɤ���Ͽ���ɥ쥹������������ޤ���
+登録したメールアドレスと、秘密の質問・答えを入力してください。<br>
+登録したものと一致すると、パスワードが登録アドレス宛に送信されます。
 
 </div>
 
@@ -75,8 +75,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���å������� -->
-<!-- �������顧�����ơ���ѹ������� -->
+<!-- ここまで：主内容＞＞メッセージ欄 -->
+<!-- ここから：主内容＞＞変更入力欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -89,7 +89,7 @@
 
 <div class="padding_s">
 
-�᡼�륢�ɥ쥹
+メールアドレス
 
 </div>
 
@@ -115,7 +115,7 @@
 
 <div class="padding_s">
 
-��̩�μ���
+秘密の質問
 
 </div>
 
@@ -126,7 +126,7 @@
 <div class="padding_s">
 
 <select name="c_password_query_id">
-<option value="" selected="selected">���򤷤Ƥ�������</option>
+<option value="" selected="selected">選択してください</option>
 ({foreach from=$c_password_query_list key=key item=item})
 <option value="({$key})">({$item})</option>
 ({/foreach})
@@ -148,7 +148,7 @@
 
 <div class="padding_s">
 
-��̩������
+秘密の答え
 
 </div>
 
@@ -176,7 +176,7 @@
 
 <div class="padding_w_m">
 
-<input type="submit" class="submit" value="����������">
+<input type="submit" class="submit" value="　送　信　">
 
 </div>
 
@@ -189,13 +189,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ѹ������� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ѥ���ɳ�ǧ�������* -->
+<!-- ここまで：主内容＞＞変更入力欄 -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：パスワード確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -206,7 +206,7 @@
 </tr>
 </table>
 </form>
-<!-- ******�����ޤǡ��ѥ���ɳ�ǧ****** -->
+<!-- ******ここまで：パスワード確認****** -->
 <!-- ********************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -214,7 +214,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

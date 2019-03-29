@@ -1,5 +1,5 @@
 <?php
-// ¥Ð¥Ê¡¼ºï½ü
+// ãƒãƒŠãƒ¼å‰Šé™¤
 
 
 function doAction_delete_c_banner($requests)
@@ -8,7 +8,7 @@ function doAction_delete_c_banner($requests)
 	
 	db_admin_delete_c_banner($requests['c_banner_id']);	
 	
-	admin_client_redirect('edit_c_banner', "¥Ð¥Ê¡¼¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_banner', "ãƒãƒŠãƒ¼ã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>
+

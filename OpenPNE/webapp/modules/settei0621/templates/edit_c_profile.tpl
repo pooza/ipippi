@@ -4,30 +4,30 @@
 <p class="caution">({$msg})</p>
 ({/if})
 
-<h2>¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ°ìÍ÷</h2>
+<h2>ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ä¸€è¦§</h2>
 
-<p>¡ú<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_profile')})">¥×¥í¥Õ¥£¡¼¥ë¹àÌÜÄÉ²Ã</a></p>
+<p>â˜…<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_profile')})">ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®è¿½åŠ </a></p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_profile_sort_order','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <table style="font-size:small">
 <tr>
-<th colspan="2">Áàºî</th>
+<th colspan="2">æ“ä½œ</th>
 <th>ID</th>
-<th>¹àÌÜÌ¾</th>
-<th>¼±ÊÌÌ¾</th>
-<th>É¬¿Ü</th>
-<th>¸ø³«ÀßÄê<br>¤Ç¤­¤ë¤«</th>
-<th>¸ø³«ÀßÄê<br>¥Ç¥Õ¥©¥ë¥ÈÃÍ</th>
-<th>¥Õ¥©¡¼¥à<br>¥¿¥¤¥×</th>
-<th>ÊÂ¤Ó½ç<br>(¾º½ç)</th>
-<th>ÁªÂò»è</th>
-<th>ÅĞÏ¿</th>
-<th>ÊÑ¹¹</th>
-<th>¸¡º÷</th>
+<th>é …ç›®å</th>
+<th>è­˜åˆ¥å</th>
+<th>å¿…é ˆ</th>
+<th>å…¬é–‹è¨­å®š<br>ã§ãã‚‹ã‹</th>
+<th>å…¬é–‹è¨­å®š<br>ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤</th>
+<th>ãƒ•ã‚©ãƒ¼ãƒ <br>ã‚¿ã‚¤ãƒ—</th>
+<th>ä¸¦ã³é †<br>(æ˜‡é †)</th>
+<th>é¸æŠè‚¢</th>
+<th>ç™»éŒ²</th>
+<th>å¤‰æ›´</th>
+<th>æ¤œç´¢</th>
 </tr>
 
 ({capture name="nick"})
@@ -35,17 +35,17 @@
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td class="idnumber">-</td>
-<td>¥Ë¥Ã¥¯¥Í¡¼¥à</td>
+<td>ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ </td>
 <td>&nbsp;</td>
-<td style="text-align:center">¡û</td>
-<td style="text-align:center">¡ß</td>
-<td>Á´°÷¤Ë¸ø³«</td>
-<td>¥Æ¥­¥¹¥È</td>
+<td style="text-align:center">â—‹</td>
+<td style="text-align:center">Ã—</td>
+<td>å…¨å“¡ã«å…¬é–‹</td>
+<td>ãƒ†ã‚­ã‚¹ãƒˆ</td>
 <td class="number"><input type="text" name="sort_order_nick" size="5" value="({$smarty.const.SORT_ORDER_NICK})"></td>
 <td>&nbsp;</td>
-<td style="text-align:center">¡û</td>
-<td style="text-align:center">¡û</td>
-<td style="text-align:center">¡û</td>
+<td style="text-align:center">â—‹</td>
+<td style="text-align:center">â—‹</td>
+<td style="text-align:center">â—‹</td>
 </tr>
 ({/capture})
 
@@ -62,20 +62,20 @@
 ({/if})
 
 <tr>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_c_profile')})&amp;c_profile_id=({$item.c_profile_id})">ÊÑ¹¹</a></td>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_profile')})&amp;c_profile_id=({$item.c_profile_id})">ºï½ü</a></td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_c_profile')})&amp;c_profile_id=({$item.c_profile_id})">å¤‰æ›´</a></td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_profile')})&amp;c_profile_id=({$item.c_profile_id})">å‰Šé™¤</a></td>
 <td class="idnumber">({$item.c_profile_id})</td>
 <td>({$item.caption})</td>
 <td>({$item.name})</td>
-<td style="text-align:center">({if $item.is_required})¡û({else})¡ß({/if})</td>
-<td style="text-align:center">({if $item.public_flag_edit})¡û({else})¡ß({/if})</td>
-<td>({if $item.public_flag_default == 'private'})¸ø³«¤·¤Ê¤¤({elseif $item.public_flag_default == 'friend'})({$smarty.const.WORD_MY_FRIEND})¤Ş¤Ç¸ø³«({else})Á´°÷¤Ë¸ø³«({/if})</td>
-<td>({if $item.form_type == 'text'})¥Æ¥­¥¹¥È({elseif $item.form_type == 'textarea'})¥Æ¥­¥¹¥È(Ê£¿ô¹Ô)({elseif $item.form_type == 'select'})Ã±°ìÁªÂò(¥×¥ë¥À¥¦¥ó)({elseif $item.form_type == 'radio'})Ã±°ìÁªÂò(¥é¥¸¥ª¥Ü¥¿¥ó)({elseif $item.form_type == 'checkbox'})Ê£¿ôÁªÂò({/if})</td>
+<td style="text-align:center">({if $item.is_required})â—‹({else})Ã—({/if})</td>
+<td style="text-align:center">({if $item.public_flag_edit})â—‹({else})Ã—({/if})</td>
+<td>({if $item.public_flag_default == 'private'})å…¬é–‹ã—ãªã„({elseif $item.public_flag_default == 'friend'})({$smarty.const.WORD_MY_FRIEND})ã¾ã§å…¬é–‹({else})å…¨å“¡ã«å…¬é–‹({/if})</td>
+<td>({if $item.form_type == 'text'})ãƒ†ã‚­ã‚¹ãƒˆ({elseif $item.form_type == 'textarea'})ãƒ†ã‚­ã‚¹ãƒˆ(è¤‡æ•°è¡Œ)({elseif $item.form_type == 'select'})å˜ä¸€é¸æŠ(ãƒ—ãƒ«ãƒ€ã‚¦ãƒ³)({elseif $item.form_type == 'radio'})å˜ä¸€é¸æŠ(ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³)({elseif $item.form_type == 'checkbox'})è¤‡æ•°é¸æŠ({/if})</td>
 <td class="number">({$item.sort_order})</td>
-<td>({if $item.form_type == 'select' || $item.form_type == 'checkbox'})<a href="#opt_({$item.name})">°ìÍ÷</a>({else})&nbsp;({/if})</td>
-<td style="text-align:center">({if $item.disp_regist})¡û({else})¡ß({/if})</td>
-<td style="text-align:center">({if $item.disp_config})¡û({else})¡ß({/if})</td>
-<td style="text-align:center">({if $item.disp_search})¡û({else})¡ß({/if})</td>
+<td>({if $item.form_type == 'select' || $item.form_type == 'checkbox'})<a href="#opt_({$item.name})">ä¸€è¦§</a>({else})&nbsp;({/if})</td>
+<td style="text-align:center">({if $item.disp_regist})â—‹({else})Ã—({/if})</td>
+<td style="text-align:center">({if $item.disp_config})â—‹({else})Ã—({/if})</td>
+<td style="text-align:center">({if $item.disp_search})â—‹({else})Ã—({/if})</td>
 </tr>
 ({/foreach})
 
@@ -84,17 +84,17 @@
 
 <tr>
 <td colspan="9">&nbsp;</td>
-<td class="number"><input class="submit" type="submit" value="ÊÑ¹¹"></td>
+<td class="number"><input class="submit" type="submit" value="å¤‰æ›´"></td>
 <td colspan="4">&nbsp;</td
 </tr>
 </table>
 </form>
 
-<h2>¥×¥í¥Õ¥£¡¼¥ëÁªÂò»è°ìÍ÷</h2>
+<h2>ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é¸æŠè‚¢ä¸€è¦§</h2>
 
 <ul class="caution">
-<li>°ì¹àÌÜ¤º¤Ä¤·¤«ÊÑ¹¹¤Ç¤­¤Ş¤»¤ó¡£</li>
-<li>ÁªÂò»è¤òºï½ü¤¹¤ë¤È¤½¤ÎÁªÂò»è¤òÁªÂò¤·¤Æ¤¤¤¿¥æ¡¼¥¶¡¼¤ÎÃÍ¤¬(¤¿¤È¤¨É¬¿Ü¹àÌÜ¤Ç¤¢¤Ã¤Æ¤â)¶õ¤Ë¤Ê¤ê¤Ş¤¹¡£</li>
+<li>ä¸€é …ç›®ãšã¤ã—ã‹å¤‰æ›´ã§ãã¾ã›ã‚“ã€‚</li>
+<li>é¸æŠè‚¢ã‚’å‰Šé™¤ã™ã‚‹ã¨ãã®é¸æŠè‚¢ã‚’é¸æŠã—ã¦ã„ãŸãƒ¦ãƒ¼ã‚¶ãƒ¼ã®å€¤ãŒ(ãŸã¨ãˆå¿…é ˆé …ç›®ã§ã‚ã£ã¦ã‚‚)ç©ºã«ãªã‚Šã¾ã™ã€‚</li>
 </ul>
 
 ({foreach from=$c_profile_list item=item})
@@ -104,14 +104,14 @@
 
 <table>
 <tr>
-<th>¹àÌÜÌ¾</th>
-<th>ÊÂ¤Ó½ç</th>
-<th colspan="2">Áàºî</th>
+<th>é …ç›®å</th>
+<th>ä¸¦ã³é †</th>
+<th colspan="2">æ“ä½œ</th>
 </tr>
 ({foreach from=$item.options item=option})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_profile_option','do')})">
@@ -119,16 +119,16 @@
 <input type="hidden" name="c_profile_option_id" value="({$option.c_profile_option_id})">
 <input type="text" name="value" value="({$option.value})" size="20"></td>
 <td><input type="text" name="sort_order" value="({$option.sort_order})" size="5"></td>
-<td><input type="submit" class="submit" value="ÊÑ¹¹"></td>
+<td><input type="submit" class="submit" value="å¤‰æ›´"></td>
 </form>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_profile_option','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="c_profile_option_id" value="({$option.c_profile_option_id})">
-<input type="submit" class="submit" value="ºï½ü">
+<input type="submit" class="submit" value="å‰Šé™¤">
 </td>
 </form>
 </tr>
@@ -136,7 +136,7 @@
 ({/foreach})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_profile_option','do')})">
@@ -144,7 +144,7 @@
 <input type="hidden" name="c_profile_id" value="({$item.c_profile_id})">
 <input type="text" name="value" value="" size="20"></td>
 <td><input type="text" name="sort_order" value="" size="5"></td>
-<td colspan="2"><input type="submit" class="submit" value="¹àÌÜÄÉ²Ã"></td>
+<td colspan="2"><input type="submit" class="submit" value="é …ç›®è¿½åŠ "></td>
 </form>
 </tr>
 </table>

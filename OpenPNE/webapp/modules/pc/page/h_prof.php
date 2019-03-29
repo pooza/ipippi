@@ -16,7 +16,7 @@ function pageAction_h_prof($smarty,$requests) {
 	$smarty->assign("is_friend", 0);
 
 
-	// --- f_home, h_prof ¶¦ÄÌ½èÍý
+	// --- f_home, h_prof å…±é€šå‡¦ç†
 
 	$smarty->assign("target_c_member_id",$target_c_member_id);
 	$target_c_member['last_login'] = p_f_home_last_login4access_date($target_c_member['access_date']);
@@ -35,7 +35,7 @@ function pageAction_h_prof($smarty,$requests) {
 	$smarty->assign("c_commu_list", p_f_home_c_commu_list4c_member_id($target_c_member_id, 9));
 	$smarty->assign('c_review_list', p_h_home_c_review_list4c_member_id($target_c_member_id));
 
-	// ÃÂÀ¸Æü¤Þ¤Ç¤¢¤È²¿Æü¡©
+	// èª•ç”Ÿæ—¥ã¾ã§ã‚ã¨ä½•æ—¥ï¼Ÿ
 	$smarty->assign("days_birthday", db_common_count_days_birthday4c_member_id($target_c_member_id));
 
 	// inc_entry_point
@@ -48,4 +48,4 @@ function pageAction_h_prof($smarty,$requests) {
 
 	$smarty->ext_display("h_prof.tpl");
 }
-?>
+

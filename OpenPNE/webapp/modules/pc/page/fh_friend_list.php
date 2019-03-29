@@ -5,7 +5,7 @@
 function pageAction_fh_friend_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$target_c_member_id = $requests['target_c_member_id'];
 		$direc = $requests['direc'];
 		$page = $requests['page'];
@@ -21,7 +21,7 @@ function pageAction_fh_friend_list($smarty,$requests) {
 			exit;
 		}
 
-		// navi ¿¶¤êÊ¬¤±ÍÑ	
+		// navi æŒ¯ã‚Šåˆ†ã‘ç”¨	
 		if($target_c_member_id == $u) {
 			$type = "h";
 		} else {
@@ -32,24 +32,24 @@ function pageAction_fh_friend_list($smarty,$requests) {
 
 
 		//----------PC CONTENT#LEFT
-		//¥æ¡¼¥¶¾ðÊó
+		//ãƒ¦ãƒ¼ã‚¶æƒ…å ±
 		$smarty->assign("member", db_common_c_member4c_member_id($u));
 
-		//¥¿¡¼¥²¥Ã¥È¾ðÊó
+		//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 		$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
-		//¥¿¡¼¥²¥Ã¥È¤ÎÍ§Ã£¿ô
+		//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®å‹é”æ•°
 	    $friend_num = p_fh_friend_list_friend_num4c_member_id($target_c_member_id);
 
 		$smarty->assign("target_friend_num", $friend_num);
 
 		//----------PC CONTENT#CENTER
 	 
-		// 1¥Ú¡¼¥¸Åö¤¿¤ê¤ËÉ½¼¨¤¹¤ë¥Õ¥ì¥ó¥É¤Î¿ô
+		// 1ãƒšãƒ¼ã‚¸å½“ãŸã‚Šã«è¡¨ç¤ºã™ã‚‹ãƒ•ãƒ¬ãƒ³ãƒ‰ã®æ•°
 		$page_size = 50;
 		$page += $direc;
 
-		//¥¿¡¼¥²¥Ã¥È¤Î¾ÜºÙ¤ÊÍ§Ã£¥ê¥¹¥È
+		//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®è©³ç´°ãªå‹é”ãƒªã‚¹ãƒˆ
 	    $list = p_fh_friend_list_friend_list4c_member_id2($target_c_member_id,$page_size,$page,$order);
 	    $smarty->assign("order", $order);
 
@@ -69,12 +69,12 @@ function pageAction_fh_friend_list($smarty,$requests) {
 		}
 		$smarty->assign("page_num",$page_num);
 
-	//¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë
+	//ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹
 	if ($target_c_member_id != $u) {
 	    p_etc_do_ashiato($target_c_member_id, $u);
 	}
 
-		//---- ¥Ú¡¼¥¸É½¼¨ ----//
+		//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 		$smarty->ext_display("fh_friend_list.tpl");
 }
-?>
+

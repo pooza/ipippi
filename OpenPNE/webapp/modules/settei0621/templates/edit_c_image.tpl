@@ -1,66 +1,66 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>²èÁü´ÉÍý</h2>
+<h2>ç”»åƒç®¡ç†</h2>
 
 ({if $msg})
 <p class="caution">({$msg})</p>
 ({/if})
 
-<h3>²èÁü°ìÍ÷</h3>
+<h3>ç”»åƒä¸€è¦§</h3>
 
-<p><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})">²èÁü°ìÍ÷¤Ø</a></p>
+<p><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})">ç”»åƒä¸€è¦§ã¸</a></p>
 
-<h3>²èÁü¤ò¥Ç¡¼¥¿¥Ù¡¼¥¹¤ËÅÐÏ¿</h3>
+<h3>ç”»åƒã‚’ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«ç™»éŒ²</h3>
 
-<p class="caution">¢¨Æ±¤¸¥Õ¥¡¥¤¥ëÌ¾¤Ç´û¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤ë²èÁü¤¬¤¢¤ë¾ì¹ç¡¢¾å½ñ¤­¤µ¤ì¤Þ¤¹¡£</p>
+<p class="caution">â€»åŒã˜ãƒ•ã‚¡ã‚¤ãƒ«åã§æ—¢ã«ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹ç”»åƒãŒã‚ã‚‹å ´åˆã€ä¸Šæ›¸ãã•ã‚Œã¾ã™ã€‚</p>
 
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_image','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <dl>
-<dt>¥Õ¥¡¥¤¥ëÌ¾¡§</dd>
+<dt>ãƒ•ã‚¡ã‚¤ãƒ«åï¼š</dd>
 <dd><input type="text" name="filename" value="" size="30"></dd>
-<dt>²èÁü¡§</dt>
+<dt>ç”»åƒï¼š</dt>
 <dd><input type="file" name="upfile"></dd>
-<dd><input type="submit" class="submit" value="ÅÐÏ¿"></dd>
+<dd><input type="submit" class="submit" value="ç™»éŒ²"></dd>
 </dl>
 </form>
 
-<h3>¥Ç¡¼¥¿¥Ù¡¼¥¹Æâ¤Î²èÁü¤òÉ½¼¨</h3>
+<h3>ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹å†…ã®ç”»åƒã‚’è¡¨ç¤º</h3>
 
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('edit_c_image')})">
 <dl>
-<dt>¥Õ¥¡¥¤¥ëÌ¾¡§</dt>
+<dt>ãƒ•ã‚¡ã‚¤ãƒ«åï¼š</dt>
 <dd><input type="text" name="filename" value="({$requests.filename})" size="30"></dd>
-<dt>É½¼¨¥µ¥¤¥º(¼ÂºÝ¤è¤ê¾®¤µ¤¤¾ì¹ç¤Ï½Ì¾®¤µ¤ì¤Þ¤¹)</dt>
-<dd>Éý:<input type="text" name="w" value="({$requests.w})" size="4">px&nbsp;
-¹â¤µ:<input type="text" name="h" value="({$requests.h})" size="4">px</dd>
-<dd><input type="submit" class="submit" value="É½¼¨"></dd>
+<dt>è¡¨ç¤ºã‚µã‚¤ã‚º(å®Ÿéš›ã‚ˆã‚Šå°ã•ã„å ´åˆã¯ç¸®å°ã•ã‚Œã¾ã™)</dt>
+<dd>å¹…:<input type="text" name="w" value="({$requests.w})" size="4">px&nbsp;
+é«˜ã•:<input type="text" name="h" value="({$requests.h})" size="4">px</dd>
+<dd><input type="submit" class="submit" value="è¡¨ç¤º"></dd>
 </dl>
 </form>
 
-<p class="caution">¢¨¥Õ¥¡¥¤¥ëÌ¾¤Ë¤Ï¥æ¡¼¥¶¥Ú¡¼¥¸¤Î¥½¡¼¥¹¤Ë¤¢¤ë<br>
-¡Öimg.php?filename=****&h=180&w=180¡×¤Î****¤ÎÉôÊ¬¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£</p>
+<p class="caution">â€»ãƒ•ã‚¡ã‚¤ãƒ«åã«ã¯ãƒ¦ãƒ¼ã‚¶ãƒšãƒ¼ã‚¸ã®ã‚½ãƒ¼ã‚¹ã«ã‚ã‚‹<br>
+ã€Œimg.php?filename=****&h=180&w=180ã€ã®****ã®éƒ¨åˆ†ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚</p>
 
 ({if $requests.filename})
 
 ({if $is_image})
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_image','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="({$requests.filename})">
 <img src="img.php?filename=({$requests.filename})&amp;w=({$requests.w})&amp;h=({$requests.h})"><br>
-<input type="submit" class="submit" value="¤³¤Î²èÁü¤òºï½ü¤¹¤ë">
+<input type="submit" class="submit" value="ã“ã®ç”»åƒã‚’å‰Šé™¤ã™ã‚‹">
 </form>
 ({else})
-<em>({$requests.filename})</em> ¤ÏÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤»¤ó¡£
+<em>({$requests.filename})</em> ã¯ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 ({/if})
 
 ({/if})

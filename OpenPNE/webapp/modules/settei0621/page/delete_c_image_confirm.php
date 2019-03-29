@@ -1,5 +1,5 @@
 <?php
-// ²èÁüºï½ü(³ÎÇ§²èÌÌ)
+// ç”»åƒå‰Šé™¤(ç¢ºèªç”»é¢)
 
 
 function pageAction_delete_c_image_confirm(&$smarty,$requests)
@@ -13,4 +13,4 @@ function pageAction_delete_c_image_confirm(&$smarty,$requests)
 	$smarty->ext_display("delete_c_image_confirm.tpl");
 }
 
-?>
+

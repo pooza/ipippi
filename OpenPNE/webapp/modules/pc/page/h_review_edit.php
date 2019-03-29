@@ -3,7 +3,7 @@
 function pageAction_h_review_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$asin = $requests['asin'];
 	$err_msg = $requests['err_msg'];
 	// ----------
@@ -11,11 +11,11 @@ function pageAction_h_review_edit($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 	$smarty->assign('err_msg', $err_msg);
 	$satisfaction = array(
-			"5"	=> "À±5¤Ä",
-			"4"	=> "À±4¤Ä",
-			"3"	=> "À±3¤Ä",
-			"2"	=> "À±2¤Ä",
-			"1"	=> "À±1¤Ä",
+			"5"	=> "æ˜Ÿ5ã¤",
+			"4"	=> "æ˜Ÿ4ã¤",
+			"3"	=> "æ˜Ÿ3ã¤",
+			"2"	=> "æ˜Ÿ2ã¤",
+			"1"	=> "æ˜Ÿ1ã¤",
 			);
 	$smarty->assign('satisfaction', $satisfaction);
 
@@ -24,4 +24,4 @@ function pageAction_h_review_edit($smarty,$requests) {
 
 	$smarty->ext_display('h_review_edit.tpl');	
 }
-?>
+

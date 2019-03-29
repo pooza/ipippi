@@ -1,20 +1,20 @@
 <?php
 //----------------------------------------------------------------------------
 /**
-¥³¥á¥ó¥È½ñ¤­¹þ¤ß
+ã‚³ãƒ¡ãƒ³ãƒˆæ›¸ãè¾¼ã¿
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_topic_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 c_bbs
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_topic_id
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_c_bbs_insert_c_commu_topic_comment($requests)
@@ -22,13 +22,13 @@ function doAction_c_bbs_insert_c_commu_topic_comment($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_topic_id = $requests['target_c_commu_topic_id'];
 	$body = $requests['body'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 
     $c_commu_topic = _do_c_bbs_c_commu_topic4c_commu_topic_id($target_c_commu_topic_id);
     $c_commu_id = $c_commu_topic['c_commu_id'];
@@ -39,28 +39,27 @@ function doAction_c_bbs_insert_c_commu_topic_comment($requests)
     }
 	//---
 
-	if (is_null($body) || $body === '') {  //body¤¬Ìµ¤¤»þ¤Î¥¨¥é¡¼½èÍý
-	    //msg=1 "ËÜÊ¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£"
+	if (is_null($body) || $body === '') {  //bodyãŒç„¡ã„æ™‚ã®ã‚¨ãƒ©ãƒ¼å‡¦ç†
+	    //msg=1 "æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚"
     	client_redirect("ktai_page.php?p=c_bbs&target_c_commu_topic_id=$target_c_commu_topic_id&msg=1&$tail#comment");
     	exit();
 	}
 
 	$insert_id = do_c_bbs_insert_c_commu_topic_comment($u, $target_c_commu_topic_id, $body);
 	
-	//¥¤¥Ù¥ó¥È¤Î¥á¥ó¥Ð¡¼¤ËÄÉ²Ã
+	//ã‚¤ãƒ™ãƒ³ãƒˆã®ãƒ¡ãƒ³ãƒãƒ¼ã«è¿½åŠ 
 	if($requests['join_event']){
 		do_c_event_add_insert_c_event_member($target_c_commu_topic_id, $u);
 	}elseif($requests['cancel_event']){
 		do_c_event_add_delete_c_event_member($target_c_commu_topic_id, $u);	
 	}
 	
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(·ÈÂÓ¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(æºå¸¯ã¸)
 	send_bbs_info_mail($insert_id, $u);  
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(PC¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(PCã¸)
 	send_bbs_info_mail_pc($insert_id, $u);  
 
 
 	client_redirect("ktai_page.php?p=c_bbs&target_c_commu_topic_id=$target_c_commu_topic_id&$tail");
 }
 
-?>

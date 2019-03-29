@@ -1,14 +1,14 @@
 <?php
 function doNormalAction_login($requests)
 {
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_member_id = $requests['c_member_id'];
 	$ktai_address = $requests['ktai_address'];
 	$password = $requests['password'];
 	// ----------
 
     if(!$c_member_id = k_auth_login($ktai_address, $password)) {
-        // Ç§¾Ú¥¨¥é¡¼
+        // èªè¨¼ã‚¨ãƒ©ãƒ¼
         client_redirect("ktai_normal.php?p=login&msg=0&kad=".urlencode(t_encrypt($ktai_address)));
         exit;
     }
@@ -23,4 +23,4 @@ function doNormalAction_login($requests)
     client_redirect("ktai_page.php?p=h_home&ksid=" . session_id());
     exit;
 }
-?>
+

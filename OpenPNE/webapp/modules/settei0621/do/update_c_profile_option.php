@@ -1,5 +1,5 @@
 <?php
-// ¥×¥í¥Õ¥£¡¼¥ëÁªÂò»èÊÔ½¸
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é¸æŠžè‚¢ç·¨é›†
 
 
 function doAction_update_c_profile_option($requests)
@@ -10,7 +10,7 @@ function doAction_update_c_profile_option($requests)
 		db_admin_update_c_profile_option($requests['c_profile_option_id'], $requests['value'], $requests['sort_order']);
 	}
 
-	admin_client_redirect('edit_c_profile', "¥×¥í¥Õ¥£¡¼¥ëÁªÂò»è¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_profile', "ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é¸æŠžè‚¢ã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
-?>
+

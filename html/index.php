@@ -30,4 +30,4 @@ if (empty($_REQUEST['m'])) {
 }
 
 module_execute($m, 'page');
-?>
+

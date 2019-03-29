@@ -19,13 +19,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ***************************************************** -->
-<!-- ******¤³¤³¤«¤é¡§¥á¥Ã¥»¡¼¥¸¥Æ¡¼¥Ö¥ë´ÉÍı¥á¥ó¥Ğ¡¼°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ†ãƒ¼ãƒ–ãƒ«ç®¡ç†ãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;" class="border_01">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -35,20 +35,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¾®¥¿¥¤¥È¥ë -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- å°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:240px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥á¥ó¥Ğ¡¼´ÉÍı</span></td>
+<td style="width:240px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ãƒ¡ãƒ³ãƒãƒ¼ç®¡ç†</span></td>
 <td style="width:388px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
-({if $c_member_list})({*<<¥á¥ó¥Ğ¡¼°ìÍ÷¡§if*})
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
+({if $c_member_list})({*<<ãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§ï¼šif*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 ({*********})
 <tr>
@@ -62,10 +62,10 @@
 <div class="padding_s">
 
 ({if $is_prev})
-<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=-1">Á°¤òÉ½¼¨</a>&nbsp;&nbsp;
+<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=-1">å‰ã‚’è¡¨ç¤º</a>&nbsp;&nbsp;
 ({/if})
 ({if $is_next})
-&nbsp;&nbsp;<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=1">¼¡¤òÉ½¼¨</a>
+&nbsp;&nbsp;<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=1">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -80,7 +80,7 @@
 <tr>
 <td style="width:180px;" class="bg_00">
 
-<span class="c_01">({$c_member.r_datetime|date_format:"%YÇ¯%m·î%dÆü %H:%M"})</span>
+<span class="c_01">({$c_member.r_datetime|date_format:"%Yå¹´%mæœˆ%dæ—¥ %H:%M"})</span>
 
 </td>
 <td class="bg_02">
@@ -91,7 +91,7 @@
 <td class="bg_02">
 
 ({if !$c_member.is_c_commu_admin})
-<a href="./do.php?cmd=c_edit_member_delete_c_commu_member&amp;target_c_commu_id=({$c_commu.c_commu_id})&target_c_member_id=({$c_member.c_member_id})&amp;sessid=({$PHPSESSID})">¥³¥ß¥å¥Ë¥Æ¥£¤«¤éÂà²ñ¤µ¤»¤ë</a>
+<a href="./do.php?cmd=c_edit_member_delete_c_commu_member&amp;target_c_commu_id=({$c_commu.c_commu_id})&target_c_member_id=({$c_member.c_member_id})&amp;sessid=({$PHPSESSID})">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‹ã‚‰é€€ä¼šã•ã›ã‚‹</a>
 ({else})
 &nbsp;
 ({/if})
@@ -99,7 +99,7 @@
 <td class="bg_02">
 
 ({if !$c_member.is_c_commu_admin && $c_member.c_commu_admin_confirm_id le 0})
-<a href="./page.php?p=c_admin_request&amp;target_c_commu_id=({$c_commu.c_commu_id})&target_c_member_id=({$c_member.c_member_id})">´ÉÍı¸¢¤òÅÏ¤¹</a>
+<a href="./page.php?p=c_admin_request&amp;target_c_commu_id=({$c_commu.c_commu_id})&target_c_member_id=({$c_member.c_member_id})">ç®¡ç†æ¨©ã‚’æ¸¡ã™</a>
 ({else})
 &nbsp;
 ({/if})
@@ -119,10 +119,10 @@
 <div class="padding_s">
 
 ({if $is_prev})
-<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=-1">Á°¤òÉ½¼¨</a>&nbsp;&nbsp;
+<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=-1">å‰ã‚’è¡¨ç¤º</a>&nbsp;&nbsp;
 ({/if})
 ({if $is_next})
-&nbsp;&nbsp;<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=1">¼¡¤òÉ½¼¨</a>
+&nbsp;&nbsp;<a href="page.php?p=c_edit_member&amp;target_c_commu_id=({$requests.target_c_commu_id})&amp;page=({$page})&amp;direc=1">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -135,13 +135,13 @@
 </tr>
 </table>
 
-({/if})({*<<¥á¥ó¥Ğ¡¼°ìÍ÷¡§if*})
+({/if})({*<<ãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§ï¼šif*})
 
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -151,7 +151,7 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥á¥Ã¥»¡¼¥¸¥Æ¡¼¥Ö¥ë´ÉÍı¥á¥ó¥Ğ¡¼°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ†ãƒ¼ãƒ–ãƒ«ç®¡ç†ãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§****** -->
 <!-- ***************************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -161,7 +161,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td></tr>
 </table>({*END:container*})

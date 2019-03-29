@@ -4,17 +4,17 @@
 function pageAction_fh_diary($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	$body = $requests['body'];
 	// ----------
 
-    // target ¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Ê¤¤
+    // target ãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„
     if (!$target_c_diary_id) {
         client_redirect("page.php?p=h_err_fh_diary");
         exit;
     }
-    // target ¤ÎÆüµ­¤¬Â¸ºß¤·¤Ê¤¤
+    // target ã®æ—¥è¨˜ãŒå­˜åœ¨ã—ãªã„
     if (!p_common_is_active_c_diary_id($target_c_diary_id)) {
         client_redirect("page.php?p=h_err_fh_diary");
         exit;
@@ -27,27 +27,27 @@ function pageAction_fh_diary($smarty,$requests) {
     if ($target_c_member_id == $u) {
     	$type = 'h';
     	
-		//Æüµ­¤ò±ÜÍ÷ºÑ¤ß¤Ë¤¹¤ë
+		//æ—¥è¨˜ã‚’é–²è¦§æ¸ˆã¿ã«ã™ã‚‹
 		p_h_diary_update_c_diary_is_checked4c_dirary_id($target_c_diary_id, "1");
 		
     } else {
     	$type = 'f';
     	$target_c_member = db_common_c_member4c_member_id($target_c_member_id);
 
-		//Æüµ­¤Î¸ø³«ÈÏ°ÏÀßÄê
+		//æ—¥è¨˜ã®å…¬é–‹ç¯„å›²è¨­å®š
 		if (($target_c_member['public_flag_diary'] == "friend" &&
 			 !_db_is_friend($u, $target_c_member_id))) {
 		    client_redirect("page.php?p=h_err_diary_access");
 		    exit;
 		}
     	
-    	// ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+    	// ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 		if (p_common_is_access_block($u, $target_c_member_id)) {
 			client_redirect("page.php?p=h_access_block");
 			exit;
 		}
 		
-		// ¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë		
+		// ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹		
 	    p_etc_do_ashiato($target_c_member_id, $u);
     }
 	$smarty->assign("type", $type);
@@ -62,15 +62,15 @@ function pageAction_fh_diary($smarty,$requests) {
 	
 	$smarty->assign("body", $body);
 
-	//ºÇ¶á¤ÎÆüµ­¤ò¼èÆÀ
+	//æœ€è¿‘ã®æ—¥è¨˜ã‚’å–å¾—
 	$list_set = p_fh_diary_list_diary_list4c_member_id($target_c_member_id, 7, 1);
 	$smarty->assign("new_diary_list", $list_set[0]);
 
-	//¥«¥ì¥ó¥À¡¼´Ø·¸
-	//¥«¥ì¥ó¥À¡¼³«»ÏÍÑÊÑ¿ô
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼é–¢ä¿‚
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼é–‹å§‹ç”¨å¤‰æ•°
 	$year = intval($target_c_diary['year']);
 	$month= intval($target_c_diary['month']);
-	//Æüµ­°ìÍ÷¡¢¥«¥ì¥ó¥À¡¼ÍÑÊÑ¿ô
+	//æ—¥è¨˜ä¸€è¦§ã€ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ç”¨å¤‰æ•°
 	$date_val=	array(
         'year' => $year,
         'month' => $month,
@@ -78,16 +78,16 @@ function pageAction_fh_diary($smarty,$requests) {
     );
 	$smarty->assign("date_val", $date_val);
 	
-	//Æüµ­¤Î¥«¥ì¥ó¥À¡¼
+	//æ—¥è¨˜ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼
 	$calendar = db_common_diary_monthly_calendar($year, $month, $target_c_member_id);
 
 	$smarty->assign("calendar", $calendar['days']);
 	$smarty->assign("ym", $calendar['ym']);
 	
-	//³Æ·î¤ÎÆüµ­
+	//å„æœˆã®æ—¥è¨˜
 	$smarty->assign("date_list",p_fh_diary_list_date_list4c_member_id($target_c_member_id));
 
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("fh_diary.tpl");
 }
-?>
+

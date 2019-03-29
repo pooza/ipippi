@@ -1,5 +1,5 @@
 <?php
-// ¤ª¤·¤é¤»¤Ê¤É¹¹¿·
+// ãŠã—ã‚‰ã›ãªã©æ›´æ–°
 
 
 function pageAction_edit_c_admin_info(&$smarty,$requests)
@@ -13,4 +13,3 @@ function pageAction_edit_c_admin_info(&$smarty,$requests)
 	$smarty->ext_display("edit_c_admin_info.tpl");
 }
 
-?>

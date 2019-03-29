@@ -4,17 +4,17 @@
 function pageAction_fh_delete_comment($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	$target_c_diary_comment_id = $requests['target_c_diary_comment_id'];
 	// ----------
 
-    // target ¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Ê¤¤
+    // target ãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„
     if (!$target_c_diary_id) {
         client_redirect("page.php?p=h_err_fh_diary");
         exit;
     }
-    // target ¤ÎÆüµ­¤¬Â¸ºß¤·¤Ê¤¤
+    // target ã®æ—¥è¨˜ãŒå­˜åœ¨ã—ãªã„
     if (!p_common_is_active_c_diary_id($target_c_diary_id)) {
         client_redirect("page.php?p=h_err_fh_diary");
         exit;
@@ -22,12 +22,12 @@ function pageAction_fh_delete_comment($smarty,$requests) {
     
     $target_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
 	
-    // ºï½ü¤¹¤ë¥³¥á¥ó¥È¤¬¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Ê¤¤
+    // å‰Šé™¤ã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆãŒãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„
     if (!$target_c_diary_comment_id) {
         client_redirect("page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id");
         exit;
     }
-    // ¥³¥á¥ó¥ÈID¤¬ÉÔÀµ
+    // ã‚³ãƒ¡ãƒ³ãƒˆIDãŒä¸æ­£
     foreach ($target_c_diary_comment_id as $item) {
     	$comment = _do_c_diary_comment4c_diary_comment_id($item);
     	if ($comment['c_diary_id'] != $target_c_diary_id
@@ -38,7 +38,7 @@ function pageAction_fh_delete_comment($smarty,$requests) {
     	}
     }
 
-	// ¥ª¥Ö¥¸¥§¥¯¥È¤Î¿¶¤êÊ¬¤±ÍÑ
+	// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æŒ¯ã‚Šåˆ†ã‘ç”¨
 	$target_c_member_id = $target_diary['c_member_id']; 
 
 	// inc_navi.tpl
@@ -61,14 +61,14 @@ function pageAction_fh_delete_comment($smarty,$requests) {
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 	$smarty->assign("target_diary", $target_diary);
 
-	//ºï½ü¤¹¤ë¥³¥á¥ó¥È°ìÍ÷
+	//å‰Šé™¤ã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆä¸€è¦§
 	$smarty->assign("target_diary_comment_list", p_fh_diary_c_diary_comment_list4c_diary_comment_id($target_c_diary_comment_id));
 
 	//$smarty->assign("body", $body);
-	//ºï½ü¤¹¤ë¥³¥á¥ó¥ÈID
+	//å‰Šé™¤ã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆID
 	$smarty->assign("target_c_diary_comment_id", $target_c_diary_comment_id);
 
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("fh_delete_comment.tpl");
 }
-?>
+

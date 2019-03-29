@@ -1,16 +1,16 @@
 ({$inc_ktai_header|smarty:nodefaults})({strip})
 
-<center>ÌßÛÌ¨°ÙÊÑ¹¹</center>
+<center>ï¾Œï¾Ÿï¾›ï¾Œï½¨ï½°ï¾™å¤‰æ›´</center>
 <hr>
-<font color="red">*</font>¤ÏÉ¬¿Ü¹àÌÜ¡£<br>
+<font color="red">*</font>ã¯å¿…é ˆé …ç›®ã€‚<br>
 
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_config_prof_update_c_member">
 
 ({capture name="nick"})
-<font color="red">*</font>Æ¯¸È°Ñ<br>
+<font color="red">*</font>ï¾†ï½¯ï½¸ï¾ˆï½°ï¾‘<br>
 <input type="text" name="nickname" value="({$c_member.nickname})"><br>
 ({/capture})
 
@@ -37,7 +37,7 @@
 		<textarea name="profile[({$profile.name})]">({$c_member.profile[$profile.name].value})</textarea>
 	({elseif $profile.form_type == 'select' || $profile.form_type == 'radio'})
 		<select name="profile[({$profile.name})]">
-			<option value="">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤
+			<option value="">é¸æŠã—ã¦ãã ã•ã„
 			({foreach item=item from=$profile.options})
 			<option value="({$item.c_profile_option_id})"({if $c_member.profile[$profile.name].value == $item.value}) selected="selected"({/if})>({$item.value|default:"--"})
 			({/foreach})
@@ -66,10 +66,10 @@
 ({if !$_cnt_birth})({$smarty.capture.birth|smarty:nodefaults})({/if})
 
 <br>
-<input type="submit" value="ÊÑ¹¹¤¹¤ë">
+<input type="submit" value="å¤‰æ›´ã™ã‚‹">
 </form>
 
 <hr>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({/strip})({$inc_ktai_footer|smarty:nodefaults})

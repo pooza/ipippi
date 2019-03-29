@@ -2,13 +2,13 @@
 function doAction_h_home_insert_c_schedule($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$title = $request['title'];
 	$start_date= $request['start_date'];
 	// ----------
 
 	if (!$title) {
-		$msg = urlencode("¥¿¥¤¥È¥ë¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤"); 
+		$msg = urlencode("ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„"); 
 		client_redirect("page.php?p=h_home&w=".$request['w']."&msg=$msg");
 		exit;
 	}
@@ -52,8 +52,8 @@ function doAction_h_home_insert_c_schedule($request) {
 		$end_time = null;
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
@@ -61,7 +61,6 @@ function doAction_h_home_insert_c_schedule($request) {
 		$start_date, $start_time, $end_date, $end_time,
 		$input['is_receive_mail']);
 
-	$msg = "Í½Äê¤òÄÉ²Ã¤·¤Þ¤·¤¿";
+	$msg = "äºˆå®šã‚’è¿½åŠ ã—ã¾ã—ãŸ";
 	client_redirect("page.php?p=h_home&w=".$request['w']."&msg=".urlencode($msg));
 }
-?>

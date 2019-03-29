@@ -171,4 +171,4 @@ class AdminHashTable
 	}
 }
 
-?>
+

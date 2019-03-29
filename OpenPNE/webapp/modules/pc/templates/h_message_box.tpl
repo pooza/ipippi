@@ -19,13 +19,13 @@
 <td style="width:5px;"><img src="./skin/dummy.gif" style="width:5px;" class="dummy"></td>({*<--spacer*})
 <td class="left_content_175" align="center" valign="top">
 ({********************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä¡Êº¸¡Ë**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ï¼ˆå·¦ï¼‰**})
 ({********************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- *********************************************** -->
-<!-- ******¤³¤³¤«¤é¡§¥á¥Ã¥»¡¼¥¸¥Ü¥Ã¥¯¥¹º¸¥á¥Ë¥å¡¼****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹å·¦ãƒ¡ãƒ‹ãƒ¥ãƒ¼****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:165px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_10"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -35,53 +35,53 @@
 <tr>
 <td class="bg_10"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_10" align="center">
-<!-- *¤³¤³¤«¤é¡§¥á¥Ã¥»¡¼¥¸¥Ü¥Ã¥¯¥¹º¸¥á¥Ë¥å¡¼¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹å·¦ãƒ¡ãƒ‹ãƒ¥ãƒ¼ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 ({if $box != "inbox"})
 <div align="left" style="padding:3px;" class="bg_02 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=inbox">¼õ¿®¥á¥Ã¥»¡¼¥¸</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=inbox">å—ä¿¡ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸</a>
 ({else})
 <div align="left" style="padding:3px;" class="bg_09 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">¼õ¿®¥á¥Ã¥»¡¼¥¸
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">å—ä¿¡ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 ({/if})
 </div>
 
 ({if $box != "outbox"})
 <div align="left" style="padding:3px;" class="bg_02 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=outbox">Á÷¿®ºÑ¤ß¥á¥Ã¥»¡¼¥¸</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=outbox">é€ä¿¡æ¸ˆã¿ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸</a>
 ({else})
 <div align="left" style="padding:3px;" class="bg_09 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">Á÷¿®ºÑ¤ß¥á¥Ã¥»¡¼¥¸
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">é€ä¿¡æ¸ˆã¿ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 ({/if})
 </div>
 
 ({if $box != "savebox"})
 <div align="left" style="padding:3px;" class="bg_02 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=savebox">²¼½ñ¤­¥á¥Ã¥»¡¼¥¸</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=savebox">ä¸‹æ›¸ããƒ¡ãƒƒã‚»ãƒ¼ã‚¸</a>
 ({else})
 <div align="left" style="padding:3px;" class="bg_09 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">²¼½ñ¤­¥á¥Ã¥»¡¼¥¸
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">ä¸‹æ›¸ããƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 ({/if})
 </div>
 
 ({if $box != "trash"})
 <div align="left" style="padding:3px;" class="bg_02 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=trash">¤´¤ßÈ¢</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1"><a href="page.php?p=h_message_box&box=trash">ã”ã¿ç®±</a>
 ({else})
 <div align="left" style="padding:3px;" class="bg_09 border_10">
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">¤´¤ßÈ¢
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">ã”ã¿ç®±
 ({/if})
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥á¥Ã¥»¡¼¥¸¥Ü¥Ã¥¯¥¹º¸¥á¥Ë¥å¡¼¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹å·¦ãƒ¡ãƒ‹ãƒ¥ãƒ¼ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_10"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -91,25 +91,25 @@
 <td class="bg_10"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥á¥Ã¥»¡¼¥¸¥Ü¥Ã¥¯¥¹º¸¥á¥Ë¥å¡¼****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹å·¦ãƒ¡ãƒ‹ãƒ¥ãƒ¼****** -->
 <!-- *********************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({********************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä¡Êº¸¡Ë**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ï¼ˆå·¦ï¼‰**})
 ({********************************})
 </td>
 <td style="width:5px;"><img src="./skin/dummy.gif" style="width:5px;" class="dummy"></td>({*<--spacer*})
 <td class="right_content_535" align="center" valign="top">
 ({********************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä¡Ê±¦¡Ë**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ï¼ˆå³ï¼‰**})
 ({********************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************** -->
-<!-- ******¤³¤³¤«¤é¡§Box°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šBoxä¸€è¦§****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:520px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -119,47 +119,47 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§Box°ìÍ÷¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šBoxä¸€è¦§ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:506px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
 <td style="width:468px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">
 ({if $box == "inbox" || !$box })
-¼õ¿®¥á¥Ã¥»¡¼¥¸
+å—ä¿¡ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 ({elseif $box == "outbox"})
-Á÷¿®ºÑ¤ß¥á¥Ã¥»¡¼¥¸
+é€ä¿¡æ¸ˆã¿ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 ({elseif $box == "savebox"})
-²¼½ñ¤­¥á¥Ã¥»¡¼¥¸
+ä¸‹æ›¸ããƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 ({elseif $box == "trash"})
-¤´¤ßÈ¢
+ã”ã¿ç®±
 ({/if})
 </span></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¥á¥Ã¥»¡¼¥¸ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ -->
 <div align="left" style="padding:0px;" class="bg_09">
 
-({*¡Á¥á¥Ã¥»¡¼¥¸ÁŞÆş²Ä¡Á*})
+({*ï½ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æŒ¿å…¥å¯ï½*})
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¥á¥Ã¥»¡¼¥¸ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ -->
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 
 ({if $box == "inbox" || !$box })
 
 ({if $count_c_message_ru_list})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -167,7 +167,7 @@
 
 <div class="padding_s">
 
-&nbsp;<img src="./skin/icon_mail_4.gif" class="icon">&nbsp;¡Ä&nbsp;ÊÖ¿®ºÑ¤ß
+&nbsp;<img src="./skin/icon_mail_4.gif" class="icon">&nbsp;â€¦&nbsp;è¿”ä¿¡æ¸ˆã¿
 
 </div>
 
@@ -177,17 +177,17 @@
 <div class="padding_s">
 
 ({if $ru_data.is_ru_prev})
- <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page-1})&box=inbox">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page-1})&box=inbox">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$ru_data.ru_page*$page_size-$page_size+1})·ï¡Á
+({$ru_data.ru_page*$page_size-$page_size+1})ä»¶ï½
 ({if $ru_data.ru_page*$page_size > $count_c_message_ru_list })
 ({$count_c_message_ru_list+$ru_data.ru_page*$page_size-$page_size })
 ({else})
 ({$ru_data.ru_page*$page_size})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $ru_data.is_ru_next})
- <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page+1})&box=inbox">¼¡¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page+1})&box=inbox">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -196,17 +196,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="margin:0px auto;" class="border_01">
 ({*********})
 <tr>
 <td style="width:35px;height=19px;" class="bg_08">&nbsp;</td>
-<td style="width:35px;" class="bg_08">ºï½ü</td>
-<td style="width:130px;" class="bg_08"><span class="b_b">Á÷¿®¼Ô</span></td>
-<td style="width:220px;" class="bg_08"><span class="b_b">·ï Ì¾</span></td>
-<td style="width:auto;" class="bg_08"><span class="b_b">Æü ÉÕ</span></td>
+<td style="width:35px;" class="bg_08">å‰Šé™¤</td>
+<td style="width:130px;" class="bg_08"><span class="b_b">é€ä¿¡è€…</span></td>
+<td style="width:220px;" class="bg_08"><span class="b_b">ä»¶ å</span></td>
+<td style="width:auto;" class="bg_08"><span class="b_b">æ—¥ ä»˜</span></td>
 </tr>
 ({*********})
 <tr>
@@ -219,7 +219,7 @@
 <td class="bg_({if $c_message_ru.is_read})02({else})09({/if})"><input name="c_message_id[]" value="({$c_message_ru.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_({if $c_message_ru.is_read})02({else})09({/if})">({$c_message_ru.nickname})</td>
 <td class="bg_({if $c_message_ru.is_read})02({else})09({/if})"><a href="page.php?p=h_message&target_c_message_id=({$c_message_ru.c_message_id})&jyusin_c_message_id=({$c_message_ru.c_message_id})">({$c_message_ru.subject})</a></td>
-<td class="bg_({if $c_message_ru.is_read})02({else})09({/if})">({$c_message_ru.r_datetime|date_format:"%m·î%dÆü"})</td>
+<td class="bg_({if $c_message_ru.is_read})02({else})09({/if})">({$c_message_ru.r_datetime|date_format:"%mæœˆ%dæ—¥"})</td>
 </tr>
 ({*********})
 <tr>
@@ -228,9 +228,9 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -239,17 +239,17 @@
 <div class="padding_s">
 
 ({if $ru_data.is_ru_prev})
- <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page-1})&box=inbox">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page-1})&box=inbox">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$ru_data.ru_page*$page_size-$page_size+1})·ï¡Á
+({$ru_data.ru_page*$page_size-$page_size+1})ä»¶ï½
 ({if $ru_data.ru_page*$page_size > $count_c_message_ru_list })
 ({$count_c_message_ru_list+$ru_data.ru_page*$page_size-$page_size })
 ({else})
 ({$ru_data.ru_page*$page_size})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $ru_data.is_ru_next})
- <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page+1})&box=inbox">¼¡¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&ru_page=({$ru_data.ru_page+1})&box=inbox">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -258,9 +258,9 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -270,7 +270,7 @@
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_message_box_delete_message">
 <input type="hidden" name="box" value="({$box})">
-<input type="submit" value="ºï ½ü">
+<input type="submit" value="å‰Š é™¤">
 
 </div>
 
@@ -278,17 +278,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 
 ({else})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 <div align="center" style="padding:20px 30px;" class="bg_02 border_01">
 
-¥á¥Ã¥»¡¼¥¸¤¬¤¢¤ê¤Ş¤»¤ó¡£
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¼õ¿®È¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼å—ä¿¡ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 
 ({/if})
 
@@ -298,7 +298,7 @@
 
 ({if $count_c_message_s_list})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -307,17 +307,17 @@
 <div class="padding_s">
 
 ({if $s_data.is_s_prev})
- <a href="page.php?p=h_message_box&s_page=({$s_data.s_page-1})&box=outbox">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&s_page=({$s_data.s_page-1})&box=outbox">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$s_data.s_page*$page_size-$page_size+1})·ï¡Á
+({$s_data.s_page*$page_size-$page_size+1})ä»¶ï½
 ({if $s_data.s_page*$page_size > $count_c_message_s_list })
 ({$count_c_message_s_list+$s_data.s_page*$page_size-$page_size })
 ({else})
 ({$s_data.s_page*$page_size})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $s_data.is_s_next})
- <a href="page.php?p=h_message_box&s_page=({$s_data.s_page+1})&box=outbox">¼¡¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&s_page=({$s_data.s_page+1})&box=outbox">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 </div>
 
@@ -325,17 +325,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="margin:0px auto;" class="border_01">
 ({*********})
 <tr>
 <td style="width:35px;height=19px;" class="bg_08">&nbsp;</td>
-<td style="width:35px;" class="bg_08">ºï½ü</td>
-<td style="width:130px;" class="bg_08"><span class="b_b">°¸ Àè</span></td>
-<td style="width:220px;" class="bg_08"><span class="b_b">·ï Ì¾</span></td>
-<td style="width:auto;" class="bg_08"><span class="b_b">Æü ÉÕ</span></td>
+<td style="width:35px;" class="bg_08">å‰Šé™¤</td>
+<td style="width:130px;" class="bg_08"><span class="b_b">å®› å…ˆ</span></td>
+<td style="width:220px;" class="bg_08"><span class="b_b">ä»¶ å</span></td>
+<td style="width:auto;" class="bg_08"><span class="b_b">æ—¥ ä»˜</span></td>
 </tr>
 ({*********})
 <tr>
@@ -348,7 +348,7 @@
 <td class="bg_02"><input name="c_message_id[]" value="({$c_message_s.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_02">({$c_message_s.nickname})</td>
 <td class="bg_02"><a href="page.php?p=h_message&target_c_message_id=({$c_message_s.c_message_id})&box=outbox">({$c_message_s.subject})</a></td>
-<td class="bg_02">({$c_message_s.r_datetime|date_format:"%m·î%dÆü"})</td>
+<td class="bg_02">({$c_message_s.r_datetime|date_format:"%mæœˆ%dæ—¥"})</td>
 </tr>
 ({*********})
 <tr>
@@ -357,9 +357,9 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -368,17 +368,17 @@
 <div class="padding_s">
 
 ({if $s_data.is_s_prev})
- <a href="page.php?p=h_message_box&s_page=({$s_data.s_page-1})&box=outbox">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&s_page=({$s_data.s_page-1})&box=outbox">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$s_data.s_page*$page_size-$page_size+1})·ï¡Á
+({$s_data.s_page*$page_size-$page_size+1})ä»¶ï½
 ({if $s_data.s_page*$page_size > $count_c_message_s_list })
 ({$count_c_message_s_list+$s_data.s_page*$page_size-$page_size })
 ({else})
 ({$s_data.s_page*$page_size})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $s_data.is_s_next})
- <a href="page.php?p=h_message_box&s_page=({$s_data.s_page+1})&box=outbox">¼¡¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&s_page=({$s_data.s_page+1})&box=outbox">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 </div>
 
@@ -386,9 +386,9 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -398,7 +398,7 @@
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_message_box_delete_message">
 <input type="hidden" name="box" value="({$box})">
-<input type="submit" value="ºï ½ü">
+<input type="submit" value="å‰Š é™¤">
 
 </div>
 
@@ -406,17 +406,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 
 ({else})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 <div align="center" style="padding:20px 30px;" class="bg_02 border_01">
 
-¥á¥Ã¥»¡¼¥¸¤¬¤¢¤ê¤Ş¤»¤ó¡£
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÁ÷¿®ºÑ¤ßÈ¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼é€ä¿¡æ¸ˆã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 
 ({/if})
 
@@ -426,7 +426,7 @@
 
 ({if $count_c_message_save_list})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -435,17 +435,17 @@
 <div class="padding_s">
 
 ({if $save_data.is_save_prev})
- <a href="page.php?p=h_message_box&save_page=({$save_data.save_page-1})&box=savebox">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&save_page=({$save_data.save_page-1})&box=savebox">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$save_data.save_page*20-19})·ï¡Á
+({$save_data.save_page*20-19})ä»¶ï½
 ({if $save_data.save_page*20 > $count_c_message_save_list })
 ({$count_c_message_save_list+$save_data.save_page*20-20 })
 ({else})
 ({$save_data.save_page*20})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $save_data.is_save_next})
- <a href="page.php?p=h_message_box&save_page=({$save_data.save_page+1})&box=savebox">¼¡¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&save_page=({$save_data.save_page+1})&box=savebox">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -454,17 +454,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="margin:0px auto;" class="border_01">
 ({*********})
 <tr>
 <td style="width:35px;height=19px;" class="bg_08">&nbsp;</td>
-<td style="width:35px;" class="bg_08">ºï½ü</td>
-<td style="width:130px;" class="bg_08"><span class="b_b">°¸ Àè</span></td>
-<td style="width:220px;" class="bg_08"><span class="b_b">·ï Ì¾</span></td>
-<td style="width:auto;" class="bg_08"><span class="b_b">Æü ÉÕ</span></td>
+<td style="width:35px;" class="bg_08">å‰Šé™¤</td>
+<td style="width:130px;" class="bg_08"><span class="b_b">å®› å…ˆ</span></td>
+<td style="width:220px;" class="bg_08"><span class="b_b">ä»¶ å</span></td>
+<td style="width:auto;" class="bg_08"><span class="b_b">æ—¥ ä»˜</span></td>
 </tr>
 ({*********})
 <tr>
@@ -477,7 +477,7 @@
 <td class="bg_02"><input name="c_message_id[]" value="({$c_message_save.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_02">({$c_message_save.nickname})</td>
 <td class="bg_02"><a href="page.php?p=f_message_send&target_c_message_id=({$c_message_save.c_message_id})&jyusin_c_message_id=({$c_message_save.hensinmoto_c_message_id})&box=savebox">({$c_message_save.subject})</a></td>
-<td class="bg_02">({$c_message_save.r_datetime|date_format:"%m·î%dÆü"})</td>
+<td class="bg_02">({$c_message_save.r_datetime|date_format:"%mæœˆ%dæ—¥"})</td>
 </tr>
 ({*********})
 <tr>
@@ -486,9 +486,9 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -497,17 +497,17 @@
 <div class="padding_s">
 
 ({if $save_data.is_save_prev})
- <a href="page.php?p=h_message_box&save_page=({$save_data.save_page-1})&box=savebox">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&save_page=({$save_data.save_page-1})&box=savebox">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$save_data.save_page*20-19})·ï¡Á
+({$save_data.save_page*20-19})ä»¶ï½
 ({if $save_data.save_page*20 > $count_c_message_save_list })
 ({$count_c_message_save_list+$save_data.save_page*20-20 })
 ({else})
 ({$save_data.save_page*20})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $save_data.is_save_next})
- <a href="page.php?p=h_message_box&save_page=({$save_data.save_page+1})&box=savebox">¼¡¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&save_page=({$save_data.save_page+1})&box=savebox">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -516,9 +516,9 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -528,7 +528,7 @@
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_message_box_delete_message">
 <input type="hidden" name="box" value="savebox">
-<input type="submit" value="ºï ½ü">
+<input type="submit" value="å‰Š é™¤">
 
 </div>
 
@@ -536,17 +536,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 
 ({else})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 <div align="center" style="padding:20px 30px;" class="bg_02 border_01">
 
-¥á¥Ã¥»¡¼¥¸¤¬¤¢¤ê¤Ş¤»¤ó¡£
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä²¼½ñ¤­ÊİÂ¸È¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä¸‹æ›¸ãä¿å­˜ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 
 ({/if})
 
@@ -556,7 +556,7 @@
 
 ({if $count_c_message_trash_list})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -564,9 +564,9 @@
 
 <div class="padding_s">
 
-&nbsp;<img src="./skin/icon_mail_2.gif" class="icon">&nbsp;¡Ä&nbsp;¼õ¿®&nbsp;
-&nbsp;<img src="./skin/icon_mail_3.gif" class="icon">&nbsp;¡Ä&nbsp;Á÷¿®ºÑ¤ß&nbsp;
-&nbsp;<img src="./skin/icon_mail_1.gif" class="icon">&nbsp;¡Ä&nbsp;²¼½ñ¤­
+&nbsp;<img src="./skin/icon_mail_2.gif" class="icon">&nbsp;â€¦&nbsp;å—ä¿¡&nbsp;
+&nbsp;<img src="./skin/icon_mail_3.gif" class="icon">&nbsp;â€¦&nbsp;é€ä¿¡æ¸ˆã¿&nbsp;
+&nbsp;<img src="./skin/icon_mail_1.gif" class="icon">&nbsp;â€¦&nbsp;ä¸‹æ›¸ã
 
 </div>
 
@@ -576,17 +576,17 @@
 <div class="padding_s">
 
 ({if $trash_data.is_trash_prev})
- <a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page-1})&box=trash">Á°¤òÉ½¼¨</a>
+ <a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page-1})&box=trash">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$trash_data.trash_page*20-19})·ï¡Á
+({$trash_data.trash_page*20-19})ä»¶ï½
 ({if $trash_data.trash_page*20 > $count_c_message_trash_list })
 ({$count_c_message_trash_list+$trash_data.trash_page*20-20 })
 ({else})
 ({$trash_data.trash_page*20})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $trash_data.is_trash_next})
-<a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page+1})&box=trash">¼¡¤òÉ½¼¨</a>
+<a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page+1})&box=trash">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -595,17 +595,17 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="margin:0px auto;" class="border_01">
 ({*********})
 <tr>
 <td style="width:35px;height=19px;" class="bg_08">&nbsp;</td>
 <td style="width:35px;height=19px;" class="bg_08">&nbsp;</td>
-<td style="width:130px;" class="bg_08"><span class="b_b">Áê ¼ê</span></td>
-<td style="width:220px;" class="bg_08"><span class="b_b">·ï Ì¾</span></td>
-<td style="width:auto;" class="bg_08"><span class="b_b">Æü ÉÕ</span></td>
+<td style="width:130px;" class="bg_08"><span class="b_b">ç›¸ æ‰‹</span></td>
+<td style="width:220px;" class="bg_08"><span class="b_b">ä»¶ å</span></td>
+<td style="width:auto;" class="bg_08"><span class="b_b">æ—¥ ä»˜</span></td>
 </tr>
 ({*********})
 <tr>
@@ -616,12 +616,12 @@
 <tr>
 ({strip})
 <td class="bg_02" align="center">
-({if $c_message_trash.c_member_id_to == $u})({* ¼õ¿®¥á¥Ã¥»¡¼¥¸ *})
+({if $c_message_trash.c_member_id_to == $u})({* å—ä¿¡ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ *})
 	<img src="./skin/icon_mail_2.gif" class="icon">
 ({else})
-	({if $c_message_trash.is_send})({* Á÷¿®¥á¥Ã¥»¡¼¥¸ *})
+	({if $c_message_trash.is_send})({* é€ä¿¡ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ *})
 		<img src="./skin/icon_mail_3.gif" class="icon">
-	({else})({* ²¼½ñ¤­¥á¥Ã¥»¡¼¥¸ *})
+	({else})({* ä¸‹æ›¸ããƒ¡ãƒƒã‚»ãƒ¼ã‚¸ *})
 		<img src="./skin/icon_mail_1.gif" class="icon">
 	({/if})
 ({/if})
@@ -630,7 +630,7 @@
 <td class="bg_02"><input name="c_message_id[]" value="({$c_message_trash.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_02">({$c_message_trash.nickname})</td>
 <td class="bg_02"><a href="page.php?p=h_message&target_c_message_id=({$c_message_trash.c_message_id})&box=trash">({$c_message_trash.subject})</a></td>
-<td class="bg_02">({$c_message_trash.r_datetime|date_format:"%m·î%dÆü"})</td>
+<td class="bg_02">({$c_message_trash.r_datetime|date_format:"%mæœˆ%dæ—¥"})</td>
 </tr>
 ({*********})
 <tr>
@@ -639,9 +639,9 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥á¡¼¥ëÆâÍÆ¥ê¥¹¥È -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«å†…å®¹ãƒªã‚¹ãƒˆ -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -650,17 +650,17 @@
 <div class="padding_s">
 
 ({if $trash_data.is_trash_prev})
-<a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page-1})&box=trash">Á°¤òÉ½¼¨</a>
+<a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page-1})&box=trash">å‰ã‚’è¡¨ç¤º</a>
 ({/if})
-({$trash_data.trash_page*20-19})·ï¡Á
+({$trash_data.trash_page*20-19})ä»¶ï½
 ({if $trash_data.trash_page*20 > $count_c_message_trash_list })
 ({$count_c_message_trash_list+$trash_data.trash_page*20-20 })
 ({else})
 ({$trash_data.trash_page*20})
 ({/if})
-·ï¤òÉ½¼¨
+ä»¶ã‚’è¡¨ç¤º
 ({if $trash_data.is_trash_next})
-<a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page+1})&box=trash">¼¡¤òÉ½¼¨</a>
+<a href="page.php?p=h_message_box&trash_page=({$trash_data.trash_page+1})&box=trash">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -669,9 +669,9 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ– -->
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 <table style="width:504px;" border="0" cellspacing="0" cellpadding="0" style="width:auto;margin:0px auto;" class="border_01">
 ({*********})
 <tr>
@@ -682,8 +682,8 @@
 <input type="hidden" name="cmd" value="h_message_box_delete_message">
 <input type="hidden" name="box" value="trash">
 
-<input type="submit" name="move" value="¸µ¤ËÌá¤¹">
-<input type="submit" name="remove" value="ºï½ü">
+<input type="submit" name="move" value="å…ƒã«æˆ»ã™">
+<input type="submit" name="remove" value="å‰Šé™¤">
 
 </div>
 
@@ -691,29 +691,29 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡äºï½ü¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼å‰Šé™¤ã‚¿ãƒ– -->
 
 ({else})
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 <div align="center" style="padding:20px 30px;" class="bg_02 border_01">
 
-¥á¥Ã¥»¡¼¥¸¤¬¤¢¤ê¤Ş¤»¤ó¡£
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¤´¤ßÈ¢¡ä¡ä¥á¡¼¥ë¥Ê¥Ã¥·¥ó¥° -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã”ã¿ç®±ï¼ï¼ãƒ¡ãƒ¼ãƒ«ãƒŠãƒƒã‚·ãƒ³ã‚° -->
 
 ({/if})
 
 ({/if})
 
 </form>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§Box°ìÍ÷¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šBoxä¸€è¦§ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -723,13 +723,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§Box°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šBoxä¸€è¦§****** -->
 <!-- **************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({********************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä¡Ê±¦¡Ë**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ï¼ˆå³ï¼‰**})
 ({********************************})
 </td>
 </tr>

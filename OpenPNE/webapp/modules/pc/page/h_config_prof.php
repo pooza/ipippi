@@ -6,7 +6,7 @@
 function pageAction_h_config_prof($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$prof = $_REQUEST['prof'];
 		// ----------
 
@@ -21,9 +21,9 @@ function pageAction_h_config_prof($smarty,$requests) {
 		$smarty->assign('day', p_regist_prof_c_profile_day_list4null());
 
 		$public_flags = array(
-			'public' => 'Á´°÷¤Ë¸ø³«',
-			'friend' => WORD_MY_FRIEND.'¤Þ¤Ç¸ø³«',
-			'private'=> '¸ø³«¤·¤Ê¤¤',
+			'public' => 'å…¨å“¡ã«å…¬é–‹',
+			'friend' => WORD_MY_FRIEND.'ã¾ã§å…¬é–‹',
+			'private'=> 'å…¬é–‹ã—ãªã„',
 		);
 		$smarty->assign('public_flags', $public_flags);
 		
@@ -31,4 +31,3 @@ function pageAction_h_config_prof($smarty,$requests) {
 		
 		$smarty->ext_display("h_config_prof.tpl");
 }
-?>

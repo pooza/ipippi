@@ -6,7 +6,7 @@
 function pageAction_c_member_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$target_c_commu_id = $requests['target_c_commu_id'];
 		$direc = $requests['direc'];
 		$page = $requests['page'];
@@ -18,10 +18,10 @@ function pageAction_c_member_list($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 
 
-	//¥á¥ó¥Ð¡¼¾ðÊó
+	//ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("member", db_common_c_member4c_member_id($u));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£ID
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ID
 	$smarty->assign("c_commu_id", $target_c_commu_id);
 
 	//
@@ -32,10 +32,10 @@ function pageAction_c_member_list($smarty,$requests) {
 
 	$page_size = 50;
 
-	//¼¡¥Ú¡¼¥¸¤Ø¤Î¥¤¥ó¥¯¥ê¥á¥ó¥È
+	//æ¬¡ãƒšãƒ¼ã‚¸ã¸ã®ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆ
 	$page += $direc;
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¥ê¥¹¥È
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒªã‚¹ãƒˆ
 	//$list = p_c_member_list_c_members4c_commu_id($target_c_commu_id, $page_size, $page);
 	list($c_member_list, $is_prev, $is_next, $total_num, $start_num, $end_num)
 		= p_c_member_list_c_members4c_commu_id($target_c_commu_id, $page_size, $page);
@@ -56,4 +56,4 @@ function pageAction_c_member_list($smarty,$requests) {
 
 	$smarty->ext_display("c_member_list.tpl");
 }
-?>
+

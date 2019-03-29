@@ -1,31 +1,31 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-Æüµ­ºï½ü
+æ—¥è¨˜å‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_diary_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 fh_diary_list
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_member_id
 
-[¸¢¸Â]
-Æüµ­¤ò½ñ¤¤¤¿¥á¥ó¥Ð¡¼
+[æ¨©é™]
+æ—¥è¨˜ã‚’æ›¸ã„ãŸãƒ¡ãƒ³ãƒãƒ¼
 
 */
 //shou050626
 function doAction_fh_diary_delete_c_diary($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $request['target_c_diary_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//Æüµ­ºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//æ—¥è¨˜ä½œæˆè€…
 
     $c_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
     if ($c_diary['c_member_id'] != $u) {
@@ -38,4 +38,4 @@ function doAction_fh_diary_delete_c_diary($request) {
 
 	client_redirect("page.php?p=fh_diary_list&target_c_member_id={$u}");
 }
-?>
+

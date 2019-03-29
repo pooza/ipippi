@@ -1,5 +1,5 @@
 <?php
-// ´ÉÍýÍÑ¥Ñ¥¹¥ï¡¼¥ÉÊÑ¹¹
+// ç®¡ç†ç”¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¤‰æ›´
 
 
 function pageAction_edit_admin_password(&$smarty,$requests)
@@ -11,4 +11,3 @@ function pageAction_edit_admin_password(&$smarty,$requests)
 	$smarty->ext_display("edit_admin_password.tpl");
 }
 
-?>

@@ -1,5 +1,5 @@
 <?php
-// ¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô
+// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ
 
 
 function doAction_update_c_admin_user_password($requests)
@@ -10,7 +10,7 @@ function doAction_update_c_admin_user_password($requests)
 			$GLOBALS['AUTH']->uid(),
 			$requests['old_password'])) {
 		admin_client_redirect('edit_admin_password',
-			"¥Ñ¥¹¥ï¡¼¥É¤¬°ã¤¤¤Ş¤¹");
+			"ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™");
 		exit;
 	}
 	
@@ -19,17 +19,17 @@ function doAction_update_c_admin_user_password($requests)
         strlen($password) < 6 ||
         strlen($password) > 12) {
 		admin_client_redirect('edit_admin_password',
-			"¥Ñ¥¹¥ï¡¼¥É¤Ï6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤");
+			"ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6ï½12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 		exit;
     }
 	
 	if ($requests['new_password'] !== $requests['new_password2']) {
 		admin_client_redirect('edit_admin_password',
-			"¥Ñ¥¹¥ï¡¼¥É¤¬°ìÃ×¤·¤Æ¤¤¤Ş¤»¤ó");
+			"ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒä¸€è‡´ã—ã¦ã„ã¾ã›ã‚“");
 		exit;
 	}
 	
-	//¥Ñ¥¹¥ï¡¼¥ÉÊÑ¹¹
+	//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¤‰æ›´
 	db_admin_update_c_admin_user_password($GLOBALS['AUTH']->uid(), $password);
 	
 	$GLOBALS['AUTH']->t_logout();
@@ -37,8 +37,7 @@ function doAction_update_c_admin_user_password($requests)
 	$hash_tbl =& AdminHashTable::singleton();
 	$p = $hash_tbl->hash('login', 'normal');
 	$m = $GLOBALS['__Framework']['current_module'];
-	$msg = "¥Ñ¥¹¥ï¡¼¥É¤òÊÑ¹¹¤·¤Ş¤·¤¿¡£¿·¤·¤¤¥Ñ¥¹¥ï¡¼¥É¤Ç¥í¥°¥¤¥ó¤·¤Ê¤ª¤·¤Æ¤¯¤À¤µ¤¤¡£";
+	$msg = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã§ãƒ­ã‚°ã‚¤ãƒ³ã—ãªãŠã—ã¦ãã ã•ã„ã€‚";
 	client_redirect("module_normal.php?m=$m&p=$p&msg=" . urlencode($msg));	
 }
 
-?>

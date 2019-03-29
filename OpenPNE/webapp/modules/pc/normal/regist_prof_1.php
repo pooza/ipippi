@@ -9,14 +9,14 @@ function normalAction_regist_prof_1($smarty,$requests)
 	}
     //>
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$sid = $requests['sid'];
 	$err_msg = $requests['err_msg'];
 	$profs = $_REQUEST['profs'];
 	// ----------
 
     if (!n_regist_intro_is_active_sid($sid)) {
-        $msg = "¤³¤Î¾·ÂÔURL¤Ï´û¤ËÌµ¸ú¤Ë¤Ê¤Ã¤Æ¤¤¤Þ¤¹¡£";
+        $msg = "ã“ã®æ‹›å¾…URLã¯æ—¢ã«ç„¡åŠ¹ã«ãªã£ã¦ã„ã¾ã™ã€‚";
         client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
         exit;
     }
@@ -24,7 +24,7 @@ function normalAction_regist_prof_1($smarty,$requests)
     $smarty->assign('err_msg', $err_msg);
     $smarty->assign('profs', $profs);
             
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("regist") );
 	
 	
@@ -34,9 +34,9 @@ function normalAction_regist_prof_1($smarty,$requests)
     $smarty->assign("pc_address", $c_member_pre['pc_address']);
 
 	$public_flags = array(
-		'public' => 'Á´°÷¤Ë¸ø³«',
-		'friend' => WORD_MY_FRIEND.'¤Þ¤Ç¸ø³«',
-		'private'=> '¸ø³«¤·¤Ê¤¤',
+		'public' => 'å…¨å“¡ã«å…¬é–‹',
+		'friend' => WORD_MY_FRIEND.'ã¾ã§å…¬é–‹',
+		'private'=> 'å…¬é–‹ã—ãªã„',
 	);
 	$smarty->assign('public_flags', $public_flags);
 	
@@ -48,4 +48,3 @@ function normalAction_regist_prof_1($smarty,$requests)
 
 	$smarty->ext_display("regist_prof_1.tpl");
 }
-?>

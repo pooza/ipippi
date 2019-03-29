@@ -4,27 +4,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<title>({$smarty.const.SNS_NAME}) е╗е├е╚еве├е╫</title>
+<title>({$smarty.const.SNS_NAME}) уВ╗уГГуГИуВвуГГуГЧ</title>
 <link rel="stylesheet" href="modules/admin/admin.css" type="text/css">
 </head>
 
 <body>
 
 <div class="caution">
-ви╔мд║▓╝╡нд╬└▀─ъдЄд╖д╞длдще╗е├е╚еве├е╫╝┬╣╘д╖д╞дпд└д╡ддбг
+тА╗х┐ЕуБЪф╕ЛшиШуБошинхоЪуВТуБЧуБжуБЛуВЙуВ╗уГГуГИуВвуГГуГЧхоЯшбМуБЧуБжуБПуБауБХуБДуАВ
 <ul class="caution">
-<li>е╟б╝е┐е┘б╝е╣д╬║ю└о</li>
-<li>ver1.8_mysql_001_table_structure.sql д╬╝┬╣╘</li>
-<li>ver1.8_mysql_002_init_data.sql д╬╝┬╣╘</li>
-<li>config.inc д╬└▀─ъ</li>
+<li>уГЗуГ╝уВ┐уГЩуГ╝уВ╣уБоф╜ЬцИР</li>
+<li>ver1.8_mysql_001_table_structure.sql уБохоЯшбМ</li>
+<li>ver1.8_mysql_002_init_data.sql уБохоЯшбМ</li>
+<li>config.inc уБошинхоЪ</li>
 </ul>
 </div>
 
-<p>╜щ┤№ецб╝е╢д╬еэе░едеє╛Ё╩єд╬└▀─ъдЄд╖д▐д╣бг<br>
-е╫еэе╒егб╝еыдфд╜д╬┬╛д╬└▀─ъ╣р╠▄д╧еэе░едеє╕хд╦└▀─ъд╖д╞дпд└д╡ддбг</p>
+<p>хИЭцЬЯуГжуГ╝уВ╢уБоуГнуВ░уВдуГ│цГЕха▒уБошинхоЪуВТуБЧуБ╛уБЩуАВ<br>
+уГЧуГнуГХуВгуГ╝уГлуВДуБЭуБоф╗ЦуБошинхоЪщаЕчЫоуБпуГнуВ░уВдуГ│х╛МуБлшинхоЪуБЧуБжуБПуБауБХуБДуАВ</p>
 
-<p>┤╔═¤═╤евележеєе╚д╧┤╔═¤▓ш╠╠д╪д╬еэе░едеє═╤д╟д╣бг<br>
-╜щ┤№ецб╝е╢д╬е╤е╣еяб╝е╔д╚д╧╩╠д╬дтд╬дЄ└▀─ъд╖д╞дпд└д╡ддбг</p>
+<p>чобчРЖчФиуВвуВлуВжуГ│уГИуБпчобчРЖчФ╗щЭвуБ╕уБоуГнуВ░уВдуГ│чФиуБзуБЩуАВ<br>
+хИЭцЬЯуГжуГ╝уВ╢уБоуГСуВ╣уГпуГ╝уГЙуБиуБпхИеуБоуВВуБоуВТшинхоЪуБЧуБжуБПуБауБХуБДуАВ</p>
 
 ({if $requests.msg})
 <p class="caution">({$requests.msg})</p>
@@ -35,32 +35,32 @@
 <input type="hidden" name="cmd" value="setup">
 <table>
 <tr>
-<th colspan="2">╜щ┤№ецб╝е╢</th>
+<th colspan="2">хИЭцЬЯуГжуГ╝уВ╢</th>
 </tr>
 <tr>
-<th>PCеве╔еье╣</th>
+<th>PCуВвуГЙуГмуВ╣</th>
 <td><input type="text" name="pc_address" value="" size="30"></td>
 </tr>
 <tr>
-<th>е╤е╣еяб╝е╔</th>
+<th>уГСуВ╣уГпуГ╝уГЙ</th>
 <td><input type="password" name="password" value="" size="15"></td>
 </tr>
 
 <tr>
-<th colspan="2">┤╔═¤═╤евележеєе╚</th>
+<th colspan="2">чобчРЖчФиуВвуВлуВжуГ│уГИ</th>
 </tr>
 <tr>
-<th>ецб╝е╢╠╛</th>
+<th>уГжуГ╝уВ╢хРН</th>
 <td><input type="text" name="admin_username" value="" size="20"></td>
 </tr>
 <tr>
-<th>е╤е╣еяб╝е╔</th>
+<th>уГСуВ╣уГпуГ╝уГЙ</th>
 <td><input type="password" name="admin_password" value="" size="15"></td>
 </tr>
 
 <tr>
 <th>&nbsp;</th>
-<td><input type="submit" value="е╗е├е╚еве├е╫╝┬╣╘"></td>
+<td><input type="submit" value="уВ╗уГГуГИуВвуГГуГЧхоЯшбМ"></td>
 </tr>
 </table>
 </form>

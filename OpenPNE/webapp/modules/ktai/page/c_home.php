@@ -3,48 +3,48 @@ function pageAction_c_home($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 
 	$c_commu = p_common_c_commu4c_commu_id($target_c_commu_id);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¤ÎÂ¸ºß¤ÎÍ­Ìµ
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å­˜åœ¨ã®æœ‰ç„¡
     if (!$c_commu) {
         client_redirect("ktai_page.php?p=h_home&ksid=" . session_id());
         exit();
     }
 
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//Ì¤½èÍý
-    //·Ç¼¨ÈÄ¤Î±ÜÍ÷¸¢¸Â¥Á¥§¥Ã¥¯ tpl¤Ç¤ä¤Ã¤Æ¤¤¤ë
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//æœªå‡¦ç†
+    //æŽ²ç¤ºæ¿ã®é–²è¦§æ¨©é™ãƒã‚§ãƒƒã‚¯ tplã§ã‚„ã£ã¦ã„ã‚‹
     $smarty->assign("is_c_commu_view", p_common_is_c_commu_view4c_commu_idAc_member_id($target_c_commu_id, $u));
     $smarty->assign("is_c_commu_member", p_common_is_c_commu_member4c_commu_idAc_member_id($target_c_commu_id, $u));
 	//---
 
-    //´ÉÍý²èÌÌHTML
+    //ç®¡ç†ç”»é¢HTML
     $smarty->assign('c_siteadmin', p_common_c_siteadmin4target_pagename('k_c_home'));
 	
-	//¥³¥ß¥å¥Ë¥Æ¥£¾ðÊó
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æƒ…å ±
 	$smarty->assign("c_commu", k_p_c_home_c_commu4c_commu_id($target_c_commu_id));
 	
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¥ê¥¹¥È
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒªã‚¹ãƒˆ
 	$smarty->assign("c_commu_member_list", 
 		k_p_c_home_c_commu_member_list_random4c_commu_id($target_c_commu_id, 5));
 		
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î¿·Ãå¥È¥Ô¥Ã¥¯½ñ¤­¹þ¤ß
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ–°ç€ãƒˆãƒ”ãƒƒã‚¯æ›¸ãè¾¼ã¿
 	$smarty->assign("new_topic_comment", p_c_home_new_topic_comment4c_commu_id($target_c_commu_id, 5));
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¤Î¿·Ãå¥¤¥Ù¥ó¥È½ñ¤­¹þ¤ß
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æ–°ç€ã‚¤ãƒ™ãƒ³ãƒˆæ›¸ãè¾¼ã¿
 	$smarty->assign("new_topic_comment_event", p_c_home_new_topic_comment4c_commu_id($target_c_commu_id, 5, 1));
 	
-	//¼«Ê¬($u)¤È¤³¤Î¥³¥ß¥å¤È¤Î´Ø·¸
+	//è‡ªåˆ†($u)ã¨ã“ã®ã‚³ãƒŸãƒ¥ã¨ã®é–¢ä¿‚
 	$smarty->assign("relation_c_member_and_c_commu", 
 		k_p_c_home_relationship_between_member_commu($target_c_commu_id, $u));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë(ktai)¼õ¿®ÀßÄê
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«(ktai)å—ä¿¡è¨­å®š
 	$smarty->assign("is_receive_mail", k_p_c_home_is_receive_mail4c_commu_id4c_member_id($target_c_commu_id, $u));
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë(pc)¼õ¿®ÀßÄê
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«(pc)å—ä¿¡è¨­å®š
 	$smarty->assign("is_receive_mail_pc", k_p_c_home_is_receive_mail_pc4c_commu_id4c_member_id($target_c_commu_id, $u));
 
 // /shou
@@ -52,4 +52,3 @@ function pageAction_c_home($smarty, $requests)
 	$smarty->ext_display("c_home.tpl");
 }
 
-?>

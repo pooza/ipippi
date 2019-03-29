@@ -1,5 +1,5 @@
 <?php
-// ¤ªÃÎ¤é¤»¡¢ÍøÍÑµ¬Ìó¡¢¥×¥é¥¤¥Ð¥·¡¼¥Ý¥ê¥·¡¼¤Î¹¹¿·
+// ãŠçŸ¥ã‚‰ã›ã€åˆ©ç”¨è¦ç´„ã€ãƒ—ãƒ©ã‚¤ãƒã‚·ãƒ¼ãƒãƒªã‚·ãƒ¼ã®æ›´æ–°
 
 
 function doAction_edit_c_admin_info($requests)
@@ -14,7 +14,7 @@ function doAction_edit_c_admin_info($requests)
 		db_admin_insert_c_siteadmin($requests['target'], $requests['body']);
 	}
 	
-	admin_client_redirect('edit_c_admin_info', "ÊÑ¹¹¤·¤Þ¤·¤¿", 'target='.$requests['target']);	
+	admin_client_redirect('edit_c_admin_info', "å¤‰æ›´ã—ã¾ã—ãŸ", 'target='.$requests['target']);	
 }
 
-?>
+

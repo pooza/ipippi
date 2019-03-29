@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******¤³¤³¤«¤é¡§¥á¥Ã¥»¡¼¥¸ºîÀ®****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ä½œæˆ****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,19 +37,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥á¥Ã¥»¡¼¥¸ºîÀ®¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ä½œæˆï¼žå†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥á¥Ã¥»¡¼¥¸¤òÁ÷¤ë</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹</span></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Þ¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -62,8 +62,8 @@
 
 <div class="padding_w_m">
 
-°Ê²¼¤ÎÆâÍÆ¤Ç¤è¤í¤·¤¤¤Ç¤¹¤«¡©<br>
-¢¨¥³¥ß¥å¥Ë¥±¡¼¥·¥ç¥ó°Ê³°¤ÎÌÜÅª¤Î¥á¥Ã¥»¡¼¥¸(SPAM¡¢¹Ó¤é¤·Åù)¤Ï¶Ø»ß¤·¤Æ¤ª¤ê¤Þ¤¹¡£
+ä»¥ä¸‹ã®å†…å®¹ã§ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ<br>
+â€»ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ä»¥å¤–ã®ç›®çš„ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸(SPAMã€è’ã‚‰ã—ç­‰)ã¯ç¦æ­¢ã—ã¦ãŠã‚Šã¾ã™ã€‚
 
 </div>
 
@@ -81,7 +81,7 @@
 
 <div class="padding_s">
 
-¼Ì¿¿
+å†™çœŸ
 
 </div>
 
@@ -91,7 +91,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=f_home&target_c_member_id=({$target_member.c_member_id})">({if $target_member.image_filename})<img src="./img.php?filename=({$target_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=¼Ì¿¿ border=0>({/if})</a><br>
+<a href="page.php?p=f_home&target_c_member_id=({$target_member.c_member_id})">({if $target_member.image_filename})<img src="./img.php?filename=({$target_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=å†™çœŸ border=0>({/if})</a><br>
 
 </div>
 
@@ -110,7 +110,7 @@
 
 <div class="padding_s">
 
-Á÷¿®Àè
+é€ä¿¡å…ˆ
 
 </div>
 
@@ -138,7 +138,7 @@
 
 <div class="padding_s">
 
-·ïÌ¾
+ä»¶å
 
 </div>
 
@@ -167,7 +167,7 @@
 
 <div class="padding_s">
 
-¥á¥Ã¥»¡¼¥¸
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 
 </div>
 
@@ -197,7 +197,7 @@
 
 <div align="center" style="text-align:center;">
 <form action="do.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="f_message_send_insert_c_message">
 <input type="hidden" name="c_member_id_to" value="({$target_member.c_member_id})">
@@ -206,11 +206,11 @@
 <input name="target_c_message_id" type="hidden" value="({$form_val.target_c_message_id})"/>
 <input name="jyusin_c_message_id" type="hidden" value="({$form_val.jyusin_c_message_id})"/>
 
-<input name="yes" type="submit" value="¡¡Á÷¡¡¿®¡¡">
+<input name="yes" type="submit" value="ã€€é€ã€€ä¿¡ã€€">
 </form>
 
 <form action="page.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="p" value="f_message_send">
 <input type="hidden" name="is_syusei" value="1">
 <input type="hidden" name="target_c_member_id" value="({$target_member.c_member_id})">
@@ -219,7 +219,7 @@
 <input name="target_c_message_id" type="hidden" value="({$form_val.target_c_message_id})"/>
 <input name="jyusin_c_message_id" type="hidden" value="({$form_val.jyusin_c_message_id})"/>
 
-<input name="no" type="submit" value="¡¡½¤  Àµ¡¡">
+<input name="no" type="submit" value="ã€€ä¿®  æ­£ã€€">
 </form>
 
 </div>
@@ -235,12 +235,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Þ¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Þ¤Ç¡§footer*})
-<!-- *¤³¤³¤Þ¤Ç¡§¥á¥Ã¥»¡¼¥¸ºîÀ®¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ä½œæˆï¼žï¼žå†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -250,7 +250,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Þ¤Ç¡§¥á¥Ã¥»¡¼¥¸ºîÀ®****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ä½œæˆ****** -->
 <!-- ******************************************** -->
 
 
@@ -258,7 +258,7 @@
 
 
 ({***************************})
-({**¤³¤³¤Þ¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

@@ -4,16 +4,16 @@
 function pageAction_c_event_add_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ğ¡¼
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 	if(!p_common_is_c_commu_member4c_commu_idAc_member_id($target_c_commu_id,$u)){
 
 		$_REQUEST['target_c_commu_id'] = $target_c_commu_id;
-		$_REQUEST['msg'] = "¥¤¥Ù¥ó¥ÈºîÀ®¤ò¤ª¤³¤Ê¤¦¤Ë¤Ï¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤¹¤ëÉ¬Í×¤¬¤¢¤ê¤Ş¤¹";
+		$_REQUEST['msg'] = "ã‚¤ãƒ™ãƒ³ãƒˆä½œæˆã‚’ãŠã“ãªã†ã«ã¯ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™";
 		module_execute('pc', 'page', "c_home");
 		exit();
 
@@ -30,30 +30,30 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 	$upfile_obj13 = $_FILES['file_filename3'];
 
 
-	// ¥¨¥é¡¼¥Á¥§¥Ã¥¯
+	// ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯
 	$err_msg = array();
-	if (trim($event['title']) == '')  $err_msg[] = "¥¿¥¤¥È¥ë¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-	if(trim($event['detail']) == '')  $err_msg[] = "¾ÜºÙ¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+	if (trim($event['title']) == '')  $err_msg[] = "ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+	if(trim($event['detail']) == '')  $err_msg[] = "è©³ç´°ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 
-	if(!$event['open_date_month'] || !$event['open_date_day'] || !$event['open_date_year'])  $err_msg[] = "³«ºÅÆü»ş¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-	elseif(!checkdate($event['open_date_month'],$event['open_date_day'],$event['open_date_year'])) $err_msg[] = "³«ºÅÆü»ş¤ÏÂ¸ºß¤·¤Ş¤»¤ó";
-	elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "³«ºÅÆü»ş¤Ï²áµî¤Ë»ØÄê¤Ç¤­¤Ş¤»¤ó";
+	if(!$event['open_date_month'] || !$event['open_date_day'] || !$event['open_date_year'])  $err_msg[] = "é–‹å‚¬æ—¥æ™‚ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+	elseif(!checkdate($event['open_date_month'],$event['open_date_day'],$event['open_date_year'])) $err_msg[] = "é–‹å‚¬æ—¥æ™‚ã¯å­˜åœ¨ã—ã¾ã›ã‚“";
+	elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "é–‹å‚¬æ—¥æ™‚ã¯éå»ã«æŒ‡å®šã§ãã¾ã›ã‚“";
 
 	if($event['invite_period_month'].$event['invite_period_day'].$event['invite_period_year'] != ""){
-	    if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "Êç½¸´ü¸Â¤ÏÂ¸ºß¤·¤Ş¤»¤ó¡£";
-		elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "Êç½¸´ü¸Â¤ÏÂ¸ºß¤·¤Ş¤»¤ó";
-	    elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "Êç½¸´ü¸Â¤Ï²áµî¤Ë»ØÄê¤Ç¤­¤Ş¤»¤ó";	
+	    if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "å‹Ÿé›†æœŸé™ã¯å­˜åœ¨ã—ã¾ã›ã‚“ã€‚";
+		elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "å‹Ÿé›†æœŸé™ã¯å­˜åœ¨ã—ã¾ã›ã‚“";
+	    elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "å‹Ÿé›†æœŸé™ã¯éå»ã«æŒ‡å®šã§ãã¾ã›ã‚“";	
 	    elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year'])
 	    		<mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) 
-	    		$err_msg[] = "Êç½¸´ü¸Â¤Ï³«ºÅÆü»ş¤è¤êÌ¤Íè¤Ë»ØÄê¤Ç¤­¤Ş¤»¤ó";
+	    		$err_msg[] = "å‹Ÿé›†æœŸé™ã¯é–‹å‚¬æ—¥æ™‚ã‚ˆã‚Šæœªæ¥ã«æŒ‡å®šã§ãã¾ã›ã‚“";
 	}
 
 	if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-		$err_msg[] = "²èÁü1¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+		$err_msg[] = "ç”»åƒ1ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 	if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-		$err_msg[] = "²èÁü2¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+		$err_msg[] = "ç”»åƒ2ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 	if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-		$err_msg[] = "²èÁü3¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+		$err_msg[] = "ç”»åƒ3ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 
 	$names = array();
 	for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -61,7 +61,7 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 		$name = $$varname;
 		if ($name = $name['name']) {
 			if (in_array($name, $names)) {
-				$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë¤Î¥Õ¥¡¥¤¥ëÌ¾¤¬½ÅÊ£¤·¤Ş¤¹";
+				$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚¡ã‚¤ãƒ«åãŒé‡è¤‡ã—ã¾ã™";
 				break;
 			}
 			$names[] = $name;
@@ -69,18 +69,18 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 	}
 
     if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë1¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«1ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
     if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë2¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«2ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
     if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë3¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«3ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
 
     if(is_dirty_file($upfile_obj11))
-    	$err_msg[] = get_extension($upfile_obj11['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+    	$err_msg[] = get_extension($upfile_obj11['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
     if(is_dirty_file($upfile_obj12))
-    	$err_msg[] = get_extension($upfile_obj12['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+    	$err_msg[] = get_extension($upfile_obj12['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
     if(is_dirty_file($upfile_obj13))
-    	$err_msg[] = get_extension($upfile_obj13['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+    	$err_msg[] = get_extension($upfile_obj13['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
 
 	if ($err_msg) {
 		$_REQUEST = $event;
@@ -90,7 +90,7 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 		exit;
 	}
 
-	//²èÁü¤òvar/tmp¥Õ¥©¥ë¥À¤Ë¥³¥Ô¡¼
+	//ç”»åƒã‚’var/tmpãƒ•ã‚©ãƒ«ãƒ€ã«ã‚³ãƒ”ãƒ¼
 	$sessid = session_id();
 	t_image_clear_tmp($sessid);
 	$tmpfile1 = t_image_save2tmp($upfile_obj1, $sessid, "e1");
@@ -122,4 +122,4 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 	$smarty->ext_display("c_event_add_confirm.tpl");
 
 }
-?>
+

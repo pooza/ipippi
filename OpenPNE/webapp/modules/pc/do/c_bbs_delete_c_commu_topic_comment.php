@@ -1,20 +1,20 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥á¥ó¥Èºï½ü
+ã‚³ãƒ¡ãƒ³ãƒˆå‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_topic_comment_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 c_bbs
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_topic_id
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
-¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_c_bbs_delete_c_commu_topic_comment($request) {
@@ -22,8 +22,8 @@ function doAction_c_bbs_delete_c_commu_topic_comment($request) {
 
 	$target_c_commu_topic_comment_id = $request['target_c_commu_topic_comment_id'];
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô or ¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€… or ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 
 	$c_commu_topic_comment = do_c_bbs_c_commu_topic_comment4c_commu_topic_comment_id($target_c_commu_topic_comment_id);
     
@@ -49,4 +49,4 @@ function doAction_c_bbs_delete_c_commu_topic_comment($request) {
 		client_redirect('page.php?p=c_topic_detail&target_c_commu_topic_id='.$c_commu_topic_comment['c_commu_topic_id']);
 	}
 }
-?>
+

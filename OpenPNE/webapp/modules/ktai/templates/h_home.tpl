@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">({$c_member.nickname})¤µ¤ó¤ÎÎ°Ñ</font></center>
+<center><font color="orange">({$c_member.nickname})ã•ã‚“ã®ï¾ï½°ï¾‘</font></center>
 <hr>
 ({if $c_siteadmin})
 ({$c_siteadmin|smarty:nodefaults})
@@ -8,97 +8,97 @@
 ({/if})
 
 ({if $num_f_confirm_list})
-<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})"><font color="red">¡ú¾µÇ§ÂÔ¤Á¤ÎÒİÊŞ°({$num_f_confirm_list})Ì¾</font></a><br>
+<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})"><font color="red">â˜…æ‰¿èªå¾…ã¡ã®ï¾’ï¾ï¾Šï¾ï½°({$num_f_confirm_list})å</font></a><br>
 ({/if})
 
 ({if $num_message_not_is_read})
-<a href="ktai_page.php?p=h_message_box&amp;({$tail})"><font color="red">¡ú¿·ÃåÒ¯¾°¼Ş({$num_message_not_is_read})·ï</font></a></font><br>
+<a href="ktai_page.php?p=h_message_box&amp;({$tail})"><font color="red">â˜…æ–°ç€ï¾’ï½¯ï½¾ï½°ï½¼ï¾({$num_message_not_is_read})ä»¶</font></a></font><br>
 ({/if})
 
 ({if $num_diary_not_is_read})
-<a href="ktai_page.php?p=fh_diary&target_c_diary_id=({$first_diary_read})&amp;({$tail})"><font color="red">¡ú({$num_diary_not_is_read})·ïÆüµ­¤Ë¿·ÃåºÒİÄ</font></a><br>
+<a href="ktai_page.php?p=fh_diary&target_c_diary_id=({$first_diary_read})&amp;({$tail})"><font color="red">â˜…({$num_diary_not_is_read})ä»¶æ—¥è¨˜ã«æ–°ç€ï½ºï¾’ï¾ï¾„</font></a><br>
 ({/if})
 
 ({if $num_h_confirm_list })
-<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})"><font color="red">¡úºĞ­ÆÃ¨»²²Ã¾µÇ§ÂÔ¤Á({$num_h_confirm_list})Ì¾</font></a><br>
+<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})"><font color="red">â˜…ï½ºï¾ï½­ï¾†ï¾ƒï½¨å‚åŠ æ‰¿èªå¾…ã¡({$num_h_confirm_list})å</font></a><br>
 ({/if})
 
 ({if $anatani_c_commu_admin_confirm_list})
-<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})"><font color="red">¡úºĞ­ÆÃ¨´ÉÍı¿Í¸òÂå°ÍÍê({$num_anatani_c_commu_admin_confirm_list})·ï</font></a><br>
+<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})"><font color="red">â˜…ï½ºï¾ï½­ï¾†ï¾ƒï½¨ç®¡ç†äººäº¤ä»£ä¾é ¼({$num_anatani_c_commu_admin_confirm_list})ä»¶</font></a><br>
 ({/if})
 
 ({if $anatani_c_commu_admin_confirm_list||$num_f_confirm_list||$num_message_not_is_read||$num_diary_not_is_read||$num_h_confirm_list||$anatani_c_commu_admin_confirm_list})
 <br>
 ({/if})
 
-<a href="ktai_page.php?p=h_message_box&({$tail})">Ò¯¾°¼ŞBOX</a><br>
-<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})">¾µÇ§ÂÔ¤Á¥ê¥¹¥È</a><br>
-<a href="ktai_page.php?p=fh_diary_list&amp;({$tail})">myÆüµ­</a><br>
-<a href="ktai_page.php?p=h_diary_edit&amp;({$tail})">¢ªÆüµ­¤ò½ñ¤¯</a><br>
+<a href="ktai_page.php?p=h_message_box&({$tail})">ï¾’ï½¯ï½¾ï½°ï½¼ï¾BOX</a><br>
+<a href="ktai_page.php?p=h_confirm_list&amp;({$tail})">æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆ</a><br>
+<a href="ktai_page.php?p=fh_diary_list&amp;({$tail})">myæ—¥è¨˜</a><br>
+<a href="ktai_page.php?p=h_diary_edit&amp;({$tail})">â†’æ—¥è¨˜ã‚’æ›¸ã</a><br>
 <br>
 
-¸½ºß¤Î²ñ°÷¿ô:<br>
-({$count_all_members|number_format})Ì¾<br><br>
+ç¾åœ¨ã®ä¼šå“¡æ•°:<br>
+({$count_all_members|number_format})å<br><br>
 
 ({if $c_diary_friend_list})
-<font color="green">[({$WORD_FRIEND_HALF})ºÇ¿·Æüµ­]</font><br>
+<font color="green">[({$WORD_FRIEND_HALF})æœ€æ–°æ—¥è¨˜]</font><br>
 ({foreach from=$c_diary_friend_list item=item})
 ({$item.r_date|date_format:"%m/%d"})(({$item.nickname|t_truncate:17:""}))<br>
 <a href="ktai_page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})&amp;({$tail})">({$item.subject|t_truncate:20:"..."})</a>(({$item.comment_count}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=h_diary_list_friend&amp;({$tail})">¢ª¤â¤Ã¤È¸«¤ë</a><br>
+<a href="ktai_page.php?p=h_diary_list_friend&amp;({$tail})">â†’ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 <br>
 ({/if})
 
 ({if $c_diary_my_comment_list})
-<font color="green">[Æüµ­ºÒİÄµ­ÆşÍúÎò]</font><br>
+<font color="green">[æ—¥è¨˜ï½ºï¾’ï¾ï¾„è¨˜å…¥å±¥æ­´]</font><br>
 ({foreach from=$c_diary_my_comment_list item=item})
 ({$item.r_datetime|date_format:"%m/%d"})(({$item.nickname|t_truncate:17:""}))<br>
 <a href="ktai_page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})&amp;({$tail})">({$item.subject|t_truncate:20:"..."})</a>(({$item.num_comment}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=h_diary_comment_list&amp;({$tail})">¢ª¤â¤Ã¤È¸«¤ë</a><br>
+<a href="ktai_page.php?p=h_diary_comment_list&amp;({$tail})">â†’ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 <br>
 ({/if})
 
 ({if $c_commu_topic_list})
-<font color="green">[ºĞ­ÆÃ¨ºÇ¿·½ñ¤­¹ş¤ß]</font><br>
+<font color="green">[ï½ºï¾ï½­ï¾†ï¾ƒï½¨æœ€æ–°æ›¸ãè¾¼ã¿]</font><br>
 ({foreach from=$c_commu_topic_list item=item})
 ({$item.r_datetime|date_format:"%m/%d"})(({$item.c_commu_name|t_truncate:17:""}))<br>
 <a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$item.c_commu_topic_id})&amp;({$tail})">({$item.c_commu_topic_name|t_truncate:19:"..."})</a>(({$item.number}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=h_com_comment_list&amp;({$tail})">¢ª¤â¤Ã¤È¸«¤ë</a><br>
+<a href="ktai_page.php?p=h_com_comment_list&amp;({$tail})">â†’ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 <br>
 ({/if})
 
-<font color="green">[»²²ÃºĞ­ÆÃ¨({if $count_commu})(({$count_commu}))({/if})]</font><br>
+<font color="green">[å‚åŠ ï½ºï¾ï½­ï¾†ï¾ƒï½¨({if $count_commu})(({$count_commu}))({/if})]</font><br>
 ({if $c_commu_list})
 ({foreach from=$c_commu_list item=commu})
 <a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$commu.c_commu_id})&amp;({$tail})">({$commu.name})</a>(({$commu.count_members}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=fh_com_list&amp;({$tail})">¢ª¤â¤Ã¤È¸«¤ë</a><br>
+<a href="ktai_page.php?p=fh_com_list&amp;({$tail})">â†’ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 ({else})
-»²²Ã¤·¤Æ¤¤¤Ş¤»¤ó<br>
+å‚åŠ ã—ã¦ã„ã¾ã›ã‚“<br>
 ({/if})
 <br>
 ({if $c_friend_list})
-<font color="green">[({$WORD_FRIEND_HALF})Ø½Ä]</font><br>
+<font color="green">[({$WORD_FRIEND_HALF})ï¾˜ï½½ï¾„]</font><br>
 ({foreach from=$c_friend_list item=friend})
-<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$friend.c_member_id_to})&amp;({$tail})">({$friend.nickname})</a>¡Ê({$friend.count_friend})¡Ë<br>
+<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$friend.c_member_id_to})&amp;({$tail})">({$friend.nickname})</a>ï¼ˆ({$friend.count_friend})ï¼‰<br>
 ({/foreach})
-<a href="ktai_page.php?p=fh_friend_list&amp;({$tail})">¢ª¤â¤Ã¤È¸«¤ë</a><br>
+<a href="ktai_page.php?p=fh_friend_list&amp;({$tail})">â†’ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 ({else})
-({$WORD_FRIEND_HALF})Ø½Ä¤Ê¤·<br>
+({$WORD_FRIEND_HALF})ï¾˜ï½½ï¾„ãªã—<br>
 ({/if})
 <hr>
 ({if $smarty.const.OPENPNE_REGIST_FROM != $smarty.const.OPENPNE_REGIST_FROM_NONE})
-<a href="ktai_page.php?p=h_invite&amp;({$tail})">Í§¿Í¤ò¾·ÂÔ</a><br>
+<a href="ktai_page.php?p=h_invite&amp;({$tail})">å‹äººã‚’æ‹›å¾…</a><br>
 <br>
 ({/if})
-<a href="ktai_page.php?p=h_config_prof&amp;({$tail})">ÌßÛÌ¨°ÙÊÑ¹¹</a><br>
-<a href="ktai_page.php?p=h_config&amp;({$tail})">ÀßÄêÊÑ¹¹</a><br>
+<a href="ktai_page.php?p=h_config_prof&amp;({$tail})">ï¾Œï¾Ÿï¾›ï¾Œï½¨ï½°ï¾™å¤‰æ›´</a><br>
+<a href="ktai_page.php?p=h_config&amp;({$tail})">è¨­å®šå¤‰æ›´</a><br>
 <br>
 
-<a href="ktai_normal.php?p=sns_kiyaku">ÍøÍÑµ¬Ìó</a><br>
-<a href="ktai_normal.php?p=sns_privacy">Ìß×²ÊŞ¼°ÎßØ¼°</a><br>
+<a href="ktai_normal.php?p=sns_kiyaku">åˆ©ç”¨è¦ç´„</a><br>
+<a href="ktai_normal.php?p=sns_privacy">ï¾Œï¾Ÿï¾—ï½²ï¾Šï¾ï½¼ï½°ï¾ï¾Ÿï¾˜ï½¼ï½°</a><br>
 
 ({$inc_ktai_footer|smarty:nodefaults})

@@ -7,7 +7,7 @@ function doNormalAction_login($requests)
 	$GLOBALS['AUTH']->start();
 
 	if (!$GLOBALS['AUTH']->getAuth()) {
-	    // ¥í¥°¥¤¥ó¼ºÇÔ
+	    // ãƒ­ã‚°ã‚¤ãƒ³å¤±æ•—
 	    $GLOBALS['AUTH']->t_logout();
 
         client_redirect('normal.php?p=tologin&error_code=login_failed');
@@ -16,4 +16,3 @@ function doNormalAction_login($requests)
 
 	client_redirect('page.php?p=h_home');
 }
-?>

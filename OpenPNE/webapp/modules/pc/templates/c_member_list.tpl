@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******¤³¤³¤«¤é¡§¥á¥ó¥Ð¡¼°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:575px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,20 +34,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:559px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:523px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼</span></td>
+<td style="width:523px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼</span></td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Þ¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Þ¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:561px;">
 ({*********})
 <tr>
@@ -79,9 +79,9 @@
 <td style="width:559px;" class="bg_02" align="right" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $is_prev})<a href="page.php?p=c_member_list&direc=-1&page=({$page})&target_c_commu_id=({$c_commu_id})">¡ãÁ°</a>({/if})¡¡
-({$start_num})·ï¡Á({$end_num})·ï¤òÉ½¼¨
-({if $is_next})<a href="page.php?p=c_member_list&direc=1&page=({$page})&target_c_commu_id=({$c_commu_id})">¼¡¡ä</a>({/if})
+({if $is_prev})<a href="page.php?p=c_member_list&direc=-1&page=({$page})&target_c_commu_id=({$c_commu_id})">ï¼œå‰</a>({/if})ã€€
+({$start_num})ä»¶ï½ž({$end_num})ä»¶ã‚’è¡¨ç¤º
+({if $is_next})<a href="page.php?p=c_member_list&direc=1&page=({$page})&target_c_commu_id=({$c_commu_id})">æ¬¡ï¼ž</a>({/if})
 
 </div>
 </td>
@@ -95,7 +95,7 @@
 </table>
 <table border="0" cellspacing="0" cellpadding="0" style="width:561px;">
 ({*********})
-({*---------------¤³¤³¤«¤é¡§£±¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼‘è¡Œç›®ï¼šç”»åƒ-------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=0 num=5})
@@ -119,8 +119,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£±¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£±¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼‘è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼‘è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=0 num=5})
@@ -143,8 +143,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£±¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£²¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼‘è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼’è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[5]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -169,8 +169,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£²¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£²¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼’è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼’è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=5 num=5})
@@ -194,8 +194,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£²¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£³¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼’è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼“è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[10]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -220,8 +220,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£³¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£³¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼“è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼“è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=10 num=5})
@@ -245,8 +245,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£³¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£´¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼“è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼”è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[15]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -271,8 +271,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£´¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£´¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼”è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼”è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=15 num=5})
@@ -296,8 +296,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£´¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£µ¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼”è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼•è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[20]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -322,8 +322,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£µ¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£µ¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼•è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼•è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=20 num=5})
@@ -347,8 +347,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£µ¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£¶¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼•è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼–è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[25]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -373,8 +373,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£¶¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£¶¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼–è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼–è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=25 num=5})
@@ -398,8 +398,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£¶¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£·¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼–è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼—è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[30]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -424,8 +424,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£·¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£·¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼—è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼—è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=30 num=5})
@@ -449,8 +449,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£·¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£¸¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼—è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼˜è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[35]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -475,8 +475,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£¸¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£¸¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼˜è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼˜è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=35 num=5})
@@ -500,8 +500,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£¸¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£¹¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼˜è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼™è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[40]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -526,8 +526,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£¹¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£¹¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼™è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼™è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=40 num=5})
@@ -551,8 +551,8 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£¹¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
-({*---------------¤³¤³¤«¤é¡§£±£°¹ÔÌÜ¡§²èÁü-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼™è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼‘ï¼è¡Œç›®ï¼šç”»åƒ-------------------*})
 ({if $c_member_list[45]})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -577,8 +577,8 @@
 <td style="width:561px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({*********})
-({*---------------¤³¤³¤Þ¤Ç¡§£±£°¹ÔÌÜ¡§²èÁü-------------------*})
-({*---------------¤³¤³¤«¤é¡§£±£°¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼‘ï¼è¡Œç›®ï¼šç”»åƒ-------------------*})
+({*---------------ã“ã“ã‹ã‚‰ï¼šï¼‘ï¼è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$c_member_list start=45 num=5})
@@ -602,7 +602,7 @@
 </tr>
 ({*********})
 ({/if})
-({*---------------¤³¤³¤Þ¤Ç¡§£±£°¹ÔÌÜ¡§¥Ë¥Ã¥¯¥Í¡¼¥à-------------------*})
+({*---------------ã“ã“ã¾ã§ï¼šï¼‘ï¼è¡Œç›®ï¼šãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ -------------------*})
 </table>
 <table border="0" cellspacing="0" cellpadding="0" style="width:561px;">
 <tr>
@@ -630,9 +630,9 @@
 <td style="width:559px;" class="bg_02" align="right" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $is_prev})<a href="page.php?p=c_member_list&direc=-1&page=({$page})&target_c_commu_id=({$c_commu_id})">¡ãÁ°</a>({/if})¡¡
-({$start_num})·ï¡Á({$end_num})·ï¤òÉ½¼¨
-({if $is_next})<a href="page.php?p=c_member_list&direc=1&page=({$page})&target_c_commu_id=({$c_commu_id})">¼¡¡ä</a>({/if})
+({if $is_prev})<a href="page.php?p=c_member_list&direc=-1&page=({$page})&target_c_commu_id=({$c_commu_id})">ï¼œå‰</a>({/if})ã€€
+({$start_num})ä»¶ï½ž({$end_num})ä»¶ã‚’è¡¨ç¤º
+({if $is_next})<a href="page.php?p=c_member_list&direc=1&page=({$page})&target_c_commu_id=({$c_commu_id})">æ¬¡ï¼ž</a>({/if})
 
 </div>
 </td>
@@ -644,12 +644,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Þ¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Þ¤Ç¡§footer*})
-<!-- *¤³¤³¤Þ¤Ç¡§¥á¥ó¥Ð¡¼°ìÍ÷¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§ï¼žï¼žå†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -659,13 +659,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Þ¤Ç¡§¥á¥ó¥Ð¡¼°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒ¡ãƒ³ãƒãƒ¼ä¸€è¦§****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Þ¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

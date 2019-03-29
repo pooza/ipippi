@@ -1,24 +1,23 @@
 <?php
 function doNormalAction_login2_change_mail($requests)
 {
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$sid = $requests['sid'];
 	$password = $requests['password'];
 	// ----------
 	
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥»¥Ã¥·¥ç¥ó¤¬Àµ¤·¤¤
-	//¥Ñ¥¹¥ï¡¼¥É¤¬Àµ¤·¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæ­£ã—ã„
+	//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒæ­£ã—ã„
 	
 	if (!do_change_mail($sid, $password)) {
-	    $msg = urlencode("¥Ñ¥¹¥ï¡¼¥É¤¬°ã¤¤¤Þ¤¹¡£");
+	    $msg = urlencode("ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™ã€‚");
 	    client_redirect("normal.php?p=login2&sid=$sid&msg=$msg");
 	    exit;
 	}
 	//---
 	
-    $msg = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤¬ÊÑ¹¹¤µ¤ì¤Þ¤·¤¿¡£";
+    $msg = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ãŒå¤‰æ›´ã•ã‚Œã¾ã—ãŸã€‚";
     client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
     exit;
 }
-?>

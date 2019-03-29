@@ -4,8 +4,8 @@ function doAction_inc_page_header_logout($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
 	$GLOBALS['AUTH']->t_logout();
-	$msg = "¥í¥°¥¢¥¦¥È¤·¤Þ¤·¤¿¡£";
+	$msg = "ãƒ­ã‚°ã‚¢ã‚¦ãƒˆã—ã¾ã—ãŸã€‚";
 	client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
 	exit;
 }
-?>
+

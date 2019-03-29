@@ -18,7 +18,7 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -26,7 +26,7 @@
 ({if $fh_com_list_user})
 
 <!-- ************************************************* -->
-<!-- ******¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡Ê¥á¥ó¥ĞÍ­¤ê¡Ë****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ˆãƒ¡ãƒ³ãƒæœ‰ã‚Šï¼‰****** -->
 <div id="commu_list" class="border_07" style="width:580px;margin:0px auto;">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;">
@@ -38,22 +38,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- å°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È</span></td>
+<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆ</span></td>
 <td style="width:378px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
-<!-- ¤³¤³¤«¤é¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö¡§¾å -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ–ï¼šä¸Š -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -75,8 +75,8 @@
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö¡§¾å -->
-<!-- ¤³¤³¤«¤é¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥á¥Ë¥å¡¼¡§¾å -->
+<!-- ã“ã“ã¾ã§ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ–ï¼šä¸Š -->
+<!-- ã“ã“ã‹ã‚‰ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ï¼šä¸Š -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -85,11 +85,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:562px;" class="bg_10" align="right">
 ({if $pager.prev_page})
-<a href="page.php?p=fh_com_list&amp;page=({$pager.prev_page})&amp;target_c_member_id=({$target_member.c_member_id})">Á°¤òÉ½¼¨</a>&nbsp;
+<a href="page.php?p=fh_com_list&amp;page=({$pager.prev_page})&amp;target_c_member_id=({$target_member.c_member_id})">å‰ã‚’è¡¨ç¤º</a>&nbsp;
 ({/if})
-({$pager.start_num})·ï¡Á({$pager.end_num})·ï¤òÉ½¼¨
+({$pager.start_num})ä»¶ï½({$pager.end_num})ä»¶ã‚’è¡¨ç¤º
 ({if $pager.next_page})
-&nbsp;<a href="page.php?p=fh_com_list&amp;page=({$pager.next_page})&amp;target_c_member_id=({$target_member.c_member_id})">¼¡¤òÉ½¼¨</a>
+&nbsp;<a href="page.php?p=fh_com_list&amp;page=({$pager.next_page})&amp;target_c_member_id=({$target_member.c_member_id})">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 &nbsp;
 </td>
@@ -99,15 +99,15 @@
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥á¥Ë¥å¡¼¡§¾å -->
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¤ÈÌ¾Á° -->
+<!-- ã“ã“ã¾ã§ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ï¼šä¸Š -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ã¨åå‰ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 
 ({if $fh_com_list_user.0})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä°ìÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¸€æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=0 num=5})
@@ -125,11 +125,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä°ìÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¸€æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä°ìÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼ä¸€æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=0 num=5})
@@ -145,14 +145,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä°ìÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼ä¸€æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.5})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡äÆóÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼äºŒæ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=5 num=5})
@@ -170,11 +170,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡äÆóÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼äºŒæ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡äÆóÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼äºŒæ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=5 num=5})
@@ -190,14 +190,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡äÆóÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼äºŒæ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.10})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä»°ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¸‰æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=10 num=5})
@@ -215,11 +215,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä»°ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¸‰æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä»°ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼ä¸‰æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=10 num=5})
@@ -235,14 +235,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä»°ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼ä¸‰æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.15})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä»ÍÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼å››æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=15 num=5})
@@ -260,11 +260,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä»ÍÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼å››æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä»ÍÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼å››æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=15 num=5})
@@ -280,14 +280,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä»ÍÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼å››æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.20})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä¸ŞÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼äº”æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=20 num=5})
@@ -305,11 +305,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä¸ŞÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼äº”æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä¸ŞÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼äº”æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=20 num=5})
@@ -325,14 +325,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä¸ŞÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼äº”æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.25})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡äÏ»ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼å…­æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=25 num=5})
@@ -350,11 +350,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡äÏ»ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼å…­æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡äÏ»ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼å…­æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=25 num=5})
@@ -370,14 +370,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡äÏ»ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼å…­æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.30})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä¼·ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¸ƒæ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=30 num=5})
@@ -395,11 +395,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä¼·ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¸ƒæ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä¼·ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼ä¸ƒæ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=30 num=5})
@@ -415,14 +415,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä¼·ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼ä¸ƒæ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.35})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡äÈ¬ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼å…«æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=35 num=5})
@@ -440,11 +440,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡äÈ¬ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼å…«æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡äÈ¬ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼å…«æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=35 num=5})
@@ -460,14 +460,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡äÈ¬ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼å…«æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.40})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä¶åÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¹æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=40 num=5})
@@ -485,11 +485,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä¶åÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼ä¹æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä¶åÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼ä¹æ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=40 num=5})
@@ -505,14 +505,14 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä¶åÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼ä¹æ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 ({if $fh_com_list_user.45})
-<!-- ¤³¤³¤«¤é¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä½½ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼åæ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=45 num=5})
@@ -530,11 +530,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¡ä¡ä½½ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ï¼ï¼åæ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§Ì¾Á°¡ä¡ä½½ÃÊÌÜ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šåå‰ï¼ï¼åæ®µç›® -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({t_loop from=$fh_com_list_user start=45 num=5})
@@ -550,15 +550,15 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 ({/t_loop})
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§Ì¾Á°¡ä¡ä½½ÃÊÌÜ -->
+<!-- ã“ã“ã¾ã§ï¼šåå‰ï¼ï¼åæ®µç›® -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="11"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 ({/if})
 
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¥µ¥à¥Í¥¤¥ë¤ÈÌ¾Á° -->
-<!-- ¤³¤³¤«¤é¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö¡§²¼ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚µãƒ ãƒã‚¤ãƒ«ã¨åå‰ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ–ï¼šä¸‹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -580,8 +580,8 @@
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥¿¥Ö¡§²¼ -->
-<!-- ¤³¤³¤«¤é¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥á¥Ë¥å¡¼¡§²¼ -->
+<!-- ã“ã“ã¾ã§ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆã‚¿ãƒ–ï¼šä¸‹ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ï¼šä¸‹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -590,11 +590,11 @@
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:562px;" class="bg_10" align="right">
 ({if $pager.prev_page})
-<a href="page.php?p=fh_com_list&amp;page=({$pager.prev_page})&amp;target_c_member_id=({$target_member.c_member_id})">Á°¤òÉ½¼¨</a>&nbsp;
+<a href="page.php?p=fh_com_list&amp;page=({$pager.prev_page})&amp;target_c_member_id=({$target_member.c_member_id})">å‰ã‚’è¡¨ç¤º</a>&nbsp;
 ({/if})
-({$pager.start_num})·ï¡Á({$pager.end_num})·ï¤òÉ½¼¨
+({$pager.start_num})ä»¶ï½({$pager.end_num})ä»¶ã‚’è¡¨ç¤º
 ({if $pager.next_page})
-&nbsp;<a href="page.php?p=fh_com_list&amp;page=({$pager.next_page})&amp;target_c_member_id=({$target_member.c_member_id})">¼¡¤òÉ½¼¨</a>
+&nbsp;<a href="page.php?p=fh_com_list&amp;page=({$pager.next_page})&amp;target_c_member_id=({$target_member.c_member_id})">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 &nbsp;
 </td>
@@ -604,13 +604,13 @@
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¥Ú¡¼¥¸ÀÚ¤êÂØ¤¨¥á¥Ë¥å¡¼¡§²¼ -->
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šãƒšãƒ¼ã‚¸åˆ‡ã‚Šæ›¿ãˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ï¼šä¸‹ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -622,13 +622,13 @@
 </table>
 
 </div>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡Ê¥á¥ó¥ĞÍ­¤ê¡Ë****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ˆãƒ¡ãƒ³ãƒæœ‰ã‚Šï¼‰****** -->
 <!-- ************************************************* -->
 
 ({else})
 
 <!-- ************************************************* -->
-<!-- ******¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡Ê¥á¥ó¥ĞÌµ¤·¡Ë****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ˆãƒ¡ãƒ³ãƒç„¡ã—ï¼‰****** -->
 <div id="no_commu_list" class="border_07" style="width:580px;margin:0px auto;">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;">
@@ -640,44 +640,44 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- å°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷</span></td>
+<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§</span></td>
 <td style="width:378px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:564px;height:50px;" class="bg_03" align="center" valign="middle">
 
-»²²Ã¤·¤Æ¤¤¤ë¥³¥ß¥å¥Ë¥Æ¥£¤Ï¤¢¤ê¤Ş¤»¤ó¡£
+å‚åŠ ã—ã¦ã„ã‚‹ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </td>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡ä¡äÆâÍÆ* -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -689,7 +689,7 @@
 </table>
 
 </div>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡Ê¥á¥ó¥ĞÌµ¤·¡Ë****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ˆãƒ¡ãƒ³ãƒç„¡ã—ï¼‰****** -->
 <!-- ************************************************* -->
 
 ({/if})
@@ -697,7 +697,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

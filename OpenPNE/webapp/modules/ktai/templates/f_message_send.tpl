@@ -1,21 +1,21 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">({$target_c_member.nickname})¤µ¤ó¤ËÒ¯¾°¼Ş¤òÁ÷¤ë</font></center>
+<center><font color="orange">({$target_c_member.nickname})ã•ã‚“ã«ï¾’ï½¯ï½¾ï½°ï½¼ï¾ã‚’é€ã‚‹</font></center>
 <hr>
 <font color=red>({if $msg})({$msg})<br>({/if})</font>
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="cmd" value="f_message_send_insert_c_message">
 <input type="hidden" name="c_member_id_to" value="({$target_c_member.c_member_id})">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
-À²ÄÙ<br>
+ï¾€ï½²ï¾„ï¾™<br>
 <input type="text" name="subject"><br>
-ËÜÊ¸<br>
+æœ¬æ–‡<br>
 <textarea name="body"></textarea><br>
-<input type="submit" value="Á÷¿®">
+<input type="submit" value="é€ä¿¡">
 </form>
 <hr>
-<a href="ktai_page.php?p=f_home&target_c_member_id=({$target_c_member.c_member_id})&({$tail})">({$target_c_member.nickname})¤µ¤ó¤ÎÄ¯Ìß</a><br>
-<a href="ktai_page.php?p=h_home&({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=f_home&target_c_member_id=({$target_c_member.c_member_id})&({$tail})">({$target_c_member.nickname})ã•ã‚“ã®ï¾„ï½¯ï¾Œï¾Ÿ</a><br>
+<a href="ktai_page.php?p=h_home&({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

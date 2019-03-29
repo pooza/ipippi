@@ -11,7 +11,7 @@ if (!is_dir($dir)) {
 }
 
 $file = $_GET['filename'];
-$file = str_replace('/', 'SLASH', $file); //前の百スラッシュだけはエスケ〖プしておく
+$file = str_replace('/', 'SLASH', $file); //蹇点伄鐐恒偣銉┿儍銈枫儱銇犮亼銇偍銈广偙銉笺儣銇椼仸銇娿亸
 $file = $dir . '/' . md5($file);
 if (!is_readable($file)) {
 	header("Location: page.php?p=h_err_c_file");
@@ -40,4 +40,4 @@ header('Content-Type: application/octet-stream');
 mb_http_output('pass');
 print $contents;
 
-?>
+

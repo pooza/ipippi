@@ -1,45 +1,45 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥á¥Ã¥»¡¼¥¸¤òºï½ü
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_message_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 h_message_box
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥á¥Ã¥»¡¼¥¸Á÷¿®¼Ô
-¥á¥Ã¥»¡¼¥¸¼õ¿®¼Ô
+[æ¨©é™]
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡è€…
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å—ä¿¡è€…
 
 */
 //shou050617
-//°ìÅÙ¤ËÊ£¿ôºï½ü½ÐÍè¤ë¤è¤¦¤Ë½¤Àµ
-//¤´¤ßÈ¢¤«¤é°ÜÆ°¤Ç¤­¤ë¤è¤¦¤Ë½¤Àµ
+//ä¸€åº¦ã«è¤‡æ•°å‰Šé™¤å‡ºæ¥ã‚‹ã‚ˆã†ã«ä¿®æ­£
+//ã”ã¿ç®±ã‹ã‚‰ç§»å‹•ã§ãã‚‹ã‚ˆã†ã«ä¿®æ­£
 //shou050624
-//¤´¤ßÈ¢¤«¤é´°Á´ºï½ü½ÐÍè¤ë¤è¤¦¤Ë½¤Àµ
+//ã”ã¿ç®±ã‹ã‚‰å®Œå…¨å‰Šé™¤å‡ºæ¥ã‚‹ã‚ˆã†ã«ä¿®æ­£
 function doAction_h_message_box_delete_message($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_message_id = $request['c_message_id'];
 	$box = $request['box'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//TODO: if / foreach¤ÎÃæ¤ËÆþ¤Ã¤Æ¤¤¤ë
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//TODO: if / foreachã®ä¸­ã«å…¥ã£ã¦ã„ã‚‹
 	//---
 
-	//ºï½ü¤¹¤ë¥á¥Ã¥»¡¼¥¸¤òÁªÂò¤·¤Æ¤Ê¤¤
+	//å‰Šé™¤ã™ã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é¸æŠžã—ã¦ãªã„
 	if( count($c_message_id) == 0 ){
 		client_redirect("page.php?p=h_message_box&box=$box");
 		exit;
 	}
 
-	//²¼½ñ¤­ÊÝÂ¸¤«¤éºï½ü
+	//ä¸‹æ›¸ãä¿å­˜ã‹ã‚‰å‰Šé™¤
 	if($box == "savebox"){
 		foreach( $c_message_id as $val ){
 		    $c_message = _db_c_message4c_message_id($val);
@@ -53,10 +53,10 @@ function doAction_h_message_box_delete_message($request) {
 		exit;
 	}
 
-	//¤´¤ßÈ¢¤«¤é
+	//ã”ã¿ç®±ã‹ã‚‰
 	elseif ($box == "trash") {
 		
-		//¤´¤ßÈ¢¤«¤é°ÜÆ°
+		//ã”ã¿ç®±ã‹ã‚‰ç§»å‹•
 		if (!empty($request['move']) ){
 			foreach($c_message_id as $val){
 			    $c_message = _db_c_message4c_message_id($val);
@@ -70,7 +70,7 @@ function doAction_h_message_box_delete_message($request) {
 			exit;
 		}
 		
-		//¤´¤ßÈ¢¤«¤é´°Á´ºï½ü¡¡Éü¸µÊýË¡¤Ê¤·
+		//ã”ã¿ç®±ã‹ã‚‰å®Œå…¨å‰Šé™¤ã€€å¾©å…ƒæ–¹æ³•ãªã—
 		else {
 			foreach ($c_message_id as $val) {
 			    $c_message = _db_c_message4c_message_id($val);
@@ -89,7 +89,7 @@ function doAction_h_message_box_delete_message($request) {
 		}
 	}
 	
-	// ¥á¥Ã¥»¡¼¥¸¤ò¤´¤ßÈ¢¤Ø°ÜÆ°
+	// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’ã”ã¿ç®±ã¸ç§»å‹•
 	else {
 		foreach ($c_message_id as $val) {
 		    $c_message = _db_c_message4c_message_id($val);
@@ -103,4 +103,4 @@ function doAction_h_message_box_delete_message($request) {
 
 	client_redirect("page.php?p=h_message_box&box=$box");
 }
-?>
+

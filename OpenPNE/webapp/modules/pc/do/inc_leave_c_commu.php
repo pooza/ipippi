@@ -1,30 +1,30 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¤«¤éÂà²ñ
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‹ã‚‰é€€ä¼š
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_id
 
-[¸¢¸Â]
+[æ¨©é™]
 
 */
 function doAction_inc_leave_c_commu($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $request['target_c_commu_id'];
 	// ----------
 	$c_member_id = $u;
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼¤Ç´ÉÍý¼Ô¤Ç¤Ï¤Ê¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼ã§ç®¡ç†è€…ã§ã¯ãªã„
 
 	$is_admin	= do_common_is_commu_admin($target_c_commu_id, $c_member_id);
 	$is_member	= do_common_is_c_commu_member($target_c_commu_id, $c_member_id);
@@ -49,4 +49,4 @@ _do_delete_c_commu_admin_confirm2($target_c_commu_id,$c_member_id);
 
 client_redirect("page.php?p=c_home&target_c_commu_id=$target_c_commu_id");
 }
-?>
+

@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************* -->
-<!-- ******¤³¤³¤«¤é¡§Í½Äê****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šäºˆå®š****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,30 +34,30 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td align="center">
-<!-- *¤³¤³¤«¤é¡§Í½ÄêÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šäºˆå®šå†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" align="center" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
-<td class="bg_06"><img src="./skin/content_header_1.gif" style="width: 30px;height: 20px;" class="dummy" align="left"><div class="b_b c_00" style="padding:3px 0px;">Í½Äê</div></td></tr>
+<td class="bg_06"><img src="./skin/content_header_1.gif" style="width: 30px;height: 20px;" class="dummy" align="left"><div class="b_b c_00" style="padding:3px 0px;">äºˆå®š</div></td></tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- *¤³¤³¤«¤é¡§¼çÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- *ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹* -->
 <table border="0" cellspacing="0" align="center" cellpadding="0" style="width: 566px;" class="border_01">
 ({*********})
 <tr>
 <td align="center">
 <table border="0" style="width: 564px;" cellspacing="0" cellpadding="0">
 ({********})
-<!-- ¤³¤³¤«¤é¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä¥¿¥¤¥È¥ë -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼ã‚¿ã‚¤ãƒˆãƒ« -->
 <tr>
 <td align="center" class="border_01" style="width:110px;border-width:0px 1px 1px 0px;">
 
 <div class="padding_s">
 
-¥¿¥¤¥È¥ë
+ã‚¿ã‚¤ãƒˆãƒ«
 
 </div>
 
@@ -72,15 +72,15 @@
 
 </td>
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä¥¿¥¤¥È¥ë -->
+<!-- ã“ã“ã¾ã§ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼ã‚¿ã‚¤ãƒˆãƒ« -->
 ({********})
-<!-- ¤³¤³¤«¤é¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä³«»ÏÆü»ş -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼é–‹å§‹æ—¥æ™‚ -->
 <tr>
 <td align="center" class="border_01" style="border-width:0px 1px 1px 0px">
 
 <div class="padding_s">
 
-³«¡¡¡¡»Ï
+é–‹ã€€ã€€å§‹
 
 </div>
 
@@ -89,30 +89,30 @@
 
 <div class="padding_s">
 
-({$c_schedule.start_date|date_format:"%Y"}) Ç¯
-({$c_schedule.start_date|date_format:"%m"}) ·î
-({$c_schedule.start_date|date_format:"%d"}) Æü
+({$c_schedule.start_date|date_format:"%Y"}) å¹´
+({$c_schedule.start_date|date_format:"%m"}) æœˆ
+({$c_schedule.start_date|date_format:"%d"}) æ—¥
 ({if is_null($c_schedule.start_time)})
--- »ş
--- Ê¬
+-- æ™‚
+-- åˆ†
 ({else})
-({$c_schedule.start_time|date_format:"%H"}) »ş
-({$c_schedule.start_time|date_format:"%M"}) Ê¬
+({$c_schedule.start_time|date_format:"%H"}) æ™‚
+({$c_schedule.start_time|date_format:"%M"}) åˆ†
 ({/if})
 
 </div>
 
 </td>
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä³«»ÏÆü»ş -->
+<!-- ã“ã“ã¾ã§ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼é–‹å§‹æ—¥æ™‚ -->
 ({********})
-<!-- ¤³¤³¤«¤é¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä½ªÎ»Æü»ş -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼çµ‚äº†æ—¥æ™‚ -->
 <tr>
 <td align="center" class="border_01" style="border-width:0px 1px 1px 0px;">
 
 <div class="padding_s">
 
-½ª¡¡¡¡Î»
+çµ‚ã€€ã€€äº†
 
 </div>
 
@@ -121,30 +121,30 @@
 
 <div class="padding_s">
 
-({$c_schedule.end_date|date_format:"%Y"}) Ç¯
-({$c_schedule.end_date|date_format:"%m"}) ·î
-({$c_schedule.end_date|date_format:"%d"}) Æü
+({$c_schedule.end_date|date_format:"%Y"}) å¹´
+({$c_schedule.end_date|date_format:"%m"}) æœˆ
+({$c_schedule.end_date|date_format:"%d"}) æ—¥
 ({if is_null($c_schedule.end_time)})
--- »ş
--- Ê¬
+-- æ™‚
+-- åˆ†
 ({else})
-({$c_schedule.end_time|date_format:"%H"}) »ş
-({$c_schedule.end_time|date_format:"%M"}) Ê¬
+({$c_schedule.end_time|date_format:"%H"}) æ™‚
+({$c_schedule.end_time|date_format:"%M"}) åˆ†
 ({/if})
 
 </div>
 
 </td>
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä½ªÎ»Æü»ş -->
+<!-- ã“ã“ã¾ã§ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼çµ‚äº†æ—¥æ™‚ -->
 ({********})
-<!-- ¤³¤³¤«¤é¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä¾ÜºÙ¥Æ¥­¥¹¥È -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼è©³ç´°ãƒ†ã‚­ã‚¹ãƒˆ -->
 <tr>
 <td align="center" class="border_01" style="border-width:0px 1px 1px 0px;">
 
 <div class="padding_s">
 
-¾Ü¡¡¡¡ºÙ
+è©³ã€€ã€€ç´°
 
 </div>
 </td>
@@ -158,15 +158,15 @@
 
 </td>
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä¾ÜºÙ¥Æ¥­¥¹¥È -->
+<!-- ã“ã“ã¾ã§ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼è©³ç´°ãƒ†ã‚­ã‚¹ãƒˆ -->
 ({********})
-<!-- ¤³¤³¤«¤é¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä¤ªÃÎ¤é¤»¥á¡¼¥ëÍ­Ìµ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«æœ‰ç„¡ -->
 <tr>
 <td align="center" class="border_01" style="border-width:0px 1px 1px 0px;">
 
 <div class="padding_s">
 
-¤ªÃÎ¤é¤»¥á¡¼¥ë
+ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«
 
 </div>
 
@@ -176,18 +176,18 @@
 <div class="padding_s">
 
 ({if $c_schedule.is_receive_mail})
-¼õ¤±¼è¤ë
+å—ã‘å–ã‚‹
 ({else})
-¼õ¤±¼è¤é¤Ê¤¤
+å—ã‘å–ã‚‰ãªã„
 ({/if})
 
 </div>
 
 </td>
 </tr>
-<!-- ¤³¤³¤Ş¤Ç¡§¥¹¥±¥¸¥å¡¼¥ë¾ÜºÙ¡ä¤ªÃÎ¤é¤»¥á¡¼¥ëÍ­Ìµ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«è©³ç´°ï¼ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«æœ‰ç„¡ -->
 ({********})
-<!-- *¤³¤³¤«¤é¡§¼çÆâÍÆ¡äÊÔ½¸ºï½ü¥Ü¥¿¥ó* -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ç·¨é›†å‰Šé™¤ãƒœã‚¿ãƒ³* -->
 <tr>
 <td class="bg_03" colspan="2">
 
@@ -198,19 +198,19 @@
 <td>
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="p" value="h_schedule_edit">
 <input type="hidden" name="target_c_schedule_id" value="({$c_schedule.c_schedule_id})">
-<input type="submit" value="¡¡ ÊÔ¡¡¡¡½¸ ¡¡"></form>
+<input type="submit" value="ã€€ ç·¨ã€€ã€€é›† ã€€"></form>
 </td>
 
 <td><form action="page.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="p" value="h_schedule_delete">
 <input type="hidden" name="target_c_schedule_id" value="({$c_schedule.c_schedule_id})">
-<input type="submit" value="¡¡ ºï¡¡¡¡½ü ¡¡"></form>
+<input type="submit" value="ã€€ å‰Šã€€ã€€é™¤ ã€€"></form>
 
 </td>
 </tr>
@@ -220,18 +220,18 @@
 
 </td>
 </tr>
-<!-- *¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡äÊÔ½¸ºï½ü¥Ü¥¿¥ó* -->
+<!-- *ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ç·¨é›†å‰Šé™¤ãƒœã‚¿ãƒ³* -->
 ({********})
 </table>
-<!-- *¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ* -->
+<!-- *ã“ã“ã¾ã§ï¼šä¸»å†…å®¹* -->
 </td>
 </tr>
 ({*********})
 </table>
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- *Ìµ¤·* -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- *ç„¡ã—* -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -241,20 +241,20 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§Í½ÄêÆâÍÆ****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šäºˆå®šå†…å®¹****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<a href='javascript:window.close()'>¤³¤Î¥¦¥£¥ó¥É¥¦¤òÊÄ¤¸¤ë</a>
+<a href='javascript:window.close()'>ã“ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’é–‰ã˜ã‚‹</a>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

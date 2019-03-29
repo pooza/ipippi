@@ -1,29 +1,29 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¼Ì¿¿ºï½ü
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å†™çœŸå‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_edit_image
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 
 */
 function doAction_c_edit_image_delete_c_commu_image($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $request['target_c_commu_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
     
     $status = db_common_commu_status($u, $target_c_commu_id);
     if (!$status['is_commu_admin']) {
@@ -39,4 +39,4 @@ function doAction_c_edit_image_delete_c_commu_image($request) {
 
 	client_redirect("page.php?p=c_edit&target_c_commu_id=$target_c_commu_id");
 }
-?>
+

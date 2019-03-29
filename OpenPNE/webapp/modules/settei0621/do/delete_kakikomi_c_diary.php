@@ -1,5 +1,5 @@
 <?php
-// ½ñ¤­¹þ¤ß´ÉÍý(Æüµ­ºï½ü)
+// æ›¸ãè¾¼ã¿ç®¡ç†(æ—¥è¨˜å‰Šé™¤)
 
 
 function doAction_delete_kakikomi_c_diary($requests)
@@ -8,7 +8,6 @@ function doAction_delete_kakikomi_c_diary($requests)
 	
 	do_fh_diary_delete_c_diary($requests['target_c_diary_id']);
 
-	admin_client_redirect('delete_kakikomi', "Æüµ­¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('delete_kakikomi', "æ—¥è¨˜ã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>

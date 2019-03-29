@@ -12,4 +12,4 @@ function normalAction_regist_end($smarty,$requests)
 	$smarty->assign("SNS_NAME", SNS_NAME);	
     $smarty->ext_display('regist_end.tpl');
 }
-?>
+

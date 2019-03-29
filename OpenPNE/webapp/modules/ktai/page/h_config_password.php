@@ -7,4 +7,3 @@ function pageAction_h_config_password($smarty, $requests)
 	$smarty->ext_display("h_config_password.tpl");
 }
 
-?>

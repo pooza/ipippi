@@ -7,4 +7,3 @@ function pageAction_h_invite($smarty, $requests)
 
 }
 
-?>

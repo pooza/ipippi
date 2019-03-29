@@ -10,19 +10,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ********************************** -->
-<!-- ******�������顧������Ͽ****** -->
+<!-- ******ここから：新規登録****** -->
 <form action="do_normal.php" method="post">
 <input type="hidden" name="cmd" value="public_invite">
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
@@ -34,21 +34,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧������Ͽ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：新規登録＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">������Ͽ</span></td>
+<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">新規登録</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å������� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -61,8 +61,8 @@
 
 <div style="padding:10px 30px;">
 
-�᡼�륢�ɥ쥹�����Ϥ��Ƥ���������<br>
-���Ϥ��줿�᡼�륢�ɥ쥹���� ({$SNS_NAME}) �ξ��Ծ�����������ޤ���
+メールアドレスを入力してください。<br>
+入力されたメールアドレス宛に ({$SNS_NAME}) の招待状が送信されます。
 
 </div>
 
@@ -75,8 +75,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���å������� -->
-<!-- �������顧�����ơ���ѹ������� -->
+<!-- ここまで：主内容＞＞メッセージ欄 -->
+<!-- ここから：主内容＞＞変更入力欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -89,7 +89,7 @@
 
 <div class="padding_s">
 
-�᡼�륢�ɥ쥹
+メールアドレス
 
 </div>
 
@@ -115,7 +115,7 @@
 
 <div class="padding_s">
 
-�᡼�륢�ɥ쥹(��ǧ)
+メールアドレス(確認)
 
 </div>
 
@@ -143,7 +143,7 @@
 
 <div class="padding_w_m">
 
-<input type="submit" class="submit" value="����������">
+<input type="submit" class="submit" value="　送　信　">
 
 </div>
 
@@ -156,13 +156,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ѹ������� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ�������Ͽ�������* -->
+<!-- ここまで：主内容＞＞変更入力欄 -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：新規登録＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -173,7 +173,7 @@
 </tr>
 </table>
 </form>
-<!-- ******�����ޤǡ�������Ͽ****** -->
+<!-- ******ここまで：新規登録****** -->
 <!-- ********************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -181,7 +181,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

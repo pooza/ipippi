@@ -18,7 +18,7 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -26,7 +26,7 @@
 ({if $c_ashiato_list})
 
 <!-- ************************************ -->
-<!-- ******¤³¤³¤«¤é¡§ºÇ¶á¤ÎÂ­¤¢¤È°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šæœ€è¿‘ã®è¶³ã‚ã¨ä¸€è¦§****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -36,22 +36,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§ºÇ¶á¤ÎÂ­¤¢¤È°ìÍ÷¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šæœ€è¿‘ã®è¶³ã‚ã¨ä¸€è¦§ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¤¢¤·¤¢¤È</span></td>
+<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ã‚ã—ã‚ã¨</span></td>
 <td style="width:378px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¤¢¤·¤¢¤ÈÊ¸¾Ï -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šã‚ã—ã‚ã¨æ–‡ç«  -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -61,7 +61,7 @@
 <td style="width:562px;" class="bg_03" align="left">
 <div style="padding:10px 30px;" class="lh_120">
 
-({$c_member.nickname})¤µ¤ó¤Î¥¢¥¯¥»¥¹¾õ¶·¤Ç¤¹¡£ºÇ¿·30·ï¤Ş¤Ç¤òÉ½¼¨¤·¤Ş¤¹¡£ 
+({$c_member.nickname})ã•ã‚“ã®ã‚¢ã‚¯ã‚»ã‚¹çŠ¶æ³ã§ã™ã€‚æœ€æ–°30ä»¶ã¾ã§ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚ 
 
 </div>
 </td>
@@ -71,8 +71,8 @@
 <td style="width:564px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¤¢¤·¤¢¤ÈÊ¸¾Ï -->
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šã‚ã—ã‚ã¨æ–‡ç«  -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <div style="width:564px;" class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -89,12 +89,12 @@
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-¥Ú¡¼¥¸Á´ÂÎ¤Î¥¢¥¯¥»¥¹¿ô¡§<span class="b_b">({$c_ashiato_num})</span> ¥¢¥¯¥»¥¹<br>
+ãƒšãƒ¼ã‚¸å…¨ä½“ã®ã‚¢ã‚¯ã‚»ã‚¹æ•°ï¼š<span class="b_b">({$c_ashiato_num})</span> ã‚¢ã‚¯ã‚»ã‚¹<br>
 <br>
 
 ({foreach from=$c_ashiato_list item=c_ashiato})
 
-({$c_ashiato.r_datetime|date_format:"%YÇ¯%m·î%dÆü %H:%M"})<br>
+({$c_ashiato.r_datetime|date_format:"%Yå¹´%mæœˆ%dæ—¥ %H:%M"})<br>
 
 ({/foreach})
 
@@ -112,12 +112,12 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§ºÇ¶á¤ÎÂ­¤¢¤È°ìÍ÷¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šæœ€è¿‘ã®è¶³ã‚ã¨ä¸€è¦§ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -127,7 +127,7 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§ºÇ¶á¤ÎÂ­¤¢¤È°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šæœ€è¿‘ã®è¶³ã‚ã¨ä¸€è¦§****** -->
 <!-- ************************************ -->
 
 ({else})
@@ -136,7 +136,7 @@
 
 <div class="padding_w_s">
 
-¤Ş¤À¤¢¤·¤¢¤È¤Ï¤¢¤ê¤Ş¤»¤ó¡£
+ã¾ã ã‚ã—ã‚ã¨ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </div>
 
@@ -147,7 +147,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

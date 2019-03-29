@@ -3,7 +3,7 @@
 function pageAction_c_topic_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $requests['target_c_commu_id'];
 	$title = $requests['title'];
 	$body = $requests['body'];
@@ -15,11 +15,11 @@ function pageAction_c_topic_add($smarty,$requests) {
 	    client_redirect("page.php?p=c_event_add&target_c_commu_id=".$c_commu_id);
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 	if(!p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu_id,$u)){
 		$_REQUEST['target_c_commu_id'] = $c_commu_id;
-		$_REQUEST['msg'] = "¥È¥Ô¥Ã¥¯ºîÀ®¤ò¤ª¤³¤Ê¤¦¤Ë¤Ï¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤¹¤ëÉ¬Í×¤¬¤¢¤ê¤Þ¤¹";
+		$_REQUEST['msg'] = "ãƒˆãƒ”ãƒƒã‚¯ä½œæˆã‚’ãŠã“ãªã†ã«ã¯ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™";
 		module_execute('pc', 'page', "c_home");
 		exit();
 	}
@@ -33,4 +33,4 @@ function pageAction_c_topic_add($smarty,$requests) {
 	$smarty->assign('body', $body);
 	$smarty->ext_display("c_topic_add.tpl");
 }
-?>
+

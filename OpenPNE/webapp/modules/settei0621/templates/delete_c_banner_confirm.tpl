@@ -1,16 +1,16 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>¥Ğ¥Ê¡¼ºï½ü</h2>
+<h2>ãƒãƒŠãƒ¼å‰Šé™¤</h2>
 
-<p>ËÜÅö¤Ëºï½ü¤·¤Æ¤â¤è¤í¤·¤¤¤Ç¤¹¤«¡©</p>
+<p>æœ¬å½“ã«å‰Šé™¤ã—ã¦ã‚‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ</p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_banner','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="c_banner_id" value="({$requests.c_banner_id})">
-<input type="submit" class="submit" value="ºï½ü">
+<input type="submit" class="submit" value="å‰Šé™¤">
 </form>
 
 ({$inc_footer|smarty:nodefaults})

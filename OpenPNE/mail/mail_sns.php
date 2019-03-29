@@ -24,17 +24,17 @@ class MailSNS
 		list($from_user, $from_host) = explode("@", $this->from, 2);
 		list($to_user, $to_host) = explode("@", $this->to, 2);
 		
-		// from_host ¤¬·ÈÂÓ¥É¥á¥¤¥ó°Ê³°¤Ï¥¨¥é¡¼
+		// from_host ãŒæºå¸¯ãƒ‰ãƒ¡ã‚¤ãƒ³ä»¥å¤–ã¯ã‚¨ãƒ©ãƒ¼
 	    if (!is_ktai_mail_address($this->from)) {
 	        m_debug_log("MailSNS::main() from wrong host");
 	        return false;
 	    }
 	    
 	    if (!$this->c_member_id) {
-	    	// Á÷¿®¼Ô¤¬SNS¥á¥ó¥Ð¡¼¤Ç¤Ê¤¤¾ì¹ç
+	    	// é€ä¿¡è€…ãŒSNSãƒ¡ãƒ³ãƒãƒ¼ã§ãªã„å ´åˆ
 	    	
     		if (defined('IS_CLOSED_SNS') && !IS_CLOSED_SNS) {
-				// get ¿·µ¬ÅÐÏ¿
+				// get æ–°è¦ç™»éŒ²
 			    if ($to_user == "get") {
 			    	m_debug_log("MailSNS::regist_get()", PEAR_LOG_INFO);
 			    	return $this->regist_get();
@@ -46,7 +46,7 @@ class MailSNS
 	    }
 		
 		
-        // ¥í¥°¥¤¥ó¥¢¥É¥ì¥¹ÄÌÃÎ
+        // ãƒ­ã‚°ã‚¤ãƒ³ã‚¢ãƒ‰ãƒ¬ã‚¹é€šçŸ¥
         if ($to_user == "get") {
         	m_debug_log("MailSNS::login_get()", PEAR_LOG_INFO);
 			return $this->login_get();
@@ -54,13 +54,13 @@ class MailSNS
         
         //---
         
-        // ¥³¥ß¥å¥Ë¥Æ¥£·Ç¼¨ÈÄÅê¹Æ
+        // ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æŽ²ç¤ºæ¿æŠ•ç¨¿
         elseif (
         	preg_match('/^t(\d+)$/', $to_user, $matches) ||
         	preg_match('/^t(\d+)-([0-9a-f]{12})$/', $to_user, $matches)
         ) {
 
-        	// ¥È¥Ô¥Ã¥¯ID¤Î¥Á¥§¥Ã¥¯
+        	// ãƒˆãƒ”ãƒƒã‚¯IDã®ãƒã‚§ãƒƒã‚¯
             if (!$c_commu_topic_id = $matches[1]) {
             	return false;
             }
@@ -68,7 +68,7 @@ class MailSNS
         	if (defined('MAIL_ADDRESS_HASHED') && MAIL_ADDRESS_HASHED) {
         		if (empty($matches[2])) return false;
         		
-	        	// ¥æ¡¼¥¶¥Ï¥Ã¥·¥å¤Î¥Á¥§¥Ã¥¯
+	        	// ãƒ¦ãƒ¼ã‚¶ãƒãƒƒã‚·ãƒ¥ã®ãƒã‚§ãƒƒã‚¯
 	        	if ($matches[2] != t_get_user_hash($this->c_member_id)) {
 	        		return false;
 	        	}
@@ -80,7 +80,7 @@ class MailSNS
 		
 		//---
 		
-        // Æüµ­Åê¹Æ
+        // æ—¥è¨˜æŠ•ç¨¿
         elseif (
         	$to_user == 'blog' ||
         	preg_match('/^b(\d+)-([0-9a-f]{12})$/', $to_user, $matches)
@@ -89,11 +89,11 @@ class MailSNS
         	if (defined('MAIL_ADDRESS_HASHED') && MAIL_ADDRESS_HASHED) {
         		if (empty($matches[1]) || empty($matches[2])) return false;
         		
-	        	// ¥æ¡¼¥¶ID¤Î¥Á¥§¥Ã¥¯
+	        	// ãƒ¦ãƒ¼ã‚¶IDã®ãƒã‚§ãƒƒã‚¯
 	        	if ($matches[1] != $this->c_member_id) {
 	        		return false;
 	        	}
-	        	// ¥æ¡¼¥¶¥Ï¥Ã¥·¥å¤Î¥Á¥§¥Ã¥¯
+	        	// ãƒ¦ãƒ¼ã‚¶ãƒãƒƒã‚·ãƒ¥ã®ãƒã‚§ãƒƒã‚¯
 	        	if ($matches[2] != t_get_user_hash($this->c_member_id)) {
 	        		return false;
 	        	}
@@ -105,13 +105,13 @@ class MailSNS
 
         //---
 
-		//¥×¥í¥Õ¥£¡¼¥ë²èÁüÊÑ¹¹
+		//ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ç”»åƒå¤‰æ›´
         elseif (
         	preg_match('/^p(\d+)$/', $to_user, $matches) ||
         	preg_match('/^p(\d+)-([0-9a-f]{12})$/', $to_user, $matches)
         ) {
         	
-        	// ¥æ¡¼¥¶ID¤Î¥Á¥§¥Ã¥¯
+        	// ãƒ¦ãƒ¼ã‚¶IDã®ãƒã‚§ãƒƒã‚¯
         	if ($matches[1] != $this->c_member_id) {
         		return false;
         	}
@@ -119,7 +119,7 @@ class MailSNS
         	if (defined('MAIL_ADDRESS_HASHED') && MAIL_ADDRESS_HASHED) {
         		if (empty($matches[2])) return false;
         		
-	        	// ¥æ¡¼¥¶¥Ï¥Ã¥·¥å¤Î¥Á¥§¥Ã¥¯
+	        	// ãƒ¦ãƒ¼ã‚¶ãƒãƒƒã‚·ãƒ¥ã®ãƒã‚§ãƒƒã‚¯
 	        	if ($matches[2] != t_get_user_hash($this->c_member_id)) {
 	        		return false;
 	        	}
@@ -134,14 +134,14 @@ class MailSNS
     }
 	
 	/**
-	 * ¿·µ¬ÅÐÏ¿¤ÎURL¼èÆÀ
+	 * æ–°è¦ç™»éŒ²ã®URLå–å¾—
 	 */
 	function regist_get()
 	{
-		// ¾·ÂÔ¼Ô¤Ï c_member_id = 1 (¸ÇÄê)
+		// æ‹›å¾…è€…ã¯ c_member_id = 1 (å›ºå®š)
 		$c_member_id_invite = 1;
         
-        // _pre ¤ËÄÉ²Ã
+        // _pre ã«è¿½åŠ 
         $session = md5(uniqid(rand(),1));
         mail_insert_c_member_ktai_pre($session, $this->from, $c_member_id_invite);
         
@@ -150,7 +150,7 @@ class MailSNS
 	}
 	
 	/**
-	 * ¥í¥°¥¤¥ó¥Ú¡¼¥¸¤ÎURL¼èÆÀ
+	 * ãƒ­ã‚°ã‚¤ãƒ³ãƒšãƒ¼ã‚¸ã®URLå–å¾—
 	 */
 	function login_get()
 	{
@@ -159,7 +159,7 @@ class MailSNS
 	}
 	
 	/**
-	 * ¥³¥ß¥å¥Ë¥Æ¥£·Ç¼¨ÈÄÅê¹Æ
+	 * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æŽ²ç¤ºæ¿æŠ•ç¨¿
 	 */
 	function add_commu_topic_comment($c_commu_topic_id)
 	{
@@ -169,22 +169,22 @@ class MailSNS
 		
 		$c_commu_id = $topic['c_commu_id'];
 		if (!_db_is_c_commu_member($c_commu_id, $this->c_member_id)) {
-			$this->error_mail("¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤·¤Æ¤¤¤Ê¤¤¤¿¤áÅê¹Æ¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿");
+			$this->error_mail("ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã—ã¦ã„ãªã„ãŸã‚æŠ•ç¨¿ã§ãã¾ã›ã‚“ã§ã—ãŸ");
 			m_debug_log("MailSNS::add_commu_topic_comment() not a member");
 			return false;
 		}
 		
 		$body = m_get_text_body($this->mail);
 		if ($body === "") {
-			$this->error_mail("ËÜÊ¸¤¬¶õ¤Î¤¿¤áÅê¹Æ¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿");
+			$this->error_mail("æœ¬æ–‡ãŒç©ºã®ãŸã‚æŠ•ç¨¿ã§ãã¾ã›ã‚“ã§ã—ãŸ");
 			m_debug_log("MailSNS::add_commu_topic_comment() body is empty");
 			return false;
 		}
 		
-		// ½ñ¤­¹þ¤ß¤òDB¤ËÄÉ²Ã
+		// æ›¸ãè¾¼ã¿ã‚’DBã«è¿½åŠ 
 		$ins_id = mail_insert_c_commu_topic_comment($c_commu_id,$topic['c_commu_topic_id'],$this->c_member_id,$body);
 		
-		// ²èÁüÊÝÂ¸
+		// ç”»åƒä¿å­˜
 		if ($image_data = m_get_image($this->mail)) {
 			$filename = "tc_" . $ins_id . "_" . time() . ".jpg";
 			
@@ -192,25 +192,25 @@ class MailSNS
 			mail_update_c_commu_topic_comment_image($ins_id, $filename);
 		}
 		
-		//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(·ÈÂÓ¤Ø)
+		//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(æºå¸¯ã¸)
 		send_bbs_info_mail($ins_id, $this->c_member_id);
-		//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(PC¤Ø)
+		//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(PCã¸)
 		send_bbs_info_mail_pc($ins_id, $this->c_member_id);
 		
 		return true;
 	}
 	
 	/**
-	 * Æüµ­Åê¹Æ
+	 * æ—¥è¨˜æŠ•ç¨¿
 	 */
 	function add_diary()
 	{
 		$subject = m_get_subject($this->mail);
 		$body = m_get_text_body($this->mail);
 		
-		if ($subject === "") $subject = "ÌµÂê";
+		if ($subject === "") $subject = "ç„¡é¡Œ";
 		if ($body === "") {
-			$this->error_mail("ËÜÊ¸¤¬¶õ¤Î¤¿¤áÅê¹Æ¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿");
+			$this->error_mail("æœ¬æ–‡ãŒç©ºã®ãŸã‚æŠ•ç¨¿ã§ãã¾ã›ã‚“ã§ã—ãŸ");
 			m_debug_log("MailSNS::add_diary() body is empty");
 			return false;
 		}
@@ -218,7 +218,7 @@ class MailSNS
 		if (!$ins_id = mail_insert_c_diary($this->c_member_id, $subject, $body))
 			return false;
 		
-		// ²èÁüÅÐÏ¿
+		// ç”»åƒç™»éŒ²
 		if ($image_data = m_get_image($this->mail)) {
 			$filename = "d_" . $ins_id . "_" . time() . ".jpg";
 			
@@ -230,13 +230,13 @@ class MailSNS
 	}
 	
 	/**
-	 * ¥×¥í¥Õ¥£¡¼¥ë²èÁüÊÑ¹¹
+	 * ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ç”»åƒå¤‰æ›´
 	 */
 	function add_member_image()
 	{
 		$c_member = db_common_c_member4c_member_id($this->c_member_id);
 		
-		// ÅÐÏ¿¤¹¤ë²èÁüÈÖ¹æ(1-3)¤ò·è¤á¤ë
+		// ç™»éŒ²ã™ã‚‹ç”»åƒç•ªå·(1-3)ã‚’æ±ºã‚ã‚‹
 		$target_number = 0;
 		if ($c_member['image_filename']) {
 			if (!$c_member['image_filename_1']) $target_number = 1;
@@ -248,7 +248,7 @@ class MailSNS
 		}
 		if (!$target_number) $target_number = 1;
 		
-		// ²èÁüÅÐÏ¿
+		// ç”»åƒç™»éŒ²
         if ($image_data = m_get_image($this->mail)) {
         	$filename = "m_" .$this->c_member_id."_". time() . ".jpg";
         	
@@ -262,13 +262,13 @@ class MailSNS
 	}
 	
 	/**
-	 * ¥¨¥é¡¼¥á¡¼¥ë¤ò¥á¡¼¥ëÁ÷¿®¼Ô¤ØÊÖ¿®
+	 * ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒ¼ãƒ«ã‚’ãƒ¡ãƒ¼ãƒ«é€ä¿¡è€…ã¸è¿”ä¿¡
 	 */
 	function error_mail($body)
 	{
-		$subject = "[".SNS_NAME."]¥á¡¼¥ëÅê¹Æ¥¨¥é¡¼";
+		$subject = "[".SNS_NAME."]ãƒ¡ãƒ¼ãƒ«æŠ•ç¨¿ã‚¨ãƒ©ãƒ¼";
 		t_send_email($this->from, $subject, $body);		
 	}
 }
 
-?>
+

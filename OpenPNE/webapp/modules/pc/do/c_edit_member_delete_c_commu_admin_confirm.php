@@ -1,29 +1,29 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂåÍ×ÀÁ¤ò¼è¤ê¾Ã¤·
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£è¦è«‹ã‚’å–ã‚Šæ¶ˆã—
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_admin_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_edit_member
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥åÆó¥Æ¥£´ÉÍý¼Ô
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥äºŒãƒ†ã‚£ç®¡ç†è€…
 
 */
 function doAction_c_edit_member_delete_c_commu_admin_confirm($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_admin_confirm_id = $request['target_c_commu_admin_confirm_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
     
 	$c_commu_admin_confirm = _db_c_commu_admin_confirm4c_commu_admin_confirm_id($target_c_commu_admin_confirm_id);
 	$target_c_commu_id = $c_commu_admin_confirm['c_commu_id'];
@@ -39,4 +39,4 @@ function doAction_c_edit_member_delete_c_commu_admin_confirm($request) {
 
     client_redirect("page.php?p=c_edit_member&target_c_commu_id=$target_c_commu_id");
 }
-?>
+

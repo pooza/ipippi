@@ -18,14 +18,14 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 ({capture name="keyword_url"})({$keyword|escape:url})({/capture})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£¸¡º÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ¤œç´¢****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -35,19 +35,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£¸¡º÷¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ¤œç´¢ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:600px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥³¥ß¥å¥Ë¥Æ¥£¸¡º÷¡¦ÊÂ¤ÓÂØ¤¨</span></td>
+<td style="width:600px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ¤œç´¢ãƒ»ä¸¦ã³æ›¿ãˆ</span></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <div class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -63,45 +63,45 @@
 <td style="width:560px;" class="bg_02" align="left" valign="middle">
 <div style="padding:4px 3px;">
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÊÂ¤ÓÂØ¤¨¡¦¥«¥Æ¥´¥ê¡¦¸¡º÷ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä¸¦ã³æ›¿ãˆãƒ»ã‚«ãƒ†ã‚´ãƒªãƒ»æ¤œç´¢ -->
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="p" value="h_com_find_all">
 
-ÊÂ¤ÓÂØ¤¨<img src="./skin/icon_arrow_2.gif" class="icon">
+ä¸¦ã³æ›¿ãˆ<img src="./skin/icon_arrow_2.gif" class="icon">
 
-<a href="./page.php?p=h_com_find_all&amp;val_order=count&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">¥á¥ó¥Ğ¡¼¿ô½ç</a>
+<a href="./page.php?p=h_com_find_all&amp;val_order=count&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">ãƒ¡ãƒ³ãƒãƒ¼æ•°é †</a>
 |
-<a href="page.php?p=h_com_find_all&amp;val_order=r_datetime&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">ºîÀ®Æü½ç</a>
+<a href="page.php?p=h_com_find_all&amp;val_order=r_datetime&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">ä½œæˆæ—¥é †</a>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-¥­¡¼¥ï¡¼¥É<img src="./skin/icon_arrow_2.gif" class="icon">
+ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰<img src="./skin/icon_arrow_2.gif" class="icon">
 <input name="keyword" size="15" value="({$keyword})">
-&nbsp;¥«¥Æ¥´¥ê<img src="./skin/icon_arrow_2.gif" class="icon">
+&nbsp;ã‚«ãƒ†ã‚´ãƒª<img src="./skin/icon_arrow_2.gif" class="icon">
 <select name="category_id">
-<option value="0">»ØÄê¤Ê¤·</option>
+<option value="0">æŒ‡å®šãªã—</option>
 ({foreach from=$c_commu_category_list item=parent})
 ({foreach from=$parent item=item})
 <option value="({$item.c_commu_category_id})"({if $item.c_commu_category_id == $search_val_list.category_id}) selected="selected"({/if})>({$item.name})</option>
 ({/foreach})
 ({/foreach})
 </select>
-<input type="submit" value=" ¸¡ º÷ ">
+<input type="submit" value=" æ¤œ ç´¢ ">
 
 </form>
 
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÊÂ¤ÓÂØ¤¨¡¦¥«¥Æ¥´¥ê¡¦¸¡º÷ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä¸¦ã³æ›¿ãˆãƒ»ã‚«ãƒ†ã‚´ãƒªãƒ»æ¤œç´¢ -->
 
 <div style="text-align:right;padding:3px;">
-<img src="./skin/dummy.gif" class="icon arrow_1"><a href="page.php?p=h_com_add">¿·µ¬ºîÀ®</a>&nbsp;(ºîÀ®¤ÎÁ°¤Ë¡¢»÷¤¿¥³¥ß¥å¥Ë¥Æ¥£¤¬¤Ê¤¤¤«¤´³ÎÇ§¤¯¤À¤µ¤¤)&nbsp;&nbsp;
+<img src="./skin/dummy.gif" class="icon arrow_1"><a href="page.php?p=h_com_add">æ–°è¦ä½œæˆ</a>&nbsp;(ä½œæˆã®å‰ã«ã€ä¼¼ãŸã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãŒãªã„ã‹ã”ç¢ºèªãã ã•ã„)&nbsp;&nbsp;
 </div>
 
 <hr>
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£É½¼¨ -->
-¥«¥Æ¥´¥ê<img src="./skin/icon_arrow_2.gif" class="icon">
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£è¡¨ç¤º -->
+ã‚«ãƒ†ã‚´ãƒª<img src="./skin/icon_arrow_2.gif" class="icon">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:532px;">
 ({foreach from=$c_commu_category_parent_list item=item_parent})
@@ -116,7 +116,7 @@
 <td style="width:1em;" align="center" valign="top">
 
 <div style="text-align:left;padding:3px;">
-¡§
+ï¼š
 </div>
 
 </td>
@@ -133,7 +133,7 @@
 </tr>
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£É½¼¨ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£è¡¨ç¤º -->
 
 </div>
 </td>
@@ -149,12 +149,12 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£¸¡º÷¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ¤œç´¢ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -164,13 +164,13 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£¸¡º÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ¤œç´¢****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -180,13 +180,13 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:600px;padding:2px 0px;" class="bg_06"><span class="c_00"><span class="b_b">¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷</span>&nbsp;&nbsp;***&nbsp;
+<td style="width:600px;padding:2px 0px;" class="bg_06"><span class="c_00"><span class="b_b">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§</span>&nbsp;&nbsp;***&nbsp;
 
 ({if $total_num})
 	({$total_num})
@@ -194,15 +194,15 @@
 	0
 ({/if})
 
-·ï&nbsp;¤¬³ºÅö¤·¤Ş¤·¤¿¡£</span></td>
+ä»¶&nbsp;ãŒè©²å½“ã—ã¾ã—ãŸã€‚</span></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 ({if $start_num != $end_num})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷·ï¿ôÉ½¼¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ä»¶æ•°è¡¨ç¤ºã‚¿ãƒ– -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -215,13 +215,13 @@
 <div style="padding:4px 3px;">
 
 ({if $is_prev})
-<a href="page.php?p=h_com_find_all&amp;direc=-1&page=({$page})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;val_order=({$search_val_list.val_order})&amp;category_id=({$search_val_list.category_id})">Á°¤òÉ½¼¨</a>&nbsp;&nbsp;
+<a href="page.php?p=h_com_find_all&amp;direc=-1&page=({$page})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;val_order=({$search_val_list.val_order})&amp;category_id=({$search_val_list.category_id})">å‰ã‚’è¡¨ç¤º</a>&nbsp;&nbsp;
 ({/if})
 ({if $total_num})
-({$start_num})·ï¡Á({$end_num})·ï¤òÉ½¼¨
+({$start_num})ä»¶ï½({$end_num})ä»¶ã‚’è¡¨ç¤º
 ({/if})
 ({if $is_next})
-&nbsp;&nbsp;<a href="page.php?p=h_com_find_all&amp;direc=1&amp;page=({$page})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;val_order=({$search_val_list.val_order})&amp;category_id=({$search_val_list.category_id})">¼¡¤òÉ½¼¨</a>
+&nbsp;&nbsp;<a href="page.php?p=h_com_find_all&amp;direc=1&amp;page=({$page})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;val_order=({$search_val_list.val_order})&amp;category_id=({$search_val_list.category_id})">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -234,14 +234,14 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷·ï¿ôÉ½¼¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ä»¶æ•°è¡¨ç¤ºã‚¿ãƒ– -->
 ({/if})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷ËÜÂÎ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§æœ¬ä½“ -->
 <div class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷ËÜÂÎ¡ä¡ä¤Î¥ë¡¼¥×ÉôÊ¬ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§æœ¬ä½“ï¼ï¼ã®ãƒ«ãƒ¼ãƒ—éƒ¨åˆ† -->
 ({foreach from=$c_commu_search_list item=c_commu_search})
 <div class="border_01 bg_09" style="width:562px;margin:0px auto;" align="center">
 <img src="./skin/dummy.gif" class="v_spacer_m">
@@ -267,7 +267,7 @@
 
 <div class="padding_s">
 
-¥³¥ß¥å¥Ë¥Æ¥£Ì¾
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å
 
 </div>
 
@@ -297,7 +297,7 @@
 
 <div class="padding_s">
 
-¥á¥ó¥Ğ¡¼¿ô
+ãƒ¡ãƒ³ãƒãƒ¼æ•°
 
 </div>
 
@@ -307,7 +307,7 @@
 
 <div class="padding_s">
 
-({$c_commu_search.count_commu_member})¿Í
+({$c_commu_search.count_commu_member})äºº
 
 </div>
 
@@ -327,7 +327,7 @@
 
 <div class="padding_s">
 
-ÀâÌÀÊ¸
+èª¬æ˜æ–‡
 
 </div>
 
@@ -357,7 +357,7 @@
 
 <div class="padding_s">
 
-¥«¥Æ¥´¥ê
+ã‚«ãƒ†ã‚´ãƒª
 
 </div>
 
@@ -403,12 +403,12 @@
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 ({/foreach})
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷ËÜÂÎ¡ä¡ä¤Î¥ë¡¼¥×ÉôÊ¬ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§æœ¬ä½“ï¼ï¼ã®ãƒ«ãƒ¼ãƒ—éƒ¨åˆ† -->
 
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷ËÜÂÎ -->
+<!-- ã“ã“ã¾ã§ï¼šï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§æœ¬ä½“ -->
 ({if $start_num != $end_num})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷·ï¿ôÉ½¼¨¥¿¥Ö -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ä»¶æ•°è¡¨ç¤ºã‚¿ãƒ– -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -421,13 +421,13 @@
 <div style="padding:4px 3px;">
 
 ({if $is_prev})
-<a href="page.php?p=h_com_find_all&amp;direc=-1&page=({$page})&amp;val_order=({$search_val_list.val_order})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">Á°¤òÉ½¼¨</a>&nbsp;&nbsp;
+<a href="page.php?p=h_com_find_all&amp;direc=-1&page=({$page})&amp;val_order=({$search_val_list.val_order})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">å‰ã‚’è¡¨ç¤º</a>&nbsp;&nbsp;
 ({/if})
 ({if $total_num})
-({$start_num})·ï¡Á({$end_num})·ï¤òÉ½¼¨
+({$start_num})ä»¶ï½({$end_num})ä»¶ã‚’è¡¨ç¤º
 ({/if})
 ({if $is_next})
-&nbsp;&nbsp;<a href="page.php?p=h_com_find_all&amp;direc=1&amp;page=({$page})&amp;val_order=({$search_val_list.val_order})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">¼¡¤òÉ½¼¨</a>
+&nbsp;&nbsp;<a href="page.php?p=h_com_find_all&amp;direc=1&amp;page=({$page})&amp;val_order=({$search_val_list.val_order})&amp;keyword=({$smarty.capture.keyword_url|smarty:nodefaults})&amp;category_id=({$search_val_list.category_id})">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -440,14 +440,14 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷·ï¿ôÉ½¼¨¥¿¥Ö -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ä»¶æ•°è¡¨ç¤ºã‚¿ãƒ– -->
 ({/if})
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -457,13 +457,13 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥³¥ß¥å¥Ë¥Æ¥£°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä¸€è¦§****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

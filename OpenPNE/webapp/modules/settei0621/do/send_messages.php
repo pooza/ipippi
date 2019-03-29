@@ -1,5 +1,5 @@
 <?php
-// ¥á¥Ã¥»¡¼¥¸°ì³çÁ÷¿®
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ä¸€æ‹¬é€ä¿¡
 
 
 function doAction_send_messages($requests)
@@ -21,14 +21,13 @@ function doAction_send_messages($requests)
 		exit;
 	}
 	
-	// Á÷¿®¼Ô¤Ï¤È¤ê¤¢¤¨¤º1ÈÖ¤Ç¸ÇÄê
+	// é€ä¿¡è€…ã¯ã¨ã‚Šã‚ãˆãš1ç•ªã§å›ºå®š
 	$c_member_id_from = 1;
 
 	foreach ($requests['c_member_ids'] as $c_member_id) {
 		do_common_send_message($c_member_id_from, $c_member_id, $requests['subject'], $requests['body']);
 	}
 	
-	admin_client_redirect('top', "¥á¥Ã¥»¡¼¥¸¤òÁ÷¿®¤·¤Þ¤·¤¿¡£");
+	admin_client_redirect('top', "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚");
 }
 
-?>

@@ -4,7 +4,7 @@
 function pageAction_h_diary_list_friend($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$direc = $requests['direc'];
 	$page = $requests['page'];
 	// ----------
@@ -12,7 +12,7 @@ function pageAction_h_diary_list_friend($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
 
-	//Æüµ­°ìÍ÷
+	//æ—¥è¨˜ä¸€è¦§
 	$page = $page + $direc;
 	$page_size = 50;
 	$smarty->assign("page_size",$page_size);
@@ -39,4 +39,4 @@ function pageAction_h_diary_list_friend($smarty,$requests) {
 
 	$smarty->ext_display("h_diary_list_friend.tpl");
 }
-?>
+

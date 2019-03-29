@@ -18,15 +18,15 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************* -->
-<!-- ******�������顧����****** -->
+<!-- ******ここから：検索****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_search_result">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;;margin:0px auto;" class="border_07">
@@ -40,21 +40,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧����* -->
-({*�������顧header*})
-<!-- �������ȥ� -->
+<!-- *ここから：検索* -->
+({*ここから：header*})
+<!-- 小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">��&nbsp;��</span></td>
+<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">検&nbsp;索</span></td>
 <td style="width:378px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- ��������: �����ե����� �쥤�����ȥơ��֥� -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから: 検索フォーム レイアウトテーブル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 ({*********})
 
@@ -76,20 +76,20 @@
 
 ({if $profile.form_type == 'select' || $profile.form_type == 'radio'})
 	<select name="profile[({$profile.name})]">
-	<option value="0" selected="selected">���ꤷ�ʤ�</option>
+	<option value="0" selected="selected">指定しない</option>
 	({foreach from=$profile_list[$profile.name].options item=item})
 	<option value="({$item.c_profile_option_id})">({$item.value})</option>
 	({/foreach})
 	</select>
 ({elseif $profile.form_type == 'checkbox'})
-({* ñ������ѥ����� *})
+({* 単一選択パターン *})
 	<select name="profile[({$profile.name})]">
-	<option value="0" selected="selected">���ꤷ�ʤ�</option>
+	<option value="0" selected="selected">指定しない</option>
 	({foreach from=$profile_list[$profile.name].options item=item})
 	<option value="({$item.c_profile_option_id})">({$item.value})</option>
 	({/foreach})
 	</select>
-({* ʣ������ѥ����� *})
+({* 複数選択パターン *})
 	({*
 	({foreach from=$profile_list[$profile.name].options item=item})
 	<input type="checkbox" name="profile[({$profile.name})][]" value="({$item.c_profile_option_id})">({$item.value})
@@ -114,7 +114,7 @@
 <td style="width:150px;" class="bg_05" align="left" valign="middle">
 <img src="./skin/dummy.gif" class="v_spacer_s">
 <span class="c_01" style="padding:5px;">
-���ܤΰ���
+項目の一覧
 </span>
 <img src="./skin/dummy.gif" class="v_spacer_s">
 </td>
@@ -123,7 +123,7 @@
 
 <td style="width:421px;" class="bg_02" align="left" valign="middle">
 <div class="padding_s">
-�������ܤ����ɽ�����ޤ�&nbsp;&nbsp;<a href="page.php?p=h_search_list">�����򸫤�</a>
+検索項目を一覧表示します&nbsp;&nbsp;<a href="page.php?p=h_search_list">一覧を見る</a>
 </div>
 </td>
 </tr>
@@ -136,7 +136,7 @@
 <td style="width:150px;" class="bg_05" align="left" valign="middle">
 <img src="./skin/dummy.gif" class="v_spacer_s">
 <span class="c_01" style="padding:5px;">
-�̿���̵ͭ
+写真の有無
 </span>
 <img src="./skin/dummy.gif" class="v_spacer_s">
 </td>
@@ -147,7 +147,7 @@
 
 <div class="padding_s">
 
-<input type="checkbox" name="image" value="1" class="no_bg">ͭ�Τ�
+<input type="checkbox" name="image" value="1" class="no_bg">有のみ
 
 </div>
 
@@ -168,7 +168,7 @@
 
 <div align="center" style="text-align:center;">
 
-<input type="submit" value="��������������">
+<input type="submit" value="　　検　索　　">
 
 </div>
 
@@ -185,12 +185,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤ�: �����ե����� �쥤�����ȥơ��֥� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ�����* -->
+<!-- ここまで: 検索フォーム レイアウトテーブル -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：検索* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -202,15 +202,15 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ�����****** -->
+<!-- ******ここまで：検索****** -->
 <!-- ************************* -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ***************************** -->
-<!-- ******�������顧�˥å��͡��ม��****** -->
+<!-- ******ここから：ニックネーム検索****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_search_result">
 <input type="hidden" name="is_n" value="1">
 
@@ -223,33 +223,33 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�˥å��͡��ม��* -->
-({*�������顧header*})
-<!-- �������ȥ� -->
+<!-- *ここから：ニックネーム検索* -->
+({*ここから：header*})
+<!-- 小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�˥å��͡���Ǹ�������</span></td>
+<td style="width:150px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ニックネームで検索する</span></td>
 <td style="width:378px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-({*�����ޤǡ�header*})
-({*�������顧body*})
+({*ここまで：header*})
+({*ここから：body*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
-<!-- �������顧������ -->
+<!-- ここから：主内容 -->
 <tr>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td style="width:564px;height:50px;" class="bg_03" align="center" valign="middle">
 
-<!--  �������顧 �˥å��͡��ม���ե����� �쥤�����ȥơ��֥� -->
+<!--  ここから： ニックネーム検索フォーム レイアウトテーブル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 
 <tr>
 <td style="width:150px;" class="bg_05" align="left" valign="middle">
 <img src="./skin/dummy.gif" class="v_spacer_s">
-<span class="c_01" style="padding:5px;">�˥å��͡���</span>
+<span class="c_01" style="padding:5px;">ニックネーム</span>
 <img src="./skin/dummy.gif" class="v_spacer_s">
 </td>
 
@@ -275,7 +275,7 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;">
 <tr><td>
 <div align="center" style="text-align:center;">
-<input type="submit" value="��������������">
+<input type="submit" value="　　検　索　　">
 </div>
 </td></tr>
 </table>
@@ -287,21 +287,21 @@
 </form>
 
 </table>
-<!--  �����ޤǡ� �˥å��͡��ม���ե����� �쥤�����ȥơ��֥� -->
+<!--  ここまで： ニックネーム検索フォーム レイアウトテーブル -->
 
 </td>
 <td style="width:1px;" class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
-<!-- �����ޤǡ������� -->
+<!-- ここまで：主内容 -->
 <tr>
 <td style="width:564px;height:1px;" class="bg_01" colspan="3"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 </tr>
 </table>
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��˥å��͡��ม��* -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：ニックネーム検索* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -313,14 +313,14 @@
 </table>
 
 </div>
-<!-- ******�����ޤǡ��˥å��͡��ม��****** -->
+<!-- ******ここまで：ニックネーム検索****** -->
 <!-- *********************************************** -->
 
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

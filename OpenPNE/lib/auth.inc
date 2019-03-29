@@ -18,7 +18,7 @@ $GLOBALS['AUTH']->start();
 if(!$GLOBALS['AUTH']->getAuth()){
 	_auth_logout();
 } else {
-	// ¥æ¡¼¥¶¡¼ID¤ò¼èÆÀ
+	// ãƒ¦ãƒ¼ã‚¶ãƒ¼IDã‚’å–å¾—
 	if (!$u = _db_c_member_id4pc_address_encrypted($GLOBALS['AUTH']->getUsername())) {
 		_auth_logout();
 	}
@@ -31,7 +31,7 @@ function _auth_logout()
 	$GLOBALS['AUTH']->logout();
 	
 	if (isset($_POST['username'])) {
-		// ¥æ¡¼¥¶ÆşÎÏ¤Ç¥¨¥é¡¼
+		// ãƒ¦ãƒ¼ã‚¶å…¥åŠ›ã§ã‚¨ãƒ©ãƒ¼
 		client_redirect('normal.php?p=tologin&error_code=login_failed');
 	} else {
 		client_redirect_login();

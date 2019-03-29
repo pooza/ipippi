@@ -3,7 +3,7 @@
 function pageAction_fh_review_list_member($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_member_id = $requests['target_c_member_id'];
 		$direc = $requests['direc'];
 		$page = $requests['page'];
@@ -43,4 +43,4 @@ function pageAction_fh_review_list_member($smarty,$requests) {
 		$smarty->assign('inc_navi',fetch_inc_navi($type,$c_member_id));
 		$smarty->ext_display('fh_review_list_member.tpl');
 }
-?>
+

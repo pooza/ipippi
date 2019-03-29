@@ -5,7 +5,7 @@ function doAction_h_message_send_insert_message($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$subject = $requests['subject'];
 	$body = $requests['body'];
 	$target_c_member_id = $requests['target_c_member_id'];
@@ -23,8 +23,8 @@ function doAction_h_message_send_insert_message($requests)
 		exit();
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¼«Ê¬°Ê³°
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//è‡ªåˆ†ä»¥å¤–
 
 	if ($target_c_member_id == $u) {
 		handle_kengen_error();
@@ -39,4 +39,3 @@ function doAction_h_message_send_insert_message($requests)
 	client_redirect("ktai_page.php?p=h_message_box&$tail");
 }
 
-?>

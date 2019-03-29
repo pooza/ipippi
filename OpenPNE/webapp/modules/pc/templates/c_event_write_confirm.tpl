@@ -18,13 +18,13 @@
 <table class="container" border="0" cellspacing="0" cellpadding="0">
 <tr><td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******�������顧�񤭹��߳�ǧ****** -->
+<!-- ******ここから：書き込み確認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;" class="border_01">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,18 +34,18 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�ʲ������ƤǤ�������Ǥ�����</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">以下の内容でよろしいですか？</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -57,7 +57,7 @@
 <td style="width:150px;" class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�ܡ���ʸ
+本　　文
 </div>
 
 </td>
@@ -81,7 +81,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�̡��� 1
+写　真 1
 </div>
 
 </td>
@@ -105,7 +105,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-�̡��� 2
+写　真 2
 </div>
 
 </td>
@@ -129,7 +129,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-ź�եե����� 1
+添付ファイル 1
 </div>
 
 </td>
@@ -153,7 +153,7 @@
 <td class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-ź�եե����� 2
+添付ファイル 2
 </div>
 
 </td>
@@ -181,21 +181,21 @@
 <tr>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_write_insert_c_commu_topic_comment">
 ({foreach from=$event_write key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})
 
-<td><input type=submit value="���񤭹��ߡ�"></td>
+<td><input type=submit value="　書き込み　"></td>
 </form>
 <form action="page.php?p=c_event_detail" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 ({foreach from=$event_write key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})
-<td><input type=submit value="������ ����"></td>
+<td><input type=submit value="　修　 正　"></td>
 <input type="hidden" name="body" value="({$event_write.body})">
 </form>
 
@@ -213,12 +213,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
+<!-- ここまで：主内容 -->
 
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 <tr>
@@ -228,7 +228,7 @@
 </tr>
 </form>
 </table>
-<!-- ******�����ޤǡ���å������ơ��֥�****** -->
+<!-- ******ここまで：メッセージテーブル****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -237,7 +237,7 @@
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td></tr>
 </table>({*END:container*})

@@ -7,7 +7,7 @@
 function pageAction_h_schedule_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$year = $requests['year'];
 		$month = $requests['month'];
 		$day = $requests['day'];
@@ -67,4 +67,4 @@ function pageAction_h_schedule_add($smarty,$requests) {
 	  
 	$smarty->ext_display("h_schedule_add.tpl");
 }
-?>
+

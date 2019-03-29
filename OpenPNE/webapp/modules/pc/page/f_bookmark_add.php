@@ -3,7 +3,7 @@
 function pageAction_f_bookmark_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$target_c_member_id = $requests['target_c_member_id'];
 		// ----------
 
@@ -14,7 +14,7 @@ function pageAction_f_bookmark_add($smarty,$requests) {
 		}
 
 		if ($target_c_member_id == $u) {
-			exit("¼«Ê¬¤ÏÄÉ²Ã¤Ç¤­¤Þ¤»¤ó¡£");
+			exit("è‡ªåˆ†ã¯è¿½åŠ ã§ãã¾ã›ã‚“ã€‚");
 		}
 
 		$smarty->assign('inc_navi',fetch_inc_navi("f", $target_c_member_id));
@@ -24,4 +24,4 @@ function pageAction_f_bookmark_add($smarty,$requests) {
 
 		$smarty->ext_display("f_bookmark_add.tpl");
 }
-?>
+

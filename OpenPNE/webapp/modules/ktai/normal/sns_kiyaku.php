@@ -5,4 +5,4 @@ function normalAction_sns_kiyaku($smarty,$requests)
 	
 	$smarty->ext_display("sns_kiyaku.tpl");
 }
-?>
+

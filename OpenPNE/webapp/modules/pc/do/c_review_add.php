@@ -2,28 +2,28 @@
 function doAction_c_review_add($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$category_id = $request['category_id'];
 	$asin = $request['asin'];
 	$body = $request['body'];
 	$satisfaction_level = $request['satisfaction_level'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·	
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—	
 
 	//---
 
 
 	$product = p_h_review_write_product4asin($asin);
 
-	//c_review¤ØÅÐÏ¿
+	//c_reviewã¸ç™»éŒ²
 	$c_review_id = do_c_review_add_insert_c_review($product, $category_id);
 
-	//c_review_comment¤ØÅÐÏ¿
+	//c_review_commentã¸ç™»éŒ²
 	if($c_review_id) do_c_review_add_insert_c_review_comment($c_review_id, $u, $body, $satisfaction_level);
 
 	client_redirect("page.php?p=h_review_list_product&c_review_id=".$c_review_id);
 
 }
-?>
+

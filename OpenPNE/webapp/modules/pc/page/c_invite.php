@@ -5,7 +5,7 @@
 function pageAction_c_invite($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$body = $requests['body'];
 	$c_member_id_list = $requests['c_member_id_list'];
@@ -14,20 +14,20 @@ function pageAction_c_invite($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 
 
-	//¥á¥ó¥Ð¡¼¾ðÊó
+	//ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("member", db_common_c_member4c_member_id($u));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£ID
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ID
 	$smarty->assign("c_commu_id", $target_c_commu_id);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£
 	$smarty->assign("c_commu", p_c_invite_c_commu4c_commu_id($target_c_commu_id));
 
-	//¾·ÂÔ¤¹¤ëÍ§Ã£¥ê¥¹¥È
+	//æ‹›å¾…ã™ã‚‹å‹é”ãƒªã‚¹ãƒˆ
 	$smarty->assign("c_invite_list", p_c_invite_invite_list4c_member_id4c_commu_id($u,$target_c_commu_id));
 
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("c_invite.tpl");
 
 }
-?>
+

@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******¤³¤³¤«¤é¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,18 +37,18 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
+<!-- *ã“ã“ã‹ã‚‰ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹ï¼žå†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">°Ê²¼¤ÎÆâÍÆ¤Ç¤è¤í¤·¤¤¤Ç¤¹¤«¡©</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ä»¥ä¸‹ã®å†…å®¹ã§ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ</span></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Þ¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -61,7 +61,7 @@
 
 <div class="padding_s">
 
-¥¿¥¤¥È¥ë
+ã‚¿ã‚¤ãƒˆãƒ«
 
 </div>
 
@@ -89,7 +89,7 @@
 
 <div class="padding_s">
 
-ËÜ¡¡¡¡Ê¸
+æœ¬ã€€ã€€æ–‡
 
 </div>
 
@@ -117,7 +117,7 @@
 
 <div class="padding_s">
 
-¼Ì¡¡¿¿ 1
+å†™ã€€çœŸ 1
 
 </div>
 
@@ -145,7 +145,7 @@
 
 <div class="padding_s">
 
-¼Ì¡¡¿¿ 2
+å†™ã€€çœŸ 2
 
 </div>
 
@@ -173,7 +173,7 @@
 
 <div class="padding_s">
 
-¼Ì¡¡¿¿ 3
+å†™ã€€çœŸ 3
 
 </div>
 
@@ -202,7 +202,7 @@
 
 <div class="padding_s">
 
-¼Ì¿¿¤Î°ÌÃÖ
+å†™çœŸã®ä½ç½®
 
 </div>
 
@@ -213,9 +213,9 @@
 <div class="padding_s">
 
 ({if $form_val.image_position=='BOTTOM'})
-ËÜÊ¸¤Î²¼
+æœ¬æ–‡ã®ä¸‹
 ({else})
-ËÜÊ¸¤Î¾å
+æœ¬æ–‡ã®ä¸Š
 ({/if})
 
 </div>
@@ -238,7 +238,7 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:2em;margin:0px auto;">
 <tr>
 <form action="./do.php" method="post" enctype="multipart/form-data" style="display:inline">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_diary_add_insert_c_diary">
 <input type="hidden" name="subject" value="({$form_val.subject})">
@@ -247,15 +247,15 @@
 <input type="hidden" name="tmpfile_2" value="({$form_val.tmpfile_2})">
 <input type="hidden" name="tmpfile_3" value="({$form_val.tmpfile_3})">
 <input type="hidden" name="image_position" value="({$form_val.image_position})">
-<td><input type="submit" value="¡¡ºî ¡¡À®¡¡"></td>
+<td><input type="submit" value="ã€€ä½œ ã€€æˆã€€"></td>
 </form>
 <form action="./page.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="p" value="h_diary_add">
 <input type="hidden" name="subject" value="({$form_val.subject})">
 <input type="hidden" name="body" value="({$form_val.body})">
 <input type="hidden" name="orig_size" value="1">
-<td><input type="submit" value="¡¡½¤ ¡¡Àµ¡¡"></td>
+<td><input type="submit" value="ã€€ä¿® ã€€æ­£ã€€"></td>
 </form>
 </tr>
 </table>
@@ -271,12 +271,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Þ¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Þ¤Ç¡§footer*})
-<!-- *¤³¤³¤Þ¤Ç¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹ï¼žï¼žå†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -286,13 +286,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Þ¤Ç¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Þ¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

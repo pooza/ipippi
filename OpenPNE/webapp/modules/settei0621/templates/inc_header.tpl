@@ -4,40 +4,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
 <meta http-equiv="Content-Style-Type" content="text/css">
-<title>¡Ú´ÉÍý¡Û({$SNS_NAME})</title>
+<title>ã€ç®¡ç†ã€‘({$SNS_NAME})</title>
 <link rel="stylesheet" href="modules/admin/admin.css" type="text/css">
 </head>
 
 <body>
 
-<h1>({$SNS_NAME})´ÉÍý¥Ú¡¼¥¸</h1>
+<h1>({$SNS_NAME})ç®¡ç†ãƒšãƒ¼ã‚¸</h1>
 
 ({if $display_navi})
 <div id="site_navi">
-<p>´ÉÍý¥á¥Ë¥å¡¼</p>
+<p>ç®¡ç†ãƒ¡ãƒ‹ãƒ¥ãƒ¼</p>
 <ol>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})">¥á¥ó¥Ð¡¼¥ê¥¹¥È(¥á¥Ã¥»¡¼¥¸Á÷¿® / ¶¯À©Âà²ñ)</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_admin_info')})">¤ªÃÎ¤é¤»¡¢ÍøÍÑµ¬ÌóÊÑ¹¹¡¢HTMLÁÞÆþ</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('send_invites')})">¿·µ¬¥æ¡¼¥¶¡¼¾·ÂÔ¥á¡¼¥ëÁ÷¿®</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_image')})">²èÁü´ÉÍý(²èÁü°ìÍ÷¡õºï½ü)</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_sns_config')})">¥Ç¥¶¥¤¥ó¥¹¥­¥ó¡¦¿§ÊÑ¹¹</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_banner')})">¥Ð¥Ê¡¼´ÉÍý</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_kakikomi')})">½ñ¤­¹þ¤ß´ÉÍý</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})">ãƒ¡ãƒ³ãƒãƒ¼ãƒªã‚¹ãƒˆ(ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡ / å¼·åˆ¶é€€ä¼š)</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_admin_info')})">ãŠçŸ¥ã‚‰ã›ã€åˆ©ç”¨è¦ç´„å¤‰æ›´ã€HTMLæŒ¿å…¥</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('send_invites')})">æ–°è¦ãƒ¦ãƒ¼ã‚¶ãƒ¼æ‹›å¾…ãƒ¡ãƒ¼ãƒ«é€ä¿¡</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_image')})">ç”»åƒç®¡ç†(ç”»åƒä¸€è¦§ï¼†å‰Šé™¤)</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_sns_config')})">ãƒ‡ã‚¶ã‚¤ãƒ³ã‚¹ã‚­ãƒ³ãƒ»è‰²å¤‰æ›´</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_banner')})">ãƒãƒŠãƒ¼ç®¡ç†</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_kakikomi')})">æ›¸ãè¾¼ã¿ç®¡ç†</a></li>
 </ol>
 
 ({if $ADMIN_INIT_CONFIG})
-<p>½é´üÀßÄê</p>
+<p>åˆæœŸè¨­å®š</p>
 <ol>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_admin_config')})">SNSÀßÄêÊÑ¹¹</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_profile')})">¥×¥í¥Õ¥£¡¼¥ë¹àÌÜÊÑ¹¹</a></li>
-<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_category')})">¥³¥ß¥å¥Ë¥Æ¥£¥«¥Æ¥´¥êÊÑ¹¹</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_admin_config')})">SNSè¨­å®šå¤‰æ›´</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_c_profile')})">ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®å¤‰æ›´</a></li>
+<li><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_category')})">ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‚«ãƒ†ã‚´ãƒªå¤‰æ›´</a></li>
 </ol>
 ({/if})
 
 <p>
-<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_admin_password')})">´ÉÍýÍÑ¥Ñ¥¹¥ï¡¼¥ÉÊÑ¹¹</a><br>
-<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_hash_table')})">´ÉÍýÍÑ¥Ú¡¼¥¸Ì¾¤ò¥é¥ó¥À¥àÀ¸À®</a><br>
-<a href="module_do.php?m=({$module_name})&amp;cmd=({$hash_tbl->hash('logout','do')})&amp;sessid=({$PHPSESSID})">¥í¥°¥¢¥¦¥È</a>
+<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('edit_admin_password')})">ç®¡ç†ç”¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¤‰æ›´</a><br>
+<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_hash_table')})">ç®¡ç†ç”¨ãƒšãƒ¼ã‚¸åã‚’ãƒ©ãƒ³ãƒ€ãƒ ç”Ÿæˆ</a><br>
+<a href="module_do.php?m=({$module_name})&amp;cmd=({$hash_tbl->hash('logout','do')})&amp;sessid=({$PHPSESSID})">ãƒ­ã‚°ã‚¢ã‚¦ãƒˆ</a>
 </p>
 </div>
 ({/if})

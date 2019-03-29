@@ -3,7 +3,7 @@ function pageAction_c_bbs($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_topic_id = $requests['target_c_commu_topic_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -12,36 +12,36 @@ function pageAction_c_bbs($smarty, $requests)
 	$page_size = 5;
 	$page += $direc;
 	
-	//¥Ú¡¼¥¸
+	//ãƒšãƒ¼ã‚¸
 	$smarty->assign("page", $page);
 	
-	//¥È¥Ô¥Ã¥¯¤Î¥³¥á¥ó¥È¥ê¥¹¥È
+	//ãƒˆãƒ”ãƒƒã‚¯ã®ã‚³ãƒ¡ãƒ³ãƒˆãƒªã‚¹ãƒˆ
 	$list = k_p_c_bbs_c_commu_topic_comment_list4c_c_commu_topic_id($target_c_commu_topic_id, $u, $page_size, $page);
 	$smarty->assign("c_commu_topic_comment_list", $list[0]);
 	$smarty->assign("is_prev", $list[1]);
 	$smarty->assign("is_next", $list[2]);
 	
-	//¥È¥Ô¥Ã¥¯Ì¾
+	//ãƒˆãƒ”ãƒƒã‚¯å
 	$smarty->assign("c_commu_topic_name", k_p_c_bbs_c_commu_topic_name4c_commu_topic_id($target_c_commu_topic_id));
-	//¥È¥Ô¥Ã¥¯ID,¥È¥Ô¥Ã¥¯
+	//ãƒˆãƒ”ãƒƒã‚¯ID,ãƒˆãƒ”ãƒƒã‚¯
 	$smarty->assign("c_commu_topic_id", $target_c_commu_topic_id);
 	$smarty->assign("c_commu_topic", 	c_event_detail_c_topic4c_commu_topic_id($target_c_commu_topic_id));
 	
-	//¥³¥ß¥å¥Ë¥Æ¥£
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£
     $c_commu = k_p_c_bbs_c_commu4c_commu_topic_id($target_c_commu_topic_id);
 	$smarty->assign("c_commu", $c_commu);
     
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //·Ç¼¨ÈÄ¤Î±ÜÍ÷¸¢¸Â	tpl¤Ç¤ä¤Ã¤Æ¤¤¤ë
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //æŽ²ç¤ºæ¿ã®é–²è¦§æ¨©é™	tplã§ã‚„ã£ã¦ã„ã‚‹
     $smarty->assign("is_c_commu_view", p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu['c_commu_id'], $u));
     $smarty->assign("is_c_commu_member", p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu['c_commu_id'], $u));
     $smarty->assign("is_c_event_member", p_common_is_c_event_member4c_commu_topic_idAc_member_id($target_c_commu_topic_id,$u));
 	$smarty->assign("is_c_event_admin", p_common_is_c_event_admin4c_commu_topic_idAc_member_id($target_c_commu_topic_id,$u));
     
 
-	//¥æ¡¼¥¶¡¼¤¬¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¤«¤É¤¦¤«
+	//ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…ã‹ã©ã†ã‹
 	$smarty->assign("is_admin", k_p_c_bbs_is_admin4c_member_id_c_commu_topic_id($u, $target_c_commu_topic_id));
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 	$smarty->assign("c_member_admin", k_p_c_bbs_c_member_admin4c_commu_topic_id($target_c_commu_topic_id));
 	
 	if (defined('MAIL_ADDRESS_HASHED') && MAIL_ADDRESS_HASHED) {
@@ -54,4 +54,3 @@ function pageAction_c_bbs($smarty, $requests)
 	$smarty->ext_display("c_bbs.tpl");
 }
 
-?>

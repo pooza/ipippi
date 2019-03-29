@@ -2,7 +2,7 @@
 function pageAction_h_zyunban0621($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$page = $requests['page'];
 	$direc = $requests['direc'];
 	$kind = $requests['kind'];
@@ -57,4 +57,4 @@ function pageAction_h_zyunban0621($smarty,$requests) {
 
 	$smarty->ext_display("h_zyunban0621.tpl");
 }
-?>
+

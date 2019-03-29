@@ -4,7 +4,7 @@ function pageAction_c_event_member_list($smarty,$requests) {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	$pw = $GLOBALS['KTAI_PASSWD'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_topic_id = $requests['target_c_commu_topic_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -16,22 +16,22 @@ function pageAction_c_event_member_list($smarty,$requests) {
 	$page += $direc;
 	$page_size=20;
 	
-	//¥Ú¡¼¥¸
+	//ãƒšãƒ¼ã‚¸
 	$smarty->assign("page", $page);
 	
-	//¥á¥ó¥Ð¤Î¥ê¥¹¥È
+	//ãƒ¡ãƒ³ãƒã®ãƒªã‚¹ãƒˆ
 	$list = k_p_c_event_member_list4c_commu_topic_id($target_c_commu_topic_id, $page_size, $page);
 	$smarty->assign("c_event_member_list", $list[0]);
 	$smarty->assign('is_prev', $list[1]);
 	$smarty->assign('is_next', $list[2]);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£ID
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ID
 	$smarty->assign("c_commu_id", $c_commu_id);
-	//¥¤¥Ù¥ó¥ÈID
+	//ã‚¤ãƒ™ãƒ³ãƒˆID
 	$smarty->assign("c_commu_topic_id", $target_c_commu_topic_id);
-	//¥³¥ß¥å¥Ë¥Æ¥£¤Î¥á¥ó¥Ð¿ô
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒ¡ãƒ³ãƒæ•°
 	$smarty->assign("count_member", k_p_count_c_event_member_list4c_commu_topic_id($target_c_commu_topic_id));
 	
 	$smarty->ext_display("c_event_member_list.tpl");
 }
-?>
+

@@ -1,5 +1,5 @@
 <?php
-// ²èÁü¥ê¥¹¥È
+// ç”»åƒãƒªã‚¹ãƒˆ
 
 
 function pageAction_list_c_image(&$smarty,$requests)
@@ -17,4 +17,3 @@ function pageAction_list_c_image(&$smarty,$requests)
 	$smarty->ext_display("list_c_image.tpl");
 }
 
-?>

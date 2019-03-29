@@ -1,5 +1,5 @@
 <?php
-// Ãæ¥«¥Æ¥´¥êÄÉ²Ã
+// ä¸­ã‚«ãƒ†ã‚´ãƒªè¿½åŠ 
 
 
 function doAction_insert_c_commu_category_parent($requests)
@@ -9,10 +9,10 @@ function doAction_insert_c_commu_category_parent($requests)
 	if ($requests['name']) {
 		db_admin_insert_c_commu_category_parent($requests['name'], $requests['sort_order']);
 
-		admin_client_redirect('edit_category', "Ãæ¥«¥Æ¥´¥ê¤òÄÉ²Ã¤·¤Þ¤·¤¿");
+		admin_client_redirect('edit_category', "ä¸­ã‚«ãƒ†ã‚´ãƒªã‚’è¿½åŠ ã—ã¾ã—ãŸ");
 	} else {
-		admin_client_redirect('edit_category', "Ãæ¥«¥Æ¥´¥ê¤òÄÉ²Ã¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿");
+		admin_client_redirect('edit_category', "ä¸­ã‚«ãƒ†ã‚´ãƒªã‚’è¿½åŠ ã§ãã¾ã›ã‚“ã§ã—ãŸ");
 	}
 }
 
-?>
+

@@ -6,7 +6,7 @@
 function pageAction_c_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$name = $requests['name'];
 	$c_commu_category_id = $requests['c_commu_category_id'];
@@ -15,8 +15,8 @@ function pageAction_c_edit($smarty,$requests) {
 	$err_msg = $requests['err_msg'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 	if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
 	    handle_kengen_error();
 	}
@@ -24,7 +24,7 @@ function pageAction_c_edit($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¥Ç¡¼¥¿¼èÆÀ
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ‡ãƒ¼ã‚¿å–å¾—
 	$c_commu = p_c_edit_c_commu4c_commu_id($target_c_commu_id);
 
 	if($name)$c_commu['name']=$name;
@@ -45,9 +45,9 @@ function pageAction_c_edit($smarty,$requests) {
 
 	$public_flag_list=
 	array(
-		'public' =>'»²²Ã¡§Ã¯¤Ç¤â»²²Ã²ÄÇ½¡¢·Ç¼¨ÈÄ¡§Á´°÷¤Ë¸ø³«',
-		'auth_sns' =>'»²²Ã¡§´ÉÍý¼Ô¤Î¾µÇ§¤¬É¬Í×¡¢·Ç¼¨ÈÄ¡§Á´°÷¤Ë¸ø³«',
-		'auth_commu_member' =>'»²²Ã¡§´ÉÍý¼Ô¤Î¾µÇ§¤¬É¬Í×¡¢·Ç¼¨ÈÄ¡§¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô¤Ë¤Î¤ß¸ø³«',
+		'public' =>'å‚åŠ ï¼šèª°ã§ã‚‚å‚åŠ å¯èƒ½ã€æŽ²ç¤ºæ¿ï¼šå…¨å“¡ã«å…¬é–‹',
+		'auth_sns' =>'å‚åŠ ï¼šç®¡ç†è€…ã®æ‰¿èªãŒå¿…è¦ã€æŽ²ç¤ºæ¿ï¼šå…¨å“¡ã«å…¬é–‹',
+		'auth_commu_member' =>'å‚åŠ ï¼šç®¡ç†è€…ã®æ‰¿èªãŒå¿…è¦ã€æŽ²ç¤ºæ¿ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…ã«ã®ã¿å…¬é–‹',
 	);
 
 	$smarty->assign("public_flag_list", $public_flag_list);
@@ -61,4 +61,4 @@ function pageAction_c_edit($smarty,$requests) {
 	$smarty->ext_display("c_edit.tpl");
 
 }
-?>
+

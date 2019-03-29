@@ -11,4 +11,3 @@ function pageAction_h_pc_send($smarty, $requests)
 	$smarty->ext_display("h_pc_send.tpl");
 }
 
-?>

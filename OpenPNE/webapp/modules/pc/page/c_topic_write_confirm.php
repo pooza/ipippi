@@ -3,14 +3,14 @@
 function pageAction_c_topic_write_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- еъепеие╣е╚╩╤┐Ї
+		// --- уГкуВпуВиуВ╣уГИхдЙцХ░
 		$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 		$body = $requests['body'];
 		$image_position = $requests['image_position'];
 		$button = $requests['button'];
 		// ----------
 
-	//TODO:▓ш┴№е╨еъе╟б╝е┐
+	//TODO:чФ╗хГПуГРуГкуГЗуГ╝уВ┐
 		$upfile_obj1 = $_FILES['image_filename1'];
 		$upfile_obj2 = $_FILES['image_filename2'];
 		$upfile_obj3 = $_FILES['image_filename3'];
@@ -19,14 +19,14 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 		$upfile_obj12 = $_FILES['file_filename2'];
 		$upfile_obj13 = $_FILES['file_filename3'];
 
-		//еиещб╝е┴езе├еп	   					
+		//уВиуГйуГ╝уГБуВзуГГуВп	   					
 	    $err_msg = array();
 	    if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-	    	$err_msg[] = "▓ш┴№1д╬е╡еде║д╧300KB░╩╞тд╬GIFбжJPEGбжPNGд╦д╖д╞дпд└д╡дд";
+	    	$err_msg[] = "чФ╗хГП1уБоуВ╡уВдуВ║уБп300KBф╗ехЖЕуБоGIFуГ╗JPEGуГ╗PNGуБлуБЧуБжуБПуБауБХуБД";
 	    if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-	    	$err_msg[] = "▓ш┴№2д╬е╡еде║д╧300KB░╩╞тд╬GIFбжJPEGбжPNGд╦д╖д╞дпд└д╡дд";
+	    	$err_msg[] = "чФ╗хГП2уБоуВ╡уВдуВ║уБп300KBф╗ехЖЕуБоGIFуГ╗JPEGуГ╗PNGуБлуБЧуБжуБПуБауБХуБД";
 	    if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-	    	$err_msg[] = "▓ш┴№3д╬е╡еде║д╧300KB░╩╞тд╬GIFбжJPEGбжPNGд╦д╖д╞дпд└д╡дд";
+	    	$err_msg[] = "чФ╗хГП3уБоуВ╡уВдуВ║уБп300KBф╗ехЖЕуБоGIFуГ╗JPEGуГ╗PNGуБлуБЧуБжуБПуБауБХуБД";
 
 		$names = array();
 		for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -34,7 +34,7 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 			$name = $$varname;
 			if ($name = $name['name']) {
 				if (in_array($name, $names)) {
-					$err_msg[] = "┼║╔╒е╒ебедеыд╬е╒ебедеы╠╛дм╜┼╩гд╖д▐д╣";
+					$err_msg[] = "ц╖╗ф╗ШуГХуВбуВдуГлуБоуГХуВбуВдуГлхРНуБМщЗНшдЗуБЧуБ╛уБЩ";
 					break;
 				}
 				$names[] = $name;
@@ -42,18 +42,18 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 		}
 
 	    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-	    	$err_msg[] = "┼║╔╒е╒ебедеы1д╬е╡еде║д╧1MB░╩╞тд╦д╖д╞дпд└д╡дд";
+	    	$err_msg[] = "ц╖╗ф╗ШуГХуВбуВдуГл1уБоуВ╡уВдуВ║уБп1MBф╗ехЖЕуБлуБЧуБжуБПуБауБХуБД";
 	    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-	    	$err_msg[] = "┼║╔╒е╒ебедеы2д╬е╡еде║д╧1MB░╩╞тд╦д╖д╞дпд└д╡дд";
+	    	$err_msg[] = "ц╖╗ф╗ШуГХуВбуВдуГл2уБоуВ╡уВдуВ║уБп1MBф╗ехЖЕуБлуБЧуБжуБПуБауБХуБД";
 	    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-	    	$err_msg[] = "┼║╔╒е╒ебедеы3д╬е╡еде║д╧1MB░╩╞тд╦д╖д╞дпд└д╡дд";
+	    	$err_msg[] = "ц╖╗ф╗ШуГХуВбуВдуГл3уБоуВ╡уВдуВ║уБп1MBф╗ехЖЕуБлуБЧуБжуБПуБауБХуБД";
 
 	    if(is_dirty_file($upfile_obj11))
-	    	$err_msg[] = get_extension($upfile_obj11['name']) . "е╒ебедеыд╧┼║╔╒д╟днд▐д╗дє";
+	    	$err_msg[] = get_extension($upfile_obj11['name']) . "уГХуВбуВдуГлуБпц╖╗ф╗ШуБзуБНуБ╛уБЫуВУ";
 	    if(is_dirty_file($upfile_obj12))
-	    	$err_msg[] = get_extension($upfile_obj12['name']) . "е╒ебедеыд╧┼║╔╒д╟днд▐д╗дє";
+	    	$err_msg[] = get_extension($upfile_obj12['name']) . "уГХуВбуВдуГлуБпц╖╗ф╗ШуБзуБНуБ╛уБЫуВУ";
 	    if(is_dirty_file($upfile_obj13))
-	    	$err_msg[] = get_extension($upfile_obj13['name']) . "е╒ебедеыд╧┼║╔╒д╟днд▐д╗дє";
+	    	$err_msg[] = get_extension($upfile_obj13['name']) . "уГХуВбуВдуГлуБпц╖╗ф╗ШуБзуБНуБ╛уБЫуВУ";
 
 	    if ($err_msg) {
 			$_REQUEST['err_msg'] = $err_msg;
@@ -65,7 +65,7 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 		$c_topic = c_topic_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 		$c_commu_id = $c_topic['c_commu_id'];
 
-		//--- ╕в╕┬е┴езе├еп
+		//--- цийщЩРуГБуВзуГГуВп
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
@@ -101,4 +101,4 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 		$smarty->assign('topic_write', $topic_write);
 		$smarty->ext_display("c_topic_write_confirm.tpl");
 }
-?>
+

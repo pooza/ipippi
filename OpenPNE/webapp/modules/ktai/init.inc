@@ -1,6 +1,6 @@
 <?php
 
-//¥Ç¥Õ¥©¥ë¥È¥Ú¡¼¥¸
+//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒšãƒ¼ã‚¸
 $GLOBALS['__Framework']['default_page'] = 'h_home';
 $GLOBALS['__Framework']['default_normal'] = 'login';
 
@@ -11,7 +11,7 @@ if (defined('OPENPNE_ENABLE_KTAI') && !OPENPNE_ENABLE_KTAI) {
 }
 //>
 
-//È¾³Ñ¥«¥¿¥«¥Ê¤òÁ´³Ñ¤ËÊÑ´¹
+//åŠè§’ã‚«ã‚¿ã‚«ãƒŠã‚’å…¨è§’ã«å¤‰æ›
 $_REQUEST = zen2han($_REQUEST);
 
 function zen2han ($arg) {
@@ -29,15 +29,15 @@ function zen2han ($arg) {
 
 function init_ktai_page(&$smarty)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
 	$smarty->assign('inc_ktai_footer', fetch_inc_ktai_footer());
 
-	// ¥±¡¼¥¿¥¤ÍÑ½ÐÎÏ»þ¥Õ¥£¥ë¥¿
+	// ã‚±ãƒ¼ã‚¿ã‚¤ç”¨å‡ºåŠ›æ™‚ãƒ•ã‚£ãƒ«ã‚¿
 	$smarty->load_filter('output', 'mobile');
 	header('Content-Type: text/html; charset=Shift_JIS');
 	
-	//Á´¥Ú¡¼¥¸¶¦ÄÌÊÑ¿ô¤Î¥¢¥µ¥¤¥ó
+	//å…¨ãƒšãƒ¼ã‚¸å…±é€šå¤‰æ•°ã®ã‚¢ã‚µã‚¤ãƒ³
 	$smarty->assign('u', $GLOBALS['KTAI_C_MEMBER_ID']);
 	$smarty->assign('tail', $GLOBALS['KTAI_URL_TAIL']);
 	$smarty->assign('msg', k_p_common_msg4msg_id($_REQUEST['msg']));
@@ -45,7 +45,7 @@ function init_ktai_page(&$smarty)
 	@session_start();
 	$smarty->assign('PHPSESSID', session_id());	
 	
-	//Ê¸¸À·Ï
+	//æ–‡è¨€ç³»
 	$smarty->assign('WORD_FRIEND', WORD_FRIEND);
 	$smarty->assign('WORD_MY_FRIEND', WORD_MY_FRIEND);
 	$smarty->assign('WORD_FRIEND_HALF', WORD_FRIEND_HALF);
@@ -54,13 +54,13 @@ function init_ktai_page(&$smarty)
 
 function init_ktai_normal(&$smarty)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
 	$smarty->assign('inc_ktai_footer', fetch_inc_ktai_footer());
 	
 	$smarty->assign('msg', k_p_common_msg4msg_id($_REQUEST['msg']));	
 
-	// ¥±¡¼¥¿¥¤ÍÑ½ÐÎÏ»þ¥Õ¥£¥ë¥¿
+	// ã‚±ãƒ¼ã‚¿ã‚¤ç”¨å‡ºåŠ›æ™‚ãƒ•ã‚£ãƒ«ã‚¿
 	$smarty->load_filter('output', 'mobile');
 	header('Content-Type: text/html; charset=Shift_JIS');
 }

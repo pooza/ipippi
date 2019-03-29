@@ -1,5 +1,5 @@
 <?php
-// c_image ¤Ë²èÁü¤òÅÐÏ¿¡¢ºï½ü
+// c_image ã«ç”»åƒã‚’ç™»éŒ²ã€å‰Šé™¤
 
 
 function pageAction_edit_c_banner(&$smarty,$requests)
@@ -22,4 +22,4 @@ function pageAction_edit_c_banner(&$smarty,$requests)
 	$smarty->ext_display("edit_c_banner.tpl");
 }
 
-?>
+

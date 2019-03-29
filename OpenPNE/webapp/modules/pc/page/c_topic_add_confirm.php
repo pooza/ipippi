@@ -3,21 +3,21 @@
 function pageAction_c_topic_add_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_id = $requests['target_c_commu_id'];
 		$title = $requests['title'];
 		$body = $requests['body'];
 		$image_position = $requests['image_position'];
 		// ----------
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
 		//---
 
 
-	//TODO:²èÁü¥Ğ¥ê¥Ç¡¼¥¿
+	//TODO:ç”»åƒãƒãƒªãƒ‡ãƒ¼ã‚¿
 		$upfile_obj1 = $_FILES['image_filename1'];
 		$upfile_obj2 = $_FILES['image_filename2'];
 		$upfile_obj3 = $_FILES['image_filename3'];
@@ -29,11 +29,11 @@ function pageAction_c_topic_add_confirm($smarty,$requests) {
 	    $err_msg = array();
 	    
 	    if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-	    	$err_msg[] = "²èÁü1¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "ç”»åƒ1ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 	    if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-	    	$err_msg[] = "²èÁü2¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "ç”»åƒ2ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 	    if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-	    	$err_msg[] = "²èÁü3¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "ç”»åƒ3ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 
 		$names = array();
 		for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -41,7 +41,7 @@ function pageAction_c_topic_add_confirm($smarty,$requests) {
 			$name = $$varname;
 			if ($name = $name['name']) {
 				if (in_array($name, $names)) {
-					$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë¤Î¥Õ¥¡¥¤¥ëÌ¾¤¬½ÅÊ£¤·¤Ş¤¹";
+					$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚¡ã‚¤ãƒ«åãŒé‡è¤‡ã—ã¾ã™";
 					break;
 				}
 				$names[] = $name;
@@ -49,18 +49,18 @@ function pageAction_c_topic_add_confirm($smarty,$requests) {
 		}
 
 	    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-	    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë1¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«1ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
 	    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-	    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë2¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«2ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
 	    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-	    	$err_msg[] = "ÅºÉÕ¥Õ¥¡¥¤¥ë3¤Î¥µ¥¤¥º¤Ï1MB°ÊÆâ¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«3ã®ã‚µã‚¤ã‚ºã¯1MBä»¥å†…ã«ã—ã¦ãã ã•ã„";
 
 	    if(is_dirty_file($upfile_obj11))
-	    	$err_msg[] = get_extension($upfile_obj11['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+	    	$err_msg[] = get_extension($upfile_obj11['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
 	    if(is_dirty_file($upfile_obj12))
-	    	$err_msg[] = get_extension($upfile_obj12['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+	    	$err_msg[] = get_extension($upfile_obj12['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
 	    if(is_dirty_file($upfile_obj13))
-	    	$err_msg[] = get_extension($upfile_obj13['name']) . "¥Õ¥¡¥¤¥ë¤ÏÅºÉÕ¤Ç¤­¤Ş¤»¤ó";
+	    	$err_msg[] = get_extension($upfile_obj13['name']) . "ãƒ•ã‚¡ã‚¤ãƒ«ã¯æ·»ä»˜ã§ãã¾ã›ã‚“";
 
 	    if ($err_msg) {
 			$_REQUEST['err_msg'] = $err_msg;
@@ -69,7 +69,7 @@ function pageAction_c_topic_add_confirm($smarty,$requests) {
 	    }
 	//-----
 
-		//²èÁü¡¦ÅºÉÕ¥Õ¥¡¥¤¥ë¤òvar/tmp¥Õ¥©¥ë¥À¤Ë¥³¥Ô¡¼
+		//ç”»åƒãƒ»æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ã‚’var/tmpãƒ•ã‚©ãƒ«ãƒ€ã«ã‚³ãƒ”ãƒ¼
 		$sessid = session_id();
 		t_image_clear_tmp($sessid);
 		$tmpfile1 = t_image_save2tmp($upfile_obj1, $sessid, "t1");
@@ -103,4 +103,4 @@ function pageAction_c_topic_add_confirm($smarty,$requests) {
 		$smarty->ext_display("c_topic_add_confirm.tpl");
 
 }
-?>
+

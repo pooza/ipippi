@@ -8,7 +8,7 @@
 function pageAction_h_message_box($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$box = $requests['box'];
 	$ru_page = $requests['ru_page'];
 	$s_page = $requests['s_page'];
@@ -20,16 +20,16 @@ function pageAction_h_message_box($smarty,$requests) {
 	
 	$smarty->assign('u', $u);
 
-	// 1¥Ú¡¼¥¸Åö¤¿¤ê¤ËÉ½¼¨¤¹¤ë¥á¥Ã¥»¡¼¥¸¿ô
+	// 1ãƒšãƒ¼ã‚¸å½“ãŸã‚Šã«è¡¨ç¤ºã™ã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ•°
 	$page_size = 20;
 	$smarty->assign("page_size",$page_size);
 
-	//¥Ü¥Ã¥¯¥¹È½Äê
+	//ãƒœãƒƒã‚¯ã‚¹åˆ¤å®š
 	$smarty->assign("box",$box);
 
 	switch ($box) {
 
-	//¼õ¿®¥ê¥¹¥È
+	//å—ä¿¡ãƒªã‚¹ãƒˆ
 	case 'inbox':
 	default:
 		list($ru_list,$is_ru_prev,$is_ru_next) = p_h_message_box_c_message_received_user_list4c_member_id4range($u, $ru_page, $page_size);
@@ -41,7 +41,7 @@ function pageAction_h_message_box($smarty,$requests) {
 		$smarty->assign("ru_data",$ru_data);
 		break;
 
-	//Á÷¿®ºÑ¤ß¥ê¥¹¥È
+	//é€ä¿¡æ¸ˆã¿ãƒªã‚¹ãƒˆ
 	case 'outbox':
 		list($s_list,$is_s_prev,$is_s_next) = p_h_message_box_c_message_sent_list4c_member_id4range($u, $s_page, $page_size);
 		$smarty->assign("c_message_s_list", $s_list);
@@ -52,7 +52,7 @@ function pageAction_h_message_box($smarty,$requests) {
 		$smarty->assign("s_data",$s_data);
 		break;
 
-	//²¼½ñ¤­ÊÝÂ¸¥ê¥¹¥È
+	//ä¸‹æ›¸ãä¿å­˜ãƒªã‚¹ãƒˆ
 	case 'savebox':
 		list($save_list,$is_save_prev,$is_save_next) = p_h_message_box_c_message_save_list4c_member_id4range($u, $save_page, $page_size);
 		$smarty->assign("c_message_save_list",$save_list);
@@ -63,7 +63,7 @@ function pageAction_h_message_box($smarty,$requests) {
 		$smarty->assign("save_data",$save_data);
 		break;
 
-	//¤´¤ßÈ¢¥ê¥¹¥È
+	//ã”ã¿ç®±ãƒªã‚¹ãƒˆ
 	case 'trash':
 		list($trash_list,$is_trash_prev,$is_trash_next) = p_h_message_box_c_message_trash_list4c_member_id4range($u, $trash_page, $page_size);
 		$smarty->assign("c_message_trash_list",$trash_list);
@@ -76,7 +76,7 @@ function pageAction_h_message_box($smarty,$requests) {
 	
 	}
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("h_message_box.tpl");
 }
-?>
+

@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">({$target_diary_writer.nickname})¤µ¤ó¤ÎÆüµ­</font></center>
+<center><font color="orange">({$target_diary_writer.nickname})ã•ã‚“ã®æ—¥è¨˜</font></center>
 <hr>
 ({if $c_siteadmin})
 ({$c_siteadmin|smarty:nodefaults})
@@ -12,29 +12,29 @@
 ({$target_c_diary.body|nl2br})<br>
 <br>
 ({if $target_c_diary.image_filename_1})
-²èÁü1¤ò¸«¤ë:[<a href="img.php?filename=({$target_c_diary.image_filename_1})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$target_c_diary.image_filename_1})&amp;f=jpg">Âç</a>]<br>
+ç”»åƒ1ã‚’è¦‹ã‚‹:[<a href="img.php?filename=({$target_c_diary.image_filename_1})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$target_c_diary.image_filename_1})&amp;f=jpg">å¤§</a>]<br>
 ({/if})
 ({if $target_c_diary.image_filename_2})
-²èÁü2¤ò¸«¤ë:[<a href="img.php?filename=({$target_c_diary.image_filename_2})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$target_c_diary.image_filename_2})&amp;f=jpg">Âç</a>]<br>
+ç”»åƒ2ã‚’è¦‹ã‚‹:[<a href="img.php?filename=({$target_c_diary.image_filename_2})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$target_c_diary.image_filename_2})&amp;f=jpg">å¤§</a>]<br>
 ({/if})
 ({if $target_c_diary.image_filename_3})
-²èÁü3¤ò¸«¤ë:[<a href="img.php?filename=({$target_c_diary.image_filename_3})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$target_c_diary.image_filename_3})&amp;f=jpg">Âç</a>]<br>
+ç”»åƒ3ã‚’è¦‹ã‚‹:[<a href="img.php?filename=({$target_c_diary.image_filename_3})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$target_c_diary.image_filename_3})&amp;f=jpg">å¤§</a>]<br>
 ({/if})
 ({if $target_diary_writer.c_member_id==$u})
-[<a href="ktai_page.php?p=h_diary_edit&target_c_diary_id=({$target_c_diary.c_diary_id})&amp;({$tail})">Æüµ­¤òÊÔ½¸</a>]<br>
-[<a href="do_ktai.php?cmd=fh_diary_delete_c_diary&target_c_diary_id=({$target_c_diary.c_diary_id})&amp;({$tail})">Æüµ­¤òºï½ü</a>]<br>
+[<a href="ktai_page.php?p=h_diary_edit&target_c_diary_id=({$target_c_diary.c_diary_id})&amp;({$tail})">æ—¥è¨˜ã‚’ç·¨é›†</a>]<br>
+[<a href="do_ktai.php?cmd=fh_diary_delete_c_diary&target_c_diary_id=({$target_c_diary.c_diary_id})&amp;({$tail})">æ—¥è¨˜ã‚’å‰Šé™¤</a>]<br>
 ({/if})
 
 ({if $c_diary_comment})
 <hr>
-¢£ºÒİÄ<br>
+â– ï½ºï¾’ï¾ï¾„<br>
 ({foreach from=$c_diary_comment item=c_diary_comment_})
 ({if $c_diary_comment_.delete_reason})
-<font color="red">ºï½ü¤µ¤ì¤Ş¤·¤¿¡£</font><br>
+<font color="red">å‰Šé™¤ã•ã‚Œã¾ã—ãŸã€‚</font><br>
 ({$c_diary_comment_.r_datetime|date_format:"%m/%d %H:%M"})
 ({else})
 ({if $c_diary_comment_.nickname})<a href="ktai_page.php?p=f_home&target_c_member_id=({$c_diary_comment_.c_member_id})&amp;({$tail})">({$c_diary_comment_.nickname})</a>({/if}) ({if $c_diary_comment_.c_member_id == $u || $target_diary_writer.c_member_id==$u})
-[<a href="do_ktai.php?cmd=fh_diary_delete_c_diary_comment&target_c_diary_comment_id=({$c_diary_comment_.c_diary_comment_id})&amp;({$tail})">ºï½ü</a>]
+[<a href="do_ktai.php?cmd=fh_diary_delete_c_diary_comment&target_c_diary_comment_id=({$c_diary_comment_.c_diary_comment_id})&amp;({$tail})">å‰Šé™¤</a>]
 ({/if})<br>
 ({$c_diary_comment_.body|nl2br|default:"&nbsp;"})<br>
 ({$c_diary_comment_.r_datetime|date_format:"%m/%d %H:%M"})
@@ -44,20 +44,20 @@
 ({/foreach})
 ({/if})
 <hr>
-¢£ºÒİÄ¤ò½ñ¤¯
+â– ï½ºï¾’ï¾ï¾„ã‚’æ›¸ã
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <font color=red>({if $msg})({$msg})<br>({/if})</font>
 <input type="hidden" name="cmd" value="fh_diary_insert_c_diary_comment">
 <input type="hidden" name="target_c_diary_id" value="({$target_c_diary.c_diary_id})">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <textarea name="body"></textarea><br>
-<input type="submit" value="½ñ¤­¹ş¤à">
+<input type="submit" value="æ›¸ãè¾¼ã‚€">
 </form>
 <hr>
 <a href="ktai_page.php?p=fh_diary_list&target_c_member_id=({$target_diary_writer.c_member_id})&amp;({$tail})">
-({$target_diary_writer.nickname})¤µ¤ó¤ÎÆüµ­Ø½Ä
+({$target_diary_writer.nickname})ã•ã‚“ã®æ—¥è¨˜ï¾˜ï½½ï¾„
 </a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

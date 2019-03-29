@@ -2,13 +2,13 @@
 function doAction_h_review_clip_list_delete_c_review_clip($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_clips = $request['c_review_clips'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥¯¥ê¥Ã¥×ºîÀ®¼Ô
-	//do_h_review_clip_list_delete_c_review_clip ¤ÎÃæ¤ÇÂÐ±þºÑ¤ß
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚¯ãƒªãƒƒãƒ—ä½œæˆè€…
+	//do_h_review_clip_list_delete_c_review_clip ã®ä¸­ã§å¯¾å¿œæ¸ˆã¿
 	//---
 
 
@@ -16,4 +16,4 @@ function doAction_h_review_clip_list_delete_c_review_clip($request) {
 
 	client_redirect("page.php?p=h_review_clip_list");
 }
-?>
+

@@ -4,23 +4,23 @@
 function pageAction_h_invite_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$form_val = $requests;
 	// ----------
 
 	$msg = "";
 	if (!db_common_is_mailaddress($form_val['mail'])) {
-		$msg = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÀµ¤·¤¯ÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+		$msg = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„";
 	}
 	elseif (p_is_sns_join4mail_address($form_val['mail'])) {
-		$msg = "¤½¤Î¥¢¥É¥ì¥¹¤Ï´û¤ËÅĞÏ¿ºÑ¤ß¤Ç¤¹";
+		$msg = "ãã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²æ¸ˆã¿ã§ã™";
     }
     else {
 	    if(is_ktai_mail_address($form_val['mail'])) {
 			//<PCKTAI
 			if (defined('OPENPNE_REGIST_FROM') &&
 					!((OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_KTAI) >> 1)) {
-				$msg = "·ÈÂÓ¥¢¥É¥ì¥¹¤Ë¤Ï¾·ÂÔ¤Ç¤­¤Ş¤»¤ó";
+				$msg = "æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯æ‹›å¾…ã§ãã¾ã›ã‚“";
 			}
 			//>
 		}
@@ -28,7 +28,7 @@ function pageAction_h_invite_confirm($smarty,$requests) {
 			//<PCKTAI
 			if (defined('OPENPNE_REGIST_FROM') &&
 					!(OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_PC)) {
-				$msg = "PC¥¢¥É¥ì¥¹¤Ë¤Ï¾·ÂÔ¤Ç¤­¤Ş¤»¤ó";
+				$msg = "PCã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯æ‹›å¾…ã§ãã¾ã›ã‚“";
 			}
 			//>	
 		}
@@ -48,4 +48,4 @@ function pageAction_h_invite_confirm($smarty,$requests) {
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_invite_confirm.tpl");
 }
-?>
+

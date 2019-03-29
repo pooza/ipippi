@@ -20,7 +20,7 @@
  */
 function smarty_modifier_t_escape($string, $esc_type = 'html')
 {
-	// ÇÛÎó¤ä¥ª¥Ö¥¸¥§¥¯¥È¤Î¾ì¹ç¤Ë¥¨¥é¡¼¤Ë¤Ê¤é¤Ê¤¤¤è¤¦¤Ë
+	// é…åˆ—ã‚„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å ´åˆã«ã‚¨ãƒ©ãƒ¼ã«ãªã‚‰ãªã„ã‚ˆã†ã«
 	if (!is_string($string)) {
 		return $string;
 	}
@@ -91,4 +91,4 @@ function smarty_modifier_t_escape($string, $esc_type = 'html')
 
 /* vim: set expandtab: */
 
-?>
+

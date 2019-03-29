@@ -3,12 +3,12 @@
 function doAction_bookmark_add($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_member_id_to = $request['c_member_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¼«Ê¬°Ê³° and ¥Ö¥Ã¥¯¥Þ¡¼¥¯ÅÐÏ¿¤µ¤ì¤Æ¤¤¤Ê¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//è‡ªåˆ†ä»¥å¤– and ãƒ–ãƒƒã‚¯ãƒžãƒ¼ã‚¯ç™»éŒ²ã•ã‚Œã¦ã„ãªã„
 
 	if ($c_member_id_to == $u) {
 		handle_kengen_error();
@@ -24,4 +24,4 @@ function doAction_bookmark_add($request) {
 	do_f_bookmark_add($u, $c_member_id_to);
 	client_redirect("page.php?p=h_bookmark_list");
 }
-?>
+

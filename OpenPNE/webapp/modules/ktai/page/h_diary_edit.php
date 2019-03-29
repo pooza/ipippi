@@ -3,7 +3,7 @@ function pageAction_h_diary_edit($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	// ----------
 
@@ -21,4 +21,3 @@ function pageAction_h_diary_edit($smarty, $requests)
 	$smarty->ext_display("h_diary_edit.tpl");
 }
 
-?>

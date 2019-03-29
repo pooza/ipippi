@@ -9,9 +9,9 @@ function pageAction_h_config_prof($smarty, $requests)
 	$smarty->assign('c_member', $prof);
 
 	$public_flags = array(
-	'public' => 'Á´°÷¤Ë¸ø³«',
-	'friend' => WORD_MY_FRIEND_HALF.'¤Þ¤Ç¸ø³«',
-	'private'=> '¸ø³«¤·¤Ê¤¤',
+	'public' => 'å…¨å“¡ã«å…¬é–‹',
+	'friend' => WORD_MY_FRIEND_HALF.'ã¾ã§å…¬é–‹',
+	'private'=> 'å…¬é–‹ã—ãªã„',
 	);
 	$smarty->assign('public_flags', $public_flags);
 
@@ -23,4 +23,3 @@ function pageAction_h_config_prof($smarty, $requests)
 	$smarty->ext_display("h_config_prof.tpl");
 }
 
-?>

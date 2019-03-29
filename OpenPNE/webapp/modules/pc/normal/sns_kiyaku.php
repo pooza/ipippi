@@ -1,7 +1,7 @@
 <?php
 function normalAction_sns_kiyaku($smarty,$requests)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("public") );
 	
 	$smarty->assign('c_siteadmin', p_common_c_siteadmin4target_pagename('sns_kiyaku'));
@@ -9,4 +9,3 @@ function normalAction_sns_kiyaku($smarty,$requests)
 	$smarty->assign('sns_name', SNS_NAME);
 	$smarty->ext_display("sns_kiyaku.tpl");
 }
-?>

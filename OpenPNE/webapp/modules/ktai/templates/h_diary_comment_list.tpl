@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-Æüµ­µ­ÆþÍúÎò<br>
+æ—¥è¨˜è¨˜å…¥å±¥æ­´<br>
 <hr>
 
 ({foreach from=$c_diary_my_comment_list item=each_diary})
@@ -12,6 +12,6 @@
 
 <br>
 <hr>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">ŽÎŽ°ŽÑ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾Žï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

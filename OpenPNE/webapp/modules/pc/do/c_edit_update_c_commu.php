@@ -1,28 +1,28 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¾ðÊó¤Î¹¹¿·
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æƒ…å ±ã®æ›´æ–°
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 name
 c_commu_category_id
 body
 public_flag
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 
 */
 function doAction_c_edit_update_c_commu($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $request['target_c_commu_id'];
 	$name = $request['name'];
 	$c_commu_category_id = $request['c_commu_category_id'];
@@ -32,8 +32,8 @@ function doAction_c_edit_update_c_commu($request) {
 	// ----------
 	$upfile_obj = $_FILES['image_filename'];
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
     
     $status = db_common_commu_status($u, $target_c_commu_id);
     if (!$status['is_commu_admin']) {
@@ -41,10 +41,10 @@ function doAction_c_edit_update_c_commu($request) {
     }
     //---
     
-	if(!$name) $err_msg[] = "¥³¥ß¥å¥Ë¥Æ¥£Ì¾¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-	if(!$info) $err_msg[] = "¥³¥ß¥å¥Ë¥Æ¥£¤ÎÀâÌÀ¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤";
+	if(!$name) $err_msg[] = "ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£åã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+	if(!$info) $err_msg[] = "ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®èª¬æ˜Žã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„";
     if($upfile_obj["tmp_name"] && (t_get_image_size($upfile_obj) > 300*1024 || !t_check_image_format($upfile_obj)))
-    	$err_msg[] = "²èÁü1¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+    	$err_msg[] = "ç”»åƒ1ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 
     if ($err_msg) {
 		$_REQUEST['err_msg'] = $err_msg;
@@ -56,7 +56,7 @@ function doAction_c_edit_update_c_commu($request) {
     }
 
 
-    //²èÁü¥¢¥Ã¥×¥Ç¡¼¥È
+    //ç”»åƒã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ
 	$sessid = session_id();
 	t_image_clear_tmp($sessid);
 	if( file_exists($upfile_obj["tmp_name"]) ) $tmpfile = t_image_save2tmp($upfile_obj, $sessid, "c");
@@ -66,7 +66,7 @@ function doAction_c_edit_update_c_commu($request) {
 	t_image_clear_tmp(session_id());
 
 	if($image_filename){
-	    //²èÁüºï½ü
+	    //ç”»åƒå‰Šé™¤
 	    $c_commu = p_common_c_commu4c_commu_id($target_c_commu_id);
 		image_data_delete($c_commu['image_filename']);    
 	}    
@@ -83,4 +83,4 @@ function doAction_c_edit_update_c_commu($request) {
 
 	client_redirect("page.php?p=c_home&target_c_commu_id=$target_c_commu_id");
 }
-?>
+

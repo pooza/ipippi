@@ -1,5 +1,5 @@
 <?php
-// ¥×¥í¥Õ¥£¡¼¥ëÁªÂò»èºï½ü
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é¸æŠžè‚¢å‰Šé™¤
 
 
 function doAction_delete_c_profile_option($requests)
@@ -8,7 +8,6 @@ function doAction_delete_c_profile_option($requests)
 	
 	db_admin_delete_c_profile_option($requests['c_profile_option_id']);
 
-	admin_client_redirect('edit_c_profile', "¥×¥í¥Õ¥£¡¼¥ëÁªÂò»è¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_profile', "ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é¸æŠžè‚¢ã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>

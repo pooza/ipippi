@@ -1,18 +1,18 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">({$target_c_member.nickname})¤µ¤ó¤ÎÎ°Ñ</font></center>
+<center><font color="orange">({$target_c_member.nickname})ã•ã‚“ã®ï¾ï½°ï¾‘</font></center>
 <hr>
 ({if $c_siteadmin})
 ({$c_siteadmin|smarty:nodefaults})
 <hr>
 ({/if})
 ({if $target_c_member.image_filename})
-<a href="img.php?filename=({$target_c_member.image_filename})&w=120&h=120&amp;f=jpg">¼Ì¿¿¤ò¸«¤ë</a><br>
+<a href="img.php?filename=({$target_c_member.image_filename})&w=120&h=120&amp;f=jpg">å†™çœŸã‚’è¦‹ã‚‹</a><br>
 <br>
 ({/if})
 
 ({if $relation.wait==1})
-¸½ºß¡¢({$WORD_FRIEND_HALF})¾µÇ§ÂÔ¤Á¤Ç¤¹<br>
+ç¾åœ¨ã€({$WORD_FRIEND_HALF})æ‰¿èªå¾…ã¡ã§ã™<br>
 <br>
 ({/if})
 
@@ -22,40 +22,40 @@ My News(({$target_c_member.text5|date_format:"%m/%d %H:%M"}))<br>
 <br>
 ({/if})
 
-<a href="ktai_page.php?p=f_message_send&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">Ò¯¾°¼Ş¤òÁ÷¤ë</a><br>
+<a href="ktai_page.php?p=f_message_send&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">ï¾’ï½¯ï½¾ï½°ï½¼ï¾ã‚’é€ã‚‹</a><br>
 <br>
 
 ({if $relation.friend==0})
 ({if $relation.wait==0})
-<a href="ktai_page.php?p=f_link_request&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$WORD_MY_FRIEND_HALF})¤Ë²Ã¤¨¤ë</a><br>
+<a href="ktai_page.php?p=f_link_request&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$WORD_MY_FRIEND_HALF})ã«åŠ ãˆã‚‹</a><br>
 <br>
 ({/if})
 ({/if})
 
 ({if $relation.friend||$target_c_member.public_flag_diary=="public"})
-Æüµ­<br>
+æ—¥è¨˜<br>
 ({foreach from=$c_diary_list item=c_diary})
 ({$c_diary.r_date|date_format:"%Y/%m/%d"})-<a href="ktai_page.php?p=fh_diary&target_c_diary_id=({$c_diary.c_diary_id})&({$tail})">({$c_diary.subject})</a>(({$c_diary.count_comment}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=fh_diary_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">¢ª¤â¤Ã¤ÈÆÉ¤à</a><br>
+<a href="ktai_page.php?p=fh_diary_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">â†’ã‚‚ã£ã¨èª­ã‚€</a><br>
 <br>
 ({/if})
-({$WORD_FRIEND_HALF})Ø½Ä<br>
+({$WORD_FRIEND_HALF})ï¾˜ï½½ï¾„<br>
 ({foreach from=$c_friend_list item=c_friend})
 <a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$c_friend.c_member_id_to})&amp;({$tail})">({$c_friend.nickname})</a>(({$c_friend.count_friend}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=fh_friend_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">¢ª¤¹¤Ù¤ÆÉ½¼¨</a><br>
+<a href="ktai_page.php?p=fh_friend_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">â†’ã™ã¹ã¦è¡¨ç¤º</a><br>
 <br>
-»²²ÃºĞ­ÆÃ¨<br>
+å‚åŠ ï½ºï¾ï½­ï¾†ï¾ƒï½¨<br>
 ({foreach from=$c_commu_list item=c_commu})
 <a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">({$c_commu.name})</a>(({$c_commu.count_members}))<br>
 ({/foreach})
-<a href="ktai_page.php?p=fh_com_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">¢ª¤¹¤Ù¤ÆÉ½¼¨</a><br>
+<a href="ktai_page.php?p=fh_com_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">â†’ã™ã¹ã¦è¡¨ç¤º</a><br>
 <br>
-[ÌßÛÌ¨°Ù]<br>
+[ï¾Œï¾Ÿï¾›ï¾Œï½¨ï½°ï¾™]<br>
 ({strip})
 ({capture name="nick"})
-Æ¯¸È°Ñ¡§({$target_c_member.nickname})<br>
+ï¾†ï½¯ï½¸ï¾ˆï½°ï¾‘ï¼š({$target_c_member.nickname})<br>
 ({/capture})
 
 ({foreach from=$target_c_member.profile key=key item=item})
@@ -71,7 +71,7 @@ My News(({$target_c_member.text5|date_format:"%m/%d %H:%M"}))<br>
 ({/if})
 
 ({if $item.value})
-({$item.caption})¡§
+({$item.caption})ï¼š
 
 ({if $item.form_type == 'textarea'})
 	<br>({$item.value|nl2br})
@@ -90,6 +90,6 @@ My News(({$target_c_member.text5|date_format:"%m/%d %H:%M"}))<br>
 ({/strip})
 
 <hr>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

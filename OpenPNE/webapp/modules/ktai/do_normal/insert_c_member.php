@@ -9,16 +9,16 @@ function doNormalAction_insert_c_member($requests)
 	}
     //>
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ses = $requests['ses'];
 	// ----------
 	
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹
 
-    // ¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú¤«¤É¤¦¤«
+    // ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹ã‹ã©ã†ã‹
     if (!$pre = c_member_ktai_pre4session($ses)) {
-        // Ìµ¸ú¤Î¾ì¹ç¡¢login ¤Ø¥ê¥À¥¤¥ì¥¯¥È
+        // ç„¡åŠ¹ã®å ´åˆã€login ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
         client_redirect("ktai_normal.php?p=login");
         exit;
     }
@@ -35,7 +35,7 @@ function doNormalAction_insert_c_member($requests)
 	
 	$profs = $validator->getParams();
 
-	//--- c_profile ¤Î¹àÌÜ¤ò¥Á¥§¥Ã¥¯
+	//--- c_profile ã®é …ç›®ã‚’ãƒã‚§ãƒƒã‚¯
 	$validator = new Validator();
 	$validator->addRequests($_REQUEST['profile']);
 	$validator->addRules(_getValidateRulesProfile());
@@ -43,22 +43,22 @@ function doNormalAction_insert_c_member($requests)
 		$errors = array_merge($errors, $validator->getErrors());
 	}
 	
-	// ÃÍ¤ÎÀ°¹çÀ­¤ò¥Á¥§¥Ã¥¯(DB)
+	// å€¤ã®æ•´åˆæ€§ã‚’ãƒã‚§ãƒƒã‚¯(DB)
 	$c_member_profile_list = do_config_prof_check_profile($validator->getParams(), $_REQUEST['public_flag']);
 
-	// É¬¿Ü¹àÌÜ¥Á¥§¥Ã¥¯
+	// å¿…é ˆé …ç›®ãƒã‚§ãƒƒã‚¯
 	$profile_list = db_common_c_profile_list4null();
 	foreach ($profile_list as $profile) {
 		if ($profile['disp_regist'] &&
 			$profile['is_required'] &&
 			!$c_member_profile_list[$profile['name']]['value'])
 		{
-			$errors[$profile['name']] = "{$profile['caption']}¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+			$errors[$profile['name']] = "{$profile['caption']}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 			break;
 		}
 	}
 
-    // ÆþÎÏ¥¨¥é¡¼
+    // å…¥åŠ›ã‚¨ãƒ©ãƒ¼
     if ($errors) {
         $smarty = new TejimayaSmarty($GLOBALS['__SMARTY']);
         $smarty->ext_set_call_type('ktai');
@@ -92,7 +92,7 @@ function doNormalAction_insert_c_member($requests)
     // insert c_member_profile
     do_config_prof_update_c_member_profile($c_member_id, $c_member_profile_list);
     
-    // insert c_friend(¾Ò²ð¼Ô)
+    // insert c_friend(ç´¹ä»‹è€…)
     do_common_link_friend($c_member_id, $pre['c_member_id_invite']);
     
     // delete c_member_ktai_pre
@@ -111,27 +111,27 @@ function _getValidateRules()
 		'nickname' => array(
 			'type' => 'string',
 			'required' => '1',
-			'caption' => '¥Ë¥Ã¥¯¥Í¡¼¥à',
+			'caption' => 'ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ',
 			'max' => '40',
 		),
 		'birth_year' => array(
 			'type' => 'int',
 			'required' => '1',
-			'caption' => 'À¸¤Þ¤ì¤¿Ç¯',
+			'caption' => 'ç”Ÿã¾ã‚ŒãŸå¹´',
 			'min' => '1901',
 			'max' => date('Y'),
 		),
 		'birth_month' => array(
 			'type' => 'int',
 			'required' => '1',
-			'caption' => 'ÃÂÀ¸·î',
+			'caption' => 'èª•ç”Ÿæœˆ',
 			'min' => '1',
 			'max' => '12',
 		),
 		'birth_day' => array(
 			'type' => 'int',
 			'required' => '1',
-			'caption' => 'ÃÂÀ¸Æü',
+			'caption' => 'èª•ç”Ÿæ—¥',
 			'min' => '1',
 			'max' => '31',
 		),
@@ -142,20 +142,20 @@ function _getValidateRules()
 			'type' => 'regexp',
 			'regexp' => '/[a-z0-9]+/i',
 			'required' => '1',
-			'caption' => '¥Ñ¥¹¥ï¡¼¥É',
+			'caption' => 'ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰',
 			'min' => '6',
 			'max' => '12',
 		),
 		'c_password_query_id' => array(
 			'type' => 'int',
 			'required' => '1',
-			'caption' => 'ÈëÌ©¤Î¼ÁÌä',
-			'required_error' => 'ÈëÌ©¤Î¼ÁÌä¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£',
+			'caption' => 'ç§˜å¯†ã®è³ªå•',
+			'required_error' => 'ç§˜å¯†ã®è³ªå•ã‚’é¸æŠžã—ã¦ãã ã•ã„ã€‚',
 		),
 		'password_query_answer' => array(
 			'type' => 'string',
 			'required' => '1',
-			'caption' => 'ÈëÌ©¤Î¼ÁÌä¤ÎÅú¤¨', 
+			'caption' => 'ç§˜å¯†ã®è³ªå•ã®ç­”ãˆ', 
 		),
 	);
 }
@@ -193,4 +193,4 @@ function _getValidateRulesProfile()
 	return $rules;	
 }
 
-?>
+

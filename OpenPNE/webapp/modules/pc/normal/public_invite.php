@@ -1,7 +1,7 @@
 <?php
 function normalAction_public_invite($smarty,$requests)
 {
-	// ¥ª¡¼¥×¥óÀ©¤ÎSNS°Ê³°¤Ç¤ÏÌµ¸ú
+	// ã‚ªãƒ¼ãƒ—ãƒ³åˆ¶ã®SNSä»¥å¤–ã§ã¯ç„¡åŠ¹
 	if (IS_CLOSED_SNS) {
 		client_redirect_login();
 		exit;
@@ -14,11 +14,11 @@ function normalAction_public_invite($smarty,$requests)
 	}
     //>	
 	
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header', fetch_inc_page_header("public"));
 	
 	$smarty->assign('SNS_NAME', SNS_NAME);
 	
 	$smarty->ext_display("public_invite.tpl");
 }
-?>
+

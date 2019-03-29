@@ -8,4 +8,3 @@ function pageAction_h_config_password_query($smarty, $requests)
 	$smarty->ext_display("h_config_password_query.tpl");
 }
 
-?>

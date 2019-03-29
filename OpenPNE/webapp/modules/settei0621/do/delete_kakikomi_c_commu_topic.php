@@ -1,5 +1,5 @@
 <?php
-// ½ñ¤­¹þ¤ß´ÉÍý(¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ô¥Ã¥¯ºï½ü)
+// æ›¸ãè¾¼ã¿ç®¡ç†(ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒ”ãƒƒã‚¯å‰Šé™¤)
 
 
 function doAction_delete_kakikomi_c_commu_topic($requests)
@@ -8,7 +8,7 @@ function doAction_delete_kakikomi_c_commu_topic($requests)
 	
 	do_c_bbs_delete_c_commu_topic($requests['target_c_commu_topic_id']);
 
-	admin_client_redirect('delete_kakikomi', "¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ô¥Ã¥¯¤òºï½ü¤·¤Þ¤·¤¿");
+	admin_client_redirect('delete_kakikomi', "ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒ”ãƒƒã‚¯ã‚’å‰Šé™¤ã—ã¾ã—ãŸ");
 }
 
-?>
+

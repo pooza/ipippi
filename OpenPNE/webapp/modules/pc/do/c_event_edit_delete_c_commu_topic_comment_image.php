@@ -2,15 +2,15 @@
 function doAction_c_event_edit_delete_c_commu_topic_comment_image($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $request['target_c_commu_topic_id'];
 	$pic_delete = $request['pic_delete'];
 	// ----------
 
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥¤¥Ù¥ó¥È¤Î´ÉÍý¼Ô or ¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚¤ãƒ™ãƒ³ãƒˆã®ç®¡ç†è€… or ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 	
 	if (!_db_is_c_event_admin($c_commu_topic_id,$u) &&
 		!_db_is_c_commu_admin($c_topic['c_commu_id'], $u)){
@@ -26,4 +26,4 @@ function doAction_c_event_edit_delete_c_commu_topic_comment_image($request) {
 
 	client_redirect("page.php?p=c_event_edit&target_c_commu_topic_id=".$c_commu_topic_id);
 }
-?>
+

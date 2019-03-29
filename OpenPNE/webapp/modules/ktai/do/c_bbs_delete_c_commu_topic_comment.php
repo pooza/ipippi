@@ -1,20 +1,20 @@
 <?php
 //----------------------------------------------------------------------------
 /**
-¥³¥á¥ó¥Èºï½ü
+ã‚³ãƒ¡ãƒ³ãƒˆå‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_topic_comment_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 c_bbs
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_topic_id
 target_c_diary_comment_id
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
-¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_c_bbs_delete_c_commu_topic_comment($requests)
@@ -23,13 +23,13 @@ function doAction_c_bbs_delete_c_commu_topic_comment($requests)
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_topic_comment_id = $requests['target_c_commu_topic_comment_id'];
 	// ----------
 	$c_commu_topic_comment = do_c_bbs_c_commu_topic_comment4c_commu_topic_comment_id($target_c_commu_topic_comment_id);
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô or ¥³¥á¥ó¥ÈºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€… or ã‚³ãƒ¡ãƒ³ãƒˆä½œæˆè€…
 
     $c_commu_topic = _do_c_bbs_c_commu_topic4c_commu_topic_id($c_commu_topic_comment['c_commu_topic_id']);
     $c_commu_id = $c_commu_topic['c_commu_id'];
@@ -47,4 +47,3 @@ function doAction_c_bbs_delete_c_commu_topic_comment($requests)
 	client_redirect('ktai_page.php?p=c_bbs&target_c_commu_topic_id='.$c_commu_topic_comment['c_commu_topic_id']."&$tail");
 }
 
-?>

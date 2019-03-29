@@ -13,13 +13,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ****************************************** -->
-<!-- ******�������顧��Ͽ�᡼�륢�ɥ쥹�ѹ�****** -->
+<!-- ******ここから：登録メールアドレス変更****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -29,20 +29,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧��Ͽ�᡼�륢�ɥ쥹�ѹ�������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：登録メールアドレス変更＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">��Ͽ�᡼�륢�ɥ쥹�ѹ�</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">登録メールアドレス変更</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å������� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -55,11 +55,11 @@
 
 <div class="padding_w_m">
 
-���Ϥ��줿�᡼�륢�ɥ쥹�˥᡼����������ޤ������᡼����Σգң̤򥯥�å����ƥ��������ԤäƤ����������ʥѥ���ɤϸ�����Ͽ�Τ�Τ򤴻��Ѥ�����������
+入力されたメールアドレスにメールを送信しました。メール内のＵＲＬをクリックしてログインを行ってください。（パスワードは現在登録のものをご使用ください。）
 
 <div style="padding-top:10px;text-align:center;">
 
-<a href="javascript:void(0);" onclick="window.close()">������ɥ����Ĥ���</a>
+<a href="javascript:void(0);" onclick="window.close()">ウィンドウを閉じる</a>
 
 </div>
 
@@ -74,13 +74,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���å������� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ���Ͽ�᡼�륢�ɥ쥹�ѹ��������* -->
+<!-- ここまで：主内容＞＞メッセージ欄 -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：登録メールアドレス変更＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -90,7 +90,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ���Ͽ�᡼�륢�ɥ쥹�ѹ�****** -->
+<!-- ******ここまで：登録メールアドレス変更****** -->
 <!-- ****************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -98,7 +98,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

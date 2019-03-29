@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧�������ȥԥå����������****** -->
+<!-- ******ここから：新しいトピックを作成する****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_topic_add_confirm">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 
@@ -42,21 +42,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�������ȥԥå���������������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：新しいトピックを作成する＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">[({$c_commu.name})] �����ȥԥå�����</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">[({$c_commu.name})] 新規トピック作成</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -69,7 +69,7 @@
 
 <div class="padding_s">
 
-�����ȥ�
+タイトル
 
 </div>
 
@@ -95,7 +95,7 @@
 
 <div class="padding_s">
 
-�ܡ���ʸ
+本　　文
 
 </div>
 
@@ -121,7 +121,7 @@
 
 <div class="padding_s">
 
-�̡��� 1
+写　真 1
 
 </div>
 
@@ -147,7 +147,7 @@
 
 <div class="padding_s">
 
-�̡��� 2
+写　真 2
 
 </div>
 
@@ -173,7 +173,7 @@
 
 <div class="padding_s">
 
-�̿��ΰ���
+写真の位置
 
 </div>
 
@@ -182,8 +182,8 @@
 <td class="bg_02" align="left" valign="middle">
 <div class="padding_s">
 
-<input type="radio" name="image_position" value="TOP" class="no_bg" checked> ��ʸ�ξ�
-<input type="radio" name="image_position" value="BOTTOM" class="no_bg"> ��ʸ�β�
+<input type="radio" name="image_position" value="TOP" class="no_bg" checked> 本文の上
+<input type="radio" name="image_position" value="BOTTOM" class="no_bg"> 本文の下
 
 </td>
 <td class="bg_01" align="center"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
@@ -200,7 +200,7 @@
 
 <div class="padding_s">
 
-ź�եե����� 1
+添付ファイル 1
 
 </div>
 
@@ -226,7 +226,7 @@
 
 <div class="padding_s">
 
-ź�եե����� 2
+添付ファイル 2
 
 </div>
 
@@ -252,17 +252,17 @@
 <div style="padding:10px 90px;">
 
 <ul>
-<li>���ߥ�˥ƥ������Ƥ�̵�ط��Υȥԥå����������԰١�ʣ���Υ��ߥ�˥ƥ���Ʊ�����ƤΥȥԥå�����Ω����԰٤϶ػߤ��Ƥ���ޤ���<br>
-�嵭��ȿ�����硢�������̹�ʤ��˺�������Ƥ���������礬����ޤ��ΤǤ�λ������������
-<li>������¯��ȿ����ɽ�����̿������饹�ȤηǺܤ϶ػߤ��Ƥ��ޤ���
-<li>ź�դǤ���ե�����Υ�������1MB�ޤǤǤ���
-<li>�ե�����̾��Ⱦ�ѥ������ʤ���Ѥ��뤳�ȤϽ���ޤ���
-<li>�������ƥ��δ������顢exe�ե���������ź�դ����¤��Ƥ��ޤ���
+<li>コミュニティの内容と無関係のトピックを作成する行為、複数のコミュニティに同じ内容のトピックを乱立する行為は禁止しております。<br>
+上記に反する場合、事前の通告なしに削除させていただく場合がありますのでご了承ください。
+<li>公序良俗に反する表現・写真・イラストの掲載は禁止しています。
+<li>添付できるファイルのサイズは1MBまでです。
+<li>ファイル名に半角カタカナを使用することは出来ません。
+<li>セキュリティの観点から、exeファイル等の添付を制限しています。
 </ul>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 <div align="center" style="text-align:center;">
-<input type="submit" value="����ǧ���̡�">
+<input type="submit" value="　確認画面　">
 </div>
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
@@ -276,12 +276,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��������ȥԥå����������������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：新しいトピックを作成する＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -293,14 +293,14 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ��������ȥԥå����������****** -->
+<!-- ******ここまで：新しいトピックを作成する****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

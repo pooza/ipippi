@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-({$WORD_FRIEND_HALF})ºÇ¿·Æüµ­<br>
+({$WORD_FRIEND_HALF})æœ€æ–°æ—¥è¨˜<br>
 <hr>
 
 ({foreach from=$h_diary_list_friend item=each_diary})
@@ -11,12 +11,12 @@
 
 ({if $is_prev || $is_next})
 <br>
-({if $is_prev})<a href="ktai_page.php?p=h_diary_list_friend&amp;page=({$page-1})&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=h_diary_list_friend&amp;page=({$page+1})&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=h_diary_list_friend&amp;page=({$page-1})&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=h_diary_list_friend&amp;page=({$page+1})&amp;({$tail})">æ¬¡ã¸</a>({/if})
 
 ({/if})
 <br>
 <hr>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

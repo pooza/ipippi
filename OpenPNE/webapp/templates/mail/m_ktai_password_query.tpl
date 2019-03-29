@@ -1,12 +1,12 @@
-[({$SNS_NAME})]�ѥ���ɺ�ȯ�ԤΤ��Τ餻
-({$c_member.nickname})���󡢤���ˤ��ϡ�
-({$CATCH_COPY})({$SNS_NAME}) ����Τ��Τ餻�Ǥ���
+[({$SNS_NAME})]パスワード再発行のお知らせ
+({$c_member.nickname})さん、こんにちは。
+({$CATCH_COPY})({$SNS_NAME}) からのお知らせです。
 
-�ѥ���ɤ��ȯ�Ԥ������ޤ�����
+パスワードを再発行いたしました。
 
-�ѥ���ɡ�({$password})
+パスワード：({$password})
 
-({$SNS_NAME})�Υ�������ڡ���
+({$SNS_NAME})のログインページ
 ({$login_url})
 
-����Ȥ⡢���ҡ�({$SNS_NAME})�򤴳��Ѥ���������
+今後とも、ぜひ、({$SNS_NAME})をご活用ください。

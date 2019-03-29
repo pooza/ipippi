@@ -3,7 +3,7 @@
 function pageAction_h_review_clip_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$page = $requests['page'];
 	$direc = $requests['direc'];
 	// ----------
@@ -23,4 +23,4 @@ function pageAction_h_review_clip_list($smarty,$requests) {
 
 	$smarty->ext_display('h_review_clip_list.tpl');	
 }
-?>
+

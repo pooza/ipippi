@@ -1,15 +1,15 @@
 <?php
 
-// DB¤ËÀÜÂ³	
+// DBã«æŽ¥ç¶š	
 function db_connect()
 {
 	@mysql_connect(
 		$GLOBALS['__OpenPNE']['DSN']['hostspec'],
 		$GLOBALS['__OpenPNE']['DSN']['username'],
 		$GLOBALS['__OpenPNE']['DSN']['password'])
-		or die('¥Ç¡¼¥¿¥Ù¡¼¥¹¥µ¡¼¥Ð¤ËÀÜÂ³¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿');
+		or die('ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚µãƒ¼ãƒã«æŽ¥ç¶šã§ãã¾ã›ã‚“ã§ã—ãŸ');
 	@mysql_select_db($GLOBALS['__OpenPNE']['DSN']['database'])
-		or die('¥Ç¡¼¥¿¥Ù¡¼¥¹¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó¤Ç¤·¤¿');
+		or die('ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸ');
 	
 	if (defined('USE_SET_NAMES') && USE_SET_NAMES) {
 		@mysql_query('SET NAMES ujis');
@@ -19,37 +19,37 @@ function db_connect()
 //-----
 
 /**
- * ¥¯¥é¥¤¥¢¥ó¥È¥ê¥À¥¤¥ì¥¯¥È
+ * ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
  * 
- * @param	string	$destination  : ¥¸¥ã¥ó¥×Àè(ÁêÂÐ¥Ñ¥¹)
+ * @param	string	$destination  : ã‚¸ãƒ£ãƒ³ãƒ—å…ˆ(ç›¸å¯¾ãƒ‘ã‚¹)
  * @return	void
  */
 function client_redirect($dest)
 {
-	// ²þ¹ÔÊ¸»ú¤òºï½ü
+	// æ”¹è¡Œæ–‡å­—ã‚’å‰Šé™¤
 	$dest = str_replace(array("\r", "\n"), "", $dest);
 	
     header("Location: ". ABSOLUTE_PATH . $dest);
 }
 
 /**
- * ¥¯¥é¥¤¥¢¥ó¥È¥ê¥À¥¤¥ì¥¯¥È(³°Éô)
+ * ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ(å¤–éƒ¨)
  * 
- * @param	string	$destination  : ¥¸¥ã¥ó¥×Àè(ÁêÂÐ¥Ñ¥¹)
+ * @param	string	$destination  : ã‚¸ãƒ£ãƒ³ãƒ—å…ˆ(ç›¸å¯¾ãƒ‘ã‚¹)
  * @return	void
  */
 function client_redirect_absolute($dest)
 {
-	// ²þ¹ÔÊ¸»ú¤òºï½ü
+	// æ”¹è¡Œæ–‡å­—ã‚’å‰Šé™¤
 	$dest = str_replace(array("\r", "\n"), "", $dest);
 	
    	header("Location: ". $dest);
 }
 
 /**
- * ¥¯¥é¥¤¥¢¥ó¥È¥ê¥À¥¤¥ì¥¯¥È(¥í¥°¥¤¥ó¥Ú¡¼¥¸)
+ * ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ(ãƒ­ã‚°ã‚¤ãƒ³ãƒšãƒ¼ã‚¸)
  * 
- * @param	string	$destination  : ¥¸¥ã¥ó¥×Àè(ÁêÂÐ¥Ñ¥¹)
+ * @param	string	$destination  : ã‚¸ãƒ£ãƒ³ãƒ—å…ˆ(ç›¸å¯¾ãƒ‘ã‚¹)
  * @return	void
  */
 function client_redirect_login()
@@ -67,7 +67,7 @@ function get_login_url()
 }
 
 /**
- * mysql_query ¤ò¼Â¹Ô¤¹¤ë
+ * mysql_query ã‚’å®Ÿè¡Œã™ã‚‹
  * 
  * @param  string $query
  * @return result
@@ -80,7 +80,7 @@ function _mysql_query4db($query) {
 }
 
 /**
- * SQLÊ¸¤«¤é·ë²Ì¤òÏ¢ÁÛÇÛÎó¤ÎÇÛÎó¤È¤·¤Æ¼è¤ê½Ð¤¹
+ * SQLæ–‡ã‹ã‚‰çµæžœã‚’é€£æƒ³é…åˆ—ã®é…åˆ—ã¨ã—ã¦å–ã‚Šå‡ºã™
  * 
  * @param   string  $query
  * @return  array_of_array
@@ -98,9 +98,9 @@ function get_array_list4db($query,$debug = false)
 }
 
 /**
- * SQLÊ¸¤«¤é·ë²Ì¤òÏ¢ÁÛÇÛÎó¤È¤·¤Æ¼è¤ê½Ð¤¹
- * 1ÈÖÌÜ¤ÎÃÍ¤¬key
- * 2ÈÖÌÜ¤ÎÃÍ¤¬value
+ * SQLæ–‡ã‹ã‚‰çµæžœã‚’é€£æƒ³é…åˆ—ã¨ã—ã¦å–ã‚Šå‡ºã™
+ * 1ç•ªç›®ã®å€¤ãŒkey
+ * 2ç•ªç›®ã®å€¤ãŒvalue
  * 
  * @param   string  $query
  * @return  array
@@ -118,10 +118,10 @@ function get_assoc4db($query)
 }
 
 /**
- * SQLÊ¸¤«¤é·ë²Ì¤òÏ¢ÁÛÇÛÎó¤È¤·¤Æ¼è¤ê½Ð¤¹
+ * SQLæ–‡ã‹ã‚‰çµæžœã‚’é€£æƒ³é…åˆ—ã¨ã—ã¦å–ã‚Šå‡ºã™
  * 
  * @param  string  $query
- * @return array (assoc)Ï¢ÁÛÇÛÎó
+ * @return array (assoc)é€£æƒ³é…åˆ—
  */
 function get_array_one4db($query)
 {
@@ -133,7 +133,7 @@ function get_array_one4db($query)
 }
 
 /**
- * SQLÊ¸¤«¤é·ë²Ì¤òÇÛÎó¤È¤·¤Æ¼è¤ê½Ð¤¹
+ * SQLæ–‡ã‹ã‚‰çµæžœã‚’é…åˆ—ã¨ã—ã¦å–ã‚Šå‡ºã™
  * 
  * @param  string $query
  * @return array
@@ -151,7 +151,7 @@ function get_one_list4db($query)
 }
 
 /**
- * SQLÊ¸¤«¤é·ë²Ì¤ÎÃÍ¤ò1¤Ä¼è¤ê½Ð¤¹
+ * SQLæ–‡ã‹ã‚‰çµæžœã®å€¤ã‚’1ã¤å–ã‚Šå‡ºã™
  * 
  * @param  string $query
  * @return mixed value
@@ -166,10 +166,10 @@ function get_one4db($query)
 }
 
 /**
- * SQLÊ¸¤«¤é¥ì¥³¡¼¥ÉÄÉ²Ã½èÍý¤ò¤·¡¢insert_id ¤òÊÖ¤¹
+ * SQLæ–‡ã‹ã‚‰ãƒ¬ã‚³ãƒ¼ãƒ‰è¿½åŠ å‡¦ç†ã‚’ã—ã€insert_id ã‚’è¿”ã™
  * 
  * @param	string $query
- * @return int insert_id  (error¤Î¤È¤­-1)
+ * @return int insert_id  (errorã®ã¨ã-1)
  */
 function _insert4db($query)
 {
@@ -182,7 +182,7 @@ function _insert4db($query)
 }
 
 /**
-²èÁü¥Ç¡¼¥¿¥µ¥¤¥ºÈ½Äê
+ç”»åƒãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚ºåˆ¤å®š
 */
 function t_get_image_size($upfile_obj){
 	$upfile = $upfile_obj["tmp_name"];
@@ -191,7 +191,7 @@ function t_get_image_size($upfile_obj){
 }
 
 /**
-²èÁü³ÈÄ¥»ÒÈ½Äê
+ç”»åƒæ‹¡å¼µå­åˆ¤å®š
 */
 function is_dirty_file($file){
 	$dirty = array(
@@ -217,7 +217,7 @@ function get_extension ($name) {
 }
 
 /**
-²èÁü¥Õ¥©¡¼¥Þ¥Ã¥ÈÈ½Äê
+ç”»åƒãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆåˆ¤å®š
 */
 function t_check_image_format($upfile_obj)
 {
@@ -242,16 +242,16 @@ function t_check_image_format($upfile_obj)
 }
 
 /**
- * ³ÎÇ§²èÌÌÍÑ¤Ë°ì»þ¥Õ¥¡¥¤¥ë¤òÊÝÂ¸¤·¤Æ¡¢¤½¤Î¥Õ¥¡¥¤¥ëÌ¾¤òÊÖ¤¹
+ * ç¢ºèªç”»é¢ç”¨ã«ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¿å­˜ã—ã¦ã€ãã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¿”ã™
  * 
- * ÊÝÂ¸Àè:     var/tmp/
- * ¥Õ¥¡¥¤¥ëÌ¾: ($prefix)_($uid).[(jpe?g)|(gif)|(png)]
+ * ä¿å­˜å…ˆ:     var/tmp/
+ * ãƒ•ã‚¡ã‚¤ãƒ«å: ($prefix)_($uid).[(jpe?g)|(gif)|(png)]
  */
 function t_image_save2tmp($upfile, $uid, $prefix='', $ext='')
 {
 	if (!$ext) $ext = t_check_image_format($upfile);
 
-	// °ì»þ¥Õ¥¡¥¤¥ëÊÝÂ¸¥Ç¥£¥ì¥¯¥È¥ê
+	// ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ä¿å­˜ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 	$img_tmp_dir_path = DOCUMENT_ROOT . "/var/tmp/";
 	
 	$filename = "{$prefix}_{$uid}.{$ext}";
@@ -268,7 +268,7 @@ function t_image_save2tmp($upfile, $uid, $prefix='', $ext='')
 }
 
 /**
- * ³ÎÇ§²èÌÌÍÑ¤Î°ì»þ¥Õ¥¡¥¤¥ë¤ò¤¹¤Ù¤Æºï½ü
+ * ç¢ºèªç”»é¢ç”¨ã®ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã™ã¹ã¦å‰Šé™¤
  */
 function t_image_clear_tmp($uid)
 {
@@ -287,12 +287,12 @@ function t_send_email($address, $subject, $body, $is_receive_mail=true, $from=AD
 		return false;
 	}
 
-	// ²þ¹Ô¥³¡¼¥É
+	// æ”¹è¡Œã‚³ãƒ¼ãƒ‰
     $cr = "\x0D";
     $lf = "\x0A";
     $crlf = "\x0D\x0A";
 	
-	// ÀßÄêÃÍ¤Ë¤è¤êMTA¤ËÅÏ¤¹¥Ø¥Ã¥À¤Î¶èÀÚ¤êµ­¹æ¤òÊ¬¤±¤ë
+	// è¨­å®šå€¤ã«ã‚ˆã‚ŠMTAã«æ¸¡ã™ãƒ˜ãƒƒãƒ€ã®åŒºåˆ‡ã‚Šè¨˜å·ã‚’åˆ†ã‘ã‚‹
 	if (defined('MAIL_HEADER_SEP') && MAIL_HEADER_SEP === 'CRLF') {
 		$sep = $crlf;
 	} else {
@@ -304,13 +304,13 @@ function t_send_email($address, $subject, $body, $is_receive_mail=true, $from=AD
 	$headers .= "Content-Type: text/plain; charset=iso-2022-jp" . $sep;
 	$headers .= "From: $from";
 	
-	// È¾³Ñ¥«¥Ê¤òÁ´³Ñ¥«¥Ê¤ËÊÑ´¹
+	// åŠè§’ã‚«ãƒŠã‚’å…¨è§’ã‚«ãƒŠã«å¤‰æ›
 	if (defined('MAIL_HAN2ZEN') && MAIL_HAN2ZEN) {
 		$subject = mb_convert_kana($subject, "KV");
 		$body = mb_convert_kana($body, "KV");
 	}
 	
-	// subject (²þ¹Ô¥³¡¼¥É¤ò´Þ¤ó¤Ç¤Ï¤Ê¤é¤Ê¤¤)
+	// subject (æ”¹è¡Œã‚³ãƒ¼ãƒ‰ã‚’å«ã‚“ã§ã¯ãªã‚‰ãªã„)
 	$subject = mb_convert_encoding($subject, "JIS", "EUC-JP,SJIS,UTF-8,JIS");
 	$subject = str_replace(array($cr, $lf), "", $subject);
 	$subject = '=?ISO-2022-JP?B?'.base64_encode($subject).'?=';
@@ -333,7 +333,7 @@ function _db_common_c_commu_topic_comment4c_commu_topic_comment_id($c_commu_topi
 }
 
 /**
- * ¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë¤Î¼õ¿®¥¢¥É¥ì¥¹¥ê¥¹¥È(·ÈÂÓ)
+ * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«ã®å—ä¿¡ã‚¢ãƒ‰ãƒ¬ã‚¹ãƒªã‚¹ãƒˆ(æºå¸¯)
  */
 function db_common_receive_ktai_address_list4c_commu_id($c_commu_id)
 {
@@ -353,7 +353,7 @@ function db_common_receive_ktai_address_list4c_commu_id($c_commu_id)
 }
 
 /**
- * ¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë¤Î¼õ¿®¥¢¥É¥ì¥¹¥ê¥¹¥È(PC)
+ * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«ã®å—ä¿¡ã‚¢ãƒ‰ãƒ¬ã‚¹ãƒªã‚¹ãƒˆ(PC)
  */
 function db_common_receive_pc_address_list4c_commu_id($c_commu_id)
 {
@@ -381,20 +381,20 @@ function is_ktai_mail_address($mail)
 
 function do_common_create_password($length = 8)
 {
-    // ¥Þ¥¤¥¯¥í¤Ç¥·¡¼¥É¤òÀßÄê¤¹¤ë
+    // ãƒžã‚¤ã‚¯ãƒ­ã§ã‚·ãƒ¼ãƒ‰ã‚’è¨­å®šã™ã‚‹
     list($usec, $sec) = explode(' ', microtime());
     $seed = (float) $sec + ((float) $usec * 100000);
     
     srand($seed);
 
 
-    // ¥Ñ¥¹¥ï¡¼¥ÉÊ¸»úÎó¤ÎÇÛÎó¤òºîÀ®
+    // ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰æ–‡å­—åˆ—ã®é…åˆ—ã‚’ä½œæˆ
     $elem = "abcdefghkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ2345679";
     $max = strlen($elem) - 1;
 
     $password = "";
     for ($i=0; $i < $length; $i++) {
-        // ¥Ñ¥¹¥ï¡¼¥ÉÊ¸»úÎó¤òÀ¸À®
+        // ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰æ–‡å­—åˆ—ã‚’ç”Ÿæˆ
         $password .= substr($elem, rand(0, $max), 1);
     }
     
@@ -476,7 +476,7 @@ function _db_c_commu_member4c_member_id($c_member_id, $c_commu_id)
 
 function handle_kengen_error()
 {
-    exit("¥¢¥¯¥»¥¹¤Ç¤­¤Þ¤»¤ó");
+    exit("ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“");
 }
 
 function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
@@ -488,7 +488,7 @@ function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
     return mysql_query($sql);
 }
 
-// SQL¥¤¥ó¥¸¥§¥¯¥·¥ç¥óÂÐºöÍÑ´Ø¿ô
+// SQLã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³å¯¾ç­–ç”¨é–¢æ•°
 function no_quote4db($str)
 {
 	if (defined('DB_ESCAPE_TYPE') && DB_ESCAPE_TYPE == 0) {
@@ -598,11 +598,11 @@ function rss_auto_get($url)
 }
 
 /**
- * RSS/Atom Auto-Discovery ¤ËÂÐ±þ¤·¤¿link¥¿¥°¤«¤éURL¤òÃê½Ð¤¹¤ë
+ * RSS/Atom Auto-Discovery ã«å¯¾å¿œã—ãŸlinkã‚¿ã‚°ã‹ã‚‰URLã‚’æŠ½å‡ºã™ã‚‹
  * 
- * @param string $html	HTMLÊ¸»úÎó
- * @param string $url	¼èÆÀ¸µURL(ÁêÂÐ¥Ñ¥¹¢ªÀäÂÐ¥Ñ¥¹ÊÑ´¹ÍÑ)
- * @return string	Ãê½Ð¤·¤¿URL(¼ºÇÔ¤·¤¿¾ì¹ç¤Ï false)
+ * @param string $html	HTMLæ–‡å­—åˆ—
+ * @param string $url	å–å¾—å…ƒURL(ç›¸å¯¾ãƒ‘ã‚¹â†’çµ¶å¯¾ãƒ‘ã‚¹å¤‰æ›ç”¨)
+ * @return string	æŠ½å‡ºã—ãŸURL(å¤±æ•—ã—ãŸå ´åˆã¯ false)
  */
 function rss_auto_discovery($html, $url)
 {
@@ -611,12 +611,12 @@ function rss_auto_discovery($html, $url)
 	$target_keys = array('rel', 'type', 'href');
 	$rss_types = array('application/rss+xml', 'application/atom+xml');
 	
-	// ²þ¹Ô¤òÈ¾³Ñ¥¹¥Ú¡¼¥¹¤ËÊÑ´¹
+	// æ”¹è¡Œã‚’åŠè§’ã‚¹ãƒšãƒ¼ã‚¹ã«å¤‰æ›
 	$html = str_replace("\n", " ", $html);
 	$html = str_replace("\r", " ", $html);
 	
 	$matches = array();
-	if (!preg_match_all('|<link(.+?)/?>|i', $html, $matches)) {
+	if (!preg_match_all('|<link(.+?)/|i', $html, $matches)) {
 		return false;
 	}
 	$link_tags = $matches[1];
@@ -648,7 +648,7 @@ function rss_auto_discovery($html, $url)
 		$href = $link['href'];
 		
 		if ($rel == 'alternate' && in_array($type, $rss_types)) {
-			if (preg_match('|^https?://|', $href)) {  // ÀäÂÐ¥Ñ¥¹
+			if (preg_match('|^https?://|', $href)) {  // çµ¶å¯¾ãƒ‘ã‚¹
 				return $href;
 			} else {
 				require_once PEAR_DIR . 'Net/URL.php';
@@ -803,7 +803,7 @@ function image_data_delete($image_filename)
 		" WHERE filename = " . quote4db($image_filename);
 	_mysql_query4db($sql);
 	
-	// cache¤Îºï½ü
+	// cacheã®å‰Šé™¤
 	image_cache_delete($image_filename);
 }
 
@@ -839,7 +839,7 @@ function image_insert_c_image($upfile_obj, $filename){
 	$filename = $filename."_".time().".".$ext;
 
 	$result = _do_insert_c_image($filename, $filepath);
-	if(!$result) print "²èÁü¤ÎÊÝÂ¸¤Ë¼ºÇÔ¤·¤Þ¤·¤¿";
+	if(!$result) print "ç”»åƒã®ä¿å­˜ã«å¤±æ•—ã—ã¾ã—ãŸ";
 
 	return $filename;
 }
@@ -879,7 +879,7 @@ function p_access_log($c_member_id, $page_name, $ktai_flag="0"){
 
 function message_body2inyou($string){
 	if( !empty($string) ){
-		//ÊÖ¿®ÍÑ¤Ë°úÍÑÉä¤ò¤Ä¤±¤ë
+		//è¿”ä¿¡ç”¨ã«å¼•ç”¨ç¬¦ã‚’ã¤ã‘ã‚‹
 		$string = "> ".$string;
 		$string = str_replace ( "\r\n", "\n", $string);
 		$string = str_replace ( "\r", "\n", $string);
@@ -940,13 +940,13 @@ function db_common_c_member_secure4c_member_id($c_member_id)
 }
 
 /**
- * ¥á¥ó¥Ð¡¼¾ðÊó¤ò¼èÆÀ¤¹¤ë
+ * ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±ã‚’å–å¾—ã™ã‚‹
  * 
  * @param int $c_member_id  
- * @param bool $is_secure `c_member_secure`¤Î¹àÌÜ¤ò¼èÆÀ¤¹¤ë¤«¤É¤¦¤«
- * @param bool $with_profile `c_member_profile`¤Î¹àÌÜ¤ò¼èÆÀ¤¹¤ë¤«¤É¤¦¤«
- * @param string $public_flag ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ¤ò¼èÆÀ¤¹¤ë¾ì¹ç¤Î¸ø³«ÀßÄê(public, friend, private)
- * @return array ¥á¥ó¥Ð¡¼¾ðÊó
+ * @param bool $is_secure `c_member_secure`ã®é …ç›®ã‚’å–å¾—ã™ã‚‹ã‹ã©ã†ã‹
+ * @param bool $with_profile `c_member_profile`ã®é …ç›®ã‚’å–å¾—ã™ã‚‹ã‹ã©ã†ã‹
+ * @param string $public_flag ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ã‚’å–å¾—ã™ã‚‹å ´åˆã®å…¬é–‹è¨­å®š(public, friend, private)
+ * @return array ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
  */
 function db_common_c_member4c_member_id($c_member_id, $is_secure = false, $with_profile = false, $public_flag = 'public')
 {
@@ -980,12 +980,12 @@ function db_common_c_member4c_member_id($c_member_id, $is_secure = false, $with_
 }
 
 /**
- * ¥á¥ó¥Ð¡¼¾ðÊó¤ò¥×¥í¥Õ¥£¡¼¥ëÉÕ¤­¤Ç¼èÆÀ¤¹¤ë
- * (secure¾ðÊó¤Ï¼èÆÀ¤·¤Ê¤¤)
+ * ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±ã‚’ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ä»˜ãã§å–å¾—ã™ã‚‹
+ * (secureæƒ…å ±ã¯å–å¾—ã—ãªã„)
  * 
  * @param int $c_member_id
- * @param string $public_flag ¼èÆÀ¤¹¤ë¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ¤Î¸ø³«¥ì¥Ù¥ë(public, friend, private)
- * @return array ¥á¥ó¥Ð¡¼¾ðÊó
+ * @param string $public_flag å–å¾—ã™ã‚‹ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ã®å…¬é–‹ãƒ¬ãƒ™ãƒ«(public, friend, private)
+ * @return array ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
  */
 function db_common_c_member_with_profile($c_member_id, $public_flag = 'public')
 {
@@ -993,16 +993,16 @@ function db_common_c_member_with_profile($c_member_id, $public_flag = 'public')
 }
 
 /**
- * ¥á¥ó¥Ð¡¼¾ðÊó¤Î¤è¤¯»È¤¦ÉôÊ¬¤Î¤ß¤ò¼èÆÀ¤¹¤ë
+ * ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±ã®ã‚ˆãä½¿ã†éƒ¨åˆ†ã®ã¿ã‚’å–å¾—ã™ã‚‹
  * 
- * ¶ñÂÎÅª¤Ë¤Ï¡¢
- * ¡¡¥á¥ó¥Ð¡¼ID
- * ¡¡¥Ë¥Ã¥¯¥Í¡¼¥à
- * ¡¡¥á¥¤¥ó²èÁü
- * ¤Î¤ß¤ò¼èÆÀ¤¹¤ë¡£
+ * å…·ä½“çš„ã«ã¯ã€
+ * ã€€ãƒ¡ãƒ³ãƒãƒ¼ID
+ * ã€€ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ 
+ * ã€€ãƒ¡ã‚¤ãƒ³ç”»åƒ
+ * ã®ã¿ã‚’å–å¾—ã™ã‚‹ã€‚
  * 
  * @param int $c_member_id  
- * @return array ¥á¥ó¥Ð¡¼¾ðÊó
+ * @return array ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
  */
 function db_common_c_member4c_member_id_LIGHT($c_member_id)
 {
@@ -1023,10 +1023,10 @@ function get_crypt_blowfish()
 }
 
 /**
- * ²ÄµÕÅª¤Ê°Å¹æ²½¤ò¤¹¤ë
+ * å¯é€†çš„ãªæš—å·åŒ–ã‚’ã™ã‚‹
  * 
- * @param string $str Ê¿Ê¸
- * @return string °Å¹æÊ¸
+ * @param string $str å¹³æ–‡
+ * @return string æš—å·æ–‡
  */
 function t_encrypt($str)
 {
@@ -1042,10 +1042,10 @@ function t_encrypt($str)
 }
 
 /**
- * ²ÄµÕÅª¤Ê°Å¹æ¤òÉü¹æ²½¤¹¤ë
+ * å¯é€†çš„ãªæš—å·ã‚’å¾©å·åŒ–ã™ã‚‹
  * 
- * @param string $str °Å¹æÊ¸
- * @return string Ê¿Ê¸
+ * @param string $str æš—å·æ–‡
+ * @return string å¹³æ–‡
  */
 function t_decrypt($str)
 {
@@ -1059,11 +1059,11 @@ function t_decrypt($str)
 }
 
 /**
- * ¥Ñ¥¹¥ï¡¼¥É¤¬Àµ¤·¤¤¤«¤É¤¦¤«Ç§¾Ú¤¹¤ë
+ * ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒæ­£ã—ã„ã‹ã©ã†ã‹èªè¨¼ã™ã‚‹
  * 
  * @param int $c_member_id
- * @param string $password Ê¿Ê¸¤Î¥Ñ¥¹¥ï¡¼¥É
- * @return bool ¥Ñ¥¹¥ï¡¼¥É¤¬Àµ¤·¤¤¤«¤É¤¦¤«
+ * @param string $password å¹³æ–‡ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+ * @return bool ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒæ­£ã—ã„ã‹ã©ã†ã‹
  */
 function db_common_authenticate_password($c_member_id, $password)
 {
@@ -1116,7 +1116,7 @@ function db_common_is_mailaddress($value)
 }
 
 /**
- * ¥¹¥­¥ó¡¦¿§ÀßÄêÍÑ
+ * ã‚¹ã‚­ãƒ³ãƒ»è‰²è¨­å®šç”¨
  */
 function db_select_c_sns_config(){
     $sql = "SELECT * FROM c_sns_config"
@@ -1142,7 +1142,7 @@ function db_common_main_image_filename_number($c_member_id)
 }
 
 /**
- * Æüµ­¥Ú¡¼¥¸¤Î¥«¥ì¥ó¥À¡¼À¸À®
+ * æ—¥è¨˜ãƒšãƒ¼ã‚¸ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ç”Ÿæˆ
  */
 function db_common_diary_monthly_calendar($year, $month, $c_member_id)
 {	
@@ -1169,14 +1169,14 @@ function db_common_diary_monthly_calendar($year, $month, $c_member_id)
     	}
 	}
 
-	// ºÇ½é¤ËÆüµ­¤ò½ñ¤¤¤¿Æü
+	// æœ€åˆã«æ—¥è¨˜ã‚’æ›¸ã„ãŸæ—¥
     $sql = "SELECT r_datetime FROM c_diary" .
    		" WHERE c_member_id = " . quote4db($c_member_id) .
    		" ORDER BY r_datetime" .
    		" LIMIT 1";
     $first_datetime = get_one4db($sql);
 	
-	// Á°¤Î·î¡¢¼¡¤Î·î
+	// å‰ã®æœˆã€æ¬¡ã®æœˆ
 	$prev_month = $Month->prevMonth('timestamp');
 	$this_month = $Month->thisMonth('timestamp');
 	$next_month = $Month->nextMonth('timestamp');
@@ -1203,8 +1203,8 @@ function db_common_diary_monthly_calendar($year, $month, $c_member_id)
 }
 
 /**
- * c_admin_config ¤«¤éÀßÄêÃÍ¤òÆÉ¤ß¹þ¤ß
- * ¤Ò¤È¤Þ¤ºÄê¿ô¤È¤·¤ÆÄêµÁ
+ * c_admin_config ã‹ã‚‰è¨­å®šå€¤ã‚’èª­ã¿è¾¼ã¿
+ * ã²ã¨ã¾ãšå®šæ•°ã¨ã—ã¦å®šç¾©
  */
 function db_common_load_config()
 {
@@ -1231,11 +1231,11 @@ function db_common_load_config()
 }
 
 /**
- * ¥æ¡¼¥¶¡¼Âà²ñ
+ * ãƒ¦ãƒ¼ã‚¶ãƒ¼é€€ä¼š
  */
 function db_common_delete_c_member($c_member_id)
 {
-	//// --- ÁÐÊý¸þ¥Ñ¥¿¡¼¥ó
+	//// --- åŒæ–¹å‘ãƒ‘ã‚¿ãƒ¼ãƒ³
 	// c_access_block
 	$sql = "DELETE FROM c_access_block" .
 		" WHERE c_member_id = " . quote4db($c_member_id) .
@@ -1261,7 +1261,7 @@ function db_common_delete_c_member($c_member_id)
 	_mysql_query4db($sql);
 
 
-	//// --- Ã±°ì¥Ñ¥¿¡¼¥ó
+	//// --- å˜ä¸€ãƒ‘ã‚¿ãƒ¼ãƒ³
 	// c_invite
 	$sql = "DELETE FROM c_invite" .
 		" WHERE c_member_id_invite = " . quote4db($c_member_id);
@@ -1303,27 +1303,27 @@ function db_common_delete_c_member($c_member_id)
 	_mysql_query4db($sql);		
 
 
-	//// --- ÆÃ¼ì¥Ñ¥¿¡¼¥ó
+	//// --- ç‰¹æ®Šãƒ‘ã‚¿ãƒ¼ãƒ³
 
-	///¥³¥ß¥å¥Ë¥Æ¥£´ØÏ¢
+	///ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£é–¢é€£
 	// c_commu_member
 	$sql = "DELETE FROM c_commu_member" .
 		" WHERE c_member_id = " . quote4db($c_member_id);
 	_mysql_query4db($sql);
 	
-	// c_commu (²èÁü)
+	// c_commu (ç”»åƒ)
 	$sql = "SELECT * FROM c_commu" .
 		" WHERE c_member_id_admin = " . quote4db($c_member_id);
 	$c_commu_list = get_array_list4db($sql);
 	
 	foreach ($c_commu_list as $c_commu) {
         if (!_db_count_c_commu_member_list4c_commu_id($c_commu['c_commu_id'])) {
-            // ¥³¥ß¥å¥Ë¥Æ¥£ºï½ü
+            // ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‰Šé™¤
             db_common_delete_c_commu($c_commu['c_commu_id']);
         }
         else {
-            // ´ÉÍý¼Ô¸òÂå
-            // »²²ÃÆü»þ¤¬°ìÈÖ¸Å¤¤¿Í
+            // ç®¡ç†è€…äº¤ä»£
+            // å‚åŠ æ—¥æ™‚ãŒä¸€ç•ªå¤ã„äºº
             $sql = "SELECT c_member_id FROM c_commu_member" .
                 " WHERE c_commu_id=". $c_commu['c_commu_id'].
                 " ORDER BY r_datetime ASC".
@@ -1357,8 +1357,8 @@ function db_common_delete_c_member($c_member_id)
 	_mysql_query4db($sql);
 	
 	
-	///Æüµ­´ØÏ¢
-	// c_diary (²èÁü)
+	///æ—¥è¨˜é–¢é€£
+	// c_diary (ç”»åƒ)
 	$sql = "SELECT * FROM c_diary" .
 		" WHERE c_member_id = " . quote4db($c_member_id);
 	$c_diary_list = get_array_list4db($sql);
@@ -1377,7 +1377,7 @@ function db_common_delete_c_member($c_member_id)
 	_mysql_query4db($sql);
 
 
-	///¥á¥ó¥Ð¡¼´ØÏ¢	
+	///ãƒ¡ãƒ³ãƒãƒ¼é–¢é€£	
 	// c_member_pre
 	$sql = "SELECT * FROM c_member_pre" .
 		" WHERE c_member_id_invite = " . quote4db($c_member_id);
@@ -1402,7 +1402,7 @@ function db_common_delete_c_member($c_member_id)
 		" WHERE c_member_id = " . quote4db($c_member_id);
 	_mysql_query4db($sql);
 	
-	// c_member (²èÁü)
+	// c_member (ç”»åƒ)
 	$sql = "SELECT image_filename_1, image_filename_2, image_filename_3" .
 		" FROM c_member" .
 		" WHERE c_member_id = " .quote4db($c_member_id);
@@ -1421,7 +1421,7 @@ function db_common_delete_c_commu($c_commu_id)
 	$sql = "SELECT * FROM c_commu WHERE c_commu_id = " . quote4db($c_commu_id);
 	$c_commu = get_array_one4db($sql);
 	
-	// ²èÁüºï½ü
+	// ç”»åƒå‰Šé™¤
 	image_data_delete($c_commu['image_filename']);
 	
 	// c_commu_admin_confirm
@@ -1444,13 +1444,13 @@ function db_common_delete_c_commu($c_commu_id)
 		" WHERE c_commu_id = " . quote4db($c_commu_id);
 	_mysql_query4db($sql);	
 	
-   	///¥È¥Ô¥Ã¥¯´ØÏ¢
+   	///ãƒˆãƒ”ãƒƒã‚¯é–¢é€£
    	$sql = "SELECT * FROM c_commu_topic" .
 		" WHERE c_commu_id = " . quote4db($c_commu_id);
 	$topic_list = get_array_list4db($sql);
 	
 	foreach ($topic_list as $topic) {
-		// c_commu_topic_comment(²èÁü)
+		// c_commu_topic_comment(ç”»åƒ)
 		$sql = "SELECT image_filename1, image_filename2, image_filename3" .
 			" FROM c_commu_topic_comment" .
 			" WHERE c_commu_topic_id = " . quote4db($topic['c_commu_topic_id']);
@@ -1490,4 +1490,4 @@ function t_get_user_hash($c_member_id, $length = 12)
 	return substr(md5($seed), 0, $length);
 }
 
-?>
+

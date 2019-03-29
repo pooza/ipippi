@@ -5,10 +5,10 @@
 <tr>
 <td width="600" align="center">
 
-({*¤³¤³¤«¤é¡§ËÜÂÎ*})
+({*ã“ã“ã‹ã‚‰ï¼šæœ¬ä½“*})
 <div class="bg_01 bg_09" style="width:600px;height:24px;border-left:none 0px;border-right:none 0px;border-top:none 0px;">
 <form action="./do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_home_search">
 
@@ -17,8 +17,8 @@
 <td align="center" style="height:24px;">
 <img src="./skin/inc_search_box/icon.gif" alt="search" style="width:62px;height:20px;" class="icon">
 <input type="text" size="30" name="q" class="text border_01" value=""	style="width:180px;">
-<input type="image" src="./skin/inc_search_box/button_1.gif" value="diary" alt="Æüµ­" border="0" name="diary" class="button" style="width:62px;height:20px;">
-<input type="image" src="./skin/inc_search_box/button_2.gif" value="community" alt="¥³¥ß¥å¥Ë¥Æ¥£" border="0" name="community" class="button" style="width:62px;height:20px;">
+<input type="image" src="./skin/inc_search_box/button_1.gif" value="diary" alt="æ—¥è¨˜" border="0" name="diary" class="button" style="width:62px;height:20px;">
+<input type="image" src="./skin/inc_search_box/button_2.gif" value="community" alt="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£" border="0" name="community" class="button" style="width:62px;height:20px;">
 <input type="image" src="./skin/inc_search_box/button_3.gif" value="web" alt="web" border="0" name="web" class="button" style="width:62px;height:20px;">
 </td>
 </tr>
@@ -26,11 +26,11 @@
 
 </form>
 </div>
-({*¤³¤³¤Ş¤Ç¡§ËÜÂÎ*})
+({*ã“ã“ã¾ã§ï¼šæœ¬ä½“*})
 
 </td>
 <td width="120" align="right" nowrap>
-<span style="font-size:10px">¸½ºß¤Î²ñ°÷¿ô: ({$count_all_members|number_format})Ì¾</span>
+<span style="font-size:10px">ç¾åœ¨ã®ä¼šå“¡æ•°: ({$count_all_members|number_format})å</span>
 </td>
 </tr>
 <tr>

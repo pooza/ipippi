@@ -4,7 +4,7 @@
 function pageAction_h_com_add_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$name = $requests['name'];
 		$c_commu_category_id = $requests['c_commu_category_id'];
 		$info = $requests['info'];
@@ -15,10 +15,10 @@ function pageAction_h_com_add_confirm($smarty,$requests) {
 	//TODO:
 		$err_msg = array();
 		if (p_c_com_add_is_commu4c_commu_name($name))
-			$err_msg[] = "¤½¤Î¥³¥ß¥å¥Ë¥Æ¥£¤Ï¤¹¤Ç¤ËÂ¸ºß¤·¤Þ¤¹";
+			$err_msg[] = "ãã®ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã¯ã™ã§ã«å­˜åœ¨ã—ã¾ã™";
 
 	    if($upfile_obj["tmp_name"] && (t_get_image_size($upfile_obj) > 300*1024 || !t_check_image_format($upfile_obj)))
-	    	$err_msg[] = "²èÁü1¤Î¥µ¥¤¥º¤Ï300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤";
+	    	$err_msg[] = "ç”»åƒ1ã®ã‚µã‚¤ã‚ºã¯300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„";
 
 
 		if($err_msg){
@@ -34,9 +34,9 @@ function pageAction_h_com_add_confirm($smarty,$requests) {
 
 		$public_flag_list=
 		array(
-			'public' =>'»²²Ã¡§Ã¯¤Ç¤â»²²Ã²ÄÇ½¡¢·Ç¼¨ÈÄ¡§Á´°÷¤Ë¸ø³«',
-			'auth_sns' =>'»²²Ã¡§´ÉÍý¼Ô¤Î¾µÇ§¤¬É¬Í×¡¢·Ç¼¨ÈÄ¡§Á´°÷¤Ë¸ø³«',
-			'auth_commu_member' =>'»²²Ã¡§´ÉÍý¼Ô¤Î¾µÇ§¤¬É¬Í×¡¢·Ç¼¨ÈÄ¡§¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô¤Ë¤Î¤ß¸ø³«',
+			'public' =>'å‚åŠ ï¼šèª°ã§ã‚‚å‚åŠ å¯èƒ½ã€æŽ²ç¤ºæ¿ï¼šå…¨å“¡ã«å…¬é–‹',
+			'auth_sns' =>'å‚åŠ ï¼šç®¡ç†è€…ã®æ‰¿èªãŒå¿…è¦ã€æŽ²ç¤ºæ¿ï¼šå…¨å“¡ã«å…¬é–‹',
+			'auth_commu_member' =>'å‚åŠ ï¼šç®¡ç†è€…ã®æ‰¿èªãŒå¿…è¦ã€æŽ²ç¤ºæ¿ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…ã«ã®ã¿å…¬é–‹',
 		);
 
 		foreach($c_commu_category_list as $each_c_commu_categfory){
@@ -47,7 +47,7 @@ function pageAction_h_com_add_confirm($smarty,$requests) {
 		$smarty->assign("c_commu_category_value", $c_commu_category_value);
 		$smarty->assign("public_flag_value", $public_flag_value);
 
-		//²èÁü¤òvar/tmp¥Õ¥©¥ë¥À¤Ë¥³¥Ô¡¼
+		//ç”»åƒã‚’var/tmpãƒ•ã‚©ãƒ«ãƒ€ã«ã‚³ãƒ”ãƒ¼
 		$sessid = session_id();
 		t_image_clear_tmp($sessid);
 		if( file_exists($upfile_obj["tmp_name"]) ) $tmpfile = t_image_save2tmp($upfile_obj, $sessid, "c");
@@ -66,4 +66,4 @@ function pageAction_h_com_add_confirm($smarty,$requests) {
 		$smarty->ext_display("h_com_add_confirm.tpl");
 
 }
-?>
+

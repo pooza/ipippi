@@ -1,9 +1,8 @@
 <?php
 function normalAction_h_config_mail($smarty,$requests)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("public") );
 	
 	$smarty->ext_display("h_config_mail.tpl");
 }
-?>

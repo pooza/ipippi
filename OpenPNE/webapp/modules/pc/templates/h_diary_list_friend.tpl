@@ -18,13 +18,13 @@
 <table class="container" border="0" cellspacing="0" cellpadding="0">
 <tr><td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************** -->
-<!-- ******¤³¤³¤«¤é¡§Æüµ­°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šæ—¥è¨˜ä¸€è¦§****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_01">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,23 +34,23 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})¿·ÃåÆüµ­</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})æ–°ç€æ—¥è¨˜</span></td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 
 ({if $total_num})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä·ï¿ôÉ½¼¨½ª¤ï¤ê -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä»¶æ•°è¡¨ç¤ºçµ‚ã‚ã‚Š -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -64,9 +64,9 @@
 <div class="padding_s">
 
 ({if $is_prev})
-<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=-1">Á°¤òÉ½¼¨</a>&nbsp;&nbsp;
-({/if})({$pager.start})·ï¡Á({$pager.end})·ï¤òÉ½¼¨({if $is_next})
-&nbsp;&nbsp;<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=1">¼¡¤òÉ½¼¨</a>
+<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=-1">å‰ã‚’è¡¨ç¤º</a>&nbsp;&nbsp;
+({/if})({$pager.start})ä»¶ï½({$pager.end})ä»¶ã‚’è¡¨ç¤º({if $is_next})
+&nbsp;&nbsp;<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=1">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -80,8 +80,8 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä·ï¿ôÉ½¼¨½ª¤ï¤ê -->
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äÆüµ­°ìÍ÷ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä»¶æ•°è¡¨ç¤ºçµ‚ã‚ã‚Š -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼æ—¥è¨˜ä¸€è¦§ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -95,7 +95,7 @@
 
 <div class="padding_s">
 
-({$item.r_datetime|date_format:"%YÇ¯%m·î%dÆü %H:%M"})
+({$item.r_datetime|date_format:"%Yå¹´%mæœˆ%dæ—¥ %H:%M"})
 
 </div>
 
@@ -120,8 +120,8 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äÆüµ­°ìÍ÷ -->
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡ä·ï¿ôÉ½¼¨½ª¤ï¤ê -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼æ—¥è¨˜ä¸€è¦§ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼ä»¶æ•°è¡¨ç¤ºçµ‚ã‚ã‚Š -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -135,9 +135,9 @@
 <div class="padding_s">
 
 ({if $is_prev})
-<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=-1">Á°¤òÉ½¼¨</a>&nbsp;&nbsp;
-({/if})({$pager.start})·ï¡Á({$pager.end})·ï¤òÉ½¼¨({if $is_next})
-&nbsp;&nbsp;<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=1">¼¡¤òÉ½¼¨</a>
+<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=-1">å‰ã‚’è¡¨ç¤º</a>&nbsp;&nbsp;
+({/if})({$pager.start})ä»¶ï½({$pager.end})ä»¶ã‚’è¡¨ç¤º({if $is_next})
+&nbsp;&nbsp;<a href="page.php?p=h_diary_list_friend&amp;page=({$page})&amp;direc=1">æ¬¡ã‚’è¡¨ç¤º</a>
 ({/if})
 
 </div>
@@ -151,7 +151,7 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡ä·ï¿ôÉ½¼¨½ª¤ï¤ê -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼ä»¶æ•°è¡¨ç¤ºçµ‚ã‚ã‚Š -->
 
 ({else})
 
@@ -167,7 +167,7 @@
 
 <div class="padding_s">
 
-¤Ş¤À({$WORD_MY_FRIEND})¤ÎÆüµ­¤¬¤¢¤ê¤Ş¤»¤ó¡£
+ã¾ã ({$WORD_MY_FRIEND})ã®æ—¥è¨˜ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 
 </div>
 
@@ -183,11 +183,11 @@
 
 ({/if})
 
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 <tr>
@@ -196,7 +196,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§Æüµ­°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šæ—¥è¨˜ä¸€è¦§****** -->
 <!-- ***************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -204,7 +204,7 @@
 ({if $c_rss_cache_list})
 
 <!-- ***************************** -->
-<!-- ******¤³¤³¤«¤é¡§Blog°ìÍ÷****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šBlogä¸€è¦§****** -->
 <a name="blog"></a>
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;margin:0px auto;" class="border_01">
 <tr>
@@ -215,21 +215,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})¿·ÃåBLOG</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})æ–°ç€BLOG</span></td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ¡ä¡äBlog°ìÍ÷ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ï¼ï¼Blogä¸€è¦§ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -243,7 +243,7 @@
 
 <div class="padding_s">
 
-({$item.r_datetime|date_format:"%YÇ¯%m·î%dÆü %H:%M"})
+({$item.r_datetime|date_format:"%Yå¹´%mæœˆ%dæ—¥ %H:%M"})
 
 </div>
 
@@ -267,12 +267,12 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ¡ä¡äBlog°ìÍ÷ -->
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ï¼ï¼Blogä¸€è¦§ -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 <tr>
@@ -281,7 +281,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§Blog°ìÍ÷****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šBlogä¸€è¦§****** -->
 <!-- ***************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -290,7 +290,7 @@
 
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td></tr>
 </table>({*END:container*})

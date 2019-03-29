@@ -22,7 +22,7 @@
  * @param boolean
  * @return string
  */
-// ¥Þ¥ë¥Á¥Ð¥¤¥ÈÊ¸»úÎóÂÐ±þÈÇ
+// ãƒžãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—åˆ—å¯¾å¿œç‰ˆ
 function smarty_modifier_t_truncate($string, $length = 80, $etc = '...',
                                   $break_words = true)
 {	
@@ -52,4 +52,4 @@ function smarty_modifier_t_truncate($string, $length = 80, $etc = '...',
 
 /* vim: set expandtab: */
 
-?>
+

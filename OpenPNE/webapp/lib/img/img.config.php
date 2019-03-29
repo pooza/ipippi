@@ -1,22 +1,22 @@
 <?php
 
 
-//¥Ç¥Ð¥Ã¥°´ØÏ¢
-$IMG_CONFIG['config_is_debug'] = false;   //¥Ç¥Ð¥Ã¥°¥â¡¼¥É¡ÊÌ¤¼ÂÁõ¡Ë
+//ãƒ‡ãƒãƒƒã‚°é–¢é€£
+$IMG_CONFIG['config_is_debug'] = false;   //ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰ï¼ˆæœªå®Ÿè£…ï¼‰
 
-//¥­¥ã¥Ã¥·¥å´ØÏ¢
-$IMG_CONFIG['config_cache_source_enabled'] = false;  //¥­¥ã¥Ã¥·¥å»È¤¦¤«¤É¤¦¤«
+//ã‚­ãƒ£ãƒƒã‚·ãƒ¥é–¢é€£
+$IMG_CONFIG['config_cache_source_enabled'] = false;  //ã‚­ãƒ£ãƒƒã‚·ãƒ¥ä½¿ã†ã‹ã©ã†ã‹
 
-$IMG_CONFIG['config_cache_source_directory'] = DOCUMENT_ROOT . '/var/img_cache/';  //¥­¥ã¥Ã¥·¥å¥Ç¥£¥ì¥¯¥È¥ê
+$IMG_CONFIG['config_cache_source_directory'] = DOCUMENT_ROOT . '/var/img_cache/';  //ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
-//¥Õ¥©¡¼¥Þ¥Ã¥È´ØÏ¢
+//ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆé–¢é€£
 /**
- * ¥Õ¥©¡¼¥Þ¥Ã¥È»ØÄê¤ÎÍ¥Àè½ç°Ì
- * £±¡§GET¤ÇÅÏ¤µ¤ì¤ë¥Ñ¥é¥á¡¼¥¿f
- * £²¡§f¤¬¤Ê¤±¤ì¤Ð¡¢Á´Éô'config_thumbnail_format'¤Ë½¾¤¦
- * £³¡§'config_thumbnail_format'¤¬¤Ê¤±¤ì¤Ð¡¢¤½¤Î¤Þ¤Þ½ÐÎÏ
+ * ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆæŒ‡å®šã®å„ªå…ˆé †ä½
+ * ï¼‘ï¼šGETã§æ¸¡ã•ã‚Œã‚‹ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿f
+ * ï¼’ï¼šfãŒãªã‘ã‚Œã°ã€å…¨éƒ¨'config_thumbnail_format'ã«å¾“ã†
+ * ï¼“ï¼š'config_thumbnail_format'ãŒãªã‘ã‚Œã°ã€ãã®ã¾ã¾å‡ºåŠ›
  * 
  */
 $IMG_CONFIG['config_thumbnail_format'] = null;
 
-?>
+

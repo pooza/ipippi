@@ -2,7 +2,7 @@
 function doAction_h_schedule_add_insert_c_schedule($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$title = $request['title'];
 	$body = $request['body'];
 	$start_year = $request['start_year'];
@@ -64,8 +64,8 @@ function doAction_h_schedule_add_insert_c_schedule($request) {
   } else {
     $end_time = null;
   }  
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
@@ -76,4 +76,4 @@ function doAction_h_schedule_add_insert_c_schedule($request) {
 
 	client_redirect("page.php?p=h_calendar");
 }
-?>
+

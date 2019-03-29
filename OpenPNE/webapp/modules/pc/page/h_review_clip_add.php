@@ -3,7 +3,7 @@
 function pageAction_h_review_clip_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_id = $requests['c_review_id'];
 	// ----------
 
@@ -11,4 +11,4 @@ function pageAction_h_review_clip_add($smarty,$requests) {
 	$smarty->assign('c_review', p_h_review_list_product_c_review4c_review_id($c_review_id));
 	$smarty->ext_display('h_review_clip_add.tpl');	
 }
-?>
+

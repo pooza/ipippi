@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">ºĞ­ÆÃ¨¡§({$c_commu.name})</font></center>
+<center><font color="orange">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¼š({$c_commu.name})</font></center>
 <hr>
 ({if $c_siteadmin})
 ({$c_siteadmin|smarty:nodefaults})
@@ -8,81 +8,81 @@
 ({/if})
 ({$c_commu.info|nl2br})<br>
 ({if $c_commu.image_filename})
-ºĞ­ÆÃ¨²èÁü¡§[<a href="img.php?filename=({$c_commu.image_filename})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu.image_filename})&amp;f=jpg">Âç</a>]<br>({/if})
+ï½ºï¾ï½­ï¾†ï¾ƒï½¨ç”»åƒï¼š[<a href="img.php?filename=({$c_commu.image_filename})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu.image_filename})&amp;f=jpg">å¤§</a>]<br>({/if})
 ({if !$relation_c_member_and_c_commu.join && !$relation_c_member_and_c_commu.wait})
-<a href="do_ktai.php?cmd=inc_join_c_commu&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">¤³¤ÎºĞ­ÆÃ¨¤Ë»²²Ã</a><br>
+<a href="do_ktai.php?cmd=inc_join_c_commu&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ã“ã®ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã«å‚åŠ </a><br>
 ({/if})
 <hr>
 ({if $is_c_commu_view})
-¢£¥È¥Ô¥Ã¥¯¥ê¥¹¥È<br>
+â– ãƒˆãƒ”ãƒƒã‚¯ãƒªã‚¹ãƒˆ<br>
 ({foreach from=$new_topic_comment item=item})
 [({$item.r_datetime|date_format:"%m/%d"})]<a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$item.c_commu_topic_id})&amp;({$tail})">({$item.name})</a>(({$item.count_comments}))<br>
 ({foreachelse})
-¥È¥Ô¥Ã¥¯¤Ï¤¢¤ê¤Ş¤»¤ó<br>
+ãƒˆãƒ”ãƒƒã‚¯ã¯ã‚ã‚Šã¾ã›ã‚“<br>
 ({/foreach})
 ({if $new_topic_comment})
-¢ª<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">¤â¤Ã¤È¸«¤ë</a><br>
+â†’<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 ({/if})
 <br>
-¢£¥¤¥Ù¥ó¥È¥ê¥¹¥È<br>
+â– ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒˆ<br>
 ({foreach from=$new_topic_comment_event item=item})
 [({$item.r_datetime|date_format:"%m/%d"})]<a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$item.c_commu_topic_id})&amp;({$tail})">({$item.name})</a>(({$item.count_comments}))<br>
 ({foreachelse})
-¥¤¥Ù¥ó¥È¤Ï¤¢¤ê¤Ş¤»¤ó<br>
+ã‚¤ãƒ™ãƒ³ãƒˆã¯ã‚ã‚Šã¾ã›ã‚“<br>
 ({/foreach})
 ({if $new_topic_comment_event})
-¢ª<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">¤â¤Ã¤È¸«¤ë</a><br>
+â†’<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ã‚‚ã£ã¨è¦‹ã‚‹</a><br>
 ({/if})
 ({if $relation_c_member_and_c_commu.join})
 <br>
-¡ú<a href="ktai_page.php?p=c_topic_add&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">¥È¥Ô¥Ã¥¯ºîÀ®</a><br>
+â˜…<a href="ktai_page.php?p=c_topic_add&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ãƒˆãƒ”ãƒƒã‚¯ä½œæˆ</a><br>
 ({/if})
 ({/if})
 <br>
 
-´ÉÍı¿Í:<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$c_commu.c_member_id_admin})&amp;({$tail})">({$c_commu.c_member_admin.nickname})</a><br>
+ç®¡ç†äºº:<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$c_commu.c_member_id_admin})&amp;({$tail})">({$c_commu.c_member_admin.nickname})</a><br>
 <br>
-¢£ºĞ­ÆÃ¨ÒİÊŞ°(({$c_commu.count_member}))<br>
+â– ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¾’ï¾ï¾Šï¾ï½°(({$c_commu.count_member}))<br>
 ({foreach from=$c_commu_member_list item=c_commu_member })
 <a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$c_commu_member.c_member_id})&({$tail})">({$c_commu_member.nickname})<br>
 ({/foreach})
 <br>
-<a href="ktai_page.php?p=c_member_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">¢ªÁ´¤ÆÉ½¼¨</a><br>
+<a href="ktai_page.php?p=c_member_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">â†’å…¨ã¦è¡¨ç¤º</a><br>
 <br>
-<a href="ktai_page.php?p=c_invite&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">ºĞ­ÆÃ¨¤ò¤¹¤¹¤á¤ë</a><br>
+<a href="ktai_page.php?p=c_invite&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã‚’ã™ã™ã‚ã‚‹</a><br>
 ({if !$relation_c_member_and_c_commu.join&&!$relation_c_member_and_c_commu.wait})
-<a href="do_ktai.php?cmd=inc_join_c_commu&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">¤³¤ÎºĞ­ÆÃ¨¤Ë»²²Ã</a><br>
+<a href="do_ktai.php?cmd=inc_join_c_commu&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">ã“ã®ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã«å‚åŠ </a><br>
 ({/if})
 ({if $relation_c_member_and_c_commu.join&&$c_commu.c_member_id_admin!=$u})
-<a href="do_ktai.php?cmd=inc_leave_c_commu&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">¤³¤ÎºĞ­ÆÃ¨¤«¤éÂà²ñ</a><br>
+<a href="do_ktai.php?cmd=inc_leave_c_commu&amp;target_c_commu_id=({$c_commu.c_commu_id})&({$tail})">ã“ã®ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã‹ã‚‰é€€ä¼š</a><br>
 ({/if})
 
 ({if $relation_c_member_and_c_commu.join})
 <hr>
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
-¤³¤ÎºĞ­ÆÃ¨¤Î½ñ¤­¹ş¤ß¤ò¹°À²Ò°Ù¤Ç<br>
-<input type="radio" value="1" name="is_receive_mail"({if $is_receive_mail}) checked="checked"({/if})>¼õ¤±¼è¤ë<br>
-<input type="radio" value="0" name="is_receive_mail"({if !$is_receive_mail}) checked="checked"({/if})>¼õ¤±¼è¤é¤Ê¤¤<br>
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
+ã“ã®ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã®æ›¸ãè¾¼ã¿ã‚’ï½¹ï½°ï¾€ï½²ï¾’ï½°ï¾™ã§<br>
+<input type="radio" value="1" name="is_receive_mail"({if $is_receive_mail}) checked="checked"({/if})>å—ã‘å–ã‚‹<br>
+<input type="radio" value="0" name="is_receive_mail"({if !$is_receive_mail}) checked="checked"({/if})>å—ã‘å–ã‚‰ãªã„<br>
 ({if $smarty.const.OPENPNE_ENABLE_PC})
-¤³¤ÎºĞ­ÆÃ¨¤Î½ñ¤­¹ş¤ß¤òPCÒ°Ù¤Ç<br>
-<input type="radio" value="1" name="is_receive_mail_pc"({if $is_receive_mail_pc}) checked="checked"({/if})>¼õ¤±¼è¤ë<br>
-<input type="radio" value="0" name="is_receive_mail_pc"({if !$is_receive_mail_pc}) checked="checked"({/if})>¼õ¤±¼è¤é¤Ê¤¤<br>
+ã“ã®ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã®æ›¸ãè¾¼ã¿ã‚’PCï¾’ï½°ï¾™ã§<br>
+<input type="radio" value="1" name="is_receive_mail_pc"({if $is_receive_mail_pc}) checked="checked"({/if})>å—ã‘å–ã‚‹<br>
+<input type="radio" value="0" name="is_receive_mail_pc"({if !$is_receive_mail_pc}) checked="checked"({/if})>å—ã‘å–ã‚‰ãªã„<br>
 ({/if})
 <input type="hidden" name="cmd" value="c_home_update_is_receive_mail">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
-<input type="submit" value="ÀßÄê"><br>
+<input type="submit" value="è¨­å®š"><br>
 </form>
 ({/if})
 
 <hr>
 ({if $u == $c_commu.c_member_id_admin})
-<a href="ktai_page.php?p=c_edit&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ºĞ­ÆÃ¨ÊÔ½¸</a><br>
-<a href="ktai_page.php?p=c_edit_member&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ºĞ­ÆÃ¨ÒİÊŞ°ÊÔ½¸</a><br>
+<a href="ktai_page.php?p=c_edit&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ç·¨é›†</a><br>
+<a href="ktai_page.php?p=c_edit_member&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¾’ï¾ï¾Šï¾ï½°ç·¨é›†</a><br>
 <br>
 ({/if})
-<a href="ktai_page.php?p=h_com_find_all&amp;({$tail})">ºĞ­ÆÃ¨¸¡º÷¤ËÌá¤ë</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_com_find_all&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨æ¤œç´¢ã«æˆ»ã‚‹</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

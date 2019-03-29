@@ -11,4 +11,4 @@ function pageAction_h_invite_end($smarty,$requests) {
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_invite_end.tpl");
 }
-?>
+

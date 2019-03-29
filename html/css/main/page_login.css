@@ -8,7 +8,7 @@ div#container_login {
 	padding: 0px ;
 }
 
-/*¥Ñ¥Æ¥ó¥È¥µ¥í¥ó¥í¥´¤Î°ÌÃÖ¾ğÊó¡Êbefore login¡Ë*/
+/*ãƒ‘ãƒ†ãƒ³ãƒˆã‚µãƒ­ãƒ³ãƒ­ã‚´ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div#container_login a.patentsalon {
 	display: block ;
@@ -20,7 +20,7 @@ div#container_login a.patentsalon {
 	background-color: transparent ;
 }
 
-/******* ¥á¥¤¥ó¥Ü¥¿¥ó¶¦ÄÌ¤Î°ÌÃÖ¾ğÊó *******/
+/******* ãƒ¡ã‚¤ãƒ³ãƒœã‚¿ãƒ³å…±é€šã®ä½ç½®æƒ…å ± *******/
 
 div#container_login img.bg {
 	display: block ;
@@ -47,7 +47,7 @@ div#container_login a * {
 div#container_login div.header {
 }
 
-/******* ¥Ğ¥Ê¡¼¤Î°ÌÃÖ¾ğÊó *******/
+/******* ãƒãƒŠãƒ¼ã®ä½ç½®æƒ…å ± *******/
 
 div#container_login div.banner ,
 div#container_login a.banner {
@@ -60,7 +60,7 @@ div#container_login a.banner {
 	z-index: 200 ;
 }
 
-/******* ¥á¥¤¥ó¥Ü¥¿¥ó¶¦ÄÌ¤Î°ÌÃÖ¾ğÊó *******/
+/******* ãƒ¡ã‚¤ãƒ³ãƒœã‚¿ãƒ³å…±é€šã®ä½ç½®æƒ…å ± *******/
 
 div#container_login div.header a.main_menu {
 	display: block ;
@@ -70,7 +70,7 @@ div#container_login div.header a.main_menu {
 	top: 0px ;
 }
 
-/*¥í¥°¥¤¥ó¥Ü¥¿¥ó¤Î°ÌÃÖ¾ğÊó¡Êbefore login¡Ë*/
+/*ãƒ­ã‚°ã‚¤ãƒ³ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div#container_login div.header a.login {
 	left: 253px ;
@@ -78,7 +78,7 @@ div#container_login div.header a.login {
 	z-index: 10 ;
 }
 
-/*¿·µ¬ÅĞÏ¿¥Ü¥¿¥ó¤Î°ÌÃÖ¾ğÊó¡Êbefore login¡Ë*/
+/*æ–°è¦ç™»éŒ²ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div#container_login div.header a.new_regist {
 	left: 417px ;
@@ -86,7 +86,7 @@ div#container_login div.header a.new_regist {
 	z-index: 20 ;
 }
 
-/*¥Ø¥ë¥×¥Ü¥¿¥ó¤Î°ÌÃÖ¾ğÊó¡Êbefore login¡Ë*/
+/*ãƒ˜ãƒ«ãƒ—ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±ï¼ˆbefore loginï¼‰*/
 
 div#container_login div.header a.help {
 	left: 512px ;
@@ -98,9 +98,9 @@ div#container_login input ,
 div#container_login a {
 }
 
-/******* ¥í¥°¥¤¥ó¥Ñ¥Í¥ë°ÌÃÖ¾ğÊó¥º *******/
+/******* ãƒ­ã‚°ã‚¤ãƒ³ãƒ‘ãƒãƒ«ä½ç½®æƒ…å ±ã‚º *******/
 
-/*¥í¥°¥¤¥óID¥Õ¥©¡¼¥à¤Î°ÌÃÖ¾ğÊó*/
+/*ãƒ­ã‚°ã‚¤ãƒ³IDãƒ•ã‚©ãƒ¼ãƒ ã®ä½ç½®æƒ…å ±*/
 
 div#container_login input#username {
 	display: block ;
@@ -112,7 +112,7 @@ div#container_login input#username {
 	font-size: 10pt ;
 }
 
-/*¥Ñ¥¹¥ï¡¼¥É¥Õ¥©¡¼¥à¤Î°ÌÃÖ¾ğÊó*/
+/*ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãƒ•ã‚©ãƒ¼ãƒ ã®ä½ç½®æƒ…å ±*/
 
 div#container_login input#password {
 	display: block ;
@@ -124,7 +124,7 @@ div#container_login input#password {
 	font-size: 10pt ;
 }
 
-/*¥í¥°¥¤¥ó¥Ü¥¿¥ó¤Î°ÌÃÖ¾ğÊó*/
+/*ãƒ­ã‚°ã‚¤ãƒ³ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±*/
 
 div#container_login input#button_login {
 	display: block ;
@@ -137,7 +137,7 @@ div#container_login input#button_login {
 	background-color: transparent ;
 }
 
-/*¿·µ¬ÅĞÏ¿¥Ü¥¿¥ó¤Î°ÌÃÖ¾ğÊó*/
+/*æ–°è¦ç™»éŒ²ãƒœã‚¿ãƒ³ã®ä½ç½®æƒ…å ±*/
 
 div#container_login a#button_new_regist {
 	display: block ;
@@ -149,8 +149,8 @@ div#container_login a#button_new_regist {
 	border: none 0px ;
 }
 
-/*¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¤Î°ÌÃÖ¾ğÊó*/
-/*¥Ñ¥¹¥ï¡¼¥ÉËº¤ì¤¿¿Í¥ê¥ó¥¯¤Î°ÌÃÖ¾ğÊó*/
+/*ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®ä½ç½®æƒ…å ±*/
+/*ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¿˜ã‚ŒãŸäººãƒªãƒ³ã‚¯ã®ä½ç½®æƒ…å ±*/
 
 div#container_login div.msg {
 	display: block ;
@@ -174,7 +174,7 @@ div#container_login div.msg a.password_query {
 	font-size: 5pt ;
 }
 
-/******* ¥Õ¥Ã¥¿¡¼¤Î°ÌÃÖ¾ğÊó *******/
+/******* ãƒ•ãƒƒã‚¿ãƒ¼ã®ä½ç½®æƒ…å ± *******/
 
 div#container_login .footer {
 	display: block ;

@@ -2,7 +2,7 @@
 function pageAction_f_show_image($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
@@ -17,9 +17,9 @@ function pageAction_f_show_image($smarty,$requests) {
 	//20050830shou
 	$smarty->assign("u", $u);
 
-	//¥á¥ó¥Ð¡¼¾ðÊó
+	//ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
 	$smarty->ext_display("f_show_image.tpl");
 }
-?>
+

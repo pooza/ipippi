@@ -18,15 +18,15 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧���ߥ�˥ƥ���Ͷ****** -->
+<!-- ******ここから：コミュニティ勧誘****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_invite_insert_c_message_commu_invite">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
@@ -40,19 +40,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td align="center">
-<!-- *�������顧���ߥ�˥ƥ���Ͷ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：コミュニティ勧誘＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���Υ��ߥ�˥ƥ���({$WORD_MY_FRIEND})�˶�����</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">このコミュニティを({$WORD_MY_FRIEND})に教える</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧���ߥ�˥ƥ���Ͷʸ�� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：コミュニティ勧誘文章 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -65,7 +65,7 @@
 
 <div class="padding_w_s lh_120">
 
-({$WORD_MY_FRIEND})�ˡ����Υ��ߥ�˥ƥ��ξҲ��å��������������ޤ���
+({$WORD_MY_FRIEND})に、このコミュニティの紹介メッセージを送信します。
 
 </div>
 
@@ -78,8 +78,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ����ߥ�˥ƥ���Ͷʸ�� -->
-<!-- �������顧������ -->
+<!-- ここまで：コミュニティ勧誘文章 -->
+<!-- ここから：主内容 -->
 <table border="0"cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -88,7 +88,7 @@
 
 <div class="padding_s">
 
-�˥å��͡���
+ニックネーム
 
 </div>
 
@@ -125,7 +125,7 @@
 
 <div class="padding_s">
 
-��å�������Ǥ�ա�
+メッセージ（任意）
 
 </div>
 
@@ -156,13 +156,13 @@
 
 <div style="text-align:center;padding-bottom:10px;">
 
-<input type="submit" value="������������">
+<input type="submit" value="　送　　信　">
 
 </div>
 
-��({$WORD_MY_FRIEND})�ʳ��ˤ��Υ��ߥ�˥ƥ��򶵤�������硢<br>
-���οͤΥڡ�������ľ�ܥ�å����������äƤ���������<br>
-�᡼����˥��ߥ�˥ƥ���URL��Ž�դ���������Ǥ���<br>
+※({$WORD_MY_FRIEND})以外にこのコミュニティを教えたい場合、<br>
+その人のページから直接メッセージを送ってください。<br>
+メール内にコミュニティのURLを貼付すると便利です。<br>
 
 </div>
 
@@ -175,12 +175,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ߥ�˥ƥ���Ͷ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：コミュニティ勧誘＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -192,7 +192,7 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ����ߥ�˥ƥ���Ͷ****** -->
+<!-- ******ここまで：コミュニティ勧誘****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -200,7 +200,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

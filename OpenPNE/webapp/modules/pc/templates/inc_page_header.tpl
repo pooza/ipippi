@@ -32,18 +32,18 @@
 ({else})
 <a class="logo_home" href="./page.php?p=h_home"><img src="./skin/dummy.gif" alt="({$smarty.const.SNS_NAME})"></a>
 
-<a class="main_menu h_home" href="./page.php?p=h_home"><img src="./skin/dummy.gif" alt="¥Þ¥¤¥Û¡¼¥à"></a>
-<a class="main_menu h_invite" href="./page.php?p=h_invite"><img src="./skin/dummy.gif" alt="({$smarty.const.WORD_FRIEND})¤ò¾·ÂÔ¤¹¤ë"></a>
-<a class="main_menu h_diary_list_all" href="./page.php?p=h_diary_list_all"><img src="./skin/dummy.gif" alt="¿·ÃåÆüµ­°ìÍ÷"></a>
-<a class="main_menu h_ranking" href="./page.php?p=h_zyunban0621"><img src="./skin/dummy.gif" alt="¥é¥ó¥­¥ó¥°"></a>
-<a class="main_menu h_config" href="./page.php?p=h_config"><img src="./skin/dummy.gif" alt="ÀßÄêÊÑ¹¹"></a>
-<a class="main_menu logout" href="./do.php?cmd=inc_page_header_logout&amp;sessid=({$PHPSESSID})"><img src="./skin/dummy.gif" alt="¥í¥°¥¢¥¦¥È"></a>
+<a class="main_menu h_home" href="./page.php?p=h_home"><img src="./skin/dummy.gif" alt="ãƒžã‚¤ãƒ›ãƒ¼ãƒ "></a>
+<a class="main_menu h_invite" href="./page.php?p=h_invite"><img src="./skin/dummy.gif" alt="({$smarty.const.WORD_FRIEND})ã‚’æ‹›å¾…ã™ã‚‹"></a>
+<a class="main_menu h_diary_list_all" href="./page.php?p=h_diary_list_all"><img src="./skin/dummy.gif" alt="æ–°ç€æ—¥è¨˜ä¸€è¦§"></a>
+<a class="main_menu h_ranking" href="./page.php?p=h_zyunban0621"><img src="./skin/dummy.gif" alt="ãƒ©ãƒ³ã‚­ãƒ³ã‚°"></a>
+<a class="main_menu h_config" href="./page.php?p=h_config"><img src="./skin/dummy.gif" alt="è¨­å®šå¤‰æ›´"></a>
+<a class="main_menu logout" href="./do.php?cmd=inc_page_header_logout&amp;sessid=({$PHPSESSID})"><img src="./skin/dummy.gif" alt="ãƒ­ã‚°ã‚¢ã‚¦ãƒˆ"></a>
 
-<a class="search_menu h_search" href="./page.php?p=h_search"><img src="./skin/dummy.gif" alt="¥á¥ó¥Ð¡¼¸¡º÷"></a>
-<a class="search_menu h_com_find_all" href="./page.php?p=h_com_find_all"><img src="./skin/dummy.gif" alt="¥³¥ß¥å¥Ë¥Æ¥£"></a>
-<a class="search_menu h_review_search" href="./page.php?p=h_review_search"><img src="./skin/dummy.gif" alt="¥ì¥Ó¥å¡¼"></a>
+<a class="search_menu h_search" href="./page.php?p=h_search"><img src="./skin/dummy.gif" alt="ãƒ¡ãƒ³ãƒãƒ¼æ¤œç´¢"></a>
+<a class="search_menu h_com_find_all" href="./page.php?p=h_com_find_all"><img src="./skin/dummy.gif" alt="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£"></a>
+<a class="search_menu h_review_search" href="./page.php?p=h_review_search"><img src="./skin/dummy.gif" alt="ãƒ¬ãƒ“ãƒ¥ãƒ¼"></a>
 ({/if})
 
-<a class="patentsalon" href="http://www.patentsalon.com/" target="_blank"><img src="./skin/dummy.gif" alt="¥Ñ¥Æ¥ó¥È¥µ¥í¥ó"></a>
+<a class="patentsalon" href="http://www.patentsalon.com/" target="_blank"><img src="./skin/dummy.gif" alt="ãƒ‘ãƒ†ãƒ³ãƒˆã‚µãƒ­ãƒ³"></a>
 
 </div>

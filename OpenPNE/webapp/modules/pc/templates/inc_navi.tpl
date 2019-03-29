@@ -4,15 +4,15 @@
 <img src="img.php?filename=skin_navi_h" class="bg">
 <div class="h">
 
-<a class="h_home" href="./page.php?p=h_home" ><img src="./skin/dummy.gif" alt="¥Û¡¼¥à"></a>
-<a class="fh_friend_list" href="./page.php?p=fh_friend_list"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})¥ê¥¹¥È"></a>
-<a class="fh_diary_list" href="./page.php?p=fh_diary_list"><img src="./skin/dummy.gif" alt="Æüµ­"></a>
-<a class="h_message_box" href="./page.php?p=h_message_box"><img src="./skin/dummy.gif" alt="¥á¥Ã¥»¡¼¥¸"></a>
-<a class="h_ashiato" href="./page.php?p=h_ashiato"><img src="./skin/dummy.gif" alt="¤¢¤·¤¢¤È"></a>
-<a class="h_favorite" href="./page.php?p=h_bookmark_list"><img src="./skin/dummy.gif" alt="¤ªµ¤¤ËÆþ¤ê"></a>
-<a class="h_review" href="./page.php?p=fh_review_list_member"><img src="./skin/dummy.gif" alt="¥Þ¥¤¥ì¥Ó¥å¡¼"></a>
-<a class="h_prof" href="./page.php?p=h_prof"><img src="./skin/dummy.gif" alt="¥×¥í¥Õ¥£¡¼¥ë³ÎÇ§"></a>
-<a class="h_config_prof" href="./page.php?p=h_config_prof"><img src="./skin/dummy.gif" alt="¥×¥í¥Õ¥£¡¼¥ëÊÑ¹¹"></a>
+<a class="h_home" href="./page.php?p=h_home" ><img src="./skin/dummy.gif" alt="ãƒ›ãƒ¼ãƒ "></a>
+<a class="fh_friend_list" href="./page.php?p=fh_friend_list"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})ãƒªã‚¹ãƒˆ"></a>
+<a class="fh_diary_list" href="./page.php?p=fh_diary_list"><img src="./skin/dummy.gif" alt="æ—¥è¨˜"></a>
+<a class="h_message_box" href="./page.php?p=h_message_box"><img src="./skin/dummy.gif" alt="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸"></a>
+<a class="h_ashiato" href="./page.php?p=h_ashiato"><img src="./skin/dummy.gif" alt="ã‚ã—ã‚ã¨"></a>
+<a class="h_favorite" href="./page.php?p=h_bookmark_list"><img src="./skin/dummy.gif" alt="ãŠæ°—ã«å…¥ã‚Š"></a>
+<a class="h_review" href="./page.php?p=fh_review_list_member"><img src="./skin/dummy.gif" alt="ãƒžã‚¤ãƒ¬ãƒ“ãƒ¥ãƒ¼"></a>
+<a class="h_prof" href="./page.php?p=h_prof"><img src="./skin/dummy.gif" alt="ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ç¢ºèª"></a>
+<a class="h_config_prof" href="./page.php?p=h_config_prof"><img src="./skin/dummy.gif" alt="ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«å¤‰æ›´"></a>
 
 </div>
 
@@ -21,15 +21,15 @@
 <img src="img.php?filename=skin_navi_f" class="bg">
 <div class="f">
 
-<a class="f_home" href="./page.php?p=f_home&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="¥Û¡¼¥à"></a>
-<a class="fh_friend_list" href="./page.php?p=fh_friend_list&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="({$WORD_FRIEND})¥ê¥¹¥È"></a>
-<a class="fh_diary_list" href="./page.php?p=fh_diary_list&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="Æüµ­¤òÆÉ¤à"></a>
-<a class="f_message_send" href="./page.php?p=f_message_send&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="¥á¥Ã¥»¡¼¥¸¤òÁ÷¤ë"></a>
-<a class="f_bookmark_add" href="./page.php?p=f_bookmark_add&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="¤ªµ¤¤ËÆþ¤ê¤ËÄÉ²Ã"></a>
-<a class="fh_review_list_member" href="./page.php?p=fh_review_list_member&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="¤ª¤¹¤¹¤á¥ì¥Ó¥å¡¼"></a>
-<a class="f_invite" href="./page.php?p=f_invite&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})¤Ë¾Ò²ð"></a>
-<a class="fh_link_request" href="./page.php?p=f_link_request&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})¤ËÄÉ²Ã"></a>
-<a class="f_intro_edit" href="./page.php?p=f_intro_edit&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="¾Ò²ðÊ¸¤òÊÔ½¸"></a>
+<a class="f_home" href="./page.php?p=f_home&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="ãƒ›ãƒ¼ãƒ "></a>
+<a class="fh_friend_list" href="./page.php?p=fh_friend_list&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="({$WORD_FRIEND})ãƒªã‚¹ãƒˆ"></a>
+<a class="fh_diary_list" href="./page.php?p=fh_diary_list&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="æ—¥è¨˜ã‚’èª­ã‚€"></a>
+<a class="f_message_send" href="./page.php?p=f_message_send&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹"></a>
+<a class="f_bookmark_add" href="./page.php?p=f_bookmark_add&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="ãŠæ°—ã«å…¥ã‚Šã«è¿½åŠ "></a>
+<a class="fh_review_list_member" href="./page.php?p=fh_review_list_member&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="ãŠã™ã™ã‚ãƒ¬ãƒ“ãƒ¥ãƒ¼"></a>
+<a class="f_invite" href="./page.php?p=f_invite&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})ã«ç´¹ä»‹"></a>
+<a class="fh_link_request" href="./page.php?p=f_link_request&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})ã«è¿½åŠ "></a>
+<a class="f_intro_edit" href="./page.php?p=f_intro_edit&amp;target_c_member_id=({$INC_NAVI_c_member_id_friend})"><img src="./skin/dummy.gif" alt="ç´¹ä»‹æ–‡ã‚’ç·¨é›†"></a>
 
 </div>
 
@@ -38,12 +38,12 @@
 <img src="img.php?filename=skin_navi_c" class="bg">
 <div class="c">
 
-<a class="c_home" href="./page.php?p=c_home&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ã¥×"></a>
-<a class="c_bbs" href="./page.php?p=c_topic_list&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="·Ç¼¨ÈÄ"></a>
-<a href="page.php?p=c_member_review&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})" class="c_member_review"><img src="./skin/dummy.gif" alt="¥á¥ó¥Ð¡¼¥ì¥Ó¥å¡¼"></a>
-<a class="c_join" href="./page.php?p=c_join_commu&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã"></a>
-<a class="c_invite" href="./page.php?p=c_invite&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})¤Ë¶µ¤¨¤ë"></a>
-<a class="c_leave" href="./page.php?p=c_leave_commu&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="¥³¥ß¥å¥Ë¥Æ¥£¤òÂà²ñ"></a>
+<a class="c_home" href="./page.php?p=c_home&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒƒãƒ—"></a>
+<a class="c_bbs" href="./page.php?p=c_topic_list&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="æŽ²ç¤ºæ¿"></a>
+<a href="page.php?p=c_member_review&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})" class="c_member_review"><img src="./skin/dummy.gif" alt="ãƒ¡ãƒ³ãƒãƒ¼ãƒ¬ãƒ“ãƒ¥ãƒ¼"></a>
+<a class="c_join" href="./page.php?p=c_join_commu&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ "></a>
+<a class="c_invite" href="./page.php?p=c_invite&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="({$WORD_MY_FRIEND})ã«æ•™ãˆã‚‹"></a>
+<a class="c_leave" href="./page.php?p=c_leave_commu&amp;target_c_commu_id=({$INC_NAVI_c_commu_id})"><img src="./skin/dummy.gif" alt="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‚’é€€ä¼š"></a>
 
 </div>
 

@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******¤³¤³¤«¤é¡§Í§¿Í¥ê¥¹¥È¤ËÄÉ²Ã****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šå‹äººãƒªã‚¹ãƒˆã«è¿½åŠ ****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,19 +37,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§Í§¿Í¥ê¥¹¥È¤ËÄÉ²Ã¤ËÄÉ²Ã¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šå‹äººãƒªã‚¹ãƒˆã«è¿½åŠ ã«è¿½åŠ ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})¤ËÄÉ²Ã</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})ã«è¿½åŠ </span></td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -63,7 +63,7 @@
 <div class="padding_s">
 
 <span class="c_01">
-({$target_member.nickname}) ¤µ¤ó¤Ï¡¢´û¤Ë¤¢¤Ê¤¿¤Î({$WORD_MY_FRIEND})¤Ç¤¹¡£
+({$target_member.nickname}) ã•ã‚“ã¯ã€æ—¢ã«ã‚ãªãŸã®({$WORD_MY_FRIEND})ã§ã™ã€‚
 </span>
 
 <div class="padding_s">
@@ -82,7 +82,7 @@
 
 <div class="padding_s">
 
-¼Ì¿¿
+å†™çœŸ
 
 </div>
 
@@ -92,7 +92,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=f_home&target_c_member_id=({$target_member.c_member_id})">({if $target_member.image_filename})<img src="./img.php?filename=({$target_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=¼Ì¿¿ border=0>({/if})</a>
+<a href="page.php?p=f_home&target_c_member_id=({$target_member.c_member_id})">({if $target_member.image_filename})<img src="./img.php?filename=({$target_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=å†™çœŸ border=0>({/if})</a>
 
 </div>
 
@@ -110,7 +110,7 @@
 
 <div class="padding_s">
 
-Á÷¿®Àè
+é€ä¿¡å…ˆ
 
 </div>
 
@@ -133,12 +133,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§Í§¿Í¥ê¥¹¥È¤ËÄÉ²Ã¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šå‹äººãƒªã‚¹ãƒˆã«è¿½åŠ ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -148,14 +148,14 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§Í§¿Í¥ê¥¹¥È¤ËÄÉ²Ã****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šå‹äººãƒªã‚¹ãƒˆã«è¿½åŠ ****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

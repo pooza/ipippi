@@ -1,17 +1,17 @@
 <?php
 /**
-¥×¥í¥Õ¥£¡¼¥ë¤òËÜÅÐÏ¿
+ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ã‚’æœ¬ç™»éŒ²
 
-[°ú¿ô]
-regist¤ËÉ¬Í×¤Ê¤â¤Î
+[å¼•æ•°]
+registã«å¿…è¦ãªã‚‚ã®
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 regist_end
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-ÅÐÏ¿Ãæ¥á¥ó¥Ð¡¼(¥»¥Ã¥·¥ç¥óID¤òÃÎ¤é¤µ¤ì¤¿¥á¥ó¥Ð¡¼)
+[æ¨©é™]
+ç™»éŒ²ä¸­ãƒ¡ãƒ³ãƒãƒ¼(ã‚»ãƒƒã‚·ãƒ§ãƒ³IDã‚’çŸ¥ã‚‰ã•ã‚ŒãŸãƒ¡ãƒ³ãƒãƒ¼)
 
 */
 function doNormalAction_regist_prof_do_regist($requests)
@@ -24,15 +24,15 @@ function doNormalAction_regist_prof_do_regist($requests)
 	}
     //>
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$sid = $requests['sid'];
 	// ----------
 	
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥»¥Ã¥·¥ç¥ó¤¬Àµ¤·¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæ­£ã—ã„
 	
     if (!n_regist_intro_is_active_sid($sid)) {
-        $msg = "¤³¤Î¾·ÂÔURL¤Ï´û¤ËÌµ¸ú¤Ë¤Ê¤Ã¤Æ¤¤¤Þ¤¹¡£";
+        $msg = "ã“ã®æ‹›å¾…URLã¯æ—¢ã«ç„¡åŠ¹ã«ãªã£ã¦ã„ã¾ã™ã€‚";
         client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
         exit;
     }
@@ -41,7 +41,7 @@ function doNormalAction_regist_prof_do_regist($requests)
 	do_regist_prof_do_regist2_mail_send($sid);
 	$c_member_id_new = do_regist_prof_do_regist($sid);
 	
-	//¾·ÂÔ¼Ô¤È¥Õ¥ì¥ó¥É¥ê¥ó¥¯
+	//æ‹›å¾…è€…ã¨ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ³ã‚¯
     $sql = "SELECT * FROM c_member_pre"
         ." WHERE session='$sid'";
 	$one = get_array_one4db($sql);
@@ -52,11 +52,10 @@ function doNormalAction_regist_prof_do_regist($requests)
 	
 	do_common_link_friend($c_member_id_from,$c_member_id_to);
 
-	// pre ¤ÎÆâÍÆ¤òºï½ü
+	// pre ã®å†…å®¹ã‚’å‰Šé™¤
 	do_common_delete_c_member_pre4sid($sid);
 	
 	do_regist_prof_do_regist_mail_send($c_member_id_from , $c_member_id_to);
 	
 	client_redirect("normal.php?p=regist_end");
 }
-?>

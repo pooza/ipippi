@@ -18,13 +18,13 @@
 <table class="container" border="0" cellspacing="0" cellpadding="0">
 <tr><td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************************** -->
-<!-- ******�������顧��å��������������****** -->
+<!-- ******ここから：メッセージ送信先一覧****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_01">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,35 +34,35 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*�������顧header*})
-<!-- �������ȥ� -->
+({*ここから：header*})
+<!-- 小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:240px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">����å�����������</span></td>
+<td style="width:240px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">一括メッセージを送る</span></td>
 <td style="width:388px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="1" cellpadding="3" style="width:574px;">
 <tr>
 <td class="bg_03" align="center">
 
 <br><br>
-<span class="b_b c_00">������λ���ޤ�����</span>
+<span class="b_b c_00">送信完了しました。</span>
 <br><br><br>
 
 </td>
 </tr>
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 <tr>
@@ -71,23 +71,23 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ���å��������������****** -->
+<!-- ******ここまで：メッセージ送信先一覧****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ��ȥåפ�****** -->
+<!-- ******ここから：コミュニティトップへ****** -->
 <div id="link_community_top" align="center">
 
-<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=c_home&target_c_commu_id=({$c_commu_id})">[({$c_commu.name})]���ߥ�˥ƥ��ȥåפ�</a>
+<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=c_home&target_c_commu_id=({$c_commu_id})">[({$c_commu.name})]コミュニティトップへ</a>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=h_home">�ۡ�������</a>
+<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=h_home">ホームに戻る</a>
 
 </div>
-<!-- ******�����ޤǡ����ߥ�˥ƥ��ȥåפ�****** -->
+<!-- ******ここまで：コミュニティトップへ****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -95,7 +95,7 @@
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td></tr>
 </table>({*END:container*})

@@ -3,14 +3,14 @@
 function pageAction_c_event_invite($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 		// ----------
 
 		$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 		$c_commu_id = $c_topic['c_commu_id'];
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
@@ -22,9 +22,9 @@ function pageAction_c_event_invite($smarty,$requests) {
 		$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 		$smarty->assign("c_commu_id", $c_commu_id);
 		$smarty->assign("c_commu_topic_id", $c_commu_topic_id);
-		//¥Õ¥ì¥ó¥É¥ê¥¹¥È¤ò¥¢¥µ¥¤¥ó¤¹¤ë
+		//ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªã‚¹ãƒˆã‚’ã‚¢ã‚µã‚¤ãƒ³ã™ã‚‹
 		$smarty->assign("c_friend_list", p_f_home_c_friend_list4c_member_id($u));
 
 		$smarty->ext_display('c_event_invite.tpl');	
 }
-?>
+

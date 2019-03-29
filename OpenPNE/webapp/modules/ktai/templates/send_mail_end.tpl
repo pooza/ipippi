@@ -1,8 +1,8 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>Ò°ÙÁ÷¿®´°Î»</center>
+<center>ï¾’ï½°ï¾™é€ä¿¡å®Œäº†</center>
 <hr>
-Ò°Ù¤òÁ÷¿®¤·¤Ş¤·¤¿¡£
+ï¾’ï½°ï¾™ã‚’é€ä¿¡ã—ã¾ã—ãŸã€‚
 <hr>
 
 ({$inc_ktai_footer|smarty:nodefaults})

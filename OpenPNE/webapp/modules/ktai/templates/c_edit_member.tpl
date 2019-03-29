@@ -1,30 +1,30 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">ºĞ­ÆÃ¨ÒİÊŞ°¤ÎÊÔ½¸</font></center>
+<center><font color="orange">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¾’ï¾ï¾Šï¾ï½°ã®ç·¨é›†</font></center>
 <hr>
-ÒİÊŞ°¿ô¡§({$count_member|default:"0"})¿Í<br>
+ï¾’ï¾ï¾Šï¾ï½°æ•°ï¼š({$count_member|default:"0"})äºº<br>
 ({foreach from=$c_member_list item=item})
 ({$item.nickname})
-({if $item.c_member_id==$u})¡ù({else})<a href="do_ktai.php?cmd=c_edit_member_delete_c_commu_member&target_c_commu_id=({$c_commu.c_commu_id})&amp;target_c_member_id=({$item.c_member_id})&amp;({$tail})">ºï½ü</a>({/if})<br>
+({if $item.c_member_id==$u})â˜†({else})<a href="do_ktai.php?cmd=c_edit_member_delete_c_commu_member&target_c_commu_id=({$c_commu.c_commu_id})&amp;target_c_member_id=({$item.c_member_id})&amp;({$tail})">å‰Šé™¤</a>({/if})<br>
 ({/foreach})
 
 ({if $is_prev || $is_next})
 <br>
-({if $is_prev})<a href="ktai_page.php?p=c_member_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=-1&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=c_member_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=1&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=c_member_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=-1&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=c_member_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=1&amp;({$tail})">æ¬¡ã¸</a>({/if})
 <br>
 ({/if})
 
 ({if count($c_member_list) > 1})
 <hr>
 
-¢¡´ÉÍı¿Í¸òÂå¤ÎÍ×ÀÁ
+â—†ç®¡ç†äººäº¤ä»£ã®è¦è«‹
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="cmd" value="c_edit_member_insert_c_commu_admin_confirm">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
-ÒİÊŞ°<br>
+ï¾’ï¾ï¾Šï¾ï½°<br>
 <select name="target_c_member_id">
 ({foreach from=$c_member_list item=item})
 ({if $item.c_member_id != $u})
@@ -32,14 +32,14 @@
 ({/if})
 ({/foreach})
 </select><br>
-Ò¯¾°¼Ş<br>
+ï¾’ï½¯ï½¾ï½°ï½¼ï¾<br>
 <textarea name="body"></textarea><br>
-<input type="submit" value="Á÷¿®">
+<input type="submit" value="é€ä¿¡">
 </form>
 ({/if})
 
 <hr>
-<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ºĞ­ÆÃ¨Ä¯Ìß</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¾„ï½¯ï¾Œï¾Ÿ</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

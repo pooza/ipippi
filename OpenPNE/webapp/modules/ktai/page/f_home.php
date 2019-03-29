@@ -3,7 +3,7 @@ function pageAction_f_home($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
     
@@ -18,10 +18,10 @@ function pageAction_f_home($smarty, $requests)
 		
 	}
 
-    //´ÉÍý²èÌÌHTML
+    //ç®¡ç†ç”»é¢HTML
     $smarty->assign('c_siteadmin', p_common_c_siteadmin4target_pagename('k_f_home'));
 	
-	//¥¿¡¼¥²¥Ã¥È¤Îc_member
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®c_member
 
 	$is_friend = _db_is_friend($u, $target_c_member_id);
 	if ($is_friend) {
@@ -35,24 +35,23 @@ function pageAction_f_home($smarty, $requests)
 	}
 	$smarty->assign("target_c_member", $target_c_member);
 	
-	//¥¿¡¼¥²¥Ã¥È¤ÎºÇ¿·Æüµ­£µ·ï
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®æœ€æ–°æ—¥è¨˜ï¼•ä»¶
 	$smarty->assign("c_diary_list", k_p_f_home_c_diary_list4c_member_id($target_c_member_id, 5));
 	
-	//¥Õ¥ì¥ó¥É¥é¥ó¥À¥à£µ¿Í
+	//ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒ©ãƒ³ãƒ€ãƒ ï¼•äºº
 	$smarty->assign("c_friend_list", k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, 5));
 	
-	//»²²Ã¥³¥ß¥å¥Ë¥Æ¥£ºÇ¿·½ñ¤­¹þ¤ß£µ·ï
+	//å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æœ€æ–°æ›¸ãè¾¼ã¿ï¼•ä»¶
 	$smarty->assign("c_commu_list", k_p_f_home_c_commu_list_lastupdated4c_member_id($target_c_member_id, 5));
 	
-	//¥¿¡¼¥²¥Ã¥È¤È¼«Ê¬¤È¤Î´Ø·¸
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã¨è‡ªåˆ†ã¨ã®é–¢ä¿‚
 	$smarty->assign("relation", k_p_f_home_relationship4two_members($u, $target_c_member_id));
 
 	$smarty->assign('profile_list', db_common_c_profile_list());
 	
-	//¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë
+	//ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹
 	k_p_etc_do_ashiato($target_c_member_id, $u);
 	
 	$smarty->ext_display("f_home.tpl");
 }
 
-?>

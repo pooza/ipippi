@@ -4,26 +4,26 @@ function pageAction_h_message($smarty, $requests)
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_message_id = $requests['target_c_message_id'];
 	$from_h_home = $requests['from_h_home'];
 	// ----------
 
-	// ¥á¥Ã¥»¡¼¥¸¥Ç¡¼¥¿¼èÆÀ
+	// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿å–å¾—
 	$c_message = k_p_h_message_c_message4c_message_id($target_c_message_id);
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 	if ($c_message['c_member_id_from'] != $u &&
 		$c_message['c_member_id_to'] != $u) {
 		handle_kengen_error();
 	}
 	//---
 
-	// ´ûÆÉ¤Ë¤¹¤ë
+	// æ—¢èª­ã«ã™ã‚‹
 	p_h_message_update_c_message_is_read4c_message_id($target_c_message_id, $u);
 	
-	// ¥á¥Ã¥»¡¼¥¸¥Ç¡¼¥¿
-	//¥³¥ß¥å¥Ë¥Æ¥£¤ª¤¹¤¹¤á¥á¥Ã¥»¡¼¥¸¤ÎURL¤òÃÖ´¹
+	// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãŠã™ã™ã‚ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®URLã‚’ç½®æ›
 	list($c_message['body'],$com_url,$friend_url) = k_p_h_message_ktai_url4url($c_message['body'],$tail);
 	
 	$smarty->assign("c_message", $c_message);
@@ -33,4 +33,3 @@ function pageAction_h_message($smarty, $requests)
 	$smarty->ext_display("h_message.tpl");
 }
 
-?>

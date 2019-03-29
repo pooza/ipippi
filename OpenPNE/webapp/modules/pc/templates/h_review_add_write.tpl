@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ***************************** -->
-<!-- ******¤³¤³¤«¤é¡§¥ì¥Ó¥å¡¼****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒ¬ãƒ“ãƒ¥ãƒ¼****** -->
 <form action="page.php?p=h_review_add_write_confirm" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="asin" value="({$asin})">
 <input type="hidden" name="category_id" value="({$category_id})">
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;" class="border_07">
@@ -41,20 +41,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥ì¥Ó¥å¡¼¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šãƒ¬ãƒ“ãƒ¥ãƒ¼ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:468px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¥ì¥Ó¥å¡¼</span></td>
+<td style="width:468px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ãƒ¬ãƒ“ãƒ¥ãƒ¼</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 ({*********})
 <tr>
@@ -77,7 +77,7 @@
 
 <div style="padding:6px;" class="c_01">
 
-¥¿¥¤¥È¥ë
+ã‚¿ã‚¤ãƒˆãƒ«
 
 </div>
 
@@ -107,7 +107,7 @@
 
 <div style="padding:6px;" class="c_01">
 
-ÀâÌÀ
+èª¬æ˜
 
 </div>
 
@@ -117,15 +117,15 @@
 <div class="padding_s">
 
 ({if $product.ItemAttributes.Publisher})
-<div>ÈÎÇä: ({$product.ItemAttributes.Publisher})</div>
+<div>è²©å£²: ({$product.ItemAttributes.Publisher})</div>
 ({/if})
 
 ({if $product.ItemAttributes.Platform})
-<div>ÂĞ¾İ: ({$product.ItemAttributes.Platform})</div>
+<div>å¯¾è±¡: ({$product.ItemAttributes.Platform})</div>
 ({/if})
 
 ({if $product.ItemAttributes.ReleaseDate})
-<div>È¯Çä: ({$product.ItemAttributes.ReleaseDate|bs_date_format:'YÇ¯n·îjÆü'})</div>
+<div>ç™ºå£²: ({$product.ItemAttributes.ReleaseDate|bs_date_format:'Yå¹´næœˆjæ—¥'})</div>
 ({/if})
 
 ({if $product.ItemAttributes.Creator})
@@ -155,7 +155,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_s">
 <div style="padding:6px;" class="c_01">
 
-¥ì¥Ó¥å¡¼
+ãƒ¬ãƒ“ãƒ¥ãƒ¼
 
 </div>
 <img src="./skin/dummy.gif" class="v_spacer_s">
@@ -186,7 +186,7 @@
 
 <div style="padding:6px;" class="c_01">
 
-ËşÂ­ÅÙ
+æº€è¶³åº¦
 
 </div>
 
@@ -199,7 +199,7 @@
 <select name="satisfaction_level">
 <option value="0">----</option>
 ({html_options options=$satisfaction selected=$satisfaction_level})
-</select>&nbsp;É¾²Á¡§£µÃÊ³¬¡Ê£µ¤¬ºÇ¹â¡¢£±¤¬ºÇÄã¡Ë
+</select>&nbsp;è©•ä¾¡ï¼šï¼•æ®µéšï¼ˆï¼•ãŒæœ€é«˜ã€ï¼‘ãŒæœ€ä½ï¼‰
 
 </div>
 
@@ -219,7 +219,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <div align="center" style="text-align:center;">
-<input type="submit" value="³ÎÇ§²èÌÌ">
+<input type="submit" value="ç¢ºèªç”»é¢">
 </div>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -234,12 +234,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥ì¥Ó¥å¡¼¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šãƒ¬ãƒ“ãƒ¥ãƒ¼ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -250,13 +250,13 @@
 </tr>
 </table>
 </form>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥ì¥Ó¥å¡¼****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒ¬ãƒ“ãƒ¥ãƒ¼****** -->
 <!-- ***************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

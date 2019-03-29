@@ -2,17 +2,17 @@
 function doAction_bookmark_delete($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $request['target_c_member_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥Ö¥Ã¥¯¥Þ¡¼¥¯ÅÐÏ¿¤µ¤ì¤Æ¤¤¤ë
-	//ÅÐÏ¿¤µ¤ì¤Æ¤¤¤Ê¤¯¤Æ¤âÆÃ¤Ë±Æ¶Á¤Ï¤Ê¤¤¤Î¤Ç¥Á¥§¥Ã¥¯¤·¤Ê¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ–ãƒƒã‚¯ãƒžãƒ¼ã‚¯ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹
+	//ç™»éŒ²ã•ã‚Œã¦ã„ãªãã¦ã‚‚ç‰¹ã«å½±éŸ¿ã¯ãªã„ã®ã§ãƒã‚§ãƒƒã‚¯ã—ãªã„
 	//---
 
 	do_h_bookmark_delete($u, $target_c_member_id);
 
 	client_redirect("page.php?p=h_bookmark_list");
 }
-?>
+

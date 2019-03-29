@@ -5,4 +5,4 @@ function normalAction_sns_privacy($smarty,$requests)
 	
 	$smarty->ext_display("sns_privacy.tpl");
 }
-?>
+

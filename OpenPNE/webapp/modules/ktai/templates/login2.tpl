@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>�᡼�륢�ɥ쥹��Ͽ</center>
+<center>メールアドレス登録</center>
 <hr>
 
 ({if $msg})
@@ -8,18 +8,18 @@
 <br>
 ({/if})
 
-�ѥ���ɤ����Ϥ��Ƥ���������<br>
+パスワードを入力してください。<br>
 <br>
 
 <form action="do_ktai_normal.php" method="post">
-<input type="hidden" name="dummy" value="��������ǧʸ����">
+<input type="hidden" name="dummy" value="符号形式確認文字列">
 <input type="hidden" name="cmd" value="update_ktai_address">
 <input type="hidden" name="ses" value="({$ses})">
-���ӎҎ��َ��Ďގڎ�<br>
+携帯ﾒｰﾙｱﾄﾞﾚｽ<br>
 ({$pre.ktai_address})<br>
-�ʎߎ��܎��Ď�<br>
+ﾊﾟｽﾜｰﾄﾞ<br>
 <input name="password" type="text" istyle="3" mode="alphabet" value=""><br>
-<input name="submit" value="����" type="submit"><br>
+<input name="submit" value="送信" type="submit"><br>
 </form>
 
 <hr>

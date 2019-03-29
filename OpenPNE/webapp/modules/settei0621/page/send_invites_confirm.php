@@ -1,5 +1,5 @@
 <?php
-// °ì³ç¾·ÂÔ¥á¡¼¥ëÁ÷¿® ³ÎÇ§²èÌÌ
+// ä¸€æ‹¬æ‹›å¾…ãƒ¡ãƒ¼ãƒ«é€ä¿¡ ç¢ºèªç”»é¢
 
 function pageAction_send_invites_confirm(&$smarty,$requests)
 {
@@ -42,4 +42,3 @@ function pageAction_send_invites_confirm(&$smarty,$requests)
 	$smarty->ext_display("send_invites_confirm.tpl");
 }
 
-?>

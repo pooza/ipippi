@@ -10,7 +10,7 @@ $GLOBALS['AUTH'] = new TejimayaAuth();
 $GLOBALS['AUTH']->setSessionname('OpenPNE_admin');
 $GLOBALS['AUTH']->start();
 
-// ¥í¥°¥¤¥ó¥Ú¡¼¥¸¤ÎURL
+// ãƒ­ã‚°ã‚¤ãƒ³ãƒšãƒ¼ã‚¸ã®URL
 $hash_tbl =& AdminHashTable::singleton();
 $p = $hash_tbl->hash('login', 'normal');
 $m = $GLOBALS['__Framework']['current_module'];
@@ -27,12 +27,12 @@ if ($GLOBALS['AUTH']->getAuth()){
 	}
 	$GLOBALS['AUTH']->uid($uid);
 } else {
-    // ¥í¥°¥¤¥ó¼ºÇÔ¤Î¾ì¹ç
+    // ãƒ­ã‚°ã‚¤ãƒ³å¤±æ•—ã®å ´åˆ
     $GLOBALS['AUTH']->logout();
     if (empty($_REQUEST['username'])) {
-		$msg = "¥í¥°¥¤¥ó¤·¤Æ¤¯¤À¤µ¤¤";
+		$msg = "ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„";
     } else {
-    	$msg = "¥í¥°¥¤¥ó¤Ë¼ºÇÔ¤·¤Ş¤·¤¿";
+    	$msg = "ãƒ­ã‚°ã‚¤ãƒ³ã«å¤±æ•—ã—ã¾ã—ãŸ";
     }
 	client_redirect($login_url . "&msg=" . urlencode($msg));
     exit;

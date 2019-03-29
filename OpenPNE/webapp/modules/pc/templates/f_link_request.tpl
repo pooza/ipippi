@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧�ե����ɲ�****** -->
+<!-- ******ここから：フレンド追加****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
@@ -40,18 +40,18 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ե����ɲá�����* -->
-({*�������顧header*})
+<!-- *ここから：フレンド追加＞内容* -->
+({*ここから：header*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})���ɲ�</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})に追加</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -64,9 +64,9 @@
 
 <div class="padding_w_m">
 
-({$target_member.nickname}) ����Ȥϴ���ͧ�͡��οͤǤ�����<br>
-���������å�������������������������Ƥ���������<BR>
-����ή��̵�����ؤ����ʤ��󥯿���������Τϡ�����ˤʤ���⤢��ޤ�����ʬ�˳�ǧ���ơ���󥯿�����ԤäƤ���������
+({$target_member.nickname}) さんとは既に友人・知人ですか？<br>
+リンク要請メッセージを送信し、承諾を受けてください。<BR>
+※交流の無い方へいきなりリンク申請を送るのは、失礼になる場合もあります。十分に確認して、リンク申請を行ってください。
 
 </div>
 
@@ -84,7 +84,7 @@
 
 <div class="padding_s">
 
-�̿�
+写真
 
 </div>
 
@@ -94,7 +94,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=f_home&target_c_member_id=({$target_member.c_member_id})">({if $target_member.image_filename})<img src="./img.php?filename=({$target_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=�̿� border=0>({/if})</a></td></tr>
+<a href="page.php?p=f_home&target_c_member_id=({$target_member.c_member_id})">({if $target_member.image_filename})<img src="./img.php?filename=({$target_member.image_filename})&w=76&h=76" class="pict">({else})<img SRC="./img.php?filename=no_image.gif&w=76&h=76" ALT=写真 border=0>({/if})</a></td></tr>
 
 </div>
 
@@ -108,7 +108,7 @@
 
 <div class="padding_s">
 
-������
+送信先
 
 </div>
 
@@ -136,7 +136,7 @@
 
 <div class="padding_s">
 
-��å����� (Ǥ��)
+メッセージ (任意)
 
 </div>
 
@@ -179,9 +179,9 @@
 
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td valign="top">���㡥</td>
-<td>�����ϥ᡼��������ä򤢤꤬�Ȥ��������ޤ�����<br>
-�����({$WORD_MY_FRIEND})�˲ä������Ƥ������������ȻפäƤޤ���<br>��������Ǥ���</td></tr>
+<td valign="top">※例．</td>
+<td>先日はメールで面白い話をありがとうごさいました。<br>
+改めて({$WORD_MY_FRIEND})に加えさせていただきたいと思ってます。<br>よろしくです。</td></tr>
 </table>
 
 </div>
@@ -206,7 +206,7 @@
 
 <div align="center" style="text-align:center;">
 
-<input type="submit" value="����">
+<input type="submit" value="送信">
 
 </div>
 
@@ -225,12 +225,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ե����ɲá������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：フレンド追加＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -242,14 +242,14 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ��ե����ɲ�****** -->
+<!-- ******ここまで：フレンド追加****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

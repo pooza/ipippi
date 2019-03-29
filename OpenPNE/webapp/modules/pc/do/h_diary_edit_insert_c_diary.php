@@ -2,27 +2,27 @@
 //shou050531
 //---------------------------------------------------------------------------
 /**
-Æüµ­¤ò½¤Àµ
+æ—¥è¨˜ã‚’ä¿®æ­£
 
-[°ú¿ô]
+[å¼•æ•°]
 title
 body
-²èÁü¥Ð¥¤¥Ê¥ê($_FILES[upfile_1],$_FILES[upfile_2],$_FILES[upfile_3])¤ÇÆÀ¤ë¡£
+ç”»åƒãƒã‚¤ãƒŠãƒª($_FILES[upfile_1],$_FILES[upfile_2],$_FILES[upfile_3])ã§å¾—ã‚‹ã€‚
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 fh_diary_list
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_member_id
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_diary_edit_insert_c_diary($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $request['target_c_diary_id'];
 	$subject = $request['subject'];
 	$body = $request['body'];
@@ -33,21 +33,21 @@ function doAction_h_diary_edit_insert_c_diary($request) {
 	// ----------
 
 	if (is_null($body) || $body === '') {
-		$_REQUEST['msg'] = "ËÜÊ¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+		$_REQUEST['msg'] = "æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 		$_REQUEST['subject'] = $subject;
 		module_execute('pc', 'page', "h_diary_edit");
 		exit;
 	}
 
 	if (is_null($subject) || $subject === '') {
-		$_REQUEST['msg'] = "¥¿¥¤¥È¥ë¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+		$_REQUEST['msg'] = "ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 		$_REQUEST['body'] = $body;
 		module_execute('pc', 'page', "h_diary_edit");
 		exit;
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//Æüµ­ºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//æ—¥è¨˜ä½œæˆè€…
 
 	$c_diary = _db_c_diary4c_diary_id($target_c_diary_id);
 	if ($c_diary['c_member_id'] != $u) {
@@ -78,4 +78,4 @@ function doAction_h_diary_edit_insert_c_diary($request) {
 
 	client_redirect("page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id");
 }
-?>
+

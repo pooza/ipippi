@@ -1,9 +1,9 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">ºĞ­ÆÃ¨¡§({$c_commu.name})</font></center>
+<center><font color="orange">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¼š({$c_commu.name})</font></center>
 <hr>
 
-¢£¥È¥Ô¥Ã¥¯¥ê¥¹¥È<br>
+â– ãƒˆãƒ”ãƒƒã‚¯ãƒªã‚¹ãƒˆ<br>
 <br>
 ({foreach from=$c_topic_list item=item})
 <a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$item.c_commu_topic_id})&amp;({$tail})">({$item.name})</a>(({$item.write_num}))<br>
@@ -13,15 +13,15 @@
 ({if $is_prev || $is_next})
 <br>
 ({if $is_prev})
-<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=-1&amp;({$tail})">Á°¤Ø</a>
+<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=-1&amp;({$tail})">å‰ã¸</a>
 ({/if})
 ({if $is_next})
-<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=1&amp;({$tail})">¼¡¤Ø</a>
+<a href="ktai_page.php?p=c_topic_list&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;page=({$page})&amp;direc=1&amp;({$tail})">æ¬¡ã¸</a>
 ({/if})
 ({/if})
 
 <hr>
-<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ºĞ­ÆÃ¨¤ËÌá¤ë</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã«æˆ»ã‚‹</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

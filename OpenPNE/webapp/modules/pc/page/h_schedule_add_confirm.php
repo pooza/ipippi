@@ -6,7 +6,7 @@
 function pageAction_h_schedule_add_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$input = $requests;
 		// ----------
 
@@ -28,14 +28,14 @@ function pageAction_h_schedule_add_confirm($smarty,$requests) {
 	    $errors = array();
 	    
 	    if(!$title) {
-	    	$errors[] = "¥¿¥¤¥È¥ë¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+	    	$errors[] = "ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 	    }
 
 	    if (is_null($input['start_hour']) xor is_null($input['start_minute'])) {
-	        $errors[] = "³«»Ï»ş¹ï¤¬Àµ¤·¤¯¤¢¤ê¤Ş¤»¤ó¡£";
+	        $errors[] = "é–‹å§‹æ™‚åˆ»ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚";
 	    }
 	    if (is_null($input['end_hour']) xor is_null($input['end_minute'])) {
-	        $errors[] = "½ªÎ»»ş¹ï¤¬Àµ¤·¤¯¤¢¤ê¤Ş¤»¤ó¡£";
+	        $errors[] = "çµ‚äº†æ™‚åˆ»ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚";
 	    }
 
 	    $start_date = intval(sprintf("%04d%02d%02d", $input['start_year'], $input['start_month'], $input['start_day']));
@@ -44,17 +44,17 @@ function pageAction_h_schedule_add_confirm($smarty,$requests) {
 	    if ($input['start_hour'] && $input['start_minute']) {
 	        $start_time = intval(sprintf("%02d%02d", $input['start_hour'], $input['start_minute']));
 	    } else {
-	        $start_time = 0; // -¡ç
+	        $start_time = 0; // -âˆ
 	    }
 	    if ($input['end_hour'] && $input['end_minute']) {
 	        $end_time = intval(sprintf("%02d%02d", $input['end_hour'], $input['end_minute']));
 	    } else {
-	        $end_time = 2400; // +¡ç
+	        $end_time = 2400; // +âˆ
 	    }
 
 	    if ($end_date < $start_date ||
 	        ($end_date == $start_date && $end_time < $start_time)) {
-	        $errors[] = "½ªÎ»Æü¤Ï³«»ÏÆü¤è¤êÁ°¤ËÀßÄê¤Ç¤­¤Ş¤»¤ó¡£";
+	        $errors[] = "çµ‚äº†æ—¥ã¯é–‹å§‹æ—¥ã‚ˆã‚Šå‰ã«è¨­å®šã§ãã¾ã›ã‚“ã€‚";
 	    }
 
 	    if ($errors) {
@@ -72,4 +72,4 @@ function pageAction_h_schedule_add_confirm($smarty,$requests) {
 
 	$smarty->ext_display('h_schedule_add_confirm.tpl');
 }
-?>
+

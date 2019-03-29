@@ -12,7 +12,7 @@ if (empty($_SESSION['c_member_id']) || !k_auth($_SESSION['c_member_id'])) {
 	__logout(15);
 }
 
-// ¥»¥Ã¥·¥ç¥ó¤ÎÍ­¸ú´ü¸Â
+// ã‚»ãƒƒã‚·ãƒ§ãƒ³ã®æœ‰åŠ¹æœŸé™
 $lifetime = $GLOBALS['__OpenPNE']['ktai']['session_lifetime'];
 $idletime = $GLOBALS['__OpenPNE']['ktai']['session_idletime'];
 if (!isset($_SESSION['timestamp']) ||

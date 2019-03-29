@@ -1,5 +1,5 @@
 <?php
-// ¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô¥Ú¡¼¥¸
+// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œãƒšãƒ¼ã‚¸
 
 
 function pageAction_passwd(&$smarty,$requests)
@@ -14,4 +14,4 @@ function pageAction_passwd(&$smarty,$requests)
 	$smarty->ext_display("passwd.tpl");
 }
 
-?>
+

@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È(({$count_commus}))</font></center>
+<center><font color="orange">å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆ(({$count_commus}))</font></center>
 <hr>
 
 ({foreach from=$c_commu_list item=c_commu})
@@ -9,14 +9,14 @@
 <br>
 ({if $is_prev || $is_next})
 
-({if $is_prev})<a href="ktai_page.php?p=fh_com_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page-1})&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=fh_com_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page+1})&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=fh_com_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page-1})&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=fh_com_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page+1})&amp;({$tail})">æ¬¡ã¸</a>({/if})
 
 ({/if})
 <hr>
 ({if $INC_NAVI_type=="f"})
-<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$target_c_member.nickname})¤µ¤ó¤ÎÄ¯Ìß</a><br>
+<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$target_c_member.nickname})ã•ã‚“ã®ï¾„ï½¯ï¾Œï¾Ÿ</a><br>
 ({/if})
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

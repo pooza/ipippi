@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧��ӥ塼�Ǻܳ�ǧ****** -->
+<!-- ******ここから：レビュー掲載確認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,21 +34,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧��ӥ塼�Ǻܳ�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：レビュー掲載確認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b">�ʲ��Υ�ӥ塼��Ǻܤ��ޤ�����</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b">以下のレビューを掲載しますか？</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 ({foreach from=$c_member_review item=review})
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
@@ -73,7 +73,7 @@
 
 <div class="padding_s">
 
-�����ȥ�
+タイトル
 
 </div>
 
@@ -103,7 +103,7 @@
 
 <div class="padding_s">
 
-�⡡����
+説　　明
 
 </div>
 
@@ -134,7 +134,7 @@
 
 <div class="padding_s">
 
-��ӥ塼
+レビュー
 
 </div>
 
@@ -162,7 +162,7 @@
 
 <div class="padding_s">
 
-��������
+作成日時
 
 </div>
 
@@ -171,7 +171,7 @@
 <td class="bg_02" align="left" valign="middle">
 <div class="padding_s">
 
-({$review.r_datetime|date_format:"%m��%d�� %H:%M"})
+({$review.r_datetime|date_format:"%m月%d日 %H:%M"})
 
 </div>
 </td>
@@ -190,7 +190,7 @@
 
 <div class="padding_s">
 
-�� ­ ��
+満 足 度
 
 </div>
 
@@ -218,7 +218,7 @@
 
 <div class="padding_s">
 
-���ƥ���
+カテゴリ
 
 </div>
 
@@ -240,10 +240,10 @@
 ({*********})
 </table>
 ({/foreach})
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- �������顧���� -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- ここから：決定 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -262,24 +262,24 @@
 <td>
 
 <form action="do.php" method="post" class="display:inline;">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_member_review_insert_c_commu_review">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 ({foreach from=$c_review_id item=item})
 <input type="hidden" name="c_review_id[]" value="({$item})">
 ({/foreach})
-<input type="submit" value="���ϡ�����">
+<input type="submit" value="　は　い　">
 </form>
 
 </td>
 <td>
 
 <form action="page.php" method="get" class="display:inline;">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_member_review_add">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
-<input type="submit" value="����������">
+<input type="submit" value="　いいえ　">
 </form>
 
 </td>
@@ -298,9 +298,9 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ����� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ���ӥ塼�Ǻܳ�ǧ�������* -->
+<!-- ここまで：決定 -->
+({*ここまで：footer*})
+<!-- *ここまで：レビュー掲載確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -310,26 +310,26 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ���ӥ塼�Ǻܳ�ǧ****** -->
+<!-- ******ここまで：レビュー掲載確認****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ��ȥåפ�****** -->
+<!-- ******ここから：コミュニティトップへ****** -->
 <div id="link_community_top" align="center">
 
 <img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;
-<a href="page.php?p=c_home&target_c_commu_id=({$c_commu.c_commu_id})">[({$c_commu.name})]���ߥ�˥ƥ��ȥåפ�</a>
+<a href="page.php?p=c_home&target_c_commu_id=({$c_commu.c_commu_id})">[({$c_commu.name})]コミュニティトップへ</a>
 
 </div>
-<!-- ******�����ޤǡ����ߥ�˥ƥ��ȥåפ�****** -->
+<!-- ******ここまで：コミュニティトップへ****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

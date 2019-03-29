@@ -5,14 +5,14 @@ function doAction_c_edit_member_delete_c_commu_member($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
-    //target¥á¥ó¥Ð¡¼¤¬´ÉÍý¼Ô(¡á¼«Ê¬)¤Ç¤Ê¤¤
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
+    //targetãƒ¡ãƒ³ãƒãƒ¼ãŒç®¡ç†è€…(ï¼è‡ªåˆ†)ã§ãªã„
 
     $status = db_common_commu_status($u, $target_c_commu_id);
     if (!$status['is_commu_admin']) {
@@ -27,11 +27,10 @@ function doAction_c_edit_member_delete_c_commu_member($requests)
 
     do_c_edit_member_delete_c_commu_member($target_c_commu_id, $target_c_member_id);
 
-    // maruyama: 2005/04/08 ¥³¥ß¥å¥Ë¥Æ¥£¤«¤é¤Ï¤º¤·¤¿¾ì¹ç¤Ï´ÉÍý¼Ô°Ñ¾ù°ÍÍê¤âºï½ü
+    // maruyama: 2005/04/08 ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‹ã‚‰ã¯ãšã—ãŸå ´åˆã¯ç®¡ç†è€…å§”è­²ä¾é ¼ã‚‚å‰Šé™¤
     _do_delete_c_commu_admin_confirm2($target_c_commu_id,$target_c_member_id);
     // -----
 
     client_redirect("ktai_page.php?p=c_edit_member&target_c_commu_id=$target_c_commu_id&$tail");
 }
 
-?>

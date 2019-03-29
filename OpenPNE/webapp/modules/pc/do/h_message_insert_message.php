@@ -1,39 +1,39 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥á¥Ã¥»¡¼¥¸¤òÁ÷¤ë
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ã‚‹
 
-[°ú¿ô]
+[å¼•æ•°]
 title
 body
 target_c_member_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 h_message_box
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_message_insert_message($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$title = $request['title'];
 	$body = $request['body'];
 	$target_c_member_id = $request['target_c_member_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¼«Ê¬°Ê³°
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//è‡ªåˆ†ä»¥å¤–
 
 	if ($target_c_member_id == $u) {
 		handle_kengen_error();
 	}
 	
-    //¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯ÀßÄê
+    //ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯è¨­å®š
 	if (p_common_is_access_block($u, $target_c_member_id)) {
 		client_redirect("page.php?p=h_access_block");
 		exit;
@@ -44,4 +44,4 @@ function doAction_h_message_insert_message($request) {
 
 	client_redirect("page.php?p=h_message_box");
 }
-?>
+

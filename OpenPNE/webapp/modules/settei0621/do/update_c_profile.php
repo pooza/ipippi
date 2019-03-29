@@ -1,5 +1,5 @@
 <?php
-// ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜÊÔ½¸
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ç·¨é›†
 
 
 function doAction_update_c_profile($requests)
@@ -25,10 +25,9 @@ function doAction_update_c_profile($requests)
 			, $requests['val_max']
 			);
 
-		admin_client_redirect('edit_c_profile', "¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ¤òÊÔ½¸¤·¤Þ¤·¤¿");
+		admin_client_redirect('edit_c_profile', "ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ã‚’ç·¨é›†ã—ã¾ã—ãŸ");
 	} else {
-		admin_client_redirect('edit_c_profile', "¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ¤òÊÔ½¸¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿");
+		admin_client_redirect('edit_c_profile', "ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ã‚’ç·¨é›†ã§ãã¾ã›ã‚“ã§ã—ãŸ");
 	}
 }
 
-?>

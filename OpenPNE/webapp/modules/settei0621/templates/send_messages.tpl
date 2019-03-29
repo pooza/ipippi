@@ -1,12 +1,12 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>¥á¥Ã¥»¡¼¥¸Á÷¿®</h2>
+<h2>ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡</h2>
 
-<p>ÁªÂò¤·¤¿¥æ¡¼¥¶¤Ë¥á¥Ã¥»¡¼¥¸¤òÁ÷¿®¤·¤Þ¤¹¡£¥¿¥¤¥È¥ë¤ÈËÜÊ¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£</p>
-<p class="caution">¢¨¤³¤Î¥á¥Ã¥»¡¼¥¸¤Ï¡¢ID1ÈÖ¤Î¥æ¡¼¥¶¤«¤éÁ÷¿®¤µ¤ì¤Þ¤¹¡£</p>
+<p>é¸æŠžã—ãŸãƒ¦ãƒ¼ã‚¶ã«ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¾ã™ã€‚ã‚¿ã‚¤ãƒˆãƒ«ã¨æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚</p>
+<p class="caution">â€»ã“ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¯ã€ID1ç•ªã®ãƒ¦ãƒ¼ã‚¶ã‹ã‚‰é€ä¿¡ã•ã‚Œã¾ã™ã€‚</p>
 
 <div id="page_navi">
-¢¡Á÷¿®Àè
+â—†é€ä¿¡å…ˆ
 <ul>
 ({foreach from=$c_member_list item=item})
 <li><a href="page.php?p=f_home&amp;target_c_member_id=({$item.c_member_id})" target="_blank">({$item.nickname})</a></li>
@@ -16,7 +16,7 @@
 
 <div style="float:left">
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('send_messages','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -24,11 +24,11 @@
 <input type="hidden" name="c_member_ids[]" value="({$item.c_member_id})">
 ({/foreach})
 <dl>
-<dt>¥¿¥¤¥È¥ë</dt>
+<dt>ã‚¿ã‚¤ãƒˆãƒ«</dt>
 <dd><input type="text" name="subject" size="50" value="({$requests.subject})"></dd>
-<dt>ËÜÊ¸</dt>
+<dt>æœ¬æ–‡</dt>
 <dd><textarea name="body" cols="50" rows="10">({$requests.body})</textarea></dd>
-<dd><input type="submit" class="submit" value="¥á¥Ã¥»¡¼¥¸Á÷¿®"></dd>
+<dd><input type="submit" class="submit" value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡"></dd>
 </dl>
 </form>
 </div>

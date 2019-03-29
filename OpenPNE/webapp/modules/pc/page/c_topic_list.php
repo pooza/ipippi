@@ -5,7 +5,7 @@
 function pageAction_c_topic_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $requests['target_c_commu_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -15,7 +15,7 @@ function pageAction_c_topic_list($smarty,$requests) {
 	$page_size = 20;    
 	$c_commu = p_common_c_commu4c_commu_id($c_commu_id);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¤ÎÂ¸ºß¤ÎÍ­Ìµ
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å­˜åœ¨ã®æœ‰ç„¡
 	if (!$c_commu) {
 	    client_redirect("page.php?p=h_err_c_home");
 	    exit();
@@ -37,7 +37,7 @@ function pageAction_c_topic_list($smarty,$requests) {
 	$smarty->assign('end_num', $end_num);
 
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 	$is_c_commu_member = p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu_id,$u);
 
 	if(!$is_c_commu_member && $c_commu['public_flag'] == "auth_commu_member"){
@@ -58,4 +58,4 @@ function pageAction_c_topic_list($smarty,$requests) {
 
 	$smarty->ext_display("c_topic_list.tpl");
 }
-?>
+

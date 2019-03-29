@@ -3,7 +3,7 @@
 function pageAction_c_topic_detail($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -20,14 +20,14 @@ function pageAction_c_topic_detail($smarty,$requests) {
 
     $c_commu = p_common_c_commu4c_commu_id($c_commu_id);
 
-	//¥³¥ß¥å¥Ë¥Æ¥£¤ÎÂ¸ºß¤ÎÍ­Ìµ
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å­˜åœ¨ã®æœ‰ç„¡
     if (!$c_commu) {
         client_redirect("page.php?p=h_err_c_home");
         exit;
     }
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£·Ç¼¨ÈÄ±ÜÍ÷¸¢¸Â
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æŽ²ç¤ºæ¿é–²è¦§æ¨©é™
 	if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
         handle_kengen_error();
 	}
@@ -40,11 +40,11 @@ function pageAction_c_topic_detail($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 
-	//¾ÜºÙÉôÊ¬	
+	//è©³ç´°éƒ¨åˆ†	
 	$smarty->assign("c_commu",$c_commu);
 	$smarty->assign("c_topic",$c_topic);
 
-	//½ñ¤­¹þ¤ß°ìÍ÷ÉôÊ¬
+	//æ›¸ãè¾¼ã¿ä¸€è¦§éƒ¨åˆ†
 	$page += $direc;
 	if($all==1) $page_size = 1000;
 	else $page_size = 10;
@@ -68,7 +68,7 @@ function pageAction_c_topic_detail($smarty,$requests) {
 
 	$smarty->assign('all', $all);	
 
-	//¿·¤·¤¯½ñ¤­¹þ¤à¤ÎÉôÊ¬
+	//æ–°ã—ãæ›¸ãè¾¼ã‚€ã®éƒ¨åˆ†
 	$smarty->assign('body', $body);
 	$smarty->assign('err_msg', $err_msg);	
 
@@ -79,4 +79,4 @@ function pageAction_c_topic_detail($smarty,$requests) {
 	$smarty->assign('c_member_id', $u);	
 	$smarty->ext_display('c_topic_detail.tpl');
 }
-?>
+

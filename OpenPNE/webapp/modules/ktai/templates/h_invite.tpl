@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>ͧ�ͤ�SNS�˾��Ԥ���</center>
+<center>友人をSNSに招待する</center>
 <hr>
 ({if $msg})
 <font color=red>({$msg})</font><br>
@@ -8,28 +8,28 @@
 ({/if})
 
 ({if $smarty.const.OPENPNE_REGIST_FROM == $smarty.const.OPENPNE_REGIST_FROM_NONE})
-���ߡ�������Ͽ����ߤ��Ƥ��ޤ���
+現在、新規登録を停止しています。
 ({else})
-���Ԥ�����ͧ�͡��οͤΥ᡼�륢�ɥ쥹�������Ƥ���������<br>
+招待したい友人・知人のメールアドレスを記入してください。<br>
 ({if $smarty.const.OPENPNE_REGIST_FROM == $smarty.const.OPENPNE_REGIST_FROM_PC})
-�����ӥ��ɥ쥹�ˤϾ��ԤǤ��ޤ���<br>
+※携帯アドレスには招待できません。<br>
 ({elseif $smarty.const.OPENPNE_REGIST_FROM == $smarty.const.OPENPNE_REGIST_FROM_KTAI})
-��PC���ɥ쥹�ˤϾ��ԤǤ��ޤ���<br>
+※PCアドレスには招待できません。<br>
 ({/if})
 
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="��������ǧʸ����">
+<input type="hidden" name="dummy" value="符号形式確認文字列">
 <input type="hidden" name="cmd" value="h_invite_insert_c_invite">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
-�Ҏ��َ��Ďގڎ�<br>
+ﾒｰﾙｱﾄﾞﾚｽ<br>
 <input type="text" name="mail_address" istyle="3" mode="alphabet" maxlength="100"><br>
-�Ҏ���������<br>
+ﾒｯｾｰｼﾞ<br>
 <textarea name="body" cols="15"></textarea><br>
-<input type="submit" value="����">
+<input type="submit" value="送信">
 </form>
 ({/if})
 
 <hr>
-<a href="ktai_page.php?p=h_home&({$tail})">�Ύ���</a>
+<a href="ktai_page.php?p=h_home&({$tail})">ﾎｰﾑ</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

@@ -3,7 +3,7 @@ function pageAction_h_friend_find_all($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$nickname = $requests['nickname'];
 	$birth_year = $requests['birth_year'];
 	$birth_month = $requests['birth_month'];
@@ -20,7 +20,7 @@ function pageAction_h_friend_find_all($smarty, $requests)
 	$limit = 20;
 	$smarty->assign("page", $page);
 
-	//¸¡º÷¥Ç¥Õ¥©¥ë¥ÈÃÍÉ½¼¨ÍÑ
+	//æ¤œç´¢ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤è¡¨ç¤ºç”¨
     $cond = array(
         'birth_year' => $birth_year,
         'birth_month' => $birth_month,
@@ -77,4 +77,3 @@ function pageAction_h_friend_find_all($smarty, $requests)
 	$smarty->ext_display("h_friend_find_all.tpl");
 }
 
-?>

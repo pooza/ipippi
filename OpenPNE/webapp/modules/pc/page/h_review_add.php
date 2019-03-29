@@ -4,13 +4,13 @@
 function pageAction_h_review_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$keyword = $requests['keyword'];
 		$category_id = $requests['category_id'];
 		$page = $requests['page'];
 		$search_flag = $requests['search_flag'];
 		// ----------
-		$page_size=10;//»ÈÍÑ¤·¤Æ¤¤¤ëPEAR¤Î¥â¥¸¥å¡¼¥ë¤Ç¤Ï¤³¤ÎÃÍ(10)¤ÏÊÑ¹¹¤Ç¤­¤Ê¤¤
+		$page_size=10;//ä½¿ç”¨ã—ã¦ã„ã‚‹PEARã®ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã§ã¯ã“ã®å€¤(10)ã¯å¤‰æ›´ã§ããªã„
 
 		$smarty->assign('inc_navi',fetch_inc_navi("h"));
 		$smarty->assign('category_disp',p_h_review_add_category_disp());
@@ -18,8 +18,8 @@ function pageAction_h_review_add($smarty,$requests) {
 		$smarty->assign('keyword', $keyword);
 
 		if($search_flag && (empty($keyword) || empty($category_id))){
-			 if(empty($keyword)) $err_msg[] = "¥­¡¼¥ï¡¼¥É¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤";
-			 if(empty($category_id)) $err_msg[] = "¥«¥Æ¥´¥ê¤òÁªÂò¤·¤Æ²¼¤µ¤¤";
+			 if(empty($keyword)) $err_msg[] = "ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„";
+			 if(empty($category_id)) $err_msg[] = "ã‚«ãƒ†ã‚´ãƒªã‚’é¸æŠžã—ã¦ä¸‹ã•ã„";
 		}elseif(!$search_flag){
 		}
 		else{
@@ -38,7 +38,7 @@ function pageAction_h_review_add($smarty,$requests) {
 			$total_num = $end_num = ($page-1)*$page_size + count($search_result);
 		} else {
 			$end_num = ($page - 1) * $page_size + $page_size ;
-			$total_num = "Ìó" . $page_size * $pages;
+			$total_num = "ç´„" . $page_size * $pages;
 		}
 
 		$smarty->assign('total_num', $total_num);
@@ -47,4 +47,4 @@ function pageAction_h_review_add($smarty,$requests) {
 
 		$smarty->ext_display('h_review_add.tpl');
 }
-?>
+

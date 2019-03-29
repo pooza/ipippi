@@ -2,7 +2,7 @@
 function doAction_c_event_mail($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $request['c_commu_id'];
 	$c_commu_topic_id = $request['c_commu_topic_id'];
 	$c_member_ids = $request['c_member_ids'];
@@ -12,18 +12,18 @@ function doAction_c_event_mail($request) {
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_commu_id = $c_topic['c_commu_id'];
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 
-	//¥¤¥Ù¥ó¥È¤Î´ÉÍý¼Ô¤Ç¤Ê¤¤¤ÈÁ÷¿®¤Ç¤­¤Ê¤¤
+	//ã‚¤ãƒ™ãƒ³ãƒˆã®ç®¡ç†è€…ã§ãªã„ã¨é€ä¿¡ã§ããªã„
 	if(!_db_is_c_event_admin($c_commu_topic_id,$u)){
 		exit();
 	}
 	//---
 
-	$subject = ''; // do_c_event_mail_send_mail() ¤Ç¤âÉ¬Í×¤È¤µ¤ì¤Æ¤¤¤Ê¤¤ by sato.kimihiko@tejimaya.com 20050924
+	$subject = ''; // do_c_event_mail_send_mail() ã§ã‚‚å¿…è¦ã¨ã•ã‚Œã¦ã„ãªã„ by sato.kimihiko@tejimaya.com 20050924
 	do_c_event_mail_send_mail($c_commu_id,$c_commu_topic_id,$u, $c_member_ids, $subject, $body);
 
 	client_redirect("page.php?p=c_event_mail_end&target_c_commu_topic_id=$c_commu_topic_id");
 
 }
-?>
+

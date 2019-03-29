@@ -1,8 +1,8 @@
 <?php
 function doNormalAction_password_query($requests)
 {
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥Ñ¥¹¥ï¡¼¥É³ÎÇ§¤Î¼ÁÌä¤ÈÅú¤¨¤¬¤¢¤Ã¤Æ¤¤¤ë
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ç¢ºèªã®è³ªå•ã¨ç­”ãˆãŒã‚ã£ã¦ã„ã‚‹
 	
 	if (!$c_member_id = db_ktai_is_password_query_complete(
 					$requests['ktai_address'],
@@ -13,7 +13,7 @@ function doNormalAction_password_query($requests)
 	}
 	//---
 
-	// ¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô
+	// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ
 	$new_password = do_common_create_password();
 	do_common_update_password($c_member_id, $new_password);
 
@@ -22,4 +22,4 @@ function doNormalAction_password_query($requests)
 	client_redirect("ktai_normal.php?p=login&msg=26");	
     exit;
 }
-?>
+

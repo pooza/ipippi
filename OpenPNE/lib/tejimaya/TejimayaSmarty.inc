@@ -15,7 +15,7 @@ class TejimayaSmarty extends Smarty
 	{
 		$this->Smarty();
 		
-		// └▀─ъ├═дЄе╗е├е╚
+		// шинхоЪхАдуВТуВ╗уГГуГИ
 		foreach ($configs as $key => $value) {
 			if (isset($this->$key)) {
 				$this->$key = $value;
@@ -25,13 +25,13 @@ class TejimayaSmarty extends Smarty
 		$this->t_framework = $GLOBALS['__Framework'];
 	}
 
-	// extе╟егеьепе╚еъ┬╨▒■ ╕╞д╙╜╨д╖╝▒╩╠╗╥ (pc/ktai)
+	// extуГЗуВгуГмуВпуГИуГкхп╛х┐Ь хС╝уБ│хЗ║уБЧшнШхИехнР (pc/ktai)
 	function ext_set_call_type($type = '')
 	{
 		$this->t_framework['call_type'] = $type;
 	}
 
-	// extе╟егеьепе╚еъ┬╨▒■ SMARTY->display() еще├е╤б╝
+	// extуГЗуВгуГмуВпуГИуГкхп╛х┐Ь SMARTY->display() уГйуГГуГСуГ╝
 	function ext_display($resource_name, $cache_id = null, $compile_id = null)
 	{
 		$this->ext_fetch($resource_name, $cache_id, $compile_id, true);
@@ -47,13 +47,13 @@ class TejimayaSmarty extends Smarty
 			$type = $this->t_framework['call_type'];
 			$place = '';
 
-			// │╚─ее╒ебедеые┴езе├еп
+			// цЛбх╝╡уГХуВбуВдуГлуГБуВзуГГуВп
 			$tpl = 'file:' . $this->t_framework['modules_dir'] . "/{$type}/ext/templates/" . $resource_name;
 			$place = 'ext';
-			if (!$this->template_exists($tpl)) { // extе╟егеьепе╚еъд╦е╞еєе╫еьб╝е╚дмдвдыдл
+			if (!$this->template_exists($tpl)) { // extуГЗуВгуГмуВпуГИуГкуБлуГЖуГ│уГЧуГмуГ╝уГИуБМуБВуВЛуБЛ
 				$tpl = 'file:' . $this->t_framework['modules_dir'] . "/{$type}/templates/" . $resource_name;
 				$place = 'dft';
-				if (!$this->template_exists($tpl)) { // ╔╕╜ре╟егеьепе╚еъд╦е╞еєе╫еьб╝е╚дмдвдыдл
+				if (!$this->template_exists($tpl)) { // циЩц║ЦуГЗуВгуГмуВпуГИуГкуБлуГЖуГ│уГЧуГмуГ╝уГИуБМуБВуВЛуБЛ
 					return False;
 				}
 			}

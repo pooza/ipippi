@@ -4,7 +4,7 @@
 function pageAction_c_join_err_wait($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 
@@ -13,4 +13,4 @@ function pageAction_c_join_err_wait($smarty,$requests) {
 
 	$smarty->ext_display("c_join_err_wait.tpl");
 }
-?>
+

@@ -1,34 +1,34 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå°ÍÍê¥á¥Ã¥»¡¼¥¸Á÷¿®
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ä¾é ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 target_c_member_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_edit_member
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_id
 
-[¸¢¸Â]
-¥³¥ß¥åÆó¥Æ¥£´ÉÍý¼Ô
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥äºŒãƒ†ã‚£ç®¡ç†è€…
 
 */
 function doAction_c_admin_request_insert_c_commu_admin_confirm($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $request['target_c_member_id'];
 	$target_c_commu_id = $request['target_c_commu_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¼«Ê¬¤¬¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
-    //target¤¬¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //è‡ªåˆ†ãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
+    //targetãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
     
     $status = db_common_commu_status($u, $target_c_commu_id);
     if (!$status['is_commu_admin']) {
@@ -44,20 +44,20 @@ function doAction_c_admin_request_insert_c_commu_admin_confirm($request) {
     
 	$target_c_commu_admin_confirm_id = do_c_admin_request_insert_c_commu_admin_confirm($target_c_commu_id,$target_c_member_id);
 
-	//¥á¥Ã¥»¡¼¥¸
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 	$c_member_id_from	= $u;
 	$c_member_from		= db_common_c_member4c_member_id_LIGHT($c_member_id_from);
 	$c_member_to		= $target_c_member_id;
 	$c_commu			= do_common_c_commu4c_commu_id($target_c_commu_id);
 	
-	$subject ="¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂåÍ×ÀÁ¥á¥Ã¥»¡¼¥¸";
+	$subject ="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£è¦è«‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸";
 	$body_disp =
-		$c_member_from['nickname']." ¤µ¤ó¤«¤é¤µ¤ó¤«¤é".$c_commu['name']." ¥³¥ß¥å¥Ë¥Æ¥£¤Î´ÉÍý¼Ô¸òÂå´õË¾¥á¥Ã¥»¡¼¥¸¤¬ÆÏ¤¤¤Æ¤¤¤Þ¤¹¡£\n".
+		$c_member_from['nickname']." ã•ã‚“ã‹ã‚‰ã•ã‚“ã‹ã‚‰".$c_commu['name']." ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ç®¡ç†è€…äº¤ä»£å¸Œæœ›ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒå±Šã„ã¦ã„ã¾ã™ã€‚\n".
 		"\n".
-		"¤³¤ÎÍ×ÀÁ¤Ë¤Ä¤¤¤Æ¡¢¾µÇ§ÂÔ¤Á¥ê¥¹¥È¤«¤é¾µÇ§¤Þ¤¿¤ÏµñÈÝ¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£\n";
+		"ã“ã®è¦è«‹ã«ã¤ã„ã¦ã€æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆã‹ã‚‰æ‰¿èªã¾ãŸã¯æ‹’å¦ã‚’é¸æŠžã—ã¦ãã ã•ã„ã€‚\n";
 	
 	do_common_send_message_syoudaku($c_member_id_from, $target_c_member_id, $subject, $body_disp);
 
     client_redirect("page.php?p=c_edit_member&target_c_commu_id=$target_c_commu_id");
 }
-?>
+

@@ -3,7 +3,7 @@
 function pageAction_h_review_delete_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_comment_id = $requests['c_review_comment_id'];
 	$asin = $requests['asin'];
 	// ----------
@@ -13,4 +13,4 @@ function pageAction_h_review_delete_confirm($smarty,$requests) {
 	$smarty->assign('asin', $asin);
 	$smarty->ext_display('h_review_delete_confirm.tpl');	
 }
-?>
+

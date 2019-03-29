@@ -9,13 +9,13 @@ function normalAction_regist_pre($smarty,$requests)
 	}
     //>
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ses = $requests['ses'];
 	// ----------
 
-    // ¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú¤«¤É¤¦¤«
+    // ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹ã‹ã©ã†ã‹
     if (!$pre = c_member_ktai_pre4session($ses)) {
-        // Ìµ¸ú¤Î¾ì¹ç¡¢login ¤Ø¥ê¥À¥¤¥ì¥¯¥È
+        // ç„¡åŠ¹ã®å ´åˆã€login ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
         client_redirect("ktai_normal.php?p=login");
         exit;
     }
@@ -24,4 +24,4 @@ function normalAction_regist_pre($smarty,$requests)
     $smarty->assign("SNS_NAME", SNS_NAME);
     $smarty->ext_display('regist_pre.tpl');
 }
-?>
+

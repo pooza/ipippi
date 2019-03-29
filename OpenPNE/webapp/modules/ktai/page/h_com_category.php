@@ -3,7 +3,7 @@ function pageAction_h_com_category($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_category_id = $requests['target_c_commu_category_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -13,13 +13,13 @@ function pageAction_h_com_category($smarty, $requests)
 	$page_size = 10;
 	$page += $direc;
 	
-	//¥Ú¡¼¥¸
+	//ãƒšãƒ¼ã‚¸
 	$smarty->assign("page", $page);
     
     $smarty->assign("search_word", $search_word);
     $smarty->assign("search_word_encode", urlencode($search_word));
 	
-	//¥«¥Æ¥´¥êÆâ¤Î¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È
+	//ã‚«ãƒ†ã‚´ãƒªå†…ã®ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆ
 //	$list= k_p_h_com_category_c_commu_list4c_commu_category_id($target_c_commu_category_id ,$page_size, $page);
 //	$smarty->assign("c_commu_list", $list[0]);
 //	$smarty->assign("is_prev", $list[1]);
@@ -30,9 +30,9 @@ function pageAction_h_com_category($smarty, $requests)
     $smarty->assign("is_next", $list[2]);
     $smarty->assign("count_total", $list[3]);    
 	
-	//¥«¥Æ¥´¥êÌ¾
+	//ã‚«ãƒ†ã‚´ãƒªå
 	$smarty->assign("c_commu_category_name", k_p_h_com_category_c_commu_category_name4c_commu_category_id($target_c_commu_category_id));
-	//¥«¥Æ¥´¥êID
+	//ã‚«ãƒ†ã‚´ãƒªID
 	$smarty->assign("c_commu_category_id", $target_c_commu_category_id);
 	
 	//parent
@@ -41,4 +41,3 @@ function pageAction_h_com_category($smarty, $requests)
 	$smarty->ext_display("h_com_category.tpl");
 }
 
-?>

@@ -4,7 +4,7 @@ function pageAction_c_topic_add($smarty,$requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $requests['target_c_commu_id'];
 	$title = $requests['title'];
 	$body = $requests['body'];
@@ -12,8 +12,8 @@ function pageAction_c_topic_add($smarty,$requests)
 	$err_msg = $requests['err_msg'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼
 	if(!p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu_id, $u)){
 		handle_kengen_error();
 	}
@@ -22,4 +22,4 @@ function pageAction_c_topic_add($smarty,$requests)
 
 	$smarty->ext_display("c_topic_add.tpl");
 }
-?>
+

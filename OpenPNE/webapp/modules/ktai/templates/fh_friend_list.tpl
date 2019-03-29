@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-({$target_c_member.nickname}) ¤µ¤ó¤Î({$WORD_FRIEND_HALF})°ìÍ÷<br>
+({$target_c_member.nickname}) ã•ã‚“ã®({$WORD_FRIEND_HALF})ä¸€è¦§<br>
 <hr>
 
 ({foreach from=$target_friend_list item=target_friend})
@@ -11,15 +11,15 @@
 
 ({if $is_prev || $is_next})
 <br>
-({if $is_prev})<a href="ktai_page.php?p=fh_friend_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page-1})&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=fh_friend_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page+1})&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=fh_friend_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page-1})&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=fh_friend_list&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;page=({$page+1})&amp;({$tail})">æ¬¡ã¸</a>({/if})
 
 ({/if})
 <br>
 <hr>
 ({if $INC_NAVI_type=="f"})
-<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$target_c_member.nickname})¤µ¤ó¤ÎÄ¯Ìß</a><br>
+<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$target_c_member.nickname})ã•ã‚“ã®ï¾„ï½¯ï¾Œï¾Ÿ</a><br>
 ({/if})
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

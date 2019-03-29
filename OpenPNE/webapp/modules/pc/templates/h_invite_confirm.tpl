@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******�������顧�ե����ɲ�****** -->
+<!-- ******ここから：フレンド追加****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,19 +37,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ե����ɲá�����* -->
-({*�������顧header*})
+<!-- *ここから：フレンド追加＞内容* -->
+({*ここから：header*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:398px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ͧ�ͤ�({$SNS_NAME})�˾��Ԥ���</span></td>
+<td style="width:398px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">友人を({$SNS_NAME})に招待する</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;">
 ({*********})
 <tr>
@@ -62,7 +62,7 @@
 
 <div class="padding_s">
 
-���Υ᡼�륢�ɥ쥹
+相手のメールアドレス
 
 </div>
 
@@ -90,7 +90,7 @@
 
 <div class="padding_s">
 
-��å����� (Ǥ��)
+メッセージ (任意)
 
 </div>
 
@@ -123,23 +123,23 @@
 <td style="width:50%;height:2em;text-align:right;">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_invite_insert_c_inivte">
 <input name="mail" type="hidden" value="({$form_val.mail})">
 <input name="message" type="hidden" value="({$form_val.message})">
-<input type=submit value="  ������  ">&nbsp;
+<input type=submit value="  送　信  ">&nbsp;
 </form>
 
 </td>
 <td style="width:50%;height:2em;text-align:left;">
 
 <form  action="page.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input name="p" type="hidden" value="h_invite">
 <input name="mail" type="hidden" value="({$form_val.mail})">
 <input name="message" type="hidden" value="({$form_val.message})">
-&nbsp;<input type="submit" value="����������">
+&nbsp;<input type="submit" value="　修　正　">
 </form>
 
 </td>
@@ -157,12 +157,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ե����ɲá������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：フレンド追加＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -173,14 +173,14 @@
 </tr>
 </table>
 
-<!-- ******�����ޤǡ��ե����ɲ�****** -->
+<!-- ******ここまで：フレンド追加****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

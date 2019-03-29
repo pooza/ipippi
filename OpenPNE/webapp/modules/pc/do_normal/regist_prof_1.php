@@ -10,15 +10,15 @@ function doNormalAction_regist_prof_1($requests)
 	}
     //>
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$sid = $requests['sid'];
 	// ----------
 	
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹
 	
     if (!n_regist_intro_is_active_sid($sid)) {
-        $msg = "¤³¤Î¾·ÂÔURL¤Ï´û¤ËÌµ¸ú¤Ë¤Ê¤Ã¤Æ¤¤¤Þ¤¹¡£";
+        $msg = "ã“ã®æ‹›å¾…URLã¯æ—¢ã«ç„¡åŠ¹ã«ãªã£ã¦ã„ã¾ã™ã€‚";
         client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
         exit;
     }
@@ -35,7 +35,7 @@ function doNormalAction_regist_prof_1($requests)
 	
 	$profs = $validator->getParams();
 	if ($profs['password'] != $requests['password2']) {
-		$errors['password2'] = '¥Ñ¥¹¥ï¡¼¥É¤¬°ìÃ×¤·¤Æ¤¤¤Þ¤»¤ó¡£';
+		$errors['password2'] = 'ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒä¸€è‡´ã—ã¦ã„ã¾ã›ã‚“ã€‚';
 	}
 	
     switch ($profs['public_flag_birth_year']) {
@@ -51,7 +51,7 @@ function doNormalAction_regist_prof_1($requests)
     	break;
     }
 	
-	//--- c_profile ¤Î¹àÌÜ¤ò¥Á¥§¥Ã¥¯
+	//--- c_profile ã®é …ç›®ã‚’ãƒã‚§ãƒƒã‚¯
 	$validator = new Validator();
 	$validator->addRequests($_REQUEST['profile']);
 	$validator->addRules(_getValidateRulesProfile());
@@ -59,17 +59,17 @@ function doNormalAction_regist_prof_1($requests)
 		$errors = array_merge($errors, $validator->getErrors());
 	}
 	
-	// ÃÍ¤ÎÀ°¹çÀ­¤ò¥Á¥§¥Ã¥¯(DB)
+	// å€¤ã®æ•´åˆæ€§ã‚’ãƒã‚§ãƒƒã‚¯(DB)
 	$c_member_profile_list = do_config_prof_check_profile($validator->getParams(), $_REQUEST['public_flag']);
 
-	// É¬¿Ü¹àÌÜ¥Á¥§¥Ã¥¯
+	// å¿…é ˆé …ç›®ãƒã‚§ãƒƒã‚¯
 	$profile_list = db_common_c_profile_list4null();
 	foreach ($profile_list as $profile) {
 		if ($profile['disp_regist'] &&
 			$profile['is_required'] &&
 			!$c_member_profile_list[$profile['name']]['value'])
 		{
-			$errors[$profile['name']] = "{$profile['caption']}¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+			$errors[$profile['name']] = "{$profile['caption']}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
 			break;
 		}
 	}
@@ -99,7 +99,7 @@ function _getValidateRules()
 		'nickname' => array(
 			'type' => 'string',
 			'required' => '1',
-			'caption' => '¥Ë¥Ã¥¯¥Í¡¼¥à',
+			'caption' => 'ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ',
 			'max' => '40',
 		),
 		'public_flag_birth_year' => array(
@@ -109,21 +109,21 @@ function _getValidateRules()
 			'type' => 'regexp',
 			'regexp' => '/[a-z0-9]+/i',
 			'required' => '1',
-			'caption' => '¥Ñ¥¹¥ï¡¼¥É',
+			'caption' => 'ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰',
 			'min' => '6',
 			'max' => '12',
 		),
 		'c_password_query_id' => array(
 			'type' => 'int',
 			'required' => '1',
-			'caption' => 'ÈëÌ©¤Î¼ÁÌä',
-			'required_error' => 'ÈëÌ©¤Î¼ÁÌä¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£',
+			'caption' => 'ç§˜å¯†ã®è³ªå•',
+			'required_error' => 'ç§˜å¯†ã®è³ªå•ã‚’é¸æŠžã—ã¦ãã ã•ã„ã€‚',
 			'min' => '1',
 		),
 		'c_password_query_answer' => array(
 			'type' => 'string',
 			'required' => '1',
-			'caption' => 'ÈëÌ©¤Î¼ÁÌä¤ÎÅú¤¨', 
+			'caption' => 'ç§˜å¯†ã®è³ªå•ã®ç­”ãˆ', 
 		),
 	);
 }
@@ -161,4 +161,3 @@ function _getValidateRulesProfile()
 	return $rules;	
 }
 
-?>

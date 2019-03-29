@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧�ȥԥå����Խ�����****** -->
+<!-- ******ここから：トピックを編集する****** -->
 <form action="do.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_edit_update_c_commu_topic">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
@@ -43,19 +43,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ȥԥå����Խ����������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：トピックを編集する＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�ȥԥå����Խ�����</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">トピックを編集する</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -68,7 +68,7 @@
 
 <div class="padding_s">
 
-�����ȥ�
+タイトル
 
 </div>
 
@@ -96,7 +96,7 @@
 
 <div class="padding_s">
 
-�ܡ���ʸ
+本　　文
 
 </div>
 
@@ -124,7 +124,7 @@
 
 <div class="padding_s">
 
-�̡��� 1
+写　真 1
 
 </div>
 
@@ -136,7 +136,7 @@
 
 ({if $c_topic.image_filename1})
 <img src="img.php?filename=({$c_topic.image_filename1})&w=76&h=76"><br>
-<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_image&target_c_commu_topic_id=({$c_topic.c_commu_topic_id})&pic_delete=1&amp;sessid=({$PHPSESSID})">���</a><br>
+<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_image&target_c_commu_topic_id=({$c_topic.c_commu_topic_id})&pic_delete=1&amp;sessid=({$PHPSESSID})">削除</a><br>
 ({/if})
 <input type="file" name="image_filename1" size="40">
 
@@ -156,7 +156,7 @@
 
 <div class="padding_s">
 
-�̡��� 2
+写　真 2
 
 </div>
 
@@ -168,7 +168,7 @@
 
 ({if $c_topic.image_filename2})
 <img src="img.php?filename=({$c_topic.image_filename2})&w=76&h=76"><br>
-<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_image&target_c_commu_topic_id=({$c_topic.c_commu_topic_id})&pic_delete=2&amp;sessid=({$PHPSESSID})">���</a><br>
+<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_image&target_c_commu_topic_id=({$c_topic.c_commu_topic_id})&pic_delete=2&amp;sessid=({$PHPSESSID})">削除</a><br>
 ({/if})
 <input type="file" name="image_filename2" size="40">
 
@@ -189,7 +189,7 @@
 
 <div class="padding_s">
 
-�̿��ΰ���
+写真の位置
 
 </div>
 
@@ -199,8 +199,8 @@
 
 <div class="padding_s">
 
-<input type="radio" name="image_position" value="TOP" class="no_bg" ({if $c_topic.image_position=="TOP"})checked({/if})> ��ʸ�ξ�
-<input type="radio" name="image_position" value="BOTTOM" class="no_bg"  ({if $c_topic.image_position=="BOTTOM"})checked({/if})> ��ʸ�β�
+<input type="radio" name="image_position" value="TOP" class="no_bg" ({if $c_topic.image_position=="TOP"})checked({/if})> 本文の上
+<input type="radio" name="image_position" value="BOTTOM" class="no_bg"  ({if $c_topic.image_position=="BOTTOM"})checked({/if})> 本文の下
 
 </div>
 
@@ -219,7 +219,7 @@
 
 <div class="padding_s">
 
-ź�եե����� 1
+添付ファイル 1
 
 </div>
 
@@ -230,7 +230,7 @@
 <div class="padding_s">
 ({if $c_topic.file_filename1})
 ({$c_topic.file_filename1})
-<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_file&c_commu_topic_id=({$c_topic.c_commu_topic_id})&file_index=1&sessid=({$PHPSESSID})">���</a><br>
+<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_file&c_commu_topic_id=({$c_topic.c_commu_topic_id})&file_index=1&sessid=({$PHPSESSID})">削除</a><br>
 ({/if})
 <input type="file" name="file_filename1" size="40">
 </div>
@@ -249,7 +249,7 @@
 
 <div class="padding_s">
 
-ź�եե����� 2
+添付ファイル 2
 
 </div>
 
@@ -260,7 +260,7 @@
 <div class="padding_s">
 ({if $c_topic.file_filename2})
 ({$c_topic.file_filename2})
-<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_file&c_commu_topic_id=({$c_topic.c_commu_topic_id})&file_index=2&sessid=({$PHPSESSID})">���</a><br>
+<a href="do.php?cmd=c_topic_edit_delete_c_commu_topic_comment_file&c_commu_topic_id=({$c_topic.c_commu_topic_id})&file_index=2&sessid=({$PHPSESSID})">削除</a><br>
 ({/if})
 <input type="file" name="file_filename2" size="40">
 </div>
@@ -279,7 +279,7 @@
 
 <div style="text-align:center;" class="padding_w_s">
 
-<input type="submit" value="���ԡ�����">
+<input type="submit" value="　編　集　">
 
 </div>
 
@@ -292,12 +292,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ȥԥå����Խ�����������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：トピックを編集する＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -309,15 +309,15 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ��ȥԥå����Խ�����****** -->
+<!-- ******ここまで：トピックを編集する****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************* -->
-<!-- ******�������顧���****** -->
+<!-- ******ここから：削除****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_delete_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
@@ -333,21 +333,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：削除＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�嵭�Υȥԥå��Ƚ񤭹��ߤ�������</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">上記のトピックと書き込みを削除する</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -359,10 +359,10 @@
 <div align="center" style="text-align:center;">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_topic_delete_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
-<input type=submit value="�������">
+<input type=submit value="　削　除　">
 </form>
 
 </div>
@@ -378,12 +378,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ�����������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：削除＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -393,13 +393,13 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����****** -->
+<!-- ******ここまで：削除****** -->
 <!-- ************************* -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

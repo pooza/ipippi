@@ -23,40 +23,40 @@ function clearAll(){
 </script>
 
 <form action="module_page.php" method="get">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <p style="margin-top:0">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('list_c_member')})">
-¥á¡¼¥ë¥¢¥É¥ì¥¹¸¡º÷(´°Á´°ìÃ×)¡§
+ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹æ¤œç´¢(å®Œå…¨ä¸€è‡´)ï¼š
 <input type="text" name="mail_address" value="({$requests.mail_address})" size="30">
-<input type="submit" class="submit" value="¸¡º÷">
+<input type="submit" class="submit" value="æ¤œç´¢">
 </p>
 </form>
 
 ({if $pager})
 <form action="module_page.php" method="get">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('list_c_member')})">
-É½¼¨·ï¿ô¡§
+è¡¨ç¤ºä»¶æ•°ï¼š
 <select name="page_size">
-<option value="10"({if $pager.page_size==10}) selected="selected"({/if})>10·ï</option>
-<option value="20"({if $pager.page_size==20}) selected="selected"({/if})>20·ï</option>
-<option value="50"({if $pager.page_size==50}) selected="selected"({/if})>50·ï</option>
-<option value="100"({if $pager.page_size==100}) selected="selected"({/if})>100·ï</option>
+<option value="10"({if $pager.page_size==10}) selected="selected"({/if})>10ä»¶</option>
+<option value="20"({if $pager.page_size==20}) selected="selected"({/if})>20ä»¶</option>
+<option value="50"({if $pager.page_size==50}) selected="selected"({/if})>50ä»¶</option>
+<option value="100"({if $pager.page_size==100}) selected="selected"({/if})>100ä»¶</option>
 </select>
-<input type="submit" class="submit" value="ÊÑ¹¹">
-<div class="caution">¢¨É½¼¨·ï¿ô¤òÂ¿¤¯¤¹¤ë¤È½èÍı¤¬½Å¤¯¤Ê¤ê¡¢¥µ¡¼¥Ğ¡¼¤ËÉé²Ù¤¬¤«¤«¤ê¤Ş¤¹¡£</div>
+<input type="submit" class="submit" value="å¤‰æ›´">
+<div class="caution">â€»è¡¨ç¤ºä»¶æ•°ã‚’å¤šãã™ã‚‹ã¨å‡¦ç†ãŒé‡ããªã‚Šã€ã‚µãƒ¼ãƒãƒ¼ã«è² è·ãŒã‹ã‹ã‚Šã¾ã™ã€‚</div>
 </form>
 ({/if})
 
 ({if $pager})
 <!-- pager_begin -->
 <div class="pager">
-({$pager.total_num}) ¿ÍÃæ ({$pager.start_num}) - ({$pager.end_num})¿ÍÌÜ¤òÉ½¼¨¤·¤Æ¤¤¤Ş¤¹
+({$pager.total_num}) äººä¸­ ({$pager.start_num}) - ({$pager.end_num})äººç›®ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™
 <br>
 ({if $pager.prev_page})
-<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">Á°¤Ø</a>&nbsp;
+<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">å‰ã¸</a>&nbsp;
 ({/if})
 ({foreach from=$pager.disp_pages item=i})
 ({if $i == $pager.page})
@@ -66,14 +66,14 @@ function clearAll(){
 ({/if})
 ({/foreach})
 ({if $pager.next_page})
-&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">¼¡¤Ø</a>
+&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">æ¬¡ã¸</a>
 ({/if})
 </div>
 <!-- pager_end -->
 ({/if})
 
 <form action="module_page.php" method="post" name="formSendMessages">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('send_messages')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -81,21 +81,21 @@ function clearAll(){
 
 ({capture name="table_header"})
 <tr>
-<th colspan="3">Áàºî</th>
+<th colspan="3">æ“ä½œ</th>
 <th>ID</th>
-<th>¥Ë¥Ã¥¯¥Í¡¼¥à</th>
-<th>ºÇ½ª¥í¥°¥¤¥ó</th>
-<th>ÅĞÏ¿Æü</th>
-<th>¾·ÂÔ¼Ô</th>
-<th colspan="3">²èÁü</th>
-<th colspan="3">À¸Ç¯·îÆü</th>
+<th>ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ </th>
+<th>æœ€çµ‚ãƒ­ã‚°ã‚¤ãƒ³</th>
+<th>ç™»éŒ²æ—¥</th>
+<th>æ‹›å¾…è€…</th>
+<th colspan="3">ç”»åƒ</th>
+<th colspan="3">ç”Ÿå¹´æœˆæ—¥</th>
 ({foreach from=$c_profile_list item=prof})
 <th>({$prof.caption})</th>
 ({/foreach})
 <th>ID</th>
-<th>PC¥¢¥É¥ì¥¹</th>
-<th>·ÈÂÓ¥¢¥É¥ì¥¹</th>
-<th>ÅĞÏ¿»ş¥¢¥É¥ì¥¹</th>
+<th>PCã‚¢ãƒ‰ãƒ¬ã‚¹</th>
+<th>æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹</th>
+<th>ç™»éŒ²æ™‚ã‚¢ãƒ‰ãƒ¬ã‚¹</th>
 </tr>
 ({/capture})
 
@@ -109,19 +109,19 @@ function clearAll(){
 ({foreach from=$c_member_list item=item})
 <tr>
 <td>({if $item.c_member_id != 1})<input type="checkbox" name="c_member_ids[]" value="({$item.c_member_id})">({else})&nbsp;({/if})</td>
-<td>({if $item.c_member_id != 1})<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_member_confirm')})&amp;target_c_member_id=({$item.c_member_id})">¶¯À©Âà²ñ</a>({else})&nbsp;({/if})</td>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('passwd')})&amp;target_c_member_id=({$item.c_member_id})">¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô</a></td>
+<td>({if $item.c_member_id != 1})<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_member_confirm')})&amp;target_c_member_id=({$item.c_member_id})">å¼·åˆ¶é€€ä¼š</a>({else})&nbsp;({/if})</td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('passwd')})&amp;target_c_member_id=({$item.c_member_id})">ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ</a></td>
 <td class="idnumber">({$item.c_member_id})</td>
 <td><a href="page.php?p=f_home&amp;target_c_member_id=({$item.c_member_id})" target="_blank">({$item.nickname})</a></td>
 <td>({if $item.r_date != '0000-00-00 00:00:00'})({$item.access_date|date_format:"%y-%m-%d %H:%M"})({else})&nbsp;({/if})</td>
 <td>({if $item.r_date != '0000-00-00 00:00:00'})({$item.r_date|date_format:"%y-%m-%d"})({else})&nbsp;({/if})</td>
 <td>({if $item.c_member_id_invite})({$item.c_member_id_invite}):<a href="page.php?p=f_home&amp;target_c_member_id=({$item.c_member_id_invite})" target="_blank">({$item.c_member_invite.nickname})</a>({else})&nbsp;({/if})</td>
-<td>({if $item.image_filename_1})<a href="img.php?filename=({$item.image_filename_1})" target="_blank">¡ü</a>({else})¡ß({/if})</td>
-<td>({if $item.image_filename_2})<a href="img.php?filename=({$item.image_filename_2})" target="_blank">¡ü</a>({else})¡ß({/if})</td>
-<td>({if $item.image_filename_3})<a href="img.php?filename=({$item.image_filename_3})" target="_blank">¡ü</a>({else})¡ß({/if})</td>
-<td class="number">({if $item.birth_year})({$item.birth_year})Ç¯({else})&nbsp;({/if})</td>
-<td class="number">({if $item.birth_month})({$item.birth_month})·î({else})&nbsp;({/if})</td>
-<td class="number">({if $item.birth_day})({$item.birth_day})Æü({else})&nbsp;({/if})</td>
+<td>({if $item.image_filename_1})<a href="img.php?filename=({$item.image_filename_1})" target="_blank">â—</a>({else})Ã—({/if})</td>
+<td>({if $item.image_filename_2})<a href="img.php?filename=({$item.image_filename_2})" target="_blank">â—</a>({else})Ã—({/if})</td>
+<td>({if $item.image_filename_3})<a href="img.php?filename=({$item.image_filename_3})" target="_blank">â—</a>({else})Ã—({/if})</td>
+<td class="number">({if $item.birth_year})({$item.birth_year})å¹´({else})&nbsp;({/if})</td>
+<td class="number">({if $item.birth_month})({$item.birth_month})æœˆ({else})&nbsp;({/if})</td>
+<td class="number">({if $item.birth_day})({$item.birth_day})æ—¥({else})&nbsp;({/if})</td>
 ({foreach from=$c_profile_list item=prof})
 <td>({strip})
 ({if $prof.form_type == "checkbox"})
@@ -142,19 +142,19 @@ function clearAll(){
 </table>
 
 <p>
-<a href="#" onClick="return checkAll();" onKeyPress="return checkAll();">Á´¤Æ¤ò¥Á¥§¥Ã¥¯</a> / <a href="#" onClick="return clearAll();" onKeyPress="return clearAll();">Á´¤Æ¤Î¥Á¥§¥Ã¥¯¤ò¤Ï¤º¤¹</a>
+<a href="#" onClick="return checkAll();" onKeyPress="return checkAll();">å…¨ã¦ã‚’ãƒã‚§ãƒƒã‚¯</a> / <a href="#" onClick="return clearAll();" onKeyPress="return clearAll();">å…¨ã¦ã®ãƒã‚§ãƒƒã‚¯ã‚’ã¯ãšã™</a>
 </p>
-¥Á¥§¥Ã¥¯¤·¤¿¥á¥ó¥Ğ¡¼¤ËÂĞ¤·¤Æ¡¢<br>
-<input type="submit" class="submit" value="¥á¥Ã¥»¡¼¥¸¤òÁ÷¿®¤¹¤ë">
+ãƒã‚§ãƒƒã‚¯ã—ãŸãƒ¡ãƒ³ãƒãƒ¼ã«å¯¾ã—ã¦ã€<br>
+<input type="submit" class="submit" value="ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã™ã‚‹">
 </form>
 
 ({if $pager})
 <!-- pager_begin -->
 <div class="pager">
-({$pager.total_num}) ¿ÍÃæ ({$pager.start_num}) - ({$pager.end_num})¿ÍÌÜ¤òÉ½¼¨¤·¤Æ¤¤¤Ş¤¹
+({$pager.total_num}) äººä¸­ ({$pager.start_num}) - ({$pager.end_num})äººç›®ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™
 <br>
 ({if $pager.prev_page})
-<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">Á°¤Ø</a>&nbsp;
+<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">å‰ã¸</a>&nbsp;
 ({/if})
 ({foreach from=$pager.disp_pages item=i})
 ({if $i == $pager.page})
@@ -164,12 +164,12 @@ function clearAll(){
 ({/if})
 ({/foreach})
 ({if $pager.next_page})
-&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">¼¡¤Ø</a>
+&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_member')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">æ¬¡ã¸</a>
 ({/if})
 </div>
 <!-- pager_end -->
 ({/if})
 
-<div class="caution">¢¨¥Ñ¥¹¥ï¡¼¥É¡¢ÈëÌ©¤Î¼ÁÌä¤ÎÅú¤¨¤ÏÉÔ²ÄµÕ¤Ê°Å¹æ²½¤ò»Ü¤·¤Æ¥Ç¡¼¥¿¥Ù¡¼¥¹¤ØÊİÂ¸¤·¤Æ¤¤¤ë¤¿¤á¡¢¸µ¤ÎÊ¸»úÎó¤òÃÎ¤ë¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¡£</div>
+<div class="caution">â€»ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã€ç§˜å¯†ã®è³ªå•ã®ç­”ãˆã¯ä¸å¯é€†ãªæš—å·åŒ–ã‚’æ–½ã—ã¦ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã¸ä¿å­˜ã—ã¦ã„ã‚‹ãŸã‚ã€å…ƒã®æ–‡å­—åˆ—ã‚’çŸ¥ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã€‚</div>
 
 ({$inc_footer|smarty:nodefaults})

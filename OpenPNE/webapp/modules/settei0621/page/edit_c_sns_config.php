@@ -1,5 +1,5 @@
 <?php
-// c_sns_config ¤òÊÔ½¸
+// c_sns_config ã‚’ç·¨é›†
 
 
 function pageAction_edit_c_sns_config(&$smarty,$requests)
@@ -24,4 +24,3 @@ function pageAction_edit_c_sns_config(&$smarty,$requests)
 	$smarty->ext_display("edit_c_sns_config.tpl");
 }
 
-?>

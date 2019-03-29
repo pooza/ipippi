@@ -4,7 +4,7 @@
 function pageAction_c_topic_write_delete_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_topic_comment_id = $requests['target_c_commu_topic_comment_id'];
 		// ----------
 
@@ -14,7 +14,7 @@ function pageAction_c_topic_write_delete_confirm($smarty,$requests) {
 		$c_commu_topic_id = $c_commu_topic_comment['c_commu_topic_id'];
 		$c_commu = _db_c_commu4c_commu_id($c_commu_id);
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if($c_commu_topic_comment['c_member_id']!=$u&&$c_commu['c_member_id_admin']!=$u){
 	        handle_kengen_error();
 		}
@@ -29,4 +29,4 @@ function pageAction_c_topic_write_delete_confirm($smarty,$requests) {
 
 		$smarty->ext_display('c_topic_write_delete_confirm.tpl');
 }
-?>
+

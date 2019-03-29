@@ -1,35 +1,35 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-ÀßÄêÊÑ¹¹
+è¨­å®šå¤‰æ›´
 
-[°ú¿ô]
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
-[¸¢¸Â]
+[å¼•æ•°]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
+[æ¨©é™]
 */
 function doAction_h_config_2($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$old_password = $request['old_password'];
 	$new_password = $request['new_password'];
 	$new_password2 = $request['new_password2'];
 	// ----------
 	
 	$msg_list = array();
-    if (!$new_password) $msg_list[] = "¥Ñ¥¹¥ï¡¼¥É¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
-    if (!$new_password2) $msg_list[] = "¥Ñ¥¹¥ï¡¼¥É(³ÎÇ§)¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+    if (!$new_password) $msg_list[] = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
+    if (!$new_password2) $msg_list[] = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰(ç¢ºèª)ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
     
-    if ($new_password != $new_password2) $msg_list[] = "¥Ñ¥¹¥ï¡¼¥É¤¬°ìÃ×¤·¤Ş¤»¤ó";
+    if ($new_password != $new_password2) $msg_list[] = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒä¸€è‡´ã—ã¾ã›ã‚“";
     if (!ctype_alnum($new_password) ||
         strlen($new_password) < 6 ||
         strlen($new_password) > 12) {
-        $msg_list[] = "¥Ñ¥¹¥ï¡¼¥É¤Ï6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+        $msg_list[] = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6ï½12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„";
     }
     
 	if (!$msg_list && !db_common_authenticate_password($u, $old_password)) {
-		$msg_list[] = "¸½ºß¤Î¥Ñ¥¹¥ï¡¼¥É¤¬°ã¤¤¤Ş¤¹";
+		$msg_list[] = "ç¾åœ¨ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™";
 	}
     
     // error
@@ -42,7 +42,7 @@ function doAction_h_config_2($request) {
 	do_common_update_password($u, $new_password);
 
 	$GLOBALS['AUTH']->t_logout();
-	$msg = "¥Ñ¥¹¥ï¡¼¥É¤òÊÑ¹¹¤·¤Ş¤·¤¿¡£¿·¤·¤¤¥Ñ¥¹¥ï¡¼¥É¤ÇºÆ¥í¥°¥¤¥ó¤·¤Æ¤¯¤À¤µ¤¤¡£";
+	$msg = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã§å†ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„ã€‚";
 	client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
 }
-?>
+

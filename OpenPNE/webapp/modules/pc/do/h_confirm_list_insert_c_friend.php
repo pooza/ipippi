@@ -1,29 +1,29 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥ê¥ó¥¯¾µÇ§
+ãƒªãƒ³ã‚¯æ‰¿èª
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_friend_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_message_send
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥ê¥ó¥¯Í×ÀÁ¤ò¼õ¤±¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ãƒªãƒ³ã‚¯è¦è«‹ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_h_confirm_list_insert_c_friend($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_friend_confirm_id = $request['target_c_friend_confirm_id'];
 	// ----------
     
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥ê¥ó¥¯¾µÇ§¤ò¼õ¤±¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ãƒªãƒ³ã‚¯æ‰¿èªã‚’å—ã‘ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
     
     $cfc = _do_c_friend_confirm4c_friend_confirm_id($target_c_friend_confirm_id);
     
@@ -38,7 +38,7 @@ function doAction_h_confirm_list_insert_c_friend($request) {
 
 	do_h_confirm_list_insert_c_friend_mail_send($cfc['c_member_id_from'], $u);
 
-	$msg = urlencode(WORD_FRIEND.'ÅÐÏ¿¤¬´°Î»¤·¤Þ¤·¤¿');
+	$msg = urlencode(WORD_FRIEND.'ç™»éŒ²ãŒå®Œäº†ã—ã¾ã—ãŸ');
 	client_redirect("page.php?p=f_message_send&target_c_member_id={$cfc['c_member_id_from']}&msg={$msg}");
 }
-?>
+

@@ -1,5 +1,5 @@
 <?php
-// ½ñ¤­¹þ¤ßºï½ü
+// æ›¸ãè¾¼ã¿å‰Šé™¤
 
 
 function pageAction_delete_kakikomi(&$smarty,$requests)
@@ -23,4 +23,3 @@ function pageAction_delete_kakikomi(&$smarty,$requests)
 	$smarty->ext_display("delete_kakikomi.tpl");
 }
 
-?>

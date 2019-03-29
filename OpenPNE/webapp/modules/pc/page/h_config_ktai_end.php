@@ -17,4 +17,4 @@ function pageAction_h_config_ktai_end($smarty,$requests) {
     
     $smarty->ext_display("h_config_ktai_end.tpl");
 }
-?>
+

@@ -1,12 +1,12 @@
 <?php
-//// ¥µ¡¼¥Ð¡¼´ÉÍýÀßÄê ////
+//// ã‚µãƒ¼ãƒãƒ¼ç®¡ç†è¨­å®š ////
 
-//--- É¬¿ÜÀßÄê
+//--- å¿…é ˆè¨­å®š
 
-// Web¾å¤ÎÀäÂÐ¥Ñ¥¹(URL)
+// Webä¸Šã®çµ¶å¯¾ãƒ‘ã‚¹(URL)
 define('ABSOLUTE_PATH', 'http://ipippi.jp/');
 
-// MySQL¥µ¡¼¥ÐÀßÄê
+// MySQLã‚µãƒ¼ãƒè¨­å®š
 $GLOBALS['__OpenPNE']['DSN'] =
 	array(
 		'phptype'  => 'mysql',
@@ -15,104 +15,104 @@ $GLOBALS['__OpenPNE']['DSN'] =
 		'hostspec' => 'localhost',
 		'database' => 'ipippi',
 	);
-// DB°Å¹æ²½¥­¡¼(56¥Ð¥¤¥È°ÊÆâ¤ÎASCIIÊ¸»úÎó)
+// DBæš—å·åŒ–ã‚­ãƒ¼(56ãƒã‚¤ãƒˆä»¥å†…ã®ASCIIæ–‡å­—åˆ—)
 define('ENCRYPT_KEY', 'rock salt');
 
-// ¥á¡¼¥ë¥µ¡¼¥Ð¡¼¥É¥á¥¤¥ó
-// ·ÈÂÓ¥á¡¼¥ëÅê¹Æ¤Î°¸Àè¤Ê¤É¤Î¥É¥á¥¤¥óÌ¾¤Ë»È¤ï¤ì¤ë
+// ãƒ¡ãƒ¼ãƒ«ã‚µãƒ¼ãƒãƒ¼ãƒ‰ãƒ¡ã‚¤ãƒ³
+// æºå¸¯ãƒ¡ãƒ¼ãƒ«æŠ•ç¨¿ã®å®›å…ˆãªã©ã®ãƒ‰ãƒ¡ã‚¤ãƒ³åã«ä½¿ã‚ã‚Œã‚‹
 define('MAIL_SERVER_DOMAIN', 'ipippi.jp');
 
 
-//--- ¥ª¥×¥·¥ç¥óÀßÄê
+//--- ã‚ªãƒ—ã‚·ãƒ§ãƒ³è¨­å®š
 
-// SQLÆâ¤Ç¤Î¥¨¥¹¥±¡¼¥×¤Î»ÅÊý
-// (DB¤ËÅÐÏ¿¤·¤¿¥Ç¡¼¥¿¤¬Ê¸»ú²½¤±¤¹¤ë¾ì¹ç¤Ï¤³¤ÎÀßÄê¤òÊÑ¤¨¤Æ¤ß¤Æ¤¯¤À¤µ¤¤)
+// SQLå†…ã§ã®ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã®ä»•æ–¹
+// (DBã«ç™»éŒ²ã—ãŸãƒ‡ãƒ¼ã‚¿ãŒæ–‡å­—åŒ–ã‘ã™ã‚‹å ´åˆã¯ã“ã®è¨­å®šã‚’å¤‰ãˆã¦ã¿ã¦ãã ã•ã„)
 // 0 : mysql_real_escape_string
-// 1 : mbstring ¤Î´Ø¿ô¤ÇÃÖ´¹
+// 1 : mbstring ã®é–¢æ•°ã§ç½®æ›
 define('DB_ESCAPE_TYPE', 1);
 
-// DBÀÜÂ³»þ¤Ë SET NAMES ujis; ¥¯¥¨¥ê¡¼¤òÈ¯¹Ô¤¹¤ë¤«¤É¤¦¤«
+// DBæŽ¥ç¶šæ™‚ã« SET NAMES ujis; ã‚¯ã‚¨ãƒªãƒ¼ã‚’ç™ºè¡Œã™ã‚‹ã‹ã©ã†ã‹
 define('USE_SET_NAMES', true);
 
-/// ¥Ç¥Ð¥Ã¥°¡¢¥¨¥é¡¼¥Ï¥ó¥É¥ê¥ó¥°¡¢¥í¥°ÀßÄê
+/// ãƒ‡ãƒãƒƒã‚°ã€ã‚¨ãƒ©ãƒ¼ãƒãƒ³ãƒ‰ãƒªãƒ³ã‚°ã€ãƒ­ã‚°è¨­å®š
 
 error_reporting(E_ALL ^ E_NOTICE);
 ini_set('display_errors', false);
 //ini_set('log_errors', true);
 //ini_set('error_log', DOCUMENT_ROOT . '/var/log/php_errors.log');
 
-// Smarty ¤ÎÀßÄê
+// Smarty ã®è¨­å®š
 //$GLOBALS['__SMARTY']['debugging'] = true;
 //$GLOBALS['__SMARTY']['force_compile'] = true;
 
-// CSRFÂÐºö¤Î¥¨¥é¡¼¤òÄÌÃÎ¤¹¤ë¥á¡¼¥ë¥¢¥É¥ì¥¹ (¶õ¤Î¾ì¹ç¤ÏÁ÷¿®¤·¤Ê¤¤)
+// CSRFå¯¾ç­–ã®ã‚¨ãƒ©ãƒ¼ã‚’é€šçŸ¥ã™ã‚‹ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ (ç©ºã®å ´åˆã¯é€ä¿¡ã—ãªã„)
 define('HAMACHI_EMAIL', '');
 
-// ¥¢¥¯¥»¥¹¥í¥°¤ò¼èÆÀ¤¹¤ë¤«¤É¤¦¤«(c_access_log)
+// ã‚¢ã‚¯ã‚»ã‚¹ãƒ­ã‚°ã‚’å–å¾—ã™ã‚‹ã‹ã©ã†ã‹(c_access_log)
 define('LOG_C_ACCESS_LOG', true);
 
-/// ¥»¥Ã¥·¥ç¥ó¡¦¥¯¥Ã¥­¡¼ÀßÄê
+/// ã‚»ãƒƒã‚·ãƒ§ãƒ³ãƒ»ã‚¯ãƒƒã‚­ãƒ¼è¨­å®š
 
 ini_set('session.gc_maxlifetime', 432000); // 5 days
 //session_save_path('/tmp');
 
-// PCÈÇ
-// ¥»¥Ã¥·¥ç¥óÀ¸À®»þ¤«¤é¤ÎÍ­¸ú´ü¸Â(ÉÃ) (0 ¤Î¾ì¹ç¤ÏÌµ´ü¸Â)
+// PCç‰ˆ
+// ã‚»ãƒƒã‚·ãƒ§ãƒ³ç”Ÿæˆæ™‚ã‹ã‚‰ã®æœ‰åŠ¹æœŸé™(ç§’) (0 ã®å ´åˆã¯ç„¡æœŸé™)
 $GLOBALS['__OpenPNE']['common']['session_lifetime'] = 0;
-// ¥»¥Ã¥·¥ç¥ó¤ÎÍ­¸ú´ü¸Â(ÉÃ)
+// ã‚»ãƒƒã‚·ãƒ§ãƒ³ã®æœ‰åŠ¹æœŸé™(ç§’)
 $GLOBALS['__OpenPNE']['common']['session_idletime'] = 432000; // 5 days
 
-// ·ÈÂÓÈÇ
-// ¥»¥Ã¥·¥ç¥óÀ¸À®»þ¤«¤é¤ÎÍ­¸ú´ü¸Â(ÉÃ) (0 ¤Î¾ì¹ç¤ÏÌµ¸Â)
+// æºå¸¯ç‰ˆ
+// ã‚»ãƒƒã‚·ãƒ§ãƒ³ç”Ÿæˆæ™‚ã‹ã‚‰ã®æœ‰åŠ¹æœŸé™(ç§’) (0 ã®å ´åˆã¯ç„¡é™)
 $GLOBALS['__OpenPNE']['ktai']['session_lifetime'] = 0;
-// ¥»¥Ã¥·¥ç¥ó¤ÎÍ­¸ú´ü¸Â(ÉÃ)
+// ã‚»ãƒƒã‚·ãƒ§ãƒ³ã®æœ‰åŠ¹æœŸé™(ç§’)
 $GLOBALS['__OpenPNE']['ktai']['session_idletime'] = 3600; // 1 hour
 
-/// ²èÁüÊÑ´¹
+/// ç”»åƒå¤‰æ›
 
-// ImageMagick¤ò»È¤¦(¤¿¤À¤·¡¢GD¤âÉ¬Í×)
+// ImageMagickã‚’ä½¿ã†(ãŸã ã—ã€GDã‚‚å¿…è¦)
 //define('USE_IMAGEMAGICK', true);
 
-// ImageMagick ¤Î convert¥³¥Þ¥ó¥É¤Î¥Ñ¥¹
+// ImageMagick ã® convertã‚³ãƒžãƒ³ãƒ‰ã®ãƒ‘ã‚¹
 //define('IMGMAGICK_APP', '/usr/bin/convert');
 //define('IMGMAGICK_APP', '"C:\Program Files\ImageMagick-6.2.5-Q16\convert"');
 
-// ImageMagick ¤Î¥ª¥×¥·¥ç¥ó(¥Ç¥Õ¥©¥ë¥È¤Ï -resize)
+// ImageMagick ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³(ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯ -resize)
 //define('IMGMAGICK_OPT', "-resize");
 //define('IMGMAGICK_OPT', "-thumbnail");
 
-/// ³°ÉôRSS¼èÆÀ
+/// å¤–éƒ¨RSSå–å¾—
 
-// °ìÅÙ¤Ë¼èÆÀ¤¹¤ëRSS¤Î·ï¿ô
+// ä¸€åº¦ã«å–å¾—ã™ã‚‹RSSã®ä»¶æ•°
 define('RSS_CACHE_LIMIT', 100);
 
-// ¥Ë¥å¡¼¥¹URL
+// ãƒ‹ãƒ¥ãƒ¼ã‚¹URL
 $GLOBALS['__OpenPNE']['news'] = array(
 	//"Google News" => "http://rss.akiyan.com/rss/googlenews.rss?category=topnews",
 );
 
-/// ·ÈÂÓ¥á¡¼¥ëÅê¹Æ
+/// æºå¸¯ãƒ¡ãƒ¼ãƒ«æŠ•ç¨¿
 
-// °¸Àè¥¢¥É¥ì¥¹¤ò¥Ï¥Ã¥·¥å¤Ë¤¹¤ë¤«
+// å®›å…ˆã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’ãƒãƒƒã‚·ãƒ¥ã«ã™ã‚‹ã‹
 define('MAIL_ADDRESS_HASHED', true);
 
-// ¼õ¿®¥á¡¼¥ë¤ÎÊ¸»ú¥³¡¼¥É(Content-Type¤«¤é¼èÆÀ¤Ç¤­¤Ê¤¤¾ì¹ç¤Ë»È¤¦)
+// å—ä¿¡ãƒ¡ãƒ¼ãƒ«ã®æ–‡å­—ã‚³ãƒ¼ãƒ‰(Content-Typeã‹ã‚‰å–å¾—ã§ããªã„å ´åˆã«ä½¿ã†)
 //define('MAIL_FROM_ENCODING', "JIS");
 define('MAIL_FROM_ENCODING', "auto");
 
-// ¥á¡¼¥ë¥í¥°¤ò¼è¤ë¤«¤É¤¦¤«(var/log/mail.log)
+// ãƒ¡ãƒ¼ãƒ«ãƒ­ã‚°ã‚’å–ã‚‹ã‹ã©ã†ã‹(var/log/mail.log)
 define('MAIL_DEBUG_LOG', false);
 
-/// ¥á¡¼¥ëÁ÷¿®ÀßÄê
+/// ãƒ¡ãƒ¼ãƒ«é€ä¿¡è¨­å®š
 
-// È¾³Ñ¥«¥¿¥«¥Ê¤òÁ´³Ñ¥«¥¿¥«¥Ê¤ËÊÑ´¹¤·¤ÆÁ÷¿®¤¹¤ë
+// åŠè§’ã‚«ã‚¿ã‚«ãƒŠã‚’å…¨è§’ã‚«ã‚¿ã‚«ãƒŠã«å¤‰æ›ã—ã¦é€ä¿¡ã™ã‚‹
 define('MAIL_HAN2ZEN', true);
 
-// MTA¤ËÅÏ¤¹¥Ø¥Ã¥À¤Î²þ¹Ô¥³¡¼¥É(LF->CRLF ¤Î¼«Æ°ÊÑ´¹¤¬¹Ô¤ï¤ì¤ë¤³¤È¤Ø¤ÎÂÐºö)
+// MTAã«æ¸¡ã™ãƒ˜ãƒƒãƒ€ã®æ”¹è¡Œã‚³ãƒ¼ãƒ‰(LF->CRLF ã®è‡ªå‹•å¤‰æ›ãŒè¡Œã‚ã‚Œã‚‹ã“ã¨ã¸ã®å¯¾ç­–)
 //define('MAIL_HEADER_SEP', 'CRLF');
 define('MAIL_HEADER_SEP', 'LF');
 
-/// mbstringÀßÄê
+/// mbstringè¨­å®š
 
 mb_language("Japanese");
 ini_set('mbstring.detect_order', "auto");
@@ -123,9 +123,9 @@ ini_set('mbstring.script_encoding'  , "EUC-JP");
 ini_set('mbstring.substitute_character', "none");
 
 
-//// SNS¥¢¥×¥ê¥±¡¼¥·¥ç¥óÀßÄê ////
+//// SNSã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³è¨­å®š ////
 
-//´ÉÍý²èÌÌ¤Î½é´üÀßÄê¹àÌÜ¤òÉ½¼¨¤¹¤ë¤«¤É¤¦¤«
+//ç®¡ç†ç”»é¢ã®åˆæœŸè¨­å®šé …ç›®ã‚’è¡¨ç¤ºã™ã‚‹ã‹ã©ã†ã‹
 define('ADMIN_INIT_CONFIG', true);
 
 ?>

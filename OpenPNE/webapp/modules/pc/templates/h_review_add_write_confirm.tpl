@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******�������顧�񤭹��߳�ǧ****** -->
+<!-- ******ここから：書き込み確認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,20 +37,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�񤭹��߳�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：書き込み確認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:398px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�ʲ������ƤǤ�������Ǥ�����</span></td>
+<td style="width:398px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">以下の内容でよろしいですか？</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;">
 ({*********})
 <tr>
@@ -62,7 +62,7 @@
 <td style="width:100px;" class="bg_05" align="left" valign="middle">
 
 <div style="padding: 3px;">
-��ӥ塼
+レビュー
 </div>
 
 </td>
@@ -86,7 +86,7 @@
 <td style="width:100px;" class="bg_05" align="left" valign="middle">
 
 <div class="padding_s">
-��­��
+満足度
 </div>
 
 </td>
@@ -120,27 +120,27 @@
 <td>
 
 <form action="do.php" method="post" style="DISPLAY: inline">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_review_add">
 <input type="hidden" name="category_id" value="({$category_id})">
 <input type="hidden" name="asin" value="({$asin})">
 <input type="hidden" name="body" value="({$body})">
 <input type="hidden" name="satisfaction_level" value="({$satisfaction_level})">
-<input type="submit" value="�������">
+<input type="submit" value="　作　成　">
 </form>
 
 </td>
 <td>
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_review_add_write">
 <input type="hidden" name="category_id" value="({$category_id})">
 <input type="hidden" name="asin" value="({$asin})">
 <input type="hidden" name="body" value="({$body})">
 <input type="hidden" name="satisfaction_level" value="({$satisfaction_level})">
-<input type="submit" value="����������">
+<input type="submit" value="　修　正　">
 </form>
 
 </td>
@@ -158,12 +158,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��񤭹��߳�ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：書き込み確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -174,14 +174,14 @@
 </tr>
 </table>
 </form>
-<!-- ******�����ޤǡ��񤭹��߳�ǧ****** -->
+<!-- ******ここまで：書き込み確認****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

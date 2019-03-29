@@ -5,7 +5,7 @@
 function pageAction_h_bookmark_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$direc = $requests['direc'];
 		$page = $requests['page'];
 		// ----------
@@ -29,4 +29,4 @@ function pageAction_h_bookmark_list($smarty,$requests) {
 
 		$smarty->ext_display("h_bookmark_list.tpl");
 }
-?>
+

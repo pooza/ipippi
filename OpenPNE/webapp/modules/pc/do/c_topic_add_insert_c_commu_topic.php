@@ -12,8 +12,8 @@ function doAction_c_topic_add_insert_c_commu_topic($request) {
 	$file_filename3_tmpfile = $request['file_filename3_tmpfile'];
 	$body = $request['body'];
 
-	//---¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//---æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 
 	$status = db_common_commu_status($u, $c_commu_id);
 
@@ -75,11 +75,11 @@ function doAction_c_topic_add_insert_c_commu_topic($request) {
 	}
 	t_image_clear_tmp(session_id());
 
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(·ÈÂÓ¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(æºå¸¯ã¸)
 	send_bbs_info_mail($insert_id, $u);
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(PC¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(PCã¸)
 	send_bbs_info_mail_pc($insert_id, $u);
 
 	client_redirect("page.php?p=c_topic_list&target_c_commu_id=$c_commu_id");
 }
-?>
+

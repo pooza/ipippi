@@ -1,8 +1,8 @@
 <?php
-// admin ¥â¥¸¥å¡¼¥ëÍÑ DBÀÜÂ³¥é¥¤¥Ö¥é¥ê
+// admin ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ç”¨ DBæŽ¥ç¶šãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 
 /**
- * ¥æ¡¼¥¶¡¼¥ê¥¹¥È¼èÆÀ
+ * ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒªã‚¹ãƒˆå–å¾—
  */
 function db_admin_c_member_list($page, $page_size, &$pager)
 {
@@ -251,7 +251,7 @@ function db_admin_update_c_profile($c_profile_id
 		" WHERE c_profile_id = " . quote4db($c_profile_id);
 	_mysql_query4db($sql);
 	
-	// ¸ø³«ÀßÄê¤¬¸ÇÄê¤Î¤È¤­¤Ï¥æ¡¼¥¶¡¼¤ÎÀßÄêÃÍ¤ò¾å½ñ¤­
+	// å…¬é–‹è¨­å®šãŒå›ºå®šã®ã¨ãã¯ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®è¨­å®šå€¤ã‚’ä¸Šæ›¸ã
 	if (!$public_flag_edit) {
 		$sql = "UPDATE c_member_profile" .
 			" SET public_flag = " . quote4db($public_flag_default) . 
@@ -262,17 +262,17 @@ function db_admin_update_c_profile($c_profile_id
 
 function db_admin_delete_c_profile($c_profile_id)
 {
-	// ¥á¥ó¥Ð¡¼¤Î¥×¥í¥Õ¥£¡¼¥ë¤«¤éºï½ü
+	// ãƒ¡ãƒ³ãƒãƒ¼ã®ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ã‹ã‚‰å‰Šé™¤
 	$sql = "DELETE FROM c_member_profile" .
 		" WHERE c_profile_id = " . quote4db($c_profile_id);
 	_mysql_query4db($sql);
 	
-	// ÁªÂò»è¹àÌÜ¤òºï½ü
+	// é¸æŠžè‚¢é …ç›®ã‚’å‰Šé™¤
 	$sql = "DELETE FROM c_profile_option" .
 		" WHERE c_profile_id = " . quote4db($c_profile_id);
 	_mysql_query4db($sql);
 	
-	// ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜ¤òºï½ü
+	// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ã‚’å‰Šé™¤
 	$sql = "DELETE FROM c_profile" .
 		" WHERE c_profile_id = " . quote4db($c_profile_id);
 	_mysql_query4db($sql);
@@ -286,10 +286,10 @@ function db_admin_c_profile4c_profile_id($c_profile_id)
 }
 
 /**
- * Á´¥Ð¥Ê¡¼¼èÆÀ
+ * å…¨ãƒãƒŠãƒ¼å–å¾—
  * 
- * @param	int $limit		¼èÆÀºÇÂç·ï¿ô
- * @return	array_of_array  c_banner_list	¥Ð¥Ê¡¼ÇÛÎó
+ * @param	int $limit		å–å¾—æœ€å¤§ä»¶æ•°
+ * @return	array_of_array  c_banner_list	ãƒãƒŠãƒ¼é…åˆ—
  */
 function db_admin_c_banner_list4null($type = "", $limit = 0)
 {
@@ -365,12 +365,12 @@ function db_admin_update_c_commu_category_parent($c_commu_category_parent_id, $n
 
 function db_admin_delete_c_commu_category_parent($c_commu_category_parent_id)
 {
-	// ¾®¥«¥Æ¥´¥ê¤òºï½ü
+	// å°ã‚«ãƒ†ã‚´ãƒªã‚’å‰Šé™¤
 	$sql = "DELETE FROM c_commu_category" .
 		" WHERE c_commu_category_parent_id = " . quote4db($c_commu_category_parent_id);
 	_mysql_query4db($sql);
 	
-	// Ãæ¥«¥Æ¥´¥ê¤òºï½ü
+	// ä¸­ã‚«ãƒ†ã‚´ãƒªã‚’å‰Šé™¤
 	$sql = "DELETE FROM c_commu_category_parent" .
 		" WHERE c_commu_category_parent_id = " . quote4db($c_commu_category_parent_id);
 	_mysql_query4db($sql);
@@ -394,7 +394,7 @@ function db_admin_update_c_commu_category($c_commu_category_id, $name, $sort_ord
 
 function db_admin_delete_c_commu_category($c_commu_category_id)
 {
-	// ¾®¥«¥Æ¥´¥ê¤òºï½ü
+	// å°ã‚«ãƒ†ã‚´ãƒªã‚’å‰Šé™¤
 	$sql = "DELETE FROM c_commu_category" .
 		" WHERE c_commu_category_id = " . quote4db($c_commu_category_id);
 	_mysql_query4db($sql);
@@ -454,7 +454,7 @@ function db_admin_c_admin_config_all()
 
 function db_admin_delete_c_image_link4image_filename($image_filename)
 {
-	// c_banner (ºï½ü)
+	// c_banner (å‰Šé™¤)
 	$sql = "DELETE FROM c_banner" .
 		" WHERE image_filename = " . quote4db($image_filename);
 	_mysql_query4db($sql);
@@ -493,4 +493,4 @@ function db_admin_empty_image_filename($tbl, $image_filename, $column = "image_f
 	_mysql_query4db($sql);
 }
 
-?>
+

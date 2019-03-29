@@ -1,13 +1,13 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-¥á¥Ã¥»¡¼¥¸BOX<br>
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸BOX<br>
 <hr>
 
 ({$c_message.r_date|date_format:"%Y/%m/%d %H:%M"})<br>
 ({if $c_message.c_member_id_to==$u})<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$c_message.c_member_id_from})&amp;({$tail})">({$c_message.c_member_nickname_from})</a>
 ({else})({$c_message.c_member_nickname_from})
 ({/if})
-¡ä¡ä
+ï¼ï¼
 ({if $c_message.c_member_id_to==$u})({$c_message.c_member_nickname_to})
 ({else})<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$c_message.c_member_id_to})&amp;({$tail})">({$c_message.c_member_nickname_to})</a>
 ({/if})
@@ -16,32 +16,32 @@
 ({$c_message.subject})<br>
 <br>
 ({$c_message.body|nl2br})
-({if $com_url})<a href="({$com_url})">ºĞ­ÆÃ¨Íß°¼Ş</a>({/if})
-({if $friend_url})<a href="({$friend_url})">({$WORD_FRIEND_HALF})¤ÎÍß°¼Ş</a>({/if})
+({if $com_url})<a href="({$com_url})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¾ï¾Ÿï½°ï½¼ï¾</a>({/if})
+({if $friend_url})<a href="({$friend_url})">({$WORD_FRIEND_HALF})ã®ï¾ï¾Ÿï½°ï½¼ï¾</a>({/if})
 <br>
 ({if $c_message.is_syoudaku})
-<a href="./ktai_page.php?p=h_confirm_list&amp;({$tail})">¾µÇ§ÂÔ¤ÁØ½Ä</a><br>
+<a href="./ktai_page.php?p=h_confirm_list&amp;({$tail})">æ‰¿èªå¾…ã¡ï¾˜ï½½ï¾„</a><br>
 ({/if})
 ({if $c_message.c_member_id_to==$u})
 <hr>
-¢£ÊÖ¿®¤ò½ñ¤¯<br>
+â– è¿”ä¿¡ã‚’æ›¸ã<br>
 <form action="do_ktai.php" method="POST">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="cmd" value="h_message_insert_message">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="c_message_id" value="({$c_message.c_message_id})">
 <input type="hidden" name="target_c_member_id" value="({$c_message.c_member_id_from})">
 <font color=red>({if $msg})({$msg})<br>({/if})</font>
-À²ÄÙ:<br>
+ï¾€ï½²ï¾„ï¾™:<br>
 <input type="text" name="subject" value="Re:({$c_message.subject})" size="14"><br>
-ËÜÊ¸:<br>
+æœ¬æ–‡:<br>
 <textarea cols="14" rows="6" name="body"></textarea><br>
 <br>
-<input type="submit" value="Á÷¿®">
+<input type="submit" value="é€ä¿¡">
 </form>
 ({/if})
 <hr>
-<a href="ktai_page.php?p=h_message_box&amp;({$tail})">Ò¯¾°¼ŞÎŞ¯¸½</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_message_box&amp;({$tail})">ï¾’ï½¯ï½¾ï½°ï½¼ï¾ï¾ï¾ï½¯ï½¸ï½½</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

@@ -4,7 +4,7 @@
 function pageAction_h_diary_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$form_val['subject'] = $requests['subject'];
 	$form_val['body'] = $requests['body'];
 	// ----------
@@ -14,15 +14,15 @@ function pageAction_h_diary_add($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
-	//¥×¥í¥Õ¥£¡¼¥ë
+	//ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«
 	$smarty->assign("target_member", db_common_c_member4c_member_id($u));
 	$smarty->assign("form_val", $form_val);
 
-	//¥«¥ì¥ó¥À¡¼´Ø·¸
-	//¥«¥ì¥ó¥À¡¼³«»ÏÍÑÊÑ¿ô
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼é–¢ä¿‚
+	//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼é–‹å§‹ç”¨å¤‰æ•°
 	$year = date("Y");
 	$month= date("n");
-	//Æüµ­°ìÍ÷¡¢¥«¥ì¥ó¥À¡¼ÍÑÊÑ¿ô
+	//æ—¥è¨˜ä¸€è¦§ã€ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ç”¨å¤‰æ•°
 	$date_val=	array(
         'year' => $year,
         'month' => $month,
@@ -30,16 +30,16 @@ function pageAction_h_diary_add($smarty,$requests) {
     );
 	$smarty->assign("date_val", $date_val);
 		
-	//Æüµ­¤Î¥«¥ì¥ó¥À¡¼
+	//æ—¥è¨˜ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼
 	$calendar = db_common_diary_monthly_calendar($year, $month, $u);
 
 	$smarty->assign("calendar", $calendar['days']);
 	$smarty->assign("ym", $calendar['ym']);		
 
-	//³Æ·î¤ÎÆüµ­
+	//å„æœˆã®æ—¥è¨˜
 	$smarty->assign("date_list",p_fh_diary_list_date_list4c_member_id($u));
 	
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_diary_add.tpl");
 }
-?>
+

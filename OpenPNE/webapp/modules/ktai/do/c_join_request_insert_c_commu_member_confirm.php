@@ -1,19 +1,19 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¥ê¥¯¥¨¥¹¥È
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ ãƒªã‚¯ã‚¨ã‚¹ãƒˆ
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-Á´¥á¥ó¥Ð¡¼
+[æ¨©é™]
+å…¨ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_c_join_request_insert_c_commu_member_confirm($requests)
@@ -21,15 +21,15 @@ function doAction_c_join_request_insert_c_commu_member_confirm($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$body = $requests['body'];
 	// ----------
 
 	$c_member_id_from = $u;
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¡¼¤Ç¤Ê¤¤ and »²²Ã¾µÇ§Ãæ¤Ç¤Ê¤¤
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼ã§ãªã„ and å‚åŠ æ‰¿èªä¸­ã§ãªã„
 
     $status = db_common_commu_status($u, $target_c_commu_id);
     if ($status['is_commu_member'] ||
@@ -47,19 +47,19 @@ function doAction_c_join_request_insert_c_commu_member_confirm($requests)
 
 	do_c_join_request_insert_c_commu_member_confirm($target_c_commu_id, $c_member_id_from, $body);
 
-	//¥á¥Ã¥»¡¼¥¸
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 	$c_commu		= do_common_c_commu4c_commu_id($target_c_commu_id);
 	$c_member_id_to = $c_commu['c_member_id_admin'];
 	$c_member_from	= db_common_c_member4c_member_id($c_member_id_from);
 
-	$subject ="¥³¥ß¥å¥Ë¥Æ¥£»²²ÃÍ×ÀÁ¥á¥Ã¥»¡¼¥¸";
+	$subject ="ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è¦è«‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸";
 	$body_disp =
-		$c_member_from['nickname']." ¤µ¤ó¤«¤é ".$c_commu['name']." ¥³¥ß¥å¥Ë¥Æ¥£¤Ø¤Î»²²Ã´õË¾¥á¥Ã¥»¡¼¥¸¤¬ÆÏ¤¤¤Æ¤¤¤Þ¤¹¡£\n".
+		$c_member_from['nickname']." ã•ã‚“ã‹ã‚‰ ".$c_commu['name']." ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã¸ã®å‚åŠ å¸Œæœ›ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒå±Šã„ã¦ã„ã¾ã™ã€‚\n".
 		"\n".
-		"¥á¥Ã¥»¡¼¥¸¡§\n".
+		"ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š\n".
 		$body."\n".
 		"\n".
-		"¤³¤ÎÍ×ÀÁ¤Ë¤Ä¤¤¤Æ¡¢¾µÇ§ÂÔ¤Á¥ê¥¹¥È¤«¤é¾µÇ§¤Þ¤¿¤ÏµñÈÝ¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£\n";
+		"ã“ã®è¦è«‹ã«ã¤ã„ã¦ã€æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆã‹ã‚‰æ‰¿èªã¾ãŸã¯æ‹’å¦ã‚’é¸æŠžã—ã¦ãã ã•ã„ã€‚\n";
 
 	do_common_send_message_syoudaku($c_member_id_from, $c_member_id_to, $subject, $body_disp);
 
@@ -67,4 +67,3 @@ function doAction_c_join_request_insert_c_commu_member_confirm($requests)
     client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
 }
 
-?>

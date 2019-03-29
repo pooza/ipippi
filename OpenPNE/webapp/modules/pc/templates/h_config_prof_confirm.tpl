@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧�ץ��ե������ѹ�****** -->
+<!-- ******ここから：プロフィール変更****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,21 +37,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ץ��ե������ѹ�������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：プロフィール変更＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
 <td style="width:598px;padding:2px 0px;" class="bg_06">
-<span class="b_b c_00">�ץ��ե������ѹ�</span>&nbsp;&nbsp;(<span class="caution">��</span>�ι��ܤ�ɬ�ܤǤ�)
+<span class="b_b c_00">プロフィール変更</span>&nbsp;&nbsp;(<span class="caution">※</span>の項目は必須です)
 </td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -65,7 +65,7 @@
 
 <div class="padding_s">
 
-�˥å��͡��� <span class="caution">��</span>
+ニックネーム <span class="caution">※</span>
 
 </div>
 
@@ -110,7 +110,7 @@
 
 ({$profile.caption})
 ({if $profile.is_required})
-<span class="caution">��</span>
+<span class="caution">※</span>
 ({/if})
  
 </div>
@@ -132,9 +132,9 @@
 ({/if})
 
 ({if $prof.profile[$profile.name].public_flag == 'friend'})
-��({$WORD_MY_FRIEND})�ޤǸ�����
+（({$WORD_MY_FRIEND})まで公開）
 ({elseif $prof.profile[$profile.name].public_flag == 'private'})
-�ʸ������ʤ���
+（公開しない）
 ({/if})
 
 ({/if})
@@ -166,7 +166,7 @@
 <td style="width:45%;" align="center">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_config_prof">
 <input type="hidden" name="mode" value="register">
@@ -191,7 +191,7 @@
 <input type="hidden" name="public_flag[({$key})]" value="({$item.public_flag})">
 ({/foreach})
 ({/strip})
-<input type="submit" value="���ѡ�����">
+<input type="submit" value="　変　更　">
 </form>
 
 </td>
@@ -199,7 +199,7 @@
 <td style="width:45%;" align="center">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_config_prof">
 <input type="hidden" name="mode" value="input">
@@ -224,7 +224,7 @@
 <input type="hidden" name="public_flag[({$key})]" value="({$item.public_flag})">
 ({/foreach})
 ({/strip})
-<input type="submit" value="����������">
+<input type="submit" value="　修　正　">
 </form>
 
 </td>
@@ -242,12 +242,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ץ��ե������ѹ��������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：プロフィール変更＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -257,13 +257,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ��ץ��ե������ѹ�****** -->
+<!-- ******ここまで：プロフィール変更****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

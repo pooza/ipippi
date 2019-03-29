@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>({$SNS_NAME})¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô</center>
+<center>({$SNS_NAME})ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ</center>
 <hr>
 
 ({if $msg})
@@ -9,25 +9,25 @@
 <br>
 
 <form action="do_ktai_normal.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="cmd" value="password_query">
-·ÈÂÓÒ°Ù±ÄŞÚ½<br>
+æºå¸¯ï¾’ï½°ï¾™ï½±ï¾„ï¾ï¾šï½½<br>
 <textarea name="ktai_address" rows="1" istyle="3" mode="alphabet" maxlength="100"></textarea><br>
-ÈëÌ©¤Î¼ÁÌä<br>
+ç§˜å¯†ã®è³ªå•<br>
 <select name="c_password_query_id">
-<option value="0">ÁªÂò¤·¤Æ¤¯¤À¤µ¤¤
+<option value="0">é¸æŠã—ã¦ãã ã•ã„
 ({foreach from=$password_query_list key=key item=item})
 <option value="({$key})">({$item})
 ({/foreach})
 </select><br>
-ÈëÌ©¤Î¼ÁÌä¤ÎÅú¤¨<br>
+ç§˜å¯†ã®è³ªå•ã®ç­”ãˆ<br>
 <input type="text" name="password_query_answer" value=""><br>
 <br>
-<input type="submit" value="¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô"><br>
+<input type="submit" value="ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ"><br>
 </form>
 
 <hr>
 
-<a href="ktai_normal.php?p=login">¥í¥°¥¤¥ó¥Ú¡¼¥¸¤ØÌá¤ë</a>
+<a href="ktai_normal.php?p=login">ãƒ­ã‚°ã‚¤ãƒ³ãƒšãƒ¼ã‚¸ã¸æˆ»ã‚‹</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

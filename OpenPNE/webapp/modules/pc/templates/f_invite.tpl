@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧���οͤ�Ҳ𤹤�****** -->
+<!-- ******ここから：この人を紹介する****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="cmd" value="f_invite_insert_c_message_friend_invite">
 <input type="hidden" name="target_c_member_id" value="({$target_member.c_member_id})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -43,20 +43,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���οͤ�Ҳ𤹤������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：この人を紹介する＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})�ˤ��οͤ�Ҳ𤹤�</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})にこの人を紹介する</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å������� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -69,7 +69,7 @@
 
 <div style="padding:10px 30px;">
 
-���οͤ�Ҳ𤷤���({$WORD_MY_FRIEND})������������ӡ��Ҳ𤹤��å�������񤤤Ƥ���������
+この人を紹介したい({$WORD_MY_FRIEND})を一覧から選び、紹介するメッセージを書いてください。
 
 </div>
 
@@ -82,8 +82,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���å������� -->
-<!-- �������顧�����ơ���ѹ������� -->
+<!-- ここまで：主内容＞＞メッセージ欄 -->
+<!-- ここから：主内容＞＞変更入力欄 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -106,7 +106,7 @@
 
 <div class="padding_s">
 
-�˥å��͡���
+ニックネーム
 
 </div>
 
@@ -136,7 +136,7 @@
 
 <div class="padding_s">
 
-������({$WORD_MY_FRIEND})
+教える({$WORD_MY_FRIEND})
 
 </div>
 
@@ -175,7 +175,7 @@
 
 <div class="padding_s">
 
-��å�����
+メッセージ
 
 </div>
 
@@ -185,7 +185,7 @@
 
 <div class="padding_s">
 
-<textarea name="body" rows="5" cols="50">({$target_member.nickname})�����Ҳ𤷤ޤ���</textarea>
+<textarea name="body" rows="5" cols="50">({$target_member.nickname})さんを紹介します。</textarea>
 
 </div>
 
@@ -205,7 +205,7 @@
 
 <div class="padding_w_m">
 
-<input type="submit" value="&nbsp;��&nbsp;��&nbsp;">
+<input type="submit" value="&nbsp;送&nbsp;信&nbsp;">
 
 </div>
 
@@ -218,13 +218,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ѹ������� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����οͤ�Ҳ𤹤�������* -->
+<!-- ここまで：主内容＞＞変更入力欄 -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：この人を紹介する＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -236,7 +236,7 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ����οͤ�Ҳ𤹤�****** -->
+<!-- ******ここまで：この人を紹介する****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -244,7 +244,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

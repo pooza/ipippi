@@ -1,26 +1,26 @@
 ({$inc_header|smarty:nodefaults})
 
 <form action="module_page.php" method="get">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('list_c_image')})">
-É½¼¨·ï¿ô¡§
+è¡¨ç¤ºä»¶æ•°ï¼š
 <select name="page_size">
-<option value="20"({if $pager.page_size==20}) selected="selected"({/if})>20·ï</option>
-<option value="50"({if $pager.page_size==50}) selected="selected"({/if})>50·ï</option>
-<option value="100"({if $pager.page_size==100}) selected="selected"({/if})>100·ï</option>
-<option value="500"({if $pager.page_size==500}) selected="selected"({/if})>500·ï</option>
+<option value="20"({if $pager.page_size==20}) selected="selected"({/if})>20ä»¶</option>
+<option value="50"({if $pager.page_size==50}) selected="selected"({/if})>50ä»¶</option>
+<option value="100"({if $pager.page_size==100}) selected="selected"({/if})>100ä»¶</option>
+<option value="500"({if $pager.page_size==500}) selected="selected"({/if})>500ä»¶</option>
 </select>
-<input type="submit" class="submit" value="ÊÑ¹¹">
-<div class="caution">¢¨É½¼¨·ï¿ô¤òÂ¿¤¯¤¹¤ë¤È½èÍı¤¬½Å¤¯¤Ê¤ê¡¢¥µ¡¼¥Ğ¡¼¤ËÉé²Ù¤¬¤«¤«¤ê¤Ş¤¹¡£</div>
+<input type="submit" class="submit" value="å¤‰æ›´">
+<div class="caution">â€»è¡¨ç¤ºä»¶æ•°ã‚’å¤šãã™ã‚‹ã¨å‡¦ç†ãŒé‡ããªã‚Šã€ã‚µãƒ¼ãƒãƒ¼ã«è² è·ãŒã‹ã‹ã‚Šã¾ã™ã€‚</div>
 </form>
 
 <!-- pager_begin -->
 <div class="pager">
-({$pager.total_num}) ·ïÃæ ({$pager.start_num}) - ({$pager.end_num})·ïÌÜ¤òÉ½¼¨¤·¤Æ¤¤¤Ş¤¹
+({$pager.total_num}) ä»¶ä¸­ ({$pager.start_num}) - ({$pager.end_num})ä»¶ç›®ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™
 <br>
 ({if $pager.prev_page})
-<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">Á°¤Ø</a>&nbsp;
+<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">å‰ã¸</a>&nbsp;
 ({/if})
 ({foreach from=$pager.disp_pages item=i})
 ({if $i == $pager.page})
@@ -30,7 +30,7 @@
 ({/if})
 ({/foreach})
 ({if $pager.next_page})
-&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">¼¡¤Ø</a>
+&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">æ¬¡ã¸</a>
 ({/if})
 </div>
 <!-- pager_end -->
@@ -47,7 +47,7 @@
 ><img src="img.php?filename=({$item.filename})&amp;w=120&amp;h=120"
 ></a></div>
 ({$item.filename})<br>
-[<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_image_confirm')})&amp;target_c_image_id=({$item.c_image_id})">ºï½ü</a>]
+[<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_image_confirm')})&amp;target_c_image_id=({$item.c_image_id})">å‰Šé™¤</a>]
 </td>
 
 ({if $smarty.foreach.c_image.iteration % 5 == 0})</tr>({/if})
@@ -57,10 +57,10 @@
 
 <!-- pager_begin -->
 <div class="pager">
-({$pager.total_num}) ·ïÃæ ({$pager.start_num}) - ({$pager.end_num})·ïÌÜ¤òÉ½¼¨¤·¤Æ¤¤¤Ş¤¹
+({$pager.total_num}) ä»¶ä¸­ ({$pager.start_num}) - ({$pager.end_num})ä»¶ç›®ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™
 <br>
 ({if $pager.prev_page})
-<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">Á°¤Ø</a>&nbsp;
+<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.prev_page})&amp;page_size=({$pager.page_size})">å‰ã¸</a>&nbsp;
 ({/if})
 ({foreach from=$pager.disp_pages item=i})
 ({if $i == $pager.page})
@@ -70,7 +70,7 @@
 ({/if})
 ({/foreach})
 ({if $pager.next_page})
-&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">¼¡¤Ø</a>
+&nbsp;<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})&amp;page=({$pager.next_page})&amp;page_size=({$pager.page_size})">æ¬¡ã¸</a>
 ({/if})
 </div>
 <!-- pager_end -->

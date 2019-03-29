@@ -5,14 +5,14 @@
  * @subpackage plugins
  */
 /**
- * ÁÈ¤ß¹þ¤ß´Ø¿ô include ¤Îext¥Ç¥£¥ì¥¯¥È¥êÂÐ±þÈÇ
+ * çµ„ã¿è¾¼ã¿é–¢æ•° include ã®extãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå¯¾å¿œç‰ˆ
  *
- * Ãí°Õ¡ª TejimayaSmarty¥¯¥é¥¹¤Ç»ÈÍÑ¤·¤Ê¤¤¸Â¤êÆ°¤­¤Þ¤»¤ó¡£
+ * æ³¨æ„ï¼ TejimayaSmartyã‚¯ãƒ©ã‚¹ã§ä½¿ç”¨ã—ãªã„é™ã‚Šå‹•ãã¾ã›ã‚“ã€‚
  *
  *   {include file="**"}
- *  ¤Ê¤ëÉôÊ¬¤ò
+ *  ãªã‚‹éƒ¨åˆ†ã‚’
  *   {ext_include file="**"}
- *  ¤È¤¹¤ì¤ÐOK
+ *  ã¨ã™ã‚Œã°OK
  *
  * @param string $smarty_file
  * @param string $smarty_assign variable to assign the included template's
@@ -33,11 +33,11 @@ function smarty_function_ext_include($params, &$smarty)
 	if ($smarty->t_framework && $smarty->t_framework['call_type']) {
 		$type = $smarty->t_framework['call_type'];
 
-		// ³ÈÄ¥¥Õ¥¡¥¤¥ë¥Á¥§¥Ã¥¯
+		// æ‹¡å¼µãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 		$tpl = 'file:' . $smarty->t_framework['modules_dir'] . "/{$type}/ext/templates/" . $params['file'];
-		if (!$smarty->template_exists($tpl)) { // ext¥Ç¥£¥ì¥¯¥È¥ê¤Ë¥Æ¥ó¥×¥ì¡¼¥È¤¬¤¢¤ë¤«
+		if (!$smarty->template_exists($tpl)) { // extãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãŒã‚ã‚‹ã‹
 			$tpl = 'file:' . $smarty->t_framework['modules_dir'] . "/{$type}/templates/" . $params['file'];
-			if (!$smarty->template_exists($tpl)) { // É¸½à¥Ç¥£¥ì¥¯¥È¥ê¤Ë¥Æ¥ó¥×¥ì¡¼¥È¤¬¤¢¤ë¤«
+			if (!$smarty->template_exists($tpl)) { // æ¨™æº–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãŒã‚ã‚‹ã‹
 				$smarty->trigger_error('tpl file not found. '.$tpl);
 			}
 		}
@@ -47,4 +47,4 @@ function smarty_function_ext_include($params, &$smarty)
 	$smarty->_smarty_include($params);
 	return;
 }
-?>
+

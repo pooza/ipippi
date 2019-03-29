@@ -5,16 +5,16 @@ function doAction_h_config_password_query_update_password_query($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$password = $requests['password'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
-	// ¸½ºß¤Î¥Ñ¥¹¥ï¡¼¥É¤¬Àµ¤·¤¤¤«
+	// ç¾åœ¨ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒæ­£ã—ã„ã‹
 	if (!db_common_authenticate_password($u, $password)) {
 		client_redirect("ktai_page.php?p=h_config_password_query&msg=18&" . $tail);
 		exit;
@@ -34,4 +34,3 @@ function doAction_h_config_password_query_update_password_query($requests)
 	client_redirect("ktai_page.php?p=h_config&msg=24&" . $tail);
 }
 
-?>

@@ -13,4 +13,4 @@ function pageAction_h_manage_friend($smarty,$requests) {
 
 	$smarty->ext_display("h_manage_friend.tpl");
 }
-?>
+

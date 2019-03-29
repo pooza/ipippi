@@ -9,17 +9,17 @@ function normalAction_regist_intro($smarty,$requests)
 	}
     //>
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$sid = $requests['sid'];
 	// ----------
 
     if (!n_regist_intro_is_active_sid($sid)) {
-        $msg = "¤³¤Î¾·ÂÔURL¤Ï´û¤ËÌµ¸ú¤Ë¤Ê¤Ã¤Æ¤¤¤Þ¤¹¡£";
+        $msg = "ã“ã®æ‹›å¾…URLã¯æ—¢ã«ç„¡åŠ¹ã«ãªã£ã¦ã„ã¾ã™ã€‚";
         client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
         exit;
     }
 	
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("public") );
 	
 	$smarty->assign("sid", $sid);
@@ -28,4 +28,3 @@ function normalAction_regist_intro($smarty,$requests)
 	$smarty->ext_display("regist_intro.tpl");
 
 }
-?>

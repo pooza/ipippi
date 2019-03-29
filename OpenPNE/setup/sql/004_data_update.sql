@@ -1,4 +1,4 @@
 SET NAMES ujis;
 
 DELETE FROM `c_review_category`;
-INSERT INTO `c_review_category` (`c_review_category_id`, `category`, `category_disp`, `sort_order`) VALUES (1,'Books','À‹',0),(2,'ForeignBooks','ÕŒΩÒ',0),(3,'Electronics','•®•Ï•Ø•»•Ì•À•Ø•π',0),(4,'Kitchen','•€°º•‡&•≠•√•¡•Û',0),(5,'Music','•ﬂ•Â°º•∏•√•Ø',0),(6,'DVD','DVD/•”•«•™',0),(7,'Software','•Ω•’•»•¶•ß•¢',0),(8,'VideoGames','•≤°º•‡',0),(9,'Toys','§™§‚§¡§„&•€•”°º',0);
+INSERT INTO `c_review_category` (`c_review_category_id`, `category`, `category_disp`, `sort_order`) VALUES (1,'Books','Êú¨',0),(2,'ForeignBooks','Ê¥ãÊõ∏',0),(3,'Electronics','„Ç®„É¨„ÇØ„Éà„É≠„Éã„ÇØ„Çπ',0),(4,'Kitchen','„Éõ„Éº„É†&„Ç≠„ÉÉ„ÉÅ„É≥',0),(5,'Music','„Éü„É•„Éº„Ç∏„ÉÉ„ÇØ',0),(6,'DVD','DVD/„Éì„Éá„Ç™',0),(7,'Software','„ÇΩ„Éï„Éà„Ç¶„Çß„Ç¢',0),(8,'VideoGames','„Ç≤„Éº„É†',0),(9,'Toys','„Åä„ÇÇ„Å°„ÇÉ&„Éõ„Éì„Éº',0);

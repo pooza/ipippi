@@ -1,7 +1,7 @@
 <?php
 function doNormalAction_public_invite($requests)
 {
-	// ¥ª¡¼¥×¥óÀ©¤ÎSNS°Ê³°¤Ç¤ÏÌµ¸ú
+	// ã‚ªãƒ¼ãƒ—ãƒ³åˆ¶ã®SNSä»¥å¤–ã§ã¯ç„¡åŠ¹
 	if (IS_CLOSED_SNS) {
 		client_redirect_login();
 		exit;
@@ -14,31 +14,31 @@ function doNormalAction_public_invite($requests)
 	}
     //>
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$pc_address = $requests['pc_address'];
 	$pc_address2 = $requests['pc_address2'];
 	// ----------
 	
-	//¿·µ¬ÅÐÏ¿»þ¤Î¾·ÂÔ¼Ô¡Êc_member_id=1¡Ë
+	//æ–°è¦ç™»éŒ²æ™‚ã®æ‹›å¾…è€…ï¼ˆc_member_id=1ï¼‰
     $c_member_id_invite = 1;
 
     if (!db_common_is_mailaddress($pc_address)) {
-    	$msg = '¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÀµ¤·¤¯ÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£';
+    	$msg = 'ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„ã€‚';
     	client_redirect("normal.php?p=public_invite&msg=" . urlencode($msg));
     	exit;
     }
     if (is_ktai_mail_address($pc_address)) {
-    	$msg = '·ÈÂÓ¥á¡¼¥ë¥¢¥É¥ì¥¹¤ÏÆþÎÏ¤Ç¤­¤Þ¤»¤ó¡£';
+    	$msg = 'æºå¸¯ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯å…¥åŠ›ã§ãã¾ã›ã‚“ã€‚';
     	client_redirect("normal.php?p=public_invite&msg=" . urlencode($msg));
     	exit;
     }
     if ($pc_address != $pc_address2) {
-    	$msg = '¥á¡¼¥ë¥¢¥É¥ì¥¹¤¬°ìÃ×¤·¤Æ¤¤¤Þ¤»¤ó¡£';
+    	$msg = 'ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ãŒä¸€è‡´ã—ã¦ã„ã¾ã›ã‚“ã€‚';
     	client_redirect("normal.php?p=public_invite&msg=" . urlencode($msg));
     	exit;
     }
     if (_db_c_member_id4pc_address($pc_address)) {
-        $msg = '¤½¤Î¥¢¥É¥ì¥¹¤Ï´û¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹¡£';
+        $msg = 'ãã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯æ—¢ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™ã€‚';
         client_redirect("normal.php?p=public_invite&msg=" . urlencode($msg));
         exit;
     }
@@ -55,4 +55,3 @@ function doNormalAction_public_invite($requests)
 	
     client_redirect("normal.php?p=public_invite_end");
 }
-?>

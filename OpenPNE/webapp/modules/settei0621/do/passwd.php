@@ -1,5 +1,5 @@
 <?php
-// ¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô
+// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œ
 
 
 function doAction_passwd($requests)
@@ -14,22 +14,22 @@ function doAction_passwd($requests)
         strlen($password) < 6 ||
         strlen($password) > 12) {
 		admin_client_redirect('passwd',
-			"¥Ñ¥¹¥ï¡¼¥É¤Ï6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤", 
+			"ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6ï½ž12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„", 
 			"target_c_member_id=".$c_member_id);
 		exit;
     }
 	
 	if ($requests['password'] !== $requests['password2']) {
 		admin_client_redirect('passwd',
-			"¥Ñ¥¹¥ï¡¼¥É¤¬°ìÃ×¤·¤Æ¤¤¤Þ¤»¤ó",
+			"ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒä¸€è‡´ã—ã¦ã„ã¾ã›ã‚“",
 			"target_c_member_id=".$c_member_id);
 		exit;
 	}
 	
-	//¥Ñ¥¹¥ï¡¼¥ÉÊÑ¹¹
+	//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å¤‰æ›´
 	do_common_update_password($c_member_id, $password);
 	
-	//¥á¡¼¥ëÁ÷¿®
+	//ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 	$c_member_secure = db_common_c_member_secure4c_member_id($c_member_id);
 	if ($c_member_secure['pc_address']) {
 		do_password_query_mail_send($c_member_id, $c_member_secure['pc_address'], $password);
@@ -37,7 +37,7 @@ function doAction_passwd($requests)
 		db_mail_send_m_ktai_password_query($c_member_id, $password);
 	}
 	
-	admin_client_redirect('top', "¥æ¡¼¥¶¡¼¤Î¥Ñ¥¹¥ï¡¼¥É¤òÊÑ¹¹¤·¡¢¥á¡¼¥ë¤òÁ÷¿®¤·¤Þ¤·¤¿");	
+	admin_client_redirect('top', "ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã—ã€ãƒ¡ãƒ¼ãƒ«ã‚’é€ä¿¡ã—ã¾ã—ãŸ");	
 }
 
-?>
+

@@ -18,30 +18,30 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- *************************** -->
-<!-- ******�������顧�꡼��****** -->
+<!-- ******ここから：リード****** -->
 <div align="left" style="width:600px;margin:0px auto;" class="border_01 bg_02">
 
 <div style="padding: 10px ;">
 
-<span class="b_b">����å׵�ǽ�Ǽ�ʬ�Υڡ�������¸���뤳�Ȥ��Ǥ��ޤ�������åפ��ɲä�����Ϥ�����򥯥�å����Ƥ���������</span>&nbsp;<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;
-<a href="page.php?p=h_review_clip_add&c_review_id=({$c_review.c_review_id})">����åפ��ɲä���</a>
+<span class="b_b">クリップ機能で自分のページに保存することができます。クリップに追加する場合はこちらをクリックしてください。</span>&nbsp;<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;
+<a href="page.php?p=h_review_clip_add&c_review_id=({$c_review.c_review_id})">クリップに追加する</a>
 
 </div>
 
 </div>
-<!-- ******�����ޤǡ��꡼��****** -->
+<!-- ******ここまで：リード****** -->
 <!-- *************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ********************************** -->
-<!-- ******�������顧���ξ��ʤγ���****** -->
+<!-- ******ここから：この商品の概要****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -51,20 +51,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ξ��ʤγ��ס�����* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：この商品の概要＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">��&nbsp;��</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">概&nbsp;要</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���ӥ塼ɽ�� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞レビュー表示 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -77,7 +77,7 @@
 
 <div class="padding_s">
 
-<a href="({$c_review.url})" target="_blank"><img src="({$c_review.image_medium})"><br>�ܺ٤򸫤�</a>
+<a href="({$c_review.url})" target="_blank"><img src="({$c_review.image_medium})"><br>詳細を見る</a>
 
 </div>
 
@@ -87,7 +87,7 @@
 
 <div class="padding_s">
 
-�����ȥ�
+タイトル
 
 </div>
 
@@ -117,7 +117,7 @@
 
 <div class="padding_s">
 
-����
+説明
 
 </div>
 
@@ -149,7 +149,7 @@
 
 <div class="padding_s">
 
-���ƥ���
+カテゴリ
 
 </div>
 
@@ -159,7 +159,7 @@
 
 <div class="padding_s">
 
-���ƥ��ꡧ({$c_review.category_disp})
+カテゴリ：({$c_review.category_disp})
 
 </div>
 
@@ -179,7 +179,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=h_review_add_write&category_id=({$c_review.c_review_category_id})&asin=({$c_review.asin})">��ӥ塼���</a>
+<a href="page.php?p=h_review_add_write&category_id=({$c_review.c_review_category_id})&asin=({$c_review.asin})">レビューを書く</a>
 
 </div>
 
@@ -192,13 +192,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ӥ塼ɽ�� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ξ��ʤγ��ס������* -->
+<!-- ここまで：主内容＞＞レビュー表示 -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：この商品の概要＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -208,7 +208,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����ξ��ʤγ���****** -->
+<!-- ******ここまで：この商品の概要****** -->
 <!-- ********************************** -->
 
 ({if $c_review_list})
@@ -216,7 +216,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧���ξ��ʤ�����ӥ塼����****** -->
+<!-- ******ここから：この商品の全レビュー一覧****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -226,20 +226,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ξ��ʤ�����ӥ塼����������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：この商品の全レビュー一覧＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">����ӥ塼</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">全レビュー</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ����ɽ�� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞件数表示 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -252,9 +252,9 @@
 
 <div class="padding_s">
 
-({$start_num})���({$end_num})���ɽ��&nbsp;&nbsp;
-({if $is_prev})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=-1&page=({$page})>����</a> ({/if})
-({if $is_next})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=1&page=({$page})>����</a>({/if})
+({$start_num})件～({$end_num})件を表示&nbsp;&nbsp;
+({if $is_prev})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=-1&page=({$page})>＜前</a> ({/if})
+({if $is_next})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=1&page=({$page})>次＞</a>({/if})
 
 </div>
 
@@ -267,8 +267,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ����ɽ������� -->
-<!-- �������顧�����ơ���ӥ塼ɽ�� -->
+<!-- ここまで：主内容＞＞件数表示終わり -->
+<!-- ここから：主内容＞＞レビュー表示 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -291,7 +291,7 @@
 <td style="width:50px;" class="bg_05" align="left" valign="middle">
 <div style="padding:4px 3px;">
 
-��ӥ塼
+レビュー
 
 </div>
 </td>
@@ -320,7 +320,7 @@
 
 <div class="padding_s">
 
-��������
+作成日時
 
 </div>
 
@@ -330,7 +330,7 @@
 
 <div class="padding_s">
 
-({$review.r_datetime|date_format:"%m��%d�� %H:%M"})
+({$review.r_datetime|date_format:"%m月%d日 %H:%M"})
 
 </div>
 
@@ -350,7 +350,7 @@
 
 <div class="padding_s">
 
-��­��
+満足度
 
 </div>
 
@@ -384,7 +384,7 @@
 
 <div class="padding_s">
 
-<a href="page.php?p=fh_review_list_member&target_c_member_id=({$review.c_member_id})">¾�Υ�ӥ塼�򸫤�</a>
+<a href="page.php?p=fh_review_list_member&target_c_member_id=({$review.c_member_id})">他のレビューを見る</a>
 
 </div>
 
@@ -398,8 +398,8 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- �����ޤǡ������ơ���ӥ塼ɽ�� -->
-<!-- �������顧�����ơ����ɽ������� -->
+<!-- ここまで：主内容＞＞レビュー表示 -->
+<!-- ここから：主内容＞＞件数表示終わり -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -412,9 +412,9 @@
 
 <div class="padding_s">
 
-({$start_num})���({$end_num})���ɽ��&nbsp;&nbsp;
-({if $is_prev})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=-1&page=({$page})>����</a> ({/if})
-({if $is_next})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=1&page=({$page})>����</a>({/if})
+({$start_num})件～({$end_num})件を表示&nbsp;&nbsp;
+({if $is_prev})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=-1&page=({$page})>＜前</a> ({/if})
+({if $is_next})<a href=page.php?p=h_review_list_product&c_review_id=({$c_review.c_review_id})&direc=1&page=({$page})>次＞</a>({/if})
 
 </div>
 
@@ -427,13 +427,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ����ɽ������� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ξ��ʤ�����ӥ塼�����������* -->
+<!-- ここまで：主内容＞＞件数表示終わり -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：この商品の全レビュー一覧＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -443,7 +443,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����ξ��ʤ�����ӥ塼����****** -->
+<!-- ******ここまで：この商品の全レビュー一覧****** -->
 <!-- ******************************************** -->
 
 ({/if})
@@ -455,19 +455,19 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧��ӥ塼���ɤ���****** -->
+<!-- ******ここから：レビュー　どこへ****** -->
 <div align="center">
 
-<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=fh_review_list_member">���ʤ��Υ�ӥ塼������</a>
+<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=fh_review_list_member">あなたのレビュー一覧へ</a>
 
 </div>
 
 <div align="center">
 
-<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=h_review_search">���ΤΥ�ӥ塼������</a>
+<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="page.php?p=h_review_search">全体のレビュー一覧へ</a>
 
 </div>
-<!-- ******�����ޤǡ���ӥ塼���ɤ���****** -->
+<!-- ******ここまで：レビュー　どこへ****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -477,7 +477,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

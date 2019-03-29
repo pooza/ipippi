@@ -1,19 +1,19 @@
 <?php
 //-------------------------------------------------------------------
 /**
-¾·ÂÔ¥á¡¼¥ëÁ÷¿®
+æ‹›å¾…ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 
-[°ú¿ô]
+[å¼•æ•°]
 mail_address
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 h_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-Á´¥á¥ó¥Ð¡¼
+[æ¨©é™]
+å…¨ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_h_invite_insert_c_invite($requests)
@@ -21,7 +21,7 @@ function doAction_h_invite_insert_c_invite($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$mail = $requests['mail_address'];
 	$body = $requests['body'];
 	// ----------
@@ -35,8 +35,8 @@ function doAction_h_invite_insert_c_invite($requests)
 		exit;
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
@@ -61,7 +61,7 @@ function doAction_h_invite_insert_c_invite($requests)
 		}
 		//>
 	
-	    // c_member_ktai_pre ¤ËÄÉ²Ã
+	    // c_member_ktai_pre ã«è¿½åŠ 
 		if (do_common_c_member_ktai_pre4ktai_address($mail)) {
 	    	do_update_c_member_ktai_pre($session, $mail, $u);
 		} else {
@@ -79,7 +79,7 @@ function doAction_h_invite_insert_c_invite($requests)
 		}
 		//>
 		
-		// c_member_pre ¤ËÄÉ²Ã
+		// c_member_pre ã«è¿½åŠ 
 		if (do_common_c_member_pre4pc_address($mail)) {
 			do_h_invite_update_c_inivte($u, $mail, $body, $session);
 		} else {
@@ -92,4 +92,4 @@ function doAction_h_invite_insert_c_invite($requests)
 	client_redirect("ktai_page.php?p=h_invite&msg=30&$tail");
 }
 
-?>
+

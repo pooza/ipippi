@@ -5,29 +5,29 @@ function doAction_h_config_mail_insert_c_ktai_address_pre($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ktai_address = $requests['ktai_address'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 	
 	if(!db_common_is_mailaddress($ktai_address)){
-		// ¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤
+		// ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„
 		client_redirect("ktai_page.php?p=h_config_mail&msg=12&$tail");
 		exit;
 	}
 
 	if(!is_ktai_mail_address($ktai_address)) {
-		// ·ÈÂÓ¥¢¥É¥ì¥¹°Ê³°¤Ï»ØÄê¤Ç¤­¤Þ¤»¤ó
+		// æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹ä»¥å¤–ã¯æŒ‡å®šã§ãã¾ã›ã‚“
         client_redirect("ktai_page.php?p=h_config_mail&msg=16&$tail");		
 		exit;
 	}
 
 	if(p_is_sns_join4mail_address($ktai_address)){
-	    // ¤³¤Î¥¢¥É¥ì¥¹¤Ï¤¹¤Ç¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹
+	    // ã“ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯ã™ã§ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™
         client_redirect("ktai_page.php?p=h_config_mail&msg=17&$tail");
         exit;
 	}
@@ -43,4 +43,3 @@ function doAction_h_config_mail_insert_c_ktai_address_pre($requests)
 	client_redirect("ktai_normal.php?p=send_mail_end");
 }
 
-?>

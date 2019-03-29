@@ -4,7 +4,7 @@
 function pageAction_h_message_confirm($smarty, $requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_message_id = $requests['target_c_message_id'];
 	$form_val['target_c_member_id'] = $requests['target_c_member_id'];
 	$form_val['subject'] = $requests['subject'];
@@ -14,14 +14,14 @@ function pageAction_h_message_confirm($smarty, $requests) {
 
 	$msg = "";
 	if (null == $requests['subject']) {
-		$msg = "·ïÌ¾¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+		$msg = "ä»¶åã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 	}
 
 	if (null == $requests['body']) {
 		if (!empty ($msg)) {
 			$msg .= "<br>";
 		}
-		$msg .= "¥á¥Ã¥»¡¼¥¸¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+		$msg .= "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 	}
 
 	if ($msg) {
@@ -32,17 +32,17 @@ function pageAction_h_message_confirm($smarty, $requests) {
 
 	$smarty->assign('inc_navi', fetch_inc_navi("f", $target_c_member_id));
 
-	//¥¿¡¼¥²¥Ã¥È¾ğÊó
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
-	//¥¿¡¼¥²¥Ã¥È¤Îid
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®id
 	$smarty->assign("target_c_member_id", $form_val['target_c_member_id']);
 	$smarty->assign("target_c_message_id", $target_c_message_id);
 
 	$smarty->assign("form_val", $form_val);
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("h_message_confirm.tpl");
 
 }
-?>
+

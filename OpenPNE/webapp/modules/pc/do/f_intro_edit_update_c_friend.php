@@ -1,37 +1,37 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥Õ¥ì¥ó¥É¾Ò²ðÊ¸ÆþÎÏ¡¦ÊÔ½¸
+ãƒ•ãƒ¬ãƒ³ãƒ‰ç´¹ä»‹æ–‡å…¥åŠ›ãƒ»ç·¨é›†
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_member_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥Õ¥ì¥ó¥É´Ø·¸¤Ë¤¢¤ë¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢ä¿‚ã«ã‚ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_f_intro_edit_update_c_friend($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $request['target_c_member_id'];
 	$body = $request['body'];
 	// ----------
 
     if (!$body) {
-        $msg = urlencode("¾Ò²ðÊ¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤");
+        $msg = urlencode("ç´¹ä»‹æ–‡ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
         client_redirect("page.php?p=f_intro_edit&target_c_member_id=$target_c_member_id&msg=$msg");
         exit();
     }
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥Õ¥ì¥ó¥É
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ãƒ•ãƒ¬ãƒ³ãƒ‰
     
     $status = db_common_friend_status($u, $target_c_member_id);
     if (!$status['is_friend']) {
@@ -42,9 +42,9 @@ function doAction_f_intro_edit_update_c_friend($request) {
     
 	do_f_intro_edit_update_c_friend($u, $target_c_member_id, $body);
 
-    // ¥á¡¼¥ëÁ÷¿®
+    // ãƒ¡ãƒ¼ãƒ«é€ä¿¡
     do_f_intro_edit_update_c_friend_send_mail($u, $target_c_member_id);
 
 	client_redirect("page.php?p=f_home&target_c_member_id=$target_c_member_id");
 }
-?>
+

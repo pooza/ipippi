@@ -6,15 +6,15 @@ function doAction_h_config_image_delete_image($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 	//---        
 	
 	$c_member = db_common_c_member4c_member_id($u);
 	
-	// ¥á¥¤¥ó²èÁü¤òºï½ü¤¹¤ë
+	// ãƒ¡ã‚¤ãƒ³ç”»åƒã‚’å‰Šé™¤ã™ã‚‹
 	image_data_delete($c_member['image_filename']);
 	
 	$img_num = 0;
@@ -31,4 +31,3 @@ function doAction_h_config_image_delete_image($requests)
     client_redirect("ktai_page.php?p=h_config_image&{$tail}");    
 }
 
-?>

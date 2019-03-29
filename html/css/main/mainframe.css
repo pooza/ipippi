@@ -1,6 +1,6 @@
 @charset "EUC-JP";
 
-/*¥Ú¡¼¥¸Á´ÂÎ¥á¥¤¥ó¤Î¥ì¥¤¥¢¥¦¥È¥Æ¡¼¥Ö¥ë*/
+/*ãƒšãƒ¼ã‚¸å…¨ä½“ãƒ¡ã‚¤ãƒ³ã®ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆãƒ†ãƒ¼ãƒ–ãƒ«*/
 
 table.mainframe {
 	width: 720px;
@@ -9,7 +9,7 @@ table.mainframe {
 	padding: 0px ;
 }
 
-/*¥Ú¡¼¥¸Á´ÂÎ¥á¥¤¥ó¤Î¥ì¥¤¥¢¥¦¥È¥Æ¡¼¥Ö¥ë¡§¥³¥ó¥Æ¥ó¥ÄÃÊÍÑ*/
+/*ãƒšãƒ¼ã‚¸å…¨ä½“ãƒ¡ã‚¤ãƒ³ã®ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆãƒ†ãƒ¼ãƒ–ãƒ«ï¼šã‚³ãƒ³ãƒ†ãƒ³ãƒ„æ®µç”¨*/
 
 table.mainframe td.container ,
 table.mainframe td.container table.container {
@@ -17,14 +17,14 @@ table.mainframe td.container table.container {
 	height: auto ;
 }
 
-/*¥Õ¥ë¥µ¥¤¥º¤ÎÉı*/
+/*ãƒ•ãƒ«ã‚µã‚¤ã‚ºã®å¹…*/
 
 table.container td.full_content {
 	width: 720px ;
 	height: auto ;
 }
 
-/*¥Ú¡¼¥¸º¸ÃÊ¤ÎÉı*/
+/*ãƒšãƒ¼ã‚¸å·¦æ®µã®å¹…*/
 
 table.container td.left_content {
 	width: 270px ;
@@ -37,7 +37,7 @@ table.container td.left_content_175 {
 	height: auto ;
 }
 
-/*¥Ú¡¼¥¸±¦ÃÊ¤ÎÉı*/
+/*ãƒšãƒ¼ã‚¸å³æ®µã®å¹…*/
 
 table.container td.right_content {
 	width: 440px ;

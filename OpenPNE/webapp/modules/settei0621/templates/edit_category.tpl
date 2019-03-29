@@ -4,19 +4,19 @@
 <p class="caution">({$msg})</p>
 ({/if})
 
-<h2>Ãæ¥«¥Æ¥´¥ê°ìÍ÷</h2>
+<h2>ä¸­ã‚«ãƒ†ã‚´ãƒªä¸€è¦§</h2>
 
 <table>
 <tr>
-<th>¹àÌÜÌ¾</th>
-<th>ÊÂ¤Ó½ç<br>(¾º½ç)</th>
-<th colspan="2">Áàºî</th>
-<th>¾®¥«¥Æ¥´¥ê</th>
+<th>é …ç›®å</th>
+<th>ä¸¦ã³é †<br>(æ˜‡é †)</th>
+<th colspan="2">æ“ä½œ</th>
+<th>å°ã‚«ãƒ†ã‚´ãƒª</th>
 </tr>
 ({foreach from=$c_commu_category_parent_list item=item})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_commu_category_parent','do')})">
@@ -24,31 +24,31 @@
 <input type="hidden" name="c_commu_category_parent_id" value="({$item.c_commu_category_parent_id})">
 <input type="text" name="name" value="({$item.name})" size="20"></td>
 <td><input type="text" name="sort_order" value="({$item.sort_order})" size="5"></td>
-<td><input type="submit" class="submit" value="ÊÑ¹¹"></td>
+<td><input type="submit" class="submit" value="å¤‰æ›´"></td>
 </form>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_commu_category_parent','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="c_commu_category_parent_id" value="({$item.c_commu_category_parent_id})">
-<input type="submit" class="submit" value="ºï½ü">
+<input type="submit" class="submit" value="å‰Šé™¤">
 </td>
 </form>
-<td><a href="#opt_({$item.name})">°ìÍ÷</a></td>
+<td><a href="#opt_({$item.name})">ä¸€è¦§</a></td>
 </tr>
 ({/foreach})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_commu_category_parent','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="text" name="name" value="" size="20"></td>
 <td><input type="text" name="sort_order" value="" size="5"></td>
-<td colspan="2"><input type="submit" class="submit" value="¹àÌÜÄÉ²Ã"></td>
+<td colspan="2"><input type="submit" class="submit" value="é …ç›®è¿½åŠ "></td>
 <td>&nbsp;</td>
 </form>
 </tr>
@@ -56,21 +56,21 @@
 
 <hr>
 
-<h2>¾®¥«¥Æ¥´¥ê°ìÍ÷</h2>
+<h2>å°ã‚«ãƒ†ã‚´ãƒªä¸€è¦§</h2>
 
 ({foreach from=$c_commu_category_parent_list item=item})
 <h3><a name="opt_({$item.name})">({$item.name})</a></h3>
 
 <table>
 <tr>
-<th>¹àÌÜÌ¾</th>
-<th>ÊÂ¤Ó½ç</th>
-<th colspan="2">Áàºî</th>
+<th>é …ç›®å</th>
+<th>ä¸¦ã³é †</th>
+<th colspan="2">æ“ä½œ</th>
 </tr>
 ({foreach from=$c_commu_category_list[$item.c_commu_category_parent_id] item=option})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_commu_category','do')})">
@@ -78,23 +78,23 @@
 <input type="hidden" name="c_commu_category_id" value="({$option.c_commu_category_id})">
 <input type="text" name="name" value="({$option.name})" size="20"></td>
 <td><input type="text" name="sort_order" value="({$option.sort_order})" size="5"></td>
-<td><input type="submit" class="submit" value="ÊÑ¹¹"></td>
+<td><input type="submit" class="submit" value="å¤‰æ›´"></td>
 </form>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_commu_category','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="c_commu_category_id" value="({$option.c_commu_category_id})">
-<input type="submit" class="submit" value="ºï½ü">
+<input type="submit" class="submit" value="å‰Šé™¤">
 </td>
 </form>
 </tr>
 ({/foreach})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_commu_category','do')})">
@@ -102,7 +102,7 @@
 <input type="hidden" name="c_commu_category_parent_id" value="({$item.c_commu_category_parent_id})">
 <input type="text" name="name" value="" size="20"></td>
 <td><input type="text" name="sort_order" value="" size="5"></td>
-<td colspan="2"><input type="submit" class="submit" value="¹àÌÜÄÉ²Ã"></td>
+<td colspan="2"><input type="submit" class="submit" value="é …ç›®è¿½åŠ "></td>
 </form>
 </tr>
 </table>

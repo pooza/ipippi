@@ -1,11 +1,11 @@
 <?php
 
-	//Æüµ­ºï½ü³ÎÇ§²èÌÌ
+	//æ—¥è¨˜å‰Šé™¤ç¢ºèªç”»é¢
 //---------------------------------------------------------------------------
 function pageAction_h_delete_diary($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	// ----------
 
@@ -14,4 +14,4 @@ function pageAction_h_delete_diary($smarty,$requests) {
 
 	$smarty->ext_display("h_delete_diary.tpl");
 }
-?>
+

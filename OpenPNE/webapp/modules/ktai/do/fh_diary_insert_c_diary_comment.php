@@ -1,20 +1,20 @@
 <?php
 //----------------------------------------------------------------------------------
 /**
-Æüµ­¥³¥á¥ó¥ÈÄÉ²Ã
+æ—¥è¨˜ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_diary_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 fh_diary
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_diary_id
 
-[¸¢¸Â]
-Á´¥á¥ó¥Ð¡¼
+[æ¨©é™]
+å…¨ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_fh_diary_insert_c_diary_comment($requests)
@@ -22,31 +22,31 @@ function doAction_fh_diary_insert_c_diary_comment($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	$body = $requests['body'];
 	// ----------
 
 	if (is_null($body) || $body === ''){
-		//msg=1 "ËÜÊ¸¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤¡£"
+		//msg=1 "æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„ã€‚"
 		client_redirect("ktai_page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id&msg=1&$tail");
 		exit();
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 	
 	$c_diary = _db_c_diary4c_diary_id($target_c_diary_id);
 	$target_c_member_id = $c_diary['c_member_id'];
 	$target_c_member = db_common_c_member4c_member_id($target_c_member_id);
 
-	//Æüµ­¤Î¸ø³«ÈÏ°ÏÀßÄê
+	//æ—¥è¨˜ã®å…¬é–‹ç¯„å›²è¨­å®š
 	if ($target_c_member['public_flag_diary'] == "friend" &&
 		!_db_is_friend($u, $target_c_member_id) && $target_c_member_id != $u) {
 	    client_redirect("page.php?p=h_access_block&".$tail);
 	    exit;
 	}
 	
-    //¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯ÀßÄê
+    //ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯è¨­å®š
 	if (p_common_is_access_block($u, $target_c_member_id)) {
 		client_redirect("page.php?p=h_access_block&".$tail);
 		exit;
@@ -54,10 +54,9 @@ function doAction_fh_diary_insert_c_diary_comment($requests)
 	//---
 
 	do_fh_diary_insert_c_diary_comment($u, $target_c_diary_id, $body);
-	//Æüµ­¥³¥á¥ó¥È¤¬½ñ¤­¹þ¤Þ¤ì¤¿¤Î¤ÇÆüµ­¼«ÂÎ¤òÌ¤ÆÉ°·¤¤¤Ë¤¹¤ë
+	//æ—¥è¨˜ã‚³ãƒ¡ãƒ³ãƒˆãŒæ›¸ãè¾¼ã¾ã‚ŒãŸã®ã§æ—¥è¨˜è‡ªä½“ã‚’æœªèª­æ‰±ã„ã«ã™ã‚‹
 	p_h_diary_update_c_diary_is_checked4c_dirary_id($target_c_diary_id, "0");
 	
 	client_redirect("ktai_page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id&$tail");
 }
 
-?>

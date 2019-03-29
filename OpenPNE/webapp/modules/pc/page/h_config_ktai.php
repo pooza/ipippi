@@ -18,4 +18,4 @@ function pageAction_h_config_ktai($smarty,$requests) {
     
     $smarty->ext_display("h_config_ktai.tpl");
 }
-?>
+

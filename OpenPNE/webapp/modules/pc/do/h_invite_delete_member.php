@@ -1,18 +1,18 @@
 <?php
 function doAction_h_invite_delete_member($request) {
 	$u = $GLOBALS['AUTH']->uid();
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_member_id = $request['c_member_id'];
 	$c_member_ktai_id = $request['c_member_ktai_id'];
 	// ----------
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	if($c_member_id) do_h_invite_delete_member_delete_c_member_pre($u, $c_member_id);
-	//·ÈÂÓÍÑ
+	//æºå¸¯ç”¨
 	if($c_member_ktai_id) do_h_invite_delete_member_delete_c_member_ktai_pre($u, $c_member_ktai_id);
 
 	client_redirect("page.php?p=h_invite");
 }
 
-?>
+

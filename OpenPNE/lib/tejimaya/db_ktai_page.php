@@ -3,10 +3,10 @@
 
 
 /**
- * ¿§¡¹
+ * è‰²ã€…
  */
 
- /*¥á¥Ã¥»¡¼¥¸¥³¡¼¥É¤«¤é¥á¥Ã¥»¡¼¥¸¤òÆÀ¤ë*/
+ /*ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ¼ãƒ‰ã‹ã‚‰ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å¾—ã‚‹*/
 function k_p_common_msg4msg_id($msg_id)
 {
 	if($msg_id == null){
@@ -15,38 +15,38 @@ function k_p_common_msg4msg_id($msg_id)
 	
 	$msg = 
 	array(
-        0   => "¥í¥°¥¤¥ó¤Ë¼ºÇÔ¤·¤Þ¤·¤¿",
-        1   => "ËÜÊ¸¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤",
-        2   => "¥¿¥¤¥È¥ë¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤",
-        3   => "¾µÇ§¤¬´°Î»¤·¤Þ¤·¤¿",
-        4   => "¾µÇ§°ÍÍê¤òºï½ü¤·¤Þ¤·¤¿",
-        5   => "¤³¤Î¥Õ¥ì¥ó¥É¤Ï¡¢¸½ºß¥ê¥ó¥¯¾µÇ§ÂÔ¤Á¤Ç¤¹",
-        6   => "¤³¤Î¥Õ¥ì¥ó¥É¤Ï¡¢¤¹¤Ç¤Ë¥ê¥ó¥¯ºÑ¤ß¤Ç¤¹",
-        7   => "¶µ¤¨¤ë".WORD_MY_FRIEND_HALF."¤òÁªÂò¤·¤Æ¤À¤µ¤¤",
-        8   => "¥á¥Ã¥»¡¼¥¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤",
-        9   => "¤³¤Î¥æ¡¼¥¶¤Ï´û¤ËÅÐÏ¿ºÑ¤ß¤Ç¤¹",
-        10  => "´ÉÍý¼Ô¤Ê¤Î¤ÇÂà²ñ¤Ç¤­¤Þ¤»¤ó",
-        11  => "¤³¤Î¥³¥ß¥å¥Ë¥Æ¥£¤Î¥á¥ó¥Ð¤Ç¤Ï¤¢¤ê¤Þ¤»¤ó",
-        12  => "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤",
-        13  => "·ÈÂÓ¥¢¥É¥ì¥¹¤Ë¤ÏÁ÷¿®¤Ç¤­¤Þ¤»¤ó",
-        14  => "¤«¤ó¤¿¤óŽÛŽ¸ŽÞŽ²ŽÝ¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£ÄÌ¾ïŽÛŽ¸ŽÞŽ²ŽÝ¸å¡¢ÀßÄê¤·¤Æ¤¯¤À¤µ¤¤",
-        15  => "¥í¥°¥¤¥ó¤·¤Æ¤¯¤À¤µ¤¤",
-        16  => "·ÈÂÓ¥¢¥É¥ì¥¹°Ê³°¤Ï»ØÄê¤Ç¤­¤Þ¤»¤ó",
-        17  => "¤³¤Î¥¢¥É¥ì¥¹¤Ï¤¹¤Ç¤ËÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹",
-        18  => "¥Ñ¥¹¥ï¡¼¥É¤¬°ã¤¤¤Þ¤¹",
-        19  => "·ÈÂÓ¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÅÐÏ¿¤·¤Þ¤·¤¿",
-        20  => "¥Ñ¥¹¥ï¡¼¥É¤Ï6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤",
-        21  => "¥Ñ¥¹¥ï¡¼¥É¤òÊÑ¹¹¤·¤Þ¤·¤¿",
-        22  => "¼ÁÌä¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤",
-        23  => "Åú¤¨¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤",
-        24  => "ÈëÌ©¤Î¼ÁÌä¡¦Åú¤¨¤òÊÑ¹¹¤·¤Þ¤·¤¿",
-        25  => "¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿",
-        26  => "¿·¤·¤¤¥Ñ¥¹¥ï¡¼¥É¤ò¥á¡¼¥ë¤ÇÁ÷¿®¤·¤Þ¤·¤¿",
-        27  => "·ÈÂÓ¤Î¸ÄÂÎ¼±ÊÌÈÖ¹æ¤ò¼èÆÀ¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿",
-        28  => "¤«¤ó¤¿¤ó¥í¥°¥¤¥óÀßÄê¤ò´°Î»¤·¤Þ¤·¤¿",
-        29  => "¤«¤ó¤¿¤ó¥í¥°¥¤¥óÀßÄê¤ò²ò½ü¤·¤Þ¤·¤¿",
-        30  => "¾·ÂÔ¥á¡¼¥ë¤òÁ÷¿®¤·¤Þ¤·¤¿",
-        31  => "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÀµ¤·¤¯ÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤",
+        0   => "ãƒ­ã‚°ã‚¤ãƒ³ã«å¤±æ•—ã—ã¾ã—ãŸ",
+        1   => "æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„",
+        2   => "ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„",
+        3   => "æ‰¿èªãŒå®Œäº†ã—ã¾ã—ãŸ",
+        4   => "æ‰¿èªä¾é ¼ã‚’å‰Šé™¤ã—ã¾ã—ãŸ",
+        5   => "ã“ã®ãƒ•ãƒ¬ãƒ³ãƒ‰ã¯ã€ç¾åœ¨ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡ã§ã™",
+        6   => "ã“ã®ãƒ•ãƒ¬ãƒ³ãƒ‰ã¯ã€ã™ã§ã«ãƒªãƒ³ã‚¯æ¸ˆã¿ã§ã™",
+        7   => "æ•™ãˆã‚‹".WORD_MY_FRIEND_HALF."ã‚’é¸æŠžã—ã¦ã ã•ã„",
+        8   => "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„",
+        9   => "ã“ã®ãƒ¦ãƒ¼ã‚¶ã¯æ—¢ã«ç™»éŒ²æ¸ˆã¿ã§ã™",
+        10  => "ç®¡ç†è€…ãªã®ã§é€€ä¼šã§ãã¾ã›ã‚“",
+        11  => "ã“ã®ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒ¡ãƒ³ãƒã§ã¯ã‚ã‚Šã¾ã›ã‚“",
+        12  => "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„",
+        13  => "æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯é€ä¿¡ã§ãã¾ã›ã‚“",
+        14  => "ã‹ã‚“ãŸã‚“ï¾›ï½¸ï¾žï½²ï¾ã«å¤±æ•—ã—ã¾ã—ãŸã€‚é€šå¸¸ï¾›ï½¸ï¾žï½²ï¾å¾Œã€è¨­å®šã—ã¦ãã ã•ã„",
+        15  => "ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„",
+        16  => "æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹ä»¥å¤–ã¯æŒ‡å®šã§ãã¾ã›ã‚“",
+        17  => "ã“ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯ã™ã§ã«ç™»éŒ²ã•ã‚Œã¦ã„ã¾ã™",
+        18  => "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé•ã„ã¾ã™",
+        19  => "æºå¸¯ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’ç™»éŒ²ã—ã¾ã—ãŸ",
+        20  => "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6ï½ž12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„",
+        21  => "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã—ã¾ã—ãŸ",
+        22  => "è³ªå•ã‚’é¸æŠžã—ã¦ãã ã•ã„",
+        23  => "ç­”ãˆã‚’å…¥åŠ›ã—ã¦ãã ã•ã„",
+        24  => "ç§˜å¯†ã®è³ªå•ãƒ»ç­”ãˆã‚’å¤‰æ›´ã—ã¾ã—ãŸ",
+        25  => "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œã§ãã¾ã›ã‚“ã§ã—ãŸ",
+        26  => "æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’ãƒ¡ãƒ¼ãƒ«ã§é€ä¿¡ã—ã¾ã—ãŸ",
+        27  => "æºå¸¯ã®å€‹ä½“è­˜åˆ¥ç•ªå·ã‚’å–å¾—ã§ãã¾ã›ã‚“ã§ã—ãŸ",
+        28  => "ã‹ã‚“ãŸã‚“ãƒ­ã‚°ã‚¤ãƒ³è¨­å®šã‚’å®Œäº†ã—ã¾ã—ãŸ",
+        29  => "ã‹ã‚“ãŸã‚“ãƒ­ã‚°ã‚¤ãƒ³è¨­å®šã‚’è§£é™¤ã—ã¾ã—ãŸ",
+        30  => "æ‹›å¾…ãƒ¡ãƒ¼ãƒ«ã‚’é€ä¿¡ã—ã¾ã—ãŸ",
+        31  => "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„",
     );
 	
 	return $msg[$msg_id];
@@ -55,11 +55,11 @@ function k_p_common_msg4msg_id($msg_id)
 
 
 /***
- * ¶¦ÄÌ
+ * å…±é€š
  */
 
- /*¥Ë¥Ã¥¯¥Í¡¼¥à¤È¥á¥ó¥Ð£É£Ä¤À¤±¤òÊÖ¤¹´Ø¿ô
- ¤è¤¯»È¤¤¤½¤¦¤Ê¤Î¤Ç¶¦ÄÌ²½¤·¤Þ¤¹
+ /*ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã¨ãƒ¡ãƒ³ãƒï¼©ï¼¤ã ã‘ã‚’è¿”ã™é–¢æ•°
+ ã‚ˆãä½¿ã„ãã†ãªã®ã§å…±é€šåŒ–ã—ã¾ã™
  */
  function k_p_common_c_member4c_member_id($c_member_id)
  {
@@ -67,7 +67,7 @@ function k_p_common_msg4msg_id($msg_id)
 	 return get_array_one4db($sql);
  }
  
- /*¥³¥ß¥å¥Ë¥Æ¥£Ì¾¤Ècom£É£Ä¤À¤±¤òÊÖ¤¹´Ø¿ô
+ /*ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£åã¨comï¼©ï¼¤ã ã‘ã‚’è¿”ã™é–¢æ•°
  */
  
  function k_p_common_c_commu4c_commu_id($c_commu_id)
@@ -76,7 +76,7 @@ function k_p_common_msg4msg_id($msg_id)
 	 return get_array_one4db($sql);
  }
  
- /*¥³¥ß¥å¥Ë¥Æ¥£¤Î¥á¥ó¥Ð¿ô¤òÊÖ¤¹*/
+ /*ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒ¡ãƒ³ãƒæ•°ã‚’è¿”ã™*/
  function k_p_common_count_c_commu_member_list4c_commu_id($c_commu_id) {
     $sql = "SELECT count(*) FROM c_commu_member WHERE c_commu_id=".quote4db($c_commu_id);
     $list = get_one_list4db($sql);
@@ -84,7 +84,7 @@ function k_p_common_msg4msg_id($msg_id)
 }
 
 
-/*¥á¥ó¥Ð¤ÎÍ§Ã£¿ô¤òÊÖ¤¹*/
+/*ãƒ¡ãƒ³ãƒã®å‹é”æ•°ã‚’è¿”ã™*/
 function k_p_common_count_friends4c_member_id($c_member_id) {
     $sql = "SELECT count(*) FROM c_friend WHERE c_member_id_from=".quote4db($c_member_id);
     $list = get_one_list4db($sql);
@@ -92,18 +92,18 @@ function k_p_common_count_friends4c_member_id($c_member_id) {
 }
 
 
-/*fh¤Î¥¿¥¤¥×¤òÊÖ¤¹*/
+/*fhã®ã‚¿ã‚¤ãƒ—ã‚’è¿”ã™*/
 /**
-fh¥Ú¡¼¥¸¤Î¥¿¥¤¥×¤ò¼èÆÀ
-[°ú¿ô]
-$target_c_member_id	ÂÐ¾Ý¤Î¥á¥ó¥ÐID
-$u					¼«Ê¬¤Î¥á¥ó¥ÐID
+fhãƒšãƒ¼ã‚¸ã®ã‚¿ã‚¤ãƒ—ã‚’å–å¾—
+[å¼•æ•°]
+$target_c_member_id	å¯¾è±¡ã®ãƒ¡ãƒ³ãƒID
+$u					è‡ªåˆ†ã®ãƒ¡ãƒ³ãƒID
 
-[ÊÖ¤êÃÍ]
+[è¿”ã‚Šå€¤]
 f or h
 */
 function k_p_fh_common_get_type($target_c_member_id,$u){
-	// ¥Ê¥Ó¥²¡¼¥·¥ç¥ó¥¿¥¤¥× : "h" | "f" | "c" 
+	// ãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³ã‚¿ã‚¤ãƒ— : "h" | "f" | "c" 
 	if(!$target_c_member_id){
 		$target_c_member_id = $u;
 		$type = "h";
@@ -116,7 +116,7 @@ function k_p_fh_common_get_type($target_c_member_id,$u){
 }
 
 
-/*¥¢¥¯¥»¥¹Æü»þ¤òµ­Ï¿*/
+/*ã‚¢ã‚¯ã‚»ã‚¹æ—¥æ™‚ã‚’è¨˜éŒ²*/
 
 function k_p_common_do_access($c_member_id){
 	$sql =	"UPDATE c_member SET access_date=NOW() ".
@@ -125,7 +125,7 @@ function k_p_common_do_access($c_member_id){
 }
 
 
-/*¤¢¤·¤¢¤È*/
+/*ã‚ã—ã‚ã¨*/
 function k_p_etc_do_ashiato($c_member_id_to, $c_member_id_from){
 	return p_etc_do_ashiato($c_member_id_to, $c_member_id_from);
 }
@@ -134,23 +134,23 @@ function k_p_etc_do_ashiato($c_member_id_to, $c_member_id_from){
 
 /*************************************************
  * 
- * h_home ´ØÏ¢
+ * h_home é–¢é€£
  *
  *************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_h_home_c_member4c_member_id($c_member_id)
-  * ¥á¥ó¥Ð£É£Ä¤«¤é¥á¥ó¥Ð¾ðÊó¤ò¼èÆÀ
+  * ãƒ¡ãƒ³ãƒï¼©ï¼¤ã‹ã‚‰ãƒ¡ãƒ³ãƒæƒ…å ±ã‚’å–å¾—
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * c_member_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_member_id
   * nickname
-  * pc_address¢ªÊÑ¹¹byÂç¶ú2005/03/25
+  * pc_addressâ†’å¤‰æ›´byå¤§ä¸²2005/03/25
   *
-  * (¥Á¥§¥Ã¥¯£Ï£Ë)
+  * (ãƒã‚§ãƒƒã‚¯ï¼¯ï¼«)
   */
  
  function k_p_h_home_c_member4c_member_id($c_member_id)
@@ -162,19 +162,19 @@ function k_p_etc_do_ashiato($c_member_id_to, $c_member_id_from){
  
   
  
-/**¡¡´Ø¿ô(2005/2/8:hosoba)
+/**ã€€é–¢æ•°(2005/2/8:hosoba)
  * k_p_h_home_c_message_received_unread_all_count4c_member_id($c_member_id)
  * 
- * Ì¤ÆÉ¥á¥Ã¥»¡¼¥¸¿ô¡Ê¥á¥ó¥Ð¡¼¡¢´ë¶È¤ÎÎ¾Êý¡Ë¤ò¼èÆÀ
+ * æœªèª­ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ•°ï¼ˆãƒ¡ãƒ³ãƒãƒ¼ã€ä¼æ¥­ã®ä¸¡æ–¹ï¼‰ã‚’å–å¾—
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * int $c_member_id
  * 
- * [Ìá¤êÃÍ]
- * Ì¤ÆÉ¥á¥Ã¥»¡¼¥¸¿ô¡Ê¥á¥ó¥Ð¡¼¡¢´ë¶È¤ÎÎ¾Êý¡Ë
+ * [æˆ»ã‚Šå€¤]
+ * æœªèª­ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ•°ï¼ˆãƒ¡ãƒ³ãƒãƒ¼ã€ä¼æ¥­ã®ä¸¡æ–¹ï¼‰
  * 
  * 
- * ¡Ê¥Á¥§¥Ã¥¯¤·¤Þ¤·¤¿¡Ë
+ * ï¼ˆãƒã‚§ãƒƒã‚¯ã—ã¾ã—ãŸï¼‰
  */
 
 function k_p_h_home_c_message_received_unread_all_count4c_member_id($c_member_id)
@@ -187,16 +187,16 @@ function k_p_h_home_c_message_received_unread_all_count4c_member_id($c_member_id
 
 
 
-/** ´Ø¿ô(2005/2/8:hosoba)
+/** é–¢æ•°(2005/2/8:hosoba)
  * k_p_h_home_c_diary_friend_list4c_member_id($c_member_id, $limit)
  * 
-¥Õ¥ì¥ó¥ÉºÇ¿·Æüµ­¥ê¥¹¥È¼èÆÀ
+ãƒ•ãƒ¬ãƒ³ãƒ‰æœ€æ–°æ—¥è¨˜ãƒªã‚¹ãƒˆå–å¾—
 
-[°ú¿ô]
+[å¼•æ•°]
 $c_member_id
 $limit
 
-[ÊÖ¤êÃÍ]
+[è¿”ã‚Šå€¤]
 r_datetime
 nickname
 c_diary_id
@@ -205,7 +205,7 @@ image_filename
 comment_count
 
 
-¡Ê¥Á¥§¥Ã¥¯¤·¤Þ¤·¤¿¡Ë
+ï¼ˆãƒã‚§ãƒƒã‚¯ã—ã¾ã—ãŸï¼‰
 */
 
 function k_p_h_home_c_diary_friend_list4c_member_id($c_member_id, $limit)
@@ -225,7 +225,7 @@ function k_p_h_home_c_diary_friend_list4c_member_id($c_member_id, $limit)
 	}
 	
 	
-	//¥³¥á¥ó¥È¿ô¤ò¼èÆÀ
+	//ã‚³ãƒ¡ãƒ³ãƒˆæ•°ã‚’å–å¾—
 	foreach ($c_diary_friend_list as $key => $value){
 		$c_diary_id = $value['c_diary_id'];
 		$sql = "SELECT COUNT(*) ";
@@ -262,23 +262,23 @@ function k_p_h_home_c_commu_list_lastupdate4c_member_id($c_member_id, $limit)
 }
 
 
-/**¡¡´Ø¿ô(2005/2/8:hosoba)
+/**ã€€é–¢æ•°(2005/2/8:hosoba)
  * k_p_h_home_c_friend_list_random4c_member_id($c_member_id, $limit)
  * 
- * My¤Î¥Õ¥ì¥ó¥É¤Î¥é¥ó¥À¥à¤Ê¥ê¥¹¥È¤òÆÀ¤ë
+ * Myã®ãƒ•ãƒ¬ãƒ³ãƒ‰ã®ãƒ©ãƒ³ãƒ€ãƒ ãªãƒªã‚¹ãƒˆã‚’å¾—ã‚‹
  *
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $c_member_id
  * $limit
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * array of array:
  * 	c_friend.*
  *  c_member.nickname
  * count_friend
  * 
  * 
- * ¡Ê¥Á¥§¥Ã¥¯¤·¤Þ¤·¤¿¡Ë
+ * ï¼ˆãƒã‚§ãƒƒã‚¯ã—ã¾ã—ãŸï¼‰
  */
  
  function k_p_h_home_c_friend_list_random4c_member_id($c_member_id, $limit)
@@ -303,7 +303,7 @@ function k_p_h_home_c_commu_list_lastupdate4c_member_id($c_member_id, $limit)
  
  
 /*****************************************************
- * h_message_box ´ØÏ¢
+ * h_message_box é–¢é€£
  * 
  * 
  *****************************************************/
@@ -398,21 +398,21 @@ function k_p_h_message_box_c_message_sent_list4c_member_id4range($c_member_id, $
  
  
 /****************************************************
- * h_message ´ØÏ¢
+ * h_message é–¢é€£
  * 
  */
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_h_message_c_message4c_message_id($c_message_id)
-  * ¥á¥Ã¥»¡¼¥¸£É£Ä¤«¤é¥á¥Ã¥»¡¼¥¸¤È¥Ë¥Ã¥¯¥Í¡¼¥à¤ò¼èÆÀ
+  * ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼©ï¼¤ã‹ã‚‰ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¨ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã‚’å–å¾—
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_message_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_message.*
-  * c_member_nickname_from,	: Á÷¿®¼Ô¥Ë¥Ã¥¯¥Í¡¼¥à
-  * c_member_nickname_to	: ¼õ¿®¼Ô¥Ë¥Ã¥¯¥Í¡¼¥à
+  * c_member_nickname_from,	: é€ä¿¡è€…ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ 
+  * c_member_nickname_to	: å—ä¿¡è€…ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ 
   * 
   */
 function k_p_h_message_c_message4c_message_id($c_message_id)
@@ -424,22 +424,22 @@ function k_p_h_message_c_message4c_message_id($c_message_id)
 
 /*********************************************************
  * 
- * h_message_send ´ØÏ¢
+ * h_message_send é–¢é€£
  * 
  *********************************************************/
 
  
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_h_message_send_c_friend_list_random4c_member_id
   * 
-  * Í§Ã£¥é¥ó¥À¥à£µ£°¿Í
-  *  k_p_c_invite_c_friend_list_random4c_member_id ¤ÈÆ±¤¸
+  * å‹é”ãƒ©ãƒ³ãƒ€ãƒ ï¼•ï¼äºº
+  *  k_p_c_invite_c_friend_list_random4c_member_id ã¨åŒã˜
   *  
-  *  [°ú¿ô]
+  *  [å¼•æ•°]
   *  $c_member_id
   *  
-  *  [Ìá¤êÃÍ]
-  * c_member_id (Í§Ã£¤Î)
+  *  [æˆ»ã‚Šå€¤]
+  * c_member_id (å‹é”ã®)
   * nickname
   */
  
@@ -456,7 +456,7 @@ function k_p_h_message_c_message4c_message_id($c_message_id)
  }
 
 /********************************************************
- * h_diary_edit ´ØÏ¢
+ * h_diary_edit é–¢é€£
  * 
  ******************************************************/
 
@@ -466,18 +466,18 @@ function k_p_h_diary_edit_c_diary4c_diary_id($c_diary_id)
 }
  
  /*********************************************************
-  * h_com_category ´ØÏ¢
+  * h_com_category é–¢é€£
   * 
   ********************************************************/
  
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_h_com_category_c_commu_category_name4c_commu_category_id($c_commu_category_id)
-  * ¥³¥ß¥å¥Ë¥Æ¥£¤Î¾®¥«¥Æ¥´¥ê£É£Ä¤«¤é¾®¥«¥Æ¥´¥êÌ¾¤òÆÀ¤ë
+  * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å°ã‚«ãƒ†ã‚´ãƒªï¼©ï¼¤ã‹ã‚‰å°ã‚«ãƒ†ã‚´ãƒªåã‚’å¾—ã‚‹
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_category_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * name
   * 
   */ 
@@ -490,23 +490,23 @@ function k_p_h_diary_edit_c_diary4c_diary_id($c_diary_id)
   }
   
   
- /** ´Ø¿ô
+ /** é–¢æ•°
  k_p_h_com_category_c_commu_list4c_commu_category_id($c_commu_category_id, $page_size, $page)
- ¥³¥ß¥å¥Ë¥Æ¥£¤Î¾®¥«¥Æ¥´¥ê¤«¤é¡¢¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È¤òÆÀ¤ë
- ¼èÆÀÈÏ°Ï¤ò»ØÄê¤Ç¤­¤ë
- ID¤¬¿·¤·¤¤¤â¤Î½ç
+ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®å°ã‚«ãƒ†ã‚´ãƒªã‹ã‚‰ã€ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆã‚’å¾—ã‚‹
+ å–å¾—ç¯„å›²ã‚’æŒ‡å®šã§ãã‚‹
+ IDãŒæ–°ã—ã„ã‚‚ã®é †
 
-[°ú¿ô]
+[å¼•æ•°]
 $c_commu_category_id
-$page_size	£±¥Ú¡¼¥¸¤ËÉ½¼¨¤¹¤ë¿ô
-$page	¥Ú¡¼¥¸ÈÖ¹æ
+$page_size	ï¼‘ãƒšãƒ¼ã‚¸ã«è¡¨ç¤ºã™ã‚‹æ•°
+$page	ãƒšãƒ¼ã‚¸ç•ªå·
 
-[ÊÖ¤êÃÍ]
+[è¿”ã‚Šå€¤]
 c_commu_id
 name
 count_members
-prev ¡ÖÁ°¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
-next ¡Ö¼¡¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
+prev ã€Œå‰ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
+next ã€Œæ¬¡ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
 
 
 */
@@ -526,7 +526,7 @@ function k_p_h_com_category_c_commu_list4c_commu_category_id($c_commu_category_i
     $sql = "select count(*) from c_commu" .
             " where c_commu_category_id= ".quote4db($c_commu_category_id);
 
-	//³Æ¥³¥ß¥å¤Î¿Í¿ô¤ò¼èÆÀ
+	//å„ã‚³ãƒŸãƒ¥ã®äººæ•°ã‚’å–å¾—
 	foreach($c_commu_list as $key => $value){
 		$c_commu_list[$key]['count_members'] =
             _db_count_c_commu_member_list4c_commu_id($value['c_commu_id']);
@@ -608,7 +608,7 @@ function  k_p_h_com_category_c_commu_list4c_commu_category_id_search($c_commu_ca
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_h_com_category_c_commu_category_parent_id4c_commu_category_id($c_commu_category_id)
  * 
  */
@@ -623,22 +623,22 @@ function k_p_h_com_category_c_commu_category_parent_id4c_commu_category_id($c_co
 
  
 /*********************************************************
- * h_com_find_all ´ØÏ¢
+ * h_com_find_all é–¢é€£
  * 
  ********************************************************/
  
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_h_com_find_all_c_commu_list_lastupdated($limit)
-  * »²²ÃÉÔ»²²Ã¤Ë¤«¤«¤ï¤é¤º¡¢ºÇ¿·½ñ¤­¹þ¤ß¤Î¤¢¤Ã¤¿¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È¤ò¼èÆÀ
+  * å‚åŠ ä¸å‚åŠ ã«ã‹ã‹ã‚ã‚‰ãšã€æœ€æ–°æ›¸ãè¾¼ã¿ã®ã‚ã£ãŸã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆã‚’å–å¾—
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $limit
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_commu_id
   * name
   * 
-  * (¥Á¥§¥Ã¥¯£Ï£Ë)
+  * (ãƒã‚§ãƒƒã‚¯ï¼¯ï¼«)
   * 
   */
  function k_p_h_com_find_all_c_commu_list_lastupdated($limit)
@@ -660,17 +660,17 @@ function k_p_h_com_category_c_commu_category_parent_id4c_commu_category_id($c_co
  }
  
  
- /**¡¡´Ø¿ô
+ /**ã€€é–¢æ•°
   * k_p_h_com_find_all_c_commu_category_parent_list()
-  * Á´¤Æ¤ÎÃæ¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È¤ò¼èÆÀ¤¹¤ë
+  * å…¨ã¦ã®ä¸­ã‚«ãƒ†ã‚´ãƒªã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã™ã‚‹
   * 
-  * [°ú¿ô]
-  * ¤Ê¤·
+  * [å¼•æ•°]
+  * ãªã—
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_commu_category_parent.*
   * 
-  * ¡Ê¥Á¥§¥Ã¥¯£Ï£Ë¡Ë
+  * ï¼ˆãƒã‚§ãƒƒã‚¯ï¼¯ï¼«ï¼‰
   */
 
 function k_p_h_com_find_all_c_commu_category_parent_list()
@@ -683,29 +683,29 @@ function k_p_h_com_find_all_c_commu_category_parent_list()
 
 
 /******************************************************
- * h_com_find_result ´ØÏ¢
+ * h_com_find_result é–¢é€£
  * 
  *****************************************************/
 
- /**¡¡´Ø¿ô
+ /**ã€€é–¢æ•°
   * k_p_h_com_find_result_search_c_commu4c_commu_category_parent_id($search_word, $c_commu_category_parent_id, $page, $page_size)
-  * Ãæ¥«¥Æ¥´¥ê£É£ÄÆâ¤Ç¡¢search_word¤Ë´ð¤Å¤¯¥³¥ß¥å¥Ë¥Æ¥£¸¡º÷¤ò¹Ô¤¦¡£
+  * ä¸­ã‚«ãƒ†ã‚´ãƒªï¼©ï¼¤å†…ã§ã€search_wordã«åŸºã¥ãã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ¤œç´¢ã‚’è¡Œã†ã€‚
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $search_word
-  * $c_commu_category_parent_id (Á´¥«¥Æ¥´¥ê¤Î¾ì¹ç¤Ï"all")
+  * $c_commu_category_parent_id (å…¨ã‚«ãƒ†ã‚´ãƒªã®å ´åˆã¯"all")
   * $page_size
   * $page
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * list
   * [0](array of array)
   * 	 c_commu_id
   * 	 name
   * 	 count_commu_member 
-  * [1]count_result (¸¡º÷·ë²Ì¤ÎÁ´·ï¿ô)
-  * [2]prev ¡ÖÁ°¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
-  * [3]next ¡Ö¼¡¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
+  * [1]count_result (æ¤œç´¢çµæžœã®å…¨ä»¶æ•°)
+  * [2]prev ã€Œå‰ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
+  * [3]next ã€Œæ¬¡ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
   * 
   * 
   * 
@@ -768,30 +768,30 @@ function k_p_h_com_find_all_c_commu_category_parent_list()
  
  
  /**********************************************************
-  * f_friend_find ´ØÏ¢
+  * f_friend_find é–¢é€£
   * 
   ******************************************************/
  
-  /** ´Ø¿ô
+  /** é–¢æ•°
    * k_p_h_friend_find($nickname,$page_size,$page)
-   * ¥Õ¥ì¥ó¥É¸¡º÷
-   * ID¤¬¿·¤·¤¤½ç
-   * ¼èÆÀÈÏ°Ï¤ò»ØÄê¤Ç¤­¤ë
+   * ãƒ•ãƒ¬ãƒ³ãƒ‰æ¤œç´¢
+   * IDãŒæ–°ã—ã„é †
+   * å–å¾—ç¯„å›²ã‚’æŒ‡å®šã§ãã‚‹
    *
-   * [°ú¿ô]
+   * [å¼•æ•°]
    * $nickname
    * $page_size
    * $page
    * 
-   * [Ìá¤êÃÍ]
+   * [æˆ»ã‚Šå€¤]
    * list
    * [0]array of array
    * 	c_member_id
    * 	nickname
    * 	count_friend
-   * [1]count_result (¸¡º÷·ë²Ì¤ÎÁ´·ï¿ô)
-   * [2]prev ¡ÖÁ°¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
-   * [3]next ¡Ö¼¡¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
+   * [1]count_result (æ¤œç´¢çµæžœã®å…¨ä»¶æ•°)
+   * [2]prev ã€Œå‰ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
+   * [3]next ã€Œæ¬¡ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
    *     	
    */
 function k_p_h_friend_find($nickname, $page_size, $page)
@@ -848,18 +848,18 @@ function k_p_h_friend_find($nickname, $page_size, $page)
 }
 
 /************************************************************
- * h_com_category_parents ´ØÏ¢
+ * h_com_category_parents é–¢é€£
  * 
  *********************************************************/
 
- /**¡¡´Ø¿ô
+ /**ã€€é–¢æ•°
   * k_p_h_com_category_parents_c_commu_category_list4c_commu_category_parent_id($c_commu_category_parent_id)
-  * Ãæ¥«¥Æ¥´¥ê¤ËÂ°¤¹¤ë¾®¥«¥Æ¥´¥ê¤Î¥ê¥¹¥È¤ò¼èÆÀ¤¹¤ë¡£
+  * ä¸­ã‚«ãƒ†ã‚´ãƒªã«å±žã™ã‚‹å°ã‚«ãƒ†ã‚´ãƒªã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã™ã‚‹ã€‚
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_category_parent_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_commu_category.*
   * 
   */
@@ -873,17 +873,17 @@ function k_p_h_friend_find($nickname, $page_size, $page)
  }
  
  
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_h_com_category_parents_c_commu_category_parent_name4c_commu_category_id($c_commu_category_parent_id)
-  * ¾®¥«¥Æ¥´¥ê£É£Ä¤«¤éÃæ¥«¥Æ¥´¥ê¤ÎÌ¾Á°¤ò¼èÆÀ¤¹¤ë¡£
+  * å°ã‚«ãƒ†ã‚´ãƒªï¼©ï¼¤ã‹ã‚‰ä¸­ã‚«ãƒ†ã‚´ãƒªã®åå‰ã‚’å–å¾—ã™ã‚‹ã€‚
   *
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_category_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * name
   * 
-  * ¡Ê¥Á¥§¥Ã¥¯£Ï£Ë¡Ë
+  * ï¼ˆãƒã‚§ãƒƒã‚¯ï¼¯ï¼«ï¼‰
   */
  
 function k_p_h_com_category_parents_c_commu_category_parent_name4c_commu_category_parent_id($c_commu_category_parent_id)
@@ -897,19 +897,19 @@ function k_p_h_com_category_parents_c_commu_category_parent_name4c_commu_categor
 
 
 /**********************************************************
- * h_confirm_list ´ØÏ¢
+ * h_confirm_list é–¢é€£
  * 
  ***********************************************************/
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_h_confirm_list_anatani_c_friend_confirm_list4c_member_id($c_member_id_to)
- * ¤¢¤Ê¤¿¤Ë¥Õ¥ì¥ó¥É¥ê¥ó¥¯¤òÍ×ÀÁ¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼(¥ê¥ó¥¯¾µÇ§ÂÔ¤Á)
+ * ã‚ãªãŸã«ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ³ã‚¯ã‚’è¦è«‹ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼(ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡)
  * 
- * @param	int $c_member_id_to	: Í×ÀÁ¤µ¤ì¤Æ¤¤¤ëÊý(¤¢¤Ê¤¿)
+ * @param	int $c_member_id_to	: è¦è«‹ã•ã‚Œã¦ã„ã‚‹æ–¹(ã‚ãªãŸ)
  * @return	array_of_array
  * 				c_friend_cofirm.*
- * 				nickname		: Í×ÀÁ¤·¤Æ¤¤¤ë¿Í¤ÎÌ¾Á°
- * 				message_disp    : É½¼¨ÍÑ¥á¥Ã¥»¡¼¥¸
+ * 				nickname		: è¦è«‹ã—ã¦ã„ã‚‹äººã®åå‰
+ * 				message_disp    : è¡¨ç¤ºç”¨ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
  */
 
 function k_p_h_confirm_list_anatani_c_friend_confirm_list4c_member_id($c_member_id_to)
@@ -926,15 +926,15 @@ function k_p_h_confirm_list_anatani_c_friend_confirm_list4c_member_id($c_member_
 }
 
 
-/**¡¡´Ø¿ô
+/**ã€€é–¢æ•°
  * k_p_h_confirm_list_anataga_c_friend_confirm_list4c_member_id($c_member_id_from)
- * ¤¢¤Ê¤¿¤¬¥Õ¥ì¥ó¥É¥ê¥ó¥¯¤òÍ×ÀÁ¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼(¥ê¥ó¥¯Í×ÀÁÃæ)
+ * ã‚ãªãŸãŒãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ³ã‚¯ã‚’è¦è«‹ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼(ãƒªãƒ³ã‚¯è¦è«‹ä¸­)
  * 
- * @param	int $c_member_id_from	: Í×ÀÁ¤·¤Æ¤¤¤ëÊý(¤¢¤Ê¤¿)
+ * @param	int $c_member_id_from	: è¦è«‹ã—ã¦ã„ã‚‹æ–¹(ã‚ãªãŸ)
  * @return	array_of_array
  * 				c_friend_cofirm.*
- * 				nickname		: Í×ÀÁ¤µ¤ì¤Æ¤¤¤ë¿Í¤ÎÌ¾Á°
- * 				message_disp	: É½¼¨ÍÑ¥á¥Ã¥»¡¼¥¸
+ * 				nickname		: è¦è«‹ã•ã‚Œã¦ã„ã‚‹äººã®åå‰
+ * 				message_disp	: è¡¨ç¤ºç”¨ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
  */
 function k_p_h_confirm_list_anataga_c_friend_confirm_list4c_member_id($c_member_id_from)
 {
@@ -951,16 +951,16 @@ function k_p_h_confirm_list_anataga_c_friend_confirm_list4c_member_id($c_member_
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_h_confirm_list_anatani_c_commu_member_confirm_list4c_member_id($c_member_id)
- * ¤¢¤Ê¤¿¤Ë(¤Î)´ÉÍý¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤ò´õË¾¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼(»²²Ã¾µÇ§ÂÔ¤Á)
+ * ã‚ãªãŸã«(ã®)ç®¡ç†ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã‚’å¸Œæœ›ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼(å‚åŠ æ‰¿èªå¾…ã¡)
  * 
- * @param	int $c_member_id	: Í×ÀÁ¤µ¤ì¤Æ¤¤¤ëÊý(¤¢¤Ê¤¿¡á´ÉÍý¼Ô)
+ * @param	int $c_member_id	: è¦è«‹ã•ã‚Œã¦ã„ã‚‹æ–¹(ã‚ãªãŸï¼ç®¡ç†è€…)
  * @return	array_of_array
  * 				c_commu_member_cofirm.*
- * 				c_commu_name	: ¥³¥ß¥å¥Ë¥Æ¥£¤ÎÌ¾Á°
- * 				nickname		: Í×ÀÁ¤·¤Æ¤¤¤ë¿Í¤ÎÌ¾Á°
- * 				message_disp    : É½¼¨ÍÑ¥á¥Ã¥»¡¼¥¸
+ * 				c_commu_name	: ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®åå‰
+ * 				nickname		: è¦è«‹ã—ã¦ã„ã‚‹äººã®åå‰
+ * 				message_disp    : è¡¨ç¤ºç”¨ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
  */
 
 function k_p_h_confirm_list_anatani_c_commu_member_confirm_list4c_member_id($c_member_id)
@@ -979,16 +979,16 @@ function k_p_h_confirm_list_anatani_c_commu_member_confirm_list4c_member_id($c_m
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_h_confirm_list_anataga_c_commu_member_confirm_list4c_member_id($c_member_id)
- * ¤¢¤Ê¤¿¤¬¥³¥ß¥å¥Ë¥Æ¥£»²²ÃÍ×ÀÁ¤·¤Æ¤¤¤ë¥³¥ß¥å¥Ë¥Æ¥£(»²²ÃÍ×ÀÁÃæ)
+ * ã‚ãªãŸãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è¦è«‹ã—ã¦ã„ã‚‹ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£(å‚åŠ è¦è«‹ä¸­)
  * 
- * @param	int $c_member_id	: Í×ÀÁ¤·¤Æ¤¤¤ëÊý(¤¢¤Ê¤¿)
+ * @param	int $c_member_id	: è¦è«‹ã—ã¦ã„ã‚‹æ–¹(ã‚ãªãŸ)
  * @return	array_of_array
  * 				c_commu_member_cofirm.*,
- * 				c_commu_name		: ¥³¥ß¥å¥Ë¥Æ¥£¤ÎÌ¾Á°
- * 				c_member_id_admin	: ´ÉÍý¼Ô¤Î¥á¥ó¥Ð¡¼ID
- * 				nickname			: ´ÉÍý¼Ô¤ÎÌ¾Á°
+ * 				c_commu_name		: ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®åå‰
+ * 				c_member_id_admin	: ç®¡ç†è€…ã®ãƒ¡ãƒ³ãƒãƒ¼ID
+ * 				nickname			: ç®¡ç†è€…ã®åå‰
  */
 function k_p_h_confirm_list_anataga_c_commu_member_confirm_list4c_member_id($c_member_id)
 {
@@ -1008,30 +1008,30 @@ function k_p_h_confirm_list_anataga_c_commu_member_confirm_list4c_member_id($c_m
 
 
 /*********************************************************
- * f_home ´ØÏ¢
+ * f_home é–¢é€£
  * 
  *******************************************************/
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_f_home_c_diary_list4c_member_id($target_c_member_id, $limit)
- * ¥¿¡¼¥²¥Ã¥È¥á¥ó¥Ð¤ÎºÇ¿·Æüµ­¤Î¥ê¥¹¥È¤òÊÖ¤¹
+ * ã‚¿ãƒ¼ã‚²ãƒƒãƒˆãƒ¡ãƒ³ãƒã®æœ€æ–°æ—¥è¨˜ã®ãƒªã‚¹ãƒˆã‚’è¿”ã™
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $target_c_member_id
  * $limit
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * c_diary_id
  * r_date
  * subject
  * count_comment
  * 
- * (¥Á¥§¥Ã¥¯£Ï£Ë)
+ * (ãƒã‚§ãƒƒã‚¯ï¼¯ï¼«)
  */
 
 function k_p_f_home_c_diary_list4c_member_id($target_c_member_id, $limit)
 {
-	//Æüµ­¥ê¥¹¥È
+	//æ—¥è¨˜ãƒªã‚¹ãƒˆ
 	$sql = "SELECT c_diary_id, r_date, subject ,image_filename_1 ";
 	$sql .= "FROM c_diary ";
 	$sql .= "WHERE c_member_id=".quote4db($target_c_member_id);
@@ -1040,7 +1040,7 @@ function k_p_f_home_c_diary_list4c_member_id($target_c_member_id, $limit)
 	
 	$c_diary_list = get_array_list4db($sql);
 	
-	//¥³¥á¥ó¥È¿ô
+	//ã‚³ãƒ¡ãƒ³ãƒˆæ•°
 	foreach($c_diary_list as $key => $value){
 		$c_diary_id = $value['c_diary_id'];
 		
@@ -1054,15 +1054,15 @@ function k_p_f_home_c_diary_list4c_member_id($target_c_member_id, $limit)
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit)
- * ¥¿¡¼¥²¥Ã¥È¥á¥ó¥Ð¤Î¥Õ¥ì¥ó¥É¤Î¥é¥ó¥À¥à¤Ê¥ê¥¹¥È¤òÊÖ¤¹
+ * ã‚¿ãƒ¼ã‚²ãƒƒãƒˆãƒ¡ãƒ³ãƒã®ãƒ•ãƒ¬ãƒ³ãƒ‰ã®ãƒ©ãƒ³ãƒ€ãƒ ãªãƒªã‚¹ãƒˆã‚’è¿”ã™
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $target_c_member_id
  * $limit
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * c_friend.*
  * nickname
  * count_friend
@@ -1074,13 +1074,13 @@ function k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit
 }
 
  
-/**¡¡´Ø¿ô
+/**ã€€é–¢æ•°
  * k_p_f_home_c_commu_list_lastupdated4c_member_id($target_c_member_id, $limit)
- * »²²Ã¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥ÈºÇ¿·½ñ¤­¹þ¤ß½ç
- * ¼«¼ç¸ø¼°º®¹ç
+ * å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆæœ€æ–°æ›¸ãè¾¼ã¿é †
+ * è‡ªä¸»å…¬å¼æ··åˆ
  * 
  * k_p_h_home_c_commu_list_lastupdate4c_member_id($c_member_id, $limit)
- * ¤ÈÆ±¤¸¤Ç¤¹¡£
+ * ã¨åŒã˜ã§ã™ã€‚
  * 
  */
 
@@ -1090,17 +1090,17 @@ function k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit
  }
  
  
- /**¡¡´Ø¿ô
+ /**ã€€é–¢æ•°
   * k_p_f_home_relationship4two_members($c_member_id, $target_c_member_id)
-  * £²¤Ä¤Î¥á¥ó¥Ð£É£Ä¤«¤é¤½¤Î£²¿Í¤Î´Ø·¸¤òÊÖ¤¹¡£
+  * ï¼’ã¤ã®ãƒ¡ãƒ³ãƒï¼©ï¼¤ã‹ã‚‰ãã®ï¼’äººã®é–¢ä¿‚ã‚’è¿”ã™ã€‚
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_member_id
   * $target_c_member_id
   * 
-  * [Ìá¤êÃÍ]
-  * bool friend (¥Õ¥ì¥ó¥É¤«¤É¤¦¤«)
-  * bool wait (¥ê¥ó¥¯¾µÇ§ÂÔ¤Á)
+  * [æˆ»ã‚Šå€¤]
+  * bool friend (ãƒ•ãƒ¬ãƒ³ãƒ‰ã‹ã©ã†ã‹)
+  * bool wait (ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡)
   * 
   */
  
@@ -1110,31 +1110,31 @@ function k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit
 		'friend' => false,
 		'wait' => false);
 	  
-	  //¥ê¥ó¥¯¾µÇ§ÂÔ¤Á¤«¤É¤¦¤«¤ò¥Á¥§¥Ã¥¯
+	  //ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡ã‹ã©ã†ã‹ã‚’ãƒã‚§ãƒƒã‚¯
 	  $sql = "SELECT COUNT(*) ";
 	  $sql .= "FROM c_friend_confirm ";
 	  $sql .= "WHERE c_member_id_from=". quote4db($c_member_id) .
             " AND c_member_id_to=". quote4db($target_c_member_id);
 	  
 	  if(get_one4db($sql)){
-		  //¥ê¥ó¥¯¾µÇ§ÂÔ¤Á¤Ê¤é
+		  //ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡ãªã‚‰
 		  $relation['wait'] = true;
 		  return $relation;
 	  }
 	  
-	  //Í§Ã£¤«¤É¤¦¤«¥Á¥§¥Ã¥¯
+	  //å‹é”ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯
 	  $sql = "SELECT COUNT(*) ";
 	  $sql .= "FROM c_friend ";
 	  $sql .= "WHERE c_member_id_from=". quote4db($c_member_id) .
             " AND c_member_id_to=". quote4db($target_c_member_id); 
 	  
 	  if(get_one4db($sql)){
-		  //Í§Ã£¤Ê¤é
+		  //å‹é”ãªã‚‰
 		  $relation['friend'] = true;
 		  return $relation;
 	  }
 	  
-	  //Â¾¿Í
+	  //ä»–äºº
 	  return $relation;
 	  
   }
@@ -1143,24 +1143,24 @@ function k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit
   
   
 /***********************************************************
- * f_message_send ´ØÏ¢
+ * f_message_send é–¢é€£
  * 
  *********************************************************/
 
- /**¡¡´Ø¿ô
+ /**ã€€é–¢æ•°
   * k_p_f_message_send_c_member4c_member_id($target_c_member_id)
-  * ¥á¥ó¥Ð¤Î¾ðÊó(ID,¥Ë¥Ã¥¯¥Í¡¼¥à)¤ò¼èÆÀ
+  * ãƒ¡ãƒ³ãƒã®æƒ…å ±(ID,ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ )ã‚’å–å¾—
   * 
-  * k_p_f_message_send_c_member4c_member_id($c_member_id)¤ÈÆ±¤¸
+  * k_p_f_message_send_c_member4c_member_id($c_member_id)ã¨åŒã˜
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_memnber_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_member_id
   * nickname
   * 
-  * (¥Á¥§¥Ã¥¯£Ï£Ë)
+  * (ãƒã‚§ãƒƒã‚¯ï¼¯ï¼«)
   */
 
   function k_p_f_message_send_c_member4c_member_id($target_c_member_id)
@@ -1171,15 +1171,15 @@ function k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit
   
   
  /****************************************************:
-  * f_link_request, f_link_request_err ´ØÏ¢
+  * f_link_request, f_link_request_err é–¢é€£
   * 
   */
  
-  /**¡¡´Ø¿ô
+  /**ã€€é–¢æ•°
    * k_f_link_request_c_member4c_member_id($c_member_id)
    * 
-   * k_p_h_home_c_member4c_member_id($c_member_id)¡¡¤ÈÆ±¤¸¡£
-   * ID¤È¥Ë¥Ã¥¯¥Í¡¼¥à¤¬ÊÖ¤µ¤ì¤ë
+   * k_p_h_home_c_member4c_member_id($c_member_id)ã€€ã¨åŒã˜ã€‚
+   * IDã¨ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ãŒè¿”ã•ã‚Œã‚‹
    */
   
   function k_f_link_request_c_member4c_member_id($c_member_id)
@@ -1191,26 +1191,26 @@ function k_p_f_home_c_friend_list_random4c_member_id($target_c_member_id, $limit
   
 /************************************************************
  * 
- * fh_friend_list ´ØÏ¢
+ * fh_friend_list é–¢é€£
  * 
  ************************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_fh_friend_list_friend_list4c_member_id($c_member_id,$page_size,$page)
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_member_id
   * $page_size
   * $page
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * image_filename
   * c_member_id
   * nickname
   * access_date
   * c_member_id
   * 
-  * (¥Á¥§¥Ã¥¯£Ï£Ë)
+  * (ãƒã‚§ãƒƒã‚¯ï¼¯ï¼«)
   */
  
 function k_p_fh_friend_list_friend_list4c_member_id($c_member_id,$page_size,$page)
@@ -1270,18 +1270,18 @@ function k_p_fh_friend_list_friend_list4c_member_id($c_member_id,$page_size,$pag
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_fh_friend_list_c_member4c_member_id($c_member_id)
- * ¥á¥ó¥Ð¤Î¾ðÊó¡ÊID, ¥Ë¥Ã¥¯¥Í¡¼¥à¡Ë¤ò¼èÆÀ
+ * ãƒ¡ãƒ³ãƒã®æƒ…å ±ï¼ˆID, ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ï¼‰ã‚’å–å¾—
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $c_member_id
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * c_member_id
  * nickname
  * 
- * (¥Á¥§¥Ã¥¯£Ï£Ë)
+ * (ãƒã‚§ãƒƒã‚¯ï¼¯ï¼«)
  */
 
 function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
@@ -1292,21 +1292,21 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
 
 
 /*********************************************************
- * fh_diary_list ´ØÏ¢
+ * fh_diary_list é–¢é€£
  * 
  *******************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_fh_diary_list_c_diary_list4c_member_id($c_member_id, $page_size, $page)
-  * ºÇ¿·Æüµ­¥ê¥¹¥È¤ò¼èÆÀ¡£
-  * ¼èÆÀÈÏ°Ï¤ò»ØÄê¤Ç¤­¤ë¡£
+  * æœ€æ–°æ—¥è¨˜ãƒªã‚¹ãƒˆã‚’å–å¾—ã€‚
+  * å–å¾—ç¯„å›²ã‚’æŒ‡å®šã§ãã‚‹ã€‚
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_member_did
   * $page_size
   * $page
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * (list)
   * [0]array
   * 	c_diary_id
@@ -1315,8 +1315,8 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
   *		image_filename
   * 	nickname
   * 	count_comment
-  * [1]prev ¡ÖÁ°¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
-  * [2]next ¡Ö¼¡¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
+  * [1]prev ã€Œå‰ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
+  * [2]next ã€Œæ¬¡ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
   * 
   */
  //shou050601
@@ -1372,9 +1372,9 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
   }
  
 
- /** ´Ø¿ô 
+ /** é–¢æ•° 
   * k_p_fh_diary_list_c_member4c_member_id($c_member_id)
-  * £É£Ä¤È¥Ë¥Ã¥¯¥Í¡¼¥à¤òÊÖ¤¹
+  * ï¼©ï¼¤ã¨ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã‚’è¿”ã™
   */ 
  
   function k_p_fh_diary_list_c_member4c_member_id($c_member_id)
@@ -1385,18 +1385,18 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
   
  
 /***************************************************
- * fh_diary ´ØÏ¢
+ * fh_diary é–¢é€£
  * 
  **************************************************/   
   
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_fh_diary_c_diary4c_diary_id($c_diary_id)
-  * c_diary_id¤«¤éc_diary¤òÆÀ¤ë
+  * c_diary_idã‹ã‚‰c_diaryã‚’å¾—ã‚‹
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_diary_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_diary.*
   * 
   */
@@ -1409,15 +1409,15 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
   }
  
   
-  /** ´Ø¿ô
+  /** é–¢æ•°
    * k_p_fh_diary_c_diary_comment4c_diary_id($c_diary_id)
-   * Æüµ­¤Ø¤Î¥³¥á¥ó¥È¥ê¥¹¥È¤ò¼èÆÀ
+   * æ—¥è¨˜ã¸ã®ã‚³ãƒ¡ãƒ³ãƒˆãƒªã‚¹ãƒˆã‚’å–å¾—
    * 
    * 
-   * [°ú¿ô]
+   * [å¼•æ•°]
    * $c_diary_id
    * 
-   * [Ìá¤êÃÍ]
+   * [æˆ»ã‚Šå€¤]
    * c_diary_comment.*
    * nickname
    */
@@ -1438,14 +1438,14 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
   }
   
   
-  /** ´Ø¿ô
+  /** é–¢æ•°
    * k_p_fh_diary_c_member4c_diary_id($c_diary_id)
-   * Æüµ­£É£Ä¤«¤é¤½¤ÎÆüµ­¤ò½ñ¤¤¤¿¥á¥ó¥Ð£É£Ä¤È¥Ë¥Ã¥¯¥Í¡¼¥à¤òÆÀ¤ë
+   * æ—¥è¨˜ï¼©ï¼¤ã‹ã‚‰ãã®æ—¥è¨˜ã‚’æ›¸ã„ãŸãƒ¡ãƒ³ãƒï¼©ï¼¤ã¨ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã‚’å¾—ã‚‹
    * 
-   * [°ú¿ô]
+   * [å¼•æ•°]
    * $c_diary_id
    * 
-   * [Ìá¤êÃÍ]
+   * [æˆ»ã‚Šå€¤]
    * c_member_id
    * nickname
    * 
@@ -1462,7 +1462,7 @@ function k_p_fh_friend_list_c_member4c_member_id($c_member_id)
    }
   
    
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_fh_diary_c_diary_id4c_diary_comment_id($c_diary_comment_id) 
   * 
   */
@@ -1479,28 +1479,28 @@ function k_p_fh_diary_c_diary_id4c_diary_comment_id($c_diary_comment_id)
 	
    
 /*******************************************************
- * fh_com_list ´ØÏ¢
+ * fh_com_list é–¢é€£
  * 
  ***************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   *  k_p_fh_com_list_c_commu_list4c_member_id($c_member_id, $page_size, $page)
   *  
-  *  ¼«¼ç¡¦¸ø¼°º®¹ç¤Ç»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È¤ò¼èÆÀ
-  *  ÈÏ°Ï¤ò»ØÄê¤Ç¤­¤ë
-  *  £É£Ä¤¬¿·¤·¤¤¤â¤Î½ç
+  *  è‡ªä¸»ãƒ»å…¬å¼æ··åˆã§å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆã‚’å–å¾—
+  *  ç¯„å›²ã‚’æŒ‡å®šã§ãã‚‹
+  *  ï¼©ï¼¤ãŒæ–°ã—ã„ã‚‚ã®é †
   *  
-  *  [°ú¿ô]
-  *  $page ¥Ú¡¼¥¸
-  *  $page_size¡¡£±¥Ú¡¼¥¸¤ËÉ½¼¨¤¹¤ë·ï¿ô
+  *  [å¼•æ•°]
+  *  $page ãƒšãƒ¼ã‚¸
+  *  $page_sizeã€€ï¼‘ãƒšãƒ¼ã‚¸ã«è¡¨ç¤ºã™ã‚‹ä»¶æ•°
   *  
-  *  [Ìá¤êÃÍ]
+  *  [æˆ»ã‚Šå€¤]
   *  c_commu
   *  	name
   *  	c_commu_id
   *  	count_members
-  *  prev ¡Ö¼¡¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
-  *  next¡¡¡ÖÁ°¤Ø¡×
+  *  prev ã€Œæ¬¡ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
+  *  nextã€€ã€Œå‰ã¸ã€
   */
 function k_p_fh_com_list_c_commu_list4c_member_id($c_member_id, $page_size, $page)
 {
@@ -1544,9 +1544,9 @@ function k_p_fh_com_list_c_commu_list4c_member_id($c_member_id, $page_size, $pag
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_fh_com_list_c_member4c_member_id($c_member_id)
- * k_p_h_home_c_member4c_member_id($c_member_id)¤ÈÆ±¤¸
+ * k_p_h_home_c_member4c_member_id($c_member_id)ã¨åŒã˜
  */
 
 function k_p_fh_com_list_c_member4c_member_id($c_member_id)
@@ -1555,11 +1555,11 @@ function k_p_fh_com_list_c_member4c_member_id($c_member_id)
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * 
  */
 
-/*Excel¥ê¥¹¥È¤Ë²Ã¤¨¤ë¡ª*/
+/*Excelãƒªã‚¹ãƒˆã«åŠ ãˆã‚‹ï¼*/
  
  function k_p_fh_com_list_c_commu_list_count4c_member_id($c_member_id)
  {
@@ -1569,18 +1569,18 @@ function k_p_fh_com_list_c_member4c_member_id($c_member_id)
  }
 
 /****************************************************
- * c_home ´ØÏ¢
+ * c_home é–¢é€£
  * 
  ****************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_c_home_c_commu4c_commu_id($c_commu_id)
-  * ¥³¥ß¥å£É£Ä¤«¤éc_commu¤òÊÖ¤¹
+  * ã‚³ãƒŸãƒ¥ï¼©ï¼¤ã‹ã‚‰c_commuã‚’è¿”ã™
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * c_commu.*
   * count_member
   * 
@@ -1596,17 +1596,17 @@ function k_p_fh_com_list_c_member4c_member_id($c_member_id)
  }
  
  
- /**¡¡´Ø¿ô
+ /**ã€€é–¢æ•°
   * k_p_c_home_relationship_between_member_commu($c_commu_id, $c_member_id)
-  * ¥á¥ó¥Ð£É£Ä¤Î¥á¥ó¥Ð¤È¡¢¥³¥ß¥å¥Ë¥Æ¥££É£Ä¤Î¥³¥ß¥å¥Ë¥Æ¥£¤Î´Ø·¸¤òÊÖ¤¹
+  * ãƒ¡ãƒ³ãƒï¼©ï¼¤ã®ãƒ¡ãƒ³ãƒã¨ã€ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ï¼©ï¼¤ã®ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®é–¢ä¿‚ã‚’è¿”ã™
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_id
   * $c_member_id
   * 
-  * [Ìá¤êÃÍ]
-  * bool join (»²²ÃorÉÔ»²²Ã)
-  * bool wait (»²²Ã¾µÇ§ÂÔ¤Á)
+  * [æˆ»ã‚Šå€¤]
+  * bool join (å‚åŠ orä¸å‚åŠ )
+  * bool wait (å‚åŠ æ‰¿èªå¾…ã¡)
   * 
   */
   
@@ -1616,45 +1616,45 @@ function k_p_fh_com_list_c_member4c_member_id($c_member_id)
 		'join' => false,
 		'wait' => false);
 	  
-	  //»²²Ã¾µÇ§ÂÔ¤Á¤«¤É¤¦¤«¤ò¥Á¥§¥Ã¥¯
+	  //å‚åŠ æ‰¿èªå¾…ã¡ã‹ã©ã†ã‹ã‚’ãƒã‚§ãƒƒã‚¯
 	  $sql = "SELECT COUNT(*) ";
 	  $sql .= "FROM c_commu_member_confirm ";
 	  $sql .= "WHERE c_commu_id=".quote4db($c_commu_id) .
             " AND c_member_id=".quote4db($c_member_id);
 	  
 	  if(get_one4db($sql)){
-		  //¾µÇ§ÂÔ¤Á¤Ê¤é
+		  //æ‰¿èªå¾…ã¡ãªã‚‰
 		  $relation['wait'] = true;
 		  return $relation;
 	  }
 	  
-	  //»²²Ã¤·¤Æ¤ë¤«¤É¤¦¤«¥Á¥§¥Ã¥¯
+	  //å‚åŠ ã—ã¦ã‚‹ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯
 	  $sql = "SELECT COUNT(*) ";
 	  $sql .= "FROM c_commu_member ";
 	  $sql .= "WHERE c_commu_id=".quote4db($c_commu_id) .
             " AND c_member_id=".quote4db($c_member_id); 
 	  
 	  if(get_one4db($sql)){
-		  //»²²Ã¤Ê¤é
+		  //å‚åŠ ãªã‚‰
 		  $relation['join'] = true;
 		  return $relation;
 	  }
 	  
-	  //»²²Ã¤âÍ×ÀÁ¤â¤·¤Æ¤Ê¤¤
+	  //å‚åŠ ã‚‚è¦è«‹ã‚‚ã—ã¦ãªã„
 	  return $relation;	  
 	  
   }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_c_home_c_commu_member_list_random4c_commu_id($c_commu_id, $limit)
- * ¥³¥ß¥å¥Ë¥Æ¥£¤Î¥á¥ó¥Ð¥ê¥¹¥È¤ò¥é¥ó¥À¥à¤Ë¼èÆÀ
+ * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒ¡ãƒ³ãƒãƒªã‚¹ãƒˆã‚’ãƒ©ãƒ³ãƒ€ãƒ ã«å–å¾—
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $c_member_id
  * $limit
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * aray of array
  * 	c_member_id
  *  nickname
@@ -1681,14 +1681,14 @@ function k_p_fh_com_list_c_member4c_member_id($c_member_id)
  }
 
  
-/**¡¡´Ø¿ô
+/**ã€€é–¢æ•°
  * k_p_c_home_c_commu_topic_list_all4c_commu_id($c_commu_id)
- * ¥³¥ß¥å¥Ë¥Æ¥£¤Î·Ç¼¨ÈÄ¤òÁ´¤ÆÉ½¼¨
+ * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®æŽ²ç¤ºæ¿ã‚’å…¨ã¦è¡¨ç¤º
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $c_commu_id
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * c_commu_topic.*
  * 
  */
@@ -1700,16 +1700,16 @@ function k_p_c_home_c_commu_topic_list_all4c_commu_id($c_commu_id)
     return get_array_list4db($sql);
 }
   
-  /** ´Ø¿ô
+  /** é–¢æ•°
   * k_p_c_home_is_receive_mail4c_commu_id4c_member_id($c_commu_id, $c_member_id)
   * 
-  * ¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë(ktai)¼õ¿®ÀßÄê¤ò¼èÆÀ
+  * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«(ktai)å—ä¿¡è¨­å®šã‚’å–å¾—
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * c_commu_id
   * c_member_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * is_receive_mail
   */ 
   
@@ -1724,16 +1724,16 @@ function k_p_c_home_c_commu_topic_list_all4c_commu_id($c_commu_id)
 	  return get_one4db($sql);
   }
 
-  /** ´Ø¿ô
+  /** é–¢æ•°
   * p_c_home_is_receive_mail4c_commu_id4c_member_id($c_commu_id, $c_member_id)
   * 
-  * ¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë(PC)¼õ¿®ÀßÄê¤ò¼èÆÀ
+  * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«(PC)å—ä¿¡è¨­å®šã‚’å–å¾—
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * c_commu_id
   * c_member_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * is_receive_mail_pc
   * 
 	*/
@@ -1752,29 +1752,29 @@ function k_p_c_home_c_commu_topic_list_all4c_commu_id($c_commu_id)
   
   
 /**************************************************:
- * c_member_list ´ØÏ¢
+ * c_member_list é–¢é€£
  * 
  * 
  **************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * 
   * k_p_c_member_list_c_members_disp4c_commu_id($c_commu_id, $page_size, $page)
-  * ¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¤Î¥ê¥¹¥È¤òID¿·¤·¤¤¤â¤Î½ç¤Ë¼èÆÀ¤¹¤ë¡£
-  * ¼èÆÀ¤¹¤ëÈÏ°Ï¤ò»ØÄê¤Ç¤­¤ë¡£
+  * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒã®ãƒªã‚¹ãƒˆã‚’IDæ–°ã—ã„ã‚‚ã®é †ã«å–å¾—ã™ã‚‹ã€‚
+  * å–å¾—ã™ã‚‹ç¯„å›²ã‚’æŒ‡å®šã§ãã‚‹ã€‚
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_id
   * $page_size
   * $page
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * (list)
   * c_member_id
   * nickname
   * friend_count
-  * prev  ¡ÖÁ°¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
-  * next¡¡¡Ö¼¡¤Ø¡×¤¬¤¢¤ë¤«¤É¤¦¤«
+  * prev  ã€Œå‰ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
+  * nextã€€ã€Œæ¬¡ã¸ã€ãŒã‚ã‚‹ã‹ã©ã†ã‹
   * 
   */
 
@@ -1816,15 +1816,15 @@ function k_p_c_member_list_c_members_disp4c_commu_id($c_commu_id, $page_size, $p
 } 
 
 
-/**´Ø¿ô
+/**é–¢æ•°
  * k_p_c_member_list_c_commu_member_count4c_commu_id($c_commu_id)
- * ¥³¥ß¥å¥Ë¥Æ¥£¥á¥ó¥Ð¿ô¤òÊÖ¤¹
+ * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ³ãƒæ•°ã‚’è¿”ã™
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $c_commu_id
  * 
- * [Ìá¤êÃÍ]
- * int ¥á¥ó¥Ð¿ô
+ * [æˆ»ã‚Šå€¤]
+ * int ãƒ¡ãƒ³ãƒæ•°
  * 
  * 
  */
@@ -1842,18 +1842,18 @@ function k_p_c_member_list_c_commu_member_count4c_commu_id($c_commu_id)
 
 
 /******************************************************
- * c_bbs ´ØÏ¢
+ * c_bbs é–¢é€£
  * 
  *****************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_c_bbs_c_commu_topic_name4c_commu_topic_id($c_commu_topic_id)
-  * ¥È¥Ô¥Ã¥¯Ì¾¤ò¼èÆÀ
+  * ãƒˆãƒ”ãƒƒã‚¯åã‚’å–å¾—
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_commu_topic_id
   * 
-  * [Ìá¤êÃÍ]
+  * [æˆ»ã‚Šå€¤]
   * name
   * 
   */
@@ -1866,20 +1866,20 @@ function k_p_c_bbs_c_commu_topic_name4c_commu_topic_id($c_commu_topic_id)
 }
 
 
-/** ´Ø¿ô
+/** é–¢æ•°
  k_p_c_bbs_c_commu_topic_comment_list4c_c_commu_topic_id($target_c_commu_topic_id, $c_member_id, $page_size, $page)
  
-¥È¥Ô¥Ã¥¯¤Î¥³¥á¥ó¥È¥ê¥¹¥È¤ò¼èÆÀ
-°ú¿ô¤Î¥á¥ó¥Ð£É£Ä¤¬½ñ¤­¹þ¤ó¤À¥³¥á¥ó¥È¤ËÂÐ¤·¤Æ¤Ï¡¢
-is_c_commu_topic_comment_admin=1¤¬ÊÖ¤ë¡£
+ãƒˆãƒ”ãƒƒã‚¯ã®ã‚³ãƒ¡ãƒ³ãƒˆãƒªã‚¹ãƒˆã‚’å–å¾—
+å¼•æ•°ã®ãƒ¡ãƒ³ãƒï¼©ï¼¤ãŒæ›¸ãè¾¼ã‚“ã ã‚³ãƒ¡ãƒ³ãƒˆã«å¯¾ã—ã¦ã¯ã€
+is_c_commu_topic_comment_admin=1ãŒè¿”ã‚‹ã€‚
 
-[°ú¿ô]
+[å¼•æ•°]
 $target_c_commu_topic_id
 $c_member_id
-$page_size	£±¥Ú¡¼¥¸¤ËÉ½¼¨¤¹¤ë¿ô
-$page	¥Ú¡¼¥¸ÈÖ¹æ
+$page_size	ï¼‘ãƒšãƒ¼ã‚¸ã«è¡¨ç¤ºã™ã‚‹æ•°
+$page	ãƒšãƒ¼ã‚¸ç•ªå·
 
-[ÊÖ¤êÃÍ]
+[è¿”ã‚Šå€¤]
 number
 c_member_id
 nickname
@@ -1928,9 +1928,9 @@ function k_p_c_bbs_c_commu_topic_comment_list4c_c_commu_topic_id($target_c_commu
     return array($list , $prev , $next);
 }
  
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_c_bbs_c_commu4c_commu_topic_id($c_commu_topic_id)
- * ¥È¥Ô¥Ã¥¯£É£Ä¤«¤é¥³¥ß¥å¥Ë¥Æ¥£ID¤ÈÌ¾Á°¤ò¼èÆÀ
+ * ãƒˆãƒ”ãƒƒã‚¯ï¼©ï¼¤ã‹ã‚‰ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£IDã¨åå‰ã‚’å–å¾—
  * 
  */
 
@@ -1943,15 +1943,15 @@ function k_p_c_bbs_c_commu_topic_comment_list4c_c_commu_topic_id($target_c_commu
 	return get_array_one4db($sql);
 }
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_c_bbs_is_admin4c_member_id_c_commu_topic_id($c_member_id, $c_commu_topic_id)
- * »ØÄê¤·¤¿¥á¥ó¥Ð¤¬¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¤«¤É¤¦¤«¤òÈ½Äê
+ * æŒ‡å®šã—ãŸãƒ¡ãƒ³ãƒãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…ã‹ã©ã†ã‹ã‚’åˆ¤å®š
  * 
- * [°ú¿ô]
+ * [å¼•æ•°]
  * $c_member_id
  * $c_commu_topic_id
  * 
- * [Ìá¤êÃÍ]
+ * [æˆ»ã‚Šå€¤]
  * bool
  */
 
@@ -1974,9 +1974,9 @@ function k_p_c_bbs_is_admin4c_member_id_c_commu_topic_id($c_member_id, $c_commu_
 
  
  
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_c_bbs_c_member_admin4c_commu_topic_id($c_commu_topic_id)
-  * ¥³¥ß¥å¥Ë¥Æ¥£¤Î´ÉÍý¼Ô(ID, nickname)¤ò¼èÆÀ
+  * ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ç®¡ç†è€…(ID, nickname)ã‚’å–å¾—
   * 
   */
 
@@ -1997,36 +1997,36 @@ function k_p_c_bbs_is_admin4c_member_id_c_commu_topic_id($c_member_id, $c_commu_
  
 
 /*****************************************************
- * c_invite ´ØÏ¢
+ * c_invite é–¢é€£
  * 
  *****************************************************/
 
- /** ´Ø¿ô
+ /** é–¢æ•°
   * k_p_c_invite_c_friend_list_random4c_member_id4c_commu_id($c_member_id, $c_commu_id, $limit)
   * 
-  * My¥Õ¥ì¥ó¥É¤«¤é»ØÄê¥³¥ß¥å¤Ë»²²Ã¤·¤Æ¤¤¤Ê¤¤¿Í¤ò¥é¥ó¥À¥à¤ËÁª¤Ö
+  * Myãƒ•ãƒ¬ãƒ³ãƒ‰ã‹ã‚‰æŒ‡å®šã‚³ãƒŸãƒ¥ã«å‚åŠ ã—ã¦ã„ãªã„äººã‚’ãƒ©ãƒ³ãƒ€ãƒ ã«é¸ã¶
   * 
-  * [°ú¿ô]
+  * [å¼•æ•°]
   * $c_member_id
   * $c_commu_id
   * $limit
   * 
-  * [Ìá¤êÃÍ]
-  * c_member_id (¥Õ¥ì¥ó¥É¤Î)
+  * [æˆ»ã‚Šå€¤]
+  * c_member_id (ãƒ•ãƒ¬ãƒ³ãƒ‰ã®)
   * nickname
   */
  
  function k_p_c_invite_c_friend_list_random4c_member_id4c_commu_id($c_member_id, $c_commu_id, $limit)
  {
-	//Í§Ã£¥ê¥¹¥È
+	//å‹é”ãƒªã‚¹ãƒˆ
 	$sql = "select c_member_id_to from c_friend where c_member_id_from =".quote4db($c_member_id);
 	$friend_list = get_one_list4db($sql);
 	
-	//»²²Ã¼Ô¥ê¥¹¥È
+	//å‚åŠ è€…ãƒªã‚¹ãƒˆ
 	$sql = "select c_member_id from c_commu_member where c_commu_id =".quote4db($c_commu_id);
 	$member_list = get_one_list4db($sql);
 	
-	//Í§Ã£¥ê¥¹¥È¤«¤é»²²Ã¼Ô¥ê¥¹¥È¤ò°ú¤¯
+	//å‹é”ãƒªã‚¹ãƒˆã‹ã‚‰å‚åŠ è€…ãƒªã‚¹ãƒˆã‚’å¼•ã
 	$result = array_diff($friend_list,$member_list);
 	
 	
@@ -2046,7 +2046,7 @@ function k_p_c_bbs_is_admin4c_member_id_c_commu_topic_id($c_member_id, $c_commu_
 	}
  }
 
-/** ´Ø¿ô
+/** é–¢æ•°
  * k_p_c_bbs_c_member_admin4c_commu_topic_id($c_commu_topic_id)
  * 
  * 
@@ -2101,14 +2101,14 @@ function k_p_count_c_event_member_list4c_commu_topic_id($c_commu_topic_id){
 }
 
 /**
-¥Õ¥ì¥ó¥É¤ÎºÇ¿·Æüµ­¥ê¥¹¥È
+ãƒ•ãƒ¬ãƒ³ãƒ‰ã®æœ€æ–°æ—¥è¨˜ãƒªã‚¹ãƒˆ
 
-[°ú¿ô]
+[å¼•æ•°]
 c_member_id
 $page_size
 $page
 
-[ÊÖ¤êÃÍ]
+[è¿”ã‚Šå€¤]
 r_datetime
 c_diary_id
 subject
@@ -2154,13 +2154,13 @@ function k_p_h_diary_list_friend_h_diary_list_friend4c_member_id($c_member_id, $
 }
 
 /**
-»²²Ã¥³¥ß¥å¥Ë¥Æ¥£¿·Ãå½ñ¤­¹þ¤ß¥ê¥¹¥È¼èÆÀ
+å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ–°ç€æ›¸ãè¾¼ã¿ãƒªã‚¹ãƒˆå–å¾—
 
-[°ú¿ô]
+[å¼•æ•°]
 $c_member_id
 $limit
 
-[ÊÖ¤êÃÍ]
+[è¿”ã‚Šå€¤]
 c_commu_id
 c_commu_name
 c_commu_topic_id
@@ -2184,7 +2184,7 @@ function k_p_h_home_c_commu_topic_comment_list4c_member_id($c_member_id,$page_si
     $c_commu_topic_list = get_array_list4db($sql);
 
     foreach($c_commu_topic_list as $key => $value) {
-        //ºÇ¿·¤Î½ñ¤­¹þ¤ßÈÖ¹æ
+        //æœ€æ–°ã®æ›¸ãè¾¼ã¿ç•ªå·
         $sql = "SELECT MAX(number) FROM c_commu_topic_comment".
                " where c_commu_topic_id = " .no_quote4db($value['c_commu_topic_id']);
 
@@ -2219,4 +2219,3 @@ function k_p_h_home_c_commu_topic_comment_list4c_member_id($c_member_id,$page_si
     
     return array($c_commu_topic_list , $prev , $next, $total_num);
 }
-?>

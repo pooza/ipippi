@@ -1,30 +1,30 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>�����桼�������ԥ᡼������</h2>
+<h2>新規ユーザー招待メール送信</h2>
 
 ({if $smarty.const.OPENPNE_REGIST_FROM == $smarty.const.OPENPNE_REGIST_FROM_NONE})
-<p>������Ͽ���Ǥ��ʤ�����ˤʤäƤ���Τ������Ǥ��ޤ���</p>
+<p>新規登録ができない設定になっているので送信できません。</p>
 ({else})
-<p>���Ϥ��줿�᡼�륢�ɥ쥹���ˡ�({$SNS_NAME})�פؤξ��Ծ����������ޤ���</p>
+<p>入力されたメールアドレス宛に「({$SNS_NAME})」への招待状を送信します。</p>
 <ul>
-<li class="caution">ID���֤Υ桼��������ξ��ԥ᡼��Ȥ�����������ޤ���</li>
-<li class="caution">������Ͽ�ѤߤΥ᡼�륢�ɥ쥹�ؤ���������ޤ���</li>
-<li class="caution">���٤����̤Υ᡼�륢�ɥ쥹����ꤹ��ȥ����ƥ�¦�����꤭��ʤ���ǽ��������ޤ���</li>
+<li class="caution">ID１番のユーザーからの招待メールとして送信されます。</li>
+<li class="caution">既に登録済みのメールアドレスへは送信されません。</li>
+<li class="caution">一度に大量のメールアドレスを指定するとシステム側で送りきれない可能性があります。</li>
 </ul>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('send_invites','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
-�᡼�륢�ɥ쥹<br>
+メールアドレス<br>
 <textarea cols="50" rows="8" name="mails">({$requests.mails})</textarea><br>
-<div class="caution">��ʣ���Υ᡼�륢�ɥ쥹���˥᡼�������������ϡ����ԤǶ��ڤä����Ϥ��Ƥ���������</div>
+<div class="caution">※複数のメールアドレス宛にメールを送信する場合は、改行で区切って入力してください。</div>
 <br>
-����ʸ<br>
+招待文<br>
 <textarea cols="60" rows="5" name="message">({$requests.message})</textarea><br>
 <br>
-<input type="submit" class="submit" value="��ǧ����">
+<input type="submit" class="submit" value="確認画面">
 </form>
 ({/if})
 

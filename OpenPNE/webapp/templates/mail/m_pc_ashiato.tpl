@@ -1,12 +1,12 @@
-¡Ú({$SNS_NAME})¡Û¥¢¥¯¥»¥¹¿ô¤¬({$c_member_to.ashiato_mail_num})¥¢¥¯¥»¥¹¤òÄ¶¤¨¤Þ¤·¤¿
+ã€({$SNS_NAME})ã€‘ã‚¢ã‚¯ã‚»ã‚¹æ•°ãŒ({$c_member_to.ashiato_mail_num})ã‚¢ã‚¯ã‚»ã‚¹ã‚’è¶…ãˆã¾ã—ãŸ
 
-({$c_member_to.nickname})¤µ¤ó¡¢¤³¤ó¤Ë¤Á¤Ï¡£
-({$CATCH_COPY})({$SNS_NAME})¤«¤é¤Î¤ªÃÎ¤é¤»¤Ç¤¹¡£
+({$c_member_to.nickname})ã•ã‚“ã€ã“ã‚“ã«ã¡ã¯ã€‚
+({$CATCH_COPY})({$SNS_NAME})ã‹ã‚‰ã®ãŠçŸ¥ã‚‰ã›ã§ã™ã€‚
 
-({$c_member_to.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸Á´ÂÎ¤Î¥¢¥¯¥»¥¹¿ô¤¬
-({$c_member_to.ashiato_mail_num})¥¢¥¯¥»¥¹¤òÄ¶¤¨¤Þ¤·¤¿¡£
+({$c_member_to.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸å…¨ä½“ã®ã‚¢ã‚¯ã‚»ã‚¹æ•°ãŒ
+({$c_member_to.ashiato_mail_num})ã‚¢ã‚¯ã‚»ã‚¹ã‚’è¶…ãˆã¾ã—ãŸã€‚
 
-º£¸å¤È¤â¡¢¤¼¤Ò¡¢({$SNS_NAME})¤ò¤´³èÍÑ¤¯¤À¤µ¤¤¡£
+ä»Šå¾Œã¨ã‚‚ã€ãœã²ã€({$SNS_NAME})ã‚’ã”æ´»ç”¨ãã ã•ã„ã€‚
 
 
 ({$inc_signature})

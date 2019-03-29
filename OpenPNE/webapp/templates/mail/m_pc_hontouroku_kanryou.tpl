@@ -1,15 +1,15 @@
-¡Ú({$SNS_NAME})¡Û({$target_c_member.nickname})¤µ¤ó¤¬({$SNS_NAME})¤Ë»²²Ã¤µ¤ì¤Ş¤·¤¿
+ã€({$SNS_NAME})ã€‘({$target_c_member.nickname})ã•ã‚“ãŒ({$SNS_NAME})ã«å‚åŠ ã•ã‚Œã¾ã—ãŸ
 
-({$c_member.nickname})¤µ¤ó¡¢¤³¤ó¤Ë¤Á¤Ï¡£
-({$CATCH_COPY})({$SNS_NAME}) ¤«¤é¤Î¤ªÃÎ¤é¤»¤Ç¤¹¡£
+({$c_member.nickname})ã•ã‚“ã€ã“ã‚“ã«ã¡ã¯ã€‚
+({$CATCH_COPY})({$SNS_NAME}) ã‹ã‚‰ã®ãŠçŸ¥ã‚‰ã›ã§ã™ã€‚
 
-({$c_member.nickname})¤µ¤ó¤Î¾·ÂÔ¤µ¤ì¤¿ ({$target_c_member.nickname}) ¤µ¤ó¤¬
-({$SNS_NAME})¤Ë»²²Ã¤µ¤ì¤Ş¤·¤¿¤Î¤Ç¡¢¤´Ï¢ÍíÃ×¤·¤Ş¤¹¡£
+({$c_member.nickname})ã•ã‚“ã®æ‹›å¾…ã•ã‚ŒãŸ ({$target_c_member.nickname}) ã•ã‚“ãŒ
+({$SNS_NAME})ã«å‚åŠ ã•ã‚Œã¾ã—ãŸã®ã§ã€ã”é€£çµ¡è‡´ã—ã¾ã™ã€‚
 
-¡ş({$target_c_member.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸
+â—‡({$target_c_member.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸
 ({$ABSOLUTE_PATH})page.php?p=f_home&target_c_member_id=({$target_c_member.c_member_id})
 
-º£¸å¤È¤â¡¢¤¼¤Ò¡¢({$SNS_NAME})¤ò¤´³èÍÑ¤¯¤À¤µ¤¤¡£
+ä»Šå¾Œã¨ã‚‚ã€ãœã²ã€({$SNS_NAME})ã‚’ã”æ´»ç”¨ãã ã•ã„ã€‚
 
 
 ({$inc_signature})

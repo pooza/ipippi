@@ -2,13 +2,13 @@
 function normalAction_login2($smarty,$requests)
 {
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$sid = $requests['sid'];
 	// ----------
 			
 	$smarty->assign("sid", $sid);
 
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("public") );
 	
 	$c_pc_address_pre = do_common_c_pc_address_pre4sid($sid);
@@ -17,9 +17,8 @@ function normalAction_login2($smarty,$requests)
 		$smarty->assign("pc_address", $c_pc_address_pre['pc_address']);
 		$smarty->ext_display("login2.tpl");
 	}else{
-	    $msg = "URL¤¬Ìµ¸ú¤Ç¤¹";
+	    $msg = "URLãŒç„¡åŠ¹ã§ã™";
 	    client_redirect("normal.php?p=tologin&msg=".urlencode($msg));
 	    exit;
 	}
 }
-?>

@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ������ѹ�****** -->
+<!-- ******ここから：コミュニティ設定変更****** -->
 <form action="do.php" method="post" enctype="multipart/form-data" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_edit_update_c_commu">
 <input type="hidden" name="target_c_commu_id" value="({$target_c_commu_id})">
@@ -43,22 +43,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ߥ�˥ƥ������ѹ�������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：コミュニティ設定変更＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:168px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���ߥ�˥ƥ������ѹ�</span></td>
+<td style="width:168px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">コミュニティ設定変更</span></td>
 <td style="width:440px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 ({*********})
 <tr>
@@ -71,7 +71,7 @@
 
 <div class="padding_s">
 
-���ߥ�˥ƥ�̾
+コミュニティ名
 
 </div>
 
@@ -99,7 +99,7 @@
 
 <div class="padding_s">
 
-���ƥ���
+カテゴリ
 
 </div>
 
@@ -130,7 +130,7 @@
 
 <div class="padding_s">
 
-���þ���<br>�����ϰ�
+参加条件と<br>公開範囲
 
 </div>
 
@@ -158,7 +158,7 @@
 
 <div class="padding_s">
 
-���ߥ�˥ƥ�����ʸ
+コミュニティ説明文
 
 </div>
 
@@ -186,7 +186,7 @@
 
 <div class="padding_s">
 
-��&nbsp;��
+写&nbsp;真
 
 </div>
 
@@ -198,7 +198,7 @@
 
 ({if $c_commu.image_filename})
 <img src="img.php?filename=({$c_commu.image_filename})&amp;w=76&amp;h=76"><br>
-<a href="do.php?cmd=c_edit_image_delete_c_commu_image&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;sessid=({$PHPSESSID})">���</a><br>
+<a href="do.php?cmd=c_edit_image_delete_c_commu_image&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;sessid=({$PHPSESSID})">削除</a><br>
 ({/if})
 <input type="file" size="40" name="image_filename">
 
@@ -218,8 +218,8 @@
 
 <div class="padding_s">
 
-���ä��Τ餻<br>
-�᡼���������
+参加お知らせ<br>
+メール受信設定
 
 </div>
 
@@ -229,9 +229,9 @@
 
 <div class="padding_s">
 
-<input type="radio" class="no_bg" name="is_send_join_mail" value="1"({if $c_commu.is_send_join_mail}) checked="checked"({/if})>��������<br>
-<input type="radio" class="no_bg" name="is_send_join_mail" value="0"({if !$c_commu.is_send_join_mail}) checked="checked"({/if})>�������ʤ�<br>
-�����ߥ�˥ƥ����������üԤ��ä�ä����ˡ�������(���ʤ�)�˥᡼�������ޤ���
+<input type="radio" class="no_bg" name="is_send_join_mail" value="1"({if $c_commu.is_send_join_mail}) checked="checked"({/if})>受信する<br>
+<input type="radio" class="no_bg" name="is_send_join_mail" value="0"({if !$c_commu.is_send_join_mail}) checked="checked"({/if})>受信しない<br>
+※コミュニティ新しく参加者が加わった時に、管理者(あなた)にメールを送ります。
 
 </div>
 
@@ -249,12 +249,12 @@
 
 <div class="padding_w_m">
 
-������¯��ȿ����ɽ�����̿������饹�ȤηǺܤ϶ػߤ��Ƥ��ޤ���<br>
+公序良俗に反する表現・写真・イラストの掲載は禁止しています。<br>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <div align="center" style="text-align:center;">
-<input type="submit" value="�����ѡ�������">
+<input type="submit" value="　　変　更　　">
 </div>
 
 </div>
@@ -268,12 +268,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ߥ�˥ƥ������ѹ��������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：コミュニティ設定変更＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -285,13 +285,13 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ����ߥ�˥ƥ������ѹ�****** -->
+<!-- ******ここまで：コミュニティ設定変更****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ****************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ���������****** -->
+<!-- ******ここから：コミュニティを削除する****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -301,21 +301,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ߥ�˥ƥ��������������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：コミュニティを削除する＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:168px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���ߥ�˥ƥ���������</span></td>
+<td style="width:168px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">コミュニティを削除する</span></td>
 <td style="width:440px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 ({*********})
 <tr>
@@ -330,25 +330,25 @@
 
 ({if $is_topic})
 
-���ߥ�˥ƥ���������ˤϡ��ȥԥå��򤹤٤ƺ������ɬ�פ�����ޤ���<br>
-�ȥԥå���������ϡ��������������塢���Υڡ����˺��٥����������Ƥ���������<br>
-(����ܥ���ɽ������ޤ�)<br>
+コミュニティを削除するには、トピックをすべて削除する必要があります。<br>
+トピックがある場合は、それらを削除した後、このページに再度アクセスしてください。<br>
+(削除ボタンが表示されます)<br>
 <br>
-����κݤϥȥ�֥������򤱤뤿�ᡢ���餫���Ỳ�üԤغ������Τ��Ƥ���������
+削除の際はトラブル等を避けるため、あらかじめ参加者へ削除を告知してください。
 
 ({else})
 
-���Υ��ߥ�˥ƥ��������ޤ�������κݤϥȥ�֥������򤱤뤿�ᡢ���餫���Ỳ�üԤغ������Τ��Ƥ���������
+このコミュニティを削除します。削除の際はトラブル等を避けるため、あらかじめ参加者へ削除を告知してください。
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <div align="center" syyle="text-align:center;">
 <input type="hidden" name="cmd" value="c_edit_delete_c_commu">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
-<input type="submit" value="�����������">
+<input type="submit" value="　　削　除　　">
 </div>
 </form>
 
@@ -366,12 +366,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ߥ�˥ƥ���������������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：コミュニティを削除する＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -381,13 +381,13 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����ߥ�˥ƥ���������****** -->
+<!-- ******ここまで：コミュニティを削除する****** -->
 <!-- ****************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

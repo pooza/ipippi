@@ -2,14 +2,14 @@
 function doNormalAction_update_ktai_address($requests)
 {
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$ses = $requests['ses'];
 	$password = $requests['password'];
 	// ----------
     
-    // ¥»¥Ã¥·¥ç¥ó¤¬Í­¸ú¤«¤É¤¦¤«
+    // ã‚»ãƒƒã‚·ãƒ§ãƒ³ãŒæœ‰åŠ¹ã‹ã©ã†ã‹
     if (!$pre = c_ktai_address_pre4session($ses)) {
-        // Ìµ¸ú¤Î¾ì¹ç¡¢login ¤Ø¥ê¥À¥¤¥ì¥¯¥È
+        // ç„¡åŠ¹ã®å ´åˆã€login ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
         client_redirect("ktai_normal.php?p=login");
         exit;
     }
@@ -17,7 +17,7 @@ function doNormalAction_update_ktai_address($requests)
     $c_member_id = $pre['c_member_id'];
     $ktai_address = $pre['ktai_address'];
     
-    // ¥Ñ¥¹¥ï¡¼¥É¥Á¥§¥Ã¥¯
+    // ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãƒã‚§ãƒƒã‚¯
     if (!db_common_authenticate_password($c_member_id, $password)) {
     	client_redirect("ktai_normal.php?p=login2&msg=18&ses=" . $ses);
     	exit;
@@ -26,8 +26,8 @@ function doNormalAction_update_ktai_address($requests)
     k_do_update_ktai_address($c_member_id, $ktai_address);
     k_do_delete_ktai_address_pre($pre['c_ktai_address_pre_id']);
     
-    // login ¥Ú¡¼¥¸¤Ø¥ê¥À¥¤¥ì¥¯¥È
+    // login ãƒšãƒ¼ã‚¸ã¸ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ
     client_redirect("ktai_normal.php?p=login&msg=19&kad=" . urlencode(t_encrypt($ktai_address)));
     exit;
 }
-?>
+

@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ****************************************** -->
-<!-- ******¤³¤³¤«¤é¡§¥Ş¥¤¥Õ¥ì¥ó¥É¤«¤é¤Î¾Ò²ğÊ¸****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šãƒã‚¤ãƒ•ãƒ¬ãƒ³ãƒ‰ã‹ã‚‰ã®ç´¹ä»‹æ–‡****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,21 +34,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¥Ş¥¤¥Õ¥ì¥ó¥É¤«¤é¤Î¾Ò²ğÊ¸¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
-<!-- ¤³¤³¤«¤é¡§¾®¥¿¥¤¥È¥ë -->
+<!-- *ã“ã“ã‹ã‚‰ï¼šãƒã‚¤ãƒ•ãƒ¬ãƒ³ãƒ‰ã‹ã‚‰ã®ç´¹ä»‹æ–‡ï¼å†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
+<!-- ã“ã“ã‹ã‚‰ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})¤«¤é¤Î¾Ò²ğÊ¸</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})ã‹ã‚‰ã®ç´¹ä»‹æ–‡</span></td>
 </tr>
 </table>
 </div>
-<!-- ¤³¤³¤Ş¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Ş¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -76,12 +76,12 @@
 
 ({if $target_member.c_member_id==$member.c_member_id})
 ({if !$item.has_intro_by_me})
-<br><a href="page.php?p=f_intro_edit&target_c_member_id=({$item.c_member_id})">¤³¤Î({$WORD_MY_FRIEND})¤ò¾Ò²ğ¤¹¤ë</a>
+<br><a href="page.php?p=f_intro_edit&target_c_member_id=({$item.c_member_id})">ã“ã®({$WORD_MY_FRIEND})ã‚’ç´¹ä»‹ã™ã‚‹</a>
 ({/if})
-<br><a href="do.php?cmd=f_intro_from_delete&target_c_member_id=({$item.c_member_id})&amp;sessid=({$PHPSESSID})">ºï½ü</a>
+<br><a href="do.php?cmd=f_intro_from_delete&target_c_member_id=({$item.c_member_id})&amp;sessid=({$PHPSESSID})">å‰Šé™¤</a>
 ({/if})
 ({if $item.c_member_id==$member.c_member_id})
-<br><a href="page.php?p=f_intro_edit&target_c_member_id=({$target_member.c_member_id})">ÊÔ½¸</a>
+<br><a href="page.php?p=f_intro_edit&target_c_member_id=({$target_member.c_member_id})">ç·¨é›†</a>
 ({/if})
 
 </div>
@@ -96,12 +96,12 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- ¤³¤³¤Ş¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Ş¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Ş¤Ç¡§footer*})
-<!-- *¤³¤³¤Ş¤Ç¡§¥Ş¥¤¥Õ¥ì¥ó¥É¤«¤é¤Î¾Ò²ğÊ¸¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šãƒã‚¤ãƒ•ãƒ¬ãƒ³ãƒ‰ã‹ã‚‰ã®ç´¹ä»‹æ–‡ï¼ï¼å†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -111,14 +111,14 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Ş¤Ç¡§¥Ş¥¤¥Õ¥ì¥ó¥É¤«¤é¤Î¾Ò²ğÊ¸****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šãƒã‚¤ãƒ•ãƒ¬ãƒ³ãƒ‰ã‹ã‚‰ã®ç´¹ä»‹æ–‡****** -->
 <!-- ****************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**¤³¤³¤Ş¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

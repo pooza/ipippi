@@ -3,7 +3,7 @@
 function pageAction_c_event_member_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 		$page = $requests['page'];
 		$direc = $requests['direc'];
@@ -12,7 +12,7 @@ function pageAction_c_event_member_list($smarty,$requests) {
 		$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 		$c_commu_id = $c_topic['c_commu_id'];
 
-		//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+		//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
 	        handle_kengen_error();
 		}
@@ -49,4 +49,4 @@ function pageAction_c_event_member_list($smarty,$requests) {
 		$smarty->assign('end_num', $end_num);	
 		$smarty->ext_display('c_event_member_list.tpl');	
 }
-?>
+

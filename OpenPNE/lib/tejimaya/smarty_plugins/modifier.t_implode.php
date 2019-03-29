@@ -29,4 +29,4 @@ function smarty_modifier_t_implode($pieces, $glue = '')
 
 /* vim: set expandtab: */
 
-?>
+

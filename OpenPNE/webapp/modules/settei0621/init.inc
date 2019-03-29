@@ -1,24 +1,24 @@
 <?php
-// admin ¥â¥¸¥å¡¼¥ë initialize ½èÍı
+// admin ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ« initialize å‡¦ç†
 
-//¥é¥¤¥Ö¥é¥êÆÉ¤ß¹ş¤ß
+//ãƒ©ã‚¤ãƒ–ãƒ©ãƒªèª­ã¿è¾¼ã¿
 $module_lib_dir = dirname(__FILE__) . "/lib";
 require_once($module_lib_dir . "/db_admin.php");
 require_once($module_lib_dir . "/etc_admin.php");
 require_once($module_lib_dir . "/hash_admin.php");
 
-//¥Ç¥Õ¥©¥ë¥È¥Ú¡¼¥¸
+//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒšãƒ¼ã‚¸
 $GLOBALS['__Framework']['default_page'] = 'top';
 
 
-// ¥Ï¥Ã¥·¥å¤«¤é actionÌ¾¤ò¼èÆÀ
+// ãƒãƒƒã‚·ãƒ¥ã‹ã‚‰ actionåã‚’å–å¾—
 $hash_tbl =& AdminHashTable::singleton();
 $action = $hash_tbl->action($action, $type);
 
 
 function man_init_admin_page(&$smarty)
 {
-	// ¤Ï¤Ş¤Á¤Á¤ã¤óÂĞºöÍÑ
+	// ã¯ã¾ã¡ã¡ã‚ƒã‚“å¯¾ç­–ç”¨
 	@session_start();
 	$v['PHPSESSID'] = md5(session_id());
 	
@@ -32,10 +32,10 @@ function man_init_admin_page(&$smarty)
 
 function man_init_admin_do()
 {
-	//¤Ï¤Ş¤Á¤Á¤ã¤óÂĞºö
+	//ã¯ã¾ã¡ã¡ã‚ƒã‚“å¯¾ç­–
 	@session_start();
 	if ($_REQUEST['sessid'] !== md5(session_id())) {
-		die('Á°¤Î²èÌÌ¤òºÆÆÉ¤ß¹ş¤ß¤·¤Æ¡¢Áàºî¤ò¤ä¤êÄ¾¤·¤Æ¤¯¤À¤µ¤¤');
+		die('å‰ã®ç”»é¢ã‚’å†èª­ã¿è¾¼ã¿ã—ã¦ã€æ“ä½œã‚’ã‚„ã‚Šç›´ã—ã¦ãã ã•ã„');
 	}
 }
 

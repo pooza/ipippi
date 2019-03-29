@@ -1,11 +1,10 @@
 <?php
 function normalAction_password_query($smarty,$requests)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',	fetch_inc_page_header("public") );
 	
 	$smarty->assign('c_password_query_list', p_common_c_password_query4null());
 	
 	$smarty->ext_display("password_query.tpl");
 }
-?>

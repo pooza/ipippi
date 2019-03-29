@@ -8,7 +8,7 @@
 
 /**
  * Smarty modifier plugin
- * URL¤ò¥ê¥ó¥¯¤ËÊÑ´¹
+ * URLã‚’ãƒªãƒ³ã‚¯ã«å¤‰æ›
  *
  * Type:     modifier<br>
  * Name:     truncate<br>
@@ -25,7 +25,7 @@
  */
 function smarty_modifier_t_url2a($string)
 {
-	// "(&quot;) ¤È '(&#039;) ¤ò¸µ¤ËÌá¤¹
+	// "(&quot;) ã¨ '(&#039;) ã‚’å…ƒã«æˆ»ã™
 	$search = array('&quot;', '&#039;');
 	$replace = array('"', "'");
 	$string = str_replace($search, $replace, $string);
@@ -50,4 +50,3 @@ function __t_url_link($matches) {
 
 /* vim: set expandtab: */
 
-?>

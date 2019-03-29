@@ -12,7 +12,7 @@ function doAction_update_c_siteadmin_css($requests)
 		db_admin_insert_c_siteadmin('inc_custom_css', $requests['body']);
 	}
 	
-	admin_client_redirect('edit_c_sns_config', "¥«¥¹¥¿¥àCSS¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_sns_config', "ã‚«ã‚¹ã‚¿ãƒ CSSã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
-?>
+

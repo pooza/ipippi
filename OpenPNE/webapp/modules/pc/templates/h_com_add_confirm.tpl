@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ���������****** -->
+<!-- ******ここから：コミュニティ新規作成****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,22 +37,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ߥ�˥ƥ���������������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：コミュニティ新規作成＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
 <td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">
-��������
+新規作成
 </span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���ӥ塼�ꥹ�ȷ��ɽ������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞レビューリスト件数表示タブ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -64,7 +64,7 @@
 <td style="width:634px;" class="bg_09" align="center" valign="middle">
 <div style="padding:4px 3px;">
 
-�����������ˡ��������ߥ�˥ƥ����ʤ�������ǧ�������� ��  <a href="./page.php?p=h_com_find_all" target="_blank">���ߥ�˥ƥ�����</a>
+※作成の前に、似たコミュニティがないかご確認ください ⇒  <a href="./page.php?p=h_com_find_all" target="_blank">コミュニティ検索</a>
 
 </div>
 </td>
@@ -76,8 +76,8 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������ơ���ӥ塼�ꥹ�ȷ��ɽ������ -->
-<!-- �������顧�����ơ�俷���������ϥե����� -->
+<!-- ここまで：主内容＞＞レビューリスト件数表示タブ -->
+<!-- ここから：主内容＞＞新規作成入力フォーム -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -90,7 +90,7 @@
 
 <div class="padding_s">
 
-���ߥ�˥ƥ�̾
+コミュニティ名
 
 </div>
 
@@ -118,7 +118,7 @@
 
 <div class="padding_s">
 
-���ƥ���
+カテゴリ
 
 </div>
 
@@ -130,7 +130,7 @@
 
 ({$c_commu_category_value})<br>
 <div class="c_01">
-�����ƥ�������Ƥ���㤬����줿��硢���ļԤˤ�ä�Ŭ�ڤʥ��ƥ�����ѹ�������ĺ����礬����ޤ���
+※カテゴリと内容に相違が見られた場合、運営者によって適切なカテゴリに変更させて頂く場合があります。
 </div>
 
 </div>
@@ -149,7 +149,7 @@
 
 <div class="padding_s">
 
-���þ���<br>�����ϰ�
+参加条件と<br>公開範囲
 
 </div>
 
@@ -161,7 +161,7 @@
 
 ({$public_flag_value})<br>
 <div class="c_01">
-��������ˤ�����硢���ߥ�˥ƥ����ü԰ʳ��ˤϷǼ��Ĥ���������ޤ���
+※非公開にした場合、コミュニティ参加者以外には掲示板が公開されません。
 </div>
 
 </div>
@@ -180,7 +180,7 @@
 
 <div class="padding_s">
 
-���ߥ�˥ƥ�����ʸ
+コミュニティ説明文
 
 </div>
 
@@ -208,7 +208,7 @@
 
 <div class="padding_s">
 
-�̡�����
+写　　真
 
 </div>
 
@@ -219,7 +219,7 @@
 <div class="padding_s">
 
 ({$form_val.image_filename})<br>
-({*<span>�̿��Υ��åץ����ɤ˴ؤ���إ�פ� <a href="" target="_blank">������</span></a>*})
+({*<span>写真のアップロードに関するヘルプは <a href="" target="_blank">こちら</span></a>*})
 
 </div>
 
@@ -243,23 +243,23 @@
 <tr>
 <td style="height:20px;" align="center">
 <form action="do.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_com_add_insert_c_commu" >
 ({foreach from=$form_val key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})
-<input type="submit" value="���� ������">
+<input type="submit" value="　作 　成　">
 </form>
 </td>
 <td style="height:20px;" align="center">
 <form action="page.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input name="p" type="hidden" value="h_com_add" >
 ({foreach from=$form_val key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})
-<input type="submit" value="���� ������">
+<input type="submit" value="　修 　正　">
 </div>
 </td>
 </tr>
@@ -276,13 +276,13 @@
 </tr>
 ({*********})
 </table>
-<!-- �������顧�����ơ�俷���������ϥե����� -->
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ߥ�˥ƥ����������������* -->
+<!-- ここから：主内容＞＞新規作成入力フォーム -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：コミュニティ新規作成＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -292,13 +292,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����ߥ�˥ƥ���������****** -->
+<!-- ******ここまで：コミュニティ新規作成****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

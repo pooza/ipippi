@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************** -->
-<!-- ******�������顧�����ѹ�****** -->
+<!-- ******ここから：設定変更****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,20 +37,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�����ѹ�������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：設定変更＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�����ѹ�</span></td>
+<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">設定変更</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 ({*********})
 <tr>
@@ -58,7 +58,7 @@
 </tr>
 ({*********})
 <form  action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_1">
 <tr>
@@ -67,7 +67,7 @@
 
 <div class="padding_s">
 
-�᡼�륢�ɥ쥹
+メールアドレス
 
 </div>
 
@@ -77,7 +77,7 @@
 <div class="padding_s">
 
 <input name="pc_address" value="" size="40"><br>
-<span class="caution">���᡼�륢�ɥ쥹�ϸ�������ޤ���</span>
+<span class="caution">※メールアドレスは公開されません。</span>
 
 </div>
 </td>
@@ -94,7 +94,7 @@
 
 <div class="padding_s">
 
-�᡼�륢�ɥ쥹��ǧ
+メールアドレス確認
 
 </div>
 
@@ -120,7 +120,7 @@
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
-<input type="submit" value="���ѡ�����">
+<input type="submit" value="　変　更　">
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
@@ -135,7 +135,7 @@
 ({*********})
 
 <form  action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_2">
 <tr>
@@ -144,7 +144,7 @@
 
 <div class="padding_s">
 
-���ߤΥѥ����
+現在のパスワード
 
 </div>
 
@@ -170,7 +170,7 @@
 
 <div class="padding_s">
 
-�������ѥ����
+新しいパスワード
 
 </div>
 
@@ -180,7 +180,7 @@
 <div class="padding_s">
 
 <input name="new_password" type="password" value="" size="20"><br>
-<span class="caution">���ѥ���ɤ�6��12ʸ����Ⱦ�ѱѿ������Ϥ��Ƥ���������</span>
+<span class="caution">※パスワードは6～12文字の半角英数で入力してください。</span>
 
 </div>
 </td>
@@ -197,7 +197,7 @@
 
 <div class="padding_s">
 
-�������ѥ���ɳ�ǧ
+新しいパスワード確認
 
 </div>
 
@@ -224,7 +224,7 @@
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
-<input type="submit" value="���ѡ�����">
+<input type="submit" value="　変　更　">
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
@@ -239,7 +239,7 @@
 ({*********})
 
 <form  action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_3">
 
@@ -250,7 +250,7 @@
 
 <div class="padding_s">
 
-���ӥ᡼�륢�ɥ쥹
+携帯メールアドレス
 
 </div>
 
@@ -259,7 +259,7 @@
 <td class="bg_02" align="left" valign="middle">
 <div class="padding_s">
 
-����Ͽ���������ȷ����Ǥ����Ѥ��뤳�Ȥ��Ǥ��ޤ�������Ͽ�� <a href="page.php?p=h_config_ktai">������</a>
+ご登録いただくと携帯版を利用することができます。ご登録は <a href="page.php?p=h_config_ktai">こちら</a>
 
 </div>
 </td>
@@ -280,7 +280,7 @@
 
 <div style="padding:3px;">
 
-��̩�μ���
+秘密の質問
 
 </div>
 
@@ -314,7 +314,7 @@
 
 <div style="padding:3px;">
 
-��̩�μ��������</font>({* <span class="b_b c_02">*</span> *})
+秘密の質問の答え</font>({* <span class="b_b c_02">*</span> *})
 
 </div>
 
@@ -326,8 +326,8 @@
 <input name="c_password_query_answer" type="text" value="" size="20">
 
 <br>
-<font color=red>����¸����Ƥ����ͤ�ɽ�����ޤ���</font><br>
-<font color=red>���ͤ����ξ��Ϲ������ޤ���</font>
+<font color=red>※保存されている値は表示しません</font><br>
+<font color=red>※値が空の場合は更新しません</font>
 
 
 </div>
@@ -346,7 +346,7 @@
 
 <div class="padding_s">
 
-BLOG��URL
+BLOGのURL
 
 </div>
 
@@ -357,8 +357,8 @@ BLOG��URL
 
 <input type="text" name="rss" value="({$c_member.rss})" size="60"><br>
 
-��������������BLOG�򤪻����ξ�硢URL�򤴵�������������
-�㡧http://example.com/xxxxxx
+※外部に日記・BLOGをお持ちの場合、URLをご記入ください。
+例：http://example.com/xxxxxx
 
 </div>
 </td>
@@ -375,7 +375,7 @@ BLOG��URL
 
 <div class="padding_s">
 
-�᡼���������
+メール受信設定
 
 </div>
 
@@ -384,9 +384,9 @@ BLOG��URL
 <td class="bg_02" align="left" valign="middle">
 <div class="padding_s">
 
-<input type="radio" name="is_receive_mail" value="1"({if $c_member.is_receive_mail}) checked="checked"({/if}) class="no_bg">�������
-<input type="radio" name="is_receive_mail" value="0"({if !$c_member.is_receive_mail}) checked="checked"({/if}) class="no_bg">�������ʤ�<br>
-<span>�������å����������Τʤɤ���Ͽ�᡼�륢�ɥ쥹�ˤ��Τ餻���ޤ���</span>
+<input type="radio" name="is_receive_mail" value="1"({if $c_member.is_receive_mail}) checked="checked"({/if}) class="no_bg">受け取る
+<input type="radio" name="is_receive_mail" value="0"({if !$c_member.is_receive_mail}) checked="checked"({/if}) class="no_bg">受け取らない<br>
+<span>※新着メッセージの通知などを登録メールアドレスにお知らせします。</span>
 
 </div>
 </td>
@@ -403,7 +403,7 @@ BLOG��URL
 
 <div class="padding_s">
 
-�������Ȥ��Τ餻�᡼��
+あしあとお知らせメール
 
 </div>
 
@@ -413,7 +413,7 @@ BLOG��URL
 <div class="padding_s">
 
 <input type="text" name="ashiato_mail_num" value="({$c_member.ashiato_mail_num})">
-���������ܤ˥᡼���������<br>�������ǻ��ꤷ��������������ã�����Ȥ������Τ餻�᡼�뤬�Ϥ��ޤ��� �㡧1000
+アクセス目にメールを受け取る<br>※ここで指定したアクセス数に達したとき、お知らせメールが届きます。 例：1000
 
 
 </div>
@@ -431,7 +431,7 @@ BLOG��URL
 
 <div class="padding_s">
 
-���������ϰ�
+日記公開範囲
 
 </div>
 
@@ -440,8 +440,8 @@ BLOG��URL
 <td class="bg_02" align="left" valign="middle">
 <div class="padding_s">
 
-<input type="radio" name="public_flag_diary" value="public"({if $c_member.public_flag_diary == "public"}) checked="checked"({/if}) class="no_bg" id="public_flag_diary_public"><label for="public_flag_diary_public">�����˸���</label>
-<input type="radio" name="public_flag_diary" value="friend"({if $c_member.public_flag_diary == "friend"}) checked="checked"({/if}) class="no_bg" id="public_flag_diary_friend"><label for="public_flag_diary_friend">({$WORD_FRIEND})�ޤǸ���</label><br>
+<input type="radio" name="public_flag_diary" value="public"({if $c_member.public_flag_diary == "public"}) checked="checked"({/if}) class="no_bg" id="public_flag_diary_public"><label for="public_flag_diary_public">全員に公開</label>
+<input type="radio" name="public_flag_diary" value="friend"({if $c_member.public_flag_diary == "friend"}) checked="checked"({/if}) class="no_bg" id="public_flag_diary_friend"><label for="public_flag_diary_friend">({$WORD_FRIEND})まで公開</label><br>
 
 </div>
 </td>
@@ -458,7 +458,7 @@ BLOG��URL
 
 <div class="padding_s">
 
-���������֥��å�
+アクセスブロック
 
 </div>
 
@@ -472,9 +472,9 @@ ID <input type="text" name="c_member_id_block[]" value="({$item})"><br>
 ({/foreach})
 ID <input type="text" name="c_member_id_block[]" value=""><br>
 
-������Υ桼��������Υ���������֥��å����ޤ���<br>
-���ȥåץڡ�����URL������ɽ������Ƥ��������ID�ˤʤ�ޤ���<br>
-�㡧({$ABSOLUTE_PATH})page.php?p=f_home&target_c_member_id=�� ������ʬ��ID
+※特定のユーザーからのアクセスをブロックします。<br>
+相手トップページのURL末尾に表示されている数字がIDになります。<br>
+例：({$ABSOLUTE_PATH})page.php?p=f_home&target_c_member_id=○ ○の部分がID
 
 </div>
 </td>
@@ -491,7 +491,7 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
-<input type="submit" value="���ѡ�����">
+<input type="submit" value="　変　更　">
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
@@ -505,12 +505,12 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 </form>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ������ѹ��������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：設定変更＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -520,15 +520,15 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ������ѹ�****** -->
+<!-- ******ここまで：設定変更****** -->
 <!-- ***************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************* -->
-<!-- ******�������顧���****** -->
+<!-- ******ここから：退会****** -->
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 ({*********})
@@ -541,21 +541,21 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧��������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：退会＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$smarty.const.SNS_NAME})����񤹤�</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$smarty.const.SNS_NAME})を退会する</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -567,7 +567,7 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 <div align="center" style="text-align:center;">
 
 <input type="hidden" name="p" value="h_taikai_confirm">
-<input type=submit value="����ǧ�ڡ�����">
+<input type=submit value="退会確認ページへ">
 
 </div>
 
@@ -582,12 +582,12 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：退会＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -599,13 +599,13 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 </table>
 
 </form>
-<!-- ******�����ޤǡ����****** -->
+<!-- ******ここまで：退会****** -->
 <!-- ************************* -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

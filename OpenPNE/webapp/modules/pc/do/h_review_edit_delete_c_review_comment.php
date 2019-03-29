@@ -2,12 +2,12 @@
 function doAction_h_review_edit_delete_c_review_comment($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_comment_id = $request['c_review_comment_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥ì¥Ó¥å¡¼¥³¥á¥ó¥Èºî¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚³ãƒ¡ãƒ³ãƒˆä½œè€…
 
 	if(!do_h_review_edit_c_review_comment4c_review_comment_id_c_member_id($c_review_comment_id, $u)){
 		handle_kengen_error();
@@ -18,8 +18,8 @@ function doAction_h_review_edit_delete_c_review_comment($request) {
 
 	do_h_review_edit_delete_c_review_comment($c_review_comment_id);
 	
-	//¥³¥á¥ó¥È·ï¿ô¤¬0·ï¤Ë¤Ê¤Ã¤¿¾ì¹ç¤Ï
-	// c_review / c_review_clip / c_commu_review ¤òºï½ü¤¹¤ë
+	//ã‚³ãƒ¡ãƒ³ãƒˆä»¶æ•°ãŒ0ä»¶ã«ãªã£ãŸå ´åˆã¯
+	// c_review / c_review_clip / c_commu_review ã‚’å‰Šé™¤ã™ã‚‹
 	if (do_common_count_c_review_comment4c_review_id($c_review_id) === 0) {
 		do_delete_c_review4c_review_id($c_review_id);
 	}
@@ -27,4 +27,4 @@ function doAction_h_review_edit_delete_c_review_comment($request) {
 	client_redirect("page.php?p=fh_review_list_member&c_member_id=".$u);
 
 }
-?>
+

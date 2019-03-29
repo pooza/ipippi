@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧�ȥԥå������ǧ****** -->
+<!-- ******ここから：トピック削除確認****** -->
 <div id="create_new_topic" class="border_07" style="width:650px;margin:0px auto;">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;">
@@ -36,22 +36,22 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ȥԥå������ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：トピック削除確認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:468px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">�����˺�����ޤ�����</span>(�񤭹��ߤ�ä��ޤ��ΤǤ����դ���������)</td>
+<td style="width:468px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">本当に削除しますか？</span>(書き込みも消えますのでご注意ください。)</td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:644px;">
 ({*********})
 <tr>
@@ -70,20 +70,20 @@
 <td>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_bbs_delete_c_commu_topic">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic_id})">
-<input type="submit" value="�������">
+<input type="submit" value="　削　除　">
 </form>
 
 </td><td>
 
 <form action="page.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_topic_edit">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic_id})">
-<input type="submit" value="����󥻥�">
+<input type="submit" value="キャンセル">
 </form>
 
 </td>
@@ -101,12 +101,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ȥԥå������ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：トピック削除確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -118,14 +118,14 @@
 </table>
 
 </div>
-<!-- ******�����ޤǡ��ȥԥå������ǧ****** -->
+<!-- ******ここまで：トピック削除確認****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

@@ -6,7 +6,7 @@
 function pageAction_h_search_result($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$page = $requests['page'];
 	$birth_year = $requests['birth_year'];
 	$birth_month = $requests['birth_month'];
@@ -24,14 +24,14 @@ function pageAction_h_search_result($smarty,$requests) {
 	$limit = 20;
 	$smarty->assign("page", $page);
 
-	//nickname¤¬¸¡º÷¾ò·ï¤Ë´Þ¤Þ¤ì¤Æ¤¤¤ë
+	//nicknameãŒæ¤œç´¢æ¡ä»¶ã«å«ã¾ã‚Œã¦ã„ã‚‹
 	if( !empty($nickname) ){
 
 		$is_n = 1;
 
 	}
 
-	//¸¡º÷¥Ç¥Õ¥©¥ë¥ÈÃÍÉ½¼¨ÍÑ
+	//æ¤œç´¢ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤è¡¨ç¤ºç”¨
 	if (!$is_n) {
 	    $cond = array(
 	        'birth_year' => $birth_year,
@@ -95,4 +95,3 @@ function pageAction_h_search_result($smarty,$requests) {
 
 	$smarty->ext_display("h_search_result.tpl");
 }
-?>

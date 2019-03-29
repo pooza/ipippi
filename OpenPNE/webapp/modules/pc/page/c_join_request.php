@@ -5,20 +5,20 @@
 function pageAction_c_join_request($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 
 
-	//¥á¥ó¥Ð¡¼¾ðÊó
+	//ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("member", db_common_c_member4c_member_id($u));
 
-	//¥³¥ß¥å¥Ë¥Æ¥£ID
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ID
 	$smarty->assign("c_commu_id", $target_c_commu_id);
 
-	//community¾ðÊó
+	//communityæƒ…å ±
 	$smarty->assign("c_commu", p_c_join_request_c_commu4c_commu_id($target_c_commu_id));
 
 
@@ -26,4 +26,4 @@ function pageAction_c_join_request($smarty,$requests) {
 	$smarty->ext_display("c_join_request.tpl");
 
 }
-?>
+

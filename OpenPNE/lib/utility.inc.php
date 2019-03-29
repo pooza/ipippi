@@ -5,7 +5,7 @@ function getConfigFileName () {
 	}
 
 	if (!$server) {
-		print "¥Û¥¹¥ÈÌ¾¤¬¼èÆÀ½ĞÍè¤Ş¤»¤ó¡£";
+		print "ãƒ›ã‚¹ãƒˆåãŒå–å¾—å‡ºæ¥ã¾ã›ã‚“ã€‚";
 		exit(1);
 	}
 
@@ -21,4 +21,4 @@ function p ($value) {
 	}
 	print('</pre></div>');
 }
-?>
+

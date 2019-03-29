@@ -1,27 +1,27 @@
 <?php
 //---------------------------------------------------------------------------
 /**
- * Âà²ñ¤¹¤ë
+ * é€€ä¼šã™ã‚‹
  */
 function doAction_h_taikai($request) {
 	$password = $request['password'];
 	$u = $GLOBALS['AUTH']->uid();
 	
 	if (!db_common_authenticate_password($u, $password)) {
-		$msg = "¥Ñ¥¹¥ï¡¼¥É¤¬´Ö°ã¤Ã¤Æ¤¤¤Þ¤¹";
+		$msg = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒé–“é•ã£ã¦ã„ã¾ã™";
 		client_redirect("page.php?p=h_taikai_confirm&msg=".urlencode($msg));
 		exit;
 	}
 	
-	//Âà²ñ´°Î»¥á¡¼¥ëÁ÷¿®
+	//é€€ä¼šå®Œäº†ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 	do_common_send_mail_taikai_end_pc($u);
 	
-	//Âà²ñ½èÍý
+	//é€€ä¼šå‡¦ç†
 	db_common_delete_c_member($u);
 	
-	//¥í¥°¥¢¥¦¥È
+	//ãƒ­ã‚°ã‚¢ã‚¦ãƒˆ
 	$GLOBALS['AUTH']->t_logout();
-	$msg = "Âà²ñ´°Î»¤·¤Þ¤·¤¿¡£¤´ÍøÍÑ¤¢¤ê¤¬¤È¤¦¤´¤¶¤¤¤Þ¤·¤¿¡£";
+	$msg = "é€€ä¼šå®Œäº†ã—ã¾ã—ãŸã€‚ã”åˆ©ç”¨ã‚ã‚ŠãŒã¨ã†ã”ã–ã„ã¾ã—ãŸã€‚";
 	client_redirect("normal.php?p=tologin&msg=".urlencode($msg));	
 }
-?>
+

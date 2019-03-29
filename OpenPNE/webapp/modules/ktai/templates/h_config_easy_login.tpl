@@ -1,6 +1,6 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>���󤿤������������</center>
+<center>かんたんログイン設定</center>
 <hr>
 
 ({if $msg})
@@ -10,32 +10,32 @@
 
 ({if $is_registered})
 
-<font color="orange">���󤿤������������ѤߤǤ���</font><br>
-�ѹ�����ˤ�
+<font color="orange">かんたんログイン設定済みです。</font><br>
+変更するには
 ({/if})
 
-�ѥ���ɤ����Ϥ��ơ�����ܥ���򲡤��Ƥ���������
+パスワードを入力して、設定ボタンを押してください。
 
 <form action="do_ktai.php" method="post" utn>
-<input type="hidden" name="dummy" value="��������ǧʸ����">
+<input type="hidden" name="dummy" value="符号形式確認文字列">
 <input type="hidden" name="cmd" value="h_config_easy_login">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
-�ѥ���ɡ�<br>
+パスワード：<br>
 <input type="text" name="password" istyle="3" mode="alphabet" value=""><br>
 ({if $is_registered})
-<input type="submit" name="update" value="�ѹ�">
-<input type="submit" name="delete" value="���"><br>
+<input type="submit" name="update" value="変更">
+<input type="submit" name="delete" value="削除"><br>
 ({else})
-<input type="submit" name="update" value="����������������"><br>
+<input type="submit" name="update" value="ケータイ情報送信"><br>
 ({/if})
 </form>
 
 <br>
-����������ǤϷ��Ӥθ��μ����ֹ�������Ǥ��ʤ����ᤴ���Ѥˤʤ�ޤ���<br>
-<a href="ktai_normal.php?p=whatis_easy_login">&gt;&gt;���󤿤�ێ��ގ��ݤȤ�</a>
+※一部機種では携帯の個体識別番号を送信できないためご利用になれません｡<br>
+<a href="ktai_normal.php?p=whatis_easy_login">&gt;&gt;かんたんﾛｸﾞｲﾝとは</a>
 
 <hr>
-<a href="ktai_page.php?p=h_config&amp;({$tail})">�����ѹ�</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">�Ύ���</a>
+<a href="ktai_page.php?p=h_config&amp;({$tail})">設定変更</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ﾎｰﾑ</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

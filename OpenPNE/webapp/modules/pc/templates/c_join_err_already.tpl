@@ -18,13 +18,13 @@
 <table class="container" border="0" cellspacing="0" cellpadding="0">
 <tr><td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************ -->
-<!-- ******�������顧���顼��å�����****** -->
+<!-- ******ここから：エラーメッセージ****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_01">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,18 +34,18 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*�������顧header*})
-<!-- �������ȥ� -->
+({*ここから：header*})
+<!-- 小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���Υ��ߥ�˥ƥ��˻���</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">このコミュニティに参加</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧���顼��å����� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：エラーメッセージ -->
 <table border="0" cellspacing="1" cellpadding="3" style="width:564px;">
 <tr>
 <td colspan="2" class="bg_02" align="center">
@@ -55,7 +55,7 @@
 <td colspan="2">
 
 <br><br>
-���ˤ��Υ��ߥ�˥ƥ��˻��ä��Ƥ��ޤ���
+既にこのコミュニティに参加しています。
 <br><br><br>
 
 </td>
@@ -64,11 +64,11 @@
 </td>
 </tr>
 </table>
-<!-- �����ޤǡ����顼��å����� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
+<!-- ここまで：エラーメッセージ -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 <tr>
@@ -77,7 +77,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����顼��å������ơ��֥�****** -->
+<!-- ******ここまで：エラーメッセージテーブル****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -87,7 +87,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td></tr>
 </table>({*END:container*})

@@ -1,37 +1,37 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥×¥í¥Õ¥£¡¼¥ë²èÁü¤ÎÊÑ¹¹
+ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ç”»åƒã®å¤‰æ›´
 
-[°ú¿ô]
-upfile($_FILES[upfile]¤«¤é¼èÆÀ¤¹¤ë)
+[å¼•æ•°]
+upfile($_FILES[upfile]ã‹ã‚‰å–å¾—ã™ã‚‹)
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 h_prof
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¼«Ê¬
+[æ¨©é™]
+è‡ªåˆ†
 
 */
 function doAction_h_config_image($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
 	if( t_get_image_size($_FILES["upfile"]) > 300*1024 ){
-		$msg = urlencode("¢¨300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤¡£");
+		$msg = urlencode("â€»300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„ã€‚");
 		client_redirect("page.php?p=h_config_image&msg=$msg");
 		exit();
 	}
 
 	if( !t_check_image_format($_FILES["upfile"]) ){
-		$msg = urlencode("¢¨300KB°ÊÆâ¤ÎGIF¡¦JPEG¡¦PNG¤Ë¤·¤Æ¤¯¤À¤µ¤¤¡£");
+		$msg = urlencode("â€»300KBä»¥å†…ã®GIFãƒ»JPEGãƒ»PNGã«ã—ã¦ãã ã•ã„ã€‚");
 		client_redirect("page.php?p=h_config_image&msg=$msg");
 		exit();
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
@@ -42,23 +42,23 @@ function doAction_h_config_image($request) {
 	elseif(!$c_member['image_filename_2'])$img_num=2;
 	elseif(!$c_member['image_filename_3'])$img_num=3;
 	else{
-		$msg = urlencode("²èÁü¤Ï3Ëç¤Þ¤Ç¥¢¥Ã¥×¥í¡¼¥É¤Ç¤­¤Þ¤¹¡£");
+		$msg = urlencode("ç”»åƒã¯3æžšã¾ã§ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã™ã€‚");
 		client_redirect("page.php?p=h_config_image&msg=$msg");
 		exit();
 	}
 
-	/* ²èÁü¤Ïºï½ü¤·¤Ê¤¤¤È¥¢¥Ã¥×¥í¡¼¥É¤Ç¤­¤Ê¤¤¤è¤¦¤Ë¤¹¤ë¡©
+	/* ç”»åƒã¯å‰Šé™¤ã—ãªã„ã¨ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã§ããªã„ã‚ˆã†ã«ã™ã‚‹ï¼Ÿ
 	 * image_data_delete($c_member['image_filename']);
 	 */
 
-	//²èÁü¤òDB¤Ë³ÊÇ¼
+	//ç”»åƒã‚’DBã«æ ¼ç´
 	$image_filename = image_insert_c_image($_FILES["upfile"],"m_".$u);
 
-	//c_member¤Î¥Õ¥£¡¼¥ë¥É¤ËÅÐÏ¿
+	//c_memberã®ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã«ç™»éŒ²
 	do_h_config_image_new($u, $image_filename, $img_num);
 
-	//²èÁü1¤Î»þ¡ÊºÇ½é¤Î²èÁü¡Ë¥á¥¤¥ó²èÁü¤Ë
+	//ç”»åƒ1ã®æ™‚ï¼ˆæœ€åˆã®ç”»åƒï¼‰ãƒ¡ã‚¤ãƒ³ç”»åƒã«
 	if($img_num==1) do_h_config_image_change_c_member_main_image($u, 1);
 	client_redirect("page.php?p=h_config_image");
 }
-?>
+

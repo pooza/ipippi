@@ -1,12 +1,12 @@
 <?php
 function normalAction_login($smarty,$requests)
 {	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$msg_id = $requests['msg'];
 	$kad = $requests['kad'];
 	// ----------
 
-	//¥á¥Ã¥»¡¼¥¸
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 	$smarty->assign("msg", k_p_common_msg4msg_id($msg_id));
 	
 	$smarty->assign('ktai_address', t_decrypt($kad));
@@ -15,4 +15,4 @@ function normalAction_login($smarty,$requests)
 
 	$smarty->ext_display('login.tpl');
 }
-?>
+

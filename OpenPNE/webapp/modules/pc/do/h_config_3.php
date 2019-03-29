@@ -1,17 +1,17 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-ÀßÄêÊÑ¹¹
-[°ú¿ô]
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
-[¸¢¸Â]
+è¨­å®šå¤‰æ›´
+[å¼•æ•°]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
+[æ¨©é™]
 
 */
 function doAction_h_config_3($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$rss = $request['rss'];
 	$is_receive_daily_news = $request['is_receive_daily_news'];
 	$is_receive_mail = $request['is_receive_mail'];
@@ -24,16 +24,16 @@ function doAction_h_config_3($request) {
 
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 	//---
 
-	//rss¤Îurl¤ò¼èÆÀ
+	//rssã®urlã‚’å–å¾—
 	$rss = rss_auto_get($rss);
 
 	$c_member = db_common_c_member4c_member_id($u);
 	if($rss != $c_member['rss']){
-		//°Û¤Ê¤ëBlog¤òÅÐÏ¿¤¹¤ë¤È²áµî¤Îrss¤ÏÁ´¤Æºï½ü¤¹¤ë
+		//ç•°ãªã‚‹Blogã‚’ç™»éŒ²ã™ã‚‹ã¨éŽåŽ»ã®rssã¯å…¨ã¦å‰Šé™¤ã™ã‚‹
 		delete_rss_cache($u);
 	}
 
@@ -48,11 +48,11 @@ function doAction_h_config_3($request) {
 				$public_flag_diary
 	);
 
-	//c_rss_cache¤ØÅÐÏ¿
+	//c_rss_cacheã¸ç™»éŒ²
 	insert_rss_cache($rss, $u);
 
 	do_h_config_3_insert_c_access_block($u , $c_member_id_block);
 
 	client_redirect("page.php?p=h_home");
 }
-?>
+

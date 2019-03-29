@@ -4,7 +4,7 @@
 function pageAction_h_review_search($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$keyword = $requests['keyword'];
 	$category = $requests['category'];
 	$orderby = $requests['orderby'];
@@ -32,4 +32,4 @@ function pageAction_h_review_search($smarty,$requests) {
 
 	$smarty->ext_display('h_review_search.tpl');	
 }
-?>
+

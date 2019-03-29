@@ -1,20 +1,20 @@
-��({$SNS_NAME})��({$c_member_from.nickname})���󤫤龵ǧ�����å��������Ϥ��Ƥ��ޤ�
+【({$SNS_NAME})】({$c_member_from.nickname})さんから承認依頼メッセージが届いています
 
-({$c_member_to.nickname})���󡢤���ˤ��ϡ�
-({$CATCH_COPY})({$SNS_NAME}) ����Τ��Τ餻�Ǥ���
+({$c_member_to.nickname})さん、こんにちは。
+({$CATCH_COPY})({$SNS_NAME}) からのお知らせです。
 
-��å������ܥå�����({$c_member_from.nickname})���󤫤�
-��ǧ�����å��������Ϥ��Ƥ��ޤ���
+メッセージボックスに({$c_member_from.nickname})さんから
+承認依頼メッセージが届いています。
 
-��å����������Ƥ��ǧ����ǧ��Ԥ��ˤ�
-�ʲ���URL�򥯥�å����Ƥ���������
+メッセージの内容を確認し承認を行うには
+以下のURLをクリックしてください。
 
 ({$HOME_PATH})
 
-�ʤ�����Ͽ�᡼�륢�ɥ쥹���ѹ��ʤɤ�
-�������ѹ��ײ��̤��餪���ʤäƤ���������
+なお、登録メールアドレスの変更などは
+「設定変更」画面からおこなってください。
 
-����Ȥ⡢���ҡ�({$SNS_NAME})�򤴳��Ѥ���������
+今後とも、ぜひ、({$SNS_NAME})をご活用ください。
 
 
 ({$inc_signature})

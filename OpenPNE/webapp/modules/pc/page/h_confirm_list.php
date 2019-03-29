@@ -9,33 +9,33 @@ function pageAction_h_confirm_list($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
 
-	// ¤¢¤Ê¤¿¤Ë¥Õ¥ì¥ó¥É¥ê¥ó¥¯¤òÍ×ÀÁ¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+	// ã‚ãªãŸã«ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ³ã‚¯ã‚’è¦è«‹ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 	$smarty->assign("anatani_c_friend_confirm_list",
 	        p_h_confirm_list_anatani_c_friend_confirm_list4c_member_id($u));
 
-	// ¤¢¤Ê¤¿¤Ë(¤Î)´ÉÍý¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤ò´õË¾¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+	// ã‚ãªãŸã«(ã®)ç®¡ç†ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã‚’å¸Œæœ›ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 	$smarty->assign("anatani_c_commu_member_confirm_list",
 	        p_h_confirm_list_anatani_c_commu_member_confirm_list4c_member_id($u));
 
-	// ¤¢¤Ê¤¿¤Ë¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå¤ò´õË¾¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+	// ã‚ãªãŸã«ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ã‚’å¸Œæœ›ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 	$smarty->assign("anatani_c_commu_admin_confirm_list",
 	        p_h_confirm_list_anatani_c_commu_admin_confirm_list4c_member_id($u));
 
 
-	// ¤¢¤Ê¤¿¤¬¥Õ¥ì¥ó¥É¥ê¥ó¥¯¤òÍ×ÀÁ¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+	// ã‚ãªãŸãŒãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªãƒ³ã‚¯ã‚’è¦è«‹ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 	$smarty->assign("anataga_c_friend_confirm_list",
 	        p_h_confirm_list_anataga_c_friend_confirm_list4c_member_id($u));
 
-	// ¤¢¤Ê¤¿¤¬¥³¥ß¥å¥Ë¥Æ¥£»²²ÃÍ×ÀÁ¤·¤Æ¤¤¤ë¥³¥ß¥å¥Ë¥Æ¥£
+	// ã‚ãªãŸãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è¦è«‹ã—ã¦ã„ã‚‹ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£
 	$smarty->assign("anataga_c_commu_member_confirm_list",
 	        p_h_confirm_list_anataga_c_commu_member_confirm_list4c_member_id($u));
 
-	// ¤¢¤Ê¤¿¤¬¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå¤òÍ×ÀÁ¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+	// ã‚ãªãŸãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ã‚’è¦è«‹ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 	$smarty->assign("anataga_c_commu_admin_confirm_list",
 	        p_h_confirm_list_anataga_c_commu_admin_confirm_list4c_member_id($u));
 
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("h_confirm_list.tpl");
 }
-?>
+

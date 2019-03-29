@@ -88,7 +88,7 @@ class Etag
      */
     function parse_http_date( $string_date )
     {
-        // ·î¤ÎÌ¾Á°¤È¿ô»ú¤òÄêµÁ
+        // æœˆã®åå‰ã¨æ•°å­—ã‚’å®šç¾©
         $define_month = array(
                               "01"=> "Jan", "02" => "Feb", "03" => "Mar",
                               "04" => "Apr", "05" => "May", "06" => "Jun",
@@ -101,7 +101,7 @@ class Etag
             $date["hour"] = $temp_date[5];
             $date["minute"] = $temp_date[6];
             $date["second"] = $temp_date[7];
-            // ÄêµÁºÑ¤ß¤Î·î¤ÎÌ¾Á°¤ò¿ô»ú¤ËÊÑ´¹¤¹¤ë
+            // å®šç¾©æ¸ˆã¿ã®æœˆã®åå‰ã‚’æ•°å­—ã«å¤‰æ›ã™ã‚‹
             $date["month"] = array_search( $temp_date[3], $define_month );
             $date["day"] = $temp_date[2];
             $date["year"] = $temp_date[4];
@@ -109,9 +109,9 @@ class Etag
             $date["hour"] = $temp_date[5];
             $date["minute"] = $temp_date[6];
             $date["second"] = $temp_date[7];
-            // ÄêµÁºÑ¤ß¤Î·î¤ÎÌ¾Á°¤ò¿ô»ú¤ËÊÑ´¹¤¹¤ë
+            // å®šç¾©æ¸ˆã¿ã®æœˆã®åå‰ã‚’æ•°å­—ã«å¤‰æ›ã™ã‚‹
             $date["month"] = array_search( $temp_date[3], $define_month );
-            // Ç¯¤¬2·å¤·¤«¤Ê¤¤¤Î¤Ç1900¤òÂ­¤·¤Æ4·å¤Ë
+            // å¹´ãŒ2æ¡ã—ã‹ãªã„ã®ã§1900ã‚’è¶³ã—ã¦4æ¡ã«
             $date["day"] = $temp_date[2];
             $date["year"] = 1900 + $temp_date[4];
         } elseif( preg_match( "/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-3 ][0-9]) ([0-2][0-9]):([0-5][0-9]):([0-5][0-9]) ([0-9]{4})$/", $string_date, $temp_date ) ) {
@@ -119,9 +119,9 @@ class Etag
             $date["minute"] = $temp_date[5];
             $date["second"] = $temp_date[6];
             $date["month"] = array_search( $temp_date[2], $define_month );
-            // Æü¤¬1·å¤Î¾ì¹çÀè¡¢È¾³Ñ¥¹¥Ú¡¼¥¹¤ò0¤ËÃÖ´¹
+            // æ—¥ãŒ1æ¡ã®å ´åˆå…ˆã€åŠè§’ã‚¹ãƒšãƒ¼ã‚¹ã‚’0ã«ç½®æ›
             $date["day"] = str_replace( " ", 0, $temp_date[3] );
-            // ÄêµÁºÑ¤ß¤Î·î¤ÎÌ¾Á°¤ò¿ô»ú¤ËÊÑ´¹¤¹¤ë
+            // å®šç¾©æ¸ˆã¿ã®æœˆã®åå‰ã‚’æ•°å­—ã«å¤‰æ›ã™ã‚‹
             $date["year"] = $temp_date[7];
         } elseif (@strtotime($string_date) > 0) {
             $date["timestamp"] = strtotime($string_date);
@@ -135,7 +135,7 @@ class Etag
             return FALSE;
         }
         
-        // UNIX¥¿¥¤¥à¥¹¥¿¥ó¥×¤òÀ¸À®(GMT)
+        // UNIXã‚¿ã‚¤ãƒ ã‚¹ã‚¿ãƒ³ãƒ—ã‚’ç”Ÿæˆ(GMT)
         $date["timestamp"] = gmmktime( $date["hour"], $date["minute"], $date["second"], $date["month"], $date["day"], $date["year"] );
         
         return $date;
@@ -157,7 +157,7 @@ class Etag
         }
         
         if ($this->request_headers['If-None-Match']) {
-            // Etag¤Ë¤è¤ë³ÎÇ§
+            // Etagã«ã‚ˆã‚‹ç¢ºèª
             $match = $this->request_headers['If-None-Match'];
             $match = trim(str_replace('"', '', $match));
             if ($match == $this->etag) {
@@ -166,7 +166,7 @@ class Etag
                 return true;
             }
         } elseif ($this->request_headers['If-Modified-Since']) {
-            // ºÇ½ª¹¹¿·Æü»þ¤Ë¤è¤ë³ÎÇ§
+            // æœ€çµ‚æ›´æ–°æ—¥æ™‚ã«ã‚ˆã‚‹ç¢ºèª
             $since = $this->parse_http_date($this->request_headers['If-Modified-Since']);
             if($since['timestamp'] >= $this->upd_time ) {
                 header('HTTP/1.1 304 Not Modified');
@@ -182,4 +182,3 @@ class Etag
 }
 
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-?>

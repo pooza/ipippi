@@ -1,15 +1,15 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>({$SNS_NAME})епо©</center>
+<center>({$SNS_NAME})Г≥╩И▄╡</center>
 <hr>
-╒╗╓╚╓й╓И╓╨мЬмя╣╛лС╓кф╠╟у╓╥╓ф╓╚╓Иепо©╓Р╧т╓ц╓ф╓╞╓ю╓╣╓╓║ё<br>
-╒ё<a href="ktai_normal.php?p=sns_kiyaku">мЬмя╣╛лС</a><br>
-╒ё<a href="ktai_normal.php?p=sns_privacy">╔в╔И╔╓╔п╔╥║╪╔щ╔Й╔╥║╪</a><br>
+Б─╩Ц│▀Ц│╙Ц┌┴Ц│ Е┬╘Г■╗Х╕▐Г╢└Ц│╚Е░▄Ф└▐Ц│≈Ц│╕Ц│▀Ц┌┴Г≥╩И▄╡Ц┌▓Х║▄Ц│ёЦ│╕Ц│▐Ц│═Ц│∙Ц│└Ц─┌<br>
+Б√═<a href="ktai_normal.php?p=sns_kiyaku">Е┬╘Г■╗Х╕▐Г╢└</a><br>
+Б√═<a href="ktai_normal.php?p=sns_privacy">Ц┐≈Ц┐╘Ц┌╓Ц┐░Ц┌╥Ц┐╪Ц┐²Ц┐╙Ц┌╥Ц┐╪</a><br>
 <br>
-╫И╓А╓ф╩х╓╕йЩ╓о╟й╡╪╓н╔Й╔С╔╞╓╚╓Иепо©╓г╓╜╓ч╓╧║ё<br>
-<a href="ktai_normal.php?p=regist_input&amp;ses=({$ses})">©╥╣╛епо©</a><br>
+Е┬²Ц┌│Ц│╕Д╫©Ц│├Ф√╧Ц│╞Д╩╔Д╦▀Ц│╝Ц┐╙Ц┐ЁЦ┌╞Ц│▀Ц┌┴Г≥╩И▄╡Ц│╖Ц│█Ц│╬Ц│≥Ц─┌<br>
+<a href="ktai_normal.php?p=regist_input&amp;ses=({$ses})">Ф√╟Х╕▐Г≥╩И▄╡</a><br>
 <br>
 <hr>
-╒║<a href="ktai_normal.php?p=login">╓╧╓г╓кепо©╨я╓ъ╓нйЩ╓о╓Ё╓а╓И</a>
+Б≈├<a href="ktai_normal.php?p=login">Ц│≥Ц│╖Ц│╚Г≥╩И▄╡Ф╦┬Ц│©Ц│╝Ф√╧Ц│╞Ц│⌠Ц│║Ц┌┴</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

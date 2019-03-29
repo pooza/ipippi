@@ -1,9 +1,9 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>�ץ��ե���������Խ�</h2>
+<h2>プロフィール項目編集</h2>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table>
 <tr>
 <th>
@@ -11,91 +11,91 @@
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_profile','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="c_profile_id" value="({$requests.c_profile_id})">
-����̾</th>
+項目名</th>
 <td><input type="text" name="caption" value="({$c_profile.caption})" size="30"></td>
 </tr>
 <tr>
 <th>
-����̾</th>
-<td><input type="text" name="name" value="({$c_profile.name})" size="20"><span class="caution">��Ⱦ�ѱѿ� �� _ �Τ�</span></td>
+識別名</th>
+<td><input type="text" name="name" value="({$c_profile.name})" size="20"><span class="caution">※半角英数 と _ のみ</span></td>
 </tr>
 <tr>
-<th>ɬ��</th>
+<th>必須</th>
 <td><input type="checkbox" name="is_required" value="1"({if $c_profile.is_required}) checked="checked"({/if})></td>
 </tr>
 <tr>
-<th>�������������</th>
+<th>公開設定の選択</th>
 <td>
-<label><input type="radio" name="public_flag_edit" value="0"({if !$c_profile.public_flag_edit}) checked="checked"({/if})>����</label>
-<label><input type="radio" name="public_flag_edit" value="1"({if $c_profile.public_flag_edit}) checked="checked"({/if})>�桼��������</label></td>
+<label><input type="radio" name="public_flag_edit" value="0"({if !$c_profile.public_flag_edit}) checked="checked"({/if})>固定</label>
+<label><input type="radio" name="public_flag_edit" value="1"({if $c_profile.public_flag_edit}) checked="checked"({/if})>ユーザー選択</label></td>
 </tr>
 <tr>
-<th>��������<br>�ǥե������</th>
+<th>公開設定<br>デフォルト値</th>
 <td><select name="public_flag_default">
-<option value="public"({if $c_profile.public_flag_default == 'public'}) selected="selected"({/if})>�����˸���</option>
-<option value="friend"({if $c_profile.public_flag_default == 'friend'}) selected="selected"({/if})>({$smarty.const.WORD_MY_FRIEND})�ޤǸ���</option>
-<option value="private"({if $c_profile.public_flag_default == 'private'}) selected="selected"({/if})>�������ʤ�</option>
+<option value="public"({if $c_profile.public_flag_default == 'public'}) selected="selected"({/if})>全員に公開</option>
+<option value="friend"({if $c_profile.public_flag_default == 'friend'}) selected="selected"({/if})>({$smarty.const.WORD_MY_FRIEND})まで公開</option>
+<option value="private"({if $c_profile.public_flag_default == 'private'}) selected="selected"({/if})>公開しない</option>
 </select></td>
 </tr>
 <tr>
-<th>�¤ӽ�</th>
+<th>並び順</th>
 <td><input type="text" name="sort_order" value="({$c_profile.sort_order})" size="10"></td>
 </tr>
 <tr>
-<th>������Ͽ</th>
+<th>新規登録</th>
 <td>
-<label><input type="radio" name="disp_regist" value="1"({if $c_profile.disp_regist}) checked="checked"({/if})>ɽ������</label>
-<label><input type="radio" name="disp_regist" value="0"({if !$c_profile.disp_regist}) checked="checked"({/if})>ɽ�����ʤ�</label></td>
+<label><input type="radio" name="disp_regist" value="1"({if $c_profile.disp_regist}) checked="checked"({/if})>表示する</label>
+<label><input type="radio" name="disp_regist" value="0"({if !$c_profile.disp_regist}) checked="checked"({/if})>表示しない</label></td>
 </tr>
 <tr>
-<th>�ץ��ե������ѹ�</th>
+<th>プロフィール変更</th>
 <td>
-<label><input type="radio" name="disp_config" value="1"({if $c_profile.disp_config}) checked="checked"({/if})>ɽ������</label>
-<label><input type="radio" name="disp_config" value="0"({if !$c_profile.disp_config}) checked="checked"({/if})>ɽ�����ʤ�</label></td>
+<label><input type="radio" name="disp_config" value="1"({if $c_profile.disp_config}) checked="checked"({/if})>表示する</label>
+<label><input type="radio" name="disp_config" value="0"({if !$c_profile.disp_config}) checked="checked"({/if})>表示しない</label></td>
 </tr>
 <tr>
-<th>���С�����</th>
+<th>メンバー検索</th>
 <td>
-<label><input type="radio" name="disp_search" value="1"({if $c_profile.disp_search}) checked="checked"({/if})>ɽ������</label>
-<label><input type="radio" name="disp_search" value="0"({if !$c_profile.disp_search}) checked="checked"({/if})>ɽ�����ʤ�</label></td>
+<label><input type="radio" name="disp_search" value="1"({if $c_profile.disp_search}) checked="checked"({/if})>表示する</label>
+<label><input type="radio" name="disp_search" value="0"({if !$c_profile.disp_search}) checked="checked"({/if})>表示しない</label></td>
 </tr>
 <tr>
-<th>�ե����ॿ����</th>
+<th>フォームタイプ</th>
 <td><select name="form_type">
-<option value="text"({if $c_profile.form_type == 'text'}) selected="selected"({/if})>�ƥ�����</option>
-<option value="textarea"({if $c_profile.form_type == 'textarea'}) selected="selected"({/if})>�ƥ�����(ʣ����)</option>
-<option value="select"({if $c_profile.form_type == 'select'}) selected="selected"({/if})>ñ������(�ץ������)</option>
-<option value="radio"({if $c_profile.form_type == 'radio'}) selected="selected"({/if})>ñ������(�饸���ܥ���)</option>
-<option value="checkbox"({if $c_profile.form_type == 'checkbox'}) selected="selected"({/if})>ʣ������</option>
+<option value="text"({if $c_profile.form_type == 'text'}) selected="selected"({/if})>テキスト</option>
+<option value="textarea"({if $c_profile.form_type == 'textarea'}) selected="selected"({/if})>テキスト(複数行)</option>
+<option value="select"({if $c_profile.form_type == 'select'}) selected="selected"({/if})>単一選択(プルダウン)</option>
+<option value="radio"({if $c_profile.form_type == 'radio'}) selected="selected"({/if})>単一選択(ラジオボタン)</option>
+<option value="checkbox"({if $c_profile.form_type == 'checkbox'}) selected="selected"({/if})>複数選択</option>
 </select></td>
 </tr>
 <tr>
-<td colspan="2" class="caution" style="background-color:#ddd;color:#000;padding-left:1em;">�ʲ��ι��ܤϥե����ॿ���פ�<br>
-�֥ƥ����ȡס��֥ƥ�����(ʣ����)�פξ��Τ�ͭ���Ǥ���</td>
+<td colspan="2" class="caution" style="background-color:#ddd;color:#000;padding-left:1em;">以下の項目はフォームタイプが<br>
+「テキスト」、「テキスト(複数行)」の場合のみ有効です。</td>
 </tr>
 <tr>
-<th>�����ͥ�����</th>
+<th>入力値タイプ</th>
 <td><select name="val_type">
-<option value="string"({if $c_profile.val_type == 'string'}) selected="selected"({/if})>ʸ����</option>
-<option value="int"({if $c_profile.val_type == 'int'}) selected="selected"({/if})>����</option>
-<option value="regexp"({if $c_profile.val_type == 'regexp'}) selected="selected"({/if})>����ɽ��</option>
+<option value="string"({if $c_profile.val_type == 'string'}) selected="selected"({/if})>文字列</option>
+<option value="int"({if $c_profile.val_type == 'int'}) selected="selected"({/if})>数値</option>
+<option value="regexp"({if $c_profile.val_type == 'regexp'}) selected="selected"({/if})>正規表現</option>
 </select></td>
 </tr>
 <tr>
-<th>����ɽ��</th>
+<th>正規表現</th>
 <td><input type="text" name="val_regexp" value="({$c_profile.val_regexp})" size="30"><br>
-<span class="caution">�������ͥ����פǡ�����ɽ���פ���������Τ�ͭ��<br>
-��: /[a-e]\d+/</span></td>
+<span class="caution">※入力値タイプで「正規表現」を選んだ場合のみ有効<br>
+例: /[a-e]\d+/</span></td>
 </tr>
 <tr>
-<th>�Ǿ���&#xff5e;������</th>
+<th>最小値&#xff5e;最大値</th>
 <td><input type="text" name="val_min" value="({if $c_profile.val_min != 0})({$c_profile.val_min})({/if})" size="10">&#xff5e;<input type="text" name="val_max" value="({if $c_profile.val_max != 0})({$c_profile.val_max})({/if})" size="10"><br>
-<span class="caution">�������ͥ����פ��ֿ��͡פξ��Ͽ��ͤ��ϰϡ�<br>
-����ʳ��ξ���(Ⱦ�Ѥ�)ʸ����</span></td>
+<span class="caution">※入力値タイプが「数値」の場合は数値の範囲、<br>
+それ以外の場合は(半角の)文字数</span></td>
 </tr>
 <tr>
 <th>&nbsp;</th>
-<td><input type="submit" class="submit" value="�Խ�"></td>
+<td><input type="submit" class="submit" value="編集"></td>
 </tr>
 </table>
 </form>

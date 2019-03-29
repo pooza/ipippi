@@ -1,24 +1,24 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>�ǥ����󥹥��󡦿��ѹ�</h2>
+<h2>デザインスキン・色変更</h2>
 
 ({if $msg})
 <p class="caution">({$msg})</p>
 ({/if})
 
 <ul>
-<li><a href="#skin">����������ѹ�</a></li>
-<li><a href="#color">���ѹ�</a></li>
-<li><a href="#css">��������CSS�ɲ�</a></li>
+<li><a href="#skin">スキン画像変更</a></li>
+<li><a href="#color">色変更</a></li>
+<li><a href="#css">カスタムCSS追加</a></li>
 </ul>
 
 
 <hr>
 
-<h3><a name="skin">����������ѹ�</a></h3>
+<h3><a name="skin">スキン画像変更</a></h3>
 
-<p class="caution">�������ѹ�����Ƥ��Ƥ�֥饦����Ǥϰ����Υ���å��������ɽ������Ƥ��ޤ����Ȥ�����ޤ���<br>
-���ξ��Ϥ��Υڡ�������ɤ߹��ߤ��Ƴ�ǧ���Ƥ���������</p>
+<p class="caution">画像が変更されていてもブラウザ上では以前のキャッシュ画像が表示されてしまうことがあります。<br>
+その場合はこのページを再読み込みして確認してください。</p>
 
 <table>
 <tr>
@@ -36,46 +36,46 @@
 <tr>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_after_header">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_before_header">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_footer">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_login">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 </tr>
@@ -94,35 +94,35 @@
 <tr>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_navi_h">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_navi_f">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="skin_navi_c">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 </tr>
@@ -142,35 +142,35 @@
 <tr>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="no_image.gif">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="no_logo.gif">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="filename" value="no_logo_small.gif">
 <input type="file" name="upfile">
-<input type="submit" class="submit" value="�ѹ�">
+<input type="submit" class="submit" value="変更">
 </form>
 </td>
 </tr>
@@ -179,12 +179,12 @@
 
 <hr>
 
-<h3><a name="color">���ѹ�</a></h3>
+<h3><a name="color">色変更</a></h3>
 
-<p class="caution">���λ����16�ʿ�ɽ���ǹԤäƤ���������</p>
+<p class="caution">色の指定は16進数表記で行ってください。</p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_sns_config','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -207,22 +207,22 @@
 ({/foreach})
 </table>
 
-<div style="margin: 5px;"><input type="submit" class="submit" value="�ѹ�"></div>
+<div style="margin: 5px;"><input type="submit" class="submit" value="変更"></div>
 </form>
 
 
 <hr>
 
-<h3><a name="css">��������CSS�ɲ�</a></h3>
+<h3><a name="css">カスタムCSS追加</a></h3>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_siteadmin_css','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 
 <textarea name="body" cols="72" rows="20">({$inc_custom_css})</textarea>
-<div style="margin: 5px;"><input type="submit" class="submit" value="�ѹ�"></div>
+<div style="margin: 5px;"><input type="submit" class="submit" value="変更"></div>
 </form>
 
 ({$inc_footer|smarty:nodefaults})

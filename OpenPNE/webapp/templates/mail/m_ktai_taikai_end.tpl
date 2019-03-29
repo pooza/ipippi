@@ -1,5 +1,5 @@
-[({$SNS_NAME})]Âà²ñ¼êÂ³¤­¤¬´°Î»¤·¤Þ¤·¤¿
-({$SNS_NAME}) ¤«¤é¤Î¤ªÃÎ¤é¤»¤Ç¤¹¡£
+[({$SNS_NAME})]é€€ä¼šæ‰‹ç¶šããŒå®Œäº†ã—ã¾ã—ãŸ
+({$SNS_NAME}) ã‹ã‚‰ã®ãŠçŸ¥ã‚‰ã›ã§ã™ã€‚
 
-({$c_member.nickname})¤µ¤ó¤ÎÂà²ñ¼êÂ³¤­¤¬´°Î»¤¤¤¿¤·¤Þ¤·¤¿¡£
-¤´ÍøÍÑ¤¢¤ê¤¬¤È¤¦¤´¤¶¤¤¤Þ¤·¤¿¡£
+({$c_member.nickname})ã•ã‚“ã®é€€ä¼šæ‰‹ç¶šããŒå®Œäº†ã„ãŸã—ã¾ã—ãŸã€‚
+ã”åˆ©ç”¨ã‚ã‚ŠãŒã¨ã†ã”ã–ã„ã¾ã—ãŸã€‚

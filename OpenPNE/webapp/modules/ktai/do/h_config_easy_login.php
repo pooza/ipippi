@@ -5,7 +5,7 @@ function doAction_h_config_easy_login($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// ¸½ºß¤Î¥Ñ¥¹¥ï¡¼¥É¤¬Àµ¤·¤¤¤«
+	// ç¾åœ¨ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒæ­£ã—ã„ã‹
 	if (!db_common_authenticate_password($u, $requests['password'])) {
 		client_redirect("ktai_page.php?p=h_config_easy_login&msg=18&" . $tail);
 		exit;
@@ -27,4 +27,3 @@ function doAction_h_config_easy_login($requests)
 	}
 }
 
-?>

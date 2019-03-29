@@ -6,4 +6,4 @@ function pageAction_h_reply_message($smarty,$requests) {
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 	$smarty->ext_display("h_reply_message.tpl");
 }
-?>
+

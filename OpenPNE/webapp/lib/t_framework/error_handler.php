@@ -38,10 +38,9 @@ function page_handleError($p, $errors)
 		module_execute('pc', 'page', "fh_diary", $errors);
 		break;
 	default:
-		echo "É½¼¨¤Ç¤­¤Þ¤»¤ó ";
+		echo "è¡¨ç¤ºã§ãã¾ã›ã‚“ ";
 		break;
 	}
 	exit;
 }
 
-?>

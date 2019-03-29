@@ -317,9 +317,9 @@ class XML_Tree_Node {
     * @access  private
     */
     function _xml_entities($xml) {
-        $xml = str_replace(array('?', 'é‹', '?',
-                                 'é÷', '?', 'éƒ',
-                                 'éﬂ'
+        $xml = str_replace(array('?', 'ÁÅº', '?',
+                                 'Ëõá', '?', 'Êü¥',
+                                 'Èáà'
                                 ),
                            array('&#252;', '&#220;', '&#246;',
                                  '&#214;', '&#228;', '&#196;',

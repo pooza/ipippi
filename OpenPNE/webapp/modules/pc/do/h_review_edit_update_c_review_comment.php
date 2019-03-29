@@ -2,22 +2,22 @@
 function doAction_h_review_edit_update_c_review_comment($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_comment_id = $request['c_review_comment_id'];
 	$body = $request['body'];
 	$satisfaction_level = $request['satisfaction_level'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥ì¥Ó¥å¡¼¥³¥á¥ó¥ÈºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚³ãƒ¡ãƒ³ãƒˆä½œæˆè€…
 
 	if(!do_h_review_edit_c_review_comment4c_review_comment_id_c_member_id($c_review_comment_id, $u)){
 		handle_kengen_error();
 	}
 	//---
 
-	if(is_null($body) || $body === '') $err_msg[] = "¥ì¥Ó¥å¡¼¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤";
-	if(!$satisfaction_level) $err_msg[] = "ËþÂ­ÅÙ¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤";
+	if(is_null($body) || $body === '') $err_msg[] = "ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„";
+	if(!$satisfaction_level) $err_msg[] = "æº€è¶³åº¦ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„";
 
 	if($err_msg) {
 		$c_review = do_h_review_edit_c_review4c_review_comment_id($c_review_comment_id);
@@ -33,4 +33,4 @@ function doAction_h_review_edit_update_c_review_comment($request) {
 
 	client_redirect("page.php?p=fh_review_list_member");
 }
-?>
+

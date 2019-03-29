@@ -1,5 +1,5 @@
 <?php
-// ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜºï½ü
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®å‰Šé™¤
 
 
 function pageAction_delete_c_profile(&$smarty,$requests)
@@ -11,4 +11,3 @@ function pageAction_delete_c_profile(&$smarty,$requests)
 	$smarty->ext_display("delete_c_profile.tpl");
 }
 
-?>

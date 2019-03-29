@@ -1,22 +1,22 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">Æüµ­¤ò½ñ¤¯</font></center>
+<center><font color="orange">æ—¥è¨˜ã‚’æ›¸ã</font></center>
 <hr>
 ({if $msg})<font color="red">({$msg})</font><br>({/if})
 <FORM action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
-À²ÄÙ<br>
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
+ï¾€ï½²ï¾„ï¾™<br>
 <input size="14" name="subject" value="({$target_c_diary.subject})"><BR>
-ËÜÊ¸<BR>
+æœ¬æ–‡<BR>
 <TEXTAREA name=body rows=6 cols=14>({$target_c_diary.body})</TEXTAREA><br>
-<input type="submit" value="Á÷¿®" class="submit">
+<input type="submit" value="é€ä¿¡" class="submit">
 <input type="hidden" name="cmd" value="h_diary_edit_insert_c_diary">
 ({if $target_c_diary.c_diary_id})<input type="hidden" name="target_c_diary_id" value="({$target_c_diary.c_diary_id})">({/if})
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 </FORM>
 <hr>
-<a href="ktai_page.php?p=fh_diary_list&({$tail})">Æüµ­Ø½Ä</a><br>
-<a href="ktai_page.php?p=h_home&({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=fh_diary_list&({$tail})">æ—¥è¨˜ï¾˜ï½½ï¾„</a><br>
+<a href="ktai_page.php?p=h_home&({$tail})">ï¾ï½°ï¾‘</a>
 </a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

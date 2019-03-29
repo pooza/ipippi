@@ -3,15 +3,15 @@
 function pageAction_h_review_add_write_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$category_id = $requests['category_id'];
 	$asin = $requests['asin'];
 	$body = $requests['body'];
 	$satisfaction_level = $requests['satisfaction_level'];
 	// ----------
 
-	if(!$body) $err_msg[] = "¥ì¥Ó¥å¡¼¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤";
-	if(!$satisfaction_level) $err_msg[] = "ËþÂ­ÅÙ¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤";
+	if(!$body) $err_msg[] = "ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„";
+	if(!$satisfaction_level) $err_msg[] = "æº€è¶³åº¦ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„";
 
 	if($err_msg){
 		$_REQUEST['err_msg'] = $err_msg;
@@ -31,4 +31,4 @@ function pageAction_h_review_add_write_confirm($smarty,$requests) {
 
 	$smarty->ext_display('h_review_add_write_confirm.tpl');	
 }
-?>
+

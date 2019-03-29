@@ -9,7 +9,7 @@
 function pageAction_fh_com_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$page = $requests['page'];
 	$direc = $requests['direc'];
@@ -24,7 +24,7 @@ function pageAction_fh_com_list($smarty,$requests) {
 		exit;
 	}
 
-	// navi ¿¶¤êÊ¬¤±ÍÑ
+	// navi æŒ¯ã‚Šåˆ†ã‘ç”¨
 	if($target_c_member_id == $u) {
 		$type = "h";
 	} else {
@@ -51,4 +51,4 @@ function pageAction_fh_com_list($smarty,$requests) {
 
 	$smarty->ext_display("fh_com_list.tpl");
 }
-?>
+

@@ -9,10 +9,9 @@ function normalAction_regist_end($smarty,$requests)
 	}
     //>
     	
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_page_header',fetch_inc_page_header("regist"));
 	
 	$smarty->assign("login_url", get_login_url());
 	$smarty->ext_display("regist_end.tpl");
 }
-?>

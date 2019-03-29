@@ -1,22 +1,22 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>PC���ɥ쥹��Ͽ</center>
+<center>PCアドレス登録</center>
 <hr>
-�ʲ������PC�᡼�륢�ɥ쥹�����Ϥ��Ƥ�������<br>
+以下の欄にPCメールアドレスを入力してください<br>
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="��������ǧʸ����">
+<input type="hidden" name="dummy" value="符号形式確認文字列">
 <input type="hidden" name="cmd" value="h_pc_send_insert_c_pc_address_pre">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
-PC�Ҏ��َ��Ďގڎ�<br>
+PCﾒｰﾙｱﾄﾞﾚｽ<br>
 <input type="text" name="pc_address" istyle="3" mode="alphabet" maxlength="100"><br>
-<input type="submit" value="����"><br>
+<input type="submit" value="送信"><br>
 </form>
 
 <br>
-�Ϥ����᡼��˵��ܤ��Ƥ���URL�˥����������ơ��ѥ���ɤ����Ϥ������Ͽ����λ���ޤ���
+届いたメールに記載してあるURLにアクセスして、パスワードを入力すると登録が完了します。
 
 <hr>
-<a href="ktai_page.php?p=h_config&amp;({$tail})">�����ѹ�</a><br>
-<a href="ktai_page.php?p=h_home&({$tail})">�Ύ���</a>
+<a href="ktai_page.php?p=h_config&amp;({$tail})">設定変更</a><br>
+<a href="ktai_page.php?p=h_home&({$tail})">ﾎｰﾑ</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

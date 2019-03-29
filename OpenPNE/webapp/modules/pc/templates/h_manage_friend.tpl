@@ -18,13 +18,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ****************************************** -->
-<!-- ******�������顧�ޥ��ե��ɴ���****** -->
+<!-- ******ここから：マイフレンド管理****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -34,20 +34,20 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ޥ��ե��ɴ���������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：マイフレンド管理＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})����</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$WORD_MY_FRIEND})管理</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;">
 ({*********})
 <tr>
@@ -72,11 +72,11 @@
 
 ({if $item.intro})
 ({$item.intro|t_truncate:"80"|nl2br})<br>
-<a href="page.php?p=f_intro_edit&target_c_member_id=({$item.c_member_id})">�Խ�</a>
+<a href="page.php?p=f_intro_edit&target_c_member_id=({$item.c_member_id})">編集</a>
 
-<a href="do.php?cmd=f_intro_delete&target_c_member_id=({$item.c_member_id})&amp;sessid=({$PHPSESSID})">���</a>
+<a href="do.php?cmd=f_intro_delete&target_c_member_id=({$item.c_member_id})&amp;sessid=({$PHPSESSID})">削除</a>
 ({else})
-<a href="page.php?p=f_intro_edit&target_c_member_id=({$item.c_member_id})">�Ҳ�ʸ���</a>
+<a href="page.php?p=f_intro_edit&target_c_member_id=({$item.c_member_id})">紹介文を書く</a>
 ({/if})
 
 </div>
@@ -87,7 +87,7 @@
 
 <div class="padding_s">
 
-<a href="do.php?cmd=fh_friend_list_delete_c_friend&target_c_member_id=({$item.c_member_id})&amp;sessid=({$PHPSESSID})">({$WORD_MY_FRIEND})���鳰��</a>
+<a href="do.php?cmd=fh_friend_list_delete_c_friend&target_c_member_id=({$item.c_member_id})&amp;sessid=({$PHPSESSID})">({$WORD_MY_FRIEND})から外す</a>
 
 </div>
 
@@ -100,12 +100,12 @@
 ({*********})
 ({/foreach})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ޥ��ե��ɴ����������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：マイフレンド管理＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -115,14 +115,14 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ��ޥ��ե��ɴ���****** -->
+<!-- ******ここまで：マイフレンド管理****** -->
 <!-- ****************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

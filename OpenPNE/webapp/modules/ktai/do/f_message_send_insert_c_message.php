@@ -1,21 +1,21 @@
 <?php
 //---------------------------------------------------------------------------------
 /**
-¥á¥Ã¥»¡¼¥¸Á÷¿®
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 
-[°ú¿ô]
+[å¼•æ•°]
 c_member_id_to
 subject
 body
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 f_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_member_id
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_f_message_send_insert_c_message($requests)
@@ -23,20 +23,20 @@ function doAction_f_message_send_insert_c_message($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_member_id_to = $requests['c_member_id_to'];
 	$subject = $requests['subject'];
 	$body = $requests['body'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¼«Ê¬°Ê³°
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//è‡ªåˆ†ä»¥å¤–
 
 	if ($c_member_id_to == $u) {
 		handle_kengen_error();
 	}
 	
-	// ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+	// ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 	if(p_common_is_access_block($u, $c_member_id_to)){
 		client_redirect("ktai_page.php?p=h_access_block&$tail");
 		exit;
@@ -45,13 +45,13 @@ function doAction_f_message_send_insert_c_message($requests)
 
 
 	if(is_null($subject) || $subject === ''){
-		//msg=2 "¥¿¥¤¥È¥ë¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤¡£"
+		//msg=2 "ã‚¿ã‚¤ãƒˆãƒ«ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„ã€‚"
 		client_redirect("ktai_page.php?p=f_message_send&target_c_member_id=$c_member_id_to&msg=2&$tail");
 		exit();
 	}
 
 	if(is_null($body) || $body === ''){
-		//msg=1 "ËÜÊ¸¤òÆþÎÏ¤·¤Æ²¼¤µ¤¤"
+		//msg=1 "æœ¬æ–‡ã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„"
 		client_redirect("ktai_page.php?p=f_message_send&target_c_member_id=$c_member_id_to&msg=1&$tail");
 		exit();
 	}
@@ -61,4 +61,3 @@ function doAction_f_message_send_insert_c_message($requests)
 	client_redirect("ktai_page.php?p=f_home&target_c_member_id=$c_member_id_to&$tail");
 }
 
-?>

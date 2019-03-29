@@ -18,15 +18,15 @@
 <table class="container" border="0" cellspacing="0" cellpadding="0">
 <tr><td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************** -->
-<!-- ******�������顧��å������ơ��֥�****** -->
+<!-- ******ここから：メッセージテーブル****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_invite">
 <input type="hidden" name="c_commu_id" value="({$c_commu_id})">
@@ -41,18 +41,18 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-({*�������顧header*})
-<!-- �������ȥ� -->
+({*ここから：header*})
+<!-- 小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;" class="bg_06"><span class="b_b c_00">����å�����������</span></td>
+<td style="width:528px;" class="bg_06"><span class="b_b c_00">一括メッセージを送る</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table norder="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 ({*********})
 <tr>
@@ -61,7 +61,7 @@
 
 <div class="padding_s">
 
-<span class="c_01">({$WORD_MY_FRIEND})�ˡ����Υ��٥�ȤΤ��Τ餻��å��������������ޤ���</span>
+<span class="c_01">({$WORD_MY_FRIEND})に、このイベントのお知らせメッセージを送信します。</span>
 
 </div>
 
@@ -79,7 +79,7 @@
 
 <div class="padding_s">
 
-<span class="c_01">�˥å��͡���</span>
+<span class="c_01">ニックネーム</span>
 
 </div>
 
@@ -112,7 +112,7 @@
 
 <div class="padding_s">
 
-<span class="c_01">��å����� (Ǥ��)</span>
+<span class="c_01">メッセージ (任意)</span>
 
 </div>
 
@@ -141,12 +141,12 @@
 <div class="padding_w_m">
 
 <div style="text-align:center;">
-<input type="submit" value="������������">
+<input type="submit" value="　送　　信　">
 </div>
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-��({$WORD_MY_FRIEND})�ʳ��ˤ��Υ��٥�Ȥ򶵤�����ϡ����οͤΥڡ�������ľ�ܥ�å����������äƤ����������᡼����˥��٥�Ȥ�URL��Ž�դ���������Ǥ���<br>
+※({$WORD_MY_FRIEND})以外にこのイベントを教える場合は、その人のページから直接メッセージを送ってください。メール内にイベントのURLを貼付すると便利です。<br>
 ({$host})page.php?p=c_event_detail&amp;target_c_commu_topic_id=({$c_commu_topic_id})
 
 </div>
@@ -160,11 +160,11 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 <tr>
@@ -175,13 +175,13 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ���å������ơ��֥�****** -->
+<!-- ******ここまで：メッセージテーブル****** -->
 <!-- ************************************ -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td></tr>
 </table>({*END:container*})

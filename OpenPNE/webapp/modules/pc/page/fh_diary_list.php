@@ -4,7 +4,7 @@
 function pageAction_fh_diary_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -26,20 +26,20 @@ function pageAction_fh_diary_list($smarty,$requests) {
 		$is_diary_admin = false;
 		$target_c_member = db_common_c_member4c_member_id($target_c_member_id);
 
-		//Æüµ­¤Î¸ø³«ÈÏ°ÏÀßÄê
+		//æ—¥è¨˜ã®å…¬é–‹ç¯„å›²è¨­å®š
 		if (($target_c_member['public_flag_diary'] == "friend" &&
 			 !_db_is_friend($u, $target_c_member_id))) {
 		    client_redirect("page.php?p=h_err_diary_access");
 		    exit;
 		}
 		
-		// ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+		// ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 		if(p_common_is_access_block($u, $target_c_member_id)){
 			client_redirect("page.php?p=h_access_block");
 			exit;
 		}
 		
-		//¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë
+		//ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹
 		p_etc_do_ashiato($target_c_member_id, $u);
 	}
 
@@ -52,7 +52,7 @@ function pageAction_fh_diary_list($smarty,$requests) {
 
 	$target_member = db_common_c_member4c_member_id($target_c_member_id);
 	$smarty->assign("target_member", $target_member);
-	//Ç¯·îÆü¤Ç°ìÍ÷É½¼¨¡¢Æüµ­¿ô¤ËÀ©¸Â¤Ê¤·
+	//å¹´æœˆæ—¥ã§ä¸€è¦§è¡¨ç¤ºã€æ—¥è¨˜æ•°ã«åˆ¶é™ãªã—
 	if ($year && $month) {
 		if ($day) {
 			$list_set = p_fh_diary_list_diary_list_date4c_member_id($target_c_member_id,$_REQUEST['year'], $_REQUEST['month'], $_REQUEST['day']);
@@ -80,7 +80,7 @@ function pageAction_fh_diary_list($smarty,$requests) {
 
 	$smarty->assign("diary_list_count",count($list_set[0]) );
 
-	//Æüµ­°ìÍ÷¡¢¥«¥ì¥ó¥À¡¼ÍÑÊÑ¿ô
+	//æ—¥è¨˜ä¸€è¦§ã€ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼ç”¨å¤‰æ•°
     $date_val=	array(
         'year' => $year,
         'month' => $month,
@@ -88,16 +88,16 @@ function pageAction_fh_diary_list($smarty,$requests) {
     );
 	$smarty->assign("date_val", $date_val);
 
-	//Æüµ­¤Î¥«¥ì¥ó¥À¡¼
+	//æ—¥è¨˜ã®ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼
 	$calendar = db_common_diary_monthly_calendar($year, $month, $target_c_member_id);
 
 	$smarty->assign("calendar", $calendar['days']);
 	$smarty->assign("ym", $calendar['ym']);
 
-	//³Æ·î¤ÎÆüµ­
+	//å„æœˆã®æ—¥è¨˜
 	$smarty->assign("date_list",p_fh_diary_list_date_list4c_member_id($target_c_member_id));
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("fh_diary_list.tpl");
 }
-?>
+

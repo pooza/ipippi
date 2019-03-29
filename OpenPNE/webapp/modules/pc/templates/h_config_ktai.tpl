@@ -15,21 +15,21 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******�������顧�񤭹��߳�ǧ****** -->
+<!-- ******ここから：書き込み確認****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="���α��被���ܸ�ʸ��������Ƚ��ʸ����">
+<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
@@ -40,19 +40,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�񤭹��߳�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：書き込み確認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$SNS_NAME}) ��Х���</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">({$SNS_NAME}) モバイル</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:566px;">
 ({*********})
 <tr>
@@ -65,27 +65,27 @@
 
 <div class="padding_w_m">
 
-�ż֤���䡢�������֤ʤɤǡ����������ߥ�˥ƥ����������Ȥα������񤭹��ߤ������ʤ��ޤ���<br>
+電車の中や、空き時間などで、日記・コミュニティ・あしあとの閲覧・書き込みがおこなえます。<br>
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
 <span class="b_b c_00">1.</span>
-�ʲ��˷��ӥ᡼�륢�ɥ쥹�������ơ������ץܥ���򲡤��Ƥ���������
+以下に携帯メールアドレスを記入して「送信」ボタンを押してください。
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
 <span class="b_b c_00">2.</span>
-�����᡼�륢�ɥ쥹���Ƥ�({$SNS_NAME})���᡼�뤬�Ϥ��ޤ���
+記入メールアドレス宛てに({$SNS_NAME})よりメールが届きます。
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
 <span class="b_b c_00">3.</span>
-���ܤ��줿URL��ꥢ���������ơ����������λ���Ƥ���������
+記載されたURLよりアクセスして、ログインを完了してください。
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
-<span class="b_b c_00">��</span>
-�ɥᥤ�������������ꤵ��Ƥ������ϡ�({$mail_server_domain})�פ�����Ǥ���褦�˻��ꤷ�Ƥ���������
+<span class="b_b c_00">※</span>
+ドメイン指定受信を設定されている方は「({$mail_server_domain})」を受信できるように指定してください。
 
 </div>
 
@@ -103,7 +103,7 @@
 
 <div class="padding_s">
 
-���ӥ᡼�륢�ɥ쥹
+携帯メールアドレス
 
 </div>
 
@@ -133,7 +133,7 @@
 
 <div class="padding_w_m">
 
-<input type="submit" value="  ������  ">
+<input type="submit" value="  送　信  ">
 
 </div>
 
@@ -146,12 +146,12 @@
 </tr>
 ({*********})
 </table>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��񤭹��߳�ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：書き込み確認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -163,14 +163,14 @@
 </table>
 
 </form>
-<!-- ******�����ޤǡ��񤭹��߳�ǧ****** -->
+<!-- ******ここまで：書き込み確認****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

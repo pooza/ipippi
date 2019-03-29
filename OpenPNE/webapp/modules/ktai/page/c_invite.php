@@ -3,14 +3,14 @@ function pageAction_c_invite($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 
-	//¥é¥ó¥À¥à¥Õ¥ì¥ó¥É¥ê¥¹¥È
+	//ãƒ©ãƒ³ãƒ€ãƒ ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªã‚¹ãƒˆ
 	$smarty->assign("c_friend_list", k_p_c_invite_c_friend_list_random4c_member_id4c_commu_id($u, $target_c_commu_id, 50));
 	
-	//¥³¥ß¥å¥Ë¥Æ¥££É£Ä
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ï¼©ï¼¤
 	$smarty->assign("target_c_commu_id", $target_c_commu_id);
     $smarty->assign("c_commu", _db_c_commu4c_commu_id($target_c_commu_id));
 	
@@ -19,4 +19,3 @@ function pageAction_c_invite($smarty, $requests)
 	
 }
 
-?>

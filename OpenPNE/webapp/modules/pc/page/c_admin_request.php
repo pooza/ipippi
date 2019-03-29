@@ -2,13 +2,13 @@
 function pageAction_c_admin_request($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
     if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
         handle_kengen_error();
     }
@@ -23,4 +23,4 @@ function pageAction_c_admin_request($smarty,$requests) {
 	$smarty->assign("c_commu", p_c_admin_request_c_commu4c_commu_id($target_c_commu_id));
 	$smarty->ext_display("c_admin_request.tpl");
 }
-?>
+

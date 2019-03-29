@@ -1,19 +1,19 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥Õ¥ì¥ó¥É¥ê¥¯¥¨¥¹¥È¤òÁ÷¤ë
+ãƒ•ãƒ¬ãƒ³ãƒ‰ãƒªã‚¯ã‚¨ã‚¹ãƒˆã‚’é€ã‚‹
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_member_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_link_request
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥Õ¥ì¥ó¥É´Ø·¸¤ËÌµ¤¤¥æ¡¼¥¶¡¼
+[æ¨©é™]
+ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢ä¿‚ã«ç„¡ã„ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_f_link_request_insert_c_friend_confirm($requests)
@@ -21,15 +21,15 @@ function doAction_f_link_request_insert_c_friend_confirm($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$body = $requests['body'];
 	// ----------
 
 	$c_member_id_from	= $u;
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥Õ¥ì¥ó¥É¤Ç¤Ê¤¤ and ¥Õ¥ì¥ó¥É¾µÇ§ÂÔ¤Á¤Ç¤Ê¤¤
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ•ãƒ¬ãƒ³ãƒ‰ã§ãªã„ and ãƒ•ãƒ¬ãƒ³ãƒ‰æ‰¿èªå¾…ã¡ã§ãªã„
 
     $status = db_common_friend_status($u, $target_c_member_id);
     if ($status['is_friend']) {
@@ -40,7 +40,7 @@ function doAction_f_link_request_insert_c_friend_confirm($requests)
         exit;
     }
     
-    // ¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯
+    // ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯
 	if(p_common_is_access_block($u, $target_c_member_id)){
 		client_redirect("ktai_page.php?p=h_access_block&$tail");
 		exit;	
@@ -57,18 +57,18 @@ function doAction_f_link_request_insert_c_friend_confirm($requests)
 	do_f_link_request_insert_c_friend_confirm($c_member_id_from,$target_c_member_id,$body);
 
 
-	//¥á¥Ã¥»¡¼¥¸
+	//ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 	$c_member_to	= db_common_c_member4c_member_id($target_c_member_id);
 	$c_member_from	= db_common_c_member4c_member_id($c_member_id_from);
 
-	$subject =WORD_FRIEND."¥ê¥ó¥¯Í×ÀÁ¥á¥Ã¥»¡¼¥¸";
+	$subject =WORD_FRIEND."ãƒªãƒ³ã‚¯è¦è«‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸";
 	$body_disp =
-		$c_member_from['nickname']." ¤µ¤ó¤«¤é".WORD_FRIEND."¥ê¥ó¥¯Í×ÀÁ¤Î¥á¥Ã¥»¡¼¥¸¤¬ÆÏ¤¤¤Æ¤¤¤Þ¤¹¡£\n".
+		$c_member_from['nickname']." ã•ã‚“ã‹ã‚‰".WORD_FRIEND."ãƒªãƒ³ã‚¯è¦è«‹ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒå±Šã„ã¦ã„ã¾ã™ã€‚\n".
 		"\n".
-		"¥á¥Ã¥»¡¼¥¸¡§\n".
+		"ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š\n".
 		$body."\n".
 		"\n".
-		"¤³¤ÎÍ×ÀÁ¤Ë¤Ä¤¤¤Æ¡¢¾µÇ§ÂÔ¤Á¥ê¥¹¥È¤«¤é¾µÇ§¤Þ¤¿¤ÏµñÈÝ¤òÁªÂò¤·¤Æ¤¯¤À¤µ¤¤¡£";
+		"ã“ã®è¦è«‹ã«ã¤ã„ã¦ã€æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆã‹ã‚‰æ‰¿èªã¾ãŸã¯æ‹’å¦ã‚’é¸æŠžã—ã¦ãã ã•ã„ã€‚";
 
 	do_common_send_message_syoudaku($c_member_id_from, $target_c_member_id, $subject, $body_disp);
 
@@ -76,4 +76,3 @@ function doAction_f_link_request_insert_c_friend_confirm($requests)
 	client_redirect("ktai_page.php?p=f_home&target_c_member_id=$target_c_member_id&$tail");
 }
 
-?>

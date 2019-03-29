@@ -1,20 +1,20 @@
 <?php
 //-----------------------------------------------------------------------------
 /**
-Æüµ­¤ò½ñ¤¯
+æ—¥è¨˜ã‚’æ›¸ã
 
-[°ú¿ô]
+[å¼•æ•°]
 subject
 body
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 fh_diary_list
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_member_id
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_diary_edit_insert_c_diary($requests)
@@ -22,7 +22,7 @@ function doAction_h_diary_edit_insert_c_diary($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$subject = $requests['subject'];
 	$body = $requests['body'];
 	$target_c_diary_id = $requests['target_c_diary_id'];
@@ -40,8 +40,8 @@ function doAction_h_diary_edit_insert_c_diary($requests)
 		exit();
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
@@ -55,11 +55,10 @@ function doAction_h_diary_edit_insert_c_diary($requests)
 	}
 
 	/*
-	 * ·ÈÂÓ¤ÏWEB¤Ç¤Ï²èÁüUPLOAD¤Ê¤·
+	 * æºå¸¯ã¯WEBã§ã¯ç”»åƒUPLOADãªã—
 	 */
 	do_h_diary_edit_update_c_diary($update_c_diary_id, $subject, $body);
 
 	client_redirect("ktai_page.php?p=fh_diary_list&target_c_member_id=$c_member_id&$tail");
 }
 
-?>

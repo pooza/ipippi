@@ -1,28 +1,28 @@
 <?php
 /**
-¥×¥í¥Õ¥£¡¼¥ë²èÁü¤Îºï½ü
+ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ç”»åƒã®å‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 h_config_image
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¼«Ê¬
+[æ¨©é™]
+è‡ªåˆ†
 
 */
 function doAction_h_config_image_delete_c_member_image($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$img_num = $request['img_num'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//É¬Í×¤Ê¤·
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//å¿…è¦ãªã—
 
 	//---
 
@@ -37,4 +37,4 @@ function doAction_h_config_image_delete_c_member_image($request) {
     
     client_redirect("page.php?p=h_config_image");
 }
-?>
+

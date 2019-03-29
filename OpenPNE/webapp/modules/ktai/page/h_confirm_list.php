@@ -3,23 +3,23 @@ function pageAction_h_confirm_list($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	//¥ê¥ó¥¯¾µÇ§ÂÔ¤Á¥ê¥¹¥È
+	//ãƒªãƒ³ã‚¯æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆ
 	$smarty->assign("anatani_c_friend_confirm_list", k_p_h_confirm_list_anatani_c_friend_confirm_list4c_member_id($u));
 	
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¾µÇ§ÂÔ¤Á¥ê¥¹¥È
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ æ‰¿èªå¾…ã¡ãƒªã‚¹ãƒˆ
 	$smarty->assign("anatani_c_commu_member_confirm_list", k_p_h_confirm_list_anatani_c_commu_member_confirm_list4c_member_id($u));
 	
-    // ¤¢¤Ê¤¿¤Ë¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå¤ò´õË¾¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+    // ã‚ãªãŸã«ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ã‚’å¸Œæœ›ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
     $smarty->assign("anatani_c_commu_admin_confirm_list",
         p_h_confirm_list_anatani_c_commu_admin_confirm_list4c_member_id($u));
     
-	//¥ê¥ó¥¯¿½ÀÁ½Ð¤·¤¿¿Í¤Î¥ê¥¹¥È
+	//ãƒªãƒ³ã‚¯ç”³è«‹å‡ºã—ãŸäººã®ãƒªã‚¹ãƒˆ
 	$smarty->assign("anataga_c_friend_confirm_list", k_p_h_confirm_list_anataga_c_friend_confirm_list4c_member_id($u));
 	
-	//»²²Ã¿½ÀÁ½Ð¤·¤¿¥³¥ß¥å¥Ë¥Æ¥£¤Ë´Ø¤¹¤ë¥ê¥¹¥È
+	//å‚åŠ ç”³è«‹å‡ºã—ãŸã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«é–¢ã™ã‚‹ãƒªã‚¹ãƒˆ
 	$smarty->assign("anataga_c_commu_member_confirm_list", k_p_h_confirm_list_anataga_c_commu_member_confirm_list4c_member_id($u));
 
-    // ¤¢¤Ê¤¿¤¬¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô¸òÂå¤òÍ×ÀÁ¤·¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+    // ã‚ãªãŸãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…äº¤ä»£ã‚’è¦è«‹ã—ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
     $smarty->assign("anataga_c_commu_admin_confirm_list",
         p_h_confirm_list_anataga_c_commu_admin_confirm_list4c_member_id($u));
 	
@@ -28,4 +28,3 @@ function pageAction_h_confirm_list($smarty, $requests)
 	
 }
 
-?>

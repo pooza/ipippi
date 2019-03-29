@@ -4,7 +4,7 @@
 function pageAction_h_diary_list_all($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$direc = $requests['direc'];
 	$page = $requests['page'];
 	$keyword = $requests['keyword'];
@@ -12,18 +12,18 @@ function pageAction_h_diary_list_all($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
-	//Æüµ­°ìÍ÷
+	//æ—¥è¨˜ä¸€è¦§
 	$page = $page + $direc;
 	$page_size = 20;
 	
-	//¸¡º÷·ë²Ì
+	//æ¤œç´¢çµæžœ
 	$result = p_h_diary_list_all_search_c_diary4c_diary($keyword, $page_size, $page);
 	
 	//$smarty->assign('c_commu_search_list', test());
 	$smarty->assign('new_diary_list', $result[0]);
 	$smarty->assign('is_prev', $result[1]);
 	$smarty->assign('is_next', $result[2]);
-	//¸¡º÷¤Ë°ìÃ×¤·¤¿¥³¥ß¥å¥Ë¥Æ¥£¿ô
+	//æ¤œç´¢ã«ä¸€è‡´ã—ãŸã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ•°
 	$smarty->assign('c_diary_search_list_count',$result[3]);
 
 	$pager = array();
@@ -35,8 +35,8 @@ function pageAction_h_diary_list_all($smarty,$requests) {
 	$smarty->assign('pager', $pager);
 
 	$keyword = mb_convert_encoding($keyword, "EUC-JP", "EUC-JP,SJIS,UTF-8,JIS");
-	//¥Ð¥°²óÈò¤Î¤¿¤áÈ¾³Ñ¶õÇò¤òÁ´³Ñ¤ËÅý°ì
-	$keyword = str_replace ( " ", "¡¡", $keyword);
+	//ãƒã‚°å›žé¿ã®ãŸã‚åŠè§’ç©ºç™½ã‚’å…¨è§’ã«çµ±ä¸€
+	$keyword = str_replace ( " ", "ã€€", $keyword);
 
 	$search_val_list = array('val_order'=> null, // $val_order,
                              'search_word'=> null, // $search_word,
@@ -51,7 +51,7 @@ function pageAction_h_diary_list_all($smarty,$requests) {
 		$smarty->assign('c_rss_cache_list', p_h_diary_list_all_c_rss_cache_list($limit));
 	}
 
-	//---- ¥Ú¡¼¥¸É½¼¨ ----//
+	//---- ãƒšãƒ¼ã‚¸è¡¨ç¤º ----//
 	$smarty->ext_display("h_diary_list_all.tpl");
 }
-?>
+

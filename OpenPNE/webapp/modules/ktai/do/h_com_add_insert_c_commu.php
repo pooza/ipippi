@@ -5,15 +5,15 @@ function doAction_h_com_add_insert_c_commu($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_category_id = $requests['c_commu_category_id'];
 	$name = $requests['name'];
 	$info = $requests['info'];
 	$public_flag = $requests['public_flag'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//TODO:¸ø¼°¥«¥Æ¥´¥ê¤Ï¥À¥á¤È¤«¡©
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//TODO:å…¬å¼ã‚«ãƒ†ã‚´ãƒªã¯ãƒ€ãƒ¡ã¨ã‹ï¼Ÿ
 
 	//---        
 
@@ -22,10 +22,9 @@ function doAction_h_com_add_insert_c_commu($requests)
 
     $c_commu_id = do_h_com_add_insert_c_commu($c_member_id,$name,$c_commu_category_id,$info,$public_flag);
 
-    //ºîÀ®¼Ô¤ò¥³¥ß¥å¥á¥ó¥Ð¡¼¤Ë¤¹¤ë
+    //ä½œæˆè€…ã‚’ã‚³ãƒŸãƒ¥ãƒ¡ãƒ³ãƒãƒ¼ã«ã™ã‚‹
     do_inc_join_c_commu($c_commu_id,$c_member_id);
 
     client_redirect("ktai_page.php?p=c_home&target_c_commu_id={$c_commu_id}&{$tail}");    
 }
 
-?>

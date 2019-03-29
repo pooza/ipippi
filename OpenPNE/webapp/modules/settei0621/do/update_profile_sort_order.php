@@ -16,7 +16,7 @@ function doAction_update_profile_sort_order($requests)
 		db_admin_update_c_admin_config('SORT_ORDER_BIRTH', $requests['sort_order_birth']);
 	}
 	
-	admin_client_redirect('edit_c_profile', "ÊÂ¤Ó½ç¤òÊÑ¹¹¤·¤Þ¤·¤¿¡£");
+	admin_client_redirect('edit_c_profile', "ä¸¦ã³é †ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚");
 }
 
-?>
+

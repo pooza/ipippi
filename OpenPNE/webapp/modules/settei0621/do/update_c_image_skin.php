@@ -1,5 +1,5 @@
 <?php
-// ¥¹¥­¥ó²èÁü¹¹¿·
+// ã‚¹ã‚­ãƒ³ç”»åƒæ›´æ–°
 
 
 function doAction_update_c_image_skin($requests)
@@ -20,7 +20,7 @@ function doAction_update_c_image_skin($requests)
 	);
 	
 	if (!$_FILES['upfile']['size']) {
-		admin_client_redirect('edit_c_sns_config', "¥Õ¥¡¥¤¥ë¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Þ¤»¤ó");
+		admin_client_redirect('edit_c_sns_config', "ãƒ•ã‚¡ã‚¤ãƒ«ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“");
 		exit;
 	}
 	
@@ -28,11 +28,11 @@ function doAction_update_c_image_skin($requests)
 		image_data_delete($requests['filename']);
 		admin_insert_c_image($_FILES['upfile'], $requests['filename']);
 	
-		admin_client_redirect('edit_c_sns_config', "¥¹¥­¥ó²èÁü¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+		admin_client_redirect('edit_c_sns_config', "ã‚¹ã‚­ãƒ³ç”»åƒã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 		exit;
 	}
 	
-	admin_client_redirect('edit_c_sns_config', "¥¹¥­¥ó²èÁü¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_sns_config', "ã‚¹ã‚­ãƒ³ç”»åƒã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
-?>
+

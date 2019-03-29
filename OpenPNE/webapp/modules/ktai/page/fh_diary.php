@@ -3,7 +3,7 @@ function pageAction_fh_diary($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_diary_id = $requests['target_c_diary_id'];
 	// ----------	
 
@@ -15,32 +15,32 @@ function pageAction_fh_diary($smarty, $requests)
 		exit;
 	}
 	$target_c_member = db_common_c_member4c_member_id($target_c_member_id);
-	// ¥Õ¥ì¥ó¥É¤Ë¤·¤«¸ø³«¤·¤Æ¤¤¤Ê¤¤
+	// ãƒ•ãƒ¬ãƒ³ãƒ‰ã«ã—ã‹å…¬é–‹ã—ã¦ã„ãªã„
     if ($target_c_member['public_flag_diary'] == "friend" &&
 		!_db_is_friend($u, $target_c_member_id) &&
 		$target_c_member_id != $u) {
         
-        exit("¤³¤ÎÆüµ­¤Ë¥¢¥¯¥»¥¹¤Ç¤­¤Þ¤»¤ó¡£");
+        exit("ã“ã®æ—¥è¨˜ã«ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã›ã‚“ã€‚");
     }
 
-    //´ÉÍý²èÌÌHTML
+    //ç®¡ç†ç”»é¢HTML
     $smarty->assign('c_siteadmin', p_common_c_siteadmin4target_pagename('k_fh_diary'));
 	
-	//Æüµ­¤Îºî¼Ô¾ðÊó
+	//æ—¥è¨˜ã®ä½œè€…æƒ…å ±
 	$smarty->assign("target_diary_writer", $target_c_member);
 	
-	//Æüµ­
+	//æ—¥è¨˜
 	$c_diary = k_p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
 	$smarty->assign("target_c_diary", $c_diary);
-	//¼«Ê¬¤ÇÆüµ­¤ò¸«¤¿¤È¤­
+	//è‡ªåˆ†ã§æ—¥è¨˜ã‚’è¦‹ãŸã¨ã
     if($c_diary['c_member_id'] == $u){
-		//Æüµ­¤ò±ÜÍ÷ºÑ¤ß¤Ë¤¹¤ë
+		//æ—¥è¨˜ã‚’é–²è¦§æ¸ˆã¿ã«ã™ã‚‹
 		p_h_diary_update_c_diary_is_checked4c_dirary_id( $target_c_diary_id, "1");
 	}
-	//¥³¥á¥ó¥È
+	//ã‚³ãƒ¡ãƒ³ãƒˆ
 	$c_diary_comment_list = k_p_fh_diary_c_diary_comment_list4c_diary_id($target_c_diary_id);
 /*
-	//²þ¹ÔÈ¿±Ç
+	//æ”¹è¡Œåæ˜ 
 	foreach ($c_diary_comment_list as $key => $value){
 		$c_diary_comment_list[$key]['body'] = nl2br($value['body']);
 	}
@@ -50,10 +50,9 @@ function pageAction_fh_diary($smarty, $requests)
 	// f or h
 	$smarty->assign("INC_NAVI_type", k_p_fh_common_get_type($target_c_member['c_member_id'], $u));
 	
-	//¤¢¤·¤¢¤È¤ò¤Ä¤±¤ë
+	//ã‚ã—ã‚ã¨ã‚’ã¤ã‘ã‚‹
 	k_p_etc_do_ashiato($target_c_member_id, $u);	
 	
 	$smarty->ext_display("fh_diary.tpl");
 }
 
-?>

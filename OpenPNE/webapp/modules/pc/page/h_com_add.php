@@ -6,7 +6,7 @@
 function pageAction_h_com_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$name = $requests['name'];
 		$c_commu_category_id = $requests['c_commu_category_id'];
 		$info = $requests['info'];
@@ -29,9 +29,9 @@ function pageAction_h_com_add($smarty,$requests) {
 	$c_commu_category_list = p_h_com_add_c_commu_category4null();
 	$public_flag_list=
 	array(
-		'public' =>'»²²Ã¡§Ã¯¤Ç¤â»²²Ã²ÄÇ½¡¢·Ç¼¨ÈÄ¡§Á´°÷¤Ë¸ø³«',
-		'auth_sns' =>'»²²Ã¡§´ÉÍý¼Ô¤Î¾µÇ§¤¬É¬Í×¡¢·Ç¼¨ÈÄ¡§Á´°÷¤Ë¸ø³«',
-		'auth_commu_member' =>'»²²Ã¡§´ÉÍý¼Ô¤Î¾µÇ§¤¬É¬Í×¡¢·Ç¼¨ÈÄ¡§¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô¤Ë¤Î¤ß¸ø³«',
+		'public' =>'å‚åŠ ï¼šèª°ã§ã‚‚å‚åŠ å¯èƒ½ã€æŽ²ç¤ºæ¿ï¼šå…¨å“¡ã«å…¬é–‹',
+		'auth_sns' =>'å‚åŠ ï¼šç®¡ç†è€…ã®æ‰¿èªãŒå¿…è¦ã€æŽ²ç¤ºæ¿ï¼šå…¨å“¡ã«å…¬é–‹',
+		'auth_commu_member' =>'å‚åŠ ï¼šç®¡ç†è€…ã®æ‰¿èªãŒå¿…è¦ã€æŽ²ç¤ºæ¿ï¼šã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…ã«ã®ã¿å…¬é–‹',
 	);
 
 	$smarty->assign("c_commu_category_list", $c_commu_category_list);
@@ -43,4 +43,4 @@ function pageAction_h_com_add($smarty,$requests) {
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_com_add.tpl");
 }
-?>
+

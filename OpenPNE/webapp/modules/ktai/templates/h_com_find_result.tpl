@@ -1,11 +1,11 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-ºĞ­ÆÃ¨¸¡º÷·ë²Ì<br>
+ï½ºï¾ï½­ï¾†ï¾ƒï½¨æ¤œç´¢çµæœ<br>
 <hr>
 ({if $search_word})
-¡Ö({$search_word})¡×¤Î¸¡º÷·ë²Ì<br>
+ã€Œ({$search_word})ã€ã®æ¤œç´¢çµæœ<br>
 ({/if})
-(({$count_total})·ï)<br>
+(({$count_total})ä»¶)<br>
 
 ({foreach from=$c_commu_search_result item=commu})
 <a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$commu.c_commu_id})&amp;({$tail})">({$commu.name})</a>(({$commu.count_commu_member}))<br>
@@ -13,28 +13,28 @@
 
 ({if $is_prev || $is_next})
 <br>
-({if $is_prev})<a href="ktai_page.php?p=h_com_find_result&amp;target_c_member_id=({$target_member.c_member_id})&amp;page=({$page-1})&search_word=({$search_word_encode})&target_c_commu_category_parent_id=({$target_c_commu_category_parent_id})&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=h_com_find_result&amp;target_c_member_id=({$target_member.c_member_id})&amp;page=({$page+1})&search_word=({$search_word_encode})&target_c_commu_category_parent_id=({$target_c_commu_category_parent_id})&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=h_com_find_result&amp;target_c_member_id=({$target_member.c_member_id})&amp;page=({$page-1})&search_word=({$search_word_encode})&target_c_commu_category_parent_id=({$target_c_commu_category_parent_id})&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=h_com_find_result&amp;target_c_member_id=({$target_member.c_member_id})&amp;page=({$page+1})&search_word=({$search_word_encode})&target_c_commu_category_parent_id=({$target_c_commu_category_parent_id})&amp;({$tail})">æ¬¡ã¸</a>({/if})
 
 ({/if})
 
 <form action="ktai_page.php" method="get">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="p" value="h_com_find_result">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="text" name="search_word" class="text" value="({$search_word})">
 <br>
 <select name="target_c_commu_category_id">
-<option value="all">¤¹¤Ù¤Æ¤Î¶ÃºŞØ</option>
+<option value="all">ã™ã¹ã¦ã®ï½¶ï¾ƒï½ºï¾ï¾˜</option>
 ({foreach from=$c_commu_category_list item=item})
 <option value="({$item.c_commu_category_id})" ({if $target_c_commu_category_id==$item.c_commu_category_id})selected({/if})>({$item.name})
 ({/foreach})
 </select>
 <br>
-<input type="submit" value="¸¡º÷">
+<input type="submit" value="æ¤œç´¢">
 </form>
 <hr>
-<a href="ktai_page.php?p=h_com_find_all&({$tail})">ºĞ­ÆÃ¨¸¡º÷¤ËÌá¤ë</a><br>
-<a href="ktai_page.php?p=h_home&({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_com_find_all&({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨æ¤œç´¢ã«æˆ»ã‚‹</a><br>
+<a href="ktai_page.php?p=h_home&({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

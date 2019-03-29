@@ -1,18 +1,18 @@
 <?php
 //---------------------------------------------------------------------
 /**
-¥³¥ß¥å»²²ÃµñÈÝ
+ã‚³ãƒŸãƒ¥å‚åŠ æ‹’å¦
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_member_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 h_confirm_list
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£»²²ÃÍ×ÀÁ¤ò¼õ¤±¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è¦è«‹ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_h_confirm_list_delete_c_commu_member_confirm($requests)
@@ -20,12 +20,12 @@ function doAction_h_confirm_list_delete_c_commu_member_confirm($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_member_confirm_id = $requests['target_c_commu_member_confirm_id'];
 	// ----------
 
- 	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
- 	//¥³¥ß¥å»²²Ã¾µÇ§¤ò¼õ¤±¤Æ¤¤¤ë or Á÷¤Ã¤¿¿Í
+ 	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+ 	//ã‚³ãƒŸãƒ¥å‚åŠ æ‰¿èªã‚’å—ã‘ã¦ã„ã‚‹ or é€ã£ãŸäºº
 
     $cmc = _do_c_commu_member_confirm4c_commu_member_confirm_id($target_c_commu_member_confirm_id);
 
@@ -38,8 +38,7 @@ function doAction_h_confirm_list_delete_c_commu_member_confirm($requests)
 
     do_h_confirm_list_delete_c_commu_member_confirm($target_c_commu_member_confirm_id, $u);
 
-    //msg=4 "¾µÇ§°ÍÍê¤òºï½ü¤·¤Þ¤·¤¿¡£"
+    //msg=4 "æ‰¿èªä¾é ¼ã‚’å‰Šé™¤ã—ã¾ã—ãŸã€‚"
     client_redirect("ktai_page.php?p=h_confirm_list&msg=4&$tail");
 }
 
-?>

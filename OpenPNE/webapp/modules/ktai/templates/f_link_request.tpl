@@ -1,22 +1,22 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">({$target_c_member.nickname})¤µ¤ó¤ò({$WORD_FRIEND_HALF})¤Ë²Ã¤¨¤ë</font></center>
+<center><font color="orange">({$target_c_member.nickname})ã•ã‚“ã‚’({$WORD_FRIEND_HALF})ã«åŠ ãˆã‚‹</font></center>
 <hr>
-({$WORD_FRIEND_HALF})¥ê¥ó¥¯Í×ÀÁÒ¯¾°¼Ş¤òÁ÷¿®¤·¡¢¾µÇ§¤ò¼õ¤±¤Æ¤¯¤À¤µ¤¤
+({$WORD_FRIEND_HALF})ãƒªãƒ³ã‚¯è¦è«‹ï¾’ï½¯ï½¾ï½°ï½¼ï¾ã‚’é€ä¿¡ã—ã€æ‰¿èªã‚’å—ã‘ã¦ãã ã•ã„
 <hr>
 ({if $msg})({$msg})<br>({/if})
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="cmd" value="f_link_request_insert_c_friend_confirm">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_member_id" value="({$target_c_member.c_member_id})">
-Ò¯¾°¼Ş<br>
+ï¾’ï½¯ï½¾ï½°ï½¼ï¾<br>
 <textarea name="body"></textarea><br>
-<input type="submit" value="Á÷¿®">
+<input type="submit" value="é€ä¿¡">
 </form>
 <hr>
 
-<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$target_c_member.nickname})¤µ¤ó¤ÎÄ¯Ìß</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_c_member.c_member_id})&amp;({$tail})">({$target_c_member.nickname})ã•ã‚“ã®ï¾„ï½¯ï¾Œï¾Ÿ</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

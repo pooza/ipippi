@@ -1,23 +1,23 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">ÒİÊŞ°¸¡º÷</font></center>
+<center><font color="orange">ï¾’ï¾ï¾Šï¾ï½°æ¤œç´¢</font></center>
 <hr><br>
 
 ({strip})
 <form action="./ktai_page.php" method="get">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="p" value="h_friend_find_all">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
-¸¡º÷¾ò·ï<br>
+æ¤œç´¢æ¡ä»¶<br>
 
 ({capture name="nick"})
-Æ¯¸È°Ñ <input type="text" name="nickname" value="({$nickname})"><br>
+ï¾†ï½¯ï½¸ï¾ˆï½°ï¾‘ <input type="text" name="nickname" value="({$nickname})"><br>
 ({/capture})
 ({capture name="birth"})
-À¸Ç¯·îÆü
-<input type="text" name="birth_year" value="({$cond.birth_year})" size="4" maxlength="4" istyle="4" mode="numeric">Ç¯
-<input type="text" name="birth_month" value="({$cond.birth_month})" size="2" maxlength="4" istyle="4" mode="numeric">·î
-<input type="text" name="birth_day" value="({$cond.birth_day})" size="2" maxlength="4" istyle="4" mode="numeric">Æü<br>
+ç”Ÿå¹´æœˆæ—¥
+<input type="text" name="birth_year" value="({$cond.birth_year})" size="4" maxlength="4" istyle="4" mode="numeric">å¹´
+<input type="text" name="birth_month" value="({$cond.birth_month})" size="2" maxlength="4" istyle="4" mode="numeric">æœˆ
+<input type="text" name="birth_day" value="({$cond.birth_day})" size="2" maxlength="4" istyle="4" mode="numeric">æ—¥<br>
 ({/capture})
 
 ({foreach from=$profile_list item=profile})
@@ -36,15 +36,15 @@
 ({$profile.caption}) 
 ({if $profile.form_type == 'select' || $profile.form_type == 'radio'})
 	<select name="profile[({$profile.name})]">
-	<option value="0">»ØÄê¤·¤Ê¤¤
+	<option value="0">æŒ‡å®šã—ãªã„
 	({foreach from=$profile_list[$profile.name].options item=item})
 	<option value="({$item.c_profile_option_id})"({if $item.c_profile_option_id == $profiles[$profile.name].c_profile_option_id}) selected({/if})>({$item.value})
 	({/foreach})
 	</select>
 ({elseif $profile.form_type == 'checkbox'})
-({* Ã±°ìÁªÂò¥Ñ¥¿¡¼¥ó *})
+({* å˜ä¸€é¸æŠãƒ‘ã‚¿ãƒ¼ãƒ³ *})
 	<select name="profile[({$profile.name})]">
-	<option value="0">»ØÄê¤·¤Ê¤¤
+	<option value="0">æŒ‡å®šã—ãªã„
 	({foreach from=$profile_list[$profile.name].options item=item})
 	<option value="({$item.c_profile_option_id})"({if $item.c_profile_option_id == $profiles[$profile.name].c_profile_option_id}) selected({/if})>({$item.value})
 	({/foreach})
@@ -59,24 +59,24 @@
 ({if !$_cnt_nick})({$smarty.capture.nick|smarty:nodefaults})({/if})
 ({if !$_cnt_birth})({$smarty.capture.birth|smarty:nodefaults})({/if})
 
-<input type="submit" value="¸¡º÷" class="submit">
+<input type="submit" value="æ¤œç´¢" class="submit">
 </form>
 ({/strip})
 
 <hr>
-¸¡º÷·ë²Ì(({$pager.total_num})·ï)<br>
+æ¤œç´¢çµæœ(({$pager.total_num})ä»¶)<br>
 ({foreach from=$target_friend_list item=target_friend})
 <a href="ktai_page.php?p=f_home&amp;target_c_member_id=({$target_friend.c_member_id})&({$tail})">({$target_friend.nickname})</a><br>
 ({/foreach})
 
 ({if $pager.page_prev || $pager.page_next})
 <br>
-({if $pager.page_prev})<a href="ktai_page.php?p=h_friend_find_all({if $nickname})&amp;nickname=({$nickname|escape:"url"})({/if})&amp;page=({$pager.page_prev})&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $pager.page_next})<a href="ktai_page.php?p=h_friend_find_all({if $nickname})&amp;nickname=({$nickname|escape:"url"})({/if})&amp;page=({$pager.page_next})&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $pager.page_prev})<a href="ktai_page.php?p=h_friend_find_all({if $nickname})&amp;nickname=({$nickname|escape:"url"})({/if})&amp;page=({$pager.page_prev})&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $pager.page_next})<a href="ktai_page.php?p=h_friend_find_all({if $nickname})&amp;nickname=({$nickname|escape:"url"})({/if})&amp;page=({$pager.page_next})&amp;({$tail})">æ¬¡ã¸</a>({/if})
 
 ({/if})
 <br>
 <hr>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

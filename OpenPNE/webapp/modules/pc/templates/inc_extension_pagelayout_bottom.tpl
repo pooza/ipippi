@@ -2,7 +2,7 @@
 
 <td class="ext_sub_container_right" align="left" valign="top">
 ({**********************************})
-({**¤³¤³¤«¤é¡§¥µ¥¤¥É¥³¥ó¥Æ¥ó¥ÄÎÎ°è**})
+({**ã“ã“ã‹ã‚‰ï¼šã‚µã‚¤ãƒ‰ã‚³ãƒ³ãƒ†ãƒ³ãƒ„é ˜åŸŸ**})
 ({**********************************})
 
 ({if $side_banner_html || $inc_side_banner})
@@ -20,7 +20,7 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="/skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:164px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¿·ÃåÆüµ­</span></td>
+<td style="width:164px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">æ–°ç€æ—¥è¨˜</span></td>
 </tr>
 </table>
 </div>
@@ -50,7 +50,7 @@
 
 <div align="right">
 	<img src="/skin/dummy.gif" class="icon arrow_1">&nbsp;
-	<a href="/page.php?p=h_diary_list_all">°ìÍ÷</a>
+	<a href="/page.php?p=h_diary_list_all">ä¸€è¦§</a>
 </div>
 
 </td>
@@ -87,7 +87,7 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="/skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:164px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">¿·ÃåBLOG</span></td>
+<td style="width:164px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">æ–°ç€BLOG</span></td>
 </tr>
 </table>
 </div>
@@ -116,7 +116,7 @@
 
 <div align="right">
 <img src="/skin/dummy.gif" class="icon arrow_1">&nbsp;
-<a href="/page.php?p=h_diary_list_all#recent_blog_entries">°ìÍ÷</a>
+<a href="/page.php?p=h_diary_list_all#recent_blog_entries">ä¸€è¦§</a>
 </div>
 
 </td>
@@ -143,7 +143,7 @@
 ({/if})
 
 ({**********************************})
-({**¤³¤³¤Þ¤Ç¡§¥µ¥¤¥É¥³¥ó¥Æ¥ó¥ÄÎÎ°è**})
+({**ã“ã“ã¾ã§ï¼šã‚µã‚¤ãƒ‰ã‚³ãƒ³ãƒ†ãƒ³ãƒ„é ˜åŸŸ**})
 ({**********************************})
 </td>
 

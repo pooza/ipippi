@@ -1,18 +1,18 @@
 <?php
 //-----------------------------------------------------------------------
 /**
-¥ê¥ó¥¯¾µÇ§
+ãƒªãƒ³ã‚¯æ‰¿èª
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_friend_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_message_send
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥ê¥ó¥¯Í×ÀÁ¤ò¼õ¤±¤Æ¤¤¤ë¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ãƒªãƒ³ã‚¯è¦è«‹ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_h_confirm_list_insert_c_friend($requests)
@@ -20,14 +20,14 @@ function doAction_h_confirm_list_insert_c_friend($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_friend_confirm_id = $requests['target_c_friend_confirm_id'];
 	// ----------
 
     $cfc = _do_c_friend_confirm4c_friend_confirm_id($target_c_friend_confirm_id);
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥ê¥ó¥¯¾µÇ§¤ò¼õ¤±¤Æ¤¤¤ë¿Í
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ãƒªãƒ³ã‚¯æ‰¿èªã‚’å—ã‘ã¦ã„ã‚‹äºº
 
     if ($cfc['c_member_id_to'] != $u) {
         handle_kengen_error();
@@ -39,8 +39,7 @@ function doAction_h_confirm_list_insert_c_friend($requests)
 
 	do_h_confirm_list_insert_c_friend_mail_send($cfc['c_member_id_from'], $u);
 
-    //msg=3 "¾µÇ§¤¬´°Î»¤·¤Þ¤·¤¿¡£"
+    //msg=3 "æ‰¿èªãŒå®Œäº†ã—ã¾ã—ãŸã€‚"
     client_redirect("ktai_page.php?p=h_confirm_list&msg=3&$tail");
 }
 
-?>

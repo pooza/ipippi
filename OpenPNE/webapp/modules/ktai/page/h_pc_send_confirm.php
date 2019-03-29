@@ -11,4 +11,3 @@ function pageAction_h_pc_send_confirm($smarty, $requests)
 	$smarty->ext_display("h_pc_send_confirm.tpl");
 }
 
-?>

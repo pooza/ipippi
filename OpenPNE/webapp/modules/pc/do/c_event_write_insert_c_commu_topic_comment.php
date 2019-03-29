@@ -2,7 +2,7 @@
 function doAction_c_event_write_insert_c_commu_topic_comment($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $request['target_c_commu_topic_id'];
 	$body = $request['body'];
 	$tmpfile1 = $request['image_filename1_tmpfile'];
@@ -14,8 +14,8 @@ function doAction_c_event_write_insert_c_commu_topic_comment($request) {
 	$add_event_member = $request['add_event_member'];
 	// ----------
 
-	//-- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//-- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 	 
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_commu_id = $c_topic['c_commu_id'];
@@ -27,7 +27,7 @@ function doAction_c_event_write_insert_c_commu_topic_comment($request) {
 	//---
 
 
-	//¥¤¥Ù¥ó¥È¤Î¥á¥ó¥Ð¡¼¤ËÄÉ²Ã
+	//ã‚¤ãƒ™ãƒ³ãƒˆã®ãƒ¡ãƒ³ãƒãƒ¼ã«è¿½åŠ 
 	if($add_event_member==1){
 		do_c_event_add_insert_c_event_member($c_commu_topic_id, $u);
 	}elseif($add_event_member==-1){
@@ -81,4 +81,4 @@ function doAction_c_event_write_insert_c_commu_topic_comment($request) {
 		
 
 }
-?>
+

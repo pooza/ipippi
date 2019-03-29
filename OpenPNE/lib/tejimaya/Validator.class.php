@@ -1,41 +1,41 @@
 <?php
 
 /**
- * ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô¤Î¥Ð¥ê¥Ç¡¼¥¿
+ * ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°ã®ãƒãƒªãƒ‡ãƒ¼ã‚¿
  */
 class Validator
 {
 	/**
-	 * @var array ¸¡¾Ú¥ë¡¼¥ë
+	 * @var array æ¤œè¨¼ãƒ«ãƒ¼ãƒ«
 	 * @access private
 	 */
 	var $rules;
 	
 	/**
-	 * @var array ¸¡¾ÚºÑ¤ß¥ê¥¯¥¨¥¹¥È¥Ñ¥é¥á¥¿
+	 * @var array æ¤œè¨¼æ¸ˆã¿ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ‘ãƒ©ãƒ¡ã‚¿
 	 * @access private
 	 */
 	var $params;
 
 	/**
-	 * @var array ¥¨¥é¡¼
+	 * @var array ã‚¨ãƒ©ãƒ¼
 	 * @access private
 	 */
 	var $errors;
 
 	/**
-	 * @var array ¸¡¾ÚÂÐ¾Ý¥ê¥¯¥¨¥¹¥È¥Ñ¥é¥á¥¿
+	 * @var array æ¤œè¨¼å¯¾è±¡ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ‘ãƒ©ãƒ¡ã‚¿
 	 * @access private
 	 */
 	var $requests;
 	
 	/**
-	 * @var string ¥Ç¥Õ¥©¥ë¥È¥Õ¥£¥ë¥¿¡¼
+	 * @var string ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ•ã‚£ãƒ«ã‚¿ãƒ¼
 	 */
 	var $default_filter = 'ntrim,rtrim';
 	
 	/**
-	 * ¥Ð¥ê¥Ç¡¼¥¿¤Î½é´ü²½
+	 * ãƒãƒªãƒ‡ãƒ¼ã‚¿ã®åˆæœŸåŒ–
 	 * 
 	 * @param array $rules
 	 * @param array $requests
@@ -53,7 +53,7 @@ class Validator
 	}
 	
 	/**
-	 * ¥ë¡¼¥ë¤ÎÄÉ²Ã
+	 * ãƒ«ãƒ¼ãƒ«ã®è¿½åŠ 
 	 * 
 	 * @access public
 	 */
@@ -63,7 +63,7 @@ class Validator
 	}
 	
 	/**
-	 * ¥ë¡¼¥ë¤òini¥Õ¥¡¥¤¥ë¤«¤éÄÉ²Ã
+	 * ãƒ«ãƒ¼ãƒ«ã‚’iniãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰è¿½åŠ 
 	 * 
 	 * @access public
 	 */
@@ -80,7 +80,7 @@ class Validator
 	}
 
 	/**
-	 * (¸¡¾ÚºÑ¤ß)¥ê¥¯¥¨¥¹¥È¥Ñ¥é¥á¡¼¥¿¤ò¼èÆÀ
+	 * (æ¤œè¨¼æ¸ˆã¿)ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’å–å¾—
 	 * 
 	 * @access public
 	 * @return array
@@ -91,7 +91,7 @@ class Validator
 	}
 	
 	/**
-	 * ¥¨¥é¡¼¾ðÊó¤ò¼èÆÀ
+	 * ã‚¨ãƒ©ãƒ¼æƒ…å ±ã‚’å–å¾—
 	 * 
 	 * @access public
 	 * @return array
@@ -102,7 +102,7 @@ class Validator
 	}
 	
 	/**
-	 * (¸¡¾ÚÁ°¤Î)¥ê¥¯¥¨¥¹¥È¥Ñ¥é¥á¡¼¥¿¤òÄÉ²Ã
+	 * (æ¤œè¨¼å‰ã®)ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’è¿½åŠ 
 	 * 
 	 * @access public
 	 */
@@ -110,14 +110,14 @@ class Validator
 	{
 /*
 		// 2006/1/22 tkoishi@b-shock.co.jp
-		// Warning¤¬½Ð¤ë¤Î¤Ç¡¢ÇÛÎó¤Ë¥­¥ã¥¹¥È¤¹¤ëÍÍ¤Ë¡£
+		// WarningãŒå‡ºã‚‹ã®ã§ã€é…åˆ—ã«ã‚­ãƒ£ã‚¹ãƒˆã™ã‚‹æ§˜ã«ã€‚
 		$this->requests = array_merge($this->requests, $requests);
 */
 		$this->requests = array_merge((array)$this->requests, (array)$requests);
 	}
 	
 	/**
-	 * ¥Ñ¥é¥á¡¼¥¿¤Ë¸¡¾ÚºÑ¤ß¤ÎÃÍ¤ò¥»¥Ã¥È
+	 * ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã«æ¤œè¨¼æ¸ˆã¿ã®å€¤ã‚’ã‚»ãƒƒãƒˆ
 	 * 
 	 * @access private
 	 * @param string $key
@@ -129,11 +129,11 @@ class Validator
 	}
 		
 	/**
-	 * ¥¨¥é¡¼¾ðÊó¤òÀßÄê
+	 * ã‚¨ãƒ©ãƒ¼æƒ…å ±ã‚’è¨­å®š
 	 * 
 	 * @access private
 	 * @param string $key
-	 * @param string $msg ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸
+	 * @param string $msg ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 	 */
 	function _setError($key, $msg)
 	{
@@ -144,7 +144,7 @@ class Validator
 	 * validate
 	 * 
 	 * @access public
-	 * @return boolean ¥¨¥é¡¼¤¬È¯À¸¤·¤Ê¤«¤Ã¤¿¤«¤É¤¦¤«
+	 * @return boolean ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ãªã‹ã£ãŸã‹ã©ã†ã‹
 	 */
 	function validate()
 	{
@@ -164,13 +164,13 @@ class Validator
 				$reqval = array_shift($values);
 				$result = $this->_filter($reqval, $rule['pre_filter']);
 				
-				// É¬¿Ü¹àÌÜ¥Á¥§¥Ã¥¯
+				// å¿…é ˆé …ç›®ãƒã‚§ãƒƒã‚¯
 				if (is_null($result) || $result === "") {
 					if (!empty($rule['required'])) {
 						if (isset($rule['required_error'])) {
 							$error = $rule['required_error'];
 						} else {
-							$error = "{$rule['caption']}¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+							$error = "{$rule['caption']}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 						}
 						$this->_setError($key, $error);
 					} else {
@@ -201,7 +201,7 @@ class Validator
 						if (isset($rule['required_error'])) {
 							$error = $rule['required_error'];
 						} else {
-							$error = "{$rule['caption']}¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+							$error = "{$rule['caption']}ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 						}
 						$this->_setError($key, $error);
 					} else {
@@ -221,7 +221,7 @@ class Validator
 	}
 	
 	/**
-	 * ¸¡¾Ú¥ë¡¼¥ë¤Î½é´ü²½
+	 * æ¤œè¨¼ãƒ«ãƒ¼ãƒ«ã®åˆæœŸåŒ–
 	 */
 	function _initRule($key, $rule)
 	{
@@ -246,7 +246,7 @@ class Validator
 	 * @access private
 	 * @param string $value
 	 * @param string $filter
-	 * @return string ¥Õ¥£¥ë¥¿¡¼¤òÄÌ¤·¤¿ÃÍ
+	 * @return string ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’é€šã—ãŸå€¤
 	 */
 	function _filter($value, $filter)
 	{
@@ -256,20 +256,20 @@ class Validator
 				switch ($filter) {
 				case "trim":
 					$value = trim($value);
-					// Á´³Ñ¥¹¥Ú¡¼¥¹
-					$value = mb_ereg_replace('^[¡¡]+', '', $value);
-					$value = mb_ereg_replace('[¡¡]+$', '', $value);
+					// å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹
+					$value = mb_ereg_replace('^[ã€€]+', '', $value);
+					$value = mb_ereg_replace('[ã€€]+$', '', $value);
 					break;
 				case "ltrim":
 					$value = ltrim($value);
-					$value = mb_ereg_replace('^[¡¡]+', '', $value); // Á´³Ñ¥¹¥Ú¡¼¥¹
+					$value = mb_ereg_replace('^[ã€€]+', '', $value); // å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹
 					break;
 				case "rtrim":
 					$value = rtrim($value);
-					$value = mb_ereg_replace('[¡¡]+$', '', $value); // Á´³Ñ¥¹¥Ú¡¼¥¹
+					$value = mb_ereg_replace('[ã€€]+$', '', $value); // å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹
 					break;
 				case "ntrim":
-					// NULL ¥Ð¥¤¥È¤ò¼è¤ë
+					// NULL ãƒã‚¤ãƒˆã‚’å–ã‚‹
 					$value = str_replace("\0", "", $value);
 					break;
 				}
@@ -289,14 +289,14 @@ class Validator
 	 */
 	function _validate($key, $reqval, $rule)
 	{	
-		// ·¿¥Á¥§¥Ã¥¯
+		// åž‹ãƒã‚§ãƒƒã‚¯
 		switch (strtolower($rule['type'])) {
 		case "int":
 			if (!is_numeric($reqval)) {
 				if (isset($rule['type_error']))
 					$error = $rule['type_error'];
 				else
-					$error = "{$rule['caption']}¤Ï¿ôÃÍ¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+					$error = "{$rule['caption']}ã¯æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„";
 				
 				$this->_setError($key, $error);
 				return false;
@@ -307,7 +307,7 @@ class Validator
 				if (isset($rule['type_error']))
 					$error = $rule['type_error'];
 				else
-					$error = "{$rule['caption']}¤ÎÃÍ¤¬ÉÔÀµ¤Ç¤¹";
+					$error = "{$rule['caption']}ã®å€¤ãŒä¸æ­£ã§ã™";
 				
 				$this->_setError($key, $error);
 				return false;
@@ -320,18 +320,18 @@ class Validator
 				if (isset($rule['type_error']))
 					$error = $rule['type_error'];
 				else
-					$error = "{$rule['caption']}¤òÀµ¤·¤¯ÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+					$error = "{$rule['caption']}ã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„";
 					$this->_setError($key, $error);
 				return false;
 			}
 			break;
 		default:
-			$error = "{$rule['type']}¤ÏÌ¤ÄêµÁ¤Î·¿¤Ç¤¹¡£";
+			$error = "{$rule['type']}ã¯æœªå®šç¾©ã®åž‹ã§ã™ã€‚";
 			$this->_setError($key, $error);
 			return false;
 		}
 	
-		// min/max ¥Á¥§¥Ã¥¯
+		// min/max ãƒã‚§ãƒƒã‚¯
 		switch ($rule['type']) {
 		case "int":
 			// min
@@ -339,7 +339,7 @@ class Validator
 				if (isset($rule['min_error']))
 					$error = $rule['min_error'];
 				else
-					$error = "{$rule['caption']}¤Ï{$rule['min']}°Ê¾å¤Î¿ôÃÍ¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+					$error = "{$rule['caption']}ã¯{$rule['min']}ä»¥ä¸Šã®æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„";
 			
 				$this->_setError($key, $error);
 				return false;
@@ -349,7 +349,7 @@ class Validator
 				if (isset($rule['max_error']))
 					$error = $rule['max_error'];
 				else
-					$error = "{$rule['caption']}¤Ï{$rule['max']}°Ê²¼¤Î¿ôÃÍ¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+					$error = "{$rule['caption']}ã¯{$rule['max']}ä»¥ä¸‹ã®æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„";
 				
 				$this->_setError($key, $error);
 				return false;
@@ -362,7 +362,7 @@ class Validator
 				if (isset($rule['min_error']))
 					$error = $rule['min_error'];
 				else
-					$error = "{$rule['caption']}¤Ï{$rule['min']}Ê¸»ú°Ê¾å¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤(Á´³Ñ¤Î¾ì¹ç¤Ï¤³¤ÎÈ¾Ê¬)";
+					$error = "{$rule['caption']}ã¯{$rule['min']}æ–‡å­—ä»¥ä¸Šã§å…¥åŠ›ã—ã¦ãã ã•ã„(å…¨è§’ã®å ´åˆã¯ã“ã®åŠåˆ†)";
 				
 				$this->_setError($key, $error);
 				return false;
@@ -372,7 +372,7 @@ class Validator
 				if (isset($rule['max_error']))
 					$error = $rule['max_error'];
 				else
-					$error = "{$rule['caption']}¤Ï{$rule['max']}Ê¸»ú°ÊÆâ¤ÇÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤(Á´³Ñ¤Î¾ì¹ç¤Ï¤³¤ÎÈ¾Ê¬)";
+					$error = "{$rule['caption']}ã¯{$rule['max']}æ–‡å­—ä»¥å†…ã§å…¥åŠ›ã—ã¦ãã ã•ã„(å…¨è§’ã®å ´åˆã¯ã“ã®åŠåˆ†)";
 				
 				$this->_setError($key, $error);
 				return false;
@@ -384,4 +384,3 @@ class Validator
 	}
 }
 
-?>

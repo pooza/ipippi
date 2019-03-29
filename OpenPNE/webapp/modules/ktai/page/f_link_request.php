@@ -3,7 +3,7 @@ function pageAction_f_link_request($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 	
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	// ----------
 
@@ -12,7 +12,7 @@ function pageAction_f_link_request($smarty, $requests)
 		exit;
 	}
 
-	//¥¿¡¼¥²¥Ã¥È¾ðÊó
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 	$smarty->assign("target_c_member", k_f_link_request_c_member4c_member_id($target_c_member_id));
 	
 	
@@ -20,4 +20,3 @@ function pageAction_f_link_request($smarty, $requests)
 	
 }
 
-?>

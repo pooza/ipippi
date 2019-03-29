@@ -1,28 +1,28 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£ºîÀ®
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ä½œæˆ
 
-[°ú¿ô]
+[å¼•æ•°]
 name
 c_commu_category_id
 info
 public_flag
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_id
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_com_add_insert_c_commu($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$name = $request['name'];
 	$c_commu_category_id = $request['c_commu_category_id'];
 	$info = $request['info'];
@@ -30,8 +30,8 @@ function doAction_h_com_add_insert_c_commu($request) {
 	$tmpfile = $request['tmpfile'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//TODO:¸ø¼°¥«¥Æ¥´¥ê¤Ï¥À¥á¤È¤«¡©
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//TODO:å…¬å¼ã‚«ãƒ†ã‚´ãƒªã¯ãƒ€ãƒ¡ã¨ã‹ï¼Ÿ
 
 	//---
 
@@ -45,10 +45,10 @@ function doAction_h_com_add_insert_c_commu($request) {
 
 	$c_commu_id = do_h_com_add_insert_c_commu($c_member_id,$name,$c_commu_category_id,$info,$public_flag, $filename);
 
-	//ºîÀ®¼Ô¤ò¥³¥ß¥å¥á¥ó¥Ð¡¼¤Ë¤¹¤ë¡£
+	//ä½œæˆè€…ã‚’ã‚³ãƒŸãƒ¥ãƒ¡ãƒ³ãƒãƒ¼ã«ã™ã‚‹ã€‚
 	do_inc_join_c_commu($c_commu_id,$c_member_id);
 
 	client_redirect('page.php?p=c_home&target_c_commu_id='.$c_commu_id);
 
 }
-?>
+

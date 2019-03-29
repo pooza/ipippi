@@ -1,19 +1,19 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ 
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_id
 
-[¸¢¸Â]
-Á´¥á¥ó¥Ð¡¼
+[æ¨©é™]
+å…¨ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_inc_join_c_commu($request) {
@@ -24,27 +24,27 @@ function doAction_inc_join_c_commu($request) {
 	$status = do_common_get_c_join_status($u, $target_c_commu_id);
 
 	switch($status){
-	//¾µÇ§É¬Í×¤Ê¤·
+	//æ‰¿èªå¿…è¦ãªã—
 	case STATUS_C_JOIN_REQUEST_FREE:
 		do_inc_join_c_commu($target_c_commu_id, $u);
         do_inc_join_c_commu_send_mail($target_c_commu_id, $u);
 	    client_redirect("page.php?p=c_join_commu_2&target_c_commu_id=$target_c_commu_id");
 		break;
 	
-	//´ÉÍý¼Ô¾µÇ§É¬Í×
+	//ç®¡ç†è€…æ‰¿èªå¿…è¦
 	case STATUS_C_JOIN_REQUEST_NEED:
 	    client_redirect("page.php?p=c_join_request&target_c_commu_id=$target_c_commu_id");
 		break;
 
-	//¾µÇ§ÂÔ¤Á
+	//æ‰¿èªå¾…ã¡
 	case STATUS_C_JOIN_WAIT:
 	    client_redirect("page.php?p=c_join_err_wait&target_c_commu_id=$target_c_commu_id");
 		break;
 
-	//´û¤Ë»²²Ã
+	//æ—¢ã«å‚åŠ 
 	case STATUS_C_JOIN_ALREADY:
 	    client_redirect("page.php?p=c_join_err_already&target_c_commu_id=$target_c_commu_id");
 		break;
 	}
 }
-?>
+

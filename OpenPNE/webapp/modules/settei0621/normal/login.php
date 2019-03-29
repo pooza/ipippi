@@ -1,5 +1,5 @@
 <?php
-// ´ÉÍý²èÌÌ¥í¥°¥¤¥ó
+// ç®¡ç†ç”»é¢ãƒ­ã‚°ã‚¤ãƒ³
 
 
 function normalAction_login(&$smarty,$requests)
@@ -16,4 +16,4 @@ function normalAction_login(&$smarty,$requests)
 	$smarty->ext_display("login.tpl");
 }
 
-?>
+

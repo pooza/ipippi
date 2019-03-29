@@ -13,13 +13,13 @@
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************* -->
-<!-- ******�������顧��Ͽ��λ****** -->
+<!-- ******ここから：登録完了****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -29,21 +29,21 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧��Ͽ��λ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：登録完了＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <div class="border_01">
 <table border="0" cellspacing="0" cellpadding="0" style="width:564px;">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">��Ͽ��λ</span></td>
+<td style="width:528px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">登録完了</span></td>
 </tr>
 </table>
 </div>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
 <div style="width:566px;" class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -60,11 +60,11 @@
 
 <div class="padding_w_m">
 
-({*���Ϥ��줿�᡼�륢�ɥ쥹�˥᡼����������ޤ������᡼����Σգң̤򥯥�å��������Ͽ����λ���ޤ���*})
-��Ͽ����λ���ޤ�����<br>
-�ʲ��Υڡ�������������󤷤Ƥ���������<br>
+({*入力されたメールアドレスにメールを送信しました。メール内のＵＲＬをクリックすると登録が完了します。*})
+登録が完了しました。<br>
+以下のページからログインしてください。<br>
 <br>
-<a href="({$login_url})">��������ڡ�����</a>
+<a href="({$login_url})">ログインページへ</a>
 
 </div>
 
@@ -81,12 +81,12 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ���Ͽ��λ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：登録完了＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -96,7 +96,7 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ���Ͽ��λ****** -->
+<!-- ******ここまで：登録完了****** -->
 <!-- ******************************* -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -106,13 +106,13 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ************************************** -->
-<!-- ******�������顧������ɥ����Ĥ���****** -->
+<!-- ******ここから：ウィンドウを閉じる****** -->
 <div align="center">
 
-<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="javascript:void(0);" onclick="window.close()">������ɥ����Ĥ���</a>
+<img src="./skin/dummy.gif" class="icon arrow_1">&nbsp;<a href="javascript:void(0);" onclick="window.close()">ウィンドウを閉じる</a>
 
 </div>
-<!-- ******�����ޤǡ�������ɥ����Ĥ���****** -->
+<!-- ******ここまで：ウィンドウを閉じる****** -->
 <!-- ************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
@@ -123,7 +123,7 @@
 
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

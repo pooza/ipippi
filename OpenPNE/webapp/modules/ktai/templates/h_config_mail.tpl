@@ -1,28 +1,28 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">���ӎҎ��َ��Ďގڎ��ѹ�</font></center>
+<center><font color="orange">携帯ﾒｰﾙｱﾄﾞﾚｽ変更</font></center>
 <hr>
-����Ͽ�Ҏ��َ��Ďގڎ�(��������)���ѹ�<br>
+◆登録ﾒｰﾙｱﾄﾞﾚｽ(携帯電話)の変更<br>
 <br>
 ({if $msg})
 <font color="red">({$msg})</font><br>
 <br>
 ({/if})
-���������ӎҎ��َ��Ďގڎ������Ϥ��������ܥ���򲡤��Ƥ���������<br>
+新しい携帯ﾒｰﾙｱﾄﾞﾚｽを入力して送信ボタンを押してください。<br>
 <br>
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="��������ǧʸ����">
+<input type="hidden" name="dummy" value="符号形式確認文字列">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_config_mail_insert_c_ktai_address_pre">
 <textarea name="ktai_address" rows="1" istyle="3" mode="alphabet" maxlength="100"></textarea><br>
-<input type="submit" value="�᡼������"><br>
+<input type="submit" value="メール送信"><br>
 </form>
 
 <br>
-�Ϥ����᡼��˵��ܤ��Ƥ���URL�˥����������ơ��ѥ���ɤ����Ϥ�����ѹ�����λ���ޤ���
+届いたメールに記載してあるURLにアクセスして、パスワードを入力すると変更が完了します。
 
 <hr>
-<a href="ktai_page.php?p=h_config&amp;({$tail})">�����ѹ�</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">�Ύ���</a>
+<a href="ktai_page.php?p=h_config&amp;({$tail})">設定変更</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ﾎｰﾑ</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

@@ -1,5 +1,5 @@
 <?php
-// ¥³¥ß¥å¥Ë¥Æ¥£¥«¥Æ¥´¥êÊÑ¹¹
+// ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã‚«ãƒ†ã‚´ãƒªå¤‰æ›´
 
 
 function pageAction_edit_category(&$smarty,$requests)
@@ -14,4 +14,3 @@ function pageAction_edit_category(&$smarty,$requests)
 	$smarty->ext_display("edit_category.tpl");
 }
 
-?>

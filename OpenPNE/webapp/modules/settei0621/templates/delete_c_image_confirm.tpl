@@ -1,22 +1,22 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>²èÁüºï½ü</h2>
+<h2>ç”»åƒå‰Šé™¤</h2>
 
-<p>ËÜÅö¤Ëºï½ü¤·¤Æ¤â¤è¤í¤·¤¤¤Ç¤¹¤«¡©</p>
+<p>æœ¬å½“ã«å‰Šé™¤ã—ã¦ã‚‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ</p>
 
 <p><a href="img.php?filename=({$c_image.filename})" target="_blank"
 ><img src="img.php?filename=({$c_image.filename})&amp;w=120&amp;h=120"></a>
 </p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_image4c_image_id','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_image_id" value="({$requests.target_c_image_id})">
-<input type="submit" class="submit" value="ºï½ü">
+<input type="submit" class="submit" value="å‰Šé™¤">
 </form>
 
-<p><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})" onClick="history.back(); return false;" onKeyPress="history.back(); return false;">²èÁü°ìÍ÷¤Ë¤â¤É¤ë</a></p>
+<p><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('list_c_image')})" onClick="history.back(); return false;" onKeyPress="history.back(); return false;">ç”»åƒä¸€è¦§ã«ã‚‚ã©ã‚‹</a></p>
 
 ({$inc_footer|smarty:nodefaults})

@@ -1,34 +1,34 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-ºĞ­ÆÃ¨<br>
+ï½ºï¾ï½­ï¾†ï¾ƒï½¨<br>
 <hr>
-ºÇ¿·½ñ¤­¹ş¤ß<br>
+æœ€æ–°æ›¸ãè¾¼ã¿<br>
 ({foreach from=$c_commu_list_lastupdated item=item})
 <a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$item.c_commu_id})&amp;({$tail})">({$item.name})</a><br>
 ({/foreach})
 <hr>
-ºĞ­ÆÃ¨Ì¾¤ÇÃµ¤¹
+ï½ºï¾ï½­ï¾†ï¾ƒï½¨åã§æ¢ã™
 <form action="ktai_page.php" method="get">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="p" value="h_com_find_result">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="text" name="search_word" class="text">
 <br>
 <select name="target_c_commu_category_id">
-<option value="all">¤¹¤Ù¤Æ¤Î¶ÃºŞØ
+<option value="all">ã™ã¹ã¦ã®ï½¶ï¾ƒï½ºï¾ï¾˜
 ({foreach from=$c_commu_category_list item=item})
 <option value="({$item.c_commu_category_id})">({$item.name})
 ({/foreach})
 </select>
 <br>
-<input type="submit" value="¸¡º÷">
+<input type="submit" value="æ¤œç´¢">
 </form>
 <hr>
-¥«¥Æ¥´¥êÊÌ<br>
+ã‚«ãƒ†ã‚´ãƒªåˆ¥<br>
 
 ({foreach from=$c_commu_category_parent_list item=ccpl})
 <hr>
-¡Ú({$ccpl.name})¡Û<br>
+ã€({$ccpl.name})ã€‘<br>
 
 ({foreach from=$c_commu_category_list item=cccl})
 
@@ -43,9 +43,9 @@
 ({/foreach})
 
 <hr>
-<a href="ktai_page.php?p=h_com_add&amp;({$tail})">ºĞ­ÆÃ¨ºîÀ®</a>
+<a href="ktai_page.php?p=h_com_add&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ä½œæˆ</a>
 
 <hr>
-<a href="ktai_page.php?p=h_home&({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=h_home&({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

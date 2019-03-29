@@ -3,7 +3,7 @@ function pageAction_fh_com_list($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -16,10 +16,10 @@ function pageAction_fh_com_list($smarty, $requests)
 		exit;
 	}
 
-	// ¥á¥ó¥Ð¡¼¾ðÊó
+	// ãƒ¡ãƒ³ãƒãƒ¼æƒ…å ±
 	$smarty->assign("target_c_member", k_p_fh_com_list_c_member4c_member_id($target_c_member_id));
 	
-	// »²²Ã¥³¥ß¥å¥Ë¥Æ¥£¥ê¥¹¥È
+	// å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒªã‚¹ãƒˆ
 	$page_size = 10;
 	$page += $direc;
 
@@ -30,7 +30,7 @@ function pageAction_fh_com_list($smarty, $requests)
 	$smarty->assign("is_prev",$list[1]);
 	$smarty->assign("is_next",$list[2]);
 
-	// »²²Ã¥³¥ß¥å¥Ë¥Æ¥£¿ô
+	// å‚åŠ ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£æ•°
 	$smarty->assign("count_commus",k_p_fh_com_list_c_commu_list_count4c_member_id($target_c_member_id));
 
 	//f or h
@@ -39,4 +39,3 @@ function pageAction_fh_com_list($smarty, $requests)
 	$smarty->ext_display("fh_com_list.tpl");
 }
 
-?>

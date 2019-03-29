@@ -1,5 +1,5 @@
 <?php
-// hash_table ¹¹¿·
+// hash_table æ›´æ–°
 
 
 function doAction_update_hash_table($requests)
@@ -9,7 +9,7 @@ function doAction_update_hash_table($requests)
 	$hash_tbl =& AdminHashTable::singleton();
 	$hash_tbl->updateTable();
 	
-	admin_client_redirect('top', "´ÉÍýÍÑ¥Ú¡¼¥¸Ì¾¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('top', "ç®¡ç†ç”¨ãƒšãƒ¼ã‚¸åã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
-?>
+

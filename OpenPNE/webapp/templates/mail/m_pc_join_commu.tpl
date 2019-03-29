@@ -1,17 +1,17 @@
-¡Ú({$SNS_NAME})¡Û({$c_member_join.nickname})¤µ¤ó¤¬¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤·¤Ş¤·¤¿
+ã€({$SNS_NAME})ã€‘({$c_member_join.nickname})ã•ã‚“ãŒã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã—ã¾ã—ãŸ
 
-({$c_member_admin.nickname})¤µ¤ó¡¢¤³¤ó¤Ë¤Á¤Ï¡£
-({$CATCH_COPY})({$SNS_NAME}) ¤«¤é¤Î¤ªÃÎ¤é¤»¤Ç¤¹¡£
+({$c_member_admin.nickname})ã•ã‚“ã€ã“ã‚“ã«ã¡ã¯ã€‚
+({$CATCH_COPY})({$SNS_NAME}) ã‹ã‚‰ã®ãŠçŸ¥ã‚‰ã›ã§ã™ã€‚
 
-¡Ö({$c_commu.name})¡×¥³¥ß¥å¥Ë¥Æ¥£¤Ë¡¢({$c_member_join.nickname})¤µ¤ó¤¬»²²Ã¤·¤Ş¤·¤¿¤Î¤Ç¡¢¤´Ï¢ÍíÃ×¤·¤Ş¤¹¡£
+ã€Œ({$c_commu.name})ã€ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«ã€({$c_member_join.nickname})ã•ã‚“ãŒå‚åŠ ã—ã¾ã—ãŸã®ã§ã€ã”é€£çµ¡è‡´ã—ã¾ã™ã€‚
 
-¢¡({$c_commu.name})¥³¥ß¥å¥Ë¥Æ¥£¤Î¥Ú¡¼¥¸
+â—†({$c_commu.name})ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã®ãƒšãƒ¼ã‚¸
 ({$HOME_PATH})page.php?p=c_home&target_c_commu_id=({$c_commu.c_commu_id})
 
-¡ş({$c_member_join.nickname})¤µ¤ó¤Î¥Ú¡¼¥¸
+â—‡({$c_member_join.nickname})ã•ã‚“ã®ãƒšãƒ¼ã‚¸
 ({$HOME_PATH})page.php?p=f_home&target_c_member_id=({$c_member_join.c_member_id})
 
-º£¸å¤â¡¢¤¼¤Ò¡¢({$SNS_NAME})¤ò¤´³èÍÑ¤¯¤À¤µ¤¤¡£
+ä»Šå¾Œã‚‚ã€ãœã²ã€({$SNS_NAME})ã‚’ã”æ´»ç”¨ãã ã•ã„ã€‚
 
 
 ({$inc_signature})

@@ -2,16 +2,16 @@
 function doAction_h_schedule_delete_delete_c_schedule($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_schedule_id = $request['target_c_schedule_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥¹¥±¥¸¥å¡¼¥ëºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ä½œæˆè€…
 
 	$c_schedule = p_common_c_schedule4c_schedule_id($target_c_schedule_id);
 	if ($c_schedule['c_member_id'] != $u) {
-		exit("¥Ç¡¼¥¿¤Ï¤¢¤ê¤Þ¤»¤ó¡£");
+		exit("ãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
 	}
 	//---
 
@@ -20,4 +20,4 @@ function doAction_h_schedule_delete_delete_c_schedule($request) {
   
 	client_redirect("page.php?p=h_schedule_delete_end");
 }
-?>
+

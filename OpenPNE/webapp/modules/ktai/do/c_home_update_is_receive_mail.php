@@ -1,13 +1,13 @@
 <?php
 //-------------------------------------------------------------------
-/** ¥³¥ß¥å¥Ë¥Æ¥£¥á¡¼¥ë¤ò¼õ¤±¼è¤ë¤«¤É¤¦¤«¤ÎÀßÄê
- * [°ú¿ô]
+/** ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¡ãƒ¼ãƒ«ã‚’å—ã‘å–ã‚‹ã‹ã©ã†ã‹ã®è¨­å®š
+ * [å¼•æ•°]
  * target_c_commu_id
  * 
- * [¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+ * [ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
  * c_home
  * 
- * [¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+ * [ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
  * target_c_commu_id
  * 
  * 
@@ -17,14 +17,14 @@ function doAction_c_home_update_is_receive_mail($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	$is_receive_mail = $requests['is_receive_mail'];
 	$is_receive_mail_pc = $requests['is_receive_mail_pc'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 
     $status = db_common_commu_status($u, $target_c_commu_id);
     if (!$status['is_commu_member']) {
@@ -33,11 +33,10 @@ function doAction_c_home_update_is_receive_mail($requests)
 	//---
 
 
-//PC&ktai¤ÎÎ¾Êý¤ò°ìÅÙ¤Ë¹¹¿·
+//PC&ktaiã®ä¸¡æ–¹ã‚’ä¸€åº¦ã«æ›´æ–°
 	do_c_home_update_is_receive_mail($target_c_commu_id, $u, $is_receive_mail, $is_receive_mail_pc);
 // /shou
 
 	client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
 }
 
-?>

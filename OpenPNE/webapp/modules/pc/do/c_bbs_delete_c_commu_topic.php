@@ -1,20 +1,20 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ô¥Ã¥¯ºï½ü
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒ”ãƒƒã‚¯å‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_topic_id
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 c_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_commu_id
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
-¥³¥ß¥å¥Ë¥Æ¥£¥È¥Ô¥Ã¥¯´ÉÍý¼Ô
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒˆãƒ”ãƒƒã‚¯ç®¡ç†è€…
 
 */
 function doAction_c_bbs_delete_c_commu_topic($request) {
@@ -22,8 +22,8 @@ function doAction_c_bbs_delete_c_commu_topic($request) {
 
 	$target_c_commu_topic_id = $request['target_c_commu_topic_id'];
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô or ¥È¥Ô¥Ã¥¯ºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€… or ãƒˆãƒ”ãƒƒã‚¯ä½œæˆè€…
 
 	$c_commu_topic = _do_c_bbs_c_commu_topic4c_commu_topic_id($target_c_commu_topic_id);
     
@@ -40,4 +40,4 @@ function doAction_c_bbs_delete_c_commu_topic($request) {
 
 	client_redirect('page.php?p=c_topic_list&target_c_commu_id='.$c_commu_topic['c_commu_id']);
 }
-?>
+

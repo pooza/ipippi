@@ -2,16 +2,16 @@
 function doAction_h_diary_edit_delete_image($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_diary_id = $request['target_c_diary_id'];
 	$del_img = $request['del_img'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//Æüµ­ºîÀ®¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//æ—¥è¨˜ä½œæˆè€…
 
     $c_diary = p_fh_diary_c_diary4c_diary_id($c_diary_id);
-	//Æüµ­¤ò½ñ¤¤¤¿¿Í¤Ç¤Ê¤¤¤È¾Ã¤»¤Ê¤¤
+	//æ—¥è¨˜ã‚’æ›¸ã„ãŸäººã§ãªã„ã¨æ¶ˆã›ãªã„
 	if($c_diary['c_member_id'] != $u){
 		client_redirect("page.php?p=h_home");
 	}	
@@ -23,4 +23,4 @@ function doAction_h_diary_edit_delete_image($request) {
 
 	client_redirect("page.php?p=h_diary_edit&target_c_diary_id=".$c_diary_id);
 }
-?>
+

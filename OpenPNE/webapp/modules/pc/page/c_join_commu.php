@@ -7,28 +7,28 @@
 function pageAction_c_join_commu($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-		// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+		// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 		$target_c_commu_id = $requests['target_c_commu_id'];
 		// ----------
 
 
 		$status = do_common_get_c_join_status($u, $target_c_commu_id);
 		switch($status){
-		//¾µÇ§É¬Í×¤Ê¤·
+		//æ‰¿èªå¿…è¦ãªã—
 		case STATUS_C_JOIN_REQUEST_FREE:
 			break;
 
-		//´ÉÍý¼Ô¾µÇ§É¬Í×
+		//ç®¡ç†è€…æ‰¿èªå¿…è¦
 		case STATUS_C_JOIN_REQUEST_NEED:
 		    client_redirect("page.php?p=c_join_request&target_c_commu_id=$target_c_commu_id");
 			exit;
 
-		//¾µÇ§ÂÔ¤Á
+		//æ‰¿èªå¾…ã¡
 		case STATUS_C_JOIN_WAIT:
 		    client_redirect("page.php?p=c_join_err_wait&target_c_commu_id=$target_c_commu_id");
 			exit;
 
-		//´û¤Ë»²²Ã
+		//æ—¢ã«å‚åŠ 
 		case STATUS_C_JOIN_ALREADY:
 		    client_redirect("page.php?p=c_join_err_already&target_c_commu_id=$target_c_commu_id");
 			exit;
@@ -40,4 +40,4 @@ function pageAction_c_join_commu($smarty,$requests) {
 
 	$smarty->ext_display("c_join_commu.tpl");
 }
-?>
+

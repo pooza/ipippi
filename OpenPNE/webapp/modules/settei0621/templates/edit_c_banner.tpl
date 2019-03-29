@@ -24,19 +24,19 @@ window.onload = disableTextarea({if !$top_banner_html})_top({/if})({if !$side_ba
 //-->
 </script>
 
-<h2>¥Ğ¥Ê¡¼´ÉÍı</h2>
+<h2>ãƒãƒŠãƒ¼ç®¡ç†</h2>
 
 ({if $msg})
 <p class="caution">({$msg})</p>
 ({/if})
 
-<p>¡ú<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_banner')})">¥Ğ¥Ê¡¼ÄÉ²Ã</a></p>
+<p>â˜…<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_banner')})">ãƒãƒŠãƒ¼è¿½åŠ </a></p>
 
-<h3>¢£¥È¥Ã¥×¥Ğ¥Ê¡¼</h3>
-<p>468 x 60 ¥Ô¥¯¥»¥ë¤Î²èÁü¤òÀßÄê¤·¤Æ¤¯¤À¤µ¤¤¡£</p>
+<h3>â– ãƒˆãƒƒãƒ—ãƒãƒŠãƒ¼</h3>
+<p>468 x 60 ãƒ”ã‚¯ã‚»ãƒ«ã®ç”»åƒã‚’è¨­å®šã—ã¦ãã ã•ã„ã€‚</p>
 
 <form action="module_do.php" method="post" name="form_top_banner">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <table>
 <tr>
 <td>
@@ -46,49 +46,49 @@ window.onload = disableTextarea({if !$top_banner_html})_top({/if})({if !$side_ba
 <input tabindex="1" type="radio" name="disp_type" value="img" onClick="switchTextarea('top', false);" onKeyPress="switchTextarea('top', false);"({if !$top_banner_html}) checked="checked"({/if})></td>
 <td>
 
-<h4>¡ú<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_banner')})">¥Ğ¥Ê¡¼²èÁü¤òÄÉ²Ã</a></h4>
+<h4>â˜…<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_banner')})">ãƒãƒŠãƒ¼ç”»åƒã‚’è¿½åŠ </a></h4>
 ({if $c_banner_top_list})
 <table>
 <tr>
-<th colspan="2">Áàºî</th>
+<th colspan="2">æ“ä½œ</th>
 <th>ID</th>
-<th>²èÁü</th>
-<th>¥ê¥ó¥¯Àè</th>
-<th>É½¼¨°ÌÃÖ</th>
-<th>¥Ğ¥Ê¡¼Ì¾</th>
-<th>É½¼¨ÀßÄê</th>
+<th>ç”»åƒ</th>
+<th>ãƒªãƒ³ã‚¯å…ˆ</th>
+<th>è¡¨ç¤ºä½ç½®</th>
+<th>ãƒãƒŠãƒ¼å</th>
+<th>è¡¨ç¤ºè¨­å®š</th>
 </tr>
 ({foreach from=$c_banner_top_list item=item})
 <tr>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_c_banner')})&amp;c_banner_id=({$item.c_banner_id})">ÊÑ¹¹</a></td>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_banner_confirm')})&amp;c_banner_id=({$item.c_banner_id})">ºï½ü</a></td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_c_banner')})&amp;c_banner_id=({$item.c_banner_id})">å¤‰æ›´</a></td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_banner_confirm')})&amp;c_banner_id=({$item.c_banner_id})">å‰Šé™¤</a></td>
 <td class="idnumber">({$item.c_banner_id})</td>
 <td><a href="img.php?filename=({$item.image_filename})" target="_blank"><img src="img.php?filename=({$item.image_filename})&amp;w=200&amp;h=200"></a></td>
 <td>({$item.a_href})</td>
 <td>({$item.type})</td>
 <td>({$item.nickname})</td>
-<td>({if !$item.is_hidden})É½¼¨¤¹¤ë({else})É½¼¨¤·¤Ê¤¤({/if})</td>
+<td>({if !$item.is_hidden})è¡¨ç¤ºã™ã‚‹({else})è¡¨ç¤ºã—ãªã„({/if})</td>
 </tr>
 ({/foreach})
 </table>
 ({/if})
 
 </td>
-<td rowspan="2"><input tabindex="4" type="submit" class="submit" value="³ÎÄê"></td>
+<td rowspan="2"><input tabindex="4" type="submit" class="submit" value="ç¢ºå®š"></td>
 </tr>
 <tr>
 <td><input tabindex="2" type="radio" name="disp_type" value="html" onClick="switchTextarea('top', true);" onKeyPress="switchTextarea('top', true);"({if $top_banner_html}) checked="checked"({/if})></td>
-<td><h4>¡úÇ¤°ÕHTML¤ÇÉ½¼¨</h4>
+<td><h4>â˜…ä»»æ„HTMLã§è¡¨ç¤º</h4>
 <textarea tabindex="3" cols="72" rows="6" name="top_banner_html">({$top_banner_html})</textarea></td>
 </tr>
 </table>
 </form>
 
 ({*
-<h3>¢£¥µ¥¤¥É¥Ğ¥Ê¡¼</h3>
+<h3>â– ã‚µã‚¤ãƒ‰ãƒãƒŠãƒ¼</h3>
 
 <form action="module_do.php" method="post" name="form_side_banner">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <table>
 <tr>
 <td>
@@ -98,39 +98,39 @@ window.onload = disableTextarea({if !$top_banner_html})_top({/if})({if !$side_ba
 <input tabindex="5" type="radio" name="disp_type" value="img" onClick="switchTextarea('side', false);" onKeyPress="switchTextarea('side', false);"({if !$side_banner_html}) checked="checked"({/if})></td>
 <td>
 
-<h4>¡ú<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_banner')})">¥Ğ¥Ê¡¼²èÁü¤òÄÉ²Ã</a></h4>
+<h4>â˜…<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_banner')})">ãƒãƒŠãƒ¼ç”»åƒã‚’è¿½åŠ </a></h4>
 ({if $c_banner_side_list})
 <table>
 <tr>
-<th colspan="2">Áàºî</th>
+<th colspan="2">æ“ä½œ</th>
 <th>ID</th>
-<th>²èÁü</th>
-<th>¥ê¥ó¥¯Àè</th>
-<th>É½¼¨°ÌÃÖ</th>
-<th>¥Ğ¥Ê¡¼Ì¾</th>
-<th>É½¼¨ÀßÄê</th>
+<th>ç”»åƒ</th>
+<th>ãƒªãƒ³ã‚¯å…ˆ</th>
+<th>è¡¨ç¤ºä½ç½®</th>
+<th>ãƒãƒŠãƒ¼å</th>
+<th>è¡¨ç¤ºè¨­å®š</th>
 </tr>
 ({foreach from=$c_banner_side_list item=item})
 <tr>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_c_banner')})&amp;c_banner_id=({$item.c_banner_id})">ÊÑ¹¹</a></td>
-<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_banner_confirm')})&amp;c_banner_id=({$item.c_banner_id})">ºï½ü</a></td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('update_c_banner')})&amp;c_banner_id=({$item.c_banner_id})">å¤‰æ›´</a></td>
+<td><a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('delete_c_banner_confirm')})&amp;c_banner_id=({$item.c_banner_id})">å‰Šé™¤</a></td>
 <td class="idnumber">({$item.c_banner_id})</td>
 <td><a href="img.php?filename=({$item.image_filename})" target="_blank"><img src="img.php?filename=({$item.image_filename})&amp;w=200&amp;h=200"></a></td>
 <td>({$item.a_href})</td>
 <td>({$item.type})</td>
 <td>({$item.nickname})</td>
-<td>({if !$item.is_hidden})É½¼¨¤¹¤ë({else})É½¼¨¤·¤Ê¤¤({/if})</td>
+<td>({if !$item.is_hidden})è¡¨ç¤ºã™ã‚‹({else})è¡¨ç¤ºã—ãªã„({/if})</td>
 </tr>
 ({/foreach})
 </table>
 ({/if})
 
 </td>
-<td rowspan="2"><input tabindex="8" type="submit" class="submit" value="³ÎÄê"></td>
+<td rowspan="2"><input tabindex="8" type="submit" class="submit" value="ç¢ºå®š"></td>
 </tr>
 <tr>
 <td><input tabindex="6" type="radio" name="disp_type" value="html" onClick="switchTextarea('side', true);" onKeyPress="switchTextarea('side', true);"({if $side_banner_html}) checked="checked"({/if})></td>
-<td><h4>¡úÇ¤°ÕHTML¤ÇÉ½¼¨</h4>
+<td><h4>â˜…ä»»æ„HTMLã§è¡¨ç¤º</h4>
 <textarea tabindex="7" cols="72" rows="6" name="side_banner_html">({$side_banner_html})</textarea></td>
 </tr>
 </table>

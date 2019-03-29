@@ -16,8 +16,8 @@ function doAction_update_side_banner_html($requests)
 		}
 	}
 	
-	admin_client_redirect('edit_c_banner', "¥µ¥¤¥É¥Ð¥Ê¡¼¤òÊÑ¹¹¤·¤Þ¤·¤¿");
+	admin_client_redirect('edit_c_banner', "ã‚µã‚¤ãƒ‰ãƒãƒŠãƒ¼ã‚’å¤‰æ›´ã—ã¾ã—ãŸ");
 }
 
 
-?>
+

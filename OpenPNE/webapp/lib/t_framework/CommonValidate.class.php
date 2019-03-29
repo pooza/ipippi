@@ -2,7 +2,7 @@
 /**
  * commonValidate
  *
- * ¶¦ÄÌini¥Õ¥¡¥¤¥ë¤ÎÆÉ¤ß¹þ¤ß¤ò¾ÊÎ¬²½¤¹¤ë¤¿¤á¤Î¥µ¥Ö¥¯¥é¥¹
+ * å…±é€šiniãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã‚’çœç•¥åŒ–ã™ã‚‹ãŸã‚ã®ã‚µãƒ–ã‚¯ãƒ©ã‚¹
  */
 class CommonValidate extends Validator
 {
@@ -10,10 +10,10 @@ class CommonValidate extends Validator
 /**
  * common_validate
  *
- * - ¶¦ÄÌ¤Îini¥Õ¥¡¥¤¥ë(validate/common/*.ini)¤ÎÆÉ¤ß¹þ¤ß,
- * - $result¤Î¼èÆÀ,
- * - $request¤Î¼èÆÀ,
- *  ¤ò¤Þ¤È¤á¤Æ¹Ô¤¦¡£
+ * - å…±é€šã®iniãƒ•ã‚¡ã‚¤ãƒ«(validate/common/*.ini)ã®èª­ã¿è¾¼ã¿,
+ * - $resultã®å–å¾—,
+ * - $requestã®å–å¾—,
+ *  ã‚’ã¾ã¨ã‚ã¦è¡Œã†ã€‚
  *
  * @access public
  * @param array *.ini file names. full path. array('/hogehoge/example.ini',,,)
@@ -21,25 +21,25 @@ class CommonValidate extends Validator
  */
 	function common_validate($ini_files = array())
 	{
-		// Á´¥¢¥¯¥·¥ç¥ó¶¦ÄÌ¤Îini¥Õ¥¡¥¤¥ë
+		// å…¨ã‚¢ã‚¯ã‚·ãƒ§ãƒ³å…±é€šã®iniãƒ•ã‚¡ã‚¤ãƒ«
 		$v_dir = DOCUMENT_ROOT . "/webapp/validate/";
 		$common_ini_files = array();
-		$common_ini_files[] = $v_dir . "msg.ini"; // ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸·Ï
-		$common_ini_files[] = $v_dir . "sessid.ini"; // ¤Ï¤Þ¤Á¤Á¤ã¤óÂÐºö¥»¥Ã¥·¥ç¥óID
+		$common_ini_files[] = $v_dir . "msg.ini"; // ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ç³»
+		$common_ini_files[] = $v_dir . "sessid.ini"; // ã¯ã¾ã¡ã¡ã‚ƒã‚“å¯¾ç­–ã‚»ãƒƒã‚·ãƒ§ãƒ³ID
 		foreach ($common_ini_files as $ini) {
 			$this->addIniSetting($ini);
 		}
 
-		// Ç¤°Õ¤Îini¥Õ¥¡¥¤¥ë
+		// ä»»æ„ã®iniãƒ•ã‚¡ã‚¤ãƒ«
 		foreach ($ini_files as $ini) {
 			$this->addIniSetting($ini);
 		}
 
-		// ÃÍ¥Á¥§¥Ã¥¯¼Â¹Ô
+		// å€¤ãƒã‚§ãƒƒã‚¯å®Ÿè¡Œ
 		$result = $this->validate();
 		$requests = $this->getParams();
 		
 		return array($result, $requests);
 	}
 }
-?>
+

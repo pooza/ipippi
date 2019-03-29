@@ -3,7 +3,7 @@ function pageAction_h_message_box($smarty, $requests)
 {
 	$u  = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $requests['target_c_member_id'];
 	$direc_r = $requests['direc_r'];
 	$page_r = $requests['page_r'];
@@ -11,7 +11,7 @@ function pageAction_h_message_box($smarty, $requests)
 	$page_s = $requests['page_s'];
 	// ----------
 
-	// 1¥Ú¡¼¥¸Åö¤¿¤ê¤ËÉ½¼¨¤¹¤ë¥á¥Ã¥»¡¼¥¸¿ô
+	// 1ãƒšãƒ¼ã‚¸å½“ãŸã‚Šã«è¡¨ç¤ºã™ã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æ•°
 	$page_size = 5;
 	
 	$page_r += $direc_r;
@@ -34,4 +34,3 @@ function pageAction_h_message_box($smarty, $requests)
 	$smarty->ext_display("h_message_box.tpl");
 }
 
-?>

@@ -1,11 +1,11 @@
 <?php
 //shou050627
-//Â­¤¢¤È¤ªÃÎ¤é¤»¥á¡¼¥ëÉôÊ¬¤òÄÉ²Ã
+//è¶³ã‚ã¨ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«éƒ¨åˆ†ã‚’è¿½åŠ 
 function pageAction_h_config_prof_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
-	$prof = $_REQUEST['prof'];// do:h_config_prof ¤ÇÃÍ¥Á¥§¥Ã¥¯ºÑ¤ß
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
+	$prof = $_REQUEST['prof'];// do:h_config_prof ã§å€¤ãƒã‚§ãƒƒã‚¯æ¸ˆã¿
 	// ----------
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
@@ -15,4 +15,4 @@ function pageAction_h_config_prof_confirm($smarty,$requests) {
 		
 	$smarty->ext_display("h_config_prof_confirm.tpl");
 }
-?>
+

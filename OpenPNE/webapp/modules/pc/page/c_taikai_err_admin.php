@@ -5,7 +5,7 @@
 function pageAction_c_taikai_err_admin($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
 
@@ -14,4 +14,4 @@ function pageAction_c_taikai_err_admin($smarty,$requests) {
 
 	$smarty->ext_display("c_taikai_err_admin.tpl");
 }
-?>
+

@@ -1,28 +1,28 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥á¥Ã¥»¡¼¥¸Á÷¿®
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡
 
-[°ú¿ô]
+[å¼•æ•°]
 c_member_id_to
 title
 body
 
-[¥ê¥À¥¤¥ì¥¯¥È]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆ]
 f_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 target_c_member_id
 
-[¸¢¸Â]
-Á´¥æ¡¼¥¶¡¼
+[æ¨©é™]
+å…¨ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 //shou050617
 function doAction_f_message_send_insert_c_message($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_member_id_to = $request['c_member_id_to'];
 	$subject = $request['subject'];
 	$body = $request['body'];
@@ -32,10 +32,10 @@ function doAction_f_message_send_insert_c_message($request) {
 	$msg2 = "";
 
 	if (null == $subject) {
-		$msg1 = "·ïÌ¾¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+		$msg1 = "ä»¶åã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 	}
 	if (null == $body){
-		$msg2 = "¥á¥Ã¥»¡¼¥¸¤òÆþÎÏ¤·¤Æ¤¯¤À¤µ¤¤¡£";
+		$msg2 = "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚";
 	}
 
 	if ($msg1 || $msg2) {
@@ -51,7 +51,7 @@ function doAction_f_message_send_insert_c_message($request) {
 		exit;
 	}
 
-	//½¤Àµ
+	//ä¿®æ­£
 	if ($request['no']) {
 		$url = "page.php?p=f_message_send" .
 			"&target_c_member_id=".$c_member_id_to .
@@ -63,26 +63,26 @@ function doAction_f_message_send_insert_c_message($request) {
 		exit;
 	}
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//Á÷¿®Àè¤¬¼«Ê¬°Ê³°
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//é€ä¿¡å…ˆãŒè‡ªåˆ†ä»¥å¤–
 
 	if ($c_member_id_to == $u) {
 		handle_kengen_error();
 	}
 	
-    //¥¢¥¯¥»¥¹¥Ö¥í¥Ã¥¯ÀßÄê
+    //ã‚¢ã‚¯ã‚»ã‚¹ãƒ–ãƒ­ãƒƒã‚¯è¨­å®š
 	if (p_common_is_access_block($u, $c_member_id_to)) {
 		client_redirect("page.php?p=h_access_block");
 		exit;
 	}
 	//---
 
-	//ÊÖ¿®ºÑ¤ß¤Ë¤¹¤ë
+	//è¿”ä¿¡æ¸ˆã¿ã«ã™ã‚‹
 	if ($request['jyusin_c_message_id']) {
 		do_update_is_hensin($request['jyusin_c_message_id']);
 	}
 
-	//²¼½ñ¤­ÊÝÂ¸¤¬Â¸ºß¤·¤Ê¤¤
+	//ä¸‹æ›¸ãä¿å­˜ãŒå­˜åœ¨ã—ãªã„
 	if ($request['target_c_message_id'] == $request['jyusin_c_message_id']) {
 		do_common_send_message($u, $c_member_id_to, $subject, $body);
 	} else {
@@ -91,4 +91,4 @@ function doAction_f_message_send_insert_c_message($request) {
 
 	client_redirect("page.php?p=h_reply_message&msg=1");
 }
-?>
+

@@ -1,29 +1,29 @@
 <?php
 /**
-¥Õ¥ì¥ó¥É¾Ò²ðÊ¸ºï½ü
+ãƒ•ãƒ¬ãƒ³ãƒ‰ç´¹ä»‹æ–‡å‰Šé™¤
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_member_id
 body
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_home
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥Õ¥ì¥ó¥É´Ø·¸¤Ë¤¢¤ë¥á¥ó¥Ð¡¼
+[æ¨©é™]
+ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢ä¿‚ã«ã‚ã‚‹ãƒ¡ãƒ³ãƒãƒ¼
 
 */
 function doAction_f_intro_delete($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $request['target_c_member_id'];
 	// ----------
 
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥Õ¥ì¥ó¥É
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ãƒ•ãƒ¬ãƒ³ãƒ‰
     
     $status = db_common_friend_status($u, $target_c_member_id);
     if (!$status['is_friend']) {
@@ -36,4 +36,4 @@ function doAction_f_intro_delete($request) {
 
 	client_redirect("page.php?p=f_home&target_c_member_id=$target_c_member_id");
 }
-?>
+

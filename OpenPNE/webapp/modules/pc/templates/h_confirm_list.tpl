@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ���顼��å���������ƥ� *})
+({ext_include file="inc_alert_box.tpl"})({* エラーメッセージコンテナ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**�������顧�ᥤ�󥳥�ƥ��**})
+({**ここから：メインコンテンツ**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************** -->
-<!-- ******�������顧�ե��ɾ�ǧ****** -->
+<!-- ******ここから：フレンド承認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,38 +37,38 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧�ե��ɾ�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：フレンド承認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���ʤ���({$WORD_FRIEND})��󥯤��������Ƥ�����С�
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">あなたに({$WORD_FRIEND})リンクを要請しているメンバー
 </span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å����� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ -->
 <div align="center" style="padding:3px;text-align:center;" class="border_01 bg_03">
 
 ({if $anatani_c_friend_confirm_list})
-�ʲ��οͤ����ʤ���({$WORD_FRIEND})��󥯤��������Ƥ��ޤ���<br>
-���äξ�ǧ�ޤ��ϵ��ݤ����򤷤Ƥ���������
+以下の人があなたに({$WORD_FRIEND})リンクを要請しています。<br>
+参加の承認または拒否を選択してください。
 ({else})
-����({$WORD_FRIEND})��󥯤��������Ƥ���С��Ϥ��ޤ���
+現在({$WORD_FRIEND})リンクを要請してるメンバーはいません。
 ({/if})
 
 </div>
-<!-- �����ޤǡ������ơ���å����� -->
+<!-- ここまで：主内容＞＞メッセージ -->
 ({if $anatani_c_friend_confirm_list})
 <div class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<!-- �������顧�����ơ����С����� -->
+<!-- ここから：主内容＞＞メンバー一覧 -->
 <div class="border_01 bg_08" style="width:562px;margin:0px auto;>
 <img src="./skin/dummy.gif" class="v_spacer_m">
 <table border="0" cellspacing="0" cellpadding="0" style="width:550px;margin:0px auto;">
@@ -95,7 +95,7 @@
 
 <div class="padding_s">
 
-̾&nbsp;&nbsp;��
+名&nbsp;&nbsp;前
 
 </div>
 
@@ -125,7 +125,7 @@
 
 <div class="padding_s">
 
-��å�����
+メッセージ
 
 </div>
 
@@ -186,18 +186,18 @@
 </table>
 <img src="./skin/dummy.gif" class="v_spacer_m">
 </div>
-<!-- �����ޤǡ������ơ����С����� -->
+<!-- ここまで：主内容＞＞メンバー一覧 -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
 ({/if})
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ��ե��ɾ�ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：フレンド承認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -207,13 +207,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ��ե��ɾ�ǧ****** -->
+<!-- ******ここまで：フレンド承認****** -->
 <!-- ******************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- **************************************** -->
-<!-- ******�������顧���ߥ�˥ƥ����þ�ǧ****** -->
+<!-- ******ここから：コミュニティ参加承認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -223,37 +223,37 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ߥ�˥ƥ����þ�ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：コミュニティ参加承認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:636px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���ʤ��δ������ߥ�˥ƥ��˻��ä��˾���Ƥ�����С�</span></td>
+<td style="width:598px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">あなたの管理コミュニティに参加を希望しているメンバー</span></td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å����� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ -->
 <div class="border_01 bg_09" align="center" style="padding:3px;text-align:center;" class="border_01 bg_03">
 
 ({if $anatani_c_commu_member_confirm_list})
-�ʲ��οͤ����ʤ����������Ƥ��륳�ߥ�˥ƥ��ؤλ��ä��˾���Ƥ��ޤ���<br>
-���äξ�ǧ�ޤ��ϵ��ݤ����򤷤Ƥ�������
+以下の人があなたが管理しているコミュニティへの参加を希望しています。<br>
+参加の承認または拒否を選択してください
 ({else})
-���ߤ��ʤ��δ������ߥ�˥ƥ��˻��ä��������Ƥ���С��Ϥ��ޤ���
+現在あなたの管理コミュニティに参加を要請してるメンバーはいません
 ({/if})
 
 </div>
-<!-- �����ޤǡ������ơ���å����� -->
+<!-- ここまで：主内容＞＞メッセージ -->
 ({if $anatani_c_commu_member_confirm_list})
 <div class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<!-- �������顧�����ơ����С����� -->
+<!-- ここから：主内容＞＞メンバー一覧 -->
 <div class="border_01 bg_08" style="width:562px;margin:0px auto;>
 <img src="./skin/dummy.gif" class="v_spacer_m">
 <table border="0" cellspacing="0" cellpadding="0" style="width:550px;margin:0px auto;">
@@ -280,7 +280,7 @@
 
 <div class="padding_s">
 
-̾&nbsp;&nbsp;��
+名&nbsp;&nbsp;前
 
 </div>
 
@@ -310,7 +310,7 @@
 
 <div class="padding_s">
 
-���ô�˾<br>���ߥ�˥ƥ�
+参加希望<br>コミュニティ
 
 </div>
 
@@ -340,7 +340,7 @@
 
 <div class="padding_s">
 
-��å�����
+メッセージ
 
 </div>
 
@@ -403,18 +403,18 @@
 </table>
 <img src="./skin/dummy.gif" class="v_spacer_m">
 </div>
-<!-- �����ޤǡ������ơ����С����� -->
+<!-- ここまで：主内容＞＞メンバー一覧 -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
 ({/if})
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ߥ�˥ƥ����þ�ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：コミュニティ参加承認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -424,13 +424,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����ߥ�˥ƥ����þ�ǧ****** -->
+<!-- ******ここまで：コミュニティ参加承認****** -->
 <!-- **************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ********************************************* -->
-<!-- ******�������顧���ߥ�˥ƥ������͸��徵ǧ****** -->
+<!-- ******ここから：コミュニティ管理人交代承認****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -440,38 +440,38 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *�������顧���ߥ�˥ƥ������͸��徵ǧ������* -->
-({*�������顧header*})
-<!-- �������顧�������ȥ� -->
+<!-- *ここから：コミュニティ管理人交代承認＞内容* -->
+({*ここから：header*})
+<!-- ここから：小タイトル -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">���ʤ��˥��ߥ�˥ƥ������Ը�����˾���Ƥ�����С�</span></td>
+<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">あなたにコミュニティ管理者交代を希望しているメンバー</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- �����ޤǡ��������ȥ� -->
-({*�����ޤǡ�header*})
-({*�������顧body*})
-<!-- �������顧������ -->
-<!-- �������顧�����ơ���å����� -->
+<!-- ここまで：小タイトル -->
+({*ここまで：header*})
+({*ここから：body*})
+<!-- ここから：主内容 -->
+<!-- ここから：主内容＞＞メッセージ -->
 <div class="border_01 bg_09" align="center" style="padding:3px;text-align:center;" class="border_01 bg_03">
 
 ({if $anatani_c_commu_admin_confirm_list})
-�ʲ��οͤ����ʤ��˥��ߥ�˥ƥ������Ը�����˾���Ƥ��ޤ���<br>
-����ξ�ǧ�ޤ��ϵ��ݤ����򤷤Ƥ�������
+以下の人があなたにコミュニティ管理者交代を希望しています。<br>
+交代の承認または拒否を選択してください
 ({else})
-���ߤ��ʤ��˥��ߥ�˥ƥ������Ը�����������Ƥ���С��Ϥ��ޤ���
+現在あなたにコミュニティ管理者交代を要請してるメンバーはいません
 ({/if})
 
 </div>
-<!-- �����ޤǡ������ơ���å����� -->
+<!-- ここまで：主内容＞＞メッセージ -->
 ({if $anatani_c_commu_admin_confirm_list})
 <div class="border_01 bg_05" align="center">
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-<!-- �������顧�����ơ����С����� -->
+<!-- ここから：主内容＞＞メンバー一覧 -->
 <div class="border_01 bg_08" style="width:562px;margin:0px auto;>
 <img src="./skin/dummy.gif" class="v_spacer_m">
 <table border="0" cellspacing="0" cellpadding="0" style="width:550px;margin:0px auto;">
@@ -498,7 +498,7 @@
 
 <div class="padding_s">
 
-̾&nbsp;&nbsp;��
+名&nbsp;&nbsp;前
 
 </div>
 
@@ -528,7 +528,7 @@
 
 <div class="padding_s">
 
-���ô�˾<br>���ߥ�˥ƥ�
+参加希望<br>コミュニティ
 
 </div>
 
@@ -558,7 +558,7 @@
 
 <div class="padding_s">
 
-��å�����
+メッセージ
 
 </div>
 
@@ -615,18 +615,18 @@
 </table>
 <img src="./skin/dummy.gif" class="v_spacer_m">
 </div>
-<!-- �����ޤǡ������ơ����С����� -->
+<!-- ここまで：主内容＞＞メンバー一覧 -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 </div>
 ({/if})
-<!-- �����ޤǡ������� -->
-({*�����ޤǡ�body*})
-({*�������顧footer*})
-<!-- ̵�� -->
-({*�����ޤǡ�footer*})
-<!-- *�����ޤǡ����ߥ�˥ƥ������͸��徵ǧ�������* -->
+<!-- ここまで：主内容 -->
+({*ここまで：body*})
+({*ここから：footer*})
+<!-- 無し -->
+({*ここまで：footer*})
+<!-- *ここまで：コミュニティ管理人交代承認＞＞内容* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -636,13 +636,13 @@
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******�����ޤǡ����ߥ�˥ƥ������͸��徵ǧ****** -->
+<!-- ******ここまで：コミュニティ管理人交代承認****** -->
 <!-- ********************************************* -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({***************************})
-({**�����ޤǡ��ᥤ�󥳥�ƥ��**})
+({**ここまで：メインコンテンツ**})
 ({***************************})
 </td>
 </tr>

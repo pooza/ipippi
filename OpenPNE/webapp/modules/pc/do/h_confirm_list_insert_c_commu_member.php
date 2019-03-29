@@ -1,31 +1,31 @@
 <?php
 //---------------------------------------------------------------------------
 /**
-¥³¥ß¥å»²²Ã¾µÇ§
+ã‚³ãƒŸãƒ¥å‚åŠ æ‰¿èª
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_member_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_message_send
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£»²²ÃÍ×ÀÁ¤ò¼õ¤±¤Æ¤¤¤ë¥æ¡¼¥¶¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è¦è«‹ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_confirm_list_insert_c_commu_member($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_member_confirm_id = $request['target_c_commu_member_confirm_id'];
 	// ----------
     $is_receive_mail = $_REQUEST['is_receive_mail'];
     
-    //--- ¸¢¸Â¥Á¥§¥Ã¥¯
-    //¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¾µÇ§¤ò¼õ¤±¤¿¿Í
+    //--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+    //ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ æ‰¿èªã‚’å—ã‘ãŸäºº
     
     $cmc = _do_c_commu_member_confirm4c_commu_member_confirm_id($target_c_commu_member_confirm_id);
     
@@ -37,7 +37,7 @@ function doAction_h_confirm_list_insert_c_commu_member($request) {
     
     do_h_confirm_list_insert_c_commu_member($target_c_commu_member_confirm_id, $u, $is_receive_mail);
     
-    $msg = urlencode('¾µÇ§¤¬´°Î»¤·¤Þ¤·¤¿');
+    $msg = urlencode('æ‰¿èªãŒå®Œäº†ã—ã¾ã—ãŸ');
     client_redirect("page.php?p=h_confirm_list&msg=$msg");
 }
-?>
+

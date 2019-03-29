@@ -1,13 +1,13 @@
 ({$inc_header|smarty:nodefaults})
 
-<h2>¿·µ¬¥æ¡¼¥¶¡¼¾·ÂÔ¥á¡¼¥ëÁ÷¿®</h2>
+<h2>æ–°è¦ãƒ¦ãƒ¼ã‚¶ãƒ¼æ‹›å¾…ãƒ¡ãƒ¼ãƒ«é€ä¿¡</h2>
 
 ({if $requests.pc_mails})
 ({if !(($smarty.const.OPENPNE_REGIST_FROM) & ($smarty.const.OPENPNE_REGIST_FROM_PC))})
-PC¤«¤é¤ÏÅĞÏ¿¤Ç¤­¤Ê¤¤ÀßÄê¤Ë¤Ê¤Ã¤Æ¤¤¤Ş¤¹¡£<br>
-<div class="caution">¢¨°Ê²¼¤Î¥¢¥É¥ì¥¹¤Ë¤ÏÁ÷¿®¤µ¤ì¤Ş¤»¤ó</div>
+PCã‹ã‚‰ã¯ç™»éŒ²ã§ããªã„è¨­å®šã«ãªã£ã¦ã„ã¾ã™ã€‚<br>
+<div class="caution">â€»ä»¥ä¸‹ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯é€ä¿¡ã•ã‚Œã¾ã›ã‚“</div>
 ({else})
-PC¥¢¥É¥ì¥¹
+PCã‚¢ãƒ‰ãƒ¬ã‚¹
 ({/if})
 <ul>
 ({foreach from=$requests.pc_mails item=item})
@@ -18,10 +18,10 @@ PC¥¢¥É¥ì¥¹
 
 ({if $requests.ktai_mails})
 ({if !(($smarty.const.OPENPNE_REGIST_FROM) & ($smarty.const.OPENPNE_REGIST_FROM_KTAI))})
-·ÈÂÓ¤«¤é¤ÏÅĞÏ¿¤Ç¤­¤Ê¤¤ÀßÄê¤Ë¤Ê¤Ã¤Æ¤¤¤Ş¤¹¡£<br>
-<div class="caution">¢¨°Ê²¼¤Î¥¢¥É¥ì¥¹¤Ë¤ÏÁ÷¿®¤µ¤ì¤Ş¤»¤ó</div>
+æºå¸¯ã‹ã‚‰ã¯ç™»éŒ²ã§ããªã„è¨­å®šã«ãªã£ã¦ã„ã¾ã™ã€‚<br>
+<div class="caution">â€»ä»¥ä¸‹ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã¯é€ä¿¡ã•ã‚Œã¾ã›ã‚“</div>
 ({else})
-·ÈÂÓ¥¢¥É¥ì¥¹
+æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹
 ({/if})
 <ul>
 ({foreach from=$requests.ktai_mails item=item})
@@ -31,7 +31,7 @@ PC¥¢¥É¥ì¥¹
 ({/if})
 
 ({if $requests.error_mails})
-°Ê²¼¤Î¥¢¥É¥ì¥¹¤ÏÅĞÏ¿ºÑ¤ß¤Î¤¿¤áÁ÷¿®¤µ¤ì¤Ş¤»¤ó¡£
+ä»¥ä¸‹ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã¯ç™»éŒ²æ¸ˆã¿ã®ãŸã‚é€ä¿¡ã•ã‚Œã¾ã›ã‚“ã€‚
 <ul>
 ({foreach from=$requests.error_mails item=item})
 <li>({$item})</li>
@@ -40,47 +40,47 @@ PC¥¢¥É¥ì¥¹
 ({/if})
 
 ({if !$cannot_send})
-Á÷¿®¤·¤Æ¤â¤è¤í¤·¤¤¤Ç¤¹¤«¡©
+é€ä¿¡ã—ã¦ã‚‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ
 ({/if})
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="¿ı¤Î±ıÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('send_invites','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="mails" value="({$requests.mails})">
 <input type="hidden" name="message" value="({$requests.message})">
-({if !$cannot_send})<input type="submit" name="complete" class="submit" value="Á÷¿®">&nbsp;({/if})
-<input type="submit" name="input" class="submit" value="½¤Àµ">
+({if !$cannot_send})<input type="submit" name="complete" class="submit" value="é€ä¿¡">&nbsp;({/if})
+<input type="submit" name="input" class="submit" value="ä¿®æ­£">
 </form>
 
 <hr>
 
 ({if $pc_subject || $ktai_subject})
-<h3>¾·ÂÔ¥á¡¼¥ëÆâÍÆ³ÎÇ§(¢¨ÊÑ¹¹¤Ï¤Ç¤­¤Ş¤»¤ó)</h3>
+<h3>æ‹›å¾…ãƒ¡ãƒ¼ãƒ«å†…å®¹ç¢ºèª(â€»å¤‰æ›´ã¯ã§ãã¾ã›ã‚“)</h3>
 
 ({if $pc_subject})
-<h4>PC¸ş¤±</h4>
+<h4>PCå‘ã‘</h4>
 <table>
 <tr>
-<th>·ïÌ¾</th>
+<th>ä»¶å</th>
 <td>({$pc_subject})</td>
 </tr>
 <tr>
-<th>ËÜÊ¸</th>
+<th>æœ¬æ–‡</th>
 <td><textarea rows="10" cols="72" readonly="readonly">({$pc_body})</textarea></td>
 </tr>
 </table>
 ({/if})
 
 ({if $ktai_subject})
-<h4>·ÈÂÓ¸ş¤±</h4>
+<h4>æºå¸¯å‘ã‘</h4>
 <table>
 <tr>
-<th>·ïÌ¾</th>
+<th>ä»¶å</th>
 <td>({$ktai_subject})</td>
 </tr>
 <tr>
-<th>ËÜÊ¸</th>
+<th>æœ¬æ–‡</th>
 <td><textarea rows="10" cols="72" readonly="readonly">({$ktai_body})</textarea></td>
 </tr>
 </table>

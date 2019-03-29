@@ -15,19 +15,19 @@
 <tr>
 <td class="container main_content" align="center">
 
-({ext_include file="inc_alert_box.tpl"})({* ¥¨¥é¡¼¥á¥Ã¥»¡¼¥¸¥³¥ó¥Æ¥Ê *})
+({ext_include file="inc_alert_box.tpl"})({* ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚³ãƒ³ãƒ†ãƒŠ *})
 
 <table class="container" border="0" cellspacing="0" cellpadding="0">({*BEGIN:container*})
 <tr>
 <td class="full_content" align="center">
 ({***************************})
-({**¤³¤³¤«¤é¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã‹ã‚‰ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <!-- ******************************************** -->
-<!-- ******¤³¤³¤«¤é¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë****** -->
+<!-- ******ã“ã“ã‹ã‚‰ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹****** -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -37,19 +37,19 @@
 <tr>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 <td class="bg_01" align="center">
-<!-- *¤³¤³¤«¤é¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë¡äÆâÍÆ* -->
-({*¤³¤³¤«¤é¡§header*})
+<!-- *ã“ã“ã‹ã‚‰ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹ï¼žå†…å®¹* -->
+({*ã“ã“ã‹ã‚‰ï¼šheader*})
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:398px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">°Ê²¼¤ÎÆâÍÆ¤Ç¤è¤í¤·¤¤¤Ç¤¹¤«¡©</span></td>
+<td style="width:398px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">ä»¥ä¸‹ã®å†…å®¹ã§ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¾®¥¿¥¤¥È¥ë -->
-({*¤³¤³¤Þ¤Ç¡§header*})
-({*¤³¤³¤«¤é¡§body*})
-<!-- ¤³¤³¤«¤é¡§¼çÆâÍÆ -->
+<!-- ã“ã“ã¾ã§ï¼šå°ã‚¿ã‚¤ãƒˆãƒ« -->
+({*ã“ã“ã¾ã§ï¼šheader*})
+({*ã“ã“ã‹ã‚‰ï¼šbody*})
+<!-- ã“ã“ã‹ã‚‰ï¼šä¸»å†…å®¹ -->
 <table border="0" cellspacing="0" cellpadding="0" style="width:574px;">
 ({*********})
 <tr>
@@ -62,7 +62,7 @@
 
 <div class="padding_s">
 
-¥¿¥¤¥È¥ë
+ã‚¿ã‚¤ãƒˆãƒ«
 
 </div>
 
@@ -88,7 +88,7 @@
 
 <div class="padding_s">
 
-ËÜ¡¡¡¡Ê¸
+æœ¬ã€€ã€€æ–‡
 
 </div>
 
@@ -114,7 +114,7 @@
 
 <div class="padding_s">
 
-¼Ì¡¡¿¿ 1
+å†™ã€€çœŸ 1
 
 </div>
 
@@ -140,7 +140,7 @@
 
 <div class="padding_s">
 
-¼Ì¡¡¿¿ 2
+å†™ã€€çœŸ 2
 
 </div>
 
@@ -167,7 +167,7 @@
 
 <div class="padding_s">
 
-¼Ì¿¿¤Î°ÌÃÖ
+å†™çœŸã®ä½ç½®
 
 </div>
 
@@ -177,9 +177,9 @@
 <div class="padding_s">
 
 ({if $c_topic.image_position=="BOTTOM"})
-ËÜÊ¸¤Î²¼
+æœ¬æ–‡ã®ä¸‹
 ({else})
-ËÜÊ¸¤Î¾å
+æœ¬æ–‡ã®ä¸Š
 ({/if})
 
 </div>
@@ -198,7 +198,7 @@
 
 <div class="padding_s">
 
-ÅºÉÕ¥Õ¥¡¥¤¥ë 1
+æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ« 1
 
 </div>
 
@@ -224,7 +224,7 @@
 
 <div class="padding_s">
 
-ÅºÉÕ¥Õ¥¡¥¤¥ë 2
+æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ« 2
 
 </div>
 
@@ -252,13 +252,13 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;margin:0px auto;">
 <tr>
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_add_insert_c_commu_topic">
 
 <td>
 <div align="center" style="text-align:center;">
-<input type="submit" value="¡¡ºî ¡¡À®¡¡">
+<input type="submit" value="ã€€ä½œ ã€€æˆã€€">
 </div>
 </td>
 ({foreach from=$c_topic key=key item=item})
@@ -267,11 +267,11 @@
 </form>
 
 <form action="page.php?p=c_topic_add" method="post">
-<input type="hidden" name="dummy" value="¿ý¤Î±ýÍè¢«ÆüËÜ¸ìÊ¸»ú¥³¡¼¥ÉÈ½ÊÌÊ¸»úÎó">
+<input type="hidden" name="dummy" value="é›€ã®å¾€æ¥â†æ—¥æœ¬èªžæ–‡å­—ã‚³ãƒ¼ãƒ‰åˆ¤åˆ¥æ–‡å­—åˆ—">
 <input type="hidden" name="target_c_commu_id" value="({$c_topic.c_commu_id})">
 <td>
 <div align="center" style="text-align:center;">
-<input type="submit" value="¡¡½¤¡¡ Àµ¡¡">
+<input type="submit" value="ã€€ä¿®ã€€ æ­£ã€€">
 </div>
 </td>
 ({foreach from=$c_topic key=key item=item})
@@ -291,12 +291,12 @@
 </tr>
 ({*********})
 </table>
-<!-- ¤³¤³¤Þ¤Ç¡§¼çÆâÍÆ -->
-({*¤³¤³¤Þ¤Ç¡§body*})
-({*¤³¤³¤«¤é¡§footer*})
-<!-- Ìµ¤· -->
-({*¤³¤³¤Þ¤Ç¡§footer*})
-<!-- *¤³¤³¤Þ¤Ç¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë¡ä¡äÆâÍÆ* -->
+<!-- ã“ã“ã¾ã§ï¼šä¸»å†…å®¹ -->
+({*ã“ã“ã¾ã§ï¼šbody*})
+({*ã“ã“ã‹ã‚‰ï¼šfooter*})
+<!-- ç„¡ã— -->
+({*ã“ã“ã¾ã§ï¼šfooter*})
+<!-- *ã“ã“ã¾ã§ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹ï¼žï¼žå†…å®¹* -->
 </td>
 <td class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
@@ -306,14 +306,14 @@
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
 </tr>
 </table>
-<!-- ******¤³¤³¤Þ¤Ç¡§¿·¤·¤¤¥È¥Ô¥Ã¥¯¤òºîÀ®¤¹¤ë****** -->
+<!-- ******ã“ã“ã¾ã§ï¼šæ–°ã—ã„ãƒˆãƒ”ãƒƒã‚¯ã‚’ä½œæˆã™ã‚‹****** -->
 <!-- ******************************************** -->
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 
 ({***************************})
-({**¤³¤³¤Þ¤Ç¡§¥á¥¤¥ó¥³¥ó¥Æ¥ó¥Ä**})
+({**ã“ã“ã¾ã§ï¼šãƒ¡ã‚¤ãƒ³ã‚³ãƒ³ãƒ†ãƒ³ãƒ„**})
 ({***************************})
 </td>
 </tr>

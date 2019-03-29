@@ -2,7 +2,7 @@
 function doAction_c_event_invite($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $request['target_c_commu_topic_id'];
 	$c_member_ids = $request['c_member_id'];
 	$body = $request['body'];
@@ -10,9 +10,9 @@ function doAction_c_event_invite($request) {
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_commu_id = $c_topic['c_commu_id'];
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 
-	//¥¤¥Ù¥ó¥È¤Î´ÉÍý¼Ô¤Ç¤Ê¤¤¤ÈÁ÷¿®¤Ç¤­¤Ê¤¤
+	//ã‚¤ãƒ™ãƒ³ãƒˆã®ç®¡ç†è€…ã§ãªã„ã¨é€ä¿¡ã§ããªã„
 	if(!_db_is_c_event_admin($c_commu_topic_id,$u)){
 		exit();
 	}
@@ -23,4 +23,4 @@ function doAction_c_event_invite($request) {
 	client_redirect("page.php?p=c_event_invite_end&target_c_commu_topic_id=$c_commu_topic_id");
 
 }
-?>
+

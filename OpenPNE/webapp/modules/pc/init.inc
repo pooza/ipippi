@@ -1,6 +1,6 @@
 <?php
 
-//¥Ç¥Õ¥©¥ë¥È¥Ú¡¼¥¸
+//ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒšãƒ¼ã‚¸
 $GLOBALS['__Framework']['default_page'] = 'h_home';
 $GLOBALS['__Framework']['default_normal'] = 'login_do_login';
 
@@ -13,7 +13,7 @@ if (defined('OPENPNE_ENABLE_PC') && !OPENPNE_ENABLE_PC) {
 
 function init_pc_page(&$smarty)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_html_header', fetch_inc_html_header());
 	$smarty->assign('inc_page_header', fetch_inc_page_header());
 	$smarty->assign('inc_page_footer', fetch_inc_page_footer(true));
@@ -22,23 +22,23 @@ function init_pc_page(&$smarty)
     $smarty->assign('inc_side_banner', p_inc_c_banner_side4null());
     $smarty->assign('side_banner_html', p_common_c_siteadmin4target_pagename('side_banner_html'));
 	
-	// ¤Ï¤Ş¤Á¤Á¤ã¤óÂĞºöÍÑ
+	// ã¯ã¾ã¡ã¡ã‚ƒã‚“å¯¾ç­–ç”¨
 	@session_start();
 	$smarty->assign('PHPSESSID', md5(session_id()));
 	
-	//Ê¸¸À·Ï
+	//æ–‡è¨€ç³»
 	$smarty->assign('WORD_FRIEND', WORD_FRIEND);
 	$smarty->assign('WORD_MY_FRIEND', WORD_MY_FRIEND);
 	$smarty->assign('WORD_FRIEND_HALF', WORD_FRIEND_HALF);
 	$smarty->assign('WORD_MY_FRIEND_HALF', WORD_MY_FRIEND_HALF);
 
-	// ºÇ¿·Æüµ­
+	// æœ€æ–°æ—¥è¨˜
 	$result = p_h_diary_list_all_search_c_diary4c_diary(null, 15, 1);
 	$smarty->assign('diaries', $result[0]);
 	$smarty->assign('blog_entries', p_h_diary_list_all_c_rss_cache_list(15));
 	$smarty->assign('side_banner_html', true);
 
-	// ¥Ë¥å¡¼¥¹
+	// ãƒ‹ãƒ¥ãƒ¼ã‚¹
 	require_once DOCUMENT_ROOT . '/lib/magpierss/rss_fetch.inc';
 	$entries = array();
 	foreach ($GLOBALS['__OpenPNE']['news'] as $name => $url) {
@@ -64,7 +64,7 @@ function init_pc_page(&$smarty)
 
 function init_pc_normal(&$smarty)
 {
-	//---- inc_ ¥Æ¥ó¥×¥ì¡¼¥ÈÍÑ ÊÑ¿ô ----//
+	//---- inc_ ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆç”¨ å¤‰æ•° ----//
 	$smarty->assign('inc_html_header', fetch_inc_html_header());
 	$smarty->assign('inc_page_footer', fetch_inc_page_footer(false));
 	$smarty->assign('inc_extension_pagelayout_top', p_common_c_siteadmin4target_pagename('inc_page_top'));
@@ -72,7 +72,7 @@ function init_pc_normal(&$smarty)
     $smarty->assign('inc_side_banner', p_inc_c_banner_side4null());
     $smarty->assign('side_banner_html', p_common_c_siteadmin4target_pagename('side_banner_html'));
 
-	//Ê¸¸À·Ï
+	//æ–‡è¨€ç³»
 	$smarty->assign('WORD_FRIEND', WORD_FRIEND);
 	$smarty->assign('WORD_MY_FRIEND', WORD_MY_FRIEND);
 	$smarty->assign('WORD_FRIEND_HALF', WORD_FRIEND_HALF);
@@ -81,7 +81,7 @@ function init_pc_normal(&$smarty)
 
 function init_pc_do()
 {
-	// ¤Ï¤Ş¤Á¤Á¤ã¤óÂĞºö
+	// ã¯ã¾ã¡ã¡ã‚ƒã‚“å¯¾ç­–
 	if ($_REQUEST['sessid'] !== md5(session_id())) {
 		if (defined('HAMACHI_EMAIL') && HAMACHI_EMAIL) {
 			$subject = 'SNS Hamachi Checker ' . SNS_NAME;
@@ -90,7 +90,7 @@ function init_pc_do()
 			t_send_email(HAMACHI_EMAIL, $subject, $body);
 		}
 		
-		die('Á°¤Î²èÌÌ¤òºÆÆÉ¤ß¹ş¤ß¤·¤Æ¡¢Áàºî¤ò¤ä¤êÄ¾¤·¤Æ¤¯¤À¤µ¤¤');
+		die('å‰ã®ç”»é¢ã‚’å†èª­ã¿è¾¼ã¿ã—ã¦ã€æ“ä½œã‚’ã‚„ã‚Šç›´ã—ã¦ãã ã•ã„');
 	}
 }
 

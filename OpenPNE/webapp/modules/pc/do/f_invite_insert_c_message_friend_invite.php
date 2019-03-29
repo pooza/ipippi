@@ -4,26 +4,26 @@ function doAction_f_invite_insert_c_message_friend_invite($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
     
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_member_id = $request['target_c_member_id'];
 	$body = $request['body'];
 	$c_member_id_list = $request['c_member_id_list'];
 	// ----------
     
     if(!$c_member_id_list){
-        $msg = urlencode("¶µ¤¨¤ë".WORD_MY_FRIEND."¤òÁªÂò¤·¤Æ¤À¤µ¤¤¡£");
+        $msg = urlencode("æ•™ãˆã‚‹".WORD_MY_FRIEND."ã‚’é¸æŠã—ã¦ã ã•ã„ã€‚");
         client_redirect("page.php?p=f_invite&target_c_member_id=$target_c_member_id&msg=$msg");
         exit;
     }
     
     if(is_null($body) || $body === ''){
-        $msg = urlencode("¥á¥Ã¥»¡¼¥¸¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤");
+        $msg = urlencode("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
         client_redirect("page.php?p=f_invite&target_c_member_id=$target_c_member_id&msg=$msg");
         exit;
     }
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥Õ¥ì¥ó¥É
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ•ãƒ¬ãƒ³ãƒ‰
 
 	foreach ($c_member_id_list as $c_member_id) {
 		if (!_db_is_friend($c_member_id, $u)) {
@@ -34,17 +34,17 @@ function doAction_f_invite_insert_c_message_friend_invite($request) {
     
     $c_member_from = db_common_c_member4c_member_id_LIGHT($u);
 
-    $subject = "¥á¥ó¥Ğ¡¼¾Ò²ğ¥á¥Ã¥»¡¼¥¸";
+    $subject = "ãƒ¡ãƒ³ãƒãƒ¼ç´¹ä»‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸";
     $url = ABSOLUTE_PATH."page.php?p=f_home&target_c_member_id=$target_c_member_id";
 
-// ¥á¥Ã¥»¡¼¥¸ËÜÊ¸
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸æœ¬æ–‡
 $message_body = <<<EOD
-{$c_member_from['nickname']}¤µ¤ó¤«¤é¥á¥ó¥Ğ¡¼¾Ò²ğ¥á¥Ã¥»¡¼¥¸¤¬ÆÏ¤¤¤Æ¤¤¤Ş¤¹¡£
+{$c_member_from['nickname']}ã•ã‚“ã‹ã‚‰ãƒ¡ãƒ³ãƒãƒ¼ç´¹ä»‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒå±Šã„ã¦ã„ã¾ã™ã€‚
 
-¥á¥Ã¥»¡¼¥¸¡§
+ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š
 $body
 
-¤³¤Î¥á¥ó¥Ğ¡¼¤ÎURL¡§
+ã“ã®ãƒ¡ãƒ³ãƒãƒ¼ã®URLï¼š
 $url
 EOD;
 
@@ -54,4 +54,4 @@ EOD;
     
     client_redirect("page.php?p=f_home&target_c_member_id=$target_c_member_id");
 }
-?>
+

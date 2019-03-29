@@ -2,13 +2,13 @@
 
 function doNormalAction_setup($requests)
 {
-	// c_member_secure¤Ë¥Ç¡¼¥¿¤¬¤¢¤Ã¤¿¾ì¹ç¤ÏÌµ¸ú
+	// c_member_secureã«ãƒ‡ãƒ¼ã‚¿ãŒã‚ã£ãŸå ´åˆã¯ç„¡åŠ¹
 	$sql = "SELECT c_member_secure_id FROM c_member_secure LIMIT 1";
 	if (get_one4db($sql)) exit;
 	
 
 	if (!$requests['pc_address']) { 
-		$msg = "¥á¡¼¥ë¥¢¥É¥ì¥¹¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+		$msg = "ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
         client_redirect("module_normal.php?m=setup&p=setup".
 			"&msg=" . urlencode($msg));
 		exit;
@@ -17,14 +17,14 @@ function doNormalAction_setup($requests)
     if (!ctype_alnum($password) ||
         strlen($password) < 6 ||
         strlen($password) > 12) {
-        $msg = "¥Ñ¥¹¥ï¡¼¥É¤Ï6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+        $msg = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6ï½12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„";
 		client_redirect("module_normal.php?m=setup&p=setup".
 			"&msg=" . urlencode($msg));
 		exit;
     }
     
 	if (!$requests['admin_username']) { 
-		$msg = "¥æ¡¼¥¶Ì¾¤òÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+		$msg = "ãƒ¦ãƒ¼ã‚¶åã‚’å…¥åŠ›ã—ã¦ãã ã•ã„";
         client_redirect("module_normal.php?m=setup&p=setup".
 			"&msg=" . urlencode($msg));
 		exit;
@@ -33,7 +33,7 @@ function doNormalAction_setup($requests)
     if (!ctype_alnum($password) ||
         strlen($password) < 6 ||
         strlen($password) > 12) {
-        $msg = "¥Ñ¥¹¥ï¡¼¥É¤Ï6¡Á12Ê¸»ú¤ÎÈ¾³Ñ±Ñ¿ô¤ÇÆşÎÏ¤·¤Æ¤¯¤À¤µ¤¤";
+        $msg = "ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯6ï½12æ–‡å­—ã®åŠè§’è‹±æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„";
 		client_redirect("module_normal.php?m=setup&p=setup".
 			"&msg=" . urlencode($msg));
 		exit;
@@ -60,4 +60,3 @@ function doNormalAction_setup($requests)
 	client_redirect('module_normal.php?m=setup&p=setup_done');
 }
 
-?>

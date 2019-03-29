@@ -12,10 +12,10 @@
 function module_execute($module, $type, $action = '', $errors = array())
 {
 	if (!$module = _check_module($module)) {
-		die('¥â¥¸¥å¡¼¥ë¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó');
+		die('ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
 	}
 	if (!_check_type($type)) {
-		die('¥ê¥¯¥¨¥¹¥È¤Î¼ïÎà¤¬Àµ¤·¤¯¤¢¤ê¤Þ¤»¤ó');
+		die('ãƒªã‚¯ã‚¨ã‚¹ãƒˆã®ç¨®é¡žãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“');
 	}
 	$GLOBALS['__Framework']['current_module'] = $module;
 	$GLOBALS['__Framework']['current_type'] = $type;
@@ -32,28 +32,28 @@ function module_execute($module, $type, $action = '', $errors = array())
 	case "do":
 		$auth = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/auth.inc";
 		if (is_readable($auth)) {
-			// module ¤Î auth.inc ¤ò¸Æ¤Ö
+			// module ã® auth.inc ã‚’å‘¼ã¶
 			require_once($auth);
 		} else {
-			// core ¤Î auth.inc ¤ò¸Æ¤Ö
+			// core ã® auth.inc ã‚’å‘¼ã¶
 			require_once(DOCUMENT_ROOT . "/lib/auth.inc");
 		}
 		break;
 	}
 
 	if (!$action = _check_action($action)) {
-		die('¥Ú¡¼¥¸¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó');
+		die('ãƒšãƒ¼ã‚¸ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
 	}
 	$GLOBALS['__Framework']['current_action'] = $action;	
 
 	$ext = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/ext/{$type}/{$action}.php";
 	$dft = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/{$type}/{$action}.php";
-	if (is_readable($ext)) {  // ³ÈÄ¥¼Â¹Ô¥Õ¥¡¥¤¥ë¥Á¥§¥Ã¥¯
+	if (is_readable($ext)) {  // æ‹¡å¼µå®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 		require_once($ext);
-	} elseif (is_readable($dft)) {  // É¸½à¼Â¹Ô¥Õ¥¡¥¤¥ë¥Á¥§¥Ã¥¯
+	} elseif (is_readable($dft)) {  // æ¨™æº–å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 		require_once($dft);
 	} else {
-		die('¥Ú¡¼¥¸¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó');
+		die('ãƒšãƒ¼ã‚¸ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
 	}
 	
 	// send no-cache header
@@ -64,12 +64,12 @@ function module_execute($module, $type, $action = '', $errors = array())
 		break;
 	}
 
-	// ---------- ¥ê¥¯¥¨¥¹¥È¥Ð¥ê¥Ç¡¼¥·¥ç¥ó ----------
+	// ---------- ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ ----------
 	
-	// ³ÈÄ¥¥Ð¥ê¥Ç¡¼¥¿¥Á¥§¥Ã¥¯
+	// æ‹¡å¼µãƒãƒªãƒ‡ãƒ¼ã‚¿ãƒã‚§ãƒƒã‚¯
 	$local_ini = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/ext/validate/{$type}/{$action}.ini";
 	if (!is_readable($local_ini)) {
-		// É¸½à¥Ð¥ê¥Ç¡¼¥¿
+		// æ¨™æº–ãƒãƒªãƒ‡ãƒ¼ã‚¿
 		$local_ini = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/validate/{$type}/{$action}.ini";
 	}
 	$validator = new CommonValidate;
@@ -105,7 +105,7 @@ function module_execute($module, $type, $action = '', $errors = array())
 	// init function
 	$init_func = "init_{$module}_{$type}";
 	if (function_exists($init_func)) {
-		// call_user_func ¤Ç»²¾ÈÅÏ¤·¤Ç¤­¤Ê¤¤¥Ð¥°¤¬
+		// call_user_func ã§å‚ç…§æ¸¡ã—ã§ããªã„ãƒã‚°ãŒ
 //		call_user_func($init_func, $smarty);
 		if (isset($smarty)) {
 			$init_func($smarty);
@@ -115,9 +115,9 @@ function module_execute($module, $type, $action = '', $errors = array())
 	}
 
 	
-	// ¼Â¹Ô´Ø¿ô¤ò¸Æ¤Ó½Ð¤·²ÄÇ½¤«¥Á¥§¥Ã¥¯
+	// å®Ÿè¡Œé–¢æ•°ã‚’å‘¼ã³å‡ºã—å¯èƒ½ã‹ãƒã‚§ãƒƒã‚¯
 	
-	// ¸Æ¤Ó½Ð¤¹´Ø¿ôÌ¾
+	// å‘¼ã³å‡ºã™é–¢æ•°å
 	if ($type !== 'do_normal') {
 		$call_func = "{$type}Action_{$action}";
 	} else {
@@ -138,7 +138,7 @@ function module_execute($module, $type, $action = '', $errors = array())
 			break;
 		}
 	} else {
-		die('¥Ú¡¼¥¸¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó');
+		die('ãƒšãƒ¼ã‚¸ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“');
 	}
 	// ----------------------------------------------
 
@@ -156,26 +156,26 @@ function module_execute($module, $type, $action = '', $errors = array())
 }
 
 /**
- * ¥â¥¸¥å¡¼¥ëÌ¾¤ò¼èÆÀ
- * ¶õ¤Î¾ì¹ç¤Ï¥Ç¥Õ¥©¥ë¥È¥â¥¸¥å¡¼¥ë¤òÊÖ¤¹
+ * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åã‚’å–å¾—
+ * ç©ºã®å ´åˆã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’è¿”ã™
  * 
- * ´Ö°ã¤Ã¤¿¥â¥¸¥å¡¼¥ëÌ¾¤ò»ØÄê¤·¤¿
- * ¥Ç¥Õ¥©¥ë¥È¥â¥¸¥å¡¼¥ë¤¬Â¸ºß¤·¤Ê¤¤¾ì¹ç¤Ï false
+ * é–“é•ã£ãŸãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åã‚’æŒ‡å®šã—ãŸ
+ * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒå­˜åœ¨ã—ãªã„å ´åˆã¯ false
  * 
  * @param string $module module name
  */
 function _check_module($module)
 {
-	// ±Ñ¿ô»ú¤È¥¢¥ó¥À¡¼¥Ð¡¼¤Î¤ß
-	// ¡Ö../¡×Åù¤Ïµö¤µ¤Ê¤¤
+	// è‹±æ•°å­—ã¨ã‚¢ãƒ³ãƒ€ãƒ¼ãƒãƒ¼ã®ã¿
+	// ã€Œ../ã€ç­‰ã¯è¨±ã•ãªã„
 	if (preg_match('/\W/', $module)) {
-		// ¥â¥¸¥å¡¼¥ëÌ¾¤¬ÉÔÀµ¤Ç¤¹
+		// ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«åãŒä¸æ­£ã§ã™
 		return false;
 	}
 
 	if (empty($module)) {
 		if (empty($GLOBALS['__Framework']['default_module'])) {
-			// ¥â¥¸¥å¡¼¥ë¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Þ¤»¤ó
+			// ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“
 			return false;
 		} else {
 			$module = $GLOBALS['__Framework']['default_module'];
@@ -183,7 +183,7 @@ function _check_module($module)
 	}
 
 	if (!file_exists($GLOBALS['__Framework']['modules_dir'] . '/' . $module)) {
-		// ¥â¥¸¥å¡¼¥ë¤Î»ØÄê¤¬´Ö°ã¤Ã¤Æ¤¤¤Þ¤¹
+		// ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æŒ‡å®šãŒé–“é•ã£ã¦ã„ã¾ã™
 		return false;
 	}
 
@@ -208,17 +208,17 @@ function _check_type($type)
 
 function _check_action($action)
 {
-	// ±Ñ¿ô»ú¤È¥¢¥ó¥À¡¼¥Ð¡¼¤Î¤ß
-	// ¡Ö../¡×Åù¤Ïµö¤µ¤Ê¤¤
+	// è‹±æ•°å­—ã¨ã‚¢ãƒ³ãƒ€ãƒ¼ãƒãƒ¼ã®ã¿
+	// ã€Œ../ã€ç­‰ã¯è¨±ã•ãªã„
 	if (preg_match('/\W/', $action)) {
-		// ¥¢¥¯¥·¥ç¥óÌ¾¤¬ÉÔÀµ¤Ç¤¹
+		// ã‚¢ã‚¯ã‚·ãƒ§ãƒ³åãŒä¸æ­£ã§ã™
 		return false;
 	}
 
 	if (empty($action)) {
 		$type = $GLOBALS['__Framework']['current_type'];
 		if (empty($GLOBALS['__Framework']['default_' . $type])) {
-			// ¥Ú¡¼¥¸¤¬»ØÄê¤µ¤ì¤Æ¤¤¤Þ¤»¤ó
+			// ãƒšãƒ¼ã‚¸ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“
 			return false;
 		} else {
 			$action = $GLOBALS['__Framework']['default_' . $type];
@@ -234,10 +234,10 @@ function send_headers()
 		header("Content-Type: text/html; charset=EUC-JP");
 		
 		// no-cache
-		// ÆüÉÕ¤¬²áµî
+		// æ—¥ä»˜ãŒéŽåŽ»
 		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 		
-		// ¾ï¤Ë½¤Àµ¤µ¤ì¤Æ¤¤¤ë
+		// å¸¸ã«ä¿®æ­£ã•ã‚Œã¦ã„ã‚‹
 		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 		
 		// HTTP/1.1
@@ -252,4 +252,4 @@ function send_headers()
 	}
 }
 
-?>
+

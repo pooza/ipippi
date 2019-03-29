@@ -3,7 +3,7 @@
 function admin_fetch_inc_header($title = '', $display_navi = true)
 {
 	if (!$title) {
-		$title = SNS_NAME . "´ÉÍý¥Ú¡¼¥¸";
+		$title = SNS_NAME . "ç®¡ç†ãƒšãƒ¼ã‚¸";
 	}
 	$v['title'] = $title;
 	$v['display_navi'] = $display_navi;
@@ -46,15 +46,15 @@ function admin_make_pager($page, $page_size, $total_num)
 		'next_page' => 0,
 	);
 
-	// É½¼¨¤·¤Æ¤¤¤ëºÇ¸å¤ÎÈÖ¹æ	
+	// è¡¨ç¤ºã—ã¦ã„ã‚‹æœ€å¾Œã®ç•ªå·	
 	if ($pager['end_num'] > $pager['total_num'])
 		$pager['end_num'] = $pager['total_num'];
 
-	// Á°¥Ú¡¼¥¸
+	// å‰ãƒšãƒ¼ã‚¸
 	if ($pager['page'] > 1)
 		$pager['prev_page'] = $page - 1;
 	
-	// ¼¡¥Ú¡¼¥¸
+	// æ¬¡ãƒšãƒ¼ã‚¸
 	if ($pager['end_num'] < $pager['total_num'])
 		$pager['next_page'] = $page + 1;
 
@@ -92,4 +92,3 @@ function admin_client_redirect($p, $msg = '', $tail = '')
 	client_redirect($url);
 }
 
-?>

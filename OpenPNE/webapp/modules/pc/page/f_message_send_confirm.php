@@ -6,7 +6,7 @@
 function pageAction_f_message_send_confirm($smarty, $requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$form_val['target_c_member_id'] = $requests['target_c_member_id'];
 	$form_val['subject'] = $requests['subject'];
 	$form_val['body'] = $requests['body'];
@@ -25,22 +25,22 @@ function pageAction_f_message_send_confirm($smarty, $requests) {
 
 	$smarty->assign('inc_navi', fetch_inc_navi("f", $target_c_member_id));
 
-	//¥¿¡¼¥²¥Ã¥È¾ðÊó
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆæƒ…å ±
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
-	//¥¿¡¼¥²¥Ã¥È¤Îid
+	//ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã®id
 	$smarty->assign("target_c_member_id", $form_val['target_c_member_id']);
 
 	$smarty->assign("form_val", $form_val);
 
-	//²¼½ñ¤­ÊÝÂ¸
+	//ä¸‹æ›¸ãä¿å­˜
 	if (!empty ($save)) {
 
-		//²¼½ñ¤­ÊÝÂ¸¤¬Â¸ºß¤·¤Ê¤¤
+		//ä¸‹æ›¸ãä¿å­˜ãŒå­˜åœ¨ã—ãªã„
 		if ($form_val['target_c_message_id'] == $form_val['jyusin_c_message_id']) {
 
 			insert_message_to_is_save($form_val['target_c_member_id'], $u, $form_val['subject'], $form_val['body'], $_REQUEST['jyusin_c_message_id']);
-		} else { //²¼½ñ¤­ÊÝÂ¸¤¬Â¸ºß¤¹¤ë
+		} else { //ä¸‹æ›¸ãä¿å­˜ãŒå­˜åœ¨ã™ã‚‹
 
 			update_message_to_is_save($form_val['target_c_message_id'], $form_val['subject'], $form_val['body']);
 		}
@@ -53,4 +53,3 @@ function pageAction_f_message_send_confirm($smarty, $requests) {
 	$smarty->ext_display("f_message_send_confirm.tpl");
 
 }
-?>

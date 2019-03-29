@@ -1,27 +1,27 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center><font color="orange">ºĞ­ÆÃ¨¡§({$c_commu.name})</font></center>
+<center><font color="orange">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¼š({$c_commu.name})</font></center>
 <hr>
 
-¢£¥È¥Ô¥Ã¥¯ºîÀ®<br>
+â– ãƒˆãƒ”ãƒƒã‚¯ä½œæˆ<br>
 ({if $msg})
 <font color="red">({$msg})</font><br>
 ({/if})
 <br>
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_add_insert_c_commu_topic">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
-¥È¥Ô¥Ã¥¯Ì¾<br>
+ãƒˆãƒ”ãƒƒã‚¯å<br>
 <input type="text" name="title" value=""><br>
-ËÜÊ¸<br>
+æœ¬æ–‡<br>
 <textarea name="body"></textarea><br>
-<input type="submit" value="¥È¥Ô¥Ã¥¯ºîÀ®">
+<input type="submit" value="ãƒˆãƒ”ãƒƒã‚¯ä½œæˆ">
 </form>
 
 <hr>
-<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ºĞ­ÆÃ¨¤ËÌá¤ë</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ã«æˆ»ã‚‹</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

@@ -1,5 +1,5 @@
 <?php
-// hash_table ¤Îºï½ü
+// hash_table ã®å‰Šé™¤
 
 
 function doAction_delete_hash_table($requests)
@@ -9,7 +9,7 @@ function doAction_delete_hash_table($requests)
 	$hash_tbl =& AdminHashTable::singleton();
 	$hash_tbl->deleteTable();
 	
-	admin_client_redirect('top', "´ÉÍýÍÑ¥Ú¡¼¥¸Ì¾¤ò¸µ¤ËÌá¤·¤Þ¤·¤¿");
+	admin_client_redirect('top', "ç®¡ç†ç”¨ãƒšãƒ¼ã‚¸åã‚’å…ƒã«æˆ»ã—ã¾ã—ãŸ");
 }
 
-?>
+

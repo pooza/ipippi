@@ -1,11 +1,11 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
-<center>ÍøÍÑµ¬Ìó</center>
+<center>åˆ©ç”¨è¦ç´„</center>
 <hr>
 ({if $c_siteadmin != ""})
 ({$c_siteadmin|nl2br})
 ({else})
-ÍøÍÑµ¬Ìó¤Ï¡¢¤¿¤À¤¤¤Ş½àÈ÷Ãæ¤Ç¤¹¡£
+åˆ©ç”¨è¦ç´„ã¯ã€ãŸã ã„ã¾æº–å‚™ä¸­ã§ã™ã€‚
 ({/if})
 <hr>
 

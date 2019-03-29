@@ -1,13 +1,13 @@
 <?php
 
-//----- ¶¦ÄÌ´Ø¿ô
+//----- å…±é€šé–¢æ•°
 
 /**
- * mail¥Æ¥ó¥×¥ì¡¼¥ÈÆâÍÆ¤òfetch
+ * mailãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆå†…å®¹ã‚’fetch
  * 
- * @param string $tpl_name ¥Æ¥ó¥×¥ì¡¼¥ÈÌ¾(/templates/mail Ä¾²¼¤Î¥Õ¥¡¥¤¥ë)
- * @param array $params Smarty¤Çassign¤µ¤ì¤ëÏ¢ÁÛÇÛÎó
- * @return string Smarty¤¬½ÐÎÏ¤·¤¿HTML¤ÎÊ¸»úÎó
+ * @param string $tpl_name ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆå(/templates/mail ç›´ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«)
+ * @param array $params Smartyã§assignã•ã‚Œã‚‹é€£æƒ³é…åˆ—
+ * @return string SmartyãŒå‡ºåŠ›ã—ãŸHTMLã®æ–‡å­—åˆ—
  */
 function fetch_mail_m_tpl($tpl_name, $params)
 {
@@ -19,7 +19,7 @@ function fetch_mail_m_tpl($tpl_name, $params)
 	$params["OPERATION_COMPANY"] = OPERATION_COMPANY;
 	$params["COPYRIGHT"] = COPYRIGHT;
 
-	// ¥á¡¼¥ë¤Î¾ì¹ç¤ÏHTML¥¨¥¹¥±¡¼¥×¤·¤Ê¤¤
+	// ãƒ¡ãƒ¼ãƒ«ã®å ´åˆã¯HTMLã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã—ãªã„
 	$local_configs = $GLOBALS['__SMARTY'];
 	$local_configs['default_modifiers'] = array();
 	
@@ -32,10 +32,10 @@ function fetch_mail_m_tpl($tpl_name, $params)
 	$smarty->assign('WORD_MY_FRIEND_HALF', WORD_MY_FRIEND_HALF);
     
     
-	// ³ÈÄ¥¥Õ¥¡¥¤¥ë¥Á¥§¥Ã¥¯
+	// æ‹¡å¼µãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 	$tpl = 'file:' . DOCUMENT_ROOT . "/webapp/templates/ext/mail/" . $tpl_name;
 	$place = 'ext';
-	if (!$smarty->template_exists($tpl)) { // ext¥Ç¥£¥ì¥¯¥È¥ê¤Ë¥Æ¥ó¥×¥ì¡¼¥È¤¬¤¢¤ë¤«
+	if (!$smarty->template_exists($tpl)) { // extãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãŒã‚ã‚‹ã‹
 		$tpl = 'file:' . DOCUMENT_ROOT . "/webapp/templates/mail/" . $tpl_name;
 		$place = 'dft';
 	}
@@ -47,10 +47,10 @@ function fetch_mail_m_tpl($tpl_name, $params)
 
 function fetch_inc_signature($smarty)
 {   
-	// ³ÈÄ¥¥Õ¥¡¥¤¥ë¥Á¥§¥Ã¥¯
+	// æ‹¡å¼µãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 	$tpl = 'file:' . DOCUMENT_ROOT . "/webapp/templates/ext/mail/inc_signature.tpl";
 	$place = 'ext';
-	if (!$smarty->template_exists($tpl)) { // ext¥Ç¥£¥ì¥¯¥È¥ê¤Ë¥Æ¥ó¥×¥ì¡¼¥È¤¬¤¢¤ë¤«
+	if (!$smarty->template_exists($tpl)) { // extãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãŒã‚ã‚‹ã‹
 		$tpl = 'file:' . DOCUMENT_ROOT . "/webapp/templates/mail/inc_signature.tpl";
 		$place = 'dft';
 	}
@@ -60,7 +60,7 @@ function fetch_inc_signature($smarty)
 
 //-----
 
-//ËÜÅÐÏ¿´°Î»¥á¡¼¥ë ¾·ÂÔ¼Ô¤Ø
+//æœ¬ç™»éŒ²å®Œäº†ãƒ¡ãƒ¼ãƒ« æ‹›å¾…è€…ã¸
 function do_regist_prof_do_regist_mail_send($c_member_id_from , $c_member_id_to){
 	
 	$c_member = db_common_c_member4c_member_id($c_member_id_from);
@@ -74,7 +74,7 @@ function do_regist_prof_do_regist_mail_send($c_member_id_from , $c_member_id_to)
 	t_send_email($pc_address,$subject,$body,true);
 }
 
-//ËÜÅÐÏ¿´°Î»¥á¡¼¥ë ÅÐÏ¿¼Ô¤Ø
+//æœ¬ç™»éŒ²å®Œäº†ãƒ¡ãƒ¼ãƒ« ç™»éŒ²è€…ã¸
 function do_regist_prof_do_regist2_mail_send($sid){
 	
 	$c_member = do_common_c_member_pre4sid($sid);
@@ -88,7 +88,7 @@ function do_regist_prof_do_regist2_mail_send($sid){
 	t_send_email($pc_address,$subject,$body,true);
 }
 
-//¾·ÂÔ¥á¡¼¥ë\\\\
+//æ‹›å¾…ãƒ¡ãƒ¼ãƒ«\\\\
 function do_h_invite_insert_c_inivte_mail_send($c_member_id_invite, $session, $message, $pc_address){
 	
 	$params = array(
@@ -101,7 +101,7 @@ function do_h_invite_insert_c_inivte_mail_send($c_member_id_invite, $session, $m
 	t_send_email($pc_address,$subject,$body,true);
 }
 
-//¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô¥á¡¼¥ë
+//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œãƒ¡ãƒ¼ãƒ«
 function do_password_query_mail_send($c_member_id, $pc_address, $new_password)
 {
 	$params = array(
@@ -115,7 +115,7 @@ function do_password_query_mail_send($c_member_id, $pc_address, $new_password)
     t_send_email($pc_address, $subject, $body, true);
 }
 
-//¥Ñ¥¹¥ï¡¼¥ÉºÆÈ¯¹Ô¥á¡¼¥ë(·ÈÂÓ)
+//ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰å†ç™ºè¡Œãƒ¡ãƒ¼ãƒ«(æºå¸¯)
 function db_mail_send_m_ktai_password_query($c_member_id, $new_password)
 {
 	$c_member = db_common_c_member4c_member_id($c_member_id, true);
@@ -132,7 +132,7 @@ function db_mail_send_m_ktai_password_query($c_member_id, $new_password)
     t_send_email($c_member['secure']['ktai_address'], $subject, $body, true);
 }
 
-//·Ç¼¨ÈÄ¤¬¹¹¿·¤µ¤ì¤¿¤È¤­¤Î¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(·ÈÂÓ¥á¡¼¥ë¥¢¥É¥ì¥¹¤Ø)
+//æŽ²ç¤ºæ¿ãŒæ›´æ–°ã•ã‚ŒãŸã¨ãã®ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(æºå¸¯ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¸)
 function send_bbs_info_mail($c_commu_topic_comment_id, $c_member_id)
 {
     $comment = _db_common_c_commu_topic_comment4c_commu_topic_comment_id($c_commu_topic_comment_id);
@@ -166,7 +166,7 @@ function send_bbs_info_mail($c_commu_topic_comment_id, $c_member_id)
 }
 
 
-//·Ç¼¨ÈÄ¤¬¹¹¿·¤µ¤ì¤¿¤È¤­¤Î¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(PC¥á¡¼¥ë¥¢¥É¥ì¥¹¤Ø)
+//æŽ²ç¤ºæ¿ãŒæ›´æ–°ã•ã‚ŒãŸã¨ãã®ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(PCãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã¸)
 function send_bbs_info_mail_pc($c_commu_topic_comment_id, $c_member_id)
 {
     $comment = _db_common_c_commu_topic_comment4c_commu_topic_comment_id($c_commu_topic_comment_id);
@@ -194,7 +194,7 @@ function send_bbs_info_mail_pc($c_commu_topic_comment_id, $c_member_id)
     }
 }
 
-//¥¤¥Ù¥ó¥È¤Î¤ªÃÎ¤é¤»¥á¡¼¥ë
+//ã‚¤ãƒ™ãƒ³ãƒˆã®ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«
 function do_c_event_invite_send_mail($c_commu_id,$c_commu_topic_id,$c_member_id, $target_c_member_ids, $body){
 	
 	$member = db_common_c_member4c_member_id($c_member_id);
@@ -222,7 +222,7 @@ function do_c_event_invite_send_mail($c_commu_id,$c_commu_topic_id,$c_member_id,
 	}
 }
 
-//¥¤¥Ù¥ó¥È¤Î°ì³çÁ÷¿®
+//ã‚¤ãƒ™ãƒ³ãƒˆã®ä¸€æ‹¬é€ä¿¡
 function do_c_event_mail_send_mail($c_commu_id,$c_commu_topic_id,$c_member_id, $target_c_member_ids, $subject, $body){
 	$member = db_common_c_member4c_member_id($c_member_id);
 	$event_url = ABSOLUTE_PATH . "page.php?p=c_event_detail&target_c_commu_topic_id=$c_commu_topic_id";
@@ -242,12 +242,12 @@ function do_c_event_mail_send_mail($c_commu_id,$c_commu_topic_id,$c_member_id, $
 	}
 }	
 
-//¥Ç¥¤¥ê¡¼¥Ë¥å¡¼¥¹
+//ãƒ‡ã‚¤ãƒªãƒ¼ãƒ‹ãƒ¥ãƒ¼ã‚¹
 function do_common_send_daily_news(){
 	
 	$list = do_common_c_member_list4null();
 	$send_2_flag = 0;
-	$day_arr = array('Æü','·î','²Ð','¿å','ÌÚ','¶â','ÅÚ');
+	$day_arr = array('æ—¥','æœˆ','ç«','æ°´','æœ¨','é‡‘','åœŸ');
 	$day = date('w');
 	if(strstr(DAILY_NEWS_DAY, $day_arr[$day])) $send_2_flag = 1;
 
@@ -277,7 +277,7 @@ function do_common_send_daily_news(){
 	}
 }
 
-//ÃÂÀ¸Æü¥á¡¼¥ë
+//èª•ç”Ÿæ—¥ãƒ¡ãƒ¼ãƒ«
 function do_common_send_birthday_mail()
 {
     $birth_list = do_common_c_member_list4birthday();
@@ -303,7 +303,7 @@ function do_common_send_birthday_mail()
     }
 }
 
-//¥¹¥±¥¸¥å¡¼¥ë¥á¡¼¥ë
+//ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¡ãƒ¼ãƒ«
 function do_common_send_schedule_mail()
 {
     $date = date('Y-m-d');
@@ -332,7 +332,7 @@ function do_common_send_schedule_mail()
     }
 }
 
-//¢¡¾Ò²ðÊ¸¤¬ÊÔ½¸¤µ¤ì¤Þ¤·¤¿¡ª¥á¡¼¥ë
+//â—†ç´¹ä»‹æ–‡ãŒç·¨é›†ã•ã‚Œã¾ã—ãŸï¼ãƒ¡ãƒ¼ãƒ«
 function do_f_intro_edit_update_c_friend_send_mail($c_member_id, $target_c_member_id){
 
     $c_member_to = db_common_c_member4c_member_id($target_c_member_id, true);
@@ -350,7 +350,7 @@ function do_f_intro_edit_update_c_friend_send_mail($c_member_id, $target_c_membe
 	
 }
 
-//¥³¥ß¥å¥Ë¥Æ¥£¤Ë»²²Ã¤·¤¿¤È¤­¤Î¥á¡¼¥ë
+//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ã«å‚åŠ ã—ãŸã¨ãã®ãƒ¡ãƒ¼ãƒ«
 function do_inc_join_c_commu_send_mail($c_commu_id, $c_member_id_join) 
 {
 	$c_commu = do_common_c_commu4c_commu_id($c_commu_id);
@@ -370,7 +370,7 @@ function do_inc_join_c_commu_send_mail($c_commu_id, $c_member_id_join)
     t_send_email($pc_address, $subject, $body, $is_receive_mail);
 }
 
-//¢¡Í§Ã£¥ê¥ó¥¯¾µÇ§´°Î»¥á¡¼¥ë
+//â—†å‹é”ãƒªãƒ³ã‚¯æ‰¿èªå®Œäº†ãƒ¡ãƒ¼ãƒ«
 function do_h_confirm_list_insert_c_friend_mail_send($c_member_id_from, $u){
 	
     $c_member_from = db_common_c_member4c_member_id($c_member_id_from, true);
@@ -387,7 +387,7 @@ function do_h_confirm_list_insert_c_friend_mail_send($c_member_id_from, $u){
     t_send_email($pc_address,$subject,$body,$is_receive_mail);
 }
 
-//¥á¡¼¥ë¥¢¥É¥ì¥¹ÊÑ¹¹¥á¡¼¥ë
+//ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹å¤‰æ›´ãƒ¡ãƒ¼ãƒ«
 function do_h_config_1_mail_send($target_c_member_id, $session, $pc_address){
 	$params = array(
 	    "c_member" 			=> db_common_c_member4c_member_id($target_c_member_id),
@@ -398,7 +398,7 @@ function do_h_config_1_mail_send($target_c_member_id, $session, $pc_address){
 	t_send_email($pc_address,$subject,$body,true);
 }
 
-//¤¢¤·¤¢¤È¤ªÃÎ¤é¤»¥á¡¼¥ë
+//ã‚ã—ã‚ã¨ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«
 function do_common_send_ashiato_mail($c_member_to,$c_member_from){
 	
 	$c_member_to_list = db_common_c_member4c_member_id($c_member_to, true);
@@ -415,7 +415,7 @@ function do_common_send_ashiato_mail($c_member_to,$c_member_from){
 	t_send_email($pc_address,$subject,$body);
 }
 
-//¢¡¥á¥Ã¥»¡¼¥¸¼õ¿®¥á¡¼¥ë
+//â—†ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å—ä¿¡ãƒ¡ãƒ¼ãƒ«
 function do_common_send_message_mail_send($c_member_id_to, $c_member_id_from){
 	$c_member_to = db_common_c_member4c_member_id($c_member_id_to, true);
 	$pc_address = $c_member_to['secure']['pc_address'];
@@ -432,7 +432,7 @@ function do_common_send_message_mail_send($c_member_id_to, $c_member_id_from){
 }
 
 
-//¢¡¾µÇ§°ÍÍê¥á¥Ã¥»¡¼¥¸¼õ¿®¥á¡¼¥ë
+//â—†æ‰¿èªä¾é ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å—ä¿¡ãƒ¡ãƒ¼ãƒ«
 function do_common_send_message_syoudaku_mail_send($c_member_id_to, $c_member_id_from){
     $c_member_to = db_common_c_member4c_member_id($c_member_id_to, true);
     $pc_address = $c_member_to['secure']['pc_address'];
@@ -449,7 +449,7 @@ function do_common_send_message_syoudaku_mail_send($c_member_id_to, $c_member_id
 	
 }
 
-// ¥í¥°¥¤¥ó¥¢¥É¥ì¥¹ÄÌÃÎ¥á¡¼¥ë
+// ãƒ­ã‚°ã‚¤ãƒ³ã‚¢ãƒ‰ãƒ¬ã‚¹é€šçŸ¥ãƒ¡ãƒ¼ãƒ«
 function do_insert_c_member_mail_send($c_member_id, $password, $ktai_address)
 {
     $c_member_secure = db_common_c_member_secure4c_member_id($c_member_id);
@@ -461,7 +461,7 @@ function do_insert_c_member_mail_send($c_member_id, $password, $ktai_address)
 	
 }
 
-//¾·ÂÔ¤µ¤ì¤¿¤È¤­¤Î¥á¡¼¥ë(ktai)
+//æ‹›å¾…ã•ã‚ŒãŸã¨ãã®ãƒ¡ãƒ¼ãƒ«(ktai)
 function h_invite_insert_c_invite_mail_send($session, $c_member_id_invite, $mail, $message)
 {
     $params['SNS_NAME'] = SNS_NAME;
@@ -473,8 +473,8 @@ function h_invite_insert_c_invite_mail_send($session, $c_member_id_invite, $mail
     t_send_email($mail, $subject, $body);
 }
 
-//¥á¡¼¥ë¥¢¥É¥ì¥¹¤ÎÊÑ¹¹¤ª¤è¤Ó
-//PC¤Çº£¤Þ¤Ç»È¤Ã¤Æ¤¤¤¿¥æ¡¼¥¶¡¼¤¬¿·¤¿¤Ë·ÈÂÓ¥¢¥É¥ì¥¹¤òÅÐÏ¿¤·¤¿¤È¤­¤ËÁ÷¤é¤ì¤ë¥á¡¼¥ë
+//ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã®å¤‰æ›´ãŠã‚ˆã³
+//PCã§ä»Šã¾ã§ä½¿ã£ã¦ã„ãŸãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒæ–°ãŸã«æºå¸¯ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’ç™»éŒ²ã—ãŸã¨ãã«é€ã‚‰ã‚Œã‚‹ãƒ¡ãƒ¼ãƒ«
 function do_mail_sns_change_ktai_mail_send($c_member_id, $session, $ktai_address)
 {
 	$params['SNS_NAME'] = SNS_NAME;
@@ -484,7 +484,7 @@ function do_mail_sns_change_ktai_mail_send($c_member_id, $session, $ktai_address
 	t_send_email($ktai_address, $subject, $body);
 }
 
-//¥í¥°¥¤¥ó¥¢¥É¥ì¥¹ÄÌÃÎ¥á¡¼¥ë
+//ãƒ­ã‚°ã‚¤ãƒ³ã‚¢ãƒ‰ãƒ¬ã‚¹é€šçŸ¥ãƒ¡ãƒ¼ãƒ«
 function do_mail_sns_login_get_mail_send($c_member_id, $sender){
     $c_member_secure = db_common_c_member_secure4c_member_id($c_member_id);
     $params['url'] = ABSOLUTE_PATH . "ktai_normal.php?p=login".
@@ -494,10 +494,10 @@ function do_mail_sns_login_get_mail_send($c_member_id, $sender){
 	t_send_email($sender, $subject, $body);
 }
 
-// ¥³¥ß¥å¥Ë¥Æ¥£¾Ò²ð
+// ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç´¹ä»‹
 function do_common_send_message_syoukai_commu_mail_send($c_member_id_to, $c_member_id_from)
 {
-    //¥á¡¼¥ë
+    //ãƒ¡ãƒ¼ãƒ«
     $c_member_to = db_common_c_member4c_member_id($c_member_id_to, true);
     $pc_address = $c_member_to['secure']['pc_address'];
     $is_receive_mail = $c_member_to['is_receive_mail'];
@@ -512,10 +512,10 @@ function do_common_send_message_syoukai_commu_mail_send($c_member_id_to, $c_memb
     t_send_email($pc_address,$subject,$body,$is_receive_mail);
 }
 
-// ¥á¥ó¥Ð¾Ò²ð
+// ãƒ¡ãƒ³ãƒç´¹ä»‹
 function do_common_send_message_syoukai_member_mail_send($c_member_id_to, $c_member_id_from)
 {
-    //¥á¡¼¥ë
+    //ãƒ¡ãƒ¼ãƒ«
     $c_member_to = db_common_c_member4c_member_id($c_member_id_to, true);
     $pc_address = $c_member_to['secure']['pc_address'];
     $is_receive_mail = $c_member_to['is_receive_mail'];
@@ -532,14 +532,14 @@ function do_common_send_message_syoukai_member_mail_send($c_member_id_to, $c_mem
 
 function do_common_send_mail_regist_get($session, $sender)
 {
-	// ¥á¡¼¥ëÁ÷¿®
+	// ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 	$params['url'] = ABSOLUTE_PATH . "ktai_normal.php?p=regist_pre&ses={$session}"; 
 	list($subject, $body) = fetch_mail_m_tpl("m_ktai_regist_get.tpl", $params);
 	
 	t_send_email($sender, $subject, $body);	
 }
 
-//Âà²ñ´°Î»¥á¡¼¥ë(PC)
+//é€€ä¼šå®Œäº†ãƒ¡ãƒ¼ãƒ«(PC)
 function do_common_send_mail_taikai_end_pc($c_member_id)
 {
 	$c_member = db_common_c_member4c_member_id($c_member_id, true);
@@ -551,7 +551,7 @@ function do_common_send_mail_taikai_end_pc($c_member_id)
 	t_send_email($c_member['secure']['pc_address'], $subject, $body);	
 }
 
-//Âà²ñ´°Î»¥á¡¼¥ë(·ÈÂÓ)
+//é€€ä¼šå®Œäº†ãƒ¡ãƒ¼ãƒ«(æºå¸¯)
 function do_common_send_mail_taikai_end_ktai($c_member_id)
 {
 	$c_member = db_common_c_member4c_member_id($c_member_id, true);
@@ -563,4 +563,3 @@ function do_common_send_mail_taikai_end_ktai($c_member_id)
 	t_send_email($c_member['secure']['ktai_address'], $subject, $body);	
 }
 
-?>

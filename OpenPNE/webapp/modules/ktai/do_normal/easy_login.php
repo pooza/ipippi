@@ -2,7 +2,7 @@
 function doNormalAction_easy_login($requests)
 {
     if(!$c_member_id = db_ktai_c_member_id4easy_access_id(k_common_get_easy_access_id())) {
-        // ǧ�ڥ��顼
+        // 認証エラー
         client_redirect("ktai_normal.php?p=login&msg=14&kad=".urlencode(t_encrypt($requests['ktai_address'])));
         exit;
     }
@@ -17,4 +17,4 @@ function doNormalAction_easy_login($requests)
     client_redirect("ktai_page.php?p=h_home&ksid=" . session_id());
     exit;
 }
-?>
+

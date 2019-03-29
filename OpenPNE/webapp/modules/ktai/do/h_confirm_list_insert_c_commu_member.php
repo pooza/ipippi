@@ -1,18 +1,18 @@
 <?php
 //----------------------------------------------------------------------
 /**
-¥³¥ß¥å»²²Ã¾µÇ§
+ã‚³ãƒŸãƒ¥å‚åŠ æ‰¿èª
 
-[°ú¿ô]
+[å¼•æ•°]
 target_c_commu_member_confirm_id
 
-[¥ê¥À¥¤¥ì¥¯¥ÈÀè]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå…ˆ]
 f_message_send
 
-[¥ê¥À¥¤¥ì¥¯¥È°ú¿ô]
+[ãƒªãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆå¼•æ•°]
 
-[¸¢¸Â]
-¥³¥ß¥å¥Ë¥Æ¥£»²²ÃÍ×ÀÁ¤ò¼õ¤±¤Æ¤¤¤ë¥æ¡¼¥¶¡¼
+[æ¨©é™]
+ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è¦è«‹ã‚’å—ã‘ã¦ã„ã‚‹ãƒ¦ãƒ¼ã‚¶ãƒ¼
 
 */
 function doAction_h_confirm_list_insert_c_commu_member($requests)
@@ -20,14 +20,14 @@ function doAction_h_confirm_list_insert_c_commu_member($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$target_c_commu_member_confirm_id = $requests['target_c_commu_member_confirm_id'];
 	// ----------
 	$is_receive_mail = 0;
 
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å»²²Ã¾µÇ§¤ò¼õ¤±¤Æ¤¤¤ë¿Í
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥å‚åŠ æ‰¿èªã‚’å—ã‘ã¦ã„ã‚‹äºº
 
     $cmc = _do_c_commu_member_confirm4c_commu_member_confirm_id($target_c_commu_member_confirm_id);
 
@@ -39,8 +39,7 @@ function doAction_h_confirm_list_insert_c_commu_member($requests)
 
 	do_h_confirm_list_insert_c_commu_member($target_c_commu_member_confirm_id, $u, $is_receive_mail);
 
-    //msg=3 "¾µÇ§¤¬´°Î»¤·¤Þ¤·¤¿¡£"
+    //msg=3 "æ‰¿èªãŒå®Œäº†ã—ã¾ã—ãŸã€‚"
     client_redirect("ktai_page.php?p=h_confirm_list&msg=3&$tail");
 }
 
-?>

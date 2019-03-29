@@ -2,15 +2,15 @@
 function doAction_c_topic_edit_delete_c_commu_topic_comment_file($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $request['c_commu_topic_id'];
 	$file_index = $request['file_index'];
 	// ----------
 
 	$c_topic = c_topic_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥È¥Ô¥Ã¥¯ºîÀ®¼Ô or ¥³¥ß¥å¥Ë¥Æ¥£´ÉÍý¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒˆãƒ”ãƒƒã‚¯ä½œæˆè€… or ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ç®¡ç†è€…
 	if(!_db_is_c_topic_admin($c_commu_topic_id,$u) &&
 		!_db_is_c_commu_admin($c_topic['c_commu_id'], $u)){
 		handle_kengen_error();
@@ -22,4 +22,4 @@ function doAction_c_topic_edit_delete_c_commu_topic_comment_file($request) {
 
 	client_redirect("page.php?p=c_topic_edit&target_c_commu_topic_id=".$c_commu_topic_id);
 }
-?>
+

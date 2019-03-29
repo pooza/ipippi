@@ -1,7 +1,7 @@
 ({$inc_ktai_header|smarty:nodefaults})
 
 <center><font color="orange">
-ºĞ­ÆÃ¨¡§({$c_commu.name})<br>
+ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¼š({$c_commu.name})<br>
 </font></center>
 <hr>
 
@@ -15,31 +15,31 @@
 <a href="ktai_page.php?p=f_home&target_c_member_id=({$c_commu_topic.c_member_id})&amp;({$tail})">({$c_commu_topic.nickname|default:"&nbsp;"})</a> 
 <br>
 ({$c_commu_topic.body|nl2br|default:"&nbsp;"})<br>
-({if $c_commu_topic.image_filename1})²èÁü¡§[<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;f=jpg">Âç</a>]<br>({/if})
-({if $c_commu_topic.image_filename2})²èÁü¡§[<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;f=jpg">Âç</a>]<br>({/if})
-({if $c_commu_topic.image_filename3})²èÁü¡§[<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;f=jpg">Âç</a>]<br>({/if})
+({if $c_commu_topic.image_filename1})ç”»åƒï¼š[<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;f=jpg">å¤§</a>]<br>({/if})
+({if $c_commu_topic.image_filename2})ç”»åƒï¼š[<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;f=jpg">å¤§</a>]<br>({/if})
+({if $c_commu_topic.image_filename3})ç”»åƒï¼š[<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;f=jpg">å¤§</a>]<br>({/if})
 ({$c_commu_topic.r_datetime|date_format:"%m/%d %H:%M"})
 <br>
 
 ({else})
 
 <a href="ktai_page.php?p=f_home&target_c_member_id=({$c_commu_topic.c_member_id})&amp;({$tail})">({$c_commu_topic.nickname|default:"&nbsp;"})</a> <br>
-³«ºÅÆü»ş¡§<br>
-({$c_commu_topic.open_date|date_format:"%YÇ¯%m·î%dÆü"}) ({$c_commu_topic.open_date_comment})<br> 
-³«ºÅ¾ì½ê¡§<br>
+é–‹å‚¬æ—¥æ™‚ï¼š<br>
+({$c_commu_topic.open_date|date_format:"%Yå¹´%mæœˆ%dæ—¥"}) ({$c_commu_topic.open_date_comment})<br> 
+é–‹å‚¬å ´æ‰€ï¼š<br>
 ({$c_commu_topic.pref}) ({$c_commu_topic.open_pref_comment})<br>
 ({if $c_commu_topic.invite_period != '0000-00-00'})
-Êç½¸´ü¸Â¡§<br>
-({$c_commu_topic.invite_period|date_format:"%YÇ¯%m·î%dÆü"})<br>
+å‹Ÿé›†æœŸé™ï¼š<br>
+({$c_commu_topic.invite_period|date_format:"%Yå¹´%mæœˆ%dæ—¥"})<br>
 ({/if})
-¾ÜºÙ¡§<br>
+è©³ç´°ï¼š<br>
 ({$c_commu_topic.body|nl2br|default:"&nbsp;"})<br>
-({if $c_commu_topic.image_filename1})²èÁü¡§[<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;f=jpg">Âç</a>]<br>({/if})
-({if $c_commu_topic.image_filename2})²èÁü¡§[<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;f=jpg">Âç</a>]<br>({/if})
-({if $c_commu_topic.image_filename3})²èÁü¡§[<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;f=jpg">Âç</a>]<br>({/if})
+({if $c_commu_topic.image_filename1})ç”»åƒï¼š[<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu_topic.image_filename1})&amp;f=jpg">å¤§</a>]<br>({/if})
+({if $c_commu_topic.image_filename2})ç”»åƒï¼š[<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu_topic.image_filename2})&amp;f=jpg">å¤§</a>]<br>({/if})
+({if $c_commu_topic.image_filename3})ç”»åƒï¼š[<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$c_commu_topic.image_filename3})&amp;f=jpg">å¤§</a>]<br>({/if})
 ({$c_commu_topic.r_datetime|date_format:"%m/%d %H:%M"})<br>
 
-<a href="ktai_page.php?p=c_event_member_list&target_c_commu_topic_id=({$c_commu_topic.c_commu_topic_id})&({$tail})">»²²Ã¼Ô¥ê¥¹¥È</a>
+<a href="ktai_page.php?p=c_event_member_list&target_c_commu_topic_id=({$c_commu_topic.c_commu_topic_id})&({$tail})">å‚åŠ è€…ãƒªã‚¹ãƒˆ</a>
 
 ({/if})
 
@@ -50,20 +50,20 @@
 ({foreach from=$c_commu_topic_comment_list item=item})
 ({if $item.delete_reason})
 ({$item.number}).<br>
-<font color="red">ºï½ü¤µ¤ì¤Ş¤·¤¿¡£</font><br>
+<font color="red">å‰Šé™¤ã•ã‚Œã¾ã—ãŸã€‚</font><br>
 ({$item.r_datetime|date_format:"%m/%d %H:%M"})<br><br>
 ({else})
 ({if $item.number != 0})
 ({$item.number}).({if $item.nickname})<a href="ktai_page.php?p=f_home&target_c_member_id=({$item.c_member_id})&amp;({$tail})">({$item.nickname})</a>({/if})
 <br>
 ({$item.body|nl2br|default:"&nbsp;"})<br>
-({if $item.image_filename1})²èÁü¡§[<a href="img.php?filename=({$item.image_filename1})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$item.image_filename1})&amp;f=jpg">Âç</a>]<br>({/if})
-({if $item.image_filename2})²èÁü¡§[<a href="img.php?filename=({$item.image_filename2})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$item.image_filename2})&amp;f=jpg">Âç</a>]<br>({/if})
-({if $item.image_filename3})²èÁü¡§[<a href="img.php?filename=({$item.image_filename3})&amp;w=120&amp;h=120&amp;f=jpg">¾®</a>/<a href="img.php?filename=({$item.image_filename3})&amp;f=jpg">Âç</a>]<br>({/if})
+({if $item.image_filename1})ç”»åƒï¼š[<a href="img.php?filename=({$item.image_filename1})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$item.image_filename1})&amp;f=jpg">å¤§</a>]<br>({/if})
+({if $item.image_filename2})ç”»åƒï¼š[<a href="img.php?filename=({$item.image_filename2})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$item.image_filename2})&amp;f=jpg">å¤§</a>]<br>({/if})
+({if $item.image_filename3})ç”»åƒï¼š[<a href="img.php?filename=({$item.image_filename3})&amp;w=120&amp;h=120&amp;f=jpg">å°</a>/<a href="img.php?filename=({$item.image_filename3})&amp;f=jpg">å¤§</a>]<br>({/if})
 ({$item.r_datetime|date_format:"%m/%d %H:%M"})
 <br>
 ({if ($item.c_member_id == $u || $target_diary_writer==$u) && $item.number != 0})
-[<a href="do_ktai.php?cmd=c_bbs_delete_c_commu_topic_comment&target_c_commu_topic_comment_id=({$item.c_commu_topic_comment_id})&amp;({$tail})">ºï½ü</a>]<br>
+[<a href="do_ktai.php?cmd=c_bbs_delete_c_commu_topic_comment&target_c_commu_topic_comment_id=({$item.c_commu_topic_comment_id})&amp;({$tail})">å‰Šé™¤</a>]<br>
 ({/if})
 <br>
 ({/if})
@@ -72,8 +72,8 @@
 
 ({if $is_prev || $is_next})
 <br>
-({if $is_prev})<a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$c_commu_topic_id})&amp;page=({$page-1})&amp;({$tail})">Á°¤Ø</a> ({/if})
-({if $is_next})<a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$c_commu_topic_id})&amp;page=({$page+1})&amp;({$tail})">¼¡¤Ø</a>({/if})
+({if $is_prev})<a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$c_commu_topic_id})&amp;page=({$page-1})&amp;({$tail})">å‰ã¸</a> ({/if})
+({if $is_next})<a href="ktai_page.php?p=c_bbs&amp;target_c_commu_topic_id=({$c_commu_topic_id})&amp;page=({$page+1})&amp;({$tail})">æ¬¡ã¸</a>({/if})
 <br>
 ({/if})
 
@@ -86,7 +86,7 @@
 ({/if})
 
 <form action="do_ktai.php" method="post">
-<input type="hidden" name="dummy" value="Éä¹æ·Á¼°³ÎÇ§Ê¸»úÎó">
+<input type="hidden" name="dummy" value="ç¬¦å·å½¢å¼ç¢ºèªæ–‡å­—åˆ—">
 <input type="hidden" name="ksid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_bbs_insert_c_commu_topic_comment">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic_id})">
@@ -94,21 +94,21 @@
 ({if $c_commu_topic.event_flag})
 ({if !$is_c_event_admin})
 ({if !$is_c_event_member})
-<input name="join_event" type="submit" value="¥¤¥Ù¥ó¥È¤Ë»²²Ã¤¹¤ë"><br>
+<input name="join_event" type="submit" value="ã‚¤ãƒ™ãƒ³ãƒˆã«å‚åŠ ã™ã‚‹"><br>
 ({else})
-<input name="cancel_event" type="submit" value="»²²Ã¤ò¥­¥ã¥ó¥»¥ë¤¹¤ë"><br>
+<input name="cancel_event" type="submit" value="å‚åŠ ã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã™ã‚‹"><br>
 ({/if})
 ({/if})
-<input name="write_comment" type="submit" value="¥³¥á¥ó¥È¤Î¤ß½ñ¤­¹ş¤à">
+<input name="write_comment" type="submit" value="ã‚³ãƒ¡ãƒ³ãƒˆã®ã¿æ›¸ãè¾¼ã‚€">
 ({else})
-<input type="submit" value="½ñ¤­¹ş¤à">
+<input type="submit" value="æ›¸ãè¾¼ã‚€">
 ({/if})
 </form>
 ({/if})
 ({/if})
 <hr>
 
-<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ºĞ­ÆÃ¨Ä¯Ìß</a><br>
-<a href="ktai_page.php?p=h_home&amp;({$tail})">Î°Ñ</a>
+<a href="ktai_page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})&amp;({$tail})">ï½ºï¾ï½­ï¾†ï¾ƒï½¨ï¾„ï½¯ï¾Œï¾Ÿ</a><br>
+<a href="ktai_page.php?p=h_home&amp;({$tail})">ï¾ï½°ï¾‘</a>
 
 ({$inc_ktai_footer|smarty:nodefaults})

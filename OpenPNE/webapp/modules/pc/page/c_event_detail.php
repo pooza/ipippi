@@ -3,7 +3,7 @@
 function pageAction_c_event_detail($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 	$direc = $requests['direc'];
 	$page = $requests['page'];
@@ -15,7 +15,7 @@ function pageAction_c_event_detail($smarty,$requests) {
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_commu_id = $c_topic['c_commu_id'];
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
 	if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
         handle_kengen_error();
 	}
@@ -33,7 +33,7 @@ function pageAction_c_event_detail($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 
-	//¾ÜºÙÉôÊ¬	
+	//è©³ç´°éƒ¨åˆ†	
 	$smarty->assign("c_commu",$c_commu);
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_topic['file_filename1_url'] = urlencode($c_topic['file_filename1']);
@@ -41,7 +41,7 @@ function pageAction_c_event_detail($smarty,$requests) {
 	$c_topic['file_filename3_url'] = urlencode($c_topic['file_filename3']);
 	$smarty->assign("c_topic",$c_topic);
 
-	//½ñ¤­¹þ¤ß°ìÍ÷ÉôÊ¬
+	//æ›¸ãè¾¼ã¿ä¸€è¦§éƒ¨åˆ†
 	$page += $direc;
 	if ($all==1) $page_size = 1000;
 	else $page_size = 10;
@@ -75,4 +75,4 @@ function pageAction_c_event_detail($smarty,$requests) {
 
 	$smarty->ext_display('c_event_detail.tpl');
 }
-?>
+

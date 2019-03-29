@@ -1,5 +1,5 @@
 <?php
-// ¥×¥í¥Õ¥£¡¼¥ë¹àÌÜÊÔ½¸
+// ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«é …ç›®ç·¨é›†
 
 
 function pageAction_update_c_profile(&$smarty,$requests)
@@ -13,4 +13,3 @@ function pageAction_update_c_profile(&$smarty,$requests)
 	$smarty->ext_display("update_c_profile.tpl");
 }
 
-?>

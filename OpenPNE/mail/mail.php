@@ -5,7 +5,7 @@
 require_once(dirname(dirname(__FILE__)) . '/lib/init.inc');
 
 /**
- * �饤�֥���ɤ߹���
+ * ライブラリ読み込み
  */
 require_once(PEAR_DIR . 'Mail.php');
 require_once(PEAR_DIR . 'Mail/mimeDecode.php');
@@ -17,7 +17,7 @@ require_once(DOCUMENT_ROOT . '/lib/tejimaya/db_mail.php');
 require_once(DOCUMENT_ROOT . '/mail/mail_sns.php');
 
 
-// ɸ�����Ϥ���᡼��ǡ������ɤ߹���
+// 標準入力からメールデータの読み込み
 $stdin = fopen("php://stdin", "rb");
 $raw_mail = "";
 do {
@@ -29,10 +29,10 @@ do {
 } while(true);
 fclose($stdin);
 
-// �᡼��ν���
+// メールの処理
 m_process_mail($raw_mail);
 
-// �ǥХå��ѥ�����¸
+// デバッグ用ログ保存
 m_debug_log(ob_get_contents(), PEAR_LOG_DEBUG);
 @ob_end_clean();
 
@@ -41,11 +41,11 @@ exit;
 
 
 /**
- * �᡼�����
+ * メール処理
  */
 function m_process_mail($raw_mail)
 {
-    // �᡼��Υǥ�����
+    // メールのデコード
     list($mail, $from, $to) = m_decode_mail($raw_mail);
     
     // for debug
@@ -73,7 +73,7 @@ function m_process_mail($raw_mail)
 }
 
 /**
- * �᡼��Υǥ�����
+ * メールのデコード
  */
 function m_decode_mail($raw_mail)
 {
@@ -87,15 +87,15 @@ function m_decode_mail($raw_mail)
     $from = $mail->headers['from'];
     $to = $mail->headers['to'];
 
-	// "(���֥륯�����ơ������)�������
+	// "(ダブルクォーテーション)を取り除く
     // "hogehoge..hoge"@docomo.ne.jp
     $from = str_replace( '"', '', $from);
     $to = str_replace('"', '', $to);
     
-    // <test@docomo.ne.jp> �Ȥ������ɥ쥹�ˤʤ뤳�Ȥ����롣
-    //   ���ܸ� <test@docomo.ne.jp>
-    // �Τ褦�ʾ���ʣ���ޥå������ǽ��������Τǡ�
-    // �ޥå������Ǹ�Τ�Τ��äƤ���褦���ѹ�
+    // <test@docomo.ne.jp> というアドレスになることがある。
+    //   日本語 <test@docomo.ne.jp>
+    // のような場合に複数マッチする可能性があるので、
+    // マッチした最後のものを取ってくるように変更
     $matches = array();
     $regx = '/([\.\w!#$%&\'*+-\/=?^`{|}~]+@[\w!#$%&\'*+-\/=?^`{|}~]+(\.[\w!#$%&\'*+-\/=?^`{|}~]+)*)/';
     if (preg_match_all($regx, $from, $matches)) {
@@ -113,7 +113,7 @@ function m_decode_mail($raw_mail)
 }
 
 /**
- * Subject �����Ƥ����(��ʸ���������Ѵ�)
+ * Subject の内容を抽出(＋文字コード変換)
  */
 function m_get_subject(&$mail)
 {
@@ -122,7 +122,7 @@ function m_get_subject(&$mail)
 }
 
 /**
- * �᡼��ܥǥ�����ƥ����Ȥ����(��ʸ���������Ѵ�)
+ * メールボディからテキストを抽出(＋文字コード変換)
  */
 function m_get_text_body(&$mail)
 {
@@ -155,7 +155,7 @@ function m_convert_text($string, $from_encoding = "")
 	
 	$string = str_replace("\0", "", $string);
 	$string = rtrim($string);
-	$string = mb_ereg_replace('[��]+$', "", $string);
+	$string = mb_ereg_replace('[　]+$', "", $string);
 	
 	return $string;
 }
@@ -174,27 +174,27 @@ function m_get_image(&$mail)
     		 in_array($mail->ctype_secondary, $allowed_type)) {
     	$image_data = $mail->body;
     	
-         // �������ɤ��������å�
+         // 画像かどうかチェック
     	if (!@imagecreatefromstring($image_data)) {
-	        // base64_decode���ƥ�ȥ饤
+	        // base64_decodeしてリトライ
 	        $image_data = base64_decode($image_data);
 	        if (!@imagecreatefromstring($image_data)) return "";
     	}
     	
-        // ����ե���������
+        // 一時ファイルを作成
         $tmpfname = tempnam(DOCUMENT_ROOT . "/var/tmp", "MAIL_");
         
         $fp = fopen($tmpfname, "wb");
         fwrite($fp, $image_data);
 		fclose($fp);
 		
-		// �����������Υ����å�
+		// 画像サイズのチェック
 		if (filesize($tmpfname) > 300*1024) {
 			unlink($tmpfname);
 			return "";
 		}
 		
-		// Content-Type �����������ɤ��������å�
+		// Content-Type が正しいかどうかチェック
 		switch ($mail->ctype_secondary) {
 		case "jpeg":
 			if (!@imagecreatefromjpeg($tmpfname)) $image_data = "";
@@ -214,7 +214,7 @@ function m_get_image(&$mail)
 }
 
 /**
- * �ǥХå��ѥ�����¸
+ * デバッグ用ログ保存
  */
 function m_debug_log($msg, $priority =  PEAR_LOG_WARNING)
 {
@@ -227,4 +227,3 @@ function m_debug_log($msg, $priority =  PEAR_LOG_WARNING)
 	$file->log($msg, $priority);
 }
 
-?>

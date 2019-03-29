@@ -5,14 +5,14 @@ function doAction_c_topic_add_insert_c_commu_topic($requests)
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_commu_id = $requests['target_c_commu_id'];
 	$title  = $requests['title'];
 	$body = $requests['body'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥³¥ß¥å¥Ë¥Æ¥£»²²Ã¼Ô
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£å‚åŠ è€…
 	
 	$status = db_common_commu_status($u, $c_commu_id);
 
@@ -53,12 +53,11 @@ function doAction_c_topic_add_insert_c_commu_topic($requests)
 		);
 	$insert_id = do_c_event_add_insert_c_commu_topic_comment($insert_c_commu_topic_comment);
 
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(·ÈÂÓ¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(æºå¸¯ã¸)
 	send_bbs_info_mail($insert_id, $u);
-	//¤ªÃÎ¤é¤»¥á¡¼¥ëÁ÷¿®(PC¤Ø)
+	//ãŠçŸ¥ã‚‰ã›ãƒ¡ãƒ¼ãƒ«é€ä¿¡(PCã¸)
 	send_bbs_info_mail_pc($insert_id, $u);
 
 	client_redirect("ktai_page.php?p=c_bbs&target_c_commu_topic_id=$c_commu_topic_id&$tail");
 }
 
-?>

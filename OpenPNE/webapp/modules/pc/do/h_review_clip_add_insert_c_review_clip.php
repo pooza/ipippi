@@ -2,12 +2,12 @@
 function doAction_h_review_clip_add_insert_c_review_clip($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	// --- ¥ê¥¯¥¨¥¹¥ÈÊÑ¿ô
+	// --- ãƒªã‚¯ã‚¨ã‚¹ãƒˆå¤‰æ•°
 	$c_review_id = $request['c_review_id'];
 	// ----------
 
-	//--- ¸¢¸Â¥Á¥§¥Ã¥¯
-	//¥ì¥Ó¥å¡¼¥³¥á¥ó¥Èºî¼Ô°Ê³°
+	//--- æ¨©é™ãƒã‚§ãƒƒã‚¯
+	//ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚³ãƒ¡ãƒ³ãƒˆä½œè€…ä»¥å¤–
 
 	if(do_h_review_clip_add_c_review_id4c_review_id_c_member_id($c_review_id, $u)){
 		client_redirect("page.php?p=h_review_clip_list");
@@ -20,4 +20,4 @@ function doAction_h_review_clip_add_insert_c_review_clip($request) {
 
 	client_redirect("page.php?p=h_review_clip_list");		
 }
-?>
+

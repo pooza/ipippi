@@ -6,4 +6,3 @@ function normalAction_setup_done($smarty,$requests)
 	$smarty->ext_display("setup_done.tpl");
 }
 
-?>
