@@ -25,4 +25,3 @@ if(!$img->generate_img()) {exit(1);}
 
 if(!$img->output_img()) {exit(1);}
 
-

@@ -21,8 +21,8 @@ if (!isset($_SESSION['timestamp']) ||
 	__logout(15, $_SESSION['c_member_id']);
 }
 if (!isset($_SESSION['idle']) ||
-    ($idletime && ($_SESSION['idle'] + $idletime) < time())
-    ) {
+	($idletime && ($_SESSION['idle'] + $idletime) < time())
+	) {
 	__logout(15, $_SESSION['c_member_id']);
 }
 
@@ -31,11 +31,10 @@ $_SESSION['idle'] = time();
 $GLOBALS['KTAI_C_MEMBER_ID'] = $_SESSION['c_member_id'];
 $GLOBALS['KTAI_URL_TAIL'] = "ksid=" . session_id();
 
-
 function __logout($msg = 0, $c_member_id = 0)
 {
 	@session_destroy();
-	
+
 	$url = "ktai_normal.php?p=login";
 	if ($msg) {
 		$url .= "&msg=$msg";

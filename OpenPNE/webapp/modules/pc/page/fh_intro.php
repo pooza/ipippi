@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_fh_intro($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -19,7 +17,7 @@ function pageAction_fh_intro($smarty,$requests) {
 		exit;
 	}
 
-	// navi 振り分け用	
+	// navi 振り分け用
 	if($target_c_member_id == $u) {
 		$type = "h";
 	} else {

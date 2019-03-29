@@ -25,19 +25,19 @@ function doAction_fh_diary_delete_c_diary_comment($request) {
 	$target_c_diary_comment_id =  $_REQUEST['target_c_diary_comment_id'];
 
 	foreach( $target_c_diary_comment_id as $val ) {
-		
+
 		//--- 権限チェック
 		//日記作成者 or コメント作成者
-		
-		$target_c_diary_comment = do_fh_diary_c_diary_comment4c_diary_comment_id($val);
-	    $target_c_diary_id = $target_c_diary_comment['c_diary_id'];
-	    
-	    $c_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
-	    if ($c_diary['c_member_id'] != $u
-	        && $target_c_diary_comment['c_member_id'] != $u) {
 
-	        handle_kengen_error();
-	    }    	
+		$target_c_diary_comment = do_fh_diary_c_diary_comment4c_diary_comment_id($val);
+		$target_c_diary_id = $target_c_diary_comment['c_diary_id'];
+
+		$c_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
+		if ($c_diary['c_member_id'] != $u
+			&& $target_c_diary_comment['c_member_id'] != $u) {
+
+			handle_kengen_error();
+		}
 		//---
 
 		//コメント削除実行

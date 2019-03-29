@@ -27,9 +27,9 @@ function doAction_inc_click_top_banner($request) {
 
 	//---
 	$p = $_SERVER['HTTP_REFERER'];
-	
+
 	do_inc_click_top_banner($target_c_banner_id, $u, $p);
-	
+
 	$c_banner = do_inc_click_top_banner_c_banner4c_banner_id($target_c_banner_id);
 	client_redirect_absolute($c_banner['a_href']);
 }

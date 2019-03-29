@@ -24,27 +24,26 @@ function doAction_f_link_request_insert_c_friend_confirm($request) {
 	$body = $request['body'];
 	// ----------
 
-    //--- 権限チェック
-    //フレンドでない or フレンド承認中でない
-    
-    $status = db_common_friend_status($u, $target_c_member_id);
-    if ($status['is_friend']) {
-        client_redirect("page.php?p=f_link_request_err_already&target_c_member_id=$target_c_member_id");
-        exit;
-    } elseif($status['is_friend_confirm']) {
-        client_redirect("page.php?p=f_link_request_err_wait&target_c_member_id=$target_c_member_id");
-        exit;
-    }
-    
-    //アクセスブロック設定
+	//--- 権限チェック
+	//フレンドでない or フレンド承認中でない
+
+	$status = db_common_friend_status($u, $target_c_member_id);
+	if ($status['is_friend']) {
+		client_redirect("page.php?p=f_link_request_err_already&target_c_member_id=$target_c_member_id");
+		exit;
+	} elseif($status['is_friend_confirm']) {
+		client_redirect("page.php?p=f_link_request_err_wait&target_c_member_id=$target_c_member_id");
+		exit;
+	}
+
+	//アクセスブロック設定
 	if (p_common_is_access_block($u, $target_c_member_id)) {
 		client_redirect("page.php?p=h_access_block");
 		exit;
 	}
-    //---
+	//---
 
-    
-    $c_member_id_from	= $u;
+	$c_member_id_from	= $u;
 
 	do_f_link_request_insert_c_friend_confirm($c_member_id_from,$target_c_member_id,$body);
 

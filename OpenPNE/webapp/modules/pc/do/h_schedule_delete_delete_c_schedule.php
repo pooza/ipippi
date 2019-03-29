@@ -15,9 +15,8 @@ function doAction_h_schedule_delete_delete_c_schedule($request) {
 	}
 	//---
 
-
 	do_h_schedule_delte_delete_c_schedule4c_schedule_id($target_c_schedule_id);
-  
+
 	client_redirect("page.php?p=h_schedule_delete_end");
 }
 

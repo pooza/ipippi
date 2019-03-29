@@ -34,7 +34,6 @@ function pageAction_f_link_request($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("f",$target_c_member_id));
 
-
 	//ターゲット情報
 	$smarty->assign("target_member", db_common_c_member4c_member_id($target_c_member_id));
 
@@ -43,7 +42,6 @@ function pageAction_f_link_request($smarty,$requests) {
 
 	//ターゲットのid
 	$smarty->assign("target_c_member_id" ,$target_c_member_id);
-
 
 	$form_val=array(
 	  'target_c_member_id'=>$target_c_member_id,

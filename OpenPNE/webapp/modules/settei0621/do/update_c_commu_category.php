@@ -1,11 +1,10 @@
 <?php
 // 小カテゴリ編集
 
-
 function doAction_update_c_commu_category($requests)
 {
 	man_init_admin_do();
-	
+
 	if ($requests['c_commu_category_id']) {
 		db_admin_update_c_commu_category(
 			$requests['c_commu_category_id'],
@@ -18,5 +17,4 @@ function doAction_update_c_commu_category($requests)
 		exit;
 	}
 }
-
 

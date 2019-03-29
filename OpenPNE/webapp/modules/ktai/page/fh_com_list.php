@@ -18,7 +18,7 @@ function pageAction_fh_com_list($smarty, $requests)
 
 	// メンバー情報
 	$smarty->assign("target_c_member", k_p_fh_com_list_c_member4c_member_id($target_c_member_id));
-	
+
 	// 参加コミュニティリスト
 	$page_size = 10;
 	$page += $direc;

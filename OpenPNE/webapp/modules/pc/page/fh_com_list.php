@@ -1,10 +1,5 @@
 <?php
 
-
-
-
-
-
 //---------------------------------------------------------------------------
 function pageAction_fh_com_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();

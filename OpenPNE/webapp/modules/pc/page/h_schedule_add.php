@@ -1,6 +1,5 @@
 <?php
 
-
 //---------------------------------------------------------------------------
 	//	File:h_schedule_add.tpl
 //---------------------------------------------------------------------------
@@ -42,29 +41,28 @@ function pageAction_h_schedule_add($smarty,$requests) {
 
 	  $month_list = array();
 	  for ($i=1; $i <= 12; $i++) {
-	    $month_list[$i] = $i;
+		$month_list[$i] = $i;
 	  }
 	  $smarty->assign('month_list', $month_list);
 
-	  
 	  $day_list = array();
 	  for ($i=1; $i <= 31; $i++) {
-	    $day_list[$i] = $i;
+		$day_list[$i] = $i;
 	  }
 	  $smarty->assign('day_list', $day_list);
 
 	  $hour_list = array();
 	  for ($i=0; $i <= 23; $i++) {
-	    $hour_list[$i] = sprintf("%02d", $i);
+		$hour_list[$i] = sprintf("%02d", $i);
 	  }
 	  $smarty->assign('hour_list', $hour_list);
 
 	  $minute_list = array();
 	  for ($i=0; $i < 60; $i+=15) {
-	    $minute_list[$i] = sprintf("%02d", $i);
+		$minute_list[$i] = sprintf("%02d", $i);
 	  }
 	  $smarty->assign('minute_list', $minute_list);
-	  
+
 	$smarty->ext_display("h_schedule_add.tpl");
 }
 

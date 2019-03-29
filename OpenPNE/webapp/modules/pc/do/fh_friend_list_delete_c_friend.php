@@ -27,7 +27,7 @@ function doAction_fh_friend_list_delete_c_friend($request) {
 	//フレンド
 	//フレンドでなくても特に影響はないのでチェックしない
 	//---
-    
+
 	$ret = do_fh_friend_list_delete_c_friend($u, $target_c_member_id);
 
 	client_redirect("page.php?p=h_manage_friend");

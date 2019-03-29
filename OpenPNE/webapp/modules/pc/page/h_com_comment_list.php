@@ -13,7 +13,6 @@ function pageAction_h_com_comment_list($smarty,$requests) {
 
 		$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
-
 		//日記一覧
 		$page = $page + $direc;
 		$page_size = 50;

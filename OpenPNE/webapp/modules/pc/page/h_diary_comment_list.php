@@ -6,11 +6,10 @@ function pageAction_h_diary_comment_list($smarty,$requests) {
 
 	// --- リクエスト変数
 	$direc = $requests['direc'];
-	$page = $requests['page'];	
+	$page = $requests['page'];
 	// ----------
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
-
 
 	//日記一覧
 	$page = $page + $direc;

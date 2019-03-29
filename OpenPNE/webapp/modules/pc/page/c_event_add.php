@@ -1,11 +1,8 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_c_event_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
-
 
 	// --- リクエスト変数
 	$c_commu_id = $requests['target_c_commu_id'];

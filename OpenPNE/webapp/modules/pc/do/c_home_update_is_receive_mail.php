@@ -11,7 +11,7 @@ function doAction_c_home_update_is_receive_mail($request) {
 
 	//--- 権限チェック
 	//必要なし
-	//---	
+	//---
 
 	//PC&ktaiの両方を一度に更新
 	do_c_home_update_is_receive_mail($target_c_commu_id, $u, $is_receive_mail, $is_receive_mail_pc);

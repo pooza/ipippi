@@ -16,19 +16,19 @@ function pageAction_h_diary_edit($smarty,$requests) {
 		$c_diary['body'] = $body;
 	}
 
-    // target が指定されていない
-    // 新規作成
-    if (!$target_c_diary_id) {
-    	client_redirect("page.php?p=h_diary_add");
-    	exit;
-    }
-	    
+	// target が指定されていない
+	// 新規作成
+	if (!$target_c_diary_id) {
+		client_redirect("page.php?p=h_diary_add");
+		exit;
+	}
+
 	// target の日記が存在しない
 	if (!p_common_is_active_c_diary_id($target_c_diary_id) && $target_c_diary_id != null) {
 		client_redirect("page.php?p=h_err_fh_diary");
 		exit;
 	}
-	
+
 	//--- 権限チェック
 	//日記の作成者
 	if ($u != $c_diary['c_member_id']) {
@@ -56,10 +56,10 @@ function pageAction_h_diary_edit($smarty,$requests) {
 	$month= date("n");
 	//日記一覧、カレンダー用変数
 	$date_val=	array(
-        'year' => $year,
-        'month' => $month,
-        'day' => null,
-    );
+		'year' => $year,
+		'month' => $month,
+		'day' => null,
+	);
 	$smarty->assign("date_val", $date_val);
 
 	//日記のカレンダー
@@ -70,7 +70,7 @@ function pageAction_h_diary_edit($smarty,$requests) {
 
 	//各月の日記
 	$smarty->assign("date_list",p_fh_diary_list_date_list4c_member_id($u));
-	
+
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_diary_edit.tpl");
 }

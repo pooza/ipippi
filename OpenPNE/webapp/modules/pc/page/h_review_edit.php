@@ -22,6 +22,6 @@ function pageAction_h_review_edit($smarty,$requests) {
 	$c_review_comment = p_h_review_add_write_c_review_comment4asin_c_member_id($asin, $u);
 	$smarty->assign('c_review_comment', $c_review_comment);
 
-	$smarty->ext_display('h_review_edit.tpl');	
+	$smarty->ext_display('h_review_edit.tpl');
 }
 

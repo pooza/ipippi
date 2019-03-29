@@ -1,11 +1,10 @@
 <?php
 // プロフィール項目編集
 
-
 function doAction_update_c_profile($requests)
 {
 	man_init_admin_do();
-	
+
 	if ($requests['c_profile_id'] &&
 		preg_match('/^[a-zA-Z0-9_]+$/', $requests['name']) && $requests['caption']) {
 		db_admin_update_c_profile($requests['c_profile_id']

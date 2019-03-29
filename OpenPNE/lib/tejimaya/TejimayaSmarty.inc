@@ -2,7 +2,6 @@
 
 require_once(DOCUMENT_ROOT . '/lib/smarty/Smarty.class.php');
 
-
 class TejimayaSmarty extends Smarty
 {
 	var $t_template;
@@ -14,7 +13,7 @@ class TejimayaSmarty extends Smarty
 	function TejimayaSmarty($configs=array())
 	{
 		$this->Smarty();
-		
+
 		// 設定値をセット
 		foreach ($configs as $key => $value) {
 			if (isset($this->$key)) {
@@ -36,7 +35,7 @@ class TejimayaSmarty extends Smarty
 	{
 		$this->ext_fetch($resource_name, $cache_id, $compile_id, true);
 	}
-	
+
 	function ext_fetch($resource_name, $cache_id = null, $compile_id = null, $display = false)
 	{
 		if (!is_string($resource_name)) {
@@ -61,7 +60,7 @@ class TejimayaSmarty extends Smarty
 			$tpl = $resource_name;
 		}
 		$cache_id = $compile_id = $type .'_'. $place;
-		return $this->fetch($tpl, $cache_id, $compile_id, $display);		
+		return $this->fetch($tpl, $cache_id, $compile_id, $display);
 	}
 }
 

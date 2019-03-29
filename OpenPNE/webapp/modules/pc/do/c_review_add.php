@@ -10,10 +10,9 @@ function doAction_c_review_add($request) {
 	// ----------
 
 	//--- 権限チェック
-	//必要なし	
+	//必要なし
 
 	//---
-
 
 	$product = p_h_review_write_product4asin($asin);
 

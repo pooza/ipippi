@@ -35,14 +35,13 @@ function doAction_f_message_send_insert_c_message($requests)
 	if ($c_member_id_to == $u) {
 		handle_kengen_error();
 	}
-	
+
 	// アクセスブロック
 	if(p_common_is_access_block($u, $c_member_id_to)){
 		client_redirect("ktai_page.php?p=h_access_block&$tail");
 		exit;
 	}
 	//---
-
 
 	if(is_null($subject) || $subject === ''){
 		//msg=2 "タイトルを入力して下さい。"

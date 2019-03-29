@@ -7,14 +7,14 @@ function pageAction_c_home($smarty,$requests) {
 	// --- リクエスト変数
 	$target_c_commu_id = $requests['target_c_commu_id'];
 	// ----------
-    $c_commu = p_common_c_commu4c_commu_id($target_c_commu_id);
+	$c_commu = p_common_c_commu4c_commu_id($target_c_commu_id);
 
 	//コミュニティの存在の有無
-    if (!$c_commu) {
-        client_redirect("page.php?p=h_err_c_home");
-        exit;
-    }
-	
+	if (!$c_commu) {
+		client_redirect("page.php?p=h_err_c_home");
+		exit;
+	}
+
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 
 	$smarty->assign("is_c_commu_admin", p_common_is_c_commu_admin4c_member_id($target_c_commu_id,$u) );
@@ -39,7 +39,7 @@ function pageAction_c_home($smarty,$requests) {
 
 	// inc_entry_point
 	$smarty->assign('inc_entry_point', fetch_inc_entry_point_c_home());
-	
+
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("c_home.tpl");
 }

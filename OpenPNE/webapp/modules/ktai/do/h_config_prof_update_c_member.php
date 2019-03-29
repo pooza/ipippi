@@ -1,7 +1,7 @@
 <?php
 //-------------------------------------------------------------------
 function doAction_h_config_prof_update_c_member($requests)
-{   
+{
 	$tail = $GLOBALS['KTAI_URL_TAIL'];
 	$u = $GLOBALS['KTAI_C_MEMBER_ID'];
 
@@ -22,7 +22,7 @@ function doAction_h_config_prof_update_c_member($requests)
 	if (!$validator->validate()) {
 		$errors = array_merge($errors, $validator->getErrors());
 	}
-	
+
 	// 値の整合性をチェック(DB)
 	$c_member_profile_list = do_config_prof_check_profile($validator->getParams(), $_REQUEST['public_flag']);
 
@@ -38,20 +38,19 @@ function doAction_h_config_prof_update_c_member($requests)
 		}
 	}
 
-	
-    if ($errors) {
-        $smarty = new TejimayaSmarty($GLOBALS['__SMARTY']);
+	if ($errors) {
+		$smarty = new TejimayaSmarty($GLOBALS['__SMARTY']);
 		$smarty->ext_set_call_type('ktai'); // ktai としての呼び出し
-        $smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
-        $smarty->assign('errors', $errors);
-        $smarty->ext_display('error_input.tpl');
-        exit;
-    }
+		$smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
+		$smarty->assign('errors', $errors);
+		$smarty->ext_display('error_input.tpl');
+		exit;
+	}
 
 	do_config_prof_new($u, $prof);
 	do_config_prof_update_c_member_profile($u, $c_member_profile_list);
 
-    client_redirect("ktai_page.php?p=h_home&$tail");
+	client_redirect("ktai_page.php?p=h_home&$tail");
 }
 
 function _getValidateRules()
@@ -69,7 +68,7 @@ function _getValidateRules()
 function _getValidateRulesProfile()
 {
 	$rules = array();
-	
+
 	$profile_list = db_common_c_profile_list4null();
 	foreach ($profile_list as $profile) {
 		if ($profile['disp_config']) {
@@ -78,7 +77,7 @@ function _getValidateRulesProfile()
 				'required' => $profile['is_required'],
 				'caption' => $profile['caption'],
 			);
-			
+
 			switch ($profile['form_type']) {
 			case 'text':
 			case 'textarea':
@@ -91,11 +90,11 @@ function _getValidateRulesProfile()
 				$rule['is_array'] = '1';
 				break;
 			}
-			
+
 			$rules[$profile['name']] = $rule;
 		}
 	}
-	
-	return $rules;	
+
+	return $rules;
 }
 

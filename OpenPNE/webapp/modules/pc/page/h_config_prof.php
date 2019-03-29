@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_h_config_prof($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -26,8 +24,8 @@ function pageAction_h_config_prof($smarty,$requests) {
 			'private'=> '公開しない',
 		);
 		$smarty->assign('public_flags', $public_flags);
-		
+
 		$smarty->assign('profile_list', db_common_c_profile_list());
-		
+
 		$smarty->ext_display("h_config_prof.tpl");
 }

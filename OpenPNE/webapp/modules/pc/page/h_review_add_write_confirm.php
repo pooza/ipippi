@@ -29,6 +29,6 @@ function pageAction_h_review_add_write_confirm($smarty,$requests) {
 	$smarty->assign('body', $body);
 	$smarty->assign('satisfaction_level', $satisfaction_level);
 
-	$smarty->ext_display('h_review_add_write_confirm.tpl');	
+	$smarty->ext_display('h_review_add_write_confirm.tpl');
 }
 

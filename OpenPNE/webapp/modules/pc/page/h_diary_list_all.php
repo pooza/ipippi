@@ -15,10 +15,10 @@ function pageAction_h_diary_list_all($smarty,$requests) {
 	//日記一覧
 	$page = $page + $direc;
 	$page_size = 20;
-	
+
 	//検索結果
 	$result = p_h_diary_list_all_search_c_diary4c_diary($keyword, $page_size, $page);
-	
+
 	//$smarty->assign('c_commu_search_list', test());
 	$smarty->assign('new_diary_list', $result[0]);
 	$smarty->assign('is_prev', $result[1]);
@@ -39,9 +39,9 @@ function pageAction_h_diary_list_all($smarty,$requests) {
 	$keyword = str_replace ( " ", "　", $keyword);
 
 	$search_val_list = array('val_order'=> null, // $val_order,
-                             'search_word'=> null, // $search_word,
-                             'category_id'=> null, // $category_id,
-                             'c_commu_search_list_count'=>$result[3]);
+							 'search_word'=> null, // $search_word,
+							 'category_id'=> null, // $category_id,
+							 'c_commu_search_list_count'=>$result[3]);
 
 	$smarty->assign('keyword',$keyword);
 

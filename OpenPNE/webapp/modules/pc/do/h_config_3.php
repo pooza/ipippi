@@ -21,7 +21,6 @@ function doAction_h_config_3($request) {
 	$c_password_query_answer = $request['c_password_query_answer'];
 	$public_flag_diary = $request['public_flag_diary'];
 
-
 	// ----------
 
 	//--- 権限チェック

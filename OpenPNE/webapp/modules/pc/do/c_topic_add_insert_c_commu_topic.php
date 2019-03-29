@@ -22,7 +22,6 @@ function doAction_c_topic_add_insert_c_commu_topic($request) {
 	}
 	//---
 
-
 	$insert_c_commu_topic = array(
 		"name" 			=> $title,
 		"c_commu_id"		=> $c_commu_id,
@@ -33,8 +32,7 @@ function doAction_c_topic_add_insert_c_commu_topic($request) {
 		);
 
 	$c_commu_topic_id = do_c_event_add_insert_c_commu_topic($insert_c_commu_topic);
-		
-		
+
 	if($image_filename1_tmpfile){
 		$filename1 = image_insert_c_image4tmp("t_".$c_commu_topic_id."_1", $image_filename1_tmpfile);
 	}

@@ -41,10 +41,8 @@ function doAction_h_invite_insert_c_inivte($request) {
 		exit;
 	}
 
-
 	$session = md5(uniqid(rand(), 1));
 	$c_member_id_invite = $u;
-
 
 	if(is_ktai_mail_address($mail)) {
 		//<PCKTAI
@@ -55,14 +53,14 @@ function doAction_h_invite_insert_c_inivte($request) {
 			exit;
 		}
 		//>
-	
-	    // c_member_ktai_pre に追加
+
+		// c_member_ktai_pre に追加
 		if( do_common_c_member_ktai_pre4ktai_address($mail) ){
-	        	do_update_c_member_ktai_pre($session, $mail, $c_member_id_invite);
+				do_update_c_member_ktai_pre($session, $mail, $c_member_id_invite);
 		}else{
-	        	do_insert_c_member_ktai_pre($session, $mail, $c_member_id_invite);
+				do_insert_c_member_ktai_pre($session, $mail, $c_member_id_invite);
 		}
-		
+
 		h_invite_insert_c_invite_mail_send($session, $c_member_id_invite, $mail, $message);
 
 	} else {
@@ -73,20 +71,20 @@ function doAction_h_invite_insert_c_inivte($request) {
 			client_redirect("page.php?p=h_invite&msg=". urlencode($msg));
 			exit;
 		}
-		//>	
-		
-	    // c_member_pre に追加
+		//>
+
+		// c_member_pre に追加
 		if( do_common_c_member_pre4pc_address($mail) ){
 			do_h_invite_update_c_inivte($c_member_id_invite,$mail,$message,$session);
 		}else{
 			do_h_invite_insert_c_inivte($c_member_id_invite,$mail,$message,$session);
 		}
-	
+
 		$pc_address = $mail;
 
 		do_h_invite_insert_c_inivte_mail_send($c_member_id_invite, $session, $message, $pc_address);
 	}
-	
+
 	client_redirect("page.php?p=h_invite_end");
 }
 

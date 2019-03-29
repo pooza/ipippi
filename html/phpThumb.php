@@ -1,1 +1,1 @@
-<?php require_once('./img.php'); 
+<?php require_once('./img.php');

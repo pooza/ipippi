@@ -31,31 +31,29 @@ function doAction_f_link_request_insert_c_friend_confirm($requests)
 	//--- 権限チェック
 	//フレンドでない and フレンド承認待ちでない
 
-    $status = db_common_friend_status($u, $target_c_member_id);
-    if ($status['is_friend']) {
-        client_redirect("ktai_page.php?p=f_link_request_err_already&target_c_member_id=$target_c_member_id&$tail");
-        exit;
-    } elseif($status['is_friend_confirm']) {
-        client_redirect("ktai_page.php?p=f_link_request_err_wait&target_c_member_id=$target_c_member_id&$tail");
-        exit;
-    }
-    
-    // アクセスブロック
+	$status = db_common_friend_status($u, $target_c_member_id);
+	if ($status['is_friend']) {
+		client_redirect("ktai_page.php?p=f_link_request_err_already&target_c_member_id=$target_c_member_id&$tail");
+		exit;
+	} elseif($status['is_friend_confirm']) {
+		client_redirect("ktai_page.php?p=f_link_request_err_wait&target_c_member_id=$target_c_member_id&$tail");
+		exit;
+	}
+
+	// アクセスブロック
 	if(p_common_is_access_block($u, $target_c_member_id)){
 		client_redirect("ktai_page.php?p=h_access_block&$tail");
-		exit;	
-	}    
-    // -----
-
+		exit;
+	}
+	// -----
 
 	if($body == null){
-		//msg = 1 
+		//msg = 1
 		client_redirect("ktai_page.php?p=f_link_request&target_c_member_id=$target_c_member_id&msg=1&$tail");
 		exit();
 	}
 
 	do_f_link_request_insert_c_friend_confirm($c_member_id_from,$target_c_member_id,$body);
-
 
 	//メッセージ
 	$c_member_to	= db_common_c_member4c_member_id($target_c_member_id);
@@ -71,7 +69,6 @@ function doAction_f_link_request_insert_c_friend_confirm($requests)
 		"この要請について、承認待ちリストから承認または拒否を選択してください。";
 
 	do_common_send_message_syoudaku($c_member_id_from, $target_c_member_id, $subject, $body_disp);
-
 
 	client_redirect("ktai_page.php?p=f_home&target_c_member_id=$target_c_member_id&$tail");
 }

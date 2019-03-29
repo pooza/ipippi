@@ -5,7 +5,7 @@
  *
  * @access public
  * @param string $module a requested module neme.
- * @param string $type request type. 'page', 'do', 'normal' or 'do_normal' 
+ * @param string $type request type. 'page', 'do', 'normal' or 'do_normal'
  * @param string $action requested page/command name.
  * @param array  $errors error message strings.
  */
@@ -25,7 +25,7 @@ function module_execute($module, $type, $action = '', $errors = array())
 	if (is_readable($init)) {
 		require_once($init);
 	}
-	
+
 	// auth
 	switch ($type) {
 	case "page":
@@ -44,7 +44,7 @@ function module_execute($module, $type, $action = '', $errors = array())
 	if (!$action = _check_action($action)) {
 		die('ページが見つかりません');
 	}
-	$GLOBALS['__Framework']['current_action'] = $action;	
+	$GLOBALS['__Framework']['current_action'] = $action;
 
 	$ext = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/ext/{$type}/{$action}.php";
 	$dft = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/{$type}/{$action}.php";
@@ -55,7 +55,7 @@ function module_execute($module, $type, $action = '', $errors = array())
 	} else {
 		die('ページが見つかりません');
 	}
-	
+
 	// send no-cache header
 	switch ($type) {
 	case "normal":
@@ -65,7 +65,7 @@ function module_execute($module, $type, $action = '', $errors = array())
 	}
 
 	// ---------- リクエストバリデーション ----------
-	
+
 	// 拡張バリデータチェック
 	$local_ini = $GLOBALS['__Framework']['modules_dir'] . "/{$module}/ext/validate/{$type}/{$action}.ini";
 	if (!is_readable($local_ini)) {
@@ -74,24 +74,23 @@ function module_execute($module, $type, $action = '', $errors = array())
 	}
 	$validator = new CommonValidate;
 	list($result, $requests) = $validator->common_validate(array($local_ini));
-	
+
 	if ($result === false) {
 		$errors = $validator->getErrors();
 		//TODO:
 		page_handleError($action, $errors);
 	}
-	
-	// ----------------------------------------------
 
+	// ----------------------------------------------
 
 	switch ($type) {
 	case "page":
 	case "normal":
 		$smarty = new TejimayaSmarty($GLOBALS['__SMARTY']);
 		$smarty->ext_set_call_type($module);
-	
+
 		$smarty->assign("requests", $requests);
-	
+
 		$smarty->assign('msg', $requests['msg']);
 		$smarty->assign('msg1', $requests['msg1']);
 		$smarty->assign('msg2', $requests['msg2']);
@@ -114,16 +113,15 @@ function module_execute($module, $type, $action = '', $errors = array())
 		}
 	}
 
-	
 	// 実行関数を呼び出し可能かチェック
-	
+
 	// 呼び出す関数名
 	if ($type !== 'do_normal') {
 		$call_func = "{$type}Action_{$action}";
 	} else {
 		$call_func = "doNormalAction_{$action}";
 	}
-	
+
 	if (function_exists($call_func)) {
 		switch ($type) {
 		case "page":
@@ -158,10 +156,10 @@ function module_execute($module, $type, $action = '', $errors = array())
 /**
  * モジュール名を取得
  * 空の場合はデフォルトモジュールを返す
- * 
+ *
  * 間違ったモジュール名を指定した
  * デフォルトモジュールが存在しない場合は false
- * 
+ *
  * @param string $module module name
  */
 function _check_module($module)
@@ -202,7 +200,7 @@ function _check_type($type)
 			// unknown type
 			return false;
 	}
-	
+
 	return $type;
 }
 
@@ -224,7 +222,7 @@ function _check_action($action)
 			$action = $GLOBALS['__Framework']['default_' . $type];
 		}
 	}
-	
+
 	return $action;
 }
 
@@ -232,24 +230,23 @@ function send_headers()
 {
 	if (!headers_sent()) {
 		header("Content-Type: text/html; charset=EUC-JP");
-		
+
 		// no-cache
 		// 日付が過去
 		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-		
+
 		// 常に修正されている
 		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-		
+
 		// HTTP/1.1
 		header("Cache-Control: no-store, no-cache, must-revalidate");
 		header("Cache-Control: post-check=0, pre-check=0", false);
 		// HTTP/1.0
 		header("Pragma: no-cache");
-		
+
 		return true;
 	} else {
 		return false;
 	}
 }
-
 

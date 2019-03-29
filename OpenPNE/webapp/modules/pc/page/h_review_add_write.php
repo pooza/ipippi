@@ -40,7 +40,7 @@ function pageAction_h_review_add_write($smarty,$requests) {
 		$product = p_h_review_write_product4asin($asin);
 
 		$smarty->assign('product', $product);
-		$smarty->ext_display('h_review_add_write.tpl');	
+		$smarty->ext_display('h_review_add_write.tpl');
 
 }
 

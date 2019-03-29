@@ -19,13 +19,13 @@ function init_pc_page(&$smarty)
 	$smarty->assign('inc_page_footer', fetch_inc_page_footer(true));
 	$smarty->assign('inc_extension_pagelayout_top', p_common_c_siteadmin4target_pagename('inc_page_top'));
 	$smarty->assign('inc_extension_pagelayout_bottom', p_common_c_siteadmin4target_pagename('inc_page_bottom'));
-    $smarty->assign('inc_side_banner', p_inc_c_banner_side4null());
-    $smarty->assign('side_banner_html', p_common_c_siteadmin4target_pagename('side_banner_html'));
-	
+	$smarty->assign('inc_side_banner', p_inc_c_banner_side4null());
+	$smarty->assign('side_banner_html', p_common_c_siteadmin4target_pagename('side_banner_html'));
+
 	// はまちちゃん対策用
 	@session_start();
 	$smarty->assign('PHPSESSID', md5(session_id()));
-	
+
 	//文言系
 	$smarty->assign('WORD_FRIEND', WORD_FRIEND);
 	$smarty->assign('WORD_MY_FRIEND', WORD_MY_FRIEND);
@@ -69,8 +69,8 @@ function init_pc_normal(&$smarty)
 	$smarty->assign('inc_page_footer', fetch_inc_page_footer(false));
 	$smarty->assign('inc_extension_pagelayout_top', p_common_c_siteadmin4target_pagename('inc_page_top'));
 	$smarty->assign('inc_extension_pagelayout_bottom', p_common_c_siteadmin4target_pagename('inc_page_bottom'));
-    $smarty->assign('inc_side_banner', p_inc_c_banner_side4null());
-    $smarty->assign('side_banner_html', p_common_c_siteadmin4target_pagename('side_banner_html'));
+	$smarty->assign('inc_side_banner', p_inc_c_banner_side4null());
+	$smarty->assign('side_banner_html', p_common_c_siteadmin4target_pagename('side_banner_html'));
 
 	//文言系
 	$smarty->assign('WORD_FRIEND', WORD_FRIEND);
@@ -89,7 +89,7 @@ function init_pc_do()
 					ABSOLUTE_PATH . basename($_SERVER['REQUEST_URI']);
 			t_send_email(HAMACHI_EMAIL, $subject, $body);
 		}
-		
+
 		die('前の画面を再読み込みして、操作をやり直してください');
 	}
 }

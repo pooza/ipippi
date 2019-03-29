@@ -9,9 +9,9 @@ function doNormalAction_password_query($requests)
 
 	//--- 権限チェック
 	//パスワード確認の質問と答えがあっている
-	
+
 	if (!$c_member_id = do_password_query_is_password_query_complete($pc_address,
-		            $c_password_query_id,$c_password_query_answer)) {
+					$c_password_query_id,$c_password_query_answer)) {
 		$msg = urlencode("パスワード再取得失敗");
 		client_redirect("normal.php?p=password_query&msg=$msg");
 		exit;

@@ -15,9 +15,7 @@ function doAction_update_side_banner_html($requests)
 			db_admin_update_c_siteadmin('side_banner_html', "");
 		}
 	}
-	
+
 	admin_client_redirect('edit_c_banner', "サイドバナーを変更しました");
 }
-
-
 

@@ -42,11 +42,11 @@ function doAction_h_message_box_delete_message($request) {
 	//下書き保存から削除
 	if($box == "savebox"){
 		foreach( $c_message_id as $val ){
-		    $c_message = _db_c_message4c_message_id($val);
-		    if ($c_message['c_member_id_from'] != $u
-		        && $c_message['c_member_id_to'] != $u) {
-		        handle_kengen_error();
-		    }
+			$c_message = _db_c_message4c_message_id($val);
+			if ($c_message['c_member_id_from'] != $u
+				&& $c_message['c_member_id_to'] != $u) {
+				handle_kengen_error();
+			}
 			do_h_message_box_delete_save_message($val, $u);
 		}
 		client_redirect("page.php?p=h_message_box&box=$box");
@@ -55,48 +55,48 @@ function doAction_h_message_box_delete_message($request) {
 
 	//ごみ箱から
 	elseif ($box == "trash") {
-		
+
 		//ごみ箱から移動
 		if (!empty($request['move']) ){
 			foreach($c_message_id as $val){
-			    $c_message = _db_c_message4c_message_id($val);
-			    if ($c_message['c_member_id_from'] != $u
-			        && $c_message['c_member_id_to'] != $u) {
-			        handle_kengen_error();
-			    }
+				$c_message = _db_c_message4c_message_id($val);
+				if ($c_message['c_member_id_from'] != $u
+					&& $c_message['c_member_id_to'] != $u) {
+					handle_kengen_error();
+				}
 				do_h_message_box_move_message($val, $u);
 			}
 			client_redirect("page.php?p=h_message_box&box=$box");
 			exit;
 		}
-		
+
 		//ごみ箱から完全削除　復元方法なし
 		else {
 			foreach ($c_message_id as $val) {
-			    $c_message = _db_c_message4c_message_id($val);
-			    if ($c_message['c_member_id_from'] == $u) {
-			    	do_delete_c_message_from_trash($val);
-			    }
-			    elseif ($c_message['c_member_id_to'] == $u) {
-			    	do_delete_c_message_to_trash($val);
-			    }
-			    else {
-			        handle_kengen_error();
-			    }
+				$c_message = _db_c_message4c_message_id($val);
+				if ($c_message['c_member_id_from'] == $u) {
+					do_delete_c_message_from_trash($val);
+				}
+				elseif ($c_message['c_member_id_to'] == $u) {
+					do_delete_c_message_to_trash($val);
+				}
+				else {
+					handle_kengen_error();
+				}
 			}
 			client_redirect("page.php?p=h_message_box&box=$box");
 			exit;
 		}
 	}
-	
+
 	// メッセージをごみ箱へ移動
 	else {
 		foreach ($c_message_id as $val) {
-		    $c_message = _db_c_message4c_message_id($val);
-		    if ($c_message['c_member_id_from'] != $u
-		        && $c_message['c_member_id_to'] != $u) {
-		        handle_kengen_error();
-		    }
+			$c_message = _db_c_message4c_message_id($val);
+			if ($c_message['c_member_id_from'] != $u
+				&& $c_message['c_member_id_to'] != $u) {
+				handle_kengen_error();
+			}
 			do_h_message_box_delete_message($val, $u);
 		}
 	}

@@ -15,4 +15,3 @@ function doAction_h_invite_delete_member($request) {
 	client_redirect("page.php?p=h_invite");
 }
 
-

@@ -69,8 +69,8 @@ function doAction_f_message_send_insert_c_message($request) {
 	if ($c_member_id_to == $u) {
 		handle_kengen_error();
 	}
-	
-    //アクセスブロック設定
+
+	//アクセスブロック設定
 	if (p_common_is_access_block($u, $c_member_id_to)) {
 		client_redirect("page.php?p=h_access_block");
 		exit;

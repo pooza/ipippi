@@ -1,6 +1,5 @@
 <?php
 
-
 //---------------------------------------------------------------------------
 function pageAction_c_topic_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -11,14 +10,13 @@ function pageAction_c_topic_list($smarty,$requests) {
 	$page = $requests['page'];
 	// ----------
 
-
-	$page_size = 20;    
+	$page_size = 20;
 	$c_commu = p_common_c_commu4c_commu_id($c_commu_id);
 
 	//コミュニティの存在の有無
 	if (!$c_commu) {
-	    client_redirect("page.php?p=h_err_c_home");
-	    exit();
+		client_redirect("page.php?p=h_err_c_home");
+		exit();
 	}
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
@@ -36,7 +34,6 @@ function pageAction_c_topic_list($smarty,$requests) {
 	$smarty->assign('start_num', $start_num);
 	$smarty->assign('end_num', $end_num);
 
-
 	//--- 権限チェック
 	$is_c_commu_member = p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu_id,$u);
 
@@ -51,7 +48,6 @@ function pageAction_c_topic_list($smarty,$requests) {
 	}
 	$smarty->assign("is_warning", $is_warning);
 	//---
-
 
 	$smarty->assign("is_c_commu_admin", p_common_is_c_commu_admin4c_member_id($c_commu_id,$u));
 	$smarty->assign("is_c_commu_member", $is_c_commu_member);

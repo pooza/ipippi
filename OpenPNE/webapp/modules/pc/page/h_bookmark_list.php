@@ -1,6 +1,5 @@
 <?php
 
-
 //---------------------------------------------------------------------------
 function pageAction_h_bookmark_list($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -25,7 +24,6 @@ function pageAction_h_bookmark_list($smarty,$requests) {
 			'displaying_last' => ($page - 1) * $page_size + count($list[0]),
 		);
 		$smarty->assign("pager_index", $pager_index);
-
 
 		$smarty->ext_display("h_bookmark_list.tpl");
 }

@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_h_config_image($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();

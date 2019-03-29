@@ -45,7 +45,6 @@ function doAction_h_diary_edit_insert_c_diary($requests)
 
 	//---
 
-
 	$c_member_id = $u;
 
 	if(!$target_c_diary_id){

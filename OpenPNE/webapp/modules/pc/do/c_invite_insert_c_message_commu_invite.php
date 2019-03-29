@@ -31,13 +31,12 @@ function doAction_c_invite_insert_c_message_commu_invite($request) {
 	}
 	//---
 
-
 	$c_member_from = db_common_c_member4c_member_id($u);
 	$c_commu = _db_c_commu4c_commu_id($target_c_commu_id);
 
-    $subject ="コミュニティおすすめメッセージ";
-    $url = ABSOLUTE_PATH."page.php?p=c_home&target_c_commu_id=$target_c_commu_id";
-    
+	$subject ="コミュニティおすすめメッセージ";
+	$url = ABSOLUTE_PATH."page.php?p=c_home&target_c_commu_id=$target_c_commu_id";
+
 // メッセージ本文
 $message_body = <<<EOD
 {$c_member_from['nickname']}さんからおすすめコミュニティのメッセージが届いています。
@@ -51,9 +50,9 @@ $body
 このコミュニティのURL
 $url
 EOD;
-    
+
 	foreach($c_member_id_list as $key => $value){
-        do_common_send_message_syoukai_commu($u, $value, $subject, $message_body);
+		do_common_send_message_syoukai_commu($u, $value, $subject, $message_body);
 	}
 
 	client_redirect("page.php?p=c_home&target_c_commu_id=$target_c_commu_id");

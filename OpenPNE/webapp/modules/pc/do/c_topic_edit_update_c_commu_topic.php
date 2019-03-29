@@ -2,7 +2,6 @@
 function doAction_c_topic_edit_update_c_commu_topic($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	 
 	// --- リクエスト変数
 	$c_commu_topic_id = $request['target_c_commu_topic_id'];
 	$body = $request['body'];
@@ -27,18 +26,17 @@ function doAction_c_topic_edit_update_c_commu_topic($request) {
 	}
 	//---
 
-
 	//エラーチェック
-    $err_msg = array();
-    if (is_null($title) || $title === '') $err_msg[] = "タイトルを入力してください";
-    if (is_null($body) || $body === '') $err_msg[] = "詳細を入力してください";
+	$err_msg = array();
+	if (is_null($title) || $title === '') $err_msg[] = "タイトルを入力してください";
+	if (is_null($body) || $body === '') $err_msg[] = "詳細を入力してください";
 
-    if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-    	$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-    if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-    	$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-    if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-    	$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+	if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
+		$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+	if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
+		$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+	if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
+		$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
 
 	$names = array();
 	for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -53,31 +51,30 @@ function doAction_c_topic_edit_update_c_commu_topic($request) {
 		}
 	}
 
-    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-    	$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
-    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-    	$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
-    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-    	$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
+	if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
+		$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
+	if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
+		$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
+	if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
+		$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
 
-    if(is_dirty_file($upfile_obj11))
-    	$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
-    if(is_dirty_file($upfile_obj12))
-    	$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
-    if(is_dirty_file($upfile_obj13))
-    	$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj11))
+		$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj12))
+		$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj13))
+		$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
 
-    if ($err_msg) {
+	if ($err_msg) {
 		$_REQUEST['err_msg'] = $err_msg;
 		$_REQUEST['target_c_commu_topic_id'] = $c_commu_topic_id;
 		$_REQUEST['title'] = $title;
 		$_REQUEST['body'] = $body;
 		module_execute('pc', 'page', "c_topic_edit");
 		exit;
-    }
+	}
 
-
-	//画像コピー	
+	//画像コピー
 	if( file_exists($upfile_obj1["tmp_name"]) ) $tmpfile1 = t_image_save2tmp($upfile_obj1, $sessid, "t1");
 	if( file_exists($upfile_obj2["tmp_name"]) ) $tmpfile2 = t_image_save2tmp($upfile_obj2, $sessid, "t2");
 	if( file_exists($upfile_obj3["tmp_name"]) ) $tmpfile3 = t_image_save2tmp($upfile_obj3, $sessid, "t3");
@@ -114,7 +111,6 @@ function doAction_c_topic_edit_update_c_commu_topic($request) {
 		"event_flag"		=> "0",
 		"image_position"	=> $image_position,
 	);
-
 
 	$topic_comment_id = get_commu_topic_comment_id ($c_commu_topic_id);
 	if($tmpfile11){

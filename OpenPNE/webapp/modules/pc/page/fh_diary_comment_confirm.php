@@ -10,7 +10,7 @@ function pageAction_fh_diary_comment_confirm($smarty,$requests) {
 	// ----------
 
 	$target_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
-	$target_c_member_id = $target_diary['c_member_id']; 
+	$target_c_member_id = $target_diary['c_member_id'];
 
 	if (!$target_c_member_id) {
 		$target_c_member_id = $u;
@@ -26,10 +26,10 @@ function pageAction_fh_diary_comment_confirm($smarty,$requests) {
 		//日記の公開範囲設定
 		if (($target_c_member['public_flag_diary'] == "friend" &&
 			 !_db_is_friend($u, $target_c_member_id))) {
-		    client_redirect("page.php?p=h_err_diary_access");
-		    exit;
+			client_redirect("page.php?p=h_err_diary_access");
+			exit;
 		}
-		
+
 		// アクセスブロック
 		if(p_common_is_access_block($u, $target_c_member_id)){
 			client_redirect("page.php?p=h_access_block");

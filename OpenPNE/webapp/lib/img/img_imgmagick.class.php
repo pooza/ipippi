@@ -11,7 +11,7 @@ class Img_ImgMagick extends Img {
 		$this->set_outputFormat();
 		// $this->cache_filename、$this->cache_fullpathを設定
 		$this->set_cacheFilename();
-		
+
 		/*
 			ここでキャッシュのチェック
 			キャッシュファイル名（フルパスも）もセットされる
@@ -36,7 +36,7 @@ class Img_ImgMagick extends Img {
 				// 取得した画像を一旦ファイルに書き出し
 				$this->create_rawcache();
 			}
-			
+
 			// 画像サイズの取得にGDを用いる
 			$im = @imagecreatefromstring($this->rawImageData);
 			$this->source_height = @imagesy($im);
@@ -45,7 +45,7 @@ class Img_ImgMagick extends Img {
 			if (!$im || !$this->source_width || !$this->source_height) {
 				return false;
 			}
-			
+
 			//リサイズせず、かつ、形式変換しない場合、ここで終了（変換する必要なし）
 			if ($this->rawImageData && !isset($this->w) && !isset($this->h) && ($this->sourceFormat == $this->outputFormat)) {
 				return true;
@@ -80,7 +80,7 @@ class Img_ImgMagick extends Img {
 					exit;
 				}
 			}
-			
+
 			@readfile($this->cache_fullpath);
 			return true;
 		}
@@ -113,25 +113,25 @@ class Img_ImgMagick extends Img {
 	function create_cache()
 	{
 		$this->create_cache_subdir();
-		
+
 		$convert_command = $this->get_imgmagick_convert_command();
 		$this->exec_imgmagick_convert($convert_command);
 	}
-	
+
 	// 実画像キャッシュを作成する
 	function create_rawcache()
 	{
 		$raw_fullpath = $this->get_rawcache_filename();
 		$this->create_cache_rawdir();
-		
+
 		$handle = fopen($raw_fullpath, 'wb');
 		fwrite($handle, $this->rawImageData);
 		fclose($handle);
 	}
-	
+
 	// 実画像キャッシュディレクトリを作成する
 	function create_cache_rawdir() {
-		$subdir = dirname($this->get_rawcache_filename()); 
+		$subdir = dirname($this->get_rawcache_filename());
 		if (!is_dir($subdir)) {
 			mkdir($subdir);
 		}
@@ -142,13 +142,13 @@ class Img_ImgMagick extends Img {
 		list($w, $h) = $this->get_size();
 
 		$opt = (defined('IMGMAGICK_OPT') && IMGMAGICK_OPT) ? IMGMAGICK_OPT : "-resize";
-		
+
 		// 念のため escape をかける
 		$w = intval($w);
 		$h = intval($h);
 		$f = escapeshellcmd($this->outputFormat);
 		$path = realpath($this->get_rawcache_filename());
-		
+
 		return IMGMAGICK_APP." $opt {$w}x{$h} $path {$f}:-";
 	}
 
@@ -168,14 +168,14 @@ class Img_ImgMagick extends Img {
 		// ディレクトリ名
 		// キャッシュが削除されるためにはパターン「w*_h*」に適合する必要がある
 		$size = "w_h_raw";
-	 	
+
 	 	// ex.) img_cache_m_11_1115813647
 	 	$cache_filename = 'img_cache_' .
 	 		str_replace('.', '_', $this->sourceFilename) .
 			'.' . $this->sourceFormat;
-	 	
+
 	 	// ex.) /var/img_cache/jpg/w180_h180/{filename}"""""""
-	 	return 
+	 	return
 	 		$this->config_cache_source_directory .
 	 		$this->sourceFormat . '/' .
 	 		$size . '/' .
@@ -189,7 +189,7 @@ class Img_ImgMagick extends Img {
 		//元画像が小さくてリサイズの必要がない場合
 		if ((!$h || $this->source_height <= $h) &&
 			(!$w || $this->source_width <= $w)) {
-			
+
 			return array($this->source_width, $this->source_height);
 		}
 

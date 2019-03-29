@@ -15,9 +15,8 @@ function doAction_h_review_clip_add_insert_c_review_clip($request) {
 	}
 	//---
 
+	do_h_review_clip_add_insert_c_review_clip($c_review_id, $u);
 
-	do_h_review_clip_add_insert_c_review_clip($c_review_id, $u);	
-
-	client_redirect("page.php?p=h_review_clip_list");		
+	client_redirect("page.php?p=h_review_clip_list");
 }
 

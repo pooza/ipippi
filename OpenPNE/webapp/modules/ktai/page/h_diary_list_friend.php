@@ -21,7 +21,7 @@ function pageAction_h_diary_list_friend($smarty,$requests) {
 	$smarty->assign("total_num", $lst[3]);
 
 	$smarty->assign("page", $page);
-	
+
 	$smarty->ext_display("h_diary_list_friend.tpl");
 }
 

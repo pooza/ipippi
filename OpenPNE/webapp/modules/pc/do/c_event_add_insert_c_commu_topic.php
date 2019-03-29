@@ -10,24 +10,23 @@ function doAction_c_event_add_insert_c_commu_topic($request) {
 	$tmpfile12 = $request['file_filename2_tmpfile'];
 	$tmpfile13 = $request['file_filename3_tmpfile'];
 	// ----------
-					
+
 	//--- 権限チェック
 	//コミュニティ参加者
 
 	$event = p_c_event_add_confirm_event4request();
 
-    $status = db_common_commu_status($u, $event['c_commu_id']);
-    if (!$status['is_commu_member']) {
-        handle_kengen_error();
-    }
+	$status = db_common_commu_status($u, $event['c_commu_id']);
+	if (!$status['is_commu_member']) {
+		handle_kengen_error();
+	}
 	//---
-
 
 	if($event['invite_period_year'].$event['invite_period_month'].$event['invite_period_day']!="")
 		$invite_period = $event['invite_period_year']."-".$event['invite_period_month']."-".$event['invite_period_day'];
 	else
 		$invite_period = "";
-		
+
 	$insert_c_commu_topic = array(
 		"name" 			=> $event['title'],
 		"c_commu_id"		=> $event['c_commu_id'],
@@ -43,7 +42,7 @@ function doAction_c_event_add_insert_c_commu_topic($request) {
 		);
 
 	$c_commu_topic_id = do_c_event_add_insert_c_commu_topic($insert_c_commu_topic);
-		
+
 	if($tmpfile1){
 		$filename1 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_1", $tmpfile1);
 	}
@@ -84,9 +83,9 @@ function doAction_c_event_add_insert_c_commu_topic($request) {
 	t_image_clear_tmp(session_id());
 
 	//お知らせメール送信(携帯へ)
-	send_bbs_info_mail($insert_id, $u);  
+	send_bbs_info_mail($insert_id, $u);
 	//お知らせメール送信(PCへ)
-	send_bbs_info_mail_pc($insert_id, $u); 
+	send_bbs_info_mail_pc($insert_id, $u);
 
 	do_c_event_add_insert_c_event_member_as_admin($c_commu_topic_id, $u);
 

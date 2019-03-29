@@ -1,6 +1,5 @@
 <?php
 
-
 //---------------------------------------------------------------------------
 function pageAction_c_invite($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -12,7 +11,6 @@ function pageAction_c_invite($smarty,$requests) {
 	// ----------
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
-
 
 	//メンバー情報
 	$smarty->assign("member", db_common_c_member4c_member_id($u));

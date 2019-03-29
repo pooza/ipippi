@@ -38,7 +38,7 @@ class CommonValidate extends Validator
 		// 値チェック実行
 		$result = $this->validate();
 		$requests = $this->getParams();
-		
+
 		return array($result, $requests);
 	}
 }

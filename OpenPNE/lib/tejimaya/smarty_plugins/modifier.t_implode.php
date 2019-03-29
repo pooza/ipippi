@@ -5,7 +5,6 @@
  * @subpackage plugins
  */
 
-
 /**
  * Smarty escape modifier plugin
  *
@@ -23,10 +22,9 @@ function smarty_modifier_t_implode($pieces, $glue = '')
 	if (!is_array($pieces)) {
 		return $pieces;
 	}
-	
+
 	return implode($glue, $pieces);
 }
 
 /* vim: set expandtab: */
-
 

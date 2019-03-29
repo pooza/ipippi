@@ -5,7 +5,7 @@ function pageAction_h_message_send($smarty, $requests)
 
 	//ランダム５０人のフレンド
 	$smarty->assign("c_friend_list", k_p_h_message_send_c_friend_list_random4c_member_id($u));
-	
+
 	$smarty->ext_display("h_message_send.tpl");
 }
 

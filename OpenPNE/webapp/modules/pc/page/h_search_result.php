@@ -33,23 +33,22 @@ function pageAction_h_search_result($smarty,$requests) {
 
 	//検索デフォルト値表示用
 	if (!$is_n) {
-	    $cond = array(
-	        'birth_year' => $birth_year,
-	        'birth_month' => $birth_month,
-	        'birth_day' => $birth_day,
-	        'image' => $image,
-	    );
-	    $cond_like = array(
-	    );
+		$cond = array(
+			'birth_year' => $birth_year,
+			'birth_month' => $birth_month,
+			'birth_day' => $birth_day,
+			'image' => $image,
+		);
+		$cond_like = array(
+		);
 	}
 	else {
-	    $cond = array();
-	    $cond_like = array(
-	        'nickname' => $nickname,
-	    );
+		$cond = array();
+		$cond_like = array(
+			'nickname' => $nickname,
+		);
 	}
 	$smarty->assign("cond", array_merge($cond, $cond_like));
-
 
 	$result = p_h_search_result_search($cond, $cond_like, $limit, $page, $u, $profiles);
 	$smarty->assign("target_friend_list", $result[0]);
@@ -68,17 +67,16 @@ function pageAction_h_search_result($smarty,$requests) {
 
 	$smarty->assign("pager", $pager);
 
-
 	$tmp = array();
 	foreach ($cond as $key => $value) {
-	    if ($value) {
-	        $tmp[] = "$key=".urlencode($value);
-	    }
+		if ($value) {
+			$tmp[] = "$key=".urlencode($value);
+		}
 	}
 	foreach ($cond_like as $key => $value) {
-	    if ($value) {
-	        $tmp[] = "$key=".urlencode($value);
-	    }
+		if ($value) {
+			$tmp[] = "$key=".urlencode($value);
+		}
 	}
 	foreach ($profiles as $key => $value) {
 		if ($value['c_profile_option_id']) {

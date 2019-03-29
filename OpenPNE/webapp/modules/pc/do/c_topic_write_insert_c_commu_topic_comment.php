@@ -19,12 +19,11 @@ function doAction_c_topic_write_insert_c_commu_topic_comment($request) {
 	$c_topic = c_topic_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_commu_id = $c_topic['c_commu_id'];
 
-    $status = db_common_commu_status($u, $c_commu_id);
-    if (!$status['is_commu_member']) {
-        handle_kengen_error();
-    }
-    //---
-
+	$status = db_common_commu_status($u, $c_commu_id);
+	if (!$status['is_commu_member']) {
+		handle_kengen_error();
+	}
+	//---
 
 	if($tmpfile1){
 		$filename1 = image_insert_c_image4tmp("tw_".$c_commu_topic_id."_1", $tmpfile1);
@@ -36,8 +35,7 @@ function doAction_c_topic_write_insert_c_commu_topic_comment($request) {
 		$filename3 = image_insert_c_image4tmp("tw_".$c_commu_topic_id."_3", $tmpfile3);
 	}
 
-
-    $number = _do_c_commu_topic_comment_number4c_commu_topic_id($c_commu_topic_id);
+	$number = _do_c_commu_topic_comment_number4c_commu_topic_id($c_commu_topic_id);
 	$insert_c_commu_topic_comment = array(
 		"c_commu_id" 			=> $c_commu_id,
 		"c_member_id" 			=> $u,
@@ -70,9 +68,9 @@ function doAction_c_topic_write_insert_c_commu_topic_comment($request) {
 	t_image_clear_tmp(session_id());
 
 	//お知らせメール送信(携帯へ)
-	send_bbs_info_mail($insert_id, $u);  
+	send_bbs_info_mail($insert_id, $u);
 	//お知らせメール送信(PCへ)
-	send_bbs_info_mail_pc($insert_id, $u); 
+	send_bbs_info_mail_pc($insert_id, $u);
 
 	client_redirect("page.php?p=c_topic_detail&target_c_commu_topic_id=".$c_commu_topic_id);
 }

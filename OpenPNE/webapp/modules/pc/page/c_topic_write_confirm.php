@@ -19,14 +19,14 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 		$upfile_obj12 = $_FILES['file_filename2'];
 		$upfile_obj13 = $_FILES['file_filename3'];
 
-		//エラーチェック	   					
-	    $err_msg = array();
-	    if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-	    	$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-	    if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-	    	$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-	    if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-	    	$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+		//エラーチェック
+		$err_msg = array();
+		if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
+			$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+		if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
+			$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+		if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
+			$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
 
 		$names = array();
 		for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -41,25 +41,25 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 			}
 		}
 
-	    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-	    	$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
-	    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-	    	$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
-	    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-	    	$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
+		if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
+			$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
+		if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
+			$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
+		if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
+			$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
 
-	    if(is_dirty_file($upfile_obj11))
-	    	$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
-	    if(is_dirty_file($upfile_obj12))
-	    	$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
-	    if(is_dirty_file($upfile_obj13))
-	    	$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
+		if(is_dirty_file($upfile_obj11))
+			$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
+		if(is_dirty_file($upfile_obj12))
+			$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
+		if(is_dirty_file($upfile_obj13))
+			$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
 
-	    if ($err_msg) {
+		if ($err_msg) {
 			$_REQUEST['err_msg'] = $err_msg;
 			module_execute('pc', 'page', "c_topic_detail");
 			exit;
-	    }
+		}
 	//-----
 
 		$c_topic = c_topic_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
@@ -67,10 +67,9 @@ function pageAction_c_topic_write_confirm($smarty,$requests) {
 
 		//--- 権限チェック
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
-	        handle_kengen_error();
+			handle_kengen_error();
 		}
 		//---
-
 
 		$sessid = session_id();
 		t_image_clear_tmp($sessid);

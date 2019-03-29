@@ -20,21 +20,20 @@ function pageAction_c_event_write_confirm($smarty,$requests) {
 
 		//--- 権限チェック
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
-	        handle_kengen_error();
+			handle_kengen_error();
 		}
 		//---
 
+		//エラーチェック
+		$err_msg = array();
+		if(trim($body) == '')  $err_msg[] = "本文を入力してください";
 
-		//エラーチェック	   					
-	    $err_msg = array();
-	    if(trim($body) == '')  $err_msg[] = "本文を入力してください";
-	    
-	    if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-	    	$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-	    if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-	    	$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-	    if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-	    	$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+		if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
+			$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+		if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
+			$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+		if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
+			$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
 
 		$names = array();
 		for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -49,26 +48,26 @@ function pageAction_c_event_write_confirm($smarty,$requests) {
 			}
 		}
 
-	    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-	    	$err_msg[] = "□□ファイルは添付できません";
-	    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-	    	$err_msg[] = "□□ファイルは添付できません";
-	    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-	    	$err_msg[] = "□□ファイルは添付できません";
+		if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
+			$err_msg[] = "□□ファイルは添付できません";
+		if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
+			$err_msg[] = "□□ファイルは添付できません";
+		if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
+			$err_msg[] = "□□ファイルは添付できません";
 
-	    if(is_dirty_file($upfile_obj11))
-	    	$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
-	    if(is_dirty_file($upfile_obj12))
-	    	$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
-	    if(is_dirty_file($upfile_obj13))
-	    	$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
+		if(is_dirty_file($upfile_obj11))
+			$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
+		if(is_dirty_file($upfile_obj12))
+			$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
+		if(is_dirty_file($upfile_obj13))
+			$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
 
-	    if ($err_msg) {
+		if ($err_msg) {
 			$_REQUEST['err_msg'] = $err_msg;
 			$_REQUEST['body'] = $body;
 			module_execute('pc', 'page', "c_event_detail");
 			exit;
-	    }
+		}
 
 		$sessid = session_id();
 		t_image_clear_tmp($sessid);
@@ -78,7 +77,6 @@ function pageAction_c_event_write_confirm($smarty,$requests) {
 		$tmpfile11 = t_image_save2tmp($upfile_obj11, $sessid, "ew11");
 		$tmpfile12 = t_image_save2tmp($upfile_obj12, $sessid, "ew12");
 		$tmpfile13 = t_image_save2tmp($upfile_obj13, $sessid, "ew13");
-
 
 		$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 		$event_write['target_c_commu_id'] = $c_commu_id;
@@ -97,7 +95,6 @@ function pageAction_c_event_write_confirm($smarty,$requests) {
 		$event_write['file_filename2']=$upfile_obj12["name"];
 		$event_write['file_filename3']=$upfile_obj13["name"];
 
-
 		if($button=="イベントに参加する"){
 			$event_write['add_event_member'] = 1;
 		}
@@ -107,7 +104,6 @@ function pageAction_c_event_write_confirm($smarty,$requests) {
 
 		$smarty->assign('event_write', $event_write);
 		$smarty->ext_display("c_event_write_confirm.tpl");
-
 
 }
 

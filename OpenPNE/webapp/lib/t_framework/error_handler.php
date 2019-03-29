@@ -4,9 +4,9 @@ function page_handleError($p, $errors)
 {
 	switch ($p) {
 	case "c_topic_add_confirm":
-	    $_REQUEST['err_msg'] = $errors;
+		$_REQUEST['err_msg'] = $errors;
 		module_execute('pc', 'page', "c_topic_add", $errors);
-	    break;
+		break;
 	case "c_topic_write_confirm":
 		$_REQUEST['err_msg'] = $errors;
 		module_execute('pc', 'page', "c_topic_detail");
@@ -16,14 +16,14 @@ function page_handleError($p, $errors)
 		$_REQUEST['msg2'] = $errors['body'];
 		module_execute('pc', 'page', "f_message_send", $errors);
 		break;
-	case "h_com_add_confirm":	
+	case "h_com_add_confirm":
 		$_REQUEST['err_msg'] = $errors;
 		module_execute('pc', 'page', "h_com_add");
 		break;
 	case "h_config_prof_confirm":
-    	$_REQUEST['msg'] = array_shift($errors);
-    	module_execute('pc', 'page', "h_config_prof", $errors);
-    	exit;
+		$_REQUEST['msg'] = array_shift($errors);
+		module_execute('pc', 'page', "h_config_prof", $errors);
+		exit;
 	case "h_diary_add_confirm":
 		$_REQUEST['msg1'] = $errors['subject'];
 		$_REQUEST['msg2'] = $errors['body'];

@@ -19,7 +19,6 @@ function pageAction_c_member_review_add($smarty,$requests) {
 		}
 		//---
 
-
 		$smarty->assign('c_member', db_common_c_member4c_member_id($c_member_id));
 
 		list($c_review_list, $is_prev, $is_next, $total_num, $start_num, $end_num) = p_fh_review_list_product_c_review_list4c_member_id($c_member_id, $page, $page_size);
@@ -31,9 +30,8 @@ function pageAction_c_member_review_add($smarty,$requests) {
 		$smarty->assign('start_num', $start_num);
 		$smarty->assign('end_num', $end_num);
 
-	    $c_commu = p_common_c_commu4c_commu_id($c_commu_id);
-	    $smarty->assign('c_commu', $c_commu);
-
+		$c_commu = p_common_c_commu4c_commu_id($c_commu_id);
+		$smarty->assign('c_commu', $c_commu);
 
 		$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 		$smarty->ext_display('c_member_review_add.tpl');

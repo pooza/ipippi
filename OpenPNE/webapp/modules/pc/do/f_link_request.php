@@ -18,7 +18,6 @@ f_link_requestのどれか
 function doAction_f_link_request($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
- 	
 	// --- リクエスト変数
 	$target_c_member_id = $request['target_c_member_id'];
 	// ----------

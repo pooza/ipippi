@@ -11,14 +11,13 @@ function doAction_c_event_edit_delete_c_commu_topic_comment_image($request) {
 
 	//--- 権限チェック
 	//イベントの管理者 or コミュニティ管理者
-	
+
 	if (!_db_is_c_event_admin($c_commu_topic_id,$u) &&
 		!_db_is_c_commu_admin($c_topic['c_commu_id'], $u)){
 		handle_kengen_error();
 		exit();
 	}
 	//---
-
 
 	image_data_delete($c_topic['image_filename'.$pic_delete]);
 

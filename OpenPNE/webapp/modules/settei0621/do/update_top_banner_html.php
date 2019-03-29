@@ -15,9 +15,7 @@ function doAction_update_top_banner_html($requests)
 			db_admin_update_c_siteadmin('top_banner_html', "");
 		}
 	}
-	
+
 	admin_client_redirect('edit_c_banner', "トップバナーを変更しました");
 }
-
-
 

@@ -14,9 +14,9 @@ function pageAction_h_invite_confirm($smarty,$requests) {
 	}
 	elseif (p_is_sns_join4mail_address($form_val['mail'])) {
 		$msg = "そのアドレスは既に登録済みです";
-    }
-    else {
-	    if(is_ktai_mail_address($form_val['mail'])) {
+	}
+	else {
+		if(is_ktai_mail_address($form_val['mail'])) {
 			//<PCKTAI
 			if (defined('OPENPNE_REGIST_FROM') &&
 					!((OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_KTAI) >> 1)) {
@@ -30,15 +30,15 @@ function pageAction_h_invite_confirm($smarty,$requests) {
 					!(OPENPNE_REGIST_FROM & OPENPNE_REGIST_FROM_PC)) {
 				$msg = "PCアドレスには招待できません";
 			}
-			//>	
+			//>
 		}
-    }
-	
+	}
+
 	if ($msg) {
 		$_REQUEST['msg'] = $msg;
 		module_execute('pc', 'page', "h_invite");
 		exit;
-	}	
+	}
 
 	$smarty->assign('inc_navi', fetch_inc_navi("h"));
 

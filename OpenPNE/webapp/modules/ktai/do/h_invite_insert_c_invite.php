@@ -41,14 +41,13 @@ function doAction_h_invite_insert_c_invite($requests)
 	//---
 
 	if (!db_common_is_mailaddress($mail)) {
-        client_redirect("ktai_page.php?p=h_invite&msg=31&$tail");
-        exit;
-    }
-	if( p_is_sns_join4mail_address($mail) ){
-        client_redirect("ktai_page.php?p=h_invite&msg=9&$tail");
-        exit;
+		client_redirect("ktai_page.php?p=h_invite&msg=31&$tail");
+		exit;
 	}
-    
+	if( p_is_sns_join4mail_address($mail) ){
+		client_redirect("ktai_page.php?p=h_invite&msg=9&$tail");
+		exit;
+	}
 
 	$session = md5(uniqid(rand(), 1));
 
@@ -60,14 +59,14 @@ function doAction_h_invite_insert_c_invite($requests)
 			exit;
 		}
 		//>
-	
-	    // c_member_ktai_pre に追加
+
+		// c_member_ktai_pre に追加
 		if (do_common_c_member_ktai_pre4ktai_address($mail)) {
-	    	do_update_c_member_ktai_pre($session, $mail, $u);
+			do_update_c_member_ktai_pre($session, $mail, $u);
 		} else {
 			do_insert_c_member_ktai_pre($session, $mail, $u);
 		}
-		
+
 		h_invite_insert_c_invite_mail_send($session, $u, $mail, $body);
 
 	} else {
@@ -78,7 +77,7 @@ function doAction_h_invite_insert_c_invite($requests)
 			exit;
 		}
 		//>
-		
+
 		// c_member_pre に追加
 		if (do_common_c_member_pre4pc_address($mail)) {
 			do_h_invite_update_c_inivte($u, $mail, $body, $session);
@@ -91,5 +90,4 @@ function doAction_h_invite_insert_c_invite($requests)
 
 	client_redirect("ktai_page.php?p=h_invite&msg=30&$tail");
 }
-
 

@@ -23,11 +23,10 @@ function doAction_h_review_edit_update_c_review_comment($request) {
 		$c_review = do_h_review_edit_c_review4c_review_comment_id($c_review_comment_id);
 		$_REQUEST['asin'] = $c_review['asin'];
 		$_REQUEST['err_msg'] = $err_msg;
-		
+
 		module_execute('pc', 'page', "h_review_edit");
 		exit;
 	}
-
 
 	do_h_review_edit_update_c_review_comment($c_review_comment_id, $body, $satisfaction_level);
 

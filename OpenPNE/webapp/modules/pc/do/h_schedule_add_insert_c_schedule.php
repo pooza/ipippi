@@ -39,36 +39,35 @@ function doAction_h_schedule_add_insert_c_schedule($request) {
 	}
 
   $title = trim($input['title']);
-  
+
   if (is_null($input['end_year'])) {
-    $input['end_year'] = $input['start_year'];
+	$input['end_year'] = $input['start_year'];
   }
   if (is_null($input['end_month'])) {
-    $input['end_month'] = $input['start_month'];
+	$input['end_month'] = $input['start_month'];
   }
   if (is_null($input['end_day'])) {
-    $input['end_day'] = $input['start_day'];
+	$input['end_day'] = $input['start_day'];
   }
 
   $start_date = sprintf("%04d-%02d-%02d", $input['start_year'], $input['start_month'], $input['start_day']);
   $end_date = sprintf("%04d-%02d-%02d", $input['end_year'], $input['end_month'], $input['end_day']);
-  
+
   if ( ($input['start_hour'] || $input['start_hour'] == 0)  &&  ($input['start_minute'] || $input['start_minute'] == 0)  ) {
-    $start_time = "{$input['start_hour']}:{$input['start_minute']}:00";
+	$start_time = "{$input['start_hour']}:{$input['start_minute']}:00";
   } else {
-    $start_time = null;
+	$start_time = null;
   }
 
   if ( ($input['end_hour'] || $input['end_hour'] == 0)  &&  ($input['end_minute'] || $input['end_minute'] == 0)  ) {
-    $end_time = "{$input['end_hour']}:{$input['end_minute']}:00";
+	$end_time = "{$input['end_hour']}:{$input['end_minute']}:00";
   } else {
-    $end_time = null;
-  }  
+	$end_time = null;
+  }
 	//--- 権限チェック
 	//必要なし
 
 	//---
-
 
 	do_h_schedule_add_insert_c_schedule($u, $title, $input['body'],
 		$start_date, $start_time, $end_date, $end_time,

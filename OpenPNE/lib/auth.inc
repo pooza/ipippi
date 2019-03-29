@@ -25,11 +25,10 @@ if(!$GLOBALS['AUTH']->getAuth()){
 	$GLOBALS['AUTH']->uid($u);
 }
 
-
 function _auth_logout()
 {
 	$GLOBALS['AUTH']->logout();
-	
+
 	if (isset($_POST['username'])) {
 		// ユーザ入力でエラー
 		client_redirect('normal.php?p=tologin&error_code=login_failed');

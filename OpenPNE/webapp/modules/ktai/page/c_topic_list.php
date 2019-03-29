@@ -18,7 +18,7 @@ function pageAction_c_topic_list($smarty,$requests)
 
 	$page_size = 10;
 	$page += $direc;
-	
+
 	$smarty->assign('c_commu', p_common_c_commu4c_commu_id($c_commu_id));
 
 	list($result, $is_prev, $is_next, $total_num, $start_num, $end_num)
@@ -30,7 +30,7 @@ function pageAction_c_topic_list($smarty,$requests)
 	$smarty->assign("total_num",$total_num);
 	$smarty->assign('start_num', $start_num);
 	$smarty->assign('end_num', $end_num);
-	
+
 	$smarty->ext_display("c_topic_list.tpl");
 }
 

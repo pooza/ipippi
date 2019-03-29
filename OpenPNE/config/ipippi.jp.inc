@@ -22,7 +22,6 @@ define('ENCRYPT_KEY', 'rock salt');
 // 携帯メール投稿の宛先などのドメイン名に使われる
 define('MAIL_SERVER_DOMAIN', 'ipippi.jp');
 
-
 //--- オプション設定
 
 // SQL内でのエスケープの仕方
@@ -121,7 +120,6 @@ ini_set('mbstring.http_output' , "EUC-JP");
 ini_set('mbstring.internal_encoding', "EUC-JP");
 ini_set('mbstring.script_encoding'  , "EUC-JP");
 ini_set('mbstring.substitute_character', "none");
-
 
 //// SNSアプリケーション設定 ////
 

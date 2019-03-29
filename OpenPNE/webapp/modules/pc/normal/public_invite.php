@@ -12,13 +12,13 @@ function normalAction_public_invite($smarty,$requests)
 		client_redirect_login();
 		exit;
 	}
-    //>	
-	
+	//>
+
 	//---- inc_ テンプレート用 変数 ----//
 	$smarty->assign('inc_page_header', fetch_inc_page_header("public"));
-	
+
 	$smarty->assign('SNS_NAME', SNS_NAME);
-	
+
 	$smarty->ext_display("public_invite.tpl");
 }
 

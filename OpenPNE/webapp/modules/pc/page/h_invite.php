@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_h_invite($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -17,7 +15,6 @@ function pageAction_h_invite($smarty,$requests) {
 
 	$smarty->assign('inviting_member', h_invite_inviting_member4c_member_id($u));
 	$smarty->assign('k_inviting_member', k_h_invite_inviting_member4c_member_id($u));
-
 
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_invite.tpl");

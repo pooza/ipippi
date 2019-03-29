@@ -40,7 +40,6 @@ function doAction_inc_leave_c_commu($request) {
 	}
 	//---
 
-
 do_inc_leave_c_commu($target_c_commu_id,$c_member_id);
 
 // maruyama: 2005/04/08

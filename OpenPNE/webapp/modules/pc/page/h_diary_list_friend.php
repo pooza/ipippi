@@ -11,7 +11,6 @@ function pageAction_h_diary_list_friend($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
-
 	//日記一覧
 	$page = $page + $direc;
 	$page_size = 50;

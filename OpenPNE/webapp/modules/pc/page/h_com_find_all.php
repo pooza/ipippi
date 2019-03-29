@@ -1,6 +1,5 @@
 <?php
 
-
 //---------------------------------------------------------------------------
 function pageAction_h_com_find_all($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -52,7 +51,7 @@ function pageAction_h_com_find_all($smarty,$requests) {
 
 	$smarty->assign('c_commu_category_list', p_h_com_find_all_c_commu_category_list4null());
 	$smarty->assign('c_commu_category_parent_list',_db_c_commu_category_parent_list4null());
-	 
+
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("h_com_find_all.tpl");
 }

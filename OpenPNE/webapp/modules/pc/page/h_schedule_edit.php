@@ -11,13 +11,11 @@ function pageAction_h_schedule_edit($smarty,$requests) {
 		$input = $requests;
 		// ----------
 
-
 	$c_schedule = p_common_c_schedule4c_schedule_id($target_c_schedule_id);
 	if ($c_schedule['c_member_id'] != $u) {
 		exit("データはありません。");
 	}
 	$smarty->assign('target_c_schedule_id', $target_c_schedule_id);
-
 
 	$list = array(
 	  "title"=>$c_schedule['title'],
@@ -39,8 +37,8 @@ function pageAction_h_schedule_edit($smarty,$requests) {
 		$list['start_minute'] = null;
 	}
 	if (is_null($c_schedule['end_time'])) {
-	    $list['end_hour'] = null;
-	    $list['end_minute'] = null;
+		$list['end_hour'] = null;
+		$list['end_minute'] = null;
 	}
 
 	foreach ($list as $key=>$default) {
@@ -58,29 +56,28 @@ function pageAction_h_schedule_edit($smarty,$requests) {
 
 	  $month_list = array();
 	  for ($i=1; $i <= 12; $i++) {
-	    $month_list[$i] = $i;
+		$month_list[$i] = $i;
 	  }
 	  $smarty->assign('month_list', $month_list);
 
-	  
 	  $day_list = array();
 	  for ($i=1; $i <= 31; $i++) {
-	    $day_list[$i] = $i;
+		$day_list[$i] = $i;
 	  }
 	  $smarty->assign('day_list', $day_list);
 
 	  $hour_list = array();
 	  for ($i=0; $i <= 23; $i++) {
-	    $hour_list[$i] = sprintf("%02d", $i);
+		$hour_list[$i] = sprintf("%02d", $i);
 	  }
 	  $smarty->assign('hour_list', $hour_list);
 
 	  $minute_list = array();
 	  for ($i=0; $i < 60; $i+=15) {
-	    $minute_list[$i] = sprintf("%02d", $i);
+		$minute_list[$i] = sprintf("%02d", $i);
 	  }
 	  $smarty->assign('minute_list', $minute_list);
-	  
+
 	$smarty->ext_display("h_schedule_edit.tpl");
 }
 

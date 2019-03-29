@@ -5,7 +5,7 @@ function pageAction_h_config_image($smarty, $requests)
 
 	$prof = db_common_c_member_with_profile($u);
 	$smarty->assign('c_member', $prof);
-	
+
 	if (defined('MAIL_ADDRESS_HASHED') && MAIL_ADDRESS_HASHED) {
 		$mail_address = "p{$u}-".t_get_user_hash($u)."@" . MAIL_SERVER_DOMAIN;
 	} else {

@@ -11,7 +11,6 @@ function doAction_h_home_search($request) {
 
 	//---
 
-
 	if (isset($_REQUEST['community_x'])) {
 		$word = urlencode(mb_convert_encoding($q, "UTF-8", "EUC-JP,SJIS,UTF-8,JIS"));
 		client_redirect("page.php?p=h_com_find_all&keyword=".$word);

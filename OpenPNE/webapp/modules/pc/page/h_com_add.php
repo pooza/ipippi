@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_h_com_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -14,14 +12,13 @@ function pageAction_h_com_add($smarty,$requests) {
 		$err_msg = $requests['err_msg'];
 		// ----------
 
-
 	  $form_val=array(
 		'name'=>$name,
 		'c_commu_category_id'=>$c_commu_category_id,
 		'info'=>$info,
 		'public_flag'=>$public_flag,
 		);
-	  
+
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
 	$smarty->assign("c_commu_category", p_h_com_add_c_commu_category4null());

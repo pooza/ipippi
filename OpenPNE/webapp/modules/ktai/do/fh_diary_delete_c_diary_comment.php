@@ -31,13 +31,12 @@ function doAction_fh_diary_delete_c_diary_comment($requests)
 	//--- 権限チェック
 	//日記作成者 or コメント作成者
 
-    $c_diary = p_fh_diary_c_diary4c_diary_id($c_diary_comment['c_diary_id']);
-    if ($c_diary['c_member_id'] != $u
-        && $c_diary_comment['c_member_id'] != $u) {
-        handle_kengen_error();
-    }
-    //---
-
+	$c_diary = p_fh_diary_c_diary4c_diary_id($c_diary_comment['c_diary_id']);
+	if ($c_diary['c_member_id'] != $u
+		&& $c_diary_comment['c_member_id'] != $u) {
+		handle_kengen_error();
+	}
+	//---
 
 	do_fh_diary_delete_c_diary_comment($target_c_diary_comment_id, $u);
 

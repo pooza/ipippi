@@ -1,6 +1,5 @@
 <?php
 
-
 function pageAction_h_review_search($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
@@ -30,6 +29,6 @@ function pageAction_h_review_search($smarty,$requests) {
 	$smarty->assign('start_num', $start_num);
 	$smarty->assign('end_num', $end_num);
 
-	$smarty->ext_display('h_review_search.tpl');	
+	$smarty->ext_display('h_review_search.tpl');
 }
 

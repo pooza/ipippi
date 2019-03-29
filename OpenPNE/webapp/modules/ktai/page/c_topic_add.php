@@ -17,7 +17,7 @@ function pageAction_c_topic_add($smarty,$requests)
 	if(!p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu_id, $u)){
 		handle_kengen_error();
 	}
-	
+
 	$smarty->assign('c_commu', p_common_c_commu4c_commu_id($c_commu_id));
 
 	$smarty->ext_display("c_topic_add.tpl");

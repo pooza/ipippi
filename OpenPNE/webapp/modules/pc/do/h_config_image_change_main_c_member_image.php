@@ -4,7 +4,6 @@
 
 [引数]
 
-
 [リダイレクト先]
 h_config_image
 
@@ -26,9 +25,8 @@ function doAction_h_config_image_change_main_c_member_image($request) {
 
 	//---
 
-
 	do_h_config_image_change_c_member_main_image($u,$img_num);
 
-    client_redirect("page.php?p=h_config_image");
+	client_redirect("page.php?p=h_config_image");
 }
 

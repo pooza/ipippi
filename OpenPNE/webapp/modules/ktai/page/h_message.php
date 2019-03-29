@@ -21,15 +21,15 @@ function pageAction_h_message($smarty, $requests)
 
 	// 既読にする
 	p_h_message_update_c_message_is_read4c_message_id($target_c_message_id, $u);
-	
+
 	// メッセージデータ
 	//コミュニティおすすめメッセージのURLを置換
 	list($c_message['body'],$com_url,$friend_url) = k_p_h_message_ktai_url4url($c_message['body'],$tail);
-	
+
 	$smarty->assign("c_message", $c_message);
 	$smarty->assign("com_url", $com_url);
 	$smarty->assign("friend_url", $friend_url);
-	
+
 	$smarty->ext_display("h_message.tpl");
 }
 

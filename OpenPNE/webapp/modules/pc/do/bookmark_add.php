@@ -18,8 +18,7 @@ function doAction_bookmark_add($request) {
 		client_redirect("page.php?p=h_bookmark_list");
 		exit;
 	}
-	//---	
-
+	//---
 
 	do_f_bookmark_add($u, $c_member_id_to);
 	client_redirect("page.php?p=h_bookmark_list");

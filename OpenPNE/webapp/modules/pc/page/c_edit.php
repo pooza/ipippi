@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_c_edit($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -18,7 +16,7 @@ function pageAction_c_edit($smarty,$requests) {
 	//--- 権限チェック
 	//コミュニティ管理者
 	if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
-	    handle_kengen_error();
+		handle_kengen_error();
 	}
 	//---
 
@@ -36,7 +34,7 @@ function pageAction_c_edit($smarty,$requests) {
 
 	if($err_msg){
 		$c_commu['name'] = $name;
-		$c_commu['info'] = $info;	
+		$c_commu['info'] = $info;
 	}
 
 	$smarty->assign("c_commu", $c_commu);
@@ -55,7 +53,6 @@ function pageAction_c_edit($smarty,$requests) {
 	$smarty->assign("is_topic", p_c_edit_is_topic4c_commu_id($target_c_commu_id));
 
 	$smarty->assign("err_msg", $err_msg);
-
 
 	/////AA local var samples AA//////////////////////////
 	$smarty->ext_display("c_edit.tpl");

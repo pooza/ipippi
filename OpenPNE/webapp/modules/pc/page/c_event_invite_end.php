@@ -12,7 +12,7 @@ function pageAction_c_event_invite_end($smarty,$requests) {
 
 		//--- 権限チェック
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
-	        handle_kengen_error();
+			handle_kengen_error();
 		}
 		//---
 
@@ -20,6 +20,6 @@ function pageAction_c_event_invite_end($smarty,$requests) {
 		$smarty->assign("c_commu_id", $c_commu_id);
 		$smarty->assign("c_commu_topic_id", $c_commu_topic_id);
 
-		$smarty->ext_display('c_event_invite_end.tpl');	
+		$smarty->ext_display('c_event_invite_end.tpl');
 }
 

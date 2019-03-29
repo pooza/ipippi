@@ -14,7 +14,6 @@ function pageAction_fh_review_list_member($smarty,$requests) {
 			exit;
 		}
 
-
 		$page_size = 30;
 		$page = $page + $direc;
 
@@ -29,7 +28,7 @@ function pageAction_fh_review_list_member($smarty,$requests) {
 
 		$smarty->assign('c_member', db_common_c_member4c_member_id($c_member_id));
 
-		list($c_review_list, $is_prev, $is_next, $total_num, $start_num, $end_num) 
+		list($c_review_list, $is_prev, $is_next, $total_num, $start_num, $end_num)
 			= p_fh_review_list_product_c_review_list4c_member_id($c_member_id, $page, $page_size);
 		$smarty->assign('c_review_list', $c_review_list);
 		$smarty->assign("is_prev", $is_prev);

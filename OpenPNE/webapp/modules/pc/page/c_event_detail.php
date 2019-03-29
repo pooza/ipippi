@@ -17,23 +17,23 @@ function pageAction_c_event_detail($smarty,$requests) {
 
 	//--- 権限チェック
 	if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
-        handle_kengen_error();
+		handle_kengen_error();
 	}
 	//---
 
-    $c_commu = p_common_c_commu4c_commu_id($c_commu_id);
-    if (!$c_commu) {
-        client_redirect("page.php?p=h_err_c_home");
-        exit;
-    }
+	$c_commu = p_common_c_commu4c_commu_id($c_commu_id);
+	if (!$c_commu) {
+		client_redirect("page.php?p=h_err_c_home");
+		exit;
+	}
 	if (!$c_topic['event_flag']) {
-        client_redirect("page.php?p=c_topic_detail&target_c_commu_topic_id=".$c_topic['c_commu_topic_id']);
-        exit;
-    }
+		client_redirect("page.php?p=c_topic_detail&target_c_commu_topic_id=".$c_topic['c_commu_topic_id']);
+		exit;
+	}
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 
-	//詳細部分	
+	//詳細部分
 	$smarty->assign("c_commu",$c_commu);
 	$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 	$c_topic['file_filename1_url'] = urlencode($c_topic['file_filename1']);
@@ -71,7 +71,7 @@ function pageAction_c_event_detail($smarty,$requests) {
 	$smarty->assign('err_msg', $err_msg);
 	$smarty->assign('body', $body);
 
-	$smarty->assign('c_member_id', $u);	
+	$smarty->assign('c_member_id', $u);
 
 	$smarty->ext_display('c_event_detail.tpl');
 }

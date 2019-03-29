@@ -9,37 +9,37 @@ function pageAction_fh_delete_comment($smarty,$requests) {
 	$target_c_diary_comment_id = $requests['target_c_diary_comment_id'];
 	// ----------
 
-    // target が指定されていない
-    if (!$target_c_diary_id) {
-        client_redirect("page.php?p=h_err_fh_diary");
-        exit;
-    }
-    // target の日記が存在しない
-    if (!p_common_is_active_c_diary_id($target_c_diary_id)) {
-        client_redirect("page.php?p=h_err_fh_diary");
-        exit;
-    }
-    
-    $target_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
-	
-    // 削除するコメントがが指定されていない
-    if (!$target_c_diary_comment_id) {
-        client_redirect("page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id");
-        exit;
-    }
-    // コメントIDが不正
-    foreach ($target_c_diary_comment_id as $item) {
-    	$comment = _do_c_diary_comment4c_diary_comment_id($item);
-    	if ($comment['c_diary_id'] != $target_c_diary_id
-    		|| ($comment['c_member_id'] != $u &&
-    			$target_diary['c_member_id'] != $u) ) {
-    		client_redirect("page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id");
-    		exit;
-    	}
-    }
+	// target が指定されていない
+	if (!$target_c_diary_id) {
+		client_redirect("page.php?p=h_err_fh_diary");
+		exit;
+	}
+	// target の日記が存在しない
+	if (!p_common_is_active_c_diary_id($target_c_diary_id)) {
+		client_redirect("page.php?p=h_err_fh_diary");
+		exit;
+	}
+
+	$target_diary = p_fh_diary_c_diary4c_diary_id($target_c_diary_id);
+
+	// 削除するコメントがが指定されていない
+	if (!$target_c_diary_comment_id) {
+		client_redirect("page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id");
+		exit;
+	}
+	// コメントIDが不正
+	foreach ($target_c_diary_comment_id as $item) {
+		$comment = _do_c_diary_comment4c_diary_comment_id($item);
+		if ($comment['c_diary_id'] != $target_c_diary_id
+			|| ($comment['c_member_id'] != $u &&
+				$target_diary['c_member_id'] != $u) ) {
+			client_redirect("page.php?p=fh_diary&target_c_diary_id=$target_c_diary_id");
+			exit;
+		}
+	}
 
 	// オブジェクトの振り分け用
-	$target_c_member_id = $target_diary['c_member_id']; 
+	$target_c_member_id = $target_diary['c_member_id'];
 
 	// inc_navi.tpl
 	if(!$target_c_member_id){

@@ -20,7 +20,7 @@
  * @param Smarty clever simulation of a method
  * @param bool repeat
  * @return string string $content re-formatted
- * 
+ *
  */
 function smarty_block_t_loop($params, $content, &$smarty, &$repeat) {
 	static $i;
@@ -31,18 +31,18 @@ function smarty_block_t_loop($params, $content, &$smarty, &$repeat) {
 	} else {
 		$start = 0;
 	}
-	
+
 	// item
 	if (empty($params['item'])) {
 		$item = "item";
 	} else {
 		$item = $params['item'];
-	}	
+	}
 
 	// main
 	if (is_null($content)) { // 初期化
 		$i = $start;
-		
+
 		if (!isset($params['from'][$i])) { // 要素が1個もない
 			$repeat = false;
 		} else {

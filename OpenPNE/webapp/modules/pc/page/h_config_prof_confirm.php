@@ -12,7 +12,7 @@ function pageAction_h_config_prof_confirm($smarty,$requests) {
 
 	$smarty->assign('prof', $prof);
 	$smarty->assign('profile_list', db_common_c_profile_list4null());
-		
+
 	$smarty->ext_display("h_config_prof_confirm.tpl");
 }
 

@@ -20,7 +20,7 @@ function pageAction_fh_diary_list($smarty,$requests) {
 	if($target_c_member_id == $u) {
 		$type = 'h';
 		$is_diary_admin = true;
-		
+
 	} else {
 		$type = 'f';
 		$is_diary_admin = false;
@@ -29,16 +29,16 @@ function pageAction_fh_diary_list($smarty,$requests) {
 		//日記の公開範囲設定
 		if (($target_c_member['public_flag_diary'] == "friend" &&
 			 !_db_is_friend($u, $target_c_member_id))) {
-		    client_redirect("page.php?p=h_err_diary_access");
-		    exit;
+			client_redirect("page.php?p=h_err_diary_access");
+			exit;
 		}
-		
+
 		// アクセスブロック
 		if(p_common_is_access_block($u, $target_c_member_id)){
 			client_redirect("page.php?p=h_access_block");
 			exit;
 		}
-		
+
 		//あしあとをつける
 		p_etc_do_ashiato($target_c_member_id, $u);
 	}
@@ -81,11 +81,11 @@ function pageAction_fh_diary_list($smarty,$requests) {
 	$smarty->assign("diary_list_count",count($list_set[0]) );
 
 	//日記一覧、カレンダー用変数
-    $date_val=	array(
-        'year' => $year,
-        'month' => $month,
-        'day' => $day,
-    );
+	$date_val=	array(
+		'year' => $year,
+		'month' => $month,
+		'day' => $day,
+	);
 	$smarty->assign("date_val", $date_val);
 
 	//日記のカレンダー

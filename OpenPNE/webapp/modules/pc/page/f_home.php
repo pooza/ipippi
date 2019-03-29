@@ -1,7 +1,5 @@
 <?php
 
-
-
 //---------------------------------------------------------------------------
 function pageAction_f_home($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
@@ -49,7 +47,6 @@ function pageAction_f_home($smarty,$requests) {
 	$smarty->assign("is_friend", $is_friend);
 	$smarty->assign("c_member", db_common_c_member4c_member_id($u));
 
-
 	// --- f_home, h_prof 共通処理
 
 	$smarty->assign("target_c_member_id",$target_c_member_id);
@@ -78,7 +75,6 @@ function pageAction_f_home($smarty,$requests) {
 	$smarty->assign('profile_list', db_common_c_profile_list());
 
 	// ---
-
 
 	$smarty->ext_display("f_home.tpl");
 }

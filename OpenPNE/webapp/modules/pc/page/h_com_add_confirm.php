@@ -17,16 +17,15 @@ function pageAction_h_com_add_confirm($smarty,$requests) {
 		if (p_c_com_add_is_commu4c_commu_name($name))
 			$err_msg[] = "そのコミュニティはすでに存在します";
 
-	    if($upfile_obj["tmp_name"] && (t_get_image_size($upfile_obj) > 300*1024 || !t_check_image_format($upfile_obj)))
-	    	$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-
+		if($upfile_obj["tmp_name"] && (t_get_image_size($upfile_obj) > 300*1024 || !t_check_image_format($upfile_obj)))
+			$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
 
 		if($err_msg){
 			$_REQUEST['err_msg'] = $err_msg;
 			module_execute('pc', 'page', "h_com_add");
 			exit;
 		}
-	//-----	
+	//-----
 
 		$smarty->assign('inc_navi',fetch_inc_navi("h"));
 

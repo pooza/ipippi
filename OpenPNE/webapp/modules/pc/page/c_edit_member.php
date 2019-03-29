@@ -13,7 +13,7 @@ function pageAction_c_edit_member($smarty,$requests) {
 	//--- 権限チェック
 	//コミュニティ管理者
 	if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
-	    handle_kengen_error();
+		handle_kengen_error();
 	}
 	//---
 

@@ -1,11 +1,10 @@
 <?php
 // プロフィール項目追加
 
-
 function doAction_insert_c_profile($requests)
-{	
+{
 	man_init_admin_do();
-	
+
 	if (preg_match('/^[a-zA-Z0-9_]+$/', $requests['name']) && $requests['caption']) {
 		db_admin_insert_c_profile(
 			$requests['name']

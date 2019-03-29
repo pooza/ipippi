@@ -32,8 +32,8 @@ function doAction_h_message_insert_message($request) {
 	if ($target_c_member_id == $u) {
 		handle_kengen_error();
 	}
-	
-    //アクセスブロック設定
+
+	//アクセスブロック設定
 	if (p_common_is_access_block($u, $target_c_member_id)) {
 		client_redirect("page.php?p=h_access_block");
 		exit;

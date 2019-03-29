@@ -22,8 +22,8 @@ function pageAction_c_member_review($smarty,$requests) {
 	$smarty->assign('start_num', $start_num);
 	$smarty->assign('end_num', $end_num);
 
-    $c_commu = p_common_c_commu4c_commu_id($c_commu_id);
-    $smarty->assign('c_commu', $c_commu);
+	$c_commu = p_common_c_commu4c_commu_id($c_commu_id);
+	$smarty->assign('c_commu', $c_commu);
 	$smarty->assign("is_c_commu_member", p_common_is_c_commu_member4c_commu_idAc_member_id($c_commu_id,$u) );
 
 	$smarty->ext_display('c_member_review.tpl');

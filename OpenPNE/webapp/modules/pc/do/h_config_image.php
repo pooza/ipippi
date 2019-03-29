@@ -35,7 +35,6 @@ function doAction_h_config_image($request) {
 
 	//---
 
-
 	$c_member = db_common_c_member4c_member_id($u);
 
 	if(!$c_member['image_filename_1'])$img_num=1;

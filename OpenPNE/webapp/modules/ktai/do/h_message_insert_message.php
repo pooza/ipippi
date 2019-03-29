@@ -46,13 +46,13 @@ function doAction_h_message_insert_message($requests)
 	if ($target_c_member_id == $u) {
 		handle_kengen_error();
 	}
-	
+
 	//target_c_messageが自分宛
 	$target_c_message = _db_c_message4c_message_id($target_c_message_id);
 	if ($target_c_message['c_member_id_to'] != $u) {
 		handle_kengen_error();
 	}
-	
+
 	// アクセスブロック
 	if(p_common_is_access_block($u, $target_c_member_id)){
 		client_redirect("ktai_page.php?p=h_access_block&$tail");

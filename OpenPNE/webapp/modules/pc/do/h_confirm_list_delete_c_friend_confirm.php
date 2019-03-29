@@ -25,18 +25,17 @@ function doAction_h_confirm_list_delete_c_friend_confirm($request) {
 	//--- 権限チェック
 	//リンク承認を送った人 or 受けた人
 
-    $cfc = _do_c_friend_confirm4c_friend_confirm_id($target_c_friend_confirm_id);
-    
-    if ($cfc['c_member_id_to'] != $u
-        && $cfc['c_member_id_from'] != $u) {
-        handle_kengen_error();
-    }
-    //---
-    
-    
+	$cfc = _do_c_friend_confirm4c_friend_confirm_id($target_c_friend_confirm_id);
+
+	if ($cfc['c_member_id_to'] != $u
+		&& $cfc['c_member_id_from'] != $u) {
+		handle_kengen_error();
+	}
+	//---
+
 	_do_delete_c_friend_confirm4c_friend_confirm_id($target_c_friend_confirm_id, $u);
-    
-    $msg = urlencode('承認依頼を削除しました');
-    client_redirect("page.php?p=h_confirm_list&msg=$msg");
+
+	$msg = urlencode('承認依頼を削除しました');
+	client_redirect("page.php?p=h_confirm_list&msg=$msg");
 }
 

@@ -11,7 +11,6 @@ function pageAction_h_calendar($smarty,$requests) {
 		$pref_id = $requests['pref_id'];
 		// ----------
 
-
 	if (!$year) $year = date('Y');
 	if (!$month) $month = date('n');
 
@@ -31,25 +30,25 @@ function pageAction_h_calendar($smarty,$requests) {
 	$calendar = array();
 	$i = 0;
 	while ($Day = $Month->fetch()) {
-	    if ($Day->isFirst()) $i++;
+		if ($Day->isFirst()) $i++;
 
-	    if ($Day->isEmpty()) {
-	        $calendar[$i][] = array();
-	    } else {
-	      $day = $Day->thisDay();
-	      $item = array(
-	        'day' => $day,
-	        'now' => false,
-	        'event' => $event_list[$day],
-	        'schedule' => p_h_calendar_c_schedule_list4date($year, $month, $day, $u),
-	      );
-	      $item['day'] = $day;
-	      if ($is_curr && $item['day'] == $curr_day) {
-	        $item['now'] = true;
-	      }
-	      
-	      $calendar[$i][] = $item;
-	    }
+		if ($Day->isEmpty()) {
+			$calendar[$i][] = array();
+		} else {
+		  $day = $Day->thisDay();
+		  $item = array(
+			'day' => $day,
+			'now' => false,
+			'event' => $event_list[$day],
+			'schedule' => p_h_calendar_c_schedule_list4date($year, $month, $day, $u),
+		  );
+		  $item['day'] = $day;
+		  if ($is_curr && $item['day'] == $curr_day) {
+			$item['now'] = true;
+		  }
+
+		  $calendar[$i][] = $item;
+		}
 	}
 
 	$ym = array(

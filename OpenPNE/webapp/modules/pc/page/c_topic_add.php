@@ -12,7 +12,7 @@ function pageAction_c_topic_add($smarty,$requests) {
 	// ----------
 
 	if($event_flag==1){
-	    client_redirect("page.php?p=c_event_add&target_c_commu_id=".$c_commu_id);
+		client_redirect("page.php?p=c_event_add&target_c_commu_id=".$c_commu_id);
 	}
 
 	//--- 権限チェック

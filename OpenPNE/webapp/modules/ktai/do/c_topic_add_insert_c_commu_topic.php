@@ -13,21 +13,21 @@ function doAction_c_topic_add_insert_c_commu_topic($requests)
 
 	//--- 権限チェック
 	//コミュニティ参加者
-	
+
 	$status = db_common_commu_status($u, $c_commu_id);
 
 	if(!$status['is_commu_member']) {
 		handle_kengen_error();
-	}	
+	}
 	//---
 
 	if (is_null($title) || $title === '') {
-    	client_redirect("ktai_page.php?p=c_topic_add&target_c_commu_id=$target_c_commu_id&msg=2&$tail");
-    	exit;
+		client_redirect("ktai_page.php?p=c_topic_add&target_c_commu_id=$target_c_commu_id&msg=2&$tail");
+		exit;
 	}
 	if (is_null($body) || $body === '') {
-    	client_redirect("ktai_page.php?p=c_topic_add&target_c_commu_id=$target_c_commu_id&msg=1&$tail");
-    	exit;
+		client_redirect("ktai_page.php?p=c_topic_add&target_c_commu_id=$target_c_commu_id&msg=1&$tail");
+		exit;
 	}
 
 	$insert_c_commu_topic = array(

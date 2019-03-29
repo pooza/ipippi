@@ -4,7 +4,6 @@ function pageAction_h_home($smarty,$requests) {
 
 	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
-
 	// 運営者からのおしらせ
 	$smarty->assign("site_info", p_common_c_siteadmin4target_pagename('h_home'));
 
@@ -14,7 +13,6 @@ function pageAction_h_home($smarty,$requests) {
 
 	//フレンドの最新日記
 	$smarty->assign("c_diary_friend_list", p_h_home_c_diary_friend_list4c_member_id($u, 5));
-
 
 	//フレンドリスト
 	$smarty->assign("c_friend_list", p_f_home_c_friend_list4c_member_id($u, 9));
@@ -75,11 +73,9 @@ function pageAction_h_home($smarty,$requests) {
 	$smarty->assign('c_review_list', p_h_home_c_review_list4c_member_id($u));
 	$smarty->assign('c_friend_review_list', p_h_home_c_friend_review_list4c_member_id($u));
 
-
 	$smarty->assign("r_datetime",mktime());
 	$date = array("日","月","火","水","木","金","土");
 	$smarty->assign("r_datetime_date",$date[date("w")]);
-
 
 	//カレンダー表示用
 	if (defined("DISPLAY_SCHEDULE_HOME") && DISPLAY_SCHEDULE_HOME) {
@@ -96,27 +92,27 @@ function pageAction_h_home($smarty,$requests) {
 		$dayofweek = array('日','月','火','水','木','金','土');
 		$i = 0;
 		while ($Day = $Week->fetch()) {
-		      $y = $Day->thisYear();
-		      $m = $Day->thisMonth();
-		      $d = $Day->thisDay();
-		      $item = array(
-		      	'year'=> $y,
-		      	'month'=>$m,
-		        'day' => $d,
-		        'dayofweek'=>$dayofweek[$i++], 
-		        'now' => false,
-		        'event' => p_h_home_event4c_member_id($y, $m, $d, $u),
-		        'schedule' => p_h_calendar_c_schedule_list4date($y, $m, $d, $u),
-		      );
-		      if ($w == 0 && $d == date('d')) {
-		      	$item['now'] = true;
-		      }
-		      
-		      $calendar[] = $item;
+			  $y = $Day->thisYear();
+			  $m = $Day->thisMonth();
+			  $d = $Day->thisDay();
+			  $item = array(
+			  	'year'=> $y,
+			  	'month'=>$m,
+				'day' => $d,
+				'dayofweek'=>$dayofweek[$i++],
+				'now' => false,
+				'event' => p_h_home_event4c_member_id($y, $m, $d, $u),
+				'schedule' => p_h_calendar_c_schedule_list4date($y, $m, $d, $u),
+			  );
+			  if ($w == 0 && $d == date('d')) {
+			  	$item['now'] = true;
+			  }
+
+			  $calendar[] = $item;
 		}
 		$smarty->assign("calendar", $calendar);
 	}
-	
+
 	// inc_entry_point
 	$smarty->assign('inc_entry_point', fetch_inc_entry_point_h_home());
 

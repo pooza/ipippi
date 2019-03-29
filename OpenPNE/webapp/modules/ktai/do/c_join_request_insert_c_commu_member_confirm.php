@@ -28,16 +28,15 @@ function doAction_c_join_request_insert_c_commu_member_confirm($requests)
 
 	$c_member_id_from = $u;
 
-    //--- 権限チェック
-    //コミュニティメンバーでない and 参加承認中でない
+	//--- 権限チェック
+	//コミュニティメンバーでない and 参加承認中でない
 
-    $status = db_common_commu_status($u, $target_c_commu_id);
-    if ($status['is_commu_member'] ||
-    	$status['is_commu_member_confirm']) {
-        handle_kengen_error();
-    }
-    //---
-
+	$status = db_common_commu_status($u, $target_c_commu_id);
+	if ($status['is_commu_member'] ||
+		$status['is_commu_member_confirm']) {
+		handle_kengen_error();
+	}
+	//---
 
 	if($body == null){
 		//msg=1
@@ -63,7 +62,6 @@ function doAction_c_join_request_insert_c_commu_member_confirm($requests)
 
 	do_common_send_message_syoudaku($c_member_id_from, $c_member_id_to, $subject, $body_disp);
 
-
-    client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
+	client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
 }
 

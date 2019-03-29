@@ -14,7 +14,7 @@ function pageAction_c_event_member_list($smarty,$requests) {
 
 		//--- 権限チェック
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
-	        handle_kengen_error();
+			handle_kengen_error();
 		}
 		//---
 
@@ -39,14 +39,14 @@ function pageAction_c_event_member_list($smarty,$requests) {
 		}
 		$smarty->assign("page_num",$page_num);
 
-		$smarty->assign('c_event_member_list', $c_event_membet_list);	
-		$smarty->assign('total_c_event_member', $total_c_event_membet);	
+		$smarty->assign('c_event_member_list', $c_event_membet_list);
+		$smarty->assign('total_c_event_member', $total_c_event_membet);
 
 		$smarty->assign('is_prev', $start_num!=1);
 		$smarty->assign('is_next', $end_num!=$total_c_event_membet);
 
 		$smarty->assign('start_num', $start_num);
-		$smarty->assign('end_num', $end_num);	
-		$smarty->ext_display('c_event_member_list.tpl');	
+		$smarty->assign('end_num', $end_num);
+		$smarty->ext_display('c_event_member_list.tpl');
 }
 

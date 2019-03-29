@@ -9,10 +9,10 @@ function pageAction_c_admin_request($smarty,$requests) {
 
 	//--- 権限チェック
 	//コミュニティ管理者
-    if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
-        handle_kengen_error();
-    }
-    //---
+	if (!_db_is_c_commu_admin($target_c_commu_id, $u)) {
+		handle_kengen_error();
+	}
+	//---
 
 	$smarty->assign('inc_navi',fetch_inc_navi("c",$target_c_commu_id));
 

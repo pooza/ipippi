@@ -16,16 +16,15 @@ require_once(PEAR_DIR . 'Log.php');
 require_once(DOCUMENT_ROOT . '/lib/tejimaya/db_mail.php');
 require_once(DOCUMENT_ROOT . '/mail/mail_sns.php');
 
-
 // 標準入力からメールデータの読み込み
 $stdin = fopen("php://stdin", "rb");
 $raw_mail = "";
 do {
-    $data = fread($stdin, 8192);
-    if(strlen($data) == 0) {
-        break;
-    }
-    $raw_mail .= $data;
+	$data = fread($stdin, 8192);
+	if(strlen($data) == 0) {
+		break;
+	}
+	$raw_mail .= $data;
 } while(true);
 fclose($stdin);
 
@@ -38,38 +37,36 @@ m_debug_log(ob_get_contents(), PEAR_LOG_DEBUG);
 
 exit;
 
-
-
 /**
  * メール処理
  */
 function m_process_mail($raw_mail)
 {
-    // メールのデコード
-    list($mail, $from, $to) = m_decode_mail($raw_mail);
-    
-    // for debug
-    print_r($mail);
-    
-    if (!db_common_is_mailaddress($from) || !db_common_is_mailaddress($to)) {
-    	m_debug_log('mail.php::process_mail() ERROR code 3');
-    	return false;
-    }
-    
-    list($to_user, $to_host) = explode("@", $to, 2);
-    
-    if ($to_host == MAIL_SERVER_DOMAIN) {
-    	$mailsns =& new MailSNS($mail, $from, $to);
-    	if (!$mailsns->main()) {
-    		m_debug_log('mail.php::process_mail() ERROR code 1');
-    		return false;
-    	}
-    } else {
+	// メールのデコード
+	list($mail, $from, $to) = m_decode_mail($raw_mail);
+
+	// for debug
+	print_r($mail);
+
+	if (!db_common_is_mailaddress($from) || !db_common_is_mailaddress($to)) {
+		m_debug_log('mail.php::process_mail() ERROR code 3');
+		return false;
+	}
+
+	list($to_user, $to_host) = explode("@", $to, 2);
+
+	if ($to_host == MAIL_SERVER_DOMAIN) {
+		$mailsns =& new MailSNS($mail, $from, $to);
+		if (!$mailsns->main()) {
+			m_debug_log('mail.php::process_mail() ERROR code 1');
+			return false;
+		}
+	} else {
 		m_debug_log('mail.php::process_mail() ERROR code 2');
 		return false;
-    }
-    
-    return true;
+	}
+
+	return true;
 }
 
 /**
@@ -77,39 +74,39 @@ function m_process_mail($raw_mail)
  */
 function m_decode_mail($raw_mail)
 {
-    $params['include_bodies'] = true;
-    $params['decode_bodies']  = true;
-    $params['decode_headers'] = true;
-    
-    $decoder = new Mail_mimeDecode($raw_mail);
-    $mail = $decoder->decode($params);
+	$params['include_bodies'] = true;
+	$params['decode_bodies']  = true;
+	$params['decode_headers'] = true;
 
-    $from = $mail->headers['from'];
-    $to = $mail->headers['to'];
+	$decoder = new Mail_mimeDecode($raw_mail);
+	$mail = $decoder->decode($params);
+
+	$from = $mail->headers['from'];
+	$to = $mail->headers['to'];
 
 	// "(ダブルクォーテーション)を取り除く
-    // "hogehoge..hoge"@docomo.ne.jp
-    $from = str_replace( '"', '', $from);
-    $to = str_replace('"', '', $to);
-    
-    // <test@docomo.ne.jp> というアドレスになることがある。
-    //   日本語 <test@docomo.ne.jp>
-    // のような場合に複数マッチする可能性があるので、
-    // マッチした最後のものを取ってくるように変更
-    $matches = array();
-    $regx = '/([\.\w!#$%&\'*+-\/=?^`{|}~]+@[\w!#$%&\'*+-\/=?^`{|}~]+(\.[\w!#$%&\'*+-\/=?^`{|}~]+)*)/';
-    if (preg_match_all($regx, $from, $matches)) {
-        $from = array_pop($matches[1]);
-    } else {
-    	$from = '';
-    }
-    if (preg_match_all($regx, $to, $matches)) {
-        $to = array_pop($matches[1]);
-    } else {
-    	$to = '';
-    }
+	// "hogehoge..hoge"@docomo.ne.jp
+	$from = str_replace( '"', '', $from);
+	$to = str_replace('"', '', $to);
 
-    return array($mail, $from, $to);
+	// <test@docomo.ne.jp> というアドレスになることがある。
+	//   日本語 <test@docomo.ne.jp>
+	// のような場合に複数マッチする可能性があるので、
+	// マッチした最後のものを取ってくるように変更
+	$matches = array();
+	$regx = '/([\.\w!#$%&\'*+-\/=?^`{|}~]+@[\w!#$%&\'*+-\/=?^`{|}~]+(\.[\w!#$%&\'*+-\/=?^`{|}~]+)*)/';
+	if (preg_match_all($regx, $from, $matches)) {
+		$from = array_pop($matches[1]);
+	} else {
+		$from = '';
+	}
+	if (preg_match_all($regx, $to, $matches)) {
+		$to = array_pop($matches[1]);
+	} else {
+		$to = '';
+	}
+
+	return array($mail, $from, $to);
 }
 
 /**
@@ -127,20 +124,20 @@ function m_get_subject(&$mail)
 function m_get_text_body(&$mail)
 {
 	$body = "";
-    
-    if (isset($mail->parts) && is_array($mail->parts)) {   // multipart
-    	foreach ($mail->parts as $part) {
-    		if ($body = m_get_text_body($part)) break;
-    	}
-    }
-    elseif ($mail->ctype_primary === "text") {
-    	$body = $mail->body;
+
+	if (isset($mail->parts) && is_array($mail->parts)) {   // multipart
+		foreach ($mail->parts as $part) {
+			if ($body = m_get_text_body($part)) break;
+		}
+	}
+	elseif ($mail->ctype_primary === "text") {
+		$body = $mail->body;
 		$charset = $mail->ctype_parameters['charset'];
-		
+
 		$body = m_convert_text($body, $charset);
-    }
-    
-    return $body;
+	}
+
+	return $body;
 }
 
 function m_convert_text($string, $from_encoding = "")
@@ -152,11 +149,11 @@ function m_convert_text($string, $from_encoding = "")
 			$from_encoding = "auto";
 	}
 	$string = mb_convert_encoding($string, "EUC-JP", $from_encoding);
-	
+
 	$string = str_replace("\0", "", $string);
 	$string = rtrim($string);
 	$string = mb_ereg_replace('[　]+$', "", $string);
-	
+
 	return $string;
 }
 
@@ -164,36 +161,36 @@ function m_get_image(&$mail)
 {
 	$allowed_type = array("jpeg", "gif", "png");
 	$image_data = "";
-	
-    if (isset($mail->parts) && is_array($mail->parts)) {   // multipart
-        foreach ($mail->parts as $part) {
-        	if ($image_data = m_get_image($part)) break;
-        }
-    }
-    elseif ($mail->ctype_primary === "image" &&
-    		 in_array($mail->ctype_secondary, $allowed_type)) {
-    	$image_data = $mail->body;
-    	
-         // 画像かどうかチェック
-    	if (!@imagecreatefromstring($image_data)) {
-	        // base64_decodeしてリトライ
-	        $image_data = base64_decode($image_data);
-	        if (!@imagecreatefromstring($image_data)) return "";
-    	}
-    	
-        // 一時ファイルを作成
-        $tmpfname = tempnam(DOCUMENT_ROOT . "/var/tmp", "MAIL_");
-        
-        $fp = fopen($tmpfname, "wb");
-        fwrite($fp, $image_data);
+
+	if (isset($mail->parts) && is_array($mail->parts)) {   // multipart
+		foreach ($mail->parts as $part) {
+			if ($image_data = m_get_image($part)) break;
+		}
+	}
+	elseif ($mail->ctype_primary === "image" &&
+			 in_array($mail->ctype_secondary, $allowed_type)) {
+		$image_data = $mail->body;
+
+		 // 画像かどうかチェック
+		if (!@imagecreatefromstring($image_data)) {
+			// base64_decodeしてリトライ
+			$image_data = base64_decode($image_data);
+			if (!@imagecreatefromstring($image_data)) return "";
+		}
+
+		// 一時ファイルを作成
+		$tmpfname = tempnam(DOCUMENT_ROOT . "/var/tmp", "MAIL_");
+
+		$fp = fopen($tmpfname, "wb");
+		fwrite($fp, $image_data);
 		fclose($fp);
-		
+
 		// 画像サイズのチェック
 		if (filesize($tmpfname) > 300*1024) {
 			unlink($tmpfname);
 			return "";
 		}
-		
+
 		// Content-Type が正しいかどうかチェック
 		switch ($mail->ctype_secondary) {
 		case "jpeg":
@@ -206,11 +203,11 @@ function m_get_image(&$mail)
 			if (!@imagecreatefrompng($tmpfname)) $image_data = "";
 			break;
 		}
-		
+
 		unlink($tmpfname);
-    }
-    
-    return $image_data;
+	}
+
+	return $image_data;
 }
 
 /**
@@ -219,10 +216,10 @@ function m_get_image(&$mail)
 function m_debug_log($msg, $priority =  PEAR_LOG_WARNING)
 {
 	if (!MAIL_DEBUG_LOG) return;
-	
+
 	$log_path = DOCUMENT_ROOT . '/var/log/mail.log';
 	$file =& Log::singleton('file', $log_path, 'MAIL');
-	
+
 	mb_convert_encoding($msg, 'JIS', 'auto');
 	$file->log($msg, $priority);
 }

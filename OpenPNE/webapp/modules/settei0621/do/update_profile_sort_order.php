@@ -15,8 +15,7 @@ function doAction_update_profile_sort_order($requests)
 	} else {
 		db_admin_update_c_admin_config('SORT_ORDER_BIRTH', $requests['sort_order_birth']);
 	}
-	
+
 	admin_client_redirect('edit_c_profile', "並び順を変更しました。");
 }
-
 

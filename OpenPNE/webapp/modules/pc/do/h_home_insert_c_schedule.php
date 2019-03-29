@@ -8,7 +8,7 @@ function doAction_h_home_insert_c_schedule($request) {
 	// ----------
 
 	if (!$title) {
-		$msg = urlencode("タイトルを入力してください"); 
+		$msg = urlencode("タイトルを入力してください");
 		client_redirect("page.php?p=h_home&w=".$request['w']."&msg=$msg");
 		exit;
 	}
@@ -33,14 +33,14 @@ function doAction_h_home_insert_c_schedule($request) {
 	$input['start_year'] = intval($start_dates[0]);
 	$input['start_month'] = intval($start_dates[1]);
 	$input['start_day'] = intval($start_dates[2]);
-  
+
 	$input['end_year'] = $input['start_year'];
-    $input['end_month'] = $input['start_month'];
-    $input['end_day'] = $input['start_day'];
+	$input['end_month'] = $input['start_month'];
+	$input['end_day'] = $input['start_day'];
 
 	$start_date = sprintf("%04d-%02d-%02d", $input['start_year'], $input['start_month'], $input['start_day']);
 	$end_date = sprintf("%04d-%02d-%02d", $input['end_year'], $input['end_month'], $input['end_day']);
-	  
+
 	if ($input['start_hour'] && $input['start_minute']) {
 		$start_time = "{$input['start_hour']}:{$input['start_minute']}:00";
 	} else {

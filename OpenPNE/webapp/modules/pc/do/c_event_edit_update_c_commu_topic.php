@@ -2,7 +2,6 @@
 function doAction_c_event_edit_update_c_commu_topic($request) {
 	$u = $GLOBALS['AUTH']->uid();
 
-	 
 	// --- リクエスト変数
 	$c_commu_topic_id = $request['target_c_commu_topic_id'];
 	// ----------
@@ -31,28 +30,28 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	//---
 
 	//エラーチェック
-    if (!trim($event['title']))  $err_msg[] = "タイトルを入力してください";
-    if(!trim($event['detail']))  $err_msg[] = "詳細を入力してください";
+	if (!trim($event['title']))  $err_msg[] = "タイトルを入力してください";
+	if(!trim($event['detail']))  $err_msg[] = "詳細を入力してください";
 
-    if(!$event['open_date_month'] || !$event['open_date_day'] || !$event['open_date_year'])  $err_msg[] = "開催日時を入力してください";
-    elseif(!checkdate($event['open_date_month'],$event['open_date_day'],$event['open_date_year'])) $err_msg[] = "開催日時は存在しません";
-    elseif(mktime(0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "開催日時は過去に指定できません";
+	if(!$event['open_date_month'] || !$event['open_date_day'] || !$event['open_date_year'])  $err_msg[] = "開催日時を入力してください";
+	elseif(!checkdate($event['open_date_month'],$event['open_date_day'],$event['open_date_year'])) $err_msg[] = "開催日時は存在しません";
+	elseif(mktime(0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "開催日時は過去に指定できません";
 
 	if($event['invite_period_month'].$event['invite_period_day'].$event['invite_period_year'] != ""){
-	    if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "募集期限は存在しません。";
-    	elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "募集期限は存在しません";
-	    elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "募集期限は過去に指定できません";	
-	    elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year'])
-	    		<mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) 
-	    		$err_msg[] = "募集期限は開催日時より未来に指定できません";
+		if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "募集期限は存在しません。";
+		elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "募集期限は存在しません";
+		elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "募集期限は過去に指定できません";
+		elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year'])
+				<mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']))
+				$err_msg[] = "募集期限は開催日時より未来に指定できません";
 	}
 
-    if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
-    	$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-    if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
-    	$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
-    if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
-    	$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+	if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
+		$err_msg[] = "画像1のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+	if($upfile_obj2["tmp_name"] && (t_get_image_size($upfile_obj2) > 300*1024 || !t_check_image_format($upfile_obj2)))
+		$err_msg[] = "画像2のサイズは300KB以内のGIF・JPEG・PNGにしてください";
+	if($upfile_obj3["tmp_name"] && (t_get_image_size($upfile_obj3) > 300*1024 || !t_check_image_format($upfile_obj3)))
+		$err_msg[] = "画像3のサイズは300KB以内のGIF・JPEG・PNGにしてください";
 
 	$names = array();
 	for ($i = 1 ; $i <= 3 ; $i ++) {
@@ -67,30 +66,29 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 		}
 	}
 
-    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-    	$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
-    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-    	$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
-    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-    	$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
+	if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
+		$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
+	if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
+		$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
+	if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
+		$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
 
-    if(is_dirty_file($upfile_obj11))
-    	$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
-    if(is_dirty_file($upfile_obj12))
-    	$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
-    if(is_dirty_file($upfile_obj13))
-    	$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj11))
+		$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj12))
+		$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj13))
+		$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
 
-    if ($err_msg) {
+	if ($err_msg) {
 		$_REQUEST = $event;
 		$_REQUEST['err_msg'] = $err_msg;
 		$_REQUEST['target_c_commu_topic_id'] = $c_commu_topic_id;
 		module_execute('pc', 'page', "c_event_edit");
 		exit;
-    }
+	}
 
-
-	//画像コピー	
+	//画像コピー
 	if( file_exists($upfile_obj1["tmp_name"]) ) $tmpfile1 = t_image_save2tmp($upfile_obj1, $sessid, "e1");
 	if( file_exists($upfile_obj2["tmp_name"]) ) $tmpfile2 = t_image_save2tmp($upfile_obj2, $sessid, "e2");
 	if( file_exists($upfile_obj3["tmp_name"]) ) $tmpfile3 = t_image_save2tmp($upfile_obj3, $sessid, "e3");
@@ -99,17 +97,16 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 	if( file_exists($upfile_obj13["tmp_name"]) ) $tmpfile13 = t_image_save2tmp($upfile_obj13, $sessid, "t13");
 
 	if($tmpfile1){
-		$filename1 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_1", $tmpfile1);		
+		$filename1 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_1", $tmpfile1);
 	}
 	if($tmpfile2){
-		$filename2 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_2", $tmpfile2);		
+		$filename2 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_2", $tmpfile2);
 	}
 	if($tmpfile3){
-		$filename3 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_3", $tmpfile3);		
+		$filename3 = image_insert_c_image4tmp("e_".$c_commu_topic_id."_3", $tmpfile3);
 	}
 
 	t_image_clear_tmp(session_id());
-
 
 	//DBをupdate
 	$update_c_commu_topic = array(
@@ -163,7 +160,6 @@ function doAction_c_event_edit_update_c_commu_topic($request) {
 		$update_c_commu_topic_comment["image_filename3"] = $filename3;
 		image_data_delete($c_topic['image_filename3']);//画像削除
 	}
-
 
 	do_c_event_edit_update_c_commu_topic_comment($c_commu_topic_id,$update_c_commu_topic_comment);
 

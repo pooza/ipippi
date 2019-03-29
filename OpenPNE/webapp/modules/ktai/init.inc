@@ -36,15 +36,15 @@ function init_ktai_page(&$smarty)
 	// ケータイ用出力時フィルタ
 	$smarty->load_filter('output', 'mobile');
 	header('Content-Type: text/html; charset=Shift_JIS');
-	
+
 	//全ページ共通変数のアサイン
 	$smarty->assign('u', $GLOBALS['KTAI_C_MEMBER_ID']);
 	$smarty->assign('tail', $GLOBALS['KTAI_URL_TAIL']);
 	$smarty->assign('msg', k_p_common_msg4msg_id($_REQUEST['msg']));
-	
+
 	@session_start();
-	$smarty->assign('PHPSESSID', session_id());	
-	
+	$smarty->assign('PHPSESSID', session_id());
+
 	//文言系
 	$smarty->assign('WORD_FRIEND', WORD_FRIEND);
 	$smarty->assign('WORD_MY_FRIEND', WORD_MY_FRIEND);
@@ -57,12 +57,12 @@ function init_ktai_normal(&$smarty)
 	//---- inc_ テンプレート用 変数 ----//
 	$smarty->assign('inc_ktai_header', fetch_inc_ktai_header());
 	$smarty->assign('inc_ktai_footer', fetch_inc_ktai_footer());
-	
-	$smarty->assign('msg', k_p_common_msg4msg_id($_REQUEST['msg']));	
+
+	$smarty->assign('msg', k_p_common_msg4msg_id($_REQUEST['msg']));
 
 	// ケータイ用出力時フィルタ
 	$smarty->load_filter('output', 'mobile');
 	header('Content-Type: text/html; charset=Shift_JIS');
 }
-	
+
 ?>

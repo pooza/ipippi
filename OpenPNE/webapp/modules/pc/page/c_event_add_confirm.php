@@ -1,6 +1,5 @@
 <?php
 
-
 function pageAction_c_event_add_confirm($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
@@ -29,7 +28,6 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 	$upfile_obj12 = $_FILES['file_filename2'];
 	$upfile_obj13 = $_FILES['file_filename3'];
 
-
 	// エラーチェック
 	$err_msg = array();
 	if (trim($event['title']) == '')  $err_msg[] = "タイトルを入力してください";
@@ -40,12 +38,12 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 	elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year']) < mktime(0,0,0)) $err_msg[] = "開催日時は過去に指定できません";
 
 	if($event['invite_period_month'].$event['invite_period_day'].$event['invite_period_year'] != ""){
-	    if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "募集期限は存在しません。";
+		if(!$event['invite_period_month'] || !$event['invite_period_day'] || !$event['invite_period_year'])  $err_msg[] = "募集期限は存在しません。";
 		elseif(!checkdate($event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) $err_msg[] = "募集期限は存在しません";
-	    elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "募集期限は過去に指定できません";	
-	    elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year'])
-	    		<mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year'])) 
-	    		$err_msg[] = "募集期限は開催日時より未来に指定できません";
+		elseif(mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']) < mktime(0,0,0)) $err_msg[] = "募集期限は過去に指定できません";
+		elseif(mktime (0,0,0,$event['open_date_month'],$event['open_date_day'],$event['open_date_year'])
+				<mktime (0,0,0,$event['invite_period_month'],$event['invite_period_day'],$event['invite_period_year']))
+				$err_msg[] = "募集期限は開催日時より未来に指定できません";
 	}
 
 	if($upfile_obj1["tmp_name"] && (t_get_image_size($upfile_obj1) > 300*1024 || !t_check_image_format($upfile_obj1)))
@@ -68,19 +66,19 @@ function pageAction_c_event_add_confirm($smarty,$requests) {
 		}
 	}
 
-    if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
-    	$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
-    if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
-    	$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
-    if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
-    	$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
+	if($upfile_obj11["tmp_name"] && (t_get_image_size($upfile_obj11) > 1024*1024))
+		$err_msg[] = "添付ファイル1のサイズは1MB以内にしてください";
+	if($upfile_obj12["tmp_name"] && (t_get_image_size($upfile_obj12) > 1024*1024))
+		$err_msg[] = "添付ファイル2のサイズは1MB以内にしてください";
+	if($upfile_obj13["tmp_name"] && (t_get_image_size($upfile_obj13) > 1024*1024))
+		$err_msg[] = "添付ファイル3のサイズは1MB以内にしてください";
 
-    if(is_dirty_file($upfile_obj11))
-    	$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
-    if(is_dirty_file($upfile_obj12))
-    	$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
-    if(is_dirty_file($upfile_obj13))
-    	$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj11))
+		$err_msg[] = get_extension($upfile_obj11['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj12))
+		$err_msg[] = get_extension($upfile_obj12['name']) . "ファイルは添付できません";
+	if(is_dirty_file($upfile_obj13))
+		$err_msg[] = get_extension($upfile_obj13['name']) . "ファイルは添付できません";
 
 	if ($err_msg) {
 		$_REQUEST = $event;

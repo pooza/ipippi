@@ -41,32 +41,31 @@ function doAction_c_invite_insert_c_message_commu_invite($requests)
 		exit();
 	}
 
-    //--- 権限チェック
-    //フレンド
+	//--- 権限チェック
+	//フレンド
 
-    $status = db_common_friend_status($u, $target_c_member_id);
-    if (!$status['is_friend']) {
-        handle_kengen_error();
-    }
-    //---
-
+	$status = db_common_friend_status($u, $target_c_member_id);
+	if (!$status['is_friend']) {
+		handle_kengen_error();
+	}
+	//---
 
 	$c_member_from = db_common_c_member4c_member_id($u);
 
-    $subject ="コミュニティおすすめメッセージ";
+	$subject ="コミュニティおすすめメッセージ";
 
-	//PC版のURLを挿入する    
-    $url = ABSOLUTE_PATH."page.php?p=c_home&target_c_commu_id=$target_c_commu_id";
-    $body_disp =
-        $c_member_from['nickname']." さんからおすすめコミュニティのメッセージが届いています。\n".
-        "\n".
-        "メッセージ：\n".
-        $body."\n".
-        "\n".
-        "このコミュニティのURL\n".
-        "$url";
+	//PC版のURLを挿入する
+	$url = ABSOLUTE_PATH."page.php?p=c_home&target_c_commu_id=$target_c_commu_id";
+	$body_disp =
+		$c_member_from['nickname']." さんからおすすめコミュニティのメッセージが届いています。\n".
+		"\n".
+		"メッセージ：\n".
+		$body."\n".
+		"\n".
+		"このコミュニティのURL\n".
+		"$url";
 
-    do_common_send_message($u, $target_c_member_id, $subject, $body_disp);
+	do_common_send_message($u, $target_c_member_id, $subject, $body_disp);
 
 	client_redirect("ktai_page.php?p=c_home&target_c_commu_id=$target_c_commu_id&$tail");
 }

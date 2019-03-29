@@ -31,7 +31,6 @@ function doAction_h_message_send_insert_message($requests)
 	}
 	//---
 
-
 	$c_member_id_from = $u;
 
 	do_common_send_message($c_member_id_from, $target_c_member_id, $subject,$body);

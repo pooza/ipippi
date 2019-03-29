@@ -12,7 +12,7 @@ function pageAction_h_diary_edit_confirm($smarty,$requests) {
 
 	$sessid = session_id();
 	t_image_clear_tmp($sessid);
-	
+
 	$upfiles = array(
 		1 => $_FILES['upfile_1'],
 		$_FILES['upfile_2'],
@@ -42,7 +42,7 @@ function pageAction_h_diary_edit_confirm($smarty,$requests) {
 		}
 	}
 
-	$smarty->assign('inc_navi',fetch_inc_navi("h"));	
+	$smarty->assign('inc_navi',fetch_inc_navi("h"));
 
 	//プロフィール
 	$smarty->assign("member", db_common_c_member4c_member_id($u));

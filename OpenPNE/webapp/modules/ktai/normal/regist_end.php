@@ -7,9 +7,9 @@ function normalAction_regist_end($smarty,$requests)
 		client_redirect("ktai_normal.php?p=login");
 		exit;
 	}
-    //>	
-	
-	$smarty->assign("SNS_NAME", SNS_NAME);	
-    $smarty->ext_display('regist_end.tpl');
+	//>
+
+	$smarty->assign("SNS_NAME", SNS_NAME);
+	$smarty->ext_display('regist_end.tpl');
 }
 

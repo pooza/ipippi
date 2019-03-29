@@ -7,24 +7,24 @@ function pageAction_c_event_edit($smarty,$requests) {
 		$c_commu_topic_id = $requests['target_c_commu_topic_id'];
 		$err_msg = $requests['err_msg'];
 		// ----------
-			   								
+
 		$c_topic = c_event_detail_c_topic4c_commu_topic_id($c_commu_topic_id);
 		$c_commu_id = $c_topic['c_commu_id'];
 
 		//--- 権限チェック
 		if(!p_common_is_c_commu_view4c_commu_idAc_member_id($c_commu_id,$u)){
-	        handle_kengen_error();
+			handle_kengen_error();
 		}
 		if(!_db_is_c_topic_admin($c_commu_topic_id, $u) &&
 			!_db_is_c_commu_admin($c_commu_id, $u)){
-	        handle_kengen_error();
-		}		
+			handle_kengen_error();
+		}
 		//---
 
 		if (!$c_topic['event_flag']) {
-	        client_redirect("page.php?p=c_topic_edit&target_c_commu_topic_id=".$c_topic['c_commu_topic_id']);
-	        exit();
-	    }
+			client_redirect("page.php?p=c_topic_edit&target_c_commu_topic_id=".$c_topic['c_commu_topic_id']);
+			exit();
+		}
 
 		$smarty->assign('inc_navi',fetch_inc_navi("c",$c_commu_id));
 		$smarty->assign("year", p_c_event_add_year4null());
@@ -55,12 +55,12 @@ function pageAction_c_event_edit($smarty,$requests) {
 			$c_topic['open_date_year'] = $open_date_arr[0];
 			$c_topic['open_date_month'] = $open_date_arr[1];
 			$c_topic['open_date_day'] = $open_date_arr[2];
-			$c_topic['invite_period_year'] = $invite_period_arr[0];	
-			$c_topic['invite_period_month'] = $invite_period_arr[1];	
-			$c_topic['invite_period_day'] = $invite_period_arr[2];	
+			$c_topic['invite_period_year'] = $invite_period_arr[0];
+			$c_topic['invite_period_month'] = $invite_period_arr[1];
+			$c_topic['invite_period_day'] = $invite_period_arr[2];
 		}
 
-		$smarty->assign('event',$c_topic);	
-		$smarty->ext_display('c_event_edit.tpl');	
+		$smarty->assign('event',$c_topic);
+		$smarty->ext_display('c_event_edit.tpl');
 }
 

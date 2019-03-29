@@ -13,18 +13,17 @@ function doAction_c_edit_update_c_commu($requests)
 	$public_flag = $requests['public_flag'];
 	// ----------
 
-    //--- 権限チェック
-    //コミュニティ管理者
+	//--- 権限チェック
+	//コミュニティ管理者
 
-    $status = db_common_commu_status($u, $target_c_commu_id);
-    if (!$status['is_commu_admin']) {
-        handle_kengen_error();
-    }
-    //---
+	$status = db_common_commu_status($u, $target_c_commu_id);
+	if (!$status['is_commu_admin']) {
+		handle_kengen_error();
+	}
+	//---
 
+	_do_update_c_commu($target_c_commu_id, $u, $name, $c_commu_category_id, $info, $public_flag);
 
-    _do_update_c_commu($target_c_commu_id, $u, $name, $c_commu_category_id, $info, $public_flag);
-
-    client_redirect("ktai_page.php?p=c_home&target_c_commu_id={$target_c_commu_id}&{$tail}");
+	client_redirect("ktai_page.php?p=c_home&target_c_commu_id={$target_c_commu_id}&{$tail}");
 }
 

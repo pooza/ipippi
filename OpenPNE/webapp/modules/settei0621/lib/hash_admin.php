@@ -3,25 +3,25 @@
 class AdminHashTable
 {
 	var $table;
-	
+
 	function AdminHashTable()
 	{
 		$this->table = $this->_getTable();
 	}
-	
+
 	function &singleton()
 	{
-        static $instance;
-        if (!isset($instance)) {
-        	$instance = new AdminHashTable();
-        }
-        return $instance;
+		static $instance;
+		if (!isset($instance)) {
+			$instance = new AdminHashTable();
+		}
+		return $instance;
 	}
-	
+
 	function action($hash, $type = 'page')
 	{
 		if (empty($this->table)) return $hash;
-		
+
 		if ($action = array_search($hash, $this->table[$type])) {
 			return $action;
 		} elseif (empty($this->table[$type][$hash])) {
@@ -29,12 +29,12 @@ class AdminHashTable
 		}
 		return '';
 	}
-	
+
 	function hash($action, $type = 'page')
 	{
 		return !empty($this->table[$type][$action]) ? $this->table[$type][$action] : $action;
 	}
-	
+
 	function _getTable()
 	{
 		$sql = "SELECT value FROM c_admin_config" .
@@ -45,11 +45,11 @@ class AdminHashTable
 			return array();
 		}
 	}
-	
+
 	function updateTable()
 	{
 		$this->table = $this->_createRandomTable();
-		
+
 		if ($this->_getTable()) {
 			$sql = "UPDATE c_admin_config SET value = " . quote4db(serialize($this->table)) .
 				" WHERE name = 'admin_hashtable'";
@@ -60,15 +60,15 @@ class AdminHashTable
 			_mysql_query4db($sql);
 		}
 	}
-	
+
 	function deleteTable()
 	{
 		$sql = "DELETE FROM c_admin_config WHERE name = 'admin_hashtable'";
 		_mysql_query4db($sql);
-		
+
 		$this->table = array();
 	}
-	
+
 	function _createRandomTable()
 	{
 		$table = array();
@@ -79,23 +79,23 @@ class AdminHashTable
 		}
 		return $table;
 	}
-	
+
 	function _createHashString($length = 12)
 	{
-	    list($usec, $sec) = explode(' ', microtime());
-	    $seed = (float)$sec + ((float)$usec * 100000);
-	    srand($seed);
-	
-	    $elem = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345679";
-	    $max = strlen($elem) - 1;
-	
-	    $hash = "";
-	    for ($i = 0; $i < $length; $i++) {
-	        $hash .= substr($elem, rand(0, $max), 1);
-	    }
-	    return $hash;
+		list($usec, $sec) = explode(' ', microtime());
+		$seed = (float)$sec + ((float)$usec * 100000);
+		srand($seed);
+
+		$elem = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345679";
+		$max = strlen($elem) - 1;
+
+		$hash = "";
+		for ($i = 0; $i < $length; $i++) {
+			$hash .= substr($elem, rand(0, $max), 1);
+		}
+		return $hash;
 	}
-	
+
 	function &_actionList()
 	{
 		return 	array(
@@ -170,5 +170,4 @@ class AdminHashTable
 		);
 	}
 }
-
 

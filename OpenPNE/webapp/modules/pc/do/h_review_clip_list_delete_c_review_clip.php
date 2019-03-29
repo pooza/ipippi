@@ -11,8 +11,7 @@ function doAction_h_review_clip_list_delete_c_review_clip($request) {
 	//do_h_review_clip_list_delete_c_review_clip の中で対応済み
 	//---
 
-
-	do_h_review_clip_list_delete_c_review_clip($u, $c_review_clips);	
+	do_h_review_clip_list_delete_c_review_clip($u, $c_review_clips);
 
 	client_redirect("page.php?p=h_review_clip_list");
 }

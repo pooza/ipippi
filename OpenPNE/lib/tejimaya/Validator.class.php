@@ -10,7 +10,7 @@ class Validator
 	 * @access private
 	 */
 	var $rules;
-	
+
 	/**
 	 * @var array 検証済みリクエストパラメタ
 	 * @access private
@@ -28,15 +28,15 @@ class Validator
 	 * @access private
 	 */
 	var $requests;
-	
+
 	/**
 	 * @var string デフォルトフィルター
 	 */
 	var $default_filter = 'ntrim,rtrim';
-	
+
 	/**
 	 * バリデータの初期化
-	 * 
+	 *
 	 * @param array $rules
 	 * @param array $requests
 	 */
@@ -51,37 +51,37 @@ class Validator
 			$this->requests = $_REQUEST;
 		}
 	}
-	
+
 	/**
 	 * ルールの追加
-	 * 
+	 *
 	 * @access public
 	 */
 	function addRules($rules)
 	{
 		$this->rules = array_merge($this->rules, $rules);
 	}
-	
+
 	/**
 	 * ルールをiniファイルから追加
-	 * 
+	 *
 	 * @access public
 	 */
 	function addIniSetting($ini_path)
 	{
 		if (!is_readable($ini_path) ||
 			!$rules = parse_ini_file($ini_path, true)) {
-		
+
 			return false;
 		}
-		
+
 		$this->addRules($rules);
 		return true;
 	}
 
 	/**
 	 * (検証済み)リクエストパラメータを取得
-	 * 
+	 *
 	 * @access public
 	 * @return array
 	 */
@@ -89,10 +89,10 @@ class Validator
 	{
 		return $this->params;
 	}
-	
+
 	/**
 	 * エラー情報を取得
-	 * 
+	 *
 	 * @access public
 	 * @return array
 	 */
@@ -100,10 +100,10 @@ class Validator
 	{
 		return $this->errors;
 	}
-	
+
 	/**
 	 * (検証前の)リクエストパラメータを追加
-	 * 
+	 *
 	 * @access public
 	 */
 	function addRequests($requests)
@@ -115,10 +115,10 @@ class Validator
 */
 		$this->requests = array_merge((array)$this->requests, (array)$requests);
 	}
-	
+
 	/**
 	 * パラメータに検証済みの値をセット
-	 * 
+	 *
 	 * @access private
 	 * @param string $key
 	 * @param string $value
@@ -127,10 +127,10 @@ class Validator
 	{
 		$this->params[$key] = $value;
 	}
-		
+
 	/**
 	 * エラー情報を設定
-	 * 
+	 *
 	 * @access private
 	 * @param string $key
 	 * @param string $msg エラーメッセージ
@@ -139,10 +139,10 @@ class Validator
 	{
 		$this->errors[$key] = $msg;
 	}
-		
+
 	/**
 	 * validate
-	 * 
+	 *
 	 * @access public
 	 * @return boolean エラーが発生しなかったかどうか
 	 */
@@ -163,7 +163,7 @@ class Validator
 			if (empty($rule['is_array'])) {
 				$reqval = array_shift($values);
 				$result = $this->_filter($reqval, $rule['pre_filter']);
-				
+
 				// 必須項目チェック
 				if (is_null($result) || $result === "") {
 					if (!empty($rule['required'])) {
@@ -191,7 +191,7 @@ class Validator
 					if (is_null($value) || $value === "") {
 						continue;
 					}
-					
+
 					$this->_validate($key, $value, $rule);
 					$result[] = $value;
 					$empty = false;
@@ -213,13 +213,13 @@ class Validator
 					}
 				}
 			}
-			
+
 			$this->_setParam($key, $result);
 		}
-		
+
 		return empty($this->errors);
 	}
-	
+
 	/**
 	 * 検証ルールの初期化
 	 */
@@ -228,21 +228,21 @@ class Validator
 		if (!isset($rule['caption'])) {
 			$rule['caption'] = $key;
 		}
-		
+
 		if (!isset($rule['pre_filter'])) {
 			$rule['pre_filter'] = $this->default_filter;
 		}
-		
+
 		if (empty($rule['type'])) {
 			$rule['type'] = 'string';
 		}
-		
+
 		return $rule;
 	}
-	
+
 	/**
 	 * _filter
-	 * 
+	 *
 	 * @access private
 	 * @param string $value
 	 * @param string $filter
@@ -277,10 +277,10 @@ class Validator
 		}
 		return $value;
 	}
-	
+
 	/**
 	 * _validate
-	 * 
+	 *
 	 * @access private
 	 * @param string $key
 	 * @param string $reqval
@@ -288,7 +288,7 @@ class Validator
 	 * @return boolean
 	 */
 	function _validate($key, $reqval, $rule)
-	{	
+	{
 		// 型チェック
 		switch (strtolower($rule['type'])) {
 		case "int":
@@ -297,7 +297,7 @@ class Validator
 					$error = $rule['type_error'];
 				else
 					$error = "{$rule['caption']}は数値で入力してください";
-				
+
 				$this->_setError($key, $error);
 				return false;
 			}
@@ -308,7 +308,7 @@ class Validator
 					$error = $rule['type_error'];
 				else
 					$error = "{$rule['caption']}の値が不正です";
-				
+
 				$this->_setError($key, $error);
 				return false;
 			}
@@ -330,7 +330,7 @@ class Validator
 			$this->_setError($key, $error);
 			return false;
 		}
-	
+
 		// min/max チェック
 		switch ($rule['type']) {
 		case "int":
@@ -340,7 +340,7 @@ class Validator
 					$error = $rule['min_error'];
 				else
 					$error = "{$rule['caption']}は{$rule['min']}以上の数値で入力してください";
-			
+
 				$this->_setError($key, $error);
 				return false;
 			}
@@ -350,7 +350,7 @@ class Validator
 					$error = $rule['max_error'];
 				else
 					$error = "{$rule['caption']}は{$rule['max']}以下の数値で入力してください";
-				
+
 				$this->_setError($key, $error);
 				return false;
 			}
@@ -363,7 +363,7 @@ class Validator
 					$error = $rule['min_error'];
 				else
 					$error = "{$rule['caption']}は{$rule['min']}文字以上で入力してください(全角の場合はこの半分)";
-				
+
 				$this->_setError($key, $error);
 				return false;
 			}
@@ -373,13 +373,13 @@ class Validator
 					$error = $rule['max_error'];
 				else
 					$error = "{$rule['caption']}は{$rule['max']}文字以内で入力してください(全角の場合はこの半分)";
-				
+
 				$this->_setError($key, $error);
 				return false;
 			}
 			break;
 		}
-		
+
 		return true;
 	}
 }

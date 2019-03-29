@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  *  init.inc - 全ページ共通初期化
  */
 
@@ -22,7 +22,7 @@ defined('DOCUMENT_ROOT') or define('DOCUMENT_ROOT', dirname(dirname(__FILE__)));
 
 /**
  * 新規登録
- * 
+ *
  * OPENPNE_REGIST_FROM_NONE  : 新規登録不可
  * OPENPNE_REGIST_FROM_PC    : PCからのみ登録可
  * OPENPNE_REGIST_FROM_KTAI  : 携帯からのみ登録可
@@ -35,25 +35,25 @@ define('OPENPNE_REGIST_FROM_PCKTAI', 3);
 
 /* 携帯メールのドメイン名 */
 $GLOBALS['__OpenPNE']['KTAI_DOMAINS'] = array(
-    'docomo.ne.jp',
-    'ezweb.ne.jp',
-    'softbank.ne.jp',
-    'i.softbank.ne.jp',
-    'd.vodafone.ne.jp',
-    'h.vodafone.ne.jp',
-    't.vodafone.ne.jp',
-    'c.vodafone.ne.jp',
-    'r.vodafone.ne.jp',
-    'k.vodafone.ne.jp',
-    'n.vodafone.ne.jp',
-    'q.vodafone.ne.jp',
-    's.vodafone.ne.jp',
-    'pdx.ne.jp',
-    'di.pdx.ne.jp',
-    'dj.pdx.ne.jp',
-    'dk.pdx.ne.jp',
-    'wm.pdx.ne.jp',
-    'me.com',
+	'docomo.ne.jp',
+	'ezweb.ne.jp',
+	'softbank.ne.jp',
+	'i.softbank.ne.jp',
+	'd.vodafone.ne.jp',
+	'h.vodafone.ne.jp',
+	't.vodafone.ne.jp',
+	'c.vodafone.ne.jp',
+	'r.vodafone.ne.jp',
+	'k.vodafone.ne.jp',
+	'n.vodafone.ne.jp',
+	'q.vodafone.ne.jp',
+	's.vodafone.ne.jp',
+	'pdx.ne.jp',
+	'di.pdx.ne.jp',
+	'dj.pdx.ne.jp',
+	'dk.pdx.ne.jp',
+	'wm.pdx.ne.jp',
+	'me.com',
 );
 
 // Smarty の設定
@@ -69,7 +69,6 @@ $GLOBALS['__SMARTY'] = array(
 );
 $GLOBALS['__SMARTY']['plugins_dir'][] = DOCUMENT_ROOT . '/lib/smarty/plugins';
 $GLOBALS['__SMARTY']['plugins_dir'][] = DOCUMENT_ROOT . '/lib/tejimaya/smarty_plugins';
-
 
 /* 設定ファイルの読み込み */
 require_once DOCUMENT_ROOT . "/lib/utility.inc.php";

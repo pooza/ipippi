@@ -1,6 +1,5 @@
 <?php
 
-
 function pageAction_h_review_add($smarty,$requests) {
 	$u = $GLOBALS['AUTH']->uid();
 
@@ -23,11 +22,11 @@ function pageAction_h_review_add($smarty,$requests) {
 		}elseif(!$search_flag){
 		}
 		else{
-			list($search_result, $page, $pages) 
+			list($search_result, $page, $pages)
 				= p_h_review_add_search_result($keyword,$category_id,$page);
 		}
 
-		$smarty->assign('search_result', $search_result);	
+		$smarty->assign('search_result', $search_result);
 		$smarty->assign('page', $page);
 		$smarty->assign('is_prev', ($page!=1 && !empty($pages) ? 1 : 0));
 		$smarty->assign('is_next', ($page!=$pages && isset($pages) ? 1 : 0));

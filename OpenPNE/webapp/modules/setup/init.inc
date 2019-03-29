@@ -8,7 +8,6 @@ $module_lib_dir = dirname(__FILE__) . "/lib";
 $GLOBALS['__Framework']['default_page'] = 'dummy';
 $GLOBALS['__Framework']['default_normal'] = 'setup';
 
-
 function init_setup_page()
 {
 	module_execute('setup', 'normal');

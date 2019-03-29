@@ -1,6 +1,5 @@
 <?php
 
-
 //shou050616
 //---------------------------------------------------------------------------
 function pageAction_f_message_send_confirm($smarty, $requests) {
