@@ -11,7 +11,7 @@ $GLOBALS['__OpenPNE']['DSN'] =
 	array(
 		'phptype'  => 'mysql',
 		'username' => 'ipippi',
-		'password' => 'ZS2DNBMGW3',
+		'password' => '',
 		'hostspec' => 'localhost',
 		'database' => 'ipippi',
 	);
@@ -26,14 +26,14 @@ define('MAIL_SERVER_DOMAIN', 'ipippi.jp');
 
 /// デバッグ、エラーハンドリング、ログ設定
 
-error_reporting(E_ALL ^ E_NOTICE);
+//error_reporting(E_ALL);
 ini_set('display_errors', false);
-//ini_set('log_errors', true);
-//ini_set('error_log', DOCUMENT_ROOT . '/var/log/php_errors.log');
+ini_set('log_errors', true);
+ini_set('error_log', 'syslog');
 
 // Smarty の設定
 //$GLOBALS['__SMARTY']['debugging'] = true;
-//$GLOBALS['__SMARTY']['force_compile'] = true;
+$GLOBALS['__SMARTY']['force_compile'] = false;
 
 // CSRF対策のエラーを通知するメールアドレス (空の場合は送信しない)
 define('HAMACHI_EMAIL', '');
@@ -87,7 +87,6 @@ $GLOBALS['__OpenPNE']['news'] = array(
 define('MAIL_ADDRESS_HASHED', true);
 
 // 受信メールの文字コード(Content-Typeから取得できない場合に使う)
-//define('MAIL_FROM_ENCODING', "JIS");
 define('MAIL_FROM_ENCODING', "auto");
 
 // メールログを取るかどうか(var/log/mail.log)
@@ -110,5 +109,3 @@ mb_language("Japanese");
 
 //管理画面の初期設定項目を表示するかどうか
 define('ADMIN_INIT_CONFIG', true);
-
-

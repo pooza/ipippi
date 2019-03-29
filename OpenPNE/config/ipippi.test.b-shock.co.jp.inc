@@ -11,7 +11,7 @@ $GLOBALS['__OpenPNE']['DSN'] =
 	array(
 		'phptype'  => 'mysqli',
 		'username' => 'root',
-		'password' => 'Y3CF3UXB3J',
+		'password' => '',
 		'hostspec' => 'localhost',
 		'database' => 'ipippi',
 	);
@@ -24,25 +24,16 @@ define('MAIL_SERVER_DOMAIN', 'ipippi.test.b-shock.co.jp');
 
 //--- オプション設定
 
-// SQL内でのエスケープの仕方
-// (DBに登録したデータが文字化けする場合はこの設定を変えてみてください)
-// 0 : mysql_real_escape_string
-// 1 : mbstring の関数で置換
-define('DB_ESCAPE_TYPE', 1);
-
-// DB接続時に SET NAMES ujis; クエリーを発行するかどうか
-define('USE_SET_NAMES', false);
-
 /// デバッグ、エラーハンドリング、ログ設定
 
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL);
 ini_set('display_errors', false);
 ini_set('log_errors', true);
-ini_set('error_log', DOCUMENT_ROOT . '/var/log/php_errors.log');
+ini_set('error_log', 'syslog');
 
 // Smarty の設定
 //$GLOBALS['__SMARTY']['debugging'] = true;
-//$GLOBALS['__SMARTY']['force_compile'] = true;
+$GLOBALS['__SMARTY']['force_compile'] = true;
 
 // CSRF対策のエラーを通知するメールアドレス (空の場合は送信しない)
 define('HAMACHI_EMAIL', '');
@@ -96,7 +87,6 @@ $GLOBALS['__OpenPNE']['news'] = array(
 define('MAIL_ADDRESS_HASHED', true);
 
 // 受信メールの文字コード(Content-Typeから取得できない場合に使う)
-//define('MAIL_FROM_ENCODING', "JIS");
 define('MAIL_FROM_ENCODING', "auto");
 
 // メールログを取るかどうか(var/log/mail.log)

@@ -62,7 +62,7 @@ function get_login_url()
 }
 
 /**
- * mysqli_stmt_execute を実行する
+ * mysqli_query を実行する
  *
  * @param  string $sql
  * @return result
@@ -484,13 +484,7 @@ function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
 // SQLインジェクション対策用関数
 function no_quote4db($str)
 {
-	if (defined('DB_ESCAPE_TYPE') && DB_ESCAPE_TYPE == 0) {
-		return mysqli_real_escape_string($GLOBALS['db'], $str);
-	} else {
-		$str = mb_ereg_replace('\\\\',"\\\\",$str);
-		$str = mb_ereg_replace('\'',"\\'",$str);
-		return $str;
-	}
+	return mysqli_real_escape_string($GLOBALS['db'], $str);
 }
 
 function quote4db($str)

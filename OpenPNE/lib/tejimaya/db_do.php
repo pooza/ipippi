@@ -682,7 +682,7 @@ function do_h_confirm_list_update_c_commu_admin($c_commu_admin_confirm_id, $u)
 	$sql = "UPDATE c_commu" .
 			" SET c_member_id_admin=". quote4db($u) .
 			" WHERE c_commu_id=". quote4db($cac['c_commu_id']);
-	if(!mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql))) {
+	if(!mysqli_query($GLOBALS['db'], $sql)) {
 		return false;
 	}
 	return _do_delete_c_commu_admin_confirm($c_commu_admin_confirm_id, $u);
