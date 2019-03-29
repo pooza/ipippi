@@ -257,16 +257,16 @@ class Validator
 				case "trim":
 					$value = trim($value);
 					// 全角スペース
-					$value = mb_mb_ereg_replace('^[　]+', '', $value);
-					$value = mb_mb_ereg_replace('[　]+$', '', $value);
+					$value = mb_ereg_replace('^[　]+', '', $value);
+					$value = mb_ereg_replace('[　]+$', '', $value);
 					break;
 				case "ltrim":
 					$value = ltrim($value);
-					$value = mb_mb_ereg_replace('^[　]+', '', $value); // 全角スペース
+					$value = mb_ereg_replace('^[　]+', '', $value); // 全角スペース
 					break;
 				case "rtrim":
 					$value = rtrim($value);
-					$value = mb_mb_ereg_replace('[　]+$', '', $value); // 全角スペース
+					$value = mb_ereg_replace('[　]+$', '', $value); // 全角スペース
 					break;
 				case "ntrim":
 					// NULL バイトを取る

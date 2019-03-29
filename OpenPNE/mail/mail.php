@@ -152,7 +152,7 @@ function m_convert_text($string, $from_encoding = "")
 
 	$string = str_replace("\0", "", $string);
 	$string = rtrim($string);
-	$string = mb_mb_ereg_replace('[　]+$', "", $string);
+	$string = mb_ereg_replace('[　]+$', "", $string);
 
 	return $string;
 }
