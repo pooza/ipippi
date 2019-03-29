@@ -48,7 +48,7 @@ ini_set('display_errors', false);
 define('HAMACHI_EMAIL', '');
 
 // アクセスログを取得するかどうか(c_access_log)
-define('LOG_C_ACCESS_LOG', true);
+define('LOG_C_ACCESS_LOG', false);
 
 /// セッション・クッキー設定
 
@@ -114,12 +114,6 @@ define('MAIL_HEADER_SEP', 'LF');
 /// mbstring設定
 
 mb_language("Japanese");
-ini_set('mbstring.detect_order', "auto");
-ini_set('mbstring.http_input'  , "auto");
-ini_set('mbstring.http_output' , "EUC-JP");
-ini_set('mbstring.internal_encoding', "EUC-JP");
-ini_set('mbstring.script_encoding'  , "EUC-JP");
-ini_set('mbstring.substitute_character', "none");
 
 //// SNSアプリケーション設定 ////
 
