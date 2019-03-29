@@ -478,14 +478,14 @@ function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
 	$sql .= " WHERE c_commu_id=". quote4db($c_commu_id) .
 			" AND c_member_id_to=". quote4db($c_member_id_to) .
 			" LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 // SQLインジェクション対策用関数
 function no_quote4db($str)
 {
 	if (defined('DB_ESCAPE_TYPE') && DB_ESCAPE_TYPE == 0) {
-		return mysqli_real_escape_string($str);
+		return mysqli_real_escape_string($GLOBALS['db'], $str);
 	} else {
 		$str = mb_ereg_replace('\\\\',"\\\\",$str);
 		$str = mb_ereg_replace('\'',"\\'",$str);
@@ -866,7 +866,7 @@ function p_access_log($c_member_id, $page_name, $ktai_flag="0"){
 
 	$sql = "insert c_access_log($insert_column, r_datetime) values($insert_value, now())";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 }
 

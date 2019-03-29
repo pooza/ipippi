@@ -78,7 +78,7 @@ function k_do_update_ktai_address($c_member_id, $ktai_address)
 	$sql = "UPDATE c_member_secure" .
    		" SET ktai_address = " . quote4db(t_encrypt($ktai_address)) .
 		" WHERE c_member_id = " . quote4db($c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -95,7 +95,7 @@ function k_do_delete_ktai_address_pre($c_ktai_address_pre_id)
 {
 	$sql = "DELETE FROM c_ktai_address_pre" .
 			" WHERE c_ktai_address_pre_id=".quote4db($c_ktai_address_pre_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function c_ktai_address_pre4session($session)
@@ -165,7 +165,7 @@ function k_do_delete_c_member_ktai_pre($c_member_ktai_pre_id)
 {
 	$sql = "DELETE FROM c_member_ktai_pre" .
 			" WHERE c_member_ktai_pre_id=".quote4db($c_member_ktai_pre_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function k_do_update_c_member($c_member_id, $props)
@@ -177,7 +177,7 @@ function k_do_update_c_member($c_member_id, $props)
 	$sets = implode(",", $sets);
 
 	$sql = "UPDATE c_member SET $sets WHERE c_member_id=".quote4db($c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**

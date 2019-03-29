@@ -142,7 +142,7 @@ class Img
 		) or die('データベースサーバに接続できませんでした');
 
 		$sql = "SELECT filename,bin,type FROM c_image" .
-			" WHERE filename = '".mysqli_real_escape_string($this->dbsrc)."'";
+			" WHERE filename = '".mysqli_real_escape_string($db, $this->dbsrc)."'";
 		$result = mysqli_stmt_execute(mysqli_prepare($db, $sql));
 		$row = mysqli_fetch_array($result);
 

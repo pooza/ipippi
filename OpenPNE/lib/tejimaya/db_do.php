@@ -68,7 +68,7 @@ function _do_insert_c_diary_comment($c_member_id, $c_diary_id, $body)
 	$sql = "INSERT INTO c_diary_comment(c_member_id, c_diary_id, body, r_datetime)";
 	$sql .= " VALUES(".quotearray4db($c_member_id, $c_diary_id, $body).", NOW())";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_insert_id($GLOBALS['db']);
 }
 
@@ -107,7 +107,7 @@ function _do_insert_c_commu($c_member_id, $name, $c_commu_category_id, $info, $p
 	$sql .= "(name, c_member_id_admin, info, c_commu_category_id, public_flag, search_word, image_filename, r_datetime, r_date, access_date)";
 	$sql .= " VALUES(";
 	$sql .= quotearray4db($name, $c_member_id, $info, $c_commu_category_id, $public_flag, $name, $image_filename).", NOW(), NOW(), NOW())";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_insert_id($GLOBALS['db']);
 }
 
@@ -146,7 +146,7 @@ function _do_delete_c_message4c_message_id($c_message_id, $c_member_id)
 	}
 
 	$sql .= " WHERE c_message_id=".quote4db($c_message_id)." LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 //shou050615
@@ -213,7 +213,7 @@ function _do_delete_c_friend_confirm4c_friend_confirm_id($c_friend_confirm_id, $
 
 	$sql = "DELETE FROM c_friend_confirm" .
 			" WHERE c_friend_confirm_id=".quote4db($c_friend_confirm_id);
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -229,7 +229,7 @@ function _do_delete_c_commu_member_confirm4c_commu_member_confirm_id($c_commu_me
 
 	$sql = "DELETE FROM c_commu_member_confirm";
 	$sql .= " WHERE c_commu_member_confirm_id=".quote4db($c_commu_member_confirm_id);
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -249,7 +249,7 @@ function _do_delete_c_commu_admin_confirm($c_commu_admin_confirm_id, $u)
 	$sql = "DELETE FROM c_commu_admin_confirm";
 	$sql .= " WHERE c_commu_admin_confirm_id=". quote4db($c_commu_admin_confirm_id) .
 			" LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -393,7 +393,7 @@ function _do_delete_c_diary_comment($c_diary_comment_id, $u)
 		. " SET delete_reason='BY_USER' "
 		. " WHERE c_diary_comment_id=".quote4db($c_diary_comment_id)
 		. " LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -655,7 +655,7 @@ function do_h_confirm_list_insert_c_commu_member(
 	$sql = "INSERT INTO c_commu_member"
 		."(c_member_id, c_commu_id, is_receive_mail, r_datetime)"
 		." VALUES(".quotearray4db($c_member_id, $c_commu_id, $is_receive_mail).", NOW())";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	return _do_delete_c_commu_member_confirm4c_commu_member_confirm_id($target_c_commu_member_confirm_id,$u);
 }
@@ -722,7 +722,7 @@ function do_c_bbs_update_c_commu_topic_comment_image($c_commu_topic_comment_id, 
 	$sql = "UPDATE c_commu_topic_comment" .
 			" SET image_filename=". quote4db($image_filename) .
 			" WHERE c_commu_topic_comment_id=". quote4db($c_commu_topic_comment_id);
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -821,7 +821,7 @@ function do_c_home_update_is_receive_mail($target_c_commu_id, $u, $is_receive_ma
 		" WHERE c_commu_id=". quote4db($target_c_commu_id) .
 		" AND c_member_id=". quote4db($u) .
 		" LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_c_event_add_insert_c_commu_topic($event){
@@ -839,7 +839,7 @@ function do_c_event_add_insert_c_commu_topic($event){
 	$sql = "insert c_commu_topic($keys_str)"
 		  ." values($event_str)";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	$sql = "select c_commu_topic_id from c_commu_topic where c_commu_id=".no_quote4db($event['c_commu_id'])." order by r_datetime desc";
 	$id = get_one4db($sql);
@@ -859,7 +859,7 @@ function do_c_event_add_insert_c_commu_topic_comment($event){
 	$event_str = implode(",",$event);
 	$sql = "insert c_commu_topic_comment($keys_str)"
 		  ." values($event_str)";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	$sql = "select c_commu_topic_comment_id from c_commu_topic_comment order by r_datetime desc limit 1";
 	$c_commu_topic_comment_id = get_one4db($sql);
@@ -875,7 +875,7 @@ function do_c_event_add_insert_c_event_member($c_commu_topic_id, $c_member_id){
 	if(!$is_member){
 		$sql = "insert c_event_member(c_commu_topic_id, c_member_id, is_admin, r_datetime)" .
 				" values(". quotearray4db($c_commu_topic_id, $c_member_id) .", 0, now())";
-		mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+		mysqli_query($GLOBALS['db'], $sql);
 	}
 
 }
@@ -884,7 +884,7 @@ function do_c_event_add_delete_c_event_member($c_commu_topic_id, $c_member_id){
 	$sql = "delete from c_event_member" .
 			" where c_commu_topic_id = ". no_quote4db($c_commu_topic_id) .
 			" and c_member_id = " . no_quote4db($c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 }
 
@@ -892,7 +892,7 @@ function do_c_event_add_insert_c_event_member_as_admin($c_commu_topic_id, $c_mem
 	$sql = "insert c_event_member(c_commu_topic_id, c_member_id, is_admin, r_datetime) " .
 			"values(". quotearray4db($c_commu_topic_id, $c_member_id). " , 1, now())";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 }
 
@@ -965,12 +965,12 @@ function do_fh_friend_list_delete_c_friend($c_member_id_from, $c_member_id_to){
 	$sql = "DELETE FROM c_friend";
 	$sql .= " WHERE c_member_id_from=". quote4db($c_member_id_from);
 	$sql .= " AND c_member_id_to=". quote4db($c_member_id_to);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	$sql = "DELETE FROM c_friend";
 	$sql .= " WHERE c_member_id_from=". quote4db($c_member_id_to);
 	$sql .= " AND c_member_id_to=". quote4db($c_member_id_from);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	return mysqli_errno($GLOBALS['db']);
 }
@@ -1045,7 +1045,7 @@ function do_h_diary_edit_update_c_diary($c_diary_id,$subject,$body,$image_filena
 
 	$sql .= " WHERE c_diary_id=". quote4db($c_diary_id);
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 //echo "<br>sql=$sql<br>";exit;
 	return mysqli_errno($GLOBALS['db']);
@@ -1228,7 +1228,7 @@ function do_c_edit_image_h_com_add_insert_c_commu($target_c_commu_id,$image_file
 	$sql = "UPDATE c_commu" .
 			" SET image_filename=". quote4db($image_filename) .
 			" WHERE c_commu_id=". quote4db($target_c_commu_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1240,7 +1240,7 @@ function do_c_edit_member_delete_c_commu_member($target_c_commu_id,$target_c_mem
 	$sql = "DELETE FROM c_commu_member";
 	$sql .= " WHERE c_member_id=". quote4db($target_c_member_id);
 	$sql .= " AND c_commu_id=". quote4db($target_c_commu_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1252,7 +1252,7 @@ function do_c_edit_member_delete_c_commu_admin_confirm($target_c_commu_admin_con
 {
 	$sql = "DELETE FROM c_commu_admin_confirm";
 	$sql .= " WHERE c_commu_admin_confirm_id=".quote4db($target_c_commu_admin_confirm_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1303,7 +1303,7 @@ function do_h_config_image($c_member_id,$image_filename){
 	$sql = "UPDATE c_member" .
 		" SET image_filename=". quote4db($image_filename) .
 		" WHERE c_member_id=". quote4db($c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1317,7 +1317,7 @@ function do_h_config_image_new($c_member_id,$image_filename,$img_num){
 	$sql = "UPDATE c_member" .
 		" SET image_filename_".no_quote4db($img_num)."=". quote4db($image_filename) .
 		" WHERE c_member_id=". quote4db($c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1395,7 +1395,7 @@ function do_common_update_password($c_member_id, $password)
 		" SET hashed_password = ". quote4db(md5($password)).
 		" WHERE c_member_id	= ". quote4db($c_member_id);
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1420,13 +1420,13 @@ function do_h_config_3(
 	",c_password_query_id     = ".no_quote4db($c_password_query_id).
 	",public_flag_diary     = ".quote4db($public_flag_diary).
 	" WHERE c_member_id	  = ".quote4db($target_c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	if( !empty($c_password_query_answer) ){
 		$sql = "UPDATE c_member_secure SET ".
 		"hashed_password_query_answer = ".quote4db( md5($c_password_query_answer) ).
 		" WHERE c_member_id	  = ".quote4db($target_c_member_id);
-		mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+		mysqli_query($GLOBALS['db'], $sql);
 	}
 	return mysqli_errno($GLOBALS['db']);
 }
@@ -1458,7 +1458,7 @@ function insert_rss_cache($rss, $target_c_member_id)
  */
 function delete_rss_cache($target_c_member_id){
 	$sql="DELETE FROM c_rss_cache WHERE c_member_id=".quote4db($target_c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function _do_c_member4c_member_id($c_member_id) {
@@ -1508,7 +1508,7 @@ function do_c_join_request_insert_c_commu_member_confirm_insert_c_message($c_mem
 function do_inc_click_side_banner($target_c_banner_id,$c_member_id,$clicked_from){
 	$sql = "INSERT INTO c_banner_log(r_datetime,r_date,c_banner_id,c_member_id,clicked_from)"
 	." VALUES(NOW(),NOW(),".quotearray4db($target_c_banner_id,$c_member_id,$clicked_from).")";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1741,7 +1741,7 @@ function do_common_insert_search_log($c_member_id, $searchword){
 	if($searchword){
 		$sql = "INSERT INTO c_searchlog (c_member_id,searchword,r_datetime)"
 		." VALUES(".quotearray4db($c_member_id,$searchword).",NOW())";
-		mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+		mysqli_query($GLOBALS['db'], $sql);
 		$ret = mysqli_errno($GLOBALS['db']);
 	}
 	return $ret;
@@ -1816,18 +1816,18 @@ function do_common_update_c_commu_access_date($c_commu_id)
 	$sql = "UPDATE c_commu SET access_date=NOW()" .
 			" WHERE c_commu_id=".quote4db($c_commu_id) .
 			" LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_insert_c_member_ktai_pre($session, $ktai_address, $c_member_id_invite)
 {
-	$session = mysqli_real_escape_string($session);
-	$ktai_address = mysqli_real_escape_string($ktai_address);
-	$c_member_id_invite = mysqli_real_escape_string($c_member_id_invite);
+	$session = mysqli_real_escape_string($GLOBALS['db'], $session);
+	$ktai_address = mysqli_real_escape_string($GLOBALS['db'], $ktai_address);
+	$c_member_id_invite = mysqli_real_escape_string($GLOBALS['db'], $c_member_id_invite);
 
 	$sql = "INSERT INTO c_member_ktai_pre(session, ktai_address, r_datetime, c_member_id_invite)" .
 			" VALUES('$session', '$ktai_address', NOW(), $c_member_id_invite)";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_insert_id($GLOBALS['db']);
 }
 
@@ -1855,7 +1855,7 @@ function do_inc_leave_c_commu($target_c_commu_id,$c_member_id){
 	$sql = "DELETE c_commu_member FROM c_commu_member" .
 		" WHERE c_member_id=". quote4db($c_member_id) .
 		" AND c_commu_id=". quote4db($target_c_commu_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1891,7 +1891,7 @@ function update_message_to_is_save($c_message_id,$subject,$body,$is_send=0)
  */
 function do_f_bookmark_add($c_member_id_from,$c_member_id_to){
 	$sql = "insert c_bookmark values('', ".quotearray4db($c_member_id_from, $c_member_id_to)." ,now())";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 
 }
@@ -1906,7 +1906,7 @@ function do_h_bookmark_delete($c_member_id, $target_c_member_id){
 	$sql = "delete from c_bookmark"
 		  ." where c_member_id_from = " . no_quote4db($c_member_id)
 		  ." and c_member_id_to = ". no_quote4db($target_c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 
 }
@@ -1919,7 +1919,7 @@ function do_delete_c_message_from_trash($target_c_message_id){
 
 	$sql = "UPDATE c_message SET is_kanzen_sakujo_from=1"
 		  ." WHERE c_message_id=".quote4db($target_c_message_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1927,7 +1927,7 @@ function do_delete_c_message_to_trash($target_c_message_id){
 
 	$sql = "UPDATE c_message SET is_kanzen_sakujo_to=1"
 		  ." WHERE c_message_id=".quote4db($target_c_message_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
@@ -1941,7 +1941,7 @@ function do_update_is_hensinmoto_c_message_id($jyusin_c_message_id, $hensin_c_me
 
 	$sql = "UPDATE c_message SET hensinmoto_c_message_id=". quote4db($jyusin_c_message_id).
 		" WHERE c_message_id=".quote4db($hensin_c_message_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 
 }
@@ -1970,7 +1970,7 @@ function do_get_hensinmoto_id($hensin_c_message_id){
 function do_update_is_hensin($target_c_message_id){
 	$sql = "UPDATE c_message SET is_hensin=1".
 		" WHERE c_message_id=".quote4db($target_c_message_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 
 }
@@ -2017,7 +2017,7 @@ function do_c_review_add_insert_c_review($product, $c_review_category_id){
 
 		$sql = "insert c_review($keys_str, r_datetime) " .
 				" values($insert_str, now())";
-		mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+		mysqli_query($GLOBALS['db'], $sql);
 
 		$sql = "select c_review_id from c_review " .
 				"where asin = ". quote4db($product['ASIN']);
@@ -2033,7 +2033,7 @@ function do_c_review_add_insert_c_review_comment($c_review_id , $c_member_id, $b
 	$sql = "insert c_review_comment(c_review_id, c_member_id, body, satisfaction_level, r_datetime) " .
 			"values(". quotearray4db($c_review_id, $c_member_id, $body, $satisfaction_level) .", now())";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_c_review_add_c_review_category_id4category($category){
@@ -2046,12 +2046,12 @@ function do_h_review_edit_update_c_review_comment($c_review_comment_id, $body, $
 			" , satisfaction_level = " .no_quote4db($satisfaction_level) .
 			" , r_datetime = now() ".
 			" where c_review_comment_id = ". no_quote4db($c_review_comment_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_h_review_edit_delete_c_review_comment($c_review_comment_id){
 	$sql = "delete from c_review_comment where c_review_comment_id = ". no_quote4db($c_review_comment_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_h_review_edit_c_review_comment4c_review_comment_id_c_member_id($c_review_comment_id, $c_member_id){
@@ -2072,7 +2072,7 @@ function do_h_review_clip_add_insert_c_review_clip($c_review_id, $c_member_id){
 	$sql = "insert c_review_clip(c_member_id, c_review_id, r_datetime) " .
 			" values(".no_quote4db($c_member_id).", ".no_quote4db($c_review_id).", now())";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 }
 
@@ -2088,7 +2088,7 @@ function do_c_member_review_insert_c_commu_review($c_review_id, $c_member_id, $c
 	$sql = "insert c_commu_review(c_commu_id, c_review_id, c_member_id, r_datetime) " .
 			" values(".no_quote4db($c_commu_id).", ".no_quote4db($c_review_id).", ".no_quote4db($c_member_id).", now())";
 
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_h_schedule_add_insert_c_schedule(
@@ -2164,7 +2164,7 @@ function do_common_c_member_id4ktai_address($ktai_address)
 	if (!$ktai_address) {
 		return null;
 	}
-	$ktai_address =  mysqli_real_escape_string($ktai_address);
+	$ktai_address = mysqli_real_escape_string($GLOBALS['db'], $ktai_address);
 
 	$sql = "SELECT c_member_id FROM c_member_secure" .
    		" WHERE ktai_address = " . quote4db(t_encrypt($ktai_address)) .
@@ -2218,7 +2218,7 @@ function do_h_review_clip_list_delete_c_review_clip($c_member_id , $c_review_cli
 	$sql = "delete from c_review_clip " .
 			" where c_member_id = " . no_quote4db($c_member_id) .
 			" and c_review_id in (" . no_quote4db($c_review_clip_str) . ")";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	return true;
 }
@@ -2230,7 +2230,7 @@ function do_h_invite_delete_member_delete_c_member_pre($c_member_id, $delete_tar
 	$sql = "delete from c_member_pre " .
 			" where c_member_id_invite =" . no_quote4db($c_member_id).
 			" and c_member_pre_id in (" . no_quote4db($delete_target_member) .")";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 }
 
 function do_h_invite_delete_member_delete_c_member_ktai_pre($c_member_id, $delete_target_c_member_id){
@@ -2239,7 +2239,7 @@ function do_h_invite_delete_member_delete_c_member_ktai_pre($c_member_id, $delet
 	$sql = "delete from c_member_ktai_pre " .
 			" where c_member_id_invite =" . no_quote4db($c_member_id).
 			" and c_member_ktai_pre_id in (" . no_quote4db($delete_target_member) .")";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 }
 
@@ -2259,13 +2259,13 @@ function do_h_config_3_insert_c_access_block($c_member_id, $c_member_id_block){
 
 	$sql = "delete from c_access_block " .
 			" where c_member_id = ". no_quote4db($c_member_id);
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 
 	foreach($c_member_id_block as $id){
 		if($id != $c_member_id){
 			$sql = "insert c_access_block values('', ".no_quote4db($c_member_id)."," .no_quote4db($id).
 					", now())";
-			mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+			mysqli_query($GLOBALS['db'], $sql);
 		}
 	}
 }
@@ -2442,9 +2442,9 @@ function p_is_sns_join4mail_address($mail_address)
 //c_member_ktai_preを更新
 function do_update_c_member_ktai_pre($session, $ktai_address, $c_member_id_invite)
 {
-	$session = mysqli_real_escape_string($session);
-	$ktai_address = mysqli_real_escape_string($ktai_address);
-	$c_member_id_invite = mysqli_real_escape_string($c_member_id_invite);
+	$session = mysqli_real_escape_string($GLOBALS['db'], $session);
+	$ktai_address = mysqli_real_escape_string($GLOBALS['db'], $ktai_address);
+	$c_member_id_invite = mysqli_real_escape_string($GLOBALS['db'], $c_member_id_invite);
 
 	$sql = "UPDATE c_member_ktai_pre set ".
 		" session = " .quote4db($session) .
@@ -2453,7 +2453,7 @@ function do_update_c_member_ktai_pre($session, $ktai_address, $c_member_id_invit
 		" , c_member_id_invite = " .quote4db($c_member_id_invite).
 		" WHERE ktai_address=". quote4db($ktai_address);
 
-	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	return mysqli_query($GLOBALS['db'], $sql);
 }
 
 /**
@@ -2463,7 +2463,7 @@ function do_update_c_member_ktai_pre($session, $ktai_address, $c_member_id_invit
 function do_inc_click_top_banner($target_c_banner_id,$c_member_id,$clicked_from){
 	$sql = "INSERT INTO c_banner_log(r_datetime,r_date,c_banner_id,c_member_id,clicked_from)"
 	." VALUES(NOW(),NOW(),".quotearray4db($target_c_banner_id,$c_member_id,$clicked_from).")";
-	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
+	mysqli_query($GLOBALS['db'], $sql);
 	return mysqli_errno($GLOBALS['db']);
 }
 
