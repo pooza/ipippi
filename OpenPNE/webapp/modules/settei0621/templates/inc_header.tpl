@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Style-Type" content="text/css">
 <title>【管理】({$SNS_NAME})</title>
 <link rel="stylesheet" href="modules/admin/admin.css" type="text/css">

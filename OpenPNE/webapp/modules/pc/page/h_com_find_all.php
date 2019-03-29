@@ -13,7 +13,7 @@ function pageAction_h_com_find_all($smarty,$requests) {
 	$category_id = $requests['category_id'];
 	// ----------
 
-	$keyword = mb_convert_encoding($keyword, "EUC-JP", "EUC-JP,SJIS,UTF-8,JIS");
+	$keyword = mb_convert_encoding($keyword, "UTF-8", "EUC-JP,SJIS,UTF-8,JIS");
 	//バグ回避のため半角空白を全角に統一
 	$keyword = str_replace(" ", "　", $keyword);
 

@@ -565,8 +565,8 @@ function rss_get_new($rss_url, $limit_item = 10)
 			"r_datetime" => $r_datetime,
 		);
 
-		$myitem['subject'] = mb_convert_encoding($myitem['subject'], "EUC-JP", "auto");
-		$myitem['body']    = mb_convert_encoding($myitem['body'], "EUC-JP", "auto");
+		$myitem['subject'] = mb_convert_encoding($myitem['subject'], "UTF-8", "auto");
+		$myitem['body']    = mb_convert_encoding($myitem['body'], "UTF-8", "auto");
 
 		$item_list[$i++] = $myitem;
 	}

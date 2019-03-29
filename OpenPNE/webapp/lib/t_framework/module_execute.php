@@ -229,7 +229,7 @@ function _check_action($action)
 function send_headers()
 {
 	if (!headers_sent()) {
-		header("Content-Type: text/html; charset=EUC-JP");
+		header("Content-Type: text/html; charset=UTF-8");
 
 		// no-cache
 		// 日付が過去

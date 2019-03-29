@@ -47,7 +47,7 @@ function init_pc_page(&$smarty)
 			$entries[] = array(
 				"title" => mb_convert_encoding(
 					sprintf("[%s] %s", $name, $item["title"]),
-					"EUC-JP",
+					"UTF-8",
 					MAGPIE_OUTPUT_ENCODING
 				),
 				"link" => $item["link"]

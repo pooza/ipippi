@@ -148,7 +148,7 @@ function m_convert_text($string, $from_encoding = "")
 		else
 			$from_encoding = "auto";
 	}
-	$string = mb_convert_encoding($string, "EUC-JP", $from_encoding);
+	$string = mb_convert_encoding($string, "UTF-8", $from_encoding);
 
 	$string = str_replace("\0", "", $string);
 	$string = rtrim($string);
