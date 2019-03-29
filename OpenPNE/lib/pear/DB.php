@@ -1121,7 +1121,7 @@ class DB_result
                 if ($object_class == 'stdClass') {
                     $arr = (object) $arr;
                 } else {
-                    $arr = &new $object_class($arr);
+                    $arr = new $object_class($arr);
                 }
             }
             return $arr;

@@ -712,7 +712,7 @@ Run post-installation scripts in package <package>, if any exist.
         $dest .= DIRECTORY_SEPARATOR . $pkgname;
         $orig = $pkgname . '-' . $pkgversion;
 
-        $tar = &new Archive_Tar($pkgfile->getArchiveFile());
+        $tar = new Archive_Tar($pkgfile->getArchiveFile());
         if (!@$tar->extractModify($dest, $orig)) {
             return $this->raiseError('unable to unpack ' . $pkgfile->getArchiveFile());
         }

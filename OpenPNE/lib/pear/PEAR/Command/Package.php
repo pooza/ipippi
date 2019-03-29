@@ -350,7 +350,7 @@ used for automated conversion or learning the format.
             $info = $obj->fromPackageFile($params[0], PEAR_VALIDATE_NORMAL);
         } else {
             $archive = $info->getArchiveFile();
-            $tar = &new Archive_Tar($archive);
+            $tar = new Archive_Tar($archive);
             $tar->extract(dirname($info->getPackageFile()));
             $info->setPackageFile(dirname($info->getPackageFile()) . DIRECTORY_SEPARATOR .
                 $info->getPackage() . '-' . $info->getVersion() . DIRECTORY_SEPARATOR .

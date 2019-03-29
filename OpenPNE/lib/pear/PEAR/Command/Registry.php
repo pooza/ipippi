@@ -160,7 +160,7 @@ installed package.'
         $this->ui->outputData($data, $command);
         return true;
     }
-    
+
     function doListAll($command, $options, $params)
     {
         $reg = &$this->config->getRegistry();
@@ -190,7 +190,7 @@ installed package.'
         }
         return true;
     }
-    
+
     function doFileList($command, $options, $params)
     {
         if (count($params) != 1) {
@@ -203,7 +203,7 @@ installed package.'
             if (!class_exists('PEAR_PackageFile')) {
                 require_once 'PEAR/PackageFile.php';
             }
-            $pkg = &new PEAR_PackageFile($this->config, $this->_debug);
+            $pkg = new PEAR_PackageFile($this->config, $this->_debug);
             PEAR::staticPushErrorHandling(PEAR_ERROR_RETURN);
             $info = &$pkg->fromAnyFile($params[0], PEAR_VALIDATE_NORMAL);
             PEAR::staticPopErrorHandling();
@@ -363,7 +363,7 @@ installed package.'
             if (!class_exists('PEAR_PackageFile')) {
                 require_once 'PEAR/PackageFile.php';
             }
-            $pkg = &new PEAR_PackageFile($this->config, $this->_debug);
+            $pkg = new PEAR_PackageFile($this->config, $this->_debug);
             PEAR::staticPushErrorHandling(PEAR_ERROR_RETURN);
             $obj = &$pkg->fromAnyFile($params[0], PEAR_VALIDATE_NORMAL);
             PEAR::staticPopErrorHandling();

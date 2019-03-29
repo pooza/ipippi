@@ -184,7 +184,7 @@ and uninstall).
         foreach ($this->config->getLayers() as $layer) {
             $data['data']['Config Files'][] = array(ucfirst($layer) . ' Configuration File', 'Filename' , $this->config->getConfFile($layer));
         }
-        
+
         $this->ui->outputData($data, $command);
         return true;
     }
@@ -326,7 +326,7 @@ and uninstall).
             }
         }
         $params[1] = realpath($params[1]);
-        $config = &new PEAR_Config($params[1], '#no#system#config#', false, false);
+        $config = new PEAR_Config($params[1], '#no#system#config#', false, false);
         if ($root{strlen($root) - 1} == '/') {
             $root = substr($root, 0, strlen($root) - 1);
         }
@@ -372,7 +372,7 @@ and uninstall).
                 array(ucfirst($layer) . ' Configuration File', 'Filename' ,
                     $config->getConfFile($layer));
         }
-        
+
         $this->ui->outputData($data, 'config-show');
         return true;
     }

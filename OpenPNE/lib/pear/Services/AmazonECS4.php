@@ -141,7 +141,7 @@ class Services_AmazonECS4
 
     /**
     * The time that the Amazon took to process the request
-    * 
+    *
     * @access private
     * @var    string
     */
@@ -362,9 +362,9 @@ class Services_AmazonECS4
         if(!class_exists('Cache')){
             @include_once 'Cache.php';
         }
-        
+
         @$cache = new Cache($container, $container_options);
-        
+
         if (is_object($cache)) {
             $this->_cache = $cache;
         } else {
@@ -374,10 +374,10 @@ class Services_AmazonECS4
 
         return true;
     }
-    
+
     /**
     * Sets cache expire time
-    * 
+    *
     * Amazon dictates that any prices that are displayed that may be over an
     * hour old should be accompanied by some sort of timestamp. You can get
     * around that by expiring any queries that use the time in an hour (3600
@@ -429,7 +429,7 @@ class Services_AmazonECS4
     {
         return $this->_errors;
     }
-    
+
     /**
     * Retrieves the error code and message
     *
@@ -697,7 +697,7 @@ class Services_AmazonECS4
         $params['About'] = $about;
         return $this->_sendRequest($params);
     }
-        
+
     /**
     * Retrieves information for products
     *
@@ -1064,7 +1064,7 @@ class Services_AmazonECS4
     */
     function _sendHttpRequest($url)
     {
-        $http = &new HTTP_Request($url);
+        $http = new HTTP_Request($url);
         $http->setHttpVer('1.0');
         $http->addHeader('User-Agent', 'Services_AmazonECS4/' . $this->getApiVersion());
         if ($this->_proxy_host) {
@@ -1091,7 +1091,7 @@ class Services_AmazonECS4
     */
     function _parseRawResult($raw_result)
     {
-        $xml = &new XML_Unserializer();
+        $xml = new XML_Unserializer();
         $xml->setOption(XML_UNSERIALIZER_OPTION_ATTRIBUTES_PARSE, true);
         $xml->setOption(XML_UNSERIALIZER_OPTION_FORCE_ENUM,
                         array('Item', 'Review', 'EditorialReview',

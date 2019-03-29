@@ -278,7 +278,7 @@ class PEAR_Registry extends PEAR
                     } else {
                         $file = '.pearrc';
                     }
-                    $this->_config = &new PEAR_Config($this->statedir . DIRECTORY_SEPARATOR .
+                    $this->_config = new PEAR_Config($this->statedir . DIRECTORY_SEPARATOR .
                         $file);
                     $this->_config->setRegistry($this);
                     $this->_config->set('php_dir', $this->install_dir);
@@ -517,7 +517,7 @@ class PEAR_Registry extends PEAR
         } else {
             return $channel;
         }
-    }    
+    }
     // }}}
     // {{{ _getChannelFromAlias()
 
@@ -537,7 +537,7 @@ class PEAR_Registry extends PEAR
         }
         $channel = $this->_getChannel($channel);
         return $channel->getAlias();
-    }    
+    }
     // }}}
     // {{{ _channelDirectoryName()
 
@@ -1122,7 +1122,7 @@ class PEAR_Registry extends PEAR
     }
 
     // }}}
-    
+
     function _listAllPackages()
     {
         $ret = array();
@@ -1270,13 +1270,13 @@ class PEAR_Registry extends PEAR
         }
         $a = $this->_config;
         if (!$a) {
-            $this->_config = &new PEAR_Config;
+            $this->_config = new PEAR_Config;
             $this->_config->set('php_dir', $this->statedir);
         }
         if (!class_exists('PEAR_PackageFile')) {
             require_once 'PEAR/PackageFile.php';
         }
-        $pkg = &new PEAR_PackageFile($this->_config);
+        $pkg = new PEAR_PackageFile($this->_config);
         $pf = &$pkg->fromArray($info);
         return $pf;
     }
@@ -2068,7 +2068,7 @@ class PEAR_Registry extends PEAR
                     return PEAR::raiseError('parsePackageName(): "' . $param['version'] .
                         '" is neither a valid version nor a valid state in "' .
                         $saveparam . '"', 'version/state', null, null, $param);
-                }                    
+                }
             }
         }
         return $param;

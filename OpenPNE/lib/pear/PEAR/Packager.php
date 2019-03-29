@@ -56,7 +56,7 @@ class PEAR_Packager extends PEAR_Common
             $pkgfile = 'package.xml';
         }
         PEAR::staticPushErrorHandling(PEAR_ERROR_RETURN);
-        $pkg = &new PEAR_PackageFile($this->config, $this->debug);
+        $pkg = new PEAR_PackageFile($this->config, $this->debug);
         $pf = &$pkg->fromPackageFile($pkgfile, PEAR_VALIDATE_NORMAL);
         $main = &$pf;
         PEAR::staticPopErrorHandling();
@@ -146,7 +146,7 @@ class PEAR_Packager extends PEAR_Common
             }
             $dest_package = basename($tgzfile);
             $pkgdir = dirname($pkgfile);
-    
+
             // TAR the Package -------------------------------------------
             $this->log(1, "Package $dest_package done");
             if (file_exists("$pkgdir/CVS/Root")) {
@@ -165,7 +165,7 @@ class PEAR_Packager extends PEAR_Common
             }
             $dest_package = basename($tgzfile);
             $pkgdir = dirname($pkgfile);
-    
+
             // TAR the Package -------------------------------------------
             $this->log(1, "Package $dest_package done");
             if (file_exists("$pkgdir/CVS/Root")) {

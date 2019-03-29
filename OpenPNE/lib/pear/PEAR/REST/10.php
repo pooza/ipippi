@@ -45,7 +45,7 @@ class PEAR_REST_10
     var $_rest;
     function PEAR_REST_10($config, $options = array())
     {
-        $this->_rest = &new PEAR_REST($config, $options);
+        $this->_rest = new PEAR_REST($config, $options);
     }
 
     function getDownloadURL($base, $packageinfo, $prefstate, $installed)
@@ -232,7 +232,7 @@ class PEAR_REST_10
         if (!$found) {
             $release = $info['r'][0];
         }
-        $releaseinfo = $this->_rest->retrieveCacheFirst($base . 'r/' . strtolower($package) . '/' . 
+        $releaseinfo = $this->_rest->retrieveCacheFirst($base . 'r/' . strtolower($package) . '/' .
             $release['v'] . '.xml');
         if (PEAR::isError($releaseinfo)) {
             return PEAR::raiseError('Package "' . $package . '" Version "' . $release['v'] .
@@ -282,7 +282,7 @@ class PEAR_REST_10
             break;
         }
         if ($found) {
-            return 
+            return
                 array('version' => $releaseinfo['v'],
                       'info' => $packagexml,
                       'package' => $releaseinfo['p']['_content'],
@@ -520,7 +520,7 @@ class PEAR_REST_10
             if (!$found) {
                 continue;
             }
-            $relinfo = $this->_rest->retrieveCacheFirst($base . 'r/' . strtolower($package) . '/' . 
+            $relinfo = $this->_rest->retrieveCacheFirst($base . 'r/' . strtolower($package) . '/' .
                 $release['v'] . '.xml');
             if (PEAR::isError($relinfo)) {
                 return $relinfo;

@@ -146,7 +146,7 @@ class PEAR_PackageFile_v2
      */
     function &getPEARDownloader(&$i, $o, &$c)
     {
-        $z = &new PEAR_Downloader($i, $o, $c);
+        $z = new PEAR_Downloader($i, $o, $c);
         return $z;
     }
 
@@ -164,7 +164,7 @@ class PEAR_PackageFile_v2
         if (!class_exists('PEAR_Dependency2')) {
             require_once 'PEAR/Dependency2.php';
         }
-        $z = &new PEAR_Dependency2($c, $o, $p, $s);
+        $z = new PEAR_Dependency2($c, $o, $p, $s);
         return $z;
     }
 
@@ -559,7 +559,7 @@ class PEAR_PackageFile_v2
             $atts = $filelist[$name];
             foreach ($tasks as $tag => $raw) {
                 $task = $this->getTask($tag);
-                $task = &new $task($this->_config, $common, PEAR_TASK_INSTALL);
+                $task = new $task($this->_config, $common, PEAR_TASK_INSTALL);
                 if ($task->isScript()) {
                     $ret[] = $filelist[$name]['installed_as'];
                 }
@@ -601,7 +601,7 @@ class PEAR_PackageFile_v2
             $atts = $filelist[$name];
             foreach ($tasks as $tag => $raw) {
                 $taskname = $this->getTask($tag);
-                $task = &new $taskname($this->_config, $common, PEAR_TASK_INSTALL);
+                $task = new $taskname($this->_config, $common, PEAR_TASK_INSTALL);
                 if (!$task->isScript()) {
                     continue; // scripts are only handled after installation
                 }
@@ -1786,7 +1786,7 @@ class PEAR_PackageFile_v2
                 return implode('', file($file));
             }
         } else { // tgz
-            $tar = &new Archive_Tar($this->_archiveFile);
+            $tar = new Archive_Tar($this->_archiveFile);
             $tar->pushErrorHandling(PEAR_ERROR_RETURN);
             if ($file != 'package.xml' && $file != 'package2.xml') {
                 $file = $this->getPackage() . '-' . $this->getVersion() . '/' . $file;

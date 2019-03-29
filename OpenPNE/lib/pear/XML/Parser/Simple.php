@@ -59,15 +59,15 @@ require_once 'XML/Parser.php';
  *     {
  *        $this->XML_Parser_Simple();
  *      }
- * 
+ *
  *    function handleElement($name, $attribs, $data)
  *     {
  *         printf('handle %s<br>', $name);
  *     }
  * }
- * 
- * $p = &new myParser();
- * 
+ *
+ * $p = new myParser();
+ *
  * $result = $p->setInputFile('myDoc.xml');
  * $result = $p->parse();
  * </code>
@@ -114,7 +114,7 @@ class XML_Parser_Simple extends XML_Parser
         'notation_decl_handler'             => 'notationHandler',
         'external_entity_ref_handler'       => 'entityrefHandler'
     );
-    
+
     /**
      * Creates an XML parser.
      *
@@ -151,7 +151,7 @@ class XML_Parser_Simple extends XML_Parser
 
         xml_set_element_handler($this->parser, array(&$this, 'startHandler'), array(&$this, 'endHandler'));
         xml_set_character_data_handler($this->parser, array(&$this, 'cdataHandler'));
-        
+
         /**
          * set additional handlers for character data, entities, etc.
          */
@@ -177,7 +177,7 @@ class XML_Parser_Simple extends XML_Parser
         $this->_elStack = array();
         $this->_data    = array();
         $this->_depth   = 0;
-        
+
         $result = $this->_create();
         if ($this->isError( $result )) {
             return $result;
@@ -255,7 +255,7 @@ class XML_Parser_Simple extends XML_Parser
    /**
     * handle a tag
     *
-    * Implement this in your parser 
+    * Implement this in your parser
     *
     * @access   public
     * @abstract
