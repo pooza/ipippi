@@ -245,7 +245,7 @@ class DB_mysql extends DB_common
         if (!$this->connection) {
             if (($err = @mysql_error()) != '') {
                 return $this->raiseError(DB_ERROR_CONNECT_FAILED,
-                                         null, null, null, 
+                                         null, null, null,
                                          $err);
             } else {
                 return $this->raiseError(DB_ERROR_CONNECT_FAILED,
@@ -377,7 +377,7 @@ class DB_mysql extends DB_common
             }
         }
         if ($fetchmode & DB_FETCHMODE_ASSOC) {
-            $arr = @mysql_fetch_array($result, MYSQL_ASSOC);
+            $arr = @mysqli_fetch_assoc($result);
             if ($this->options['portability'] & DB_PORTABILITY_LOWERCASE && $arr) {
                 $arr = array_change_key_case($arr, CASE_LOWER);
             }
@@ -797,7 +797,7 @@ class DB_mysql extends DB_common
         if (function_exists('mysql_real_escape_string')) {
             return @mysql_real_escape_string($str, $this->connection);
         } else {
-            return @mysql_escape_string($str);
+            return @mysqli_real_escape_string($str);
         }
     }
 

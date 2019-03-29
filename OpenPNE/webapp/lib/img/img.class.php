@@ -134,18 +134,17 @@ class Img
 	//DBから画像バイナリを取得
 	function setRawImageData4db()
 	{
-		@mysql_connect(
-				$GLOBALS['__OpenPNE']['DSN']['hostspec'],
-				$GLOBALS['__OpenPNE']['DSN']['username'],
-				$GLOBALS['__OpenPNE']['DSN']['password'])
-			or die('データベースサーバに接続できませんでした');
-		@mysql_select_db($GLOBALS['__OpenPNE']['DSN']['database'])
-			or die('データベースが見つかりませんでした');
+		$db = @mysqli_connect(
+			$GLOBALS['__OpenPNE']['DSN']['hostspec'],
+			$GLOBALS['__OpenPNE']['DSN']['username'],
+			$GLOBALS['__OpenPNE']['DSN']['password']
+			$GLOBALS['__OpenPNE']['DSN']['database']
+		) or die('データベースサーバに接続できませんでした');
 
 		$sql = "SELECT filename,bin,type FROM c_image" .
-			" WHERE filename = '".mysql_real_escape_string($this->dbsrc)."'";
-		$result = mysql_query($sql);
-		$row = mysql_fetch_array($result);
+			" WHERE filename = '".mysqli_real_escape_string($this->dbsrc)."'";
+		$result = mysqli_stmt_execute($db, $sql);
+		$row = mysqli_fetch_array($result);
 
 		if ($row) {
 			$this->rawImageData = base64_decode($row['bin']);

@@ -24,15 +24,6 @@ define('MAIL_SERVER_DOMAIN', 'ipippi.jp');
 
 //--- オプション設定
 
-// SQL内でのエスケープの仕方
-// (DBに登録したデータが文字化けする場合はこの設定を変えてみてください)
-// 0 : mysql_real_escape_string
-// 1 : mbstring の関数で置換
-define('DB_ESCAPE_TYPE', 1);
-
-// DB接続時に SET NAMES ujis; クエリーを発行するかどうか
-define('USE_SET_NAMES', true);
-
 /// デバッグ、エラーハンドリング、ログ設定
 
 error_reporting(E_ALL ^ E_NOTICE);

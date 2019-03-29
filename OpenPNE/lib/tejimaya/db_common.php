@@ -3,17 +3,12 @@
 // DBに接続
 function db_connect()
 {
-	@mysql_connect(
+	$_GLOBAL['db'] = @mysqli_connect(
 		$GLOBALS['__OpenPNE']['DSN']['hostspec'],
 		$GLOBALS['__OpenPNE']['DSN']['username'],
-		$GLOBALS['__OpenPNE']['DSN']['password'])
-		or die('データベースサーバに接続できませんでした');
-	@mysql_select_db($GLOBALS['__OpenPNE']['DSN']['database'])
-		or die('データベースが見つかりませんでした');
-
-	if (defined('USE_SET_NAMES') && USE_SET_NAMES) {
-		@mysql_query('SET NAMES ujis');
-	}
+		$GLOBALS['__OpenPNE']['DSN']['password']
+		$GLOBALS['__OpenPNE']['DSN']['database']
+	) or die('データベースサーバに接続できませんでした');
 }
 
 //-----
@@ -67,13 +62,13 @@ function get_login_url()
 }
 
 /**
- * mysql_query を実行する
+ * mysqli_query を実行する
  *
  * @param  string $query
  * @return result
  */
 function _mysql_query4db($query) {
-	if (!($result = mysql_query($query))) {
+	if (!($result = mysqli_stmt_execute($_GLOBAL['db'], $query))) {
 		return false;
 	}
 	return $result;
@@ -89,7 +84,7 @@ function get_array_list4db($query,$debug = false)
 {
 	if ($result = _mysql_query4db($query)) {
 		$table = array();
-		while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		while ($row = mysqli_fetch_assoc($result)) {
 			$table[] = $row;
 		}
 		return $table;
@@ -109,7 +104,7 @@ function get_assoc4db($query)
 {
 	if ($result = _mysql_query4db($query)) {
 		$list = array();
-		while ($row = mysql_fetch_row($result)) {
+		while ($row = mysqli_fetch_row($result)) {
 			$list[$row[0]] = $row[1];
 		}
 		return $list;
@@ -142,7 +137,7 @@ function get_one_list4db($query)
 {
 	if ($result = _mysql_query4db($query)) {
 		$list = array();
-		while ($row = mysql_fetch_row($result)) {
+		while ($row = mysqli_fetch_row($result)) {
 			$list[] = $row[0];
 		}
 		return $list;
@@ -159,7 +154,7 @@ function get_one_list4db($query)
 function get_one4db($query)
 {
 	if ($result = _mysql_query4db($query)) {
-		$row = mysql_fetch_row($result);
+		$row = mysqli_fetch_row($result);
 		return $row[0];
 	}
 	return false;
@@ -174,7 +169,7 @@ function get_one4db($query)
 function _insert4db($query)
 {
 	if (_mysql_query4db($query)) {
-		$insert_id = mysql_insert_id();
+		$insert_id = mysqli_insert_id($_GLOBAL['db']);
 		return $insert_id;
 	} else {
 		return -1;
@@ -483,14 +478,14 @@ function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
 	$sql .= " WHERE c_commu_id=". quote4db($c_commu_id) .
 			" AND c_member_id_to=". quote4db($c_member_id_to) .
 			" LIMIT 1";
-	return mysql_query($sql);
+	return mysqli_stmt_execute($_GLOBAL['db'], $sql);
 }
 
 // SQLインジェクション対策用関数
 function no_quote4db($str)
 {
 	if (defined('DB_ESCAPE_TYPE') && DB_ESCAPE_TYPE == 0) {
-		return mysql_real_escape_string($str);
+		return mysqli_real_escape_string($str);
 	} else {
 		$str = mb_mb_ereg_replace('\\\\',"\\\\",$str);
 		$str = mb_mb_ereg_replace('\'',"\\'",$str);
@@ -871,7 +866,7 @@ function p_access_log($c_member_id, $page_name, $ktai_flag="0"){
 
 	$sql = "insert c_access_log($insert_column, r_datetime) values($insert_value, now())";
 
-	mysql_query($sql);
+	mysqli_stmt_execute($_GLOBAL['db'], $sql);
 
 }
 

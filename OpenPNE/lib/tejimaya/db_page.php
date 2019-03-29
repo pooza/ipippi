@@ -435,8 +435,8 @@ function _db_c_commu4c_commu_id($c_commu_id)
 function _db_c_friend4c_member_id($c_member_id){
 	$sql = 'SELECT `c_friend_id` , `c_member_id_from` , `c_member_id_to` , `r_datetime` , `intro` '
 	."FROM c_friend WHERE c_member_id_from = ".quotearray4db($c_member_id)."";
-	$result = mysql_query($sql);
-	while($tmp = mysql_fetch_array($result)){
+	$result = mysqli_stmt_execute($_GLOBAL['db'], $sql);
+	while($tmp = mysqli_fetch_array($result)){
 		$a[]=$tmp;
 	}
 	return $a;
@@ -588,7 +588,7 @@ function p_h_com_find_all_c_commu_category_list4null()
 		" GROUP BY c_commu_category_id";
 	$result = _mysql_query4db($sql);
 	$counts = array();
-	while ($item = mysql_fetch_array($result, MYSQL_ASSOC)) {
+	while ($item = mysqli_fetch_assoc($result)) {
 		$counts[$item['c_commu_category_id']] = $item['count'];
 	}
 
@@ -1973,7 +1973,7 @@ function p_h_diary_update_c_diary_is_checked4c_dirary_id($target_c_diary_id, $va
 {
 	$sql = "UPDATE c_diary SET is_checked=". quote4db($val);
 	$sql .= " WHERE c_diary_id=". quote4db($target_c_diary_id);
-	mysql_query($sql);
+	mysqli_stmt_execute($_GLOBAL['db'], $sql);
 }
 
 /**
@@ -2134,7 +2134,7 @@ function p_h_message_update_c_message_is_read4c_message_id($target_c_message_id,
 	$sql .= " WHERE c_message_id=". quote4db($target_c_message_id);
 	$sql .= " AND c_member_id_to=". quote4db($u);
 	$sql .= " LIMIT 1";
-	return mysql_query($sql);
+	return mysqli_stmt_execute($_GLOBAL['db'], $sql);
 }
 
 //shou050603
