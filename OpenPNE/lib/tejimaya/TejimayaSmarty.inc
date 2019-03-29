@@ -12,7 +12,7 @@ class TejimayaSmarty extends Smarty
 
 	function TejimayaSmarty($configs=array())
 	{
-		$this->Smarty();
+		$this->__construct();
 
 		// 設定値をセット
 		foreach ($configs as $key => $value) {
