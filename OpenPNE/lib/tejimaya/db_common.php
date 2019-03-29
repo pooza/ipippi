@@ -3,7 +3,7 @@
 // DBに接続
 function db_connect()
 {
-	$_GLOBAL['db'] = @mysqli_connect(
+	$GLOBALS['db'] = @mysqli_connect(
 		$GLOBALS['__OpenPNE']['DSN']['hostspec'],
 		$GLOBALS['__OpenPNE']['DSN']['username'],
 		$GLOBALS['__OpenPNE']['DSN']['password'],
@@ -68,7 +68,7 @@ function get_login_url()
  * @return result
  */
 function _mysql_query4db($sql) {
-	if (!($result = mysqli_stmt_execute(mysqli_prepare($_GLOBAL['db'], $sql)))) {
+	if (!($result = mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql)))) {
 		return false;
 	}
 	return $result;
@@ -169,7 +169,7 @@ function get_one4db($query)
 function _insert4db($query)
 {
 	if (_mysql_query4db($query)) {
-		$insert_id = mysqli_insert_id($_GLOBAL['db']);
+		$insert_id = mysqli_insert_id($GLOBALS['db']);
 		return $insert_id;
 	} else {
 		return -1;
@@ -478,7 +478,7 @@ function _do_delete_c_commu_admin_confirm2($c_commu_id,$c_member_id_to)
 	$sql .= " WHERE c_commu_id=". quote4db($c_commu_id) .
 			" AND c_member_id_to=". quote4db($c_member_id_to) .
 			" LIMIT 1";
-	return mysqli_stmt_execute(mysqli_prepare($_GLOBAL['db'], $sql));
+	return mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
 }
 
 // SQLインジェクション対策用関数
@@ -866,7 +866,7 @@ function p_access_log($c_member_id, $page_name, $ktai_flag="0"){
 
 	$sql = "insert c_access_log($insert_column, r_datetime) values($insert_value, now())";
 
-	mysqli_stmt_execute(mysqli_prepare($_GLOBAL['db'], $sql));
+	mysqli_stmt_execute(mysqli_prepare($GLOBALS['db'], $sql));
 
 }
 
