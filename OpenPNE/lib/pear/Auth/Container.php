@@ -46,7 +46,7 @@ class Auth_Container
      *
      * @access public
      */
-    function Auth_Container()
+    function __construct()
     {
     }
 
@@ -60,7 +60,7 @@ class Auth_Container
      *
      * @access public
      */
-    function fetchData() 
+    function fetchData($id, $pass) 
     {
     }
 

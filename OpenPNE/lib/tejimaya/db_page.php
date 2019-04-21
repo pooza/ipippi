@@ -2061,6 +2061,9 @@ function p_h_home_c_commu_topic_comment_list4c_member_id($c_member_id, $limit)
 	foreach($c_commu_topic_list as $key => $value) {
 		$c_member = db_common_c_member4c_member_id_LIGHT($value['c_member_id']);
 		$c_commu_topic_list[$key]['nickname'] = $c_member['nickname'];
+		if (!isset($value['body'])) {
+			$value['body'] = '';
+		}
 		$c_commu_topic_list[$key]['body_outline'] = mb_substr($value['body'], 0, 20);
 
 		$sql = " select number, image_filename1, image_filename2, image_filename3, " .
