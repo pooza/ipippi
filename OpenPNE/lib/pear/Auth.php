@@ -449,7 +449,7 @@ class Auth {
      */
     function setAuthData($name, $value, $overwrite = true)
     {
-        $session = Auth::_importGlobalVariable('session');
+        $session =& Auth::_importGlobalVariable('session');
 
         if (!empty($session[$this->_sessionName]['data'][$name]) && $overwrite == false) {
             return;
@@ -472,7 +472,7 @@ class Auth {
      */
     function getAuthData($name = null)
     {
-        $session = Auth::_importGlobalVariable('session');
+        $session =& Auth::_importGlobalVariable('session');
         if(!isset($session[$this->_sessionName]['data'])){
             return(null);
         }
@@ -504,7 +504,7 @@ class Auth {
      */
     function setAuth($username)
     {
-        $session = Auth::_importGlobalVariable('session');
+        $session =& Auth::_importGlobalVariable('session');
 
         if (!isset($session[$this->_sessionName]) && !isset($_SESSION)) {
             session_register($this->_sessionName);
