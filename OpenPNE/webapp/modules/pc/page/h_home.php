@@ -73,7 +73,7 @@ function pageAction_h_home($smarty,$requests) {
 	$smarty->assign('c_review_list', p_h_home_c_review_list4c_member_id($u));
 	$smarty->assign('c_friend_review_list', p_h_home_c_friend_review_list4c_member_id($u));
 
-	$smarty->assign("r_datetime",mktime());
+	$smarty->assign("r_datetime",time());
 	$date = array("日","月","火","水","木","金","土");
 	$smarty->assign("r_datetime_date",$date[date("w")]);
 

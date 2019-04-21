@@ -3955,7 +3955,7 @@ function p_f_home_last_login4access_date($access_date){
 	list($access_date_year, $access_date_month, $access_date_day) = explode("-",$access_date_ymd);
 	list($access_date_hour, $access_date_minute, $access_date_second) = explode(":",$access_date_hms);
 	$access_date_time = mktime($access_date_hour, $access_date_minute, $access_date_second, $access_date_month, $access_date_day, $access_date_year);
-	$diff = mktime() - $access_date_time;
+	$diff = time() - $access_date_time;
 
 	$m_diff = ceil($diff / 60);		//時間差　分
 	$h_diff = ceil($diff / (60*60));//時間差　時
