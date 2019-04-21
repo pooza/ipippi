@@ -191,7 +191,7 @@ class PEAR_Command_Common extends PEAR
     */
     function getHelp($command)
     {
-        $config = &PEAR_Config::singleton();
+        $config = PEAR_Config::singleton();
         $help = @$this->commands[$command]['doc'];
         if (empty($help)) {
             // XXX (cox) Fallback to summary if there is no doc (show both?)

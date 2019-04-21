@@ -150,7 +150,7 @@ class PEAR_Command
             return PEAR::raiseError("unknown command `$command'");
         }
         $ui = PEAR_Command::getFrontendObject();
-        $config = &PEAR_Config::singleton();
+        $config = PEAR_Config::singleton();
         $obj = new $class($ui, $config);
         return $obj;
     }
@@ -166,7 +166,7 @@ class PEAR_Command
      */
     function &getFrontendObject()
     {
-        $a = &PEAR_Frontend::singleton();
+        $a = PEAR_Frontend::singleton();
         return $a;
     }
 
@@ -183,7 +183,7 @@ class PEAR_Command
      */
     function &setFrontendClass($uiclass)
     {
-        $a = &PEAR_Frontend::setFrontendClass($uiclass);
+        $a = PEAR_Frontend::setFrontendClass($uiclass);
         return $a;
     }
 
@@ -353,7 +353,7 @@ class PEAR_Command
         if (!isset($GLOBALS['_PEAR_Command_commandlist'][$command])) {
             return null;
         }
-        $obj = &PEAR_Command::getObject($command);
+        $obj = PEAR_Command::getObject($command);
         return $obj->getGetoptArgs($command, $short_args, $long_args);
     }
 
@@ -396,7 +396,7 @@ class PEAR_Command
             $command = $GLOBALS['_PEAR_Command_shortcuts'][$command];
         }
         if (isset($cmds[$command])) {
-            $obj = &PEAR_Command::getObject($command);
+            $obj = PEAR_Command::getObject($command);
             return $obj->getHelp($command);
         }
         return false;

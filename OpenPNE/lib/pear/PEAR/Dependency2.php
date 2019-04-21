@@ -89,7 +89,7 @@ class PEAR_Dependency2
         if (!class_exists('PEAR_DependencyDB')) {
             require_once 'PEAR/DependencyDB.php';
         }
-        $this->_dependencydb = &PEAR_DependencyDB::singleton($config);
+        $this->_dependencydb = PEAR_DependencyDB::singleton($config);
         $this->_options = $installoptions;
         $this->_state = $state;
         if (!class_exists('OS_Guess')) {

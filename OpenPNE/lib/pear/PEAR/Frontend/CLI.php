@@ -127,7 +127,7 @@ class PEAR_Frontend_CLI extends PEAR_Frontend
     {
         $this->displayError($eobj);
         if (class_exists('PEAR_Config')) {
-            $config = &PEAR_Config::singleton();
+            $config = PEAR_Config::singleton();
             if ($config->get('verbose') > 5) {
                 if (function_exists('debug_print_backtrace')) {
                     debug_print_backtrace();

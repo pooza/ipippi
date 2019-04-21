@@ -141,7 +141,7 @@ class Log
      * check for the existance of one each time. The singleton pattern does all
      * the checking work for you.
      *
-     * <b>You MUST call this method with the $var = &Log::singleton() syntax.
+     * <b>You MUST call this method with the $var = Log::singleton() syntax.
      * Without the ampersand (&) in front of the method name, you will not get
      * a reference, you will get a copy.</b>
      *
@@ -175,7 +175,7 @@ class Log
 
         $signature = serialize(array($handler, $name, $ident, $conf, $level));
         if (!isset($instances[$signature])) {
-            $instances[$signature] = &Log::factory($handler, $name, $ident,
+            $instances[$signature] = Log::factory($handler, $name, $ident,
                                                    $conf, $level);
         }
 

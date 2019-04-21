@@ -131,7 +131,7 @@ class Calendar_Factory
      */
     function & createByTimestamp($type, $stamp)
     {
-        $cE = & Calendar_Engine_Factory::getEngine();
+        $cE = Calendar_Engine_Factory::getEngine();
         $y = $cE->stampToYear($stamp);
         $m = $cE->stampToMonth($stamp);
         $d = $cE->stampToDay($stamp);

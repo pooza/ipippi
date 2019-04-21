@@ -120,7 +120,7 @@ class PEAR_DependencyDB
     function setConfig(&$config, $depdb = false)
     {
         if (!$config) {
-            $this->_config = &PEAR_Config::singleton();
+            $this->_config = PEAR_Config::singleton();
         } else {
             $this->_config = &$config;
         }
@@ -265,7 +265,7 @@ class PEAR_DependencyDB
         $this->_getDepDB();
         return $this->_dependsOn($parent, $child, $c);
     }
-    
+
     function _dependsOn($parent, $child, &$checked)
     {
         if (is_object($parent)) {

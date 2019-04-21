@@ -459,7 +459,7 @@ class PEAR_Installer extends PEAR_Downloader
             return $this->raiseError('Invalid role `' . $atts['attribs']['role'] .
                     "' for file $file");
         }
-        $role = &PEAR_Installer_Role::factory($pkg, $atts['attribs']['role'], $this->config);
+        $role = PEAR_Installer_Role::factory($pkg, $atts['attribs']['role'], $this->config);
         $err = $role->setup($this, $pkg, $atts['attribs'], $file);
         if (PEAR::isError($err)) {
             return $err;
@@ -1475,7 +1475,7 @@ class PEAR_Installer extends PEAR_Downloader
      */
     function sortPackagesForUninstall(&$packages)
     {
-        $this->_dependencyDB = &PEAR_DependencyDB::singleton($this->config);
+        $this->_dependencyDB = PEAR_DependencyDB::singleton($this->config);
         if (PEAR::isError($this->_dependencyDB)) {
             return $this->_dependencyDB;
         }

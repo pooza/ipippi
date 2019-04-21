@@ -1294,7 +1294,7 @@ class PEAR_Downloader extends PEAR_Common
         if (isset($this)) {
             $config = &$this->config;
         } else {
-            $config = &PEAR_Config::singleton();
+            $config = PEAR_Config::singleton();
         }
         $proxy_host = $proxy_port = $proxy_user = $proxy_pass = '';
         if ($config->get('http_proxy')&&

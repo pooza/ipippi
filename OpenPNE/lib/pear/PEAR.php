@@ -218,7 +218,7 @@ class PEAR
     /**
     * If you have a class that's mostly/entirely static, and you need static
     * properties, you can use this method to simulate them. Eg. in your method(s)
-    * do this: $myVar = &PEAR::getStaticProperty('myclass', 'myVar');
+    * do this: $myVar = PEAR::getStaticProperty('myclass', 'myVar');
     * You MUST use a reference, or they will not persist!
     *
     * @access public
@@ -580,7 +580,7 @@ class PEAR
             $a = &$this->raiseError($message, $code, null, null, $userinfo);
             return $a;
         } else {
-            $a = &PEAR::raiseError($message, $code, null, null, $userinfo);
+            $a = PEAR::raiseError($message, $code, null, null, $userinfo);
             return $a;
         }
     }

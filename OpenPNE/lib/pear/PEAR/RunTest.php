@@ -74,7 +74,7 @@ class PEAR_RunTest
     function run($file, $ini_settings = '')
     {
         $cwd = getcwd();
-        $conf = &PEAR_Config::singleton();
+        $conf = PEAR_Config::singleton();
         $php = $conf->get('php_bin');
         //var_dump($php);exit;
         global $log_format, $info_params, $ini_overwrites;

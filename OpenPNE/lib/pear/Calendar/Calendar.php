@@ -179,7 +179,7 @@ class Calendar
     {
         static $cE = null;
         if (!isset($cE)) {
-            $cE = & Calendar_Engine_Factory::getEngine();
+            $cE = Calendar_Engine_Factory::getEngine();
         }
         $this->cE = & $cE;
         $this->year   = (int)$y;

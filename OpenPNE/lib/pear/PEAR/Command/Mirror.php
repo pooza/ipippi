@@ -84,7 +84,7 @@ packages within preferred_state ({config preferred_state}) will be downloaded'
      */
     function &factory($a)
     {
-        $a = &PEAR_Command::factory($a, $this->config);
+        $a = PEAR_Command::factory($a, $this->config);
         return $a;
     }
 
@@ -98,7 +98,7 @@ packages within preferred_state ({config preferred_state}) will be downloaded'
     * @param array $options the command options before the command
     * @param array $params the stuff after the command name
     * @return bool true if succesful
-    * @throw PEAR_Error 
+    * @throw PEAR_Error
     */
     function doDownloadAll($command, $options, $params)
     {
@@ -130,7 +130,7 @@ packages within preferred_state ({config preferred_state}) will be downloaded'
             return $cmd;
         }
         /**
-         * Error handling not necessary, because already done by 
+         * Error handling not necessary, because already done by
          * the download command
          */
         PEAR::staticPushErrorHandling(PEAR_ERROR_RETURN);
