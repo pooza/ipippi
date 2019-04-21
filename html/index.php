@@ -18,8 +18,8 @@ if (empty($_REQUEST['m'])) {
 
 	foreach ($ktai_uas as $item) {
 		if (strpos($_SERVER['HTTP_USER_AGENT'], $item) !== false) {
-			$m = 'ktai';
-			break;
+			header('Location: ktai.php');
+			exit;
 		}
 	}
 	if (!$m)
