@@ -8,8 +8,10 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 <title>({$sns_name})</title>
 <link rel="stylesheet" href="./css/default.css" type="text/css">
+<meta name="viewport" content="width=800">
 <style type="text/css">
 <!--
+
 .border_00 { border: #({$border_00}) 1px solid ; }
 .border_01 { border: #({$border_01}) 1px solid ; }
 .border_02 { border: #({$border_02}) 1px solid ; }
