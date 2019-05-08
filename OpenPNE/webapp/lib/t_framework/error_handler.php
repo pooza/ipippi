@@ -38,6 +38,7 @@ function page_handleError($p, $errors)
 		module_execute('pc', 'page', "fh_diary", $errors);
 		break;
 	default:
+		p($errors);
 		echo "表示できません ";
 		break;
 	}

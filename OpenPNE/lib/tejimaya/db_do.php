@@ -1994,12 +1994,24 @@ function do_c_review_add_insert_c_review($product, $c_review_category_id){
 			"retail_price"				=> $product['ourprice']
 		);
 
+		$authors = [];
+		if (isset($product['ItemAttributes']['Author'])) {
+			foreach ($product['ItemAttributes']['Author'] as $author) {
+				$authors[] = $author;
+			}
+		}
 		if (isset($product['ItemAttributes']['Creator'])) {
-			$authors = array();
 			foreach ($product['ItemAttributes']['Creator'] as $author) {
 				$authors[] = $author['_content'];
 			}
+		}
+		if (isset($product['ItemAttributes']['Artist'])) {
+			$authors[] = $product['ItemAttributes']['Artist'];
+		}
+		if (count($authors)) {
 			$insert_value['author'] = implode(',', $authors);
+		} else {
+			$insert_value['author'] = '(空欄)';
 		}
 
 		if (isset($product['ItemAttributes']['OurPrice'])) {

@@ -32,6 +32,10 @@ function pageAction_h_review_add($smarty,$requests) {
 		$smarty->assign('is_next', ($page!=$pages && isset($pages) ? 1 : 0));
 		$smarty->assign('err_msg', $err_msg);
 
+		if (is_null($search_result)) {
+			$search_result = [];
+		}
+
 		$start_num = ($page - 1) * $page_size + 1 ;
 		if ($page_size > count($search_result)) {
 			$total_num = $end_num = ($page-1)*$page_size + count($search_result);
