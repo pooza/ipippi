@@ -300,12 +300,9 @@ function t_send_email($address, $subject, $body, $is_receive_mail=true, $from=AD
 	$headers .= "From: $from";
 
 	// subject (改行コードを含んではならない)
-	$subject = mb_convert_encoding($subject, "utf-8", "euc-jp,sjis,utf-8,jis");
-	$subject = str_replace(array($cr, $lf), "", $subject);
-	$subject = '=?utf-8?b?'.base64_encode($subject).'?=';
+	$subject = mb_encode_mimeheader($subject);
 
 	// body (LF)
-	$body = mb_convert_encoding($body, "utf-8", "euc-jp,sjis,utf-8,jis");
 	$body = str_replace($cr, $lf, str_replace($crlf, $lf, $body));
 
 	mail($address, $subject, $body, $headers);
