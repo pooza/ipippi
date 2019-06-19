@@ -1089,11 +1089,7 @@ function db_common_c_profile_list()
 
 function db_common_is_mailaddress($value)
 {
-	if (preg_match('/^[^:;@,\s]+@\w[\w-.]*\.[a-zA-Z]+$/', $value)) {
-		return true;
-	} else {
-		return false;
-	}
+	return filter_var($value, FILTER_VALIDATE_EMAIL);
 }
 
 /**
