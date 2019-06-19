@@ -34,7 +34,7 @@ function pageAction_h_diary_list_all($smarty,$requests) {
 	$smarty->assign('page', $page);
 	$smarty->assign('pager', $pager);
 
-	$keyword = mb_convert_encoding($keyword, "UTF-8", "EUC-JP,SJIS,UTF-8,JIS");
+	$keyword = mb_convert_encoding($keyword, "utf-8", "euc-jp,sjis,utf-8,jis");
 	//バグ回避のため半角空白を全角に統一
 	$keyword = str_replace ( " ", "　", $keyword);
 

@@ -94,9 +94,6 @@ define('MAIL_DEBUG_LOG', false);
 
 /// メール送信設定
 
-// 半角カタカナを全角カタカナに変換して送信する
-define('MAIL_HAN2ZEN', true);
-
 // MTAに渡すヘッダの改行コード(LF->CRLF の自動変換が行われることへの対策)
 //define('MAIL_HEADER_SEP', 'CRLF');
 define('MAIL_HEADER_SEP', 'LF');

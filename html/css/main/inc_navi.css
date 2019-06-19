@@ -1,4 +1,4 @@
-@charset "Shift_JIS";
+@charset "UTF-8";
 
 /*inc_navi矩形エリア位置情報*/
 
@@ -113,7 +113,7 @@ td.inc_navi div.h a.h_config_prof {
 	z-index: 90 ;
 }
 
-	
+
 /** F系ボタン共通設定 ----------- ＜紫＞　自分以外の人の画面のメニュー**/
 
 td.inc_navi div.f a {

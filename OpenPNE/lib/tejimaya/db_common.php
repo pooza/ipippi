@@ -296,22 +296,16 @@ function t_send_email($address, $subject, $body, $is_receive_mail=true, $from=AD
 
 	// header
 	$headers = "MIME-Version: 1.0" . $sep;
-	$headers .= "Content-Type: text/plain; charset=iso-2022-jp" . $sep;
+	$headers .= "Content-Type: text/plain; charset=UTF-8" . $sep;
 	$headers .= "From: $from";
 
-	// 半角カナを全角カナに変換
-	if (defined('MAIL_HAN2ZEN') && MAIL_HAN2ZEN) {
-		$subject = mb_convert_kana($subject, "KV");
-		$body = mb_convert_kana($body, "KV");
-	}
-
 	// subject (改行コードを含んではならない)
-	$subject = mb_convert_encoding($subject, "JIS", "EUC-JP,SJIS,UTF-8,JIS");
+	$subject = mb_convert_encoding($subject, "utf-8", "euc-jp,sjis,utf-8,jis");
 	$subject = str_replace(array($cr, $lf), "", $subject);
-	$subject = '=?ISO-2022-JP?B?'.base64_encode($subject).'?=';
+	$subject = '=?utf-8?b?'.base64_encode($subject).'?=';
 
 	// body (LF)
-	$body = mb_convert_encoding($body, "JIS", "EUC-JP,SJIS,UTF-8,JIS");
+	$body = mb_convert_encoding($body, "utf-8", "euc-jp,sjis,utf-8,jis");
 	$body = str_replace($cr, $lf, str_replace($crlf, $lf, $body));
 
 	mail($address, $subject, $body, $headers);
@@ -559,8 +553,8 @@ function rss_get_new($rss_url, $limit_item = 10)
 			"r_datetime" => $r_datetime,
 		);
 
-		$myitem['subject'] = mb_convert_encoding($myitem['subject'], "UTF-8", "auto");
-		$myitem['body']    = mb_convert_encoding($myitem['body'], "UTF-8", "auto");
+		$myitem['subject'] = mb_convert_encoding($myitem['subject'], "utf-8", "auto");
+		$myitem['body']    = mb_convert_encoding($myitem['body'], "utf-8", "auto");
 
 		$item_list[$i++] = $myitem;
 	}

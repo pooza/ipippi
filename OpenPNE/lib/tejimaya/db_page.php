@@ -3337,7 +3337,7 @@ function p_h_review_add_search_result($keyword, $category_id, $page)
 		return null;
 	}
 
-	mb_convert_variables("UTF-8", "auto", $result);
+	mb_convert_variables("utf-8", "auto", $result);
 
 	return array($result['Item'], $page, $result['TotalPages']);
 }
@@ -3354,7 +3354,7 @@ function p_h_review_write_product4asin($asin){
 		return null;
 	}
 
-	mb_convert_variables("UTF-8", "auto", $result);
+	mb_convert_variables("utf-8", "auto", $result);
 	if (isset($result['Item'][0])) {
 		return $result['Item'][0];
 	}

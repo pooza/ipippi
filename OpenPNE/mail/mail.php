@@ -148,7 +148,7 @@ function m_convert_text($string, $from_encoding = "")
 		else
 			$from_encoding = "auto";
 	}
-	$string = mb_convert_encoding($string, "UTF-8", $from_encoding);
+	$string = mb_convert_encoding($string, "utf-8", $from_encoding);
 
 	$string = str_replace("\0", "", $string);
 	$string = rtrim($string);
@@ -220,7 +220,7 @@ function m_debug_log($msg, $priority =  PEAR_LOG_WARNING)
 	$log_path = DOCUMENT_ROOT . '/var/log/mail.log';
 	$file = Log::singleton('file', $log_path, 'MAIL');
 
-	mb_convert_encoding($msg, 'JIS', 'auto');
+	mb_convert_encoding($msg, 'utf-8', 'auto');
 	$file->log($msg, $priority);
 }
 
