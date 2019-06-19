@@ -41,31 +41,31 @@
 
 * ,
 .s_m {
-	font-size : 10pt ;
+	font-size : medium ;
 }
 
 /*極小サイズ*/
 
 .s_ss {
-	font-size : 8pt ;
+	font-size : x-small ;
 }
 
 /*小サイズ*/
 
 .s_s {
-	font-size : 9pt ;
+	font-size : small ;
 }
 
 /*大サイズ*/
 
 .s_l {
-	font-size : 11pt ;
+	font-size : large ;
 }
 
 /*極大サイズ*/
 
 .s_ll {
-	font-size : 12pt ;
+	font-size : x-large ;
 }
 
 /*フォントに適用する太さの設定*/
