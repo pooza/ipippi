@@ -328,7 +328,7 @@
 
 <div class="padding_s">
 
-({$diary.r_datetime|date_format:"%m月%d日 %H:%M"})
+({$diary.r_datetime|date_format:"%Y/%m/%d %H:%M"})
 
 </div>
 
@@ -509,7 +509,7 @@
 
 <div class="padding_s">
 
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_3">({$item.r_datetime|date_format:"%Y年%m月%d日 %H:%M"})
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_3">({$item.r_datetime|date_format:"%Y/%m/%d %H:%M"})
 
 </div>
 

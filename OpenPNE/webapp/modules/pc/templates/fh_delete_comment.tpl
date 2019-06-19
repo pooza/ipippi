@@ -66,7 +66,7 @@
 <td style="width:125px;" class="bg_05" align="left" valign="middle">
 
 <div style="padding:10px 3px;">
-({$target_diary_comment.r_datetime|date_format:"%Y年%m月%d日<br>%H:%M"})
+({$target_diary_comment.r_datetime|date_format:"%Y/%m/%d<br>%H:%M"})
 </div>
 
 <img src="./skin/dummy.gif" class="v_spacer_s">

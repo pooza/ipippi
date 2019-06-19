@@ -61,7 +61,7 @@
 <td style="width:562px;" class="bg_03" align="left">
 <div style="padding:10px 30px;" class="lh_120">
 
-({$c_member.nickname})さんのアクセス状況です。最新30件までを表示します。 
+({$c_member.nickname})さんのアクセス状況です。最新30件までを表示します。
 
 </div>
 </td>
@@ -94,7 +94,7 @@
 
 ({foreach from=$c_ashiato_list item=c_ashiato})
 
-({$c_ashiato.r_datetime|date_format:"%Y年%m月%d日 %H:%M"})<br>
+({$c_ashiato.r_datetime|date_format:"%Y/%m/%d %H:%M"})<br>
 
 ({/foreach})
 

@@ -58,7 +58,7 @@
 
 <div class="padding_s">
 
-({$new_comment.r_datetime|date_format:"%Y年%m月%d日 %H:%M"})
+({$new_comment.r_datetime|date_format:"%Y/%m/%d %H:%M"})
 
 </div>
 

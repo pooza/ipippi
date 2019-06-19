@@ -52,7 +52,7 @@
 <!-- ******ここから：イベント詳細****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
 <input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
-<input type="hidden" name="p" value="c_event_edit"> 
+<input type="hidden" name="p" value="c_event_edit">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
 <input type="hidden" name="submit" value="main">
 
@@ -91,7 +91,7 @@
 
 <div class="padding_s">
 
-({$c_topic.r_datetime|date_format:"%Y年%m月%d日<br>%H:%M"})
+({$c_topic.r_datetime|date_format:"%Y/%m/%d<br>%H:%M"})
 
 </div>
 
@@ -153,7 +153,7 @@
 
 <div class="padding_s">
 
-({$c_topic.r_datetime|date_format:"%Y年%m月%d日<br>%H:%M"})
+({$c_topic.r_datetime|date_format:"%Y/%m/%d<br>%H:%M"})
 
 </div>
 
@@ -574,7 +574,7 @@
 
 <div class="padding_s">
 
-({$item.r_datetime|date_format:"%Y年%m月%d日"})<br>
+({$item.r_datetime|date_format:"%Y/%m/%d"})<br>
 ({$item.r_datetime|date_format:"%H:%M"})
 
 </div>

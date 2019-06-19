@@ -236,7 +236,7 @@
 <tr>
 <td align="center" class="bg_05">
 ({if ($is_friend || $friend_path)})
-({$c_member.nickname}) 
+({$c_member.nickname})
 ({if $friend_path}) ⇒ <a href="page.php?p=f_home&target_c_member_id=({$friend_path.c_member_id})">({$friend_path.nickname})</a>({/if})
 ⇒ <a href="page.php?p=f_home&target_c_member_id=({$target_c_member.c_member_id})">({$target_c_member.nickname})</a>
 ({else})
@@ -775,7 +775,7 @@
 <td style="width:342px;" class="bg_02">
 
 ({foreach from=$c_diary_list item=c_diary})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$c_diary.r_date|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=fh_diary&target_c_diary_id=({$c_diary.c_diary_id})">({$c_diary.subject|default:"&nbsp;"})</a><br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$c_diary.r_date|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=fh_diary&target_c_diary_id=({$c_diary.c_diary_id})">({$c_diary.subject|default:"&nbsp;"})</a><br>
 ({/foreach})
 
 <!-- ここから：主内容＞最新の日記＞フッターメニュー -->
@@ -808,7 +808,7 @@
 <td style="width:342px;" class="bg_02">
 
 ({foreach from=$c_rss_cache_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="({$item.link})" target="_blank">({$item.subject|default:"&nbsp;"})</a><br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="({$item.link})" target="_blank">({$item.subject|default:"&nbsp;"})</a><br>
 ({/foreach})
 
 <!-- ここから：主内容＞最新のBlog＞フッターメニュー -->
@@ -833,7 +833,7 @@
 <td style="width:342px;" class="bg_02">
 
 ({foreach from=$c_review_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="./page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|t_truncate:40})</a><br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="./page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|t_truncate:40})</a><br>
 ({/foreach})
 
 <!-- ここから：主内容＞最新のおすすめレビュー＞フッターメニュー -->

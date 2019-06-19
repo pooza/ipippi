@@ -219,7 +219,7 @@
 <td class="bg_({if $c_message_ru.is_read})02({else})09({/if})"><input name="c_message_id[]" value="({$c_message_ru.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_({if $c_message_ru.is_read})02({else})09({/if})">({$c_message_ru.nickname})</td>
 <td class="bg_({if $c_message_ru.is_read})02({else})09({/if})"><a href="page.php?p=h_message&target_c_message_id=({$c_message_ru.c_message_id})&jyusin_c_message_id=({$c_message_ru.c_message_id})">({$c_message_ru.subject})</a></td>
-<td class="bg_({if $c_message_ru.is_read})02({else})09({/if})">({$c_message_ru.r_datetime|date_format:"%m月%d日"})</td>
+<td class="bg_({if $c_message_ru.is_read})02({else})09({/if})">({$c_message_ru.r_datetime|date_format:"%Y/%m/%d"})</td>
 </tr>
 ({*********})
 <tr>
@@ -348,7 +348,7 @@
 <td class="bg_02"><input name="c_message_id[]" value="({$c_message_s.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_02">({$c_message_s.nickname})</td>
 <td class="bg_02"><a href="page.php?p=h_message&target_c_message_id=({$c_message_s.c_message_id})&box=outbox">({$c_message_s.subject})</a></td>
-<td class="bg_02">({$c_message_s.r_datetime|date_format:"%m月%d日"})</td>
+<td class="bg_02">({$c_message_s.r_datetime|date_format:"%Y/%m/%d"})</td>
 </tr>
 ({*********})
 <tr>
@@ -477,7 +477,7 @@
 <td class="bg_02"><input name="c_message_id[]" value="({$c_message_save.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_02">({$c_message_save.nickname})</td>
 <td class="bg_02"><a href="page.php?p=f_message_send&target_c_message_id=({$c_message_save.c_message_id})&jyusin_c_message_id=({$c_message_save.hensinmoto_c_message_id})&box=savebox">({$c_message_save.subject})</a></td>
-<td class="bg_02">({$c_message_save.r_datetime|date_format:"%m月%d日"})</td>
+<td class="bg_02">({$c_message_save.r_datetime|date_format:"%Y/%m/%d"})</td>
 </tr>
 ({*********})
 <tr>
@@ -630,7 +630,7 @@
 <td class="bg_02"><input name="c_message_id[]" value="({$c_message_trash.c_message_id})" type="checkbox" class="no_bg"></td>
 <td class="bg_02">({$c_message_trash.nickname})</td>
 <td class="bg_02"><a href="page.php?p=h_message&target_c_message_id=({$c_message_trash.c_message_id})&box=trash">({$c_message_trash.subject})</a></td>
-<td class="bg_02">({$c_message_trash.r_datetime|date_format:"%m月%d日"})</td>
+<td class="bg_02">({$c_message_trash.r_datetime|date_format:"%Y/%m/%d"})</td>
 </tr>
 ({*********})
 <tr>

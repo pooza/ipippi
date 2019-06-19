@@ -558,7 +558,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_diary_friend_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})">({$item.subject|default:"&nbsp;"})</a>&nbsp;(({$item.nickname|default:"&nbsp;"}))
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})">({$item.subject|default:"&nbsp;"})</a>&nbsp;(({$item.nickname|default:"&nbsp;"}))
 ({if $item.image_filename_1 || $item.image_filename_2 || $item.image_filename_3})<img src="./skin/icon_camera.gif" class="icon">({/if})<br>
 ({/foreach})
 
@@ -596,7 +596,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_rss_cache_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="({$item.link})" target="_blank">({$item.subject|default:"&nbsp;"})</a>(({$item.c_member.nickname|default:"&nbsp;"}))<br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="({$item.link})" target="_blank">({$item.subject|default:"&nbsp;"})</a>(({$item.c_member.nickname|default:"&nbsp;"}))<br>
 ({/foreach})
 
 </div>
@@ -634,7 +634,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_diary_my_comment_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_3">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})">({$item.subject})(({$item.num_comment}))</a>&nbsp;(({$item.nickname}))<br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_3">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})">({$item.subject})(({$item.num_comment}))</a>&nbsp;(({$item.nickname}))<br>
 ({/foreach})
 
 </div>
@@ -671,7 +671,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_commu_topic_comment_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_2">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=c_topic_detail&target_c_commu_topic_id=({$item.c_commu_topic_id})">({$item.c_commu_topic_name})(({$item.number}))</a>&nbsp;(({$item.c_commu_name}))
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_2">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=c_topic_detail&target_c_commu_topic_id=({$item.c_commu_topic_id})">({$item.c_commu_topic_name})(({$item.number}))</a>&nbsp;(({$item.c_commu_name}))
 ({if $item.image_filename1 || $item.image_filename2 || $item.image_filename3})<img src="./skin/icon_camera.gif" class="icon">({/if})
 ({if $item.file_filename1 || $item.file_filename2 || $item.file_filename3})<img src="./skin/icon_file.gif" class="icon">({/if})<br>
 ({/foreach})
@@ -710,7 +710,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_friend_review_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|t_truncate:30})</a>&nbsp;(({$item.nickname}))<br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|t_truncate:30})</a>&nbsp;(({$item.nickname}))<br>
 ({/foreach})
 
 </div>
@@ -812,7 +812,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_diary_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})">({$item.subject|t_truncate:40})</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=fh_diary&amp;target_c_diary_id=({$item.c_diary_id})">({$item.subject|t_truncate:40})</a>
 ({if $item.image_filename_1 || $item.image_filename_2 || $item.image_filename_3})<img src="./skin/icon_camera.gif" class="icon">({/if})<br>
 ({/foreach})
 
@@ -858,7 +858,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_blog_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_2">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="({$item.link})" target="_blank">({$item.subject|t_truncate:40})</a><br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_2">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="({$item.link})" target="_blank">({$item.subject|t_truncate:40})</a><br>
 ({/foreach})
 
 </div>
@@ -896,7 +896,7 @@
 <div class="padding_s">
 
 ({foreach from=$c_review_list item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_3">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="./page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|t_truncate:30})</a><br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_3">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="./page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|t_truncate:30})</a><br>
 ({/foreach})
 
 </div>

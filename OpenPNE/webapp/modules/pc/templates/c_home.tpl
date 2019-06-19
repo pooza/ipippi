@@ -352,7 +352,7 @@
 <td style="width:80px;" class="bg_09"><span class="c_01">開設日</span></td>
 <td style="width:342px;" class="bg_02">
 
-({$c_commu.r_datetime|date_format:"%Y年%m月%d日"})
+({$c_commu.r_datetime|date_format:"%Y/%m/%d"})
 
 </td>
 </tr>
@@ -423,7 +423,7 @@
 <td style="width:342px;" class="bg_02">
 
 ({foreach from=$new_topic_comment item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=c_topic_detail&target_c_commu_topic_id=({$item.c_commu_topic_id})">({$item.name})</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=c_topic_detail&target_c_commu_topic_id=({$item.c_commu_topic_id})">({$item.name})</a>
 ({if $item.image_filename1 || $item.image_filename2 || $item.image_filename3})<img src="./skin/icon_camera.gif" class="icon">({/if})
 ({if $item.file_filename1 || $item.file_filename2 || $file.image_filename3})<img src="./skin/icon_file.gif" class="icon">({/if})<br>
 ({/foreach})
@@ -456,7 +456,7 @@
 <td style="width:342px;" class="bg_02">
 
 ({foreach from=$new_topic_comment_event item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=c_event_detail&amp;target_c_commu_topic_id=({$item.c_commu_topic_id})">({$item.name})</a>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=c_event_detail&amp;target_c_commu_topic_id=({$item.c_commu_topic_id})">({$item.name})</a>
 ({if $item.image_filename1 || $item.image_filename2 || $item.image_filename3})<img src="./skin/icon_camera.gif" class="icon">({/if})
 ({if $item.file_filename1 || $item.file_filename2 || $file.image_filename3})<img src="./skin/icon_file.gif" class="icon">({/if})
 <br>
@@ -490,7 +490,7 @@
 <td style="width:342px;" class="bg_02">
 
 ({foreach from=$new_commu_review item=item})
-<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_2">({$item.r_datetime|date_format:"%m月%d日"})…&nbsp;<a href="page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|truncate:40})</a><br>
+<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_2">({$item.r_datetime|date_format:"%Y/%m/%d"})…&nbsp;<a href="page.php?p=h_review_list_product&c_review_id=({$item.c_review_id})">({$item.title|truncate:40})</a><br>
 ({/foreach})
 
 <!-- ここから：主内容＞新着のおすすめレビュー＞フッターメニュー -->

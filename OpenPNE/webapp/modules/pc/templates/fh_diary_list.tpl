@@ -302,7 +302,7 @@
 ({*ここから：body*})
 <!-- ここから：主内容 -->
 <div class="border_01 bg_09" align="center">
- 
+
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <div style="width:490px;padding:30px 10px;margin:0px auto;" class="border_01 bg_03">
@@ -418,7 +418,7 @@
 <td style="width:66px;" class="bg_05" align="center" valign="top" rowspan="5">
 <div style="padding:4px 3px;">
 
-({$item.r_datetime|date_format:"%m月%d日<br> %H:%M"})
+({$item.r_datetime|date_format:"%Y/%m/%d<br> %H:%M"})
 
 </div>
 </td>
@@ -599,7 +599,7 @@
 <td style="width:66px;" class="bg_05" align="center" valign="top">
 <div style="padding:4px 3px;">
 
-({$item.r_datetime|date_format:"%m月%d日<br> %H:%M"})
+({$item.r_datetime|date_format:"%Y/%m/%d<br> %H:%M"})
 
 </div>
 </td>

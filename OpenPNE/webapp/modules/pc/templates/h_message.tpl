@@ -191,7 +191,7 @@
 
 <div class="padding_s">
 
-({$c_message.r_datetime|date_format:"%Y年%m月%d日 %H:%M"})
+({$c_message.r_datetime|date_format:"%Y/%m/%d %H:%M"})
 
 </div>
 

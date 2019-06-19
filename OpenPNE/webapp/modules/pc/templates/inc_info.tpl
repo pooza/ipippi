@@ -111,7 +111,7 @@
 <div class="padding_s">
 
 ({foreach from=$diaries item='diary'})
-({$diary.r_datetime|date_format:"%m月%d日 %R"})
+({$diary.r_datetime|date_format:"%Y/%m/%d %R"})
 <a href="/page.php?p=fh_diary&amp;target_c_diary_id=({$diary.c_diary_id})">({$diary.subject})</a>
 ({if $diary.image_filename_1 || $diary.image_filename_2 || $diary.image_filename_3})<img src="./skin/icon_camera.gif" class="icon">({/if})
 （({$diary.c_member.nickname})）

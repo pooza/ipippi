@@ -66,7 +66,7 @@
 
 <div class="padding_s">
 
-({$c_topic.r_datetime|date_format:"%Y年%m月%d日"})<br>({$c_topic.r_datetime|date_format:"%H:%M"})
+({$c_topic.r_datetime|date_format:"%Y/%m/%d"})<br>({$c_topic.r_datetime|date_format:"%H:%M"})
 
 </div>
 
@@ -237,7 +237,7 @@
 
 <div class="padding_s">
 
-({$item.r_datetime|date_format:"%Y年%m月%d日"})<br>
+({$item.r_datetime|date_format:"%Y/%m/%d"})<br>
 ({$item.r_datetime|date_format:"%H:%M"})
 
 </div>

@@ -273,7 +273,7 @@
 
 <div class="c_01" style="padding:5px;">
 
-({$item.r_date|date_format:"%Y年%m月%d日"})
+({$item.r_date|date_format:"%Y/%m/%d"})
 
 </div>
 
@@ -304,7 +304,7 @@
 
 <div class="c_01" style="padding:5px;">
 
-({$item.r_datetime|date_format:"%Y年%m月%d日"})
+({$item.r_datetime|date_format:"%Y/%m/%d"})
 
 </div>
 

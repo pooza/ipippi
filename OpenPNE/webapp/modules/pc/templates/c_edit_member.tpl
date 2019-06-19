@@ -80,7 +80,7 @@
 <tr>
 <td style="width:180px;" class="bg_00">
 
-<span class="c_01">({$c_member.r_datetime|date_format:"%Y年%m月%d日 %H:%M"})</span>
+<span class="c_01">({$c_member.r_datetime|date_format:"%Y/%m/%d %H:%M"})</span>
 
 </td>
 <td class="bg_02">

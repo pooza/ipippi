@@ -361,7 +361,7 @@
 <td style="width:95px;" class="bg_05" align="center" valign="top" rowspan="3">
 <div style="padding:4px 3px;">
 
-({$target_diary.r_datetime|date_format:"%Y年%m月%d日<br>%H:%M"})
+({$target_diary.r_datetime|date_format:"%Y/%m/%d<br>%H:%M"})
 
 </div>
 </td>
@@ -503,7 +503,7 @@
 <td style="width:95px;" class="bg_05" align="center" valign="top" rowspan="3">
 <div style="padding:4px 3px;">
 
-({$item.r_datetime|date_format:"%Y年%m月%d日<br>%H:%M"})<br>
+({$item.r_datetime|date_format:"%Y/%m/%d<br>%H:%M"})<br>
 
 ({if $type == "h"})
 

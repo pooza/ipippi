@@ -24,7 +24,7 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 ({*コミュニティのメンバーでないとき非公開の場合*})
-({if $is_warning }) 
+({if $is_warning })
 
 <!-- ************************************** -->
 <!-- ******ここから：掲示板表示権限警告****** -->
@@ -51,7 +51,7 @@
 ({*ここから：body*})
 <!-- ここから：主内容 -->
 <div class="border_01 bg_09" align="center">
- 
+
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <div style="width:570px;padding:40px 10px;margin:0px auto;" class="border_01 bg_03">
@@ -81,7 +81,7 @@
 
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
-({else}) 
+({else})
 
 <!-- ************************************ -->
 <!-- ******ここから：新規トピック作成****** -->
@@ -113,7 +113,7 @@
 ({*ここから：body*})
 <!-- ここから：主内容 -->
 <div class="border_01 bg_09" align="center">
- 
+
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <div style="width:570px;padding:40px 10px;margin:0px auto;" class="border_01 bg_03">
@@ -223,7 +223,7 @@
 
 <div class="padding_s">
 
-({$item.r_datetime|date_format:"%m月%d日"})<br>({$item.r_datetime|date_format:"%H:%M"})
+({$item.r_datetime|date_format:"%Y/%m/%d"})<br>({$item.r_datetime|date_format:"%H:%M"})
 
 </div>
 

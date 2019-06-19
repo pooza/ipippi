@@ -261,7 +261,7 @@
 
 <div class="padding_s">
 
-({$review.r_datetime|date_format:"%Y年%m月%d日 %H:%M"})
+({$review.r_datetime|date_format:"%Y/%m/%d %H:%M"})
 
 </div>
 

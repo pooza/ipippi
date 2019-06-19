@@ -521,7 +521,7 @@
 <td style="width:426px;" class="bg_02" align="left" valign="middle">
 <div style="padding:4px 3px;">
 
-({$diary.r_datetime|date_format:"%Y年%m月%d日"})
+({$diary.r_datetime|date_format:"%Y/%m/%d"})
 
 </div>
 </td>
