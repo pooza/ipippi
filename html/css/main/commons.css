@@ -5,6 +5,7 @@ body {
 	margin: 0px ;
 	padding: 0px ;
 	font-size: medium ;
+	-webkit-text-size-adjust: 100%;
 	color: #333333 ;
 	/*
 	scrollbar-3dlight-color:	#D3B16D ;
