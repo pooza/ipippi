@@ -20,7 +20,7 @@ define('ENCRYPT_KEY', 'rock salt');
 
 // メールサーバードメイン
 // 携帯メール投稿の宛先などのドメイン名に使われる
-define('MAIL_SERVER_DOMAIN', 'ipippi.test.b-shock.co.jp');
+define('MAIL_SERVER_DOMAIN', 'b-shock.co.jp');
 
 //--- オプション設定
 
