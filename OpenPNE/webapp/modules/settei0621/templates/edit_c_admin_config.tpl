@@ -42,15 +42,6 @@
 </td>
 </tr>
 <tr>
-<th>携帯版使用設定</th>
-<td>
-<select name="OPENPNE_ENABLE_KTAI">
-<option value="1"({if $c_admin_config.OPENPNE_ENABLE_KTAI !== "0"}) selected="selected"({/if})>使用可にする</option>
-<option value="0"({if $c_admin_config.OPENPNE_ENABLE_KTAI === "0"}) selected="selected"({/if})>使用不可にする</option>
-</select>
-</td>
-</tr>
-<tr>
 <th>登録の可否</th>
 <td>
 <input name="OPENPNE_REGIST_FROM" id="OPENPNE_REGIST_FROM_PCKTAI" type="radio" value="({$smarty.const.OPENPNE_REGIST_FROM_PCKTAI})"({if $c_admin_config.OPENPNE_REGIST_FROM == $smarty.const.OPENPNE_REGIST_FROM_PCKTAI}) checked="checked"({/if})><label for="OPENPNE_REGIST_FROM_PCKTAI">PC・携帯両方から登録可</label><br>

@@ -2,13 +2,6 @@
 //---------------------------------------------------------------------------
 function doAction_h_config_ktai_send($request) {
 
-	//<PCKTAI
-	if (defined('OPENPNE_ENABLE_KTAI') && !OPENPNE_ENABLE_KTAI) {
-		client_redirect('page.php?p=h_home');
-		exit;
-	}
-	//>
-
 	$u = $GLOBALS['AUTH']->uid();
 
 	// --- リクエスト変数

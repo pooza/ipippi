@@ -579,17 +579,6 @@
 <td style="width:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
 <td class="bg_01" align="center">
 <table border="0" cellspacing="1" cellpadding="4" style="width:424px;">
-({if $smarty.const.OPENPNE_ENABLE_KTAI})
-<tr>
-<td style="width:80px;" class="bg_09"><span class="c_01">コミュニティ<br>書き込みを<br>携帯メールで</span></td>
-<td style="width:342px;" class="bg_02">
-
-<input type="radio" value="1" name="is_receive_mail"({if $is_receive_mail}) checked="checked"({/if}) class="no_bg">受け取る<br>
-<input type="radio" value="0" name="is_receive_mail"({if !$is_receive_mail}) checked="checked"({/if}) class="no_bg">受け取らない
-
-</td>
-</tr>
-({/if})
 <tr>
 <td style="width:80px;" class="bg_09"><span class="c_01">コミュニティ<br>書き込みを<br>PCメールで</span></td>
 <td style="width:342px;" class="bg_02">
