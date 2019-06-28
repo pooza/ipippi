@@ -498,10 +498,10 @@ function quotearray4db(/* &$str_list */)
 	return implode(",", $result);
 }
 
-function &rss_extends_fetch_rss($rss_url)
+function rss_extends_fetch_rss($rss_url)
 {
 	require_once DOCUMENT_ROOT . '/lib/magpierss/rss_fetch.inc';
-	$rss = @fetch_rss($rss_url);
+	$rss = fetch_rss($rss_url);
 
 	if ($rss && in_array($rss->feed_type, array('RSS', 'ATOM'))) {
 		return $rss;
@@ -594,7 +594,7 @@ function rss_auto_discovery($html, $url)
 	$html = str_replace("\r", " ", $html);
 
 	$matches = array();
-	if (!preg_match_all('|<link(.+?)/|i', $html, $matches)) {
+	if (!preg_match_all('|<link(.+?)/?>|i', $html, $matches)) {
 		return false;
 	}
 	$link_tags = $matches[1];

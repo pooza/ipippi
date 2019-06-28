@@ -10,9 +10,9 @@ class TejimayaSmarty extends Smarty
 
 	var $t_framework;
 
-	function TejimayaSmarty($configs=array())
+	function __construct($configs=array())
 	{
-		$this->__construct();
+		parent::__construct();
 
 		// 設定値をセット
 		foreach ($configs as $key => $value) {
@@ -22,6 +22,7 @@ class TejimayaSmarty extends Smarty
 		}
 
 		$this->t_framework = $GLOBALS['__Framework'];
+		$this->error_reporting = E_ALL ^ E_NOTICE;
 	}
 
 	// extディレクトリ対応 呼び出し識別子 (pc/ktai)
