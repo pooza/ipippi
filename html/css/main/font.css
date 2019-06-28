@@ -41,19 +41,19 @@
 
 * ,
 .s_m {
-	font-size : medium ;
+	font-size : small ;
 }
 
 /*極小サイズ*/
 
 .s_ss {
-	font-size : x-small ;
+	font-size : xx-small ;
 }
 
 /*小サイズ*/
 
 .s_s {
-	font-size : small ;
+	font-size : x-small ;
 }
 
 /*大サイズ*/

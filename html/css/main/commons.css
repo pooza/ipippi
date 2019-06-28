@@ -4,7 +4,7 @@
 body {
 	margin: 0px ;
 	padding: 0px ;
-	font-size: medium ;
+	font-size: small ;
 	-webkit-text-size-adjust: 100%;
 	color: #333333 ;
 	/*
@@ -133,7 +133,7 @@ form {
 input ,
 textarea ,
 select {
-	font-size: medium ;
+	font-size: small ;
 	color: #333333 ;
 	background-color: #F8F8F8 ;
 	border: 1px solid #C0C0C0 ;
