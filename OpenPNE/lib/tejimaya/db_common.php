@@ -498,151 +498,74 @@ function quotearray4db(/* &$str_list */)
 	return implode(",", $result);
 }
 
-function rss_extends_fetch_rss($rss_url)
-{
-	require_once DOCUMENT_ROOT . '/lib/magpierss/rss_fetch.inc';
-	$rss = fetch_rss($rss_url);
-
-	if ($rss && in_array($rss->feed_type, array('RSS', 'ATOM'))) {
-		return $rss;
-	} else {
-		return false;
-	}
-}
-
 // RSS
-function rss_get_new($rss_url, $limit_item = 10)
+function rss_get_new($url)
 {
-	if (!$rss_url) return array();
-
-	if (!$rss = rss_extends_fetch_rss($rss_url)) {
-		return array();
-	}
-
-	$item_list = array();
-	$i = 0;
-	foreach ($rss->items as $item) {
-		if ($i >= $limit_item) break;
-
-		switch ($rss->feed_type) {
-		case 'RSS':
-			if ($rss->feed_version >= 2 && !empty($item['pubdate'])) {
-				$datetime_raw = $item['pubdate'];
-			} else {
-				$datetime_raw = $item['dc']['date'];
+	try {
+		$items = [];
+		libxml_use_internal_errors(true);
+		$contents = file_get_contents($url);
+		$contents = mb_ereg_replace('[[:cntrl:]]', '', $contents);
+		$contents = mb_ereg_replace('<content.*?</content>', '', $contents);
+		$xml = new SimpleXMLElement($contents, LIBXML_NOWARNING | LIBXML_NOERROR);
+		if (in_array('http://purl.org/rss/1.0/', $xml->getDocNamespaces())) {
+			foreach ($xml->item as $item) {
+				$items[] = [
+					'subject' => (string)$item->title,
+					'body' => (string)$item->description,
+					'link' => (string)$item->link,
+					'r_datetime' => date(
+						'Y-m-d H:i:s',
+						strtotime((string)$item->children('dc', true)->date)
+					),
+				];
 			}
-			break;
-		case 'Atom':
-			$datetime_raw = $item['created'];
-			break;
+		} else if (in_array('http://www.w3.org/2005/Atom', $xml->getDocNamespaces())) {
+			foreach ($xml->entry as $item) {
+				$items[] = [
+					'subject' => (string)$item->title,
+					'body' => trim(strip_tags((string)$item->content)),
+					'link' => (string)$item->link->attributes()['href'],
+					'r_datetime' => date('Y-m-d H:i:s', strtotime((string)$item->updated)),
+				];
+			}
+		} else if (in_array('2.0', (array)$xml->attributes()['version'])) {
+			foreach ($xml->channel->item as $item) {
+				$items[] = [
+					'subject' => (string)$item->title,
+					'body' => (string)$item->description,
+					'link' => (string)$item->link,
+					'r_datetime' => date('Y-m-d H:i:s', strtotime((string)$item->pubDate)),
+				];
+			}
 		}
-		if (!$datetime_raw) continue;
-
-		if (($timestamp = parse_w3cdtf($datetime_raw)) == -1) {
-			$timestamp = strtotime($datetime_raw);
-		}
-		$r_datetime = date("Y-m-d H:i:s", $timestamp);
-
-		$myitem = array(
-			"subject"    => $item['title'],
-			"body"       => $item['description'],
-			"link"       => $item['link'],
-			"r_datetime" => $r_datetime,
-		);
-
-		$myitem['subject'] = mb_convert_encoding($myitem['subject'], "utf-8", "auto");
-		$myitem['body']    = mb_convert_encoding($myitem['body'], "utf-8", "auto");
-
-		$item_list[$i++] = $myitem;
+		return $items;
+	} catch (Throwable $e) {
+		return [];
 	}
-
-	return $item_list;
 }
 
 function rss_auto_get($url)
 {
-	if (!$url) return '';
-	if (rss_extends_fetch_rss($url)) return $url;
-
-	require_once DOCUMENT_ROOT . '/lib/magpierss/rss_fetch.inc';
-	$resp = _fetch_remote_file($url);
-	if (is_success($resp->status)) {
-		if ($rss_url = rss_auto_discovery($resp->results, $url)) {
-			if (rss_extends_fetch_rss($rss_url)) return $rss_url;
-		}
-	}
-
-	return '';
-}
-
-/**
- * RSS/Atom Auto-Discovery に対応したlinkタグからURLを抽出する
- *
- * @param string $html	HTML文字列
- * @param string $url	取得元URL(相対パス→絶対パス変換用)
- * @return string	抽出したURL(失敗した場合は false)
- */
-function rss_auto_discovery($html, $url)
-{
-	if (!$html) return false;
-
-	$target_keys = array('rel', 'type', 'href');
-	$rss_types = array('application/rss+xml', 'application/atom+xml');
-
-	// 改行を半角スペースに変換
-	$html = str_replace("\n", " ", $html);
-	$html = str_replace("\r", " ", $html);
-
-	$matches = array();
-	if (!preg_match_all('|<link(.+?)/?>|i', $html, $matches)) {
-		return false;
-	}
-	$link_tags = $matches[1];
-
-	foreach ($link_tags as $content) {
-		$link = array();
-
-		$attrs = preg_split('/\s+/', trim($content));
-		foreach ($attrs as $attr) {
-			$pieces = explode("=", $attr, 2);
-			if (!is_array($pieces)) continue;
-
-			$key = trim($pieces[0]);
-			$key = strtolower($key);
-			if (!in_array($key, $target_keys)) continue;
-
-			$value = trim($pieces[1]);
-			$value = str_replace("'", "", $value);
-			$value = str_replace("\"", "", $value);
-
-			$link[$key] = $value;
-		}
-
-		if (empty($link['rel']) || empty($link['type']) || empty($link['href']))
-			continue;
-
-		$rel  = strtolower($link['rel']);
-		$type = strtolower($link['type']);
-		$href = $link['href'];
-
-		if ($rel == 'alternate' && in_array($type, $rss_types)) {
-			if (preg_match('|^https?://|', $href)) {  // 絶対パス
-				return $href;
-			} else {
-				require_once PEAR_DIR . 'Net/URL.php';
-
-				$base_url = preg_replace('|/[^/]*$|', '/', $url);
-				$obj_url = new Net_URL($base_url);
-
-				if ($href{0} === '/') $obj_url->path = '';
-				$obj_url->path = $obj_url->resolvePath($obj_url->path . $href);
-
-				return $obj_url->getURL();
+	$contents = file_get_contents($url);
+	$link = parse_url($url);
+	$contents = file_get_contents($url);
+	$tidy = new tidy;
+	$tidy->parseString($contents, [], 'utf8');
+	if (mb_ereg('\\<html', $contents)) {
+		foreach ($tidy->head()->child as $element) {
+			if ($element->name == 'link' && $element->attribute['rel'] == 'alternate') {
+				$href = parse_url($element->attribute['href']);
+				if ($href['scheme'] && $href['host']) {
+					$link = $href;
+				} else {
+					$link = array_merge($link, ['path' => $element->attribute['href']]);
+				}
+				break;
 			}
 		}
 	}
-
-	return false;
+	return $link['scheme'] . '://' . $link['host'] . $link['path'];
 }
 
 function db_c_member_list4exists_rss()

@@ -39,21 +39,11 @@ function init_pc_page(&$smarty)
 	$smarty->assign('side_banner_html', true);
 
 	// ニュース
-	require_once DOCUMENT_ROOT . '/lib/magpierss/rss_fetch.inc';
-	$entries = array();
+	$entries = [];
 	foreach ($GLOBALS['__OpenPNE']['news'] as $name => $url) {
-		$rss = fetch_rss($url);
-		foreach ($rss->items as $item) {
-			$entries[] = array(
-				"title" => mb_convert_encoding(
-					sprintf("[%s] %s", $name, $item["title"]),
-					"utf-8",
-					MAGPIE_OUTPUT_ENCODING
-				),
-				"link" => $item["link"]
-			);
+		foreach (rss_get_new($url) as $entry) {
+			$entries[] = $entries;
 		}
-		unset($rss);
 	}
 	$smarty->assign('news', $entries);
 	if ($_GET["rss"]) {

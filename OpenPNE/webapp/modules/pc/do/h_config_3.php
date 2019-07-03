@@ -29,7 +29,6 @@ function doAction_h_config_3($request) {
 
 	//rssのurlを取得
 	$rss = rss_auto_get($rss);
-
 	$c_member = db_common_c_member4c_member_id($u);
 	if($rss != $c_member['rss']){
 		//異なるBlogを登録すると過去のrssは全て削除する

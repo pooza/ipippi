@@ -82,10 +82,6 @@ unset($url);
 ini_set("session.use_cookies", "1");
 ini_set("session.use_only_cookies", "1");
 
-// magpieRSS
-define('MAGPIE_CACHE_DIR', DOCUMENT_ROOT . '/var/magpie_cache/');
-define('MAGPIE_OUTPUT_ENCODING', 'UTF-8');
-
 /* PEARライブラリのパス */
 if (!defined('PEAR_DIR')) {
 	define('PEAR_DIR', DOCUMENT_ROOT . "/lib/pear/");

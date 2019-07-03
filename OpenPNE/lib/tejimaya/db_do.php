@@ -1433,15 +1433,12 @@ function do_h_config_3(
 
 function insert_rss_cache($rss, $target_c_member_id)
 {
-	$rss_item_list = rss_get_new($rss);
-
-	foreach ($rss_item_list as $item) {
+	foreach (rss_get_new($rss) as $item) {
 		// 最新のものと比較
 		if (!db_is_duplicated_rss_cache($target_c_member_id, $item) &&
 			!db_is_future_rss_item($item)) {
 
-			$id = db_is_updated_rss_cache($target_c_member_id, $item);
-			if ($id) {
+			if ($id = db_is_updated_rss_cache($target_c_member_id, $item)) {
 				// update
 				db_update_c_rss_cache($id, $item);
 			} else {
