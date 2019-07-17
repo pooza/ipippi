@@ -975,6 +975,15 @@ function db_common_authenticate_password($c_member_id, $password)
 	return password_verify($password, $hashed) || (md5($password) == $hashed);
 }
 
+function db_common_authenticate_password_md5($pc_address, $password)
+{
+	$sql = "SELECT count(*) FROM c_member_secure" .
+			" WHERE pc_address = " . quote4db($pc_address) .
+			" AND hashed_password = " . quote4db(md5($password)) .
+			" LIMIT 1";
+	return  get_one4db($sql) == 1;
+}
+
 function db_common_c_profile_list4null()
 {
 	$sql = "SELECT * FROM c_profile" .
