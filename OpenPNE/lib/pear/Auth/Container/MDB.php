@@ -170,7 +170,7 @@ class Auth_Container_MDB extends Auth_Container
         $this->options['passwordcol'] = 'password';
         $this->options['dsn']         = '';
         $this->options['db_fields']   = '';
-        $this->options['cryptType']   = 'md5';
+        $this->options['cryptType']   = 'password_hash';
     }
 
     // }}}
@@ -327,7 +327,7 @@ class Auth_Container_MDB extends Auth_Container
         if (function_exists($this->options['cryptType'])) {
             $cryptFunction = $this->options['cryptType'];
         } else {
-            $cryptFunction = 'md5';
+            $cryptFunction = 'password_hash_default';
         }
 
         $additional_key   = '';

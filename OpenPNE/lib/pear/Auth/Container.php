@@ -78,7 +78,7 @@ class Auth_Container
      *                Defaults to "md5".
      * @return bool   True, if the passwords match
      */
-    function verifyPassword($password1, $password2, $cryptType = "md5")
+    function verifyPassword($password1, $password2, $cryptType = "password_hash")
     {
         switch ($cryptType) {
         case "crypt" :
@@ -94,6 +94,10 @@ class Auth_Container
         case "md5" :
             return (md5($password1) == $password2);
             break;
+
+		case "password_hash":
+			return password_verify($password1, $password2) || (md5($password1) == $password2);
+			break;
 
         default :
             if (function_exists($cryptType)) {

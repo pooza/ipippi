@@ -41,7 +41,7 @@ function doNormalAction_setup($requests)
 	// c_member_secure
 	$data = array(
 		"c_member_id" => 1,
-		"hashed_password" => md5($requests['password']),
+		"hashed_password" => password_hash($requests['password'], PASSWORD_DEFAULT),
 		"pc_address" => t_encrypt($requests['pc_address']),
 		"regist_address" => t_encrypt($requests['pc_address']),
 	);

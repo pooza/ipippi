@@ -3,20 +3,6 @@
  *  init.inc - 全ページ共通初期化
  */
 
-// magic_quotes_gpc = On の場合の対策
-if (get_magic_quotes_gpc()) {
-	function strip_magic_slashes($arr)	{
-		return is_array($arr) ?
-			array_map('strip_magic_slashes', $arr) :
-			stripslashes($arr);
-	}
-	$_GET = strip_magic_slashes($_GET);
-	$_POST = strip_magic_slashes($_POST);
-	$_REQUEST = strip_magic_slashes($_REQUEST);
-}
-
-//-----
-
 // ファイルシステム上のパス
 defined('DOCUMENT_ROOT') or define('DOCUMENT_ROOT', dirname(dirname(__FILE__)));
 

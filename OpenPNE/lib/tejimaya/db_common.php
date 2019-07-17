@@ -964,19 +964,15 @@ function t_decrypt($str)
  *
  * @param int $c_member_id
  * @param string $password 平文のパスワード
- * @return bool パスワードが正しいかどうか
+ * @return bool
  */
 function db_common_authenticate_password($c_member_id, $password)
 {
-	$sql = "SELECT COUNT(c_member_id) FROM c_member_secure" .
+	$sql = "SELECT hashed_password FROM c_member_secure" .
 			" WHERE c_member_id = " . quote4db($c_member_id) .
-			" AND hashed_password = " . quote4db(md5($password)) .
 			" LIMIT 1";
-	if (get_one4db($sql)) {
-		return true;
-	} else {
-		return false;
-	}
+	$hashed = get_one4db($sql);
+	return password_verify($password, $hashed) || (md5($password) == $hashed);
 }
 
 function db_common_c_profile_list4null()
@@ -1383,3 +1379,6 @@ function t_get_user_hash($c_member_id, $length = 12)
 	return substr(md5($seed), 0, $length);
 }
 
+function password_hash_default ($password) {
+	return password_hash($password, PASSWORD_DEFAULT);
+}

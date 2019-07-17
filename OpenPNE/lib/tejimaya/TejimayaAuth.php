@@ -11,14 +11,14 @@ class TejimayaAuth extends Auth
 	{
 		$this->is_encrypt_username = $is_encrypt_username;
 
-		$params = array(
+		$params = [
 			"dsn"	=> $GLOBALS['__OpenPNE']['DSN'],
 			"table"	=> AUTH_TABLE,
 			"usernamecol"	=> AUTH_USERNAMECOL,
 			"passwordcol"	=> AUTH_PASSWORDCOL,
-			"cryptType"	=> "md5"
-			);
-		$this->Auth("DB", $params, '', false);
+			"cryptType"	=> "password_hash",
+		];
+		$r = $this->Auth("DB", $params, '', false);
 
 		if ($expire) $this->setExpire($expire);
 		if ($idle) $this->setIdle($idle);
@@ -32,14 +32,14 @@ class TejimayaAuth extends Auth
 		$post = &$this->_importGlobalVariable('post');
 
 		if (isset($post['username']) && $post['username'] != '') {
-			$this->username = (get_magic_quotes_gpc() == 1 ? stripslashes($post['username']) : $post['username']);
+			$this->username = $post['username'];
 			if ($this->is_encrypt_username) {
 				$this->username = t_encrypt($this->username);
 			}
 		}
 
 		if (isset($post['password']) && $post['password'] != '') {
-			$this->password = (get_magic_quotes_gpc() == 1 ? stripslashes($post['password']) : $post['password'] );
+			$this->password = $post['password'];
 		}
 	}
 

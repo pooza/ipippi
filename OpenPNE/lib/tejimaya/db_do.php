@@ -1392,7 +1392,7 @@ function do_h_config_1(
 function do_common_update_password($c_member_id, $password)
 {
 	$sql = "UPDATE c_member_secure" .
-		" SET hashed_password = ". quote4db(md5($password)).
+		" SET hashed_password = ". quote4db(password_hash($password, PASSWORD_DEFAULT)).
 		" WHERE c_member_id	= ". quote4db($c_member_id);
 
 	mysqli_query($GLOBALS['db'], $sql);
@@ -1579,7 +1579,7 @@ function do_regist_prof_do_regist($sid)
 		" VALUES(" .
 		quotearray4db(
 			$c_member_id_new,
-			md5($pre['password']),
+			password_hash($pre['password'], PASSWORD_DEFAULT),
 			md5($pre['c_password_query_answer']),
 			t_encrypt($pre['pc_address']),
 			t_encrypt($pre['pc_address'])).
