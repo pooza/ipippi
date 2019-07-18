@@ -1,7 +1,7 @@
 <?php
 function getConfigFileName () {
 	if (!$server = $_SERVER["SERVER_NAME"]) {
-		$server = $_SERVER["argv"][1];
+		$server = trim(`hostname`);
 	}
 
 	if (!$server) {
