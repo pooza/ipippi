@@ -365,6 +365,17 @@ function is_ktai_mail_address($mail)
 	return in_array($domain, $GLOBALS['__OpenPNE']['KTAI_DOMAINS']);
 }
 
+function do_common_create_password($length = 10)
+{
+	$elem = "~!@#$%^&*()[]abcdefghkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ2345679";
+	$max = strlen($elem) - 1;
+ 	$password = "";
+	for ($i=0; $i < $length; $i++) {
+		$password .= substr($elem, random_int(0, $max), 1);
+	}
+ 	return $password;
+}
+
 function db_common_friend_status($u, $target_c_member_id)
 {
 	$ret = array(
