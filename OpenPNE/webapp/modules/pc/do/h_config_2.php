@@ -24,8 +24,8 @@ function doAction_h_config_2($request) {
 	if ($new_password != $new_password2) $msg_list[] = "パスワードが一致しません";
 	if (!ctype_alnum($new_password) ||
 		strlen($new_password) < 6 ||
-		strlen($new_password) > 12) {
-		$msg_list[] = "パスワードは6～12文字の半角英数で入力してください";
+		strlen($new_password) > 40) {
+		$msg_list[] = "パスワードは6～40文字の半角英数で入力してください";
 	}
 
 	if (!$msg_list && !db_common_authenticate_password($u, $old_password)) {

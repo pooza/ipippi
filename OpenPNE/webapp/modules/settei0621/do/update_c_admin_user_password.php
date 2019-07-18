@@ -16,9 +16,9 @@ function doAction_update_c_admin_user_password($requests)
 	$password = $requests['new_password'];
 	if (!ctype_alnum($password) ||
 		strlen($password) < 6 ||
-		strlen($password) > 12) {
+		strlen($password) > 40) {
 		admin_client_redirect('edit_admin_password',
-			"パスワードは6～12文字の半角英数で入力してください");
+			"パスワードは6～40文字の半角英数で入力してください");
 		exit;
 	}
 

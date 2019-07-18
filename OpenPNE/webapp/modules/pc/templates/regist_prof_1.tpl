@@ -147,7 +147,7 @@
 	</table>
 ({elseif $profile.form_type == 'checkbox'})
 	<input type="hidden" name="profile[({$profile.name})][]" value="0">
-	
+
 	<table>
 	({foreach item=item from=$profile.options name=check})
 	({counter name=$profile.name assign=_cnt})
@@ -238,7 +238,7 @@ PCアドレス <span class="caution">※</span>
 
 <div class="padding_s">
 
-<input name="password" type="password"><br><span class="caution">※6～12文字の半角英数で入力してください。</span>
+<input name="password" type="password"><br><span class="caution">※6～40文字の半角英数で入力してください。</span>
 
 </div>
 

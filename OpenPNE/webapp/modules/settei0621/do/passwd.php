@@ -11,9 +11,9 @@ function doAction_passwd($requests)
 
 	if (!ctype_alnum($password) ||
 		strlen($password) < 6 ||
-		strlen($password) > 12) {
+		strlen($password) > 40) {
 		admin_client_redirect('passwd',
-			"パスワードは6～12文字の半角英数で入力してください",
+			"パスワードは6～40文字の半角英数で入力してください",
 			"target_c_member_id=".$c_member_id);
 		exit;
 	}
