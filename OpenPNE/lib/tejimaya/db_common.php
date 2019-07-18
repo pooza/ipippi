@@ -365,27 +365,6 @@ function is_ktai_mail_address($mail)
 	return in_array($domain, $GLOBALS['__OpenPNE']['KTAI_DOMAINS']);
 }
 
-function do_common_create_password($length = 8)
-{
-	// マイクロでシードを設定する
-	list($usec, $sec) = explode(' ', microtime());
-	$seed = (float) $sec + ((float) $usec * 100000);
-
-	srand($seed);
-
-	// パスワード文字列の配列を作成
-	$elem = "abcdefghkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ2345679";
-	$max = strlen($elem) - 1;
-
-	$password = "";
-	for ($i=0; $i < $length; $i++) {
-		// パスワード文字列を生成
-		$password .= substr($elem, rand(0, $max), 1);
-	}
-
-	return $password;
-}
-
 function db_common_friend_status($u, $target_c_member_id)
 {
 	$ret = array(

@@ -19,7 +19,7 @@ function doNormalAction_password_query($requests)
 	//---
 
 	// パスワード再発行
-	$new_password = do_common_create_password();
+	$new_password = random_bytes(10);
 	do_common_update_password($c_member_id, $new_password);
 
 	do_password_query_mail_send($c_member_id, $pc_address, $new_password);
