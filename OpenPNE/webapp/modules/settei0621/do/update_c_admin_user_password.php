@@ -18,7 +18,7 @@ function doAction_update_c_admin_user_password($requests)
 		strlen($password) < 6 ||
 		strlen($password) > 40) {
 		admin_client_redirect('edit_admin_password',
-			"パスワードは6～40文字の半角英数で入力してください");
+			"パスワードは8～40文字の半角英数で入力してください");
 		exit;
 	}
 

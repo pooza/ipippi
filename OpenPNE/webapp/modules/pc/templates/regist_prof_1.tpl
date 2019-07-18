@@ -238,7 +238,7 @@ PCアドレス <span class="caution">※</span>
 
 <div class="padding_s">
 
-<input name="password" type="password"><br><span class="caution">※6～40文字の半角英数で入力してください。</span>
+<input name="password" type="password"><br><span class="caution">※8～40文字の半角英数で入力してください。</span>
 
 </div>
 

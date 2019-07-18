@@ -9,7 +9,7 @@
 <p><a href="page.php?p=f_home&amp;target_c_member_id=({$c_member.c_member_id})" target="_blank">({$c_member.nickname})さん</a>のパスワードを変更します。</p>
 
 <ul>
-<li class="caution">パスワードは6～40文字の半角英数で入力してください。</li>
+<li class="caution">パスワードは8～40文字の半角英数で入力してください。</li>
 <li class="caution">パスワード変更ボタンを押すと、ユーザに新しいパスワードの書かれたメールが送信されます。</li>
 </ul>
 
@@ -23,11 +23,11 @@
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('passwd','do')})">
 <input type="hidden" name="target_c_member_id" value="({$c_member.c_member_id})">
 新しいパスワード</td>
-<td><input type="password" name="password" size="12"></td>
+<td><input type="password" name="password" size="40"></td>
 </tr>
 <tr>
 <th>新しいパスワード(確認)</th>
-<td><input type="password" name="password2" size="12"></td>
+<td><input type="password" name="password2" size="40"></td>
 </tr>
 <tr>
 <th>&nbsp;</th>

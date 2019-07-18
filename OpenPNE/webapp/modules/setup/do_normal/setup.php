@@ -14,9 +14,9 @@ function doNormalAction_setup($requests)
 	}
 	$password = $requests['password'];
 	if (!ctype_alnum($password) ||
-		strlen($password) < 6 ||
+		strlen($password) < 8 ||
 		strlen($password) > 40) {
-		$msg = "パスワードは6～40文字の半角英数で入力してください";
+		$msg = "パスワードは8～40文字の半角英数で入力してください";
 		client_redirect("module_normal.php?m=setup&p=setup".
 			"&msg=" . urlencode($msg));
 		exit;
@@ -30,9 +30,9 @@ function doNormalAction_setup($requests)
 	}
 	$password = $requests['admin_password'];
 	if (!ctype_alnum($password) ||
-		strlen($password) < 6 ||
+		strlen($password) < 8 ||
 		strlen($password) > 40) {
-		$msg = "パスワードは6～40文字の半角英数で入力してください";
+		$msg = "パスワードは8～40文字の半角英数で入力してください";
 		client_redirect("module_normal.php?m=setup&p=setup".
 			"&msg=" . urlencode($msg));
 		exit;

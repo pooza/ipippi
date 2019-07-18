@@ -180,7 +180,7 @@
 <div class="padding_s">
 
 <input name="new_password" type="password" value="" size="20"><br>
-<span class="caution">※パスワードは6～40文字の半角英数で入力してください。</span>
+<span class="caution">※パスワードは8～40文字の半角英数で入力してください。</span>
 
 </div>
 </td>

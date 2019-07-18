@@ -9,7 +9,7 @@
 <p>管理ページ用のパスワードを変更することができます。</p>
 
 <ul>
-<li class="caution">パスワードは6～40文字の半角英数で入力してください。</li>
+<li class="caution">パスワードは8～40文字の半角英数で入力してください。</li>
 </ul>
 
 <form action="module_do.php" method="post">
