@@ -1,5 +1,11 @@
+#!/usr/local/bin/php
 <?php
-require_once "../../OpenPNE/lib/init.inc";
+$f = __FILE__;
+while (is_link($f)) {
+	$f =  readlink($f);
+}
+define('DOCUMENT_ROOT', dirname(dirname($f)));
+require_once DOCUMENT_ROOT . "/lib/init.inc";
 
 //-------------config-------------//
 // 一度に取得するRSSの件数
@@ -46,7 +52,7 @@ if ($f) {
 }
 
 foreach ($c_member_list as $c_member) {
-	_log('get', $c_member['c_member_id']);
+	_log('Member ID: ', $c_member['c_member_id']);
 	$rss_item_list = rss_get_new($c_member['rss']);
 
 	$insert_rss_list = array();
@@ -65,7 +71,7 @@ foreach ($c_member_list as $c_member) {
 		}
 	}
 
-	_log('insert', count($insert_rss_list) . " records");
+	_log('  insert', count($insert_rss_list) . " records");
 	db_insert_c_rss_cache_list($c_member['c_member_id'], $insert_rss_list);
 }
 
@@ -133,7 +139,7 @@ function db_delete_rss_cache4c_member_list($c_member_list)
 {
 	$sql = "DELETE FROM c_rss_cache WHERE c_member_id IN (0";
 	foreach($c_member_list as $c_member){
-		_log('delete', $c_member['c_member_id']);
+		_log('  delete', $c_member['c_member_id']);
 		$sql .= "," . intval($c_member['c_member_id']);
 	}
 	$sql .= ")";
@@ -143,7 +149,7 @@ function db_delete_rss_cache4c_member_list($c_member_list)
 function _log($action, $message)
 {
 	if (RSS_CACHE_DISPLAY_LOG) {
-		echo $action . ": " . $message . "<br>\n";
+		echo $action . ": " . $message . "\n";
 	}
 }
 
