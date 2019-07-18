@@ -181,7 +181,6 @@
 <tr>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_write_insert_c_commu_topic_comment">
 ({foreach from=$event_write key=key item=item})
@@ -191,7 +190,6 @@
 <td><input type=submit value="　書き込み　"></td>
 </form>
 <form action="page.php?p=c_event_detail" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 ({foreach from=$event_write key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">
 ({/foreach})

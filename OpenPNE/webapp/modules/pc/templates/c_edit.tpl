@@ -29,7 +29,6 @@
 <!-- **************************************** -->
 <!-- ******ここから：コミュニティ設定変更****** -->
 <form action="do.php" method="post" enctype="multipart/form-data" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_edit_update_c_commu">
 <input type="hidden" name="target_c_commu_id" value="({$target_c_commu_id})">
@@ -343,7 +342,6 @@
 <img src="./skin/dummy.gif" class="v_spacer_l">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <div align="center" syyle="text-align:center;">
 <input type="hidden" name="cmd" value="c_edit_delete_c_commu">

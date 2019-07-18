@@ -29,7 +29,6 @@
 <!-- ********************************** -->
 <!-- ******ここから：お気に入り追加****** -->
 <form action="do.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_edit_update_c_commu_topic">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
@@ -185,7 +184,6 @@
 <tr>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="bookmark_add">
 <input type="hidden" name="c_member_id" value="({$c_member.c_member_id})">
@@ -194,7 +192,6 @@
 
 
 <form action="page.php">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="f_home">
 <input type="hidden" name="target_c_member_id" value="({$c_member.c_member_id})">
 <td><input type="submit" value="  いいえ　"></td>

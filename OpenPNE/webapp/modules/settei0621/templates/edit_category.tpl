@@ -16,7 +16,6 @@
 ({foreach from=$c_commu_category_parent_list item=item})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_commu_category_parent','do')})">
@@ -27,7 +26,6 @@
 <td><input type="submit" class="submit" value="変更"></td>
 </form>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_commu_category_parent','do')})">
@@ -41,7 +39,6 @@
 ({/foreach})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_commu_category_parent','do')})">
@@ -70,7 +67,6 @@
 ({foreach from=$c_commu_category_list[$item.c_commu_category_parent_id] item=option})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_commu_category','do')})">
@@ -81,7 +77,6 @@
 <td><input type="submit" class="submit" value="変更"></td>
 </form>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_commu_category','do')})">
@@ -94,7 +89,6 @@
 ({/foreach})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_commu_category','do')})">

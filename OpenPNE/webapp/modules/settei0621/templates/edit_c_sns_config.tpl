@@ -36,7 +36,6 @@
 <tr>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -47,7 +46,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -58,7 +56,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -69,7 +66,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -94,7 +90,6 @@
 <tr>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -105,7 +100,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -116,7 +110,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -142,7 +135,6 @@
 <tr>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -153,7 +145,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -164,7 +155,6 @@
 </td>
 <td>
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_image_skin','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -184,7 +174,6 @@
 <p class="caution">色の指定は16進数表記で行ってください。</p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_sns_config','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -216,7 +205,6 @@
 <h3><a name="css">カスタムCSS追加</a></h3>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_siteadmin_css','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

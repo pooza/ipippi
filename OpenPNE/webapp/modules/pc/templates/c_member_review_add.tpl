@@ -46,7 +46,6 @@
 <!-- **************************************** -->
 <!-- ******ここから：あなたのレビュー一覧****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_member_review_add_confirm">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 

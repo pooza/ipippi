@@ -23,7 +23,6 @@ function clearAll(){
 </script>
 
 <form action="module_page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <p style="margin-top:0">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('list_c_member')})">
@@ -35,7 +34,6 @@ function clearAll(){
 
 ({if $pager})
 <form action="module_page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('list_c_member')})">
 表示件数：
@@ -73,7 +71,6 @@ function clearAll(){
 ({/if})
 
 <form action="module_page.php" method="post" name="formSendMessages">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('send_messages')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

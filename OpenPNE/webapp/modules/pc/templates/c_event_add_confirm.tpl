@@ -323,7 +323,6 @@
 <td style="width:50%;text-align:right;">
 
 <form action="do.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_add_insert_c_commu_topic">
 <input type="hidden" name="target_c_commu_id" value="({$event.c_commu_id})">
@@ -337,7 +336,6 @@
 <td style="width:50%;text-align:left;">
 
 <form action="page.php?p=c_event_add" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="target_c_commu_id" value="({$event.c_commu_id})">
 ({foreach from=$event key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">

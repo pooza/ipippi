@@ -29,7 +29,6 @@
 <!-- **************************************** -->
 <!-- ******ここから：コミュニティ新規作成****** -->
 <form  action="page.php" method="post" name="category" id="category" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input name="p" type="hidden" value="h_com_add_confirm" />
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">

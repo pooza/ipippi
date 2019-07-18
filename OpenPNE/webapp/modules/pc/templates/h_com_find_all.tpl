@@ -66,7 +66,6 @@
 <!-- ここから：主内容＞＞並び替え・カテゴリ・検索 -->
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_com_find_all">
 
 並び替え<img src="./skin/icon_arrow_2.gif" class="icon">

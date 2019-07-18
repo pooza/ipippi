@@ -7,7 +7,6 @@
 ({/if})
 
 <form  action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table>
 <tr>
 <th>

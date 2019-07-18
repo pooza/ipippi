@@ -36,7 +36,6 @@ window.onload = disableTextarea({if !$top_banner_html})_top({/if})({if !$side_ba
 <p>468 x 60 ピクセルの画像を設定してください。</p>
 
 <form action="module_do.php" method="post" name="form_top_banner">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table>
 <tr>
 <td>
@@ -88,7 +87,6 @@ window.onload = disableTextarea({if !$top_banner_html})_top({/if})({if !$side_ba
 <h3>■サイドバナー</h3>
 
 <form action="module_do.php" method="post" name="form_side_banner">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table>
 <tr>
 <td>

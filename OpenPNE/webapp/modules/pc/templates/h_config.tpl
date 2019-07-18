@@ -58,7 +58,6 @@
 </tr>
 ({*********})
 <form  action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_1">
 <tr>
@@ -135,7 +134,6 @@
 ({*********})
 
 <form  action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_2">
 <tr>
@@ -239,7 +237,6 @@
 ({*********})
 
 <form  action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_3">
 
@@ -497,7 +494,6 @@ ID <input type="text" name="c_member_id_block[]" value=""><br>
 <!-- ************************* -->
 <!-- ******ここから：退会****** -->
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;margin:0px auto;" class="border_07">
 ({*********})

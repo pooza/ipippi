@@ -29,7 +29,6 @@
 <!-- ******************************************** -->
 <!-- ******ここから：レビュー****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_review_edit_update_c_review_comment">
 <input type="hidden" name="c_review_comment_id" value="({$c_review_comment.c_review_comment_id})">
@@ -273,7 +272,6 @@
 <div align="center" style="text-align:center;">
 
 <form action="page.php">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_review_delete_confirm">
 <input type="hidden" name="c_review_comment_id" value="({$c_review_comment.c_review_comment_id})">
 <input type="hidden" name="asin" value="({$c_review_comment.asin})">

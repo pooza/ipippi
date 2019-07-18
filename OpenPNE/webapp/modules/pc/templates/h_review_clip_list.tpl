@@ -68,7 +68,6 @@
 <div style="padding:10px;">
 
 <form action="page.php?p=h_review_add" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="submit" value="　　レビューを書く　　">
 </form>
 
@@ -136,7 +135,6 @@
 <!-- ******************************************** -->
 <!-- ******ここから：クリップしたレビュー一覧****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_review_clip_list_delete_c_review_clip">
 

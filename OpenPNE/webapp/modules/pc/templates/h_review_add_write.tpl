@@ -29,7 +29,6 @@
 <!-- ***************************** -->
 <!-- ******ここから：レビュー****** -->
 <form action="page.php?p=h_review_add_write_confirm" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="asin" value="({$asin})">
 <input type="hidden" name="category_id" value="({$category_id})">
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;" class="border_07">

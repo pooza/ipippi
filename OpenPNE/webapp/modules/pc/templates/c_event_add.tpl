@@ -29,7 +29,6 @@
 <!-- ************************************ -->
 <!-- ******ここから：新規イベント作成****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_event_add_confirm">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 <input type="hidden" name="submit" value="main">

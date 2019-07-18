@@ -262,7 +262,6 @@
 <td>
 
 <form action="do.php" method="post" class="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_member_review_insert_c_commu_review">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
@@ -276,7 +275,6 @@
 <td>
 
 <form action="page.php" method="get" class="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_member_review_add">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 <input type="submit" value="　いいえ　">

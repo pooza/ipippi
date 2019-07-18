@@ -26,7 +26,6 @@
 <!-- ************************************** -->
 <!-- ******ここから：メッセージテーブル****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_invite">
 <input type="hidden" name="c_commu_id" value="({$c_commu_id})">

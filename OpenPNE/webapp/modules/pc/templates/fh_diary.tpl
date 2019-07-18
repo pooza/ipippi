@@ -423,7 +423,6 @@
 <div style="padding:4px 3px;">
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_diary_edit">
 <input type="hidden" name="target_c_diary_id" value="({$target_diary.c_diary_id})">
 <input type="submit" value="編 集">
@@ -465,7 +464,6 @@
 <!-- ********************************* -->
 <!-- ******ここから：コメント一覧****** -->
 <form action="page.php?p=fh_delete_comment&target_c_diary_id=({$target_diary.c_diary_id})&target_c_member_id=({$target_member.c_member_id})" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table border="0" cellspacing="0" cellpadding="0" style="width:540px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -622,7 +620,6 @@
 <!-- ********************************** -->
 <!-- ******ここから：コメントを書く****** -->
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="fh_diary_comment_confirm">
 <input type="hidden" name="target_c_diary_id" value="({$target_diary.c_diary_id})">
 <table border="0" cellspacing="0" cellpadding="0" style="width:540px;margin:0px auto;" class="border_07">

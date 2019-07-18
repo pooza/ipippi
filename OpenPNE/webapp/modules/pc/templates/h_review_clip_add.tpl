@@ -164,7 +164,6 @@
 <tr>
 
 <form action="do.php">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_review_clip_add_insert_c_review_clip">
 <input type="hidden" name="c_review_id" value="({$c_review.c_review_id})">
@@ -174,7 +173,6 @@
 
 
 <form action="page.php" megthod="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_review_list_product">
 <input type="hidden" name="c_review_id" value="({$c_review.c_review_id})">
 <td><input type="submit" value="  いいえ　"></td>

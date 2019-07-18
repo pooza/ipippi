@@ -5,7 +5,6 @@
 <p>管理ページのページ名を推測できないようにランダム文字列で置換します。</p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_hash_table','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -15,7 +14,6 @@
 <p>ページ名を元の状態に戻します。(デバッグ用)</p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_hash_table','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

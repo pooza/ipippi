@@ -29,7 +29,6 @@
 <!-- ************************************ -->
 <!-- ******ここから：紹介文を作成する****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="f_intro_edit_update_c_friend">
 <input type="hidden" name="target_c_member_id" value="({$target_member.c_member_id})">

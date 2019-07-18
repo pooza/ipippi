@@ -245,7 +245,6 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;">
 <tr>
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_write_insert_c_commu_topic_comment">
 
@@ -260,7 +259,6 @@
 </form>
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="p" value="c_topic_detail">
 <td>

@@ -63,7 +63,6 @@
 <td class="bg_02" valign="middle">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_review_search">
 <table border="0" cellspacing="0" cellpadding="3" style="width:546px;">
 <!-- ここから：主内容＞再検索フォーム -->

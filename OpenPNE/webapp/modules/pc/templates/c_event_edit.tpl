@@ -29,7 +29,6 @@
 <!-- **************************************** -->
 <!-- ******ここから：イベントを編集する****** -->
 <form action="do.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_edit_update_c_commu_topic">
 <input type="hidden" name="target_c_commu_id" value="({$event.c_commu_id})">
@@ -409,7 +408,6 @@
 &nbsp;
 
 <form action="page.php?p=c_event_detail" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="target_c_commu_topic_id" value="({$event.c_commu_topic_id})">
 <input type="submit" value="　キャンセル　">
 </form>
@@ -487,7 +485,6 @@
 
 <div align="center" syyle="text-align:center;">
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_event_delete_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$event.c_commu_topic_id})">
 <input type="submit" value="　　削　除　　">

@@ -123,7 +123,6 @@
 <td style="width:50%;text-align:right;">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_event_mail">
 <input type="hidden" name="c_commu_id" value="({$c_commu_id})">
@@ -145,7 +144,6 @@
 <td style="width:50%;text-align:left;">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_event_mail">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic_id})">
 &nbsp;<input type="submit" value="　キャンセル　">

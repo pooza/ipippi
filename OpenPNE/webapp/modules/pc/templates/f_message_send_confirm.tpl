@@ -197,7 +197,6 @@
 
 <div align="center" style="text-align:center;">
 <form action="do.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="f_message_send_insert_c_message">
 <input type="hidden" name="c_member_id_to" value="({$target_member.c_member_id})">
@@ -210,7 +209,6 @@
 </form>
 
 <form action="page.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="f_message_send">
 <input type="hidden" name="is_syusei" value="1">
 <input type="hidden" name="target_c_member_id" value="({$target_member.c_member_id})">

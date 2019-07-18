@@ -29,7 +29,6 @@
 <!-- ******************************************** -->
 <!-- ******ここから：メッセージ作成****** -->
 <form action="page.php?p=f_message_send_confirm&target_c_member_id=({$target_member.c_member_id})&target_c_message_id=({$form_val.target_c_message_id})&jyusin_c_message_id=({$form_val.jyusin_c_message_id})" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:650px;" class="border_07">

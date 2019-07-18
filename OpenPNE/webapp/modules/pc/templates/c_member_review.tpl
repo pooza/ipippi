@@ -88,7 +88,6 @@
 <div style="padding:10px 40px;text-align:center;">
 
 <form action="page.php?p=c_member_review_add&target_c_commu_id=({$c_commu.c_commu_id})" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="submit" value="　レビューを掲載する　">
 </form>
 
@@ -159,7 +158,6 @@
 <!-- ********************************************* -->
 <!-- ******ここから：メンバーのおすすめレビュー****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_member_review_add_confirm">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 

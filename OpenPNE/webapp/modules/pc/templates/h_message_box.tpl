@@ -152,7 +152,6 @@
 <!-- ここまで：主内容＞＞メッセージ -->
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 
 ({if $box == "inbox" || !$box })

@@ -247,7 +247,6 @@
 <!-- ********************************** -->
 <!-- ******ここから：日記を編集する****** -->
 <form action="./page.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_diary_add_confirm">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:540px;margin:0px auto;" class="border_07">

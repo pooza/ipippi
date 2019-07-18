@@ -29,7 +29,6 @@
 <!-- ******************************************** -->
 <!-- ******ここから：フレンド追加****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>

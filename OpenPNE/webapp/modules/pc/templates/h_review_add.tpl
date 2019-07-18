@@ -80,7 +80,6 @@
 <div style="padding:10px 0px;text-align:center;">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_review_add">
 <input type="hidden" name="search_flag" value="1">
 キーワード&nbsp;<img src="./skin/dummy.gif" style="width:14px;height:14px;" class="icon icon_1">

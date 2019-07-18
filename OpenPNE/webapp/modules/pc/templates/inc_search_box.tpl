@@ -8,7 +8,6 @@
 ({*ここから：本体*})
 <div class="bg_01 bg_09" style="width:600px;height:24px;border-left:none 0px;border-right:none 0px;border-top:none 0px;">
 <form action="./do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_home_search">
 

@@ -65,7 +65,6 @@
 <!-- ここから：主内容＞＞カテゴリ・検索 -->
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_diary_list_all">
 
 キーワード&nbsp;<img src="./skin/icon_arrow_2.gif" class="icon">

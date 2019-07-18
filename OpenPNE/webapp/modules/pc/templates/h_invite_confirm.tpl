@@ -123,7 +123,6 @@
 <td style="width:50%;height:2em;text-align:right;">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_invite_insert_c_inivte">
 <input name="mail" type="hidden" value="({$form_val.mail})">
@@ -135,7 +134,6 @@
 <td style="width:50%;height:2em;text-align:left;">
 
 <form  action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input name="p" type="hidden" value="h_invite">
 <input name="mail" type="hidden" value="({$form_val.mail})">
 <input name="message" type="hidden" value="({$form_val.message})">

@@ -9,7 +9,6 @@
 <p>★<a href="module_page.php?m=({$module_name})&amp;p=({$hash_tbl->hash('insert_c_profile')})">プロフィール項目追加</a></p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_profile_sort_order','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -111,7 +110,6 @@
 ({foreach from=$item.options item=option})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('update_c_profile_option','do')})">
@@ -122,7 +120,6 @@
 <td><input type="submit" class="submit" value="変更"></td>
 </form>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_profile_option','do')})">
@@ -136,7 +133,6 @@
 ({/foreach})
 <tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <td>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_profile_option','do')})">

@@ -26,7 +26,6 @@
 <!-- ************************************ -->
 <!-- ******ここから：コミュニティ勧誘****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_invite_insert_c_message_commu_invite">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">

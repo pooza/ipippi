@@ -60,7 +60,6 @@
 <td class="bg_09" align="right">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="inc_leave_c_commu">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
@@ -73,7 +72,6 @@
 <td class="bg_09" align="left">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_home">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 

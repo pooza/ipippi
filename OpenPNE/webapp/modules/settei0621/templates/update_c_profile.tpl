@@ -3,7 +3,6 @@
 <h2>プロフィール項目編集</h2>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table>
 <tr>
 <th>

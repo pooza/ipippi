@@ -63,7 +63,7 @@
 
 ({if $c_member.image_filename_1})
 <img src="img.php?filename=({$c_member.image_filename_1})&w=180&h=180"><br>
-[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=1&amp;sessid=({$PHPSESSID})">削除</a> | 
+[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=1&amp;sessid=({$PHPSESSID})">削除</a> |
 ({if $c_member.image_filename_1==$c_member.image_filename})
 メイン写真
 ({else})
@@ -80,7 +80,7 @@
 
 ({if $c_member.image_filename_2})
 <img src="img.php?filename=({$c_member.image_filename_2})&w=180&h=180"><br>
-[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=2&amp;sessid=({$PHPSESSID})">削除</a> | 
+[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=2&amp;sessid=({$PHPSESSID})">削除</a> |
 ({if $c_member.image_filename_2==$c_member.image_filename})
 メイン写真
 ({else})
@@ -97,7 +97,7 @@
 
 ({if $c_member.image_filename_3})
 <img src="img.php?filename=({$c_member.image_filename_3})&w=180&h=180"><br>
-[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=3&amp;sessid=({$PHPSESSID})">削除</a> | 
+[ <a href="do.php?cmd=h_config_image_delete_c_member_image&img_num=3&amp;sessid=({$PHPSESSID})">削除</a> |
 ({if $c_member.image_filename_3==$c_member.image_filename})
 メイン写真
 ({else})
@@ -127,7 +127,6 @@
 <td style="width:230px;" align="center" valign="middle" rowspan="3">
 
 <form  action="do.php" method="post" name="secondForm" id="secondForm" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_config_image">
 

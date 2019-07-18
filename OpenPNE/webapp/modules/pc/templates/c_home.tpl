@@ -568,7 +568,6 @@
 ({if $is_c_commu_member})
 <!-- ここから：主内容 -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="cmd" value="c_home_update_is_receive_mail">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">

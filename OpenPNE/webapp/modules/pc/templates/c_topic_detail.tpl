@@ -375,7 +375,6 @@
 <!-- ********************************** -->
 <!-- ******ここから：新しく書き込む****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_topic_write_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
 

@@ -204,7 +204,6 @@
 <td>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_schedule_add_insert_c_schedule">
 <input type="hidden" name="title" value="({$input.title})">
@@ -227,7 +226,6 @@
 <td>
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_schedule_add">
 <input type="hidden" name="title" value="({$input.title})">
 <input type="hidden" name="body" value="({$input.body})">

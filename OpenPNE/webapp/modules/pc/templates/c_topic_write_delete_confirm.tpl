@@ -98,7 +98,6 @@
 <td style="width:50%;" align="right">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_bbs_delete_c_commu_topic_comment">
 <input type="hidden" name="target_c_commu_topic_comment_id" value="({$c_commu_topic_comment.c_commu_topic_comment_id})">
@@ -109,7 +108,6 @@
 <td style="width:50%;" align="left">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_topic_detail">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic_id})">
 &nbsp;<input type="submit" value="いいえ">&nbsp;

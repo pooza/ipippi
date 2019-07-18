@@ -3,7 +3,6 @@
 <h2>バナー追加</h2>
 
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table>
 <tr>
 <th>

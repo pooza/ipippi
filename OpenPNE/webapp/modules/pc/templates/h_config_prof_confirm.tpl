@@ -112,7 +112,7 @@
 ({if $profile.is_required})
 <span class="caution">※</span>
 ({/if})
- 
+
 </div>
 
 </td>
@@ -166,7 +166,6 @@
 <td style="width:45%;" align="center">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_config_prof">
 <input type="hidden" name="mode" value="register">
@@ -199,7 +198,6 @@
 <td style="width:45%;" align="center">
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_config_prof">
 <input type="hidden" name="mode" value="input">

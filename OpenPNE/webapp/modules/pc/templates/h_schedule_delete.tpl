@@ -198,7 +198,6 @@
 <td>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_schedule_delete_delete_c_schedule">
 <input type="hidden" name="target_c_schedule_id" value="({$c_schedule.c_schedule_id})">
@@ -208,7 +207,6 @@
 <td>
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_schedule">
 <input type="hidden" name="target_c_schedule_id" value="({$c_schedule.c_schedule_id})">
 <input type="submit" value="　キャンセル　"></form>

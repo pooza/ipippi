@@ -1,7 +1,6 @@
 ({$inc_header|smarty:nodefaults})
 
 <form action="module_page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('list_c_image')})">
 表示件数：

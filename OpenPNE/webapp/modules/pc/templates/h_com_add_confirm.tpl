@@ -243,7 +243,6 @@
 <tr>
 <td style="height:20px;" align="center">
 <form action="do.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input name="cmd" type="hidden" value="h_com_add_insert_c_commu" >
 ({foreach from=$form_val key=key item=item})
@@ -254,7 +253,6 @@
 </td>
 <td style="height:20px;" align="center">
 <form action="page.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input name="p" type="hidden" value="h_com_add" >
 ({foreach from=$form_val key=key item=item})
 <input type="hidden" name="({$key})" value="({$item})">

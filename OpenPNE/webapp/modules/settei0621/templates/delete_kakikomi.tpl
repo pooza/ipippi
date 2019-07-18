@@ -14,7 +14,6 @@ URL例：(ＸＸＸがID)<br>
 ({$smarty.const.ABSOLUTE_PATH})page.php?p=fh_diary&amp;target_c_diary_id=ＸＸＸ<br>
 </div>
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <p>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('delete_kakikomi')})">
@@ -38,7 +37,6 @@ ID：<input type="text" name="target_c_diary_id" value="({$requests.target_c_dia
 <td><a href="page.php?p=fh_diary&amp;target_c_diary_id=({$c_diary.c_diary_id})" target="_blank">URL</a></td>
 </tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <tr>
 <th><input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="m" value="({$module_name})">
@@ -60,7 +58,6 @@ URL例：(ＸＸＸがID)<br>
 ({$smarty.const.ABSOLUTE_PATH})page.php?p=c_home&amp;target_c_commu_id=ＸＸＸ<br>
 </div>
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <p>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('delete_kakikomi')})">
@@ -84,7 +81,6 @@ ID：<input type="text" name="target_c_commu_id" value="({$requests.target_c_com
 <td><a href="page.php?p=c_home&amp;target_c_commu_id=({$c_commu.c_commu_id})" target="_blank">URL</a></td>
 </tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <tr>
 <th><input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="m" value="({$module_name})">
@@ -107,7 +103,6 @@ URL例：(ＸＸＸがID)<br>
 ({$smarty.const.ABSOLUTE_PATH})page.php?p=c_event_detail&amp;target_c_commu_topic_id=ＸＸＸ
 </div>
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <p>
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('delete_kakikomi')})">
@@ -127,7 +122,6 @@ ID：<input type="text" name="target_c_commu_topic_id" value="({$requests.target
 <td><a href="page.php?p=c_topic_detail&amp;target_c_commu_topic_id=({$c_commu_topic.c_commu_topic_id})" target="_blank">URL</a></td>
 </tr>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <tr>
 <th><input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="m" value="({$module_name})">

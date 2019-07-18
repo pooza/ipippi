@@ -245,7 +245,6 @@
 <!-- ********************************** -->
 <!-- ******ここから：日記を編集する****** -->
 <form action="page.php?p=h_diary_edit_confirm&target_c_diary_id=({$diary.c_diary_id})&del_img=({$del_img})" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <table border="0" cellspacing="0" cellpadding="0" style="width:540px;margin:0px auto;" class="border_07">
 <tr>
 <td style="width:7px;" class="bg_00"><img src="./skin/dummy.gif" style="width:7px;height:7px;" class="dummy"></td>
@@ -556,7 +555,6 @@
 <div style="padding:4px 3px;">
 
 <form action="./page.php?p=h_delete_diary&target_c_diary_id=({$diary.c_diary_id})" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="submit" value="削 除">
 </form>
 

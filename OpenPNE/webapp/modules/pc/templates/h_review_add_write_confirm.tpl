@@ -120,7 +120,6 @@
 <td>
 
 <form action="do.php" method="post" style="DISPLAY: inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_review_add">
 <input type="hidden" name="category_id" value="({$category_id})">
@@ -134,7 +133,6 @@
 <td>
 
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_review_add_write">
 <input type="hidden" name="category_id" value="({$category_id})">
 <input type="hidden" name="asin" value="({$asin})">

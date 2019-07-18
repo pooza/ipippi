@@ -9,7 +9,6 @@
 </p>
 
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_image4c_image_id','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

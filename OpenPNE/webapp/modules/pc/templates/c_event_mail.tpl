@@ -26,7 +26,6 @@
 <!-- **************************************** -->
 <!-- ******ここから：メッセージ送信先一覧****** -->
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_event_mail_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_commu_topic_id})">
 

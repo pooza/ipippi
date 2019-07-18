@@ -29,7 +29,6 @@
 <!-- ******************************************* -->
 <!-- ******ここから：スケジュール入力フォーム****** -->
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="p" value="h_schedule_add_confirm">
 

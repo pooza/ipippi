@@ -15,7 +15,6 @@
 <p class="caution">※同じファイル名で既に登録されている画像がある場合、上書きされます。</p>
 
 <form action="module_do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('insert_c_image','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
@@ -31,7 +30,6 @@
 <h3>データベース内の画像を表示</h3>
 
 <form action="module_page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="p" value="({$hash_tbl->hash('edit_c_image')})">
 <dl>
@@ -51,7 +49,6 @@
 
 ({if $is_image})
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="m" value="({$module_name})">
 <input type="hidden" name="cmd" value="({$hash_tbl->hash('delete_c_image','do')})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

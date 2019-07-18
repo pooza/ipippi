@@ -106,7 +106,6 @@
 <td align="center">
 
 <form action="do.php" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="fh_diary_delete_c_diary_comment">
 <input type="hidden" name="target_c_diary_comment_id" value=({$target_c_diary_comment_id})>
@@ -119,7 +118,6 @@
 </form>
 
 <form action="page.php?p=fh_diary&target_c_diary_id=({$target_diary.c_diary_id})" method="post" style="display:inline;">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="submit" value="いいえ">
 </form>
 

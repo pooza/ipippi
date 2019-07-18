@@ -252,7 +252,6 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;margin:0px auto;">
 <tr>
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_add_insert_c_commu_topic">
 
@@ -267,7 +266,6 @@
 </form>
 
 <form action="page.php?p=c_topic_add" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="target_c_commu_id" value="({$c_topic.c_commu_id})">
 <td>
 <div align="center" style="text-align:center;">

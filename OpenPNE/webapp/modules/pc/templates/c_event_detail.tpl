@@ -51,7 +51,6 @@
 <!-- ******************************** -->
 <!-- ******ここから：イベント詳細****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_event_edit">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
 <input type="hidden" name="submit" value="main">
@@ -695,7 +694,6 @@
 <!-- ******************************* -->
 <!-- ******ここから：書き込み覧****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_event_write_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
 

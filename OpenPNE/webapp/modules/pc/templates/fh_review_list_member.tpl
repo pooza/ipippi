@@ -67,7 +67,6 @@
 <div style="text-align:center;" class="padding_w_s">
 
 <form action="page.php?p=h_review_add" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 
 <input type="submit" value="　　レビューを書く　　">
 

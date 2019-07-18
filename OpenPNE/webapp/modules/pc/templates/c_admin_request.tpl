@@ -194,7 +194,6 @@
 <tr>
 
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_admin_request_insert_c_commu_admin_confirm">
 <input type="hidden" name="target_c_member_id" value="({$member.c_member_id})">
@@ -205,7 +204,6 @@
 
 
 <form action="page.php" method="fet">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_edit_member">
 <input type="hidden" name="target_c_commu_id" value="({$c_commu.c_commu_id})">
 <td><input type="submit" type="button" value="キャンセル">

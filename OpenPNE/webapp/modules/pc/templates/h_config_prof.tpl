@@ -29,7 +29,6 @@
 <!-- ************************************ -->
 <!-- ******ここから：プロフィール変更****** -->
 <form action="do.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="cmd" value="h_config_prof">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 
@@ -152,7 +151,7 @@
 	</table>
 ({elseif $profile.form_type == 'checkbox'})
 	<input type="hidden" name="profile[({$profile.name})][]" value="0">
-	
+
 	<table>
 	({foreach item=item from=$profile.options name=check})
 	({counter name=$profile.name assign=_cnt})

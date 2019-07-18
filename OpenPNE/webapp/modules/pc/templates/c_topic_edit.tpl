@@ -29,7 +29,6 @@
 <!-- ******************************************** -->
 <!-- ******ここから：トピックを編集する****** -->
 <form action="do.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_edit_update_c_commu_topic">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
@@ -317,7 +316,6 @@
 <!-- ************************* -->
 <!-- ******ここから：削除****** -->
 <form action="page.php" method="post"  enctype="multipart/form-data">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="c_topic_delete_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
@@ -359,7 +357,6 @@
 <div align="center" style="text-align:center;">
 
 <form action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="c_topic_delete_confirm">
 <input type="hidden" name="target_c_commu_topic_id" value="({$c_topic.c_commu_topic_id})">
 <input type=submit value="　削　除　">

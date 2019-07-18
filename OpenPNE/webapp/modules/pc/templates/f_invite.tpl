@@ -29,7 +29,6 @@
 <!-- ************************************ -->
 <!-- ******ここから：この人を紹介する****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="cmd" value="f_invite_insert_c_message_friend_invite">
 <input type="hidden" name="target_c_member_id" value="({$target_member.c_member_id})">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

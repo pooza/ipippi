@@ -29,7 +29,6 @@
 <!-- ******************************************** -->
 <!-- ******ここから：招待****** -->
 <form  action="page.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_invite_confirm">
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">
 <tr>
@@ -235,7 +234,6 @@
 <!-- ***************************** -->
 <!-- ******ここから：招待一覧****** -->
 <form action="do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="cmd" value="h_invite_delete_member">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="border_07">

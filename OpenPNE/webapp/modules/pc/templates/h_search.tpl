@@ -26,7 +26,6 @@
 <!-- ************************* -->
 <!-- ******ここから：検索****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_search_result">
 
 <table border="0" cellspacing="0" cellpadding="0" style="width:580px;;margin:0px auto;" class="border_07">
@@ -210,7 +209,6 @@
 <!-- ***************************** -->
 <!-- ******ここから：ニックネーム検索****** -->
 <form action="page.php" method="get">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_search_result">
 <input type="hidden" name="is_n" value="1">
 

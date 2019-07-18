@@ -238,7 +238,6 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:2em;margin:0px auto;">
 <tr>
 <form action="./do.php" method="post" enctype="multipart/form-data" style="display:inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_diary_add_insert_c_diary">
 <input type="hidden" name="subject" value="({$form_val.subject})">
@@ -250,7 +249,6 @@
 <td><input type="submit" value="　作 　成　"></td>
 </form>
 <form action="./page.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_diary_add">
 <input type="hidden" name="subject" value="({$form_val.subject})">
 <input type="hidden" name="body" value="({$form_val.body})">

@@ -15,7 +15,6 @@
 
 <table>
 <form action="module_do.php" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <tr>
 <th>
 <input type="hidden" name="sessid" value="({$PHPSESSID})">

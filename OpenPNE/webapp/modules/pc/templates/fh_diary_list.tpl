@@ -307,7 +307,6 @@
 
 <div style="width:490px;padding:30px 10px;margin:0px auto;" class="border_01 bg_03">
 <form action="page.php?p=h_diary_add" method="post">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="submit" value="　日 記 を 書 く　">
 </form>
 </div>

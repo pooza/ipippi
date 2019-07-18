@@ -215,7 +215,6 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:200px;height:20px;">
 <tr>
 <form action="do.php" method="post" enctype="multipart/form-data" style="display:inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="sessid" value="({$PHPSESSID})">
 <input type="hidden" name="cmd" value="h_diary_edit_insert_c_diary">
 <input type="hidden" name="target_c_diary_id" value="({$form_val.target_c_diary_id})">
@@ -229,7 +228,6 @@
 </form>
 
 <form action="page.php" method="post" style="display:inline">
-<input type="hidden" name="dummy" value="雀の往来←日本語文字コード判別文字列">
 <input type="hidden" name="p" value="h_diary_edit">
 <input type="hidden" name="target_c_diary_id" value="({$form_val.target_c_diary_id})">
 <input type="hidden" name="del_img" value="({$form_val.del_img})">
