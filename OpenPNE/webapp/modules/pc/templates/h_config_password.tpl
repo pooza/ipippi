@@ -43,14 +43,14 @@
 <table border="0" cellspacing="0" cellpadding="0" style="width:634px;" class="border_01">
 <tr>
 <td style="width:36px;" class="bg_06"><img src="./skin/content_header_1.gif" style="width:30px;height:20px;" class="dummy"></td>
-<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">旧形式のパスワードを変更</span></td>
+<td style="width:458px;padding:2px 0px;" class="bg_06"><span class="b_b c_00">パスワード再設定のお願い</span></td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
 <tr>
 <td style="width:36px;" class="bg_06"></td>
 <td style="width:458px;padding:2px 0px;" class="bg_06">
-ipippiの旧形式でパスワードが登録されていました。<br>
-この形式には脆弱性がある為、再登録が必要です。
+セキュリティ強化のため，パスワードの形式が変更されました。<br>
+お手数ですが，パスワードの再設定をお願いします。
 </td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
 </tr>
@@ -153,7 +153,7 @@ ipippiの旧形式でパスワードが登録されていました。<br>
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
-<input type="submit" value="　変　更　">
+<input type="submit" value="　設　定　">
 
 <img src="./skin/dummy.gif" class="v_spacer_s">
 
