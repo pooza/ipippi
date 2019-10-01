@@ -49,7 +49,7 @@
 <tr>
 <td style="width:36px;" class="bg_06"></td>
 <td style="width:458px;padding:2px 0px;" class="bg_06">
-セキュリティ強化のため，パスワードの形式が変更されました。<br>
+セキュリティ強化のため，パスワードの仕様を変更しました。<br>
 お手数ですが，パスワードの再設定をお願いします。
 </td>
 <td style="width:140px;" align="right" class="bg_06">&nbsp;</td>
