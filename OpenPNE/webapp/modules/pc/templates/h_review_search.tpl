@@ -80,6 +80,8 @@
 
 <div class="padding_s">
 
+<a href="page.php?p=h_review_search&keyword=({$keyword|escape:"url"})&category=({$category})&orderby=reelease_date">リリース日順</a>
+|
 <a href="page.php?p=h_review_search&keyword=({$keyword|escape:"url"})&category=({$category})&orderby=r_num">登録数順</a>
 |
 <a href="page.php?p=h_review_search&keyword=({$keyword|escape:"url"})&category=({$category})&orderby=r_datetime">作成日順</a>
@@ -274,7 +276,7 @@
 <!--▼レビュー1つ分ここから-->
 <tr>
 <td style="width:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
-<td style="width:180px;" class="bg_02" rowspan="7" align="center">
+<td style="width:180px;" class="bg_02" rowspan="9" align="center">
 
 <div class="padding_s">
 
@@ -359,6 +361,35 @@
 <div class="padding_s">
 
 ({$item.r_datetime|date_format:"%Y/%m/%d %H:%M"})
+</div>
+
+</td>
+<td class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
+</tr>
+({*********})
+<tr>
+<td style="width:1px;height:1px;" class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
+<td class="bg_01" colspan="5"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
+</tr>
+({*********})
+<tr>
+<td class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
+<td class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
+<td class="bg_03" align="center">
+
+<div class="padding_s">
+
+リリース
+
+</div>
+
+</td>
+<td class="bg_01"><img src="./skin/dummy.gif" style="width:1px;height:1px;" class="dummy"></td>
+<td class="bg_02" align="left">
+
+<div class="padding_s">
+
+({$item.release_date|default:"(なし)"})
 </div>
 
 </td>

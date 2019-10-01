@@ -3375,8 +3375,11 @@ function p_h_review_search_result4keyword_category($keyword, $category_id , $ord
 		$where .= " AND c_review.c_review_category_id = " .no_quote4db($category_id);
 
 	switch ($orderby) {
-	case "r_datetime":
+	case "release_date":
 	default:
+		$order = " ORDER BY release_date DESC";
+		break;
+	case "r_datetime":
 		$order = " ORDER BY r_datetime DESC";
 		break;
 	case "r_num":
