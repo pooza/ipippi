@@ -3327,19 +3327,25 @@ function p_h_review_add_search_result($keyword, $category_id, $page)
 	$amazon = new Services_Amazon(AMAZON_TOKEN, AMAZON_ACCESS_KEY, AMAZON_AFFID);
 	$amazon->setLocale(AMAZON_LOCALE);
 
-	$options = array(
-		'Keywords' =>  mb_convert_encoding($keyword, 'utf-8'),
+	$result = $amazon->ItemSearch($category, [
+		'Keywords' => $keyword,
 		'ItemPage' => $page,
 		'ResponseGroup' => 'Images,ItemAttributes',
-	);
-	$result = $amazon->ItemSearch($category, $options);
+	]);
 	if (PEAR::isError($result)) {
 		return null;
 	}
 
-	mb_convert_variables("utf-8", "auto", $result);
+	uasort($result['Item'], function ($a, $b) {
+		$dateA = $a['ItemAttributes']['PublicationDate'];
+		$dateB = $b['ItemAttributes']['PublicationDate'];
+		if ($dateA == $dateB) {
+			return 0;
+		}
+		return ($dateB < $dateA) ? -1 : 1;
+	});
 
-	return array($result['Item'], $page, $result['TotalPages']);
+	return [$result['Item'], $page, $result['TotalPages']];
 }
 
 function p_h_review_write_product4asin($asin){
