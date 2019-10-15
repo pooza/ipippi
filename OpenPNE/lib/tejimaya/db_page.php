@@ -3327,19 +3327,25 @@ function p_h_review_add_search_result($keyword, $category_id, $page)
 	$amazon = new Services_Amazon(AMAZON_TOKEN, AMAZON_ACCESS_KEY, AMAZON_AFFID);
 	$amazon->setLocale(AMAZON_LOCALE);
 
-	$options = array(
-		'Keywords' =>  mb_convert_encoding($keyword, 'utf-8'),
+	$result = $amazon->ItemSearch($category, [
+		'Keywords' => $keyword,
 		'ItemPage' => $page,
 		'ResponseGroup' => 'Images,ItemAttributes',
-	);
-	$result = $amazon->ItemSearch($category, $options);
+	]);
 	if (PEAR::isError($result)) {
 		return null;
 	}
 
-	mb_convert_variables("utf-8", "auto", $result);
+	uasort($result['Item'], function ($a, $b) {
+		$dateA = $a['ItemAttributes']['PublicationDate'];
+		$dateB = $b['ItemAttributes']['PublicationDate'];
+		if ($dateA == $dateB) {
+			return 0;
+		}
+		return ($dateB < $dateA) ? -1 : 1;
+	});
 
-	return array($result['Item'], $page, $result['TotalPages']);
+	return [$result['Item'], $page, $result['TotalPages']];
 }
 
 function p_h_review_write_product4asin($asin){
@@ -3375,8 +3381,11 @@ function p_h_review_search_result4keyword_category($keyword, $category_id , $ord
 		$where .= " AND c_review.c_review_category_id = " .no_quote4db($category_id);
 
 	switch ($orderby) {
-	case "r_datetime":
+	case "release_date":
 	default:
+		$order = " ORDER BY release_date DESC";
+		break;
+	case "r_datetime":
 		$order = " ORDER BY r_datetime DESC";
 		break;
 	case "r_num":
