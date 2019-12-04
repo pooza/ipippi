@@ -335,7 +335,7 @@
 <td class="bg_02" align="left" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $diary.image_filename_1 && !($del_img & 0x01)})
+({if $diary.image_filename_1 && !($del_img & 1)})
 <input type="hidden" name="pre_image_filename_1" value="({$diary.image_filename_1})">
 <a href="./img.php?filename=({$diary.image_filename_1})" target="_blank"><img src="./img.php?filename=({$diary.image_filename_1})&w=120&h=120"></a><br>
 ({*削除ボタン1*})
@@ -365,7 +365,7 @@
 <td class="bg_02" align="left" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $diary.image_filename_2 && !($del_img & 0x02)})
+({if $diary.image_filename_2 && !($del_img & 2)})
 <input type="hidden" name="pre_image_filename_2" value="({$diary.image_filename_2})">
 <a href="./img.php?filename=({$diary.image_filename_2})" target="_blank"><img src="./img.php?filename=({$diary.image_filename_2})&w=120&h=120"></a><br>
 ({*削除ボタン2*})
@@ -395,7 +395,7 @@
 <td class="bg_02" align="left" valign="middle">
 <div style="padding:4px 3px;">
 
-({if $diary.image_filename_3 && !($del_img & 0x04)})
+({if $diary.image_filename_3 && !($del_img & 4)})
 <input type="hidden" name="pre_image_filename_3" value="({$diary.image_filename_3})">
 <a href="./img.php?filename=({$diary.image_filename_3})" target="_blank"><img src=./img.php?filename=({$diary.image_filename_3})&w=120&h=120></a><br>
 ({*削除ボタン3*})
